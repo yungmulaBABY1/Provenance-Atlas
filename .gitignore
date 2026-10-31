@@ -1,0 +1,8 @@
+# Python bytecode and local adapter runtime outputs.
+__pycache__/
+*.py[cod]
+
+# OS cruft
+.DS_Store
+Thumbs.db
+.atlas/
