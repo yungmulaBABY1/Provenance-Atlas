@@ -1,0 +1,741 @@
+ATLAS — START HERE
+Project map and next build brief | 31 October 2026 | Revision 1
+It points; you judge.
+
+READ THIS FIRST — THE TWO-MINUTE VERSION
+
+Atlas is the software we are building to connect sources, claims, investigations,
+findings and reviews in an inspectable record. Research and Media share evidence
+infrastructure but have different investigative interfaces. Policy is later.
+
+We already have a tested foundation. The current Python adapter imports existing
+Provenance citation-network audits, preserves their native labels, checks supplied
+passages and source eligibility, stores records, and exports/restores/replays them.
+It also binds attributed reviews to a precisely identified part of a finding.
+It does not yet conduct a new investigation or provide the proposed interfaces.
+
+NEXT ENGINEERING TASK: establish that foundation in a separate Atlas repository,
+with all required fixtures and its provenance intact. Demonstrate that it works
+from a fresh checkout. This is a migration, not a rewrite or a hosting decision.
+
+NEXT PRODUCT MILESTONE: one paper, one selected claim, one bounded evidence check,
+and a reviewable result. First connect the claim map to the existing finding and
+evidence records; then add a small executor that can produce a new bounded result.
+A readable local report is enough. A model-generated conclusion remains provisional.
+
+YOU DO NOT NEED TO DECIDE NOW: cloud host, graph database, framework, agent fleet,
+bot interface, provider catalog, pricing, public launch or every future method.
+Those choices are recorded below, with conditions for revisiting them.
+
+USE THIS FILE as the entry point. The source documents remain the detailed record;
+you do not need to read them all before each development task. This file provides
+navigation and a proposed build sequence. It is not a new universal instrument,
+a replacement for v0.13, or proof that a proposed requirement is implemented.
+
+CURRENT TASK COMPLETE: initial source consolidation, duplicate identification,
+current-state check and a bounded next-work brief. No repository was changed,
+moved, archived or created. No new model audit was run. No PR was opened or pushed.
+
+
+1. WHAT WE ARE BUILDING — AND WHAT THE WORDS MEAN
+
+Atlas has four design layers:
+
+A. Foundations: the philosophy, evidentiary limits, contestability and human role.
+B. Evidence infrastructure: identities, source access, passages, declared scope,
+   runs, findings, attributed assessments, reviews, corrections and exports.
+C. Investigative methods: versioned checks and evidence gates. Provenance-derived
+   research/media methods are supported methods, not the only possible methods.
+D. Product surfaces: Research, Media, Browse, reports and eventually APIs/bots.
+
+A prompt instructs a model. A skill packages instructions and tools. An agent uses
+tools over multiple steps. A bot is an interaction surface. A runner/executor is
+the program or system that performs a declared task. Atlas can use any of these;
+none is the product's permanent identity.
+
+Recommended first execution mechanism: a small program with declared inputs and
+one bounded model call or short controlled sequence, followed by deterministic
+record validation. Keep model output as a new attributed artifact, not an edit to
+the source or historical audit. This is a recommendation, not existing code or a
+commitment to a provider. Freeze model outputs for mechanical regression tests;
+evaluate live model behavior separately.
+
+The durable separation is:
+  what the source says;
+  what a model or person extracts or infers;
+  what a method checks;
+  what a reviewer or adjudicator decides.
+
+Reading a passage, matching its text and judging its support are different acts.
+The interface must keep that difference visible, even when the workflow is simple.
+
+
+2. WHICH SOURCE ANSWERS WHICH QUESTION
+
+S1 — Actual software and instrument behavior
+  https://github.com/yungmulaBABY1/Provenance
+  Check code, prompts, tests, receipts and CI at a specific commit. Repository
+  documentation can be stale; code existence is not validation of scientific use.
+
+S2 — Governing proposed product design
+  Atlas_Launch_v013_Fresh(3).zip
+    00_START_HERE.txt
+    WORK_HANDOFF_DETAILED.txt
+    01_SPECIFICATIONS/Atlas_Master_v013.txt
+    01_SPECIFICATIONS/Media_Atlas_Product_Spec_v02.txt
+  Read the master by topic and its explicit amendment precedence, not by assuming
+  every preserved historical paragraph remains an equally active requirement.
+
+S3 — Project-wide working instructions
+  Atlas_Project_Sources_Essentials_2026-10-30(1).zip
+    01_Project_Instructions.txt and 02_Project_Sources_Index.txt
+  Its master, Media, Browse and catalog copies match the corresponding supplied
+  files byte-for-byte. They are duplicates, not competing versions.
+
+S4 — Where ideas came from
+  Atlas_Research_Catalog_Fresh(1).txt
+  Use section 5 for feature origins; sections 2–4 for candidate tools; section 7
+  to locate detailed notes in Atlas_Research_References_Fresh(1).zip.
+  This is research memory, not a dependency list or a current product audit.
+
+S5 — Browse export addition
+  Atlas_Browse_Export_Contract_Proposal_2026-10-30(1).txt
+  Proposal UX-EXP-01: current view versus complete declared object; export scope,
+  filters, clocks, denominators, transformations and source/review state. Preserve
+  as a proposed extension; current JSONL export does not implement this whole UX.
+
+S6 — Media discourse visualization reference
+  Asturias_Project_Media_Atlas_Reference_2026-10-30.pdf
+  Pages 6–7 contain candidate Atlas adaptations and safeguards. It is an external
+  design reference, not a validated Atlas taxonomy, causal model or implementation.
+
+S7 — Future presentation layer
+  Atlas_Video_Brief_v2.txt
+  Reviewed audit -> guided walkthrough/video, with scene and narration provenance.
+  Deferred until an actual reviewed, shareable audit and functional view exist.
+
+S8 — Recovered earlier claim/evidence design
+  Provenance_Atlas_001_Claim_Evidence_Contract_2026-10-23.txt
+  https://chatgpt.com/library?file_id=libfile_d4ed7364c11c8191afff25b8906709a2&account_id=personal
+  Candidate atlas-core/0.1, not the current adapter schema. Separates Claim,
+  ClaimInstance and EvidenceAssessment. Reports 12 narrow synthetic checks at
+  creation; these were not rerun for this consolidation. Read before designing
+  claim integration, but reconcile its old full-text profile with later source-
+  light retention and identity amendments. Do not copy it wholesale into runtime.
+
+Source authority is question-specific. The live repository establishes current
+implementation. The latest governing design establishes intended behavior.
+Neither silently overrides the other. A future method revision governs new runs;
+it cannot retroactively change the contract of an old run.
+
+
+3. WHAT EXISTS NOW — CHECKED AGAINST CURRENT MAIN
+
+Repository baseline checked on 31 October 2026:
+  c1bcb8bf186ea45c3cf751efc70afbd945810f51
+  https://github.com/yungmulaBABY1/Provenance/tree/c1bcb8bf186ea45c3cf751efc70afbd945810f51
+
+CI evidence:
+  https://github.com/yungmulaBABY1/Provenance/actions/runs/41053962483
+  contracts job: 124056680670, successful.
+  Logs show 143 unittest tests passing, the upstream citation-checker regression
+  succeeding, and six current committed receipts passing content replay.
+  These were repository CI executions; this consolidation did not rerun them.
+
+Implemented, with bounded mechanical test coverage:
+  - Citation-network native-output adapter and deterministic diagnostics.
+  - Raw native output/labels preserved, including quarantined historical output.
+  - Pinned vendored baseline, independent of routine working-tree prompt edits.
+  - Work/SourceVersion records, declared corpus, source-read receipts and passages.
+  - Exact versus normalized text matching and per-check source eligibility.
+  - SQLite append-only operations, atomic/idempotent imports and ID conflicts.
+  - JSONL export/restore; native projections re-derived on supported restore paths.
+  - Strict and content replay with distinct environment requirements.
+  - Attributed evidence reviews with full target/passage-descriptor binding.
+  - Real power-posing source packet, mutation controls and coexistence tests.
+
+Current limits that must travel into the new repository:
+  - Import is not a model audit. Replay reproduces deterministic import, not the
+    historical model investigation.
+  - Direct UTF-8 component matching is supported. Declared PDF/OCR extraction is
+    not generally verified by the adapter. The packet's external verification
+    script is a separate network/Poppler process, not a CI source download.
+  - Source access and component roles are partly supplied by context authors.
+    Reading the packet now says nothing about what an old model actually read.
+  - Exact passage presence is not substantive evidentiary support.
+  - SQLite triggers and unkeyed hashes are not a signed, tamper-proof ledger.
+    Restore does not independently reproduce every derived eligibility/checker
+    claim. Unsupported historical parser versions are explicitly unverified.
+  - No general claim-map integration, audit runner, multi-instrument graph,
+    complete correction workflow, public access-control system or production UI.
+  - No broad scientific-validity or independent-review certification.
+
+The power-posing packet makes these distinctions concrete:
+  S2 and S4 have seven retained excerpts. S4 is an accepted manuscript.
+  S1 and S3 were unavailable in the recorded retrievals. These historical access
+  results are not a fresh claim that those sources are inaccessible today.
+  S3's missing text prevents assessment of its own engagement with S2; S4's
+  description cannot substitute for S3's words.
+  PR #9 added two substantive model reviews of only the S2 clause of Finding 1.
+  Their SUPPORTS versus SUPPORTS_WITH_QUALIFICATION disagreement is preserved.
+  Neither establishes independent review or human adjudication. The complete
+  finding remains UNREVIEWED and its evidence relationships UNADJUDICATED.
+
+Where to inspect this:
+  docs/atlas/README.md
+  docs/atlas/CHANGELOG.md
+  docs/atlas/contracts/prompt-contracts.md
+  tests/atlas/sources/power-posing/README.md
+  tests/atlas/reviews/power-posing/README.md
+  .github/workflows/atlas-adapter.yml
+
+
+4. REQUIREMENTS MAP — WHAT MUST SURVIVE THE TRANSITION
+
+This is a family-level traceability map, not an exhaustive line-by-line method
+extraction. MAP identifiers below are navigation keys for this document only.
+They do not rename native labels, FAIL/GUARD/TOOL codes or existing Atlas IDs.
+
+MAP-01 | Human judgment and contestability
+  Preserve attributed judgments, uncertainty, dissent and the ability to challenge
+  an assessment. No model vote or composite credibility score becomes authority.
+  Origin: S1 reference/philosophy.md, “It points; you judge” and “No composite
+  score”; S2 Part II §§1,9; C-03.5–6. Status: partly represented, full workflow open.
+
+MAP-02 | Prior disclosure, symmetry and serious counterevidence
+  An operator hypothesis directs inquiry, not its conclusion. Inspect both the
+  operator's prior and the field's assumed premises. Seek weakening evidence,
+  strongest alternatives and applicable flip/concede tests without criticism quotas.
+  Origin: S1 philosophy “Two priors”, “Symmetry”, “An audit must be able to acquit”;
+  S2 B-02.1. Status: method requirements; no new executor validation here.
+
+MAP-03 | Stable target and correct attribution layer
+  Preserve measured versus claimed, original versus downstream claim, residual
+  claim, scope and speaker. Do not blame a source for an inflation introduced later.
+  Origin: S1 claim-extraction prompt, philosophy “Trace the claim”; S8 §§2–4.
+  Status: native methods exist; structured cross-instrument path not implemented.
+
+MAP-04 | Work, version and accessed bytes are different identities
+  Preserve edition-assignment basis, run-local hashes, exact and normalized passage
+  hashes with algorithm versions. No silent cross-edition rebasing or semantic merge.
+  Origin: S2 A-02.1; S8 §2. Status: bounded identity/anchor implementation exists;
+  automatic entity/version resolution and OCR/translation relocation remain open.
+
+MAP-05 | Source reading and eligibility
+  Declare required components per check, actual access/extraction and missingness.
+  Missing methods block dependent checks; metadata success does not clear a paper.
+  Origin: S2 C-03.1, ATLAS-READ-01..07; S1 FAIL-CV-008/[IV-P1].
+  Status: bounded offline implementation/tests, not a general PDF-reading service.
+
+MAP-06 | Historical assertion, present verification, assessed support
+  Keep all three separate. A current read cannot substantiate an old run's reading
+  claim; a valid native label cannot establish physical access or scientific truth.
+  Origin: S1 docs/atlas/README.md “Null results”, sources/reviews; S8 I2–I5.
+  Status: implemented separation, limited substantive reviews, no human adjudication.
+
+MAP-07 | Method and runner identity
+  Pin actual method/criteria, model/runner, declared inputs and versions. Unknown
+  identity stays unknown; model-directed criteria get their own provenance.
+  Origin: S1 TOOL-004; S2 B-02.1; S8 RunManifest.
+  Status: import pins exist; future executor preflight/enforcement still to build.
+
+MAP-08 | Native contracts and historical compatibility
+  Preserve instrument-local labels and missing/invalid values. Current grammar
+  mismatch is not proof that an old run violated its producing instrument.
+  Origin: S1 docs/atlas/contracts and native parser; S2 handoff §4.
+  Status: implemented citation profile; historical/multi-instrument parsing deferred.
+
+MAP-09 | Search and criteria timing
+  Separate supplied, retrieved, recalled and unavailable evidence; locked query,
+  locked sources and post-hoc changes. Target-informed planning is not blind planning.
+  Origin: S1 philosophy “Retrieval”; S2 B-02.2, ATLAS-METHOD-06..08.
+  Status: imported assertions recorded; external tool-boundary locking not built.
+
+MAP-10 | Source lineage and reviewer exposure
+  Count independent origins per relevant fact, not publications or agreeing models.
+  Preserve shared sources, prior conclusions seen and independent-to-exposed phases.
+  Origin: S1 methodology; S2 Part V, B-02.1/3, C-03.6; S8 I6.
+  Status: declarations/review exposure exist; independence is not established by them.
+
+MAP-11 | Append-only identity, challenge and correction
+  Same ID/different content is a conflict. Preserve rejected/dead findings, original
+  claims and later disagreements. Changed evidence prompts re-review, not auto-verdict.
+  Origin: S8 I8; S2 C-03.5, E-01.2; S1 ledger/integrity/reviews.
+  Status: ledger and bound reviews exist; general correction/dependency workflow open.
+
+MAP-12 | Exact review target
+  Bind a review to the exact finding field/span and evidence descriptors, not only
+  a quotation string. Changed offsets/version/component detach the old review.
+  Origin: S1 PR #9, atlas/reviews.py, test_evidence_reviews.py.
+  Status: implemented/tested atlas-evidence-review/2; /1 retained as retired history.
+
+MAP-13 | Mechanical versus semantic validation
+  Separate parser mutations, source correspondence, execution controls and scientific
+  judgment. In-vocabulary semantic swaps may require review rather than an invented
+  deterministic oracle. Inert text parsing is not proof of agent injection safety.
+  Origin: S2 C-02; S1 adapter/anchor/integrity tests. Status: bounded tests implemented.
+
+MAP-14 | Interchangeable evaluation methods
+  Support instrument-guided, model-directed and hybrid work under common evidence
+  requirements. Native instrument rules govern that instrument's runs only.
+  Origin: S2 Appendix B and B-02. Status: governing design; no mode orchestration.
+
+MAP-15 | Empirical validation without test leakage
+  Keep tuned regressions, held-out cases, clean controls and unadjudicated ordinary
+  papers distinct. Assess misses, false positives, evidence fidelity, abstention,
+  stability and cost separately. Model agreement is not an answer key.
+  Origin: S2 B-02.3, C-03.3–4; S4 benchmark notes. Status: future validation program.
+
+MAP-16 | Assessment type and remedy
+  Separate reproduction, code inspection, robustness, replication, forecasting and
+  screening; severity, claim effect, determinability and recommended remedy differ.
+  Origin: S2 C-03.2/5. Status: design; no general computational execution instrument.
+
+MAP-17 | Typed graph relationships
+  Distinguish source assertions from assessments of support/contradiction/qualification,
+  and documented from inferred relationships. No guilt-by-association edges.
+  Origin: S2 Part II §§1–3; S8 Claim/ClaimInstance/EvidenceAssessment; E-01.2.
+  Status: minimal finding-to-passage mappings exist; rich claim graph not built.
+
+MAP-18 | Portable records and view exports
+  Records must survive without the UI. View exports retain scope, filters, as-of
+  cutoff, layout/aggregation recipe, denominators, access and review states.
+  Origin: S2 A8/A10/E-01; S5 EXP-01..10.
+  Status: adapter JSONL/replay exists; full Browse/view-state export is proposed.
+
+MAP-19 | Source-light retention and public release
+  Default to audit records, source links, access states and permitted bounded excerpts.
+  Public release is separate from local import, with rights/privacy/redaction review.
+  Origin: S2 A3, A-02.5–6. Status: local records; public permissions/release not built.
+
+MAP-20 | Honest discovery, counts and metadata refresh
+  Distinguish Works, runs, findings and independent origins; disclose corpus selection.
+  Preserve provider/version assignments and dated changes; no default person rankings.
+  Origin: S2 A-02.3–4, E-01.2; S4 metadata sources.
+  Status: proposed catalog/refresh behavior, not a live integration.
+
+MAP-21 | Distinct Media interface and temporal gates
+  Event/story -> outlet history -> article/version, using one corpus and as-of scope.
+  Separate event, evidence availability, publication, capture and observation clocks.
+  Unknown coverage is not “never reported”; missing snapshots are not “no correction”.
+  Origin: S2 Media v0.2/D-01, A-02.2. Status: design/reference only.
+
+MAP-22 | Media interpretation and omission limits
+  Separate selection/prominence, inherited/chosen material and actor/action/referent/
+  stage. Omission requires availability, materiality, opportunity and counterchecks.
+  Similarity is not copying; rhetoric change is not motive or a global outlet grade.
+  Origin: S1 media prompts, FAIL-MB-017/018; S2 D-01.2–7. Status: native methods exist;
+  no Atlas Media runner or validated dashboard. No invented canonical Media Stage 3.
+
+MAP-23 | Future discourse and publishing layers
+  Term frequency is not belief, policy adoption or causal effect. A video summarizes
+  an existing reviewed audit; it cannot manufacture new findings or product features.
+  Origin: S6 pp.6–7; S7. Status: deferred proposals, not universal core requirements.
+
+
+5. DESIGN DISCREPANCIES RESOLVED OR LEFT EXPLICIT
+
+1) The master/handoff say Atlas is unimplemented and P0 is next. Those describe
+   their creation time. Section 3 updates current status; do not rebuild P0.
+
+2) Older “the instrument is the evaluator” wording is not Atlas's universal future
+   architecture. Appendix B explicitly permits model-directed and hybrid methods.
+   Preserve the original wording as history and apply B-02 integrity requirements.
+
+3) Old source-hash/full-text designs need later A-02/A3 interpretation. S8 is a
+   candidate text fixture profile; the current adapter is atlas-adapter/0.2, not an
+   implementation of atlas-core/0.1 or atlas-decision/0.1. Integration needs an
+   explicit compatibility decision. Do not rename record types and assume parity.
+
+4) Part V reports earlier synthetic validation; S8 reports 12 mechanical checks.
+   These are neither live repository CI coverage nor independent scientific tests.
+   The underlying standalone Part V executable package was not recovered here.
+
+5) A-02 discusses broader normalization possibilities; current adapter deliberately
+   distinguishes exact text from NFC/whitespace matches. Do not restore NFKC or
+   silently add fuzzy matching; those can collapse scientifically distinct strings.
+
+6) Current source eligibility cannot upgrade an imported historical null assertion
+   into a clean state. Any future scoped-null presentation must identify the new
+   examination, its evidence and its limits separately.
+
+7) The contract inventory in docs/atlas/contracts is documentation copied from an
+   earlier alternative package. Some internal paths refer to that absent package.
+   Preserve origin; do not recreate a second production adapter to satisfy its links.
+
+8) “One license per repo” is not an established requirement. Separate software,
+   prompts, copied fixtures and third-party excerpts retain their applicable terms.
+   A repository split does not settle licensing or authorize relicensing.
+
+9) Splitting a repository does not itself enforce dependency pins. Preserve old
+   repository/commit/blob references. If history is filtered, retain an old-to-new
+   commit map; do not rewrite old receipts as if created in the new repository.
+
+10) An unspecified “hygiene PR, items 1–7” appears in discussion, but its actual
+    instruction file was not found in this bounded source check. Do not make that
+    unknown list a migration prerequisite. Carry real reproducibility blockers
+    and known stale documentation as explicit tasks, without altering instruments.
+
+11) The recovered S8 contract is relevant but was missing from the supplied lean
+    bundle. Its link is now in this entry point. No claim is made that every file
+    ever created in other chats has been recovered or reconciled.
+
+
+6. BUILD ORDER — ONE ACTIVE ENGINEERING MILESTONE
+
+M0. Independent Atlas repository — NEXT, migration only
+
+Deliver a reviewable migration from the verified current baseline. Carry atlas/,
+tests/atlas/, docs/atlas/, CI and their complete dependency closure. The tests and
+contexts also reference files outside those folders, such as compliance/, original
+checker fixtures and source-preservation hashes. Preserve those exact inputs with
+their origin; moving only three directories is not sufficient.
+
+Keep original prompt/fixture history readable. Copy the living failure knowledge
+and philosophy with attribution; retain the old archive unchanged as a reference.
+Do not begin new prompt maintenance merely to move the implementation.
+
+Completion requires:
+  - a fresh checkout can execute the checker regression, Atlas tests and the six
+    applicable current content-replay receipts, without the old working tree;
+  - shared-ledger imports, export/restore and review detachment still work;
+  - original hashes, evidence IDs and native labels have not silently changed;
+  - prior receipts remain historical artifacts; any migration-induced differences
+    are explained, with new receipts rather than overwritten history;
+  - setup instructions work, required data is included, and attribution is present;
+  - a migration report states source SHA, destination SHA and validation commands.
+
+Repository name/creation can be resolved at execution time. No hosting decision is
+needed. A short Provenance status notice/pointer follows a verified destination.
+GitHub's read-only archival switch and a final release tag are separate deliberate
+actions, not changes made by this document. Do not close unrelated PRs automatically.
+
+M1. One complete bounded investigation — NEXT PRODUCT MILESTONE
+
+Use the existing power-posing packet as a development candidate, not unbiased
+validation. Prefer its accessible S2 scope, but verify available bytes and reuse
+eligibility limits. Do not fabricate a downstream claim or broaden the review.
+
+Increment A — connected records:
+  Preserve the six native claim-map fields, source assertions and a selected target.
+  Link the target to a citation-network finding, exact passages and attributed reviews.
+  If no compatible real archived claim map exists, author a clearly attributed new
+  development map or run a recorded extraction. Do not call it historical output.
+  Inspect whether the existing finding actually targets that claim; record a mismatch
+  rather than manufacture a successful cross-instrument relationship.
+  Explicitly distinguish a paper's statement, the claim being audited, and a
+  reviewer's decomposition of that statement.
+
+Increment B — bounded execution:
+  Add the smallest executor able to create a fresh source-linked claim extraction
+  and one declared evidence check. Version its instructions/method and input packet.
+  A partial method must have its own named scope; do not label it a complete native
+  citation-network audit if it omits that instrument's required checks.
+  Preserve model output, failures, source use and provisional assessments. Model
+  choice is replaceable. Do not force identical prose on live reruns.
+
+Increment C — inspect and challenge:
+  Produce a readable report with the target, evidence, missingness, original labels,
+  proposed support relation and review history. Permit a separately attributed
+  challenge without replacing the original. Existing model reviews are exposed
+  development material, not proof of independent review.
+
+Completion requires one end-to-end recorded execution plus mechanical controls:
+  - changed claim scope/polarity receives a distinct identity or explicit conflict;
+  - mismatched target is not linked as if it were the same audited claim;
+  - corrupted/removed required passage blocks dependent verification;
+  - unavailable methods do not become a clean methods assessment;
+  - changed review-target descriptor detaches the review;
+  - contrary review survives export/restore alongside the original;
+  - frozen inputs/outputs can be imported and replayed deterministically;
+  - live executor behavior and scientific interpretation are assessed separately.
+
+This milestone demonstrates an inspectable investigation path. It does not certify
+the method across science. A clean/no-issue control must have a justified expected
+result; an ordinary unreviewed paper cannot be declared ground-truth clean.
+
+M2. Minimal read-only inspector
+  Show the M1 records: source, target, evidence, check, limitations, disagreement and
+  export. Use real imported/executed data. Carry S5 export fields needed for this
+  view. Larger graphs and visual analytics follow demonstrated navigation needs.
+
+M3. Expand only from measured need
+  Another investigative method or a bounded Media corpus; specialist integration;
+  stronger independent validation; public release controls; shared deployment.
+  Historical parsers are conditional: add one only if a chosen case needs it and
+  the producing contract can be identified, or explicitly name a compatibility
+  profile without claiming verified historical compliance.
+
+
+7. THE IDEAS ARE RETAINED — THEIR TRIGGERS ARE DIFFERENT
+
+The existing catalog remains the detailed tool inventory. The groups below preserve
+the product directions without making each one a current dependency.
+
+Research workspace — S2 Parts I/II, A6; S4
+  Claim genealogy, methods/citation graph, competing and qualifying evidence,
+  evidence matrix, side inspector and audit history. Begin after M1; preserve
+  exact edge meanings, failure layer and source drill-down.
+
+Browse and portable publishing — S2 A1–A10/A-02/E-01; S5
+  Searchable Works/events, multiple audits, topic assignments, access/checkability,
+  explicit denominators, view export, snapshots and reader reports. Build a single
+  real-object inspector first; no person/outlet reputation scores.
+
+Media — S2 Media v0.2/D-01
+  Coverage matrix, event timeline, outlet episodes, article revisions, rhetoric
+  panels, narrative lanes, dependency flows and candidate omission strip. Start
+  with a bounded corpus, one observed revision and a proportionate/negative control.
+
+Discourse and institutional change — S6
+  Term observations, concept histories, adoption/enforcement records, outcomes and
+  revisions. Keep vocabulary, belief, policy and effects separate; validate sampling
+  and coding before interpreting motion or percentage changes.
+
+Metadata, retrieval and entity resolution — S4 §§2–4; S2 A-02.3
+  OpenAlex, Crossref, Semantic Scholar, OpenAIRE, ORCID/ROR, GROBID, archive and web
+  extraction candidates. Select one only for a concrete missing capability; preserve
+  provider raw output, import time, identity ambiguity, version and refresh history.
+
+Evidence search, screening and review — S4 detailed registry
+  Scite/Paperclip, Elicit/Covidence/ASReview, Google Deep Review, Peerless and Science
+  Guardians are task-specific references/comparators, not interchangeable judges.
+  Recheck identity, access, versions and actual performance before adoption.
+
+Reproduction, code inspection and specialist checks — S2 C-03; S4
+  CODECHECK, BITSS/ACRe, I4R, ResearchBox/AsCollected, statcheck/GRIM, registration,
+  image/transparency/retraction tools. Execution, repairs, robustness and replication
+  remain distinct. Specialist flags need applicability and error-rate qualifications.
+
+Review, response and correction — S2 Part V/C-03/E-01; S8
+  Locked initial judgments, recorded peer exposure, revision, appeals and author
+  response; separate severity/remedy. No automatic consensus or presumption that
+  nonresponse confirms a finding. Public policy needs explicit design before release.
+
+Evaluation program — S2 B-02/C-03; S4 benchmark notes
+  SCORE, I4R, withdrawn-paper cases, AstaBench and other research benchmarks supply
+  candidate tasks and design lessons. Use matched budgets/source access and held-out
+  keys; report multiple measures. Do not reproduce external headline percentages
+  as Atlas's expected verdict distribution.
+
+Graph/read architecture and interoperability — S2 E-01/Part VII; S4
+  OnCo-style typed records, derived backlinks, static snapshots, API/CLI/MCP access,
+  RO-Crate/W3C PROV-style interoperability candidates. Choose translations explicitly;
+  no claim of current standards compliance, universal schema or required graph DB.
+
+Policy and public-data investigation — S2 Parts I/II/IV; S4 §3
+  Adoption/comparator/outcome records; institution/funder graphs; CivLab,
+  DataRepublican, WA accountability projects, Effort and other public-data examples.
+  Preserve source -> transformation -> analysis -> interpretation; network proximity
+  is not coordination, and before/after change is not causal identification.
+
+Adaptive methods and agents — S2 Appendices B/C; S4 AI-native notes
+  Model-directed/hybrid inquiries, specialist routing, shared-state agents,
+  event-triggered rechecks, memory/version provenance and generated benchmark loops.
+  Keep as research options. Introduce orchestration only after the small executor
+  works; retain bounded permissions, exposure records, independent keys and controls.
+
+Walkthroughs/video — S7
+  Reviewed scene recipes, progressive explanation and evidence-linked narration.
+  Revisit after a genuinely functioning view and a sufficiently reviewed case.
+  No new findings, invented functionality or lost caveats for a stronger presentation.
+
+Visual/prototype references — S2 launch/02_PROTOTYPES and 03_VISUAL_INSPIRATION
+  Keep the Research workspace direction and Media chronology examples. They are
+  visual references; screenshots and static counts are not implementation or evidence.
+
+
+8. HOW TO KEEP THIS MANAGEABLE
+
+Maintain this entry point in the eventual Atlas repository. Update current status
+and the next milestone after a merged, checked change; do not create a new master
+for every idea. Keep detailed requirements and provenance alongside implementation.
+
+When extracting a rule into a formal method specification, record:
+  stable rule ID; plain requirement and applicability; originating artifact/version/
+  section; failure/regression link; inherited versus intentionally changed behavior;
+  enforcement location (code/tool boundary/model instruction/human); acceptance case;
+  implementation path and test receipt, or NOT IMPLEMENTED/NOT RUN; unresolved conflict.
+
+Do not discard repetition, section order or output templates as harmless scaffolding
+without checking which failure they prevent. S1 methodology “Change rule” already
+requires naming the protection, its successor and the regression that detects loss.
+
+A proposed formal rule becomes canonical for a new method version only through an
+explicit reviewed adoption. No new rule retroactively judges old outputs. Preserve
+unknown producing versions and instrument-specific meanings of SURVIVES/NARROWS/
+DEFEATS; do not infer a universal rule from the words alone.
+
+Working rhythm: one active engineering milestone, one reviewable increment at a time.
+ChatGPT prepares/reviews; Claude may implement on a branch and open the reviewable PR
+when instructed; the user controls merge/release. This document is not permission
+for direct-to-main pushes, public publication, external messaging or archival.
+
+Future sessions should start by reading this file, checking current repo SHA and
+CI, then opening only the source sections relevant to the active milestone. New
+ideas get an origin and a backlog group; they do not automatically displace the work.
+
+
+9. HANDOFF FOR THE NEXT ENGINEERING SESSION
+
+Begin M0, the migration-only milestone in section 6. Recheck current Provenance
+main; the last verified baseline here is c1bcb8bf186ea45c3cf751efc70afbd945810f51.
+Inspect existing Atlas repositories/branches before creating duplicate work.
+Use this document as the navigation map, not a replacement for native contracts.
+
+Prepare the extraction and dependency inventory, preserve source identities and
+history, and validate a fresh independent checkout. Do not change instruments,
+schemas, scientific findings or evidence mappings as incidental migration cleanup.
+Keep a precise before/after record. If immutable receipt inputs must change, retain
+old receipts and create a documented migration with new ones. Do not claim historical
+replay compatibility where code/input hashes differ.
+
+Bring back the migration diff/package or draft PR, setup steps, exact baseline and
+validation results. Do not merge or freeze the old repository until the destination
+is reviewed and working. Packaging belongs with this independent checkout; frontend,
+cloud storage and new model execution belong to later increments.
+
+
+APPENDIX A — CHECK SCOPE AND REMAINING UNCERTAINTY
+
+This pass inspected the supplied package inventories, governing design/precedence
+sections, handoff, project instructions, Browse proposal, video brief, feature-origin
+catalog and relevant research notes. The Asturias PDF was read as text for its
+requirements, not visually audited or independently replicated. HTML/image references
+were inventoried; their execution and visual fidelity were not retested.
+
+Sixteen current repository files were fetched at the pinned commit and their exact
+bytes checked against Git blob hashes. Current CI job logs were read. No new local
+test execution or live paper re-download is claimed. The underlying external tools,
+papers, prices, vendor claims and integration licenses were not revalidated here.
+
+The launch manifest verified 19 listed members; the research manifest verified 15.
+Master, Media, Browse and catalog duplicate groups were checked by SHA-256.
+The recovered S8 contract's design/status sections were read; its full synthetic
+fixture was not re-executed. This is a source map and family-level consolidation,
+not a complete semantic audit of every prompt line or every historical document.
+
+Important open decisions: exact independent-review standard; future claim/schema
+compatibility; source-version resolution; executor/tool-boundary enforcement;
+rights/publication/access policies; provider selection; deployment architecture.
+Only decisions required for the active increment should block that increment.
+
+No originals were edited or deleted. Source inventory and immutable identifiers
+follow so a later reviewer can recover the exact basis of this guide.
+
+
+APPENDIX B — SOURCE INVENTORY AND EXACT IDENTIFIERS
+
+Seven supplied Project Sources (uploaded names; SHA-256 of supplied bytes):
+
+Atlas_Project_Sources_Essentials_2026-10-30(1).zip
+  SHA-256 c3beaef93cadde98ccfd65a089a6a42c5e4e3008ff7b76d65c119424fd3da23b
+Atlas_Research_Catalog_Fresh(1).txt
+  SHA-256 016a6a9d0ad9bec017d8e6ad8b32862c8b1dd9a576fb3878fbc7b2cbb839be4f
+Atlas_Browse_Export_Contract_Proposal_2026-10-30(1).txt
+  SHA-256 86f16d81ad34922f54a41ebaeee8fc5f0869764c202cd2972a5862e388d8509d
+Asturias_Project_Media_Atlas_Reference_2026-10-30.pdf
+  SHA-256 c65f04326bc0c4c86fb9c41d4dd9f3a8a800ae2f415b631af53e4a5782947ade
+Atlas_Research_References_Fresh(1).zip
+  SHA-256 da0f84d7d164c3e24f356760fbaad77113e592d72fdd22f3df15947a40d645e3
+Atlas_Video_Brief_v2.txt
+  SHA-256 19fc3170c0a5c7354a9b677989e1a19b7afcdbc5d038e195138d2c9a890c17a8
+Atlas_Launch_v013_Fresh(3).zip
+  SHA-256 a2af7fa62dda119952f79571a5285fe9500cbe98d19cfe3c828c5ab8a20c0ffa
+
+Exact duplicate groups (content hashes, not filenames):
+Master v0.13: 4a1dde73bb8c5795b4e50c96f6b01d0901bfa64f580304440a8c0fa44ddf03bd
+Media v0.2: 1c0eada197df4a0c0d69def5ba62222028fca1ba48bd6e756499051d1fbca49b
+Browse proposal: 86f16d81ad34922f54a41ebaeee8fc5f0869764c202cd2972a5862e388d8509d
+Research catalog: 016a6a9d0ad9bec017d8e6ad8b32862c8b1dd9a576fb3878fbc7b2cbb839be4f
+The Browse proposal also matches its standalone Project Source.
+The catalog also matches its standalone Project Source (three identical copies).
+
+Research ZIP: all supporting documents retained in this index.
+These notes preserve leads, design history and earlier research; their presence
+does not promote every proposed feature or reported vendor capability to fact.
+
+00_READ_FIRST/Provenance_Atlas_Research_Tools_Labs_Feature_Origins_2026-10-30.txt
+00_READ_FIRST/README.txt
+01_DETAILED_SOURCE_NOTES/Atlas_C03_External_Validation_Source_Read_Addendum_2026-10-29.txt
+01_DETAILED_SOURCE_NOTES/Atlas_D01_Media_Event_Outlet_Timeline_Addendum_2026-10-29.txt
+01_DETAILED_SOURCE_NOTES/Atlas_E01_OnCo_Architecture_Reference_2026-10-29.txt
+01_DETAILED_SOURCE_NOTES/Atlas_Metascience_Labs_Comparative_Investigation_2026-10-29.txt
+01_DETAILED_SOURCE_NOTES/Atlas_Method_Neutrality_and_Adaptive_Evals_Addendum_v01_2026-10-29.txt
+01_DETAILED_SOURCE_NOTES/Atlas_Review_Notes_Oct29.docx
+01_DETAILED_SOURCE_NOTES/Provenance_Atlas_Deep_Research_and_Future_Architecture_2026-10-28.txt
+01_DETAILED_SOURCE_NOTES/Provenance_Atlas_Provider_Integrations_and_Benchmarking_2026-10-25.txt
+01_DETAILED_SOURCE_NOTES/Provenance_Research_Briefs_October_9_and_16_2026.txt
+01_DETAILED_SOURCE_NOTES/Public_Data_Lab_Design_Philosophy_Strategy_Provenance.txt
+01_DETAILED_SOURCE_NOTES/Research_Metascience_Evaluation_Ideas_Backlog.txt
+01_DETAILED_SOURCE_NOTES/Research_Tool_Landscape_Full_v3_OnCo_2026-10-29.txt
+01_DETAILED_SOURCE_NOTES/ai_native_organizations_atlas_handoff.txt
+
+Launch package non-specification material:
+02_PROTOTYPES/Research_Atlas_earlier_mockup_v02.html
+02_PROTOTYPES/Research_Atlas_v01_paper_audit.html
+02_PROTOTYPES/Research_Atlas_v02_evidence_network.html
+03_VISUAL_INSPIRATION/INDEX.txt and its 11 image references.
+The ZIP manifest retains exact member hashes; original video files are not
+included in this lean package. Do not mistake contact-sheet stills for videos.
+
+Current repository files read and byte-verified in this pass:
+Repository: yungmulaBABY1/Provenance
+Commit: c1bcb8bf186ea45c3cf751efc70afbd945810f51
+Use https://github.com/yungmulaBABY1/Provenance/blob/<commit>/<path>
+with the full commit above. Git blob SHA-1s follow:
+
+docs/atlas/README.md
+  7c06d8f2ae1cd865862e64ff509ad9b85d51f6c1
+docs/atlas/contracts/prompt-contracts.md
+  817aff2e757ce535698b4ebaa413673b8f60aa51
+.github/workflows/atlas-adapter.yml
+  038c514fe2bce51aedcd82801a941f01fd7dd0f8
+atlas/__main__.py
+  23bdc3725c85b5c683686ceda6b2188b75e7942e
+atlas/reviews.py
+  554376bf95d8be6a08fdf5091062c538f868eefc
+tests/atlas/power-sources-reviewed.json
+  72ad676d7f599bd3842a6cf5f263a65424cd60c5
+reference/philosophy.md
+  be00b7082b07f6660ad1cdcdfffaf4d92093b444
+reference/methodology.md
+  dde430c38d0a8c7ce0d7b1c4f5e0db340396114e
+prompts/1-claim-extraction.txt
+  894579a79e67508bdc4026b77c0a104681f903ad
+prompts/research-analysis/2-citation-network.txt
+  7ac79f0da337c4d52e39e1490088d06c82a9d42b
+FAILURES.md
+  0fe4ec74b9ecd08f207b631e8e91c056e8837238
+tests/atlas/reviews/power-posing/README.md
+  63aba670db34e0cd1d9b7b4b04427fb42ef6720a
+tests/atlas/sources/power-posing/README.md
+  7808e27946e8a685f609ffe0128b2b542d9e9a75
+docs/atlas/CHANGELOG.md
+  5a1af7f4c49b9e533c7d4c44bd80babddb4d6357
+README.md
+  407aa97b29a885bd31faed09c964a2843391bf64
+CHANGELOG.md
+  1db8aa89e3ea363de9efa4cdcb809990ed45a9f0
+
+Additional implementation references, present in the same commit tree:
+atlas/adapter.py; atlas/contract.py; atlas/integrity.py; atlas/ledger.py;
+atlas/native.py; atlas/sources.py; atlas/replay.py; atlas/baseline.json;
+tests/atlas/test_adapter.py; test_anchors.py; test_baseline.py;
+test_contract_labels.py; test_determinism.py; test_evidence_reviews.py;
+test_integrity.py; test_output_spans.py; test_paired_fixtures.py;
+test_power_sources.py; test_replay.py; test_reviews.py.
+These are navigation pointers, not a claim of a fresh full-code review this pass.
+
+PR #9 merged as b7527f4cf7d44f9ef42e2a9efe27f00537f1f4bc.
+Reviewed PR head: 22fd80cc1279bbd161a7cedd4490aaeadabb0ef5.
+https://github.com/yungmulaBABY1/Provenance/pull/9
+
+Two open PRs observed (#10, #11) point FROM main into older feature branches.
+Their existence is not evidence of new work waiting to enter main. No action
+was taken on them; inspect their direction/diff before any future merge.
+
+Revision policy: update this same entry point after reviewed milestones.
+Keep its prior revisions; do not make every future idea a new starting document.
+
+END — It points; you judge.
