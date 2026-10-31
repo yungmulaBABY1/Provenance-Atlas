@@ -19,7 +19,8 @@ with all required fixtures and its provenance intact. Demonstrate that it works
 from a fresh checkout. This is a migration, not a rewrite or a hosting decision.
   Revision 2 status: prepared and verified in
   https://github.com/yungmulaBABY1/Provenance-Atlas on branch m0-migration,
-  for review as a draft PR. Not merged. See section 3 and MIGRATION.md.
+  draft PR #1 (https://github.com/yungmulaBABY1/Provenance-Atlas/pull/1).
+  Branch CI passed. Not merged. See section 3 and MIGRATION.md.
 
 NEXT PRODUCT MILESTONE: one paper, one selected claim, one bounded evidence check,
 and a reviewable result. First connect the claim map to the existing finding and
@@ -176,8 +177,11 @@ Revision 2 update — 31 October 2026:
     export -> restore -> export byte-identical;
     fresh imports equal committed receipts except the environment.python
       patch field; no receipt changed, added or regenerated.
-  Branch CI on Provenance-Atlas is the independent confirmation; local
-  results are not a substitute. Full record: MIGRATION.md.
+  Branch CI on Provenance-Atlas: run 41253401606 at 9b61b66 (CPython
+  3.11.17) — checker regression PASS, 143 tests OK, content replay of all
+  six receipts, job "contracts" successful.
+  https://github.com/yungmulaBABY1/Provenance-Atlas/actions/runs/41253401606
+  Full record: MIGRATION.md.
 
   Measured dependency closure: 49 tracked files outside atlas/, tests/atlas/,
   docs/atlas/ are read during CI. They are kept at identical paths because
@@ -428,9 +432,9 @@ MAP-23 | Future discourse and publishing layers
 6. BUILD ORDER — ONE ACTIVE ENGINEERING MILESTONE
 
 M0. Independent Atlas repository — migration only
-    Revision 2 status: PREPARED AND LOCALLY VERIFIED, draft PR in
+    Revision 2 status: PREPARED AND VERIFIED, draft PR #1 in
     Provenance-Atlas, not merged. The completion criteria below are met
-    locally; branch CI confirms them independently. The Provenance pointer
+    locally and in branch CI (run 41253401606). The Provenance pointer
     notice and any archival follow a reviewed merge.
     Merge with "Create a merge commit"; squash or rebase would drop or
     rewrite the imported Provenance commits.

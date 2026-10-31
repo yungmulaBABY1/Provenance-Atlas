@@ -102,8 +102,11 @@ the unit suite (`test_moved_locator_stays_detached_after_export_and_restore`,
 **Receipts:** none changed, none added, none regenerated. No
 migration-induced difference was found, so no migration receipts were needed.
 
-GitHub Actions on this branch is the independent check of the above; these
-local results do not substitute for it.
+**GitHub Actions:** run
+[41253401606](https://github.com/yungmulaBABY1/Provenance-Atlas/actions/runs/41253401606)
+on `9b61b66` (CPython 3.11.17): checker regression PASS, 143 tests OK, content
+replay of all six receipts; job `contracts` successful. Draft PR:
+[#1](https://github.com/yungmulaBABY1/Provenance-Atlas/pull/1).
 
 ## Known limits
 
