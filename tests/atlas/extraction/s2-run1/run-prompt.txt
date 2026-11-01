@@ -1,0 +1,62 @@
+You are running one stage of a research-audit instrument. Two files are attached:
+
+  1. 1-claim-extraction.txt — the instrument. Follow it exactly as your instructions.
+  2. The target paper, a PDF.
+
+Use only these two attachments and this message. Do not use web search, memory,
+earlier conversations, project files or any other tool to find information about
+the paper or about what others have said about it. If you have a code tool, you may
+use it only to compute the instrument file's hash and line/byte counts.
+
+INSTRUMENT IDENTITY (operator-supplied; for the INSTRUMENT PREFLIGHT line)
+  path:         prompts/1-claim-extraction.txt
+  repository:   https://github.com/yungmulaBABY1/Provenance-Atlas
+  commit:       12cb73fe0de8eca063661cf9d0c83d19bef9381a
+  git blob:     894579a79e67508bdc4026b77c0a104681f903ad
+  SHA-256:      656b11c301931726a5435b231774f40797a10fd0cab950224616fc18951c035f
+  size:         1038 lines, 44072 bytes
+  retrieval form: ATTACHED
+If you can compute the attached file's SHA-256, compare it with the value above and
+report the result. If you cannot, say so; do not report a hash you did not compute.
+
+INSTRUMENT INPUTS
+  Target document: the attached PDF (full article as supplied).
+  Document type: academic paper.
+  Downstream uses: none supplied.
+  The claim that prompted this audit: none. This paper was chosen because its full
+    text is accessible, not because of anything said about it.
+
+RUN CONDITIONS — the only departures from the instrument
+  A. No retrieval. Field 4 cannot search for downstream uses in this run. Apply the
+     instrument's own field-specific provisional rule and state that the limitation
+     is NO RETRIEVAL CAPABILITY in this run, not evidence that no downstream use
+     exists. Anything you recall rather than read must be labelled RECALLED, on its
+     own line, and may not anchor Field 5.
+  B. Two sections are added after the instrument's required output. They do not
+     replace or change any part of it.
+
+Produce the instrument's complete required output first: preflight line, the six
+fields, the claim inventory, the output table, the construct-side handoff sub-schema
+and the one-line summaries. Then add:
+
+SOURCE ANCHORS
+For every statement in Fields 1, 2, 3 and 6, and for the definition and items in the
+definition-operationalization check, list the passage(s) of the PDF it rests on:
+  - field and which statement it supports;
+  - PDF page number (1-based, as the PDF viewer counts them) and section heading;
+  - the passage copied character for character, including the paper's own
+    punctuation, hyphenation and hedges; do not correct, shorten inside the quote,
+    or join text from different places into one quote;
+  - or, if a field is a reconstruction rather than something the paper says, write
+    "author reconstruction from Field N" and give no quote.
+One passage per entry. Keep each quote as short as it can be while still containing
+the statement.
+
+READ RECORD
+  - Pages and sections you read; anything you could not read (figures, tables,
+    supplemental material referred to but not attached, garbled text).
+  - Anything in the paper you were unsure how to classify.
+  - Whether you used any tool, and for what.
+
+Do not evaluate whether the paper's claims are true. Extract and map, as the
+instrument says.
