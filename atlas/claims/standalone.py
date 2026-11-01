@@ -17,9 +17,13 @@ CLAIM CONFIRMATION lines of prompts/research-analysis/2-citation-network.txt
     - Target layer: <text>
 
 The separator may be a hyphen, en dash or em dash. Text may follow the colon on
-the same line or start on indented continuation lines. Anything else is
-reported as an issue and left unparsed; nothing is repaired or guessed.
-Offsets are Unicode code points into the exact output text, half-open.
+the same line or start on indented continuation lines. Offsets are Unicode code
+points into the exact output text, half-open.
+
+Every entry is kept, including duplicates and entries whose label does not
+belong to their field number. Each field gets a status; only a USABLE field
+(exactly one non-empty entry, label matching its number) may serve as a
+linking target. Nothing is repaired, merged or guessed.
 """
 
 from __future__ import annotations
@@ -27,8 +31,13 @@ from __future__ import annotations
 import re
 
 NAME = "atlas-citation-network-claim-statements"
-VERSION = "1"
+# 2: number/label pairing validated; every entry kept; per-field status.
+VERSION = "2"
 FALLBACK_FIELDS = ("1", "3", "6")
+# Labels the instrument assigns to each fallback field number.
+EXPECTED_LABELS = {"1": "What was literally measured", "3": "Weaker defensible claim",
+                   "6": "Claim under audit"}
+FIELD_STATUSES = ("USABLE", "LABEL_MISMATCH", "DUPLICATE_ENTRIES", "EMPTY", "OUTSIDE_FALLBACK")
 
 WARNING = re.compile(r"CLAIM MAP MISSING:")
 MAP_HEADING = re.compile(r"CLAIM MAP: SELF-GENERATED\s+[—–-]\s+PROVISIONAL")
@@ -56,7 +65,15 @@ def top_level(line: str) -> bool:
     return bool(line) and not line[0].isspace() and not line.startswith("|")
 
 
-def item_span(lines, index: int, match: re.Match, text_group: int) -> tuple[dict, int]:
+def label_match(written: str, expected: str) -> str:
+    if written == expected:
+        return "EXACT"
+    if " ".join(written.split()).casefold() == " ".join(expected.split()).casefold():
+        return "CASE_OR_SPACE_ONLY"
+    return "MISMATCH"
+
+
+def item_span(lines, index: int, match: re.Match, text_group: int, text: str) -> tuple[dict, int]:
     """Span from the first text character to the end of the last continuation line."""
     offset, line = lines[index]
     start = end = None
@@ -76,7 +93,20 @@ def item_span(lines, index: int, match: re.Match, text_group: int) -> tuple[dict
         return {"line_start": index + 1, "line_end": index + 1, "char_start": None,
                 "char_end": None, "text": None}, cursor
     return {"line_start": index + 1 if match.group(text_group) else index + 2,
-            "line_end": last + 1, "char_start": start, "char_end": end}, cursor
+            "line_end": last + 1, "char_start": start, "char_end": end,
+            "text": text[start:end]}, cursor
+
+
+def field_status(entries: list[dict], outside: bool = False) -> str:
+    if outside:
+        return "OUTSIDE_FALLBACK"
+    if len(entries) > 1:
+        return "DUPLICATE_ENTRIES"
+    if entries[0]["text"] is None:
+        return "EMPTY"
+    if entries[0].get("label_match") == "MISMATCH":
+        return "LABEL_MISMATCH"
+    return "USABLE"
 
 
 def parse(text: str) -> dict:
@@ -87,8 +117,9 @@ def parse(text: str) -> dict:
                      if top_level(line) and MAP_HEADING.fullmatch(line.rstrip())]
     result = {"parser": {"name": NAME, "version": VERSION},
               "warning": {"present": bool(warning_lines), "lines": warning_lines},
-              "map": {"state": "ABSENT", "heading_line": None, "native_label": None, "fields": {}},
-              "confirmation": {"state": "ABSENT", "heading_line": None, "items": {}},
+              "map": {"state": "ABSENT", "heading_line": None, "native_label": None,
+                      "entries": {}, "field_status": {}},
+              "confirmation": {"state": "ABSENT", "heading_line": None, "entries": {}, "item_status": {}},
               "map_gap_lines": [i + 1 for i, (_, line) in enumerate(lines) if "MAP GAP:" in line],
               "issues": issues}
 
@@ -97,7 +128,8 @@ def parse(text: str) -> dict:
         result["map"]["state"] = "MALFORMED"
     elif heading_lines:
         index = heading_lines[0] - 1
-        result["map"].update(state="PRESENT", heading_line=index + 1, native_label=lines[index][1].rstrip())
+        result["map"].update(heading_line=index + 1, native_label=lines[index][1].rstrip())
+        entries = result["map"]["entries"]
         cursor = index + 1
         while cursor < len(lines):
             line = lines[cursor][1]
@@ -107,22 +139,26 @@ def parse(text: str) -> dict:
             match = MAP_ITEM.fullmatch(line.rstrip())
             if not match:
                 break
-            span, cursor = item_span(lines, cursor, match, 3)
-            number = match.group(1)
-            if span["char_start"] is None:
-                issues.append({"code": "EMPTY_MAP_FIELD", "field": number, "line": span["line_start"]})
-                continue
-            if number in result["map"]["fields"]:
-                issues.append({"code": "DUPLICATE_MAP_FIELD", "field": number, "line": span["line_start"]})
-                continue
-            if number not in FALLBACK_FIELDS:
-                issues.append({"code": "FIELD_OUTSIDE_FALLBACK", "field": number, "line": span["line_start"]})
-            result["map"]["fields"][number] = {"native_label": match.group(2).strip(), **span,
-                                               "text": text[span["char_start"]:span["char_end"]]}
-        missing = [f for f in FALLBACK_FIELDS if f not in result["map"]["fields"]]
+            span, cursor = item_span(lines, cursor, match, 3, text)
+            number, written = match.group(1), match.group(2).strip()
+            expected = EXPECTED_LABELS.get(number)
+            entries.setdefault(number, []).append({
+                "native_label": written, "expected_label": expected,
+                "label_match": label_match(written, expected) if expected else None, **span})
+        status = result["map"]["field_status"]
+        for number, items in entries.items():
+            status[number] = field_status(items, outside=number not in FALLBACK_FIELDS)
+            code = {"LABEL_MISMATCH": "FIELD_LABEL_MISMATCH", "DUPLICATE_ENTRIES": "DUPLICATE_MAP_FIELD",
+                    "EMPTY": "EMPTY_MAP_FIELD", "OUTSIDE_FALLBACK": "FIELD_OUTSIDE_FALLBACK"}.get(status[number])
+            if code:
+                issues.append({"code": code, "field": number, "lines": [e["line_start"] for e in items],
+                               "native_labels": [e["native_label"] for e in items]})
+        missing = [f for f in FALLBACK_FIELDS if f not in entries]
         if missing:
             issues.append({"code": "FALLBACK_FIELD_MISSING", "fields": missing})
-    if result["map"]["state"] == "PRESENT" and not warning_lines:
+        clean = not missing and all(status[f] == "USABLE" for f in entries)
+        result["map"]["state"] = "PRESENT" if clean else "PRESENT_WITH_DEFECTS"
+    if result["map"]["state"] in ("PRESENT", "PRESENT_WITH_DEFECTS") and not warning_lines:
         issues.append({"code": "STANDALONE_WARNING_MISSING"})
 
     confirmation_lines = [i + 1 for i, (_, line) in enumerate(lines)
@@ -132,31 +168,20 @@ def parse(text: str) -> dict:
         result["confirmation"]["state"] = "MALFORMED"
     elif confirmation_lines:
         index = confirmation_lines[0] - 1
-        items = result["confirmation"]["items"]
+        entries = result["confirmation"]["entries"]
         cursor = index + 1
-        recognized_any = False
         while cursor < len(lines):
             line = lines[cursor][1]
             if not line.strip():
                 cursor += 1
                 continue
             stripped = line.rstrip()
-            for key, pattern in CONFIRMATION_ITEMS:
-                match = pattern.fullmatch(stripped)
-                if match:
-                    break
-            else:
-                match = None
-            if match:
-                recognized_any = True
-                span, cursor = item_span(lines, cursor, match, 2)
-                if span["char_start"] is None:
-                    issues.append({"code": "EMPTY_CONFIRMATION_LINE", "item": key, "line": span["line_start"]})
-                elif key in items:
-                    issues.append({"code": "DUPLICATE_CONFIRMATION_LINE", "item": key, "line": span["line_start"]})
-                else:
-                    items[key] = {"native_label": match.group(1), **span,
-                                  "text": text[span["char_start"]:span["char_end"]]}
+            found = next(((key, m) for key, pattern in CONFIRMATION_ITEMS
+                          if (m := pattern.fullmatch(stripped))), None)
+            if found:
+                key, match = found
+                span, cursor = item_span(lines, cursor, match, 2, text)
+                entries.setdefault(key, []).append({"native_label": match.group(1), **span})
                 continue
             if OTHER_BULLET.match(line):
                 # Other bullets (e.g. the standalone warning repeat) are allowed and skipped.
@@ -166,14 +191,22 @@ def parse(text: str) -> dict:
                 continue
             break
         result["confirmation"]["heading_line"] = index + 1
-        if not recognized_any:
+        status = result["confirmation"]["item_status"]
+        for key, items in entries.items():
+            status[key] = field_status(items)
+            code = {"DUPLICATE_ENTRIES": "DUPLICATE_CONFIRMATION_LINE",
+                    "EMPTY": "EMPTY_CONFIRMATION_LINE"}.get(status[key])
+            if code:
+                issues.append({"code": code, "item": key, "lines": [e["line_start"] for e in items]})
+        if not entries:
             result["confirmation"]["state"] = "UNRECOGNIZED_FORMAT"
             issues.append({"code": "CONFIRMATION_FORMAT_UNRECOGNIZED", "line": index + 1})
         else:
-            result["confirmation"]["state"] = "PRESENT"
-            missing = [k for k, _ in CONFIRMATION_ITEMS if k not in items]
+            missing = [k for k, _ in CONFIRMATION_ITEMS if k not in entries]
             if missing:
                 issues.append({"code": "CONFIRMATION_LINE_MISSING", "items": missing})
+            clean = not missing and all(s == "USABLE" for s in status.values())
+            result["confirmation"]["state"] = "PRESENT" if clean else "PRESENT_WITH_DEFECTS"
     return result
 
 

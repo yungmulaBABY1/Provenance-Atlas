@@ -19,6 +19,8 @@ path and so does not invalidate those receipts. Its own receipts pin its own
 code and the shared modules it reads with.
 """
 
-VERSION = "0.1.0"
-SCHEMA = "atlas-claimlink/0.1"
+# 0.2.0 / schema 0.2: defective map fields kept but never linked (supersedes the
+# unmerged 0.1.0 at bb017ec).
+VERSION = "0.2.0"
+SCHEMA = "atlas-claimlink/0.2"
 CONTEXT_SCHEMA = "atlas-claimlink-context/0.1"

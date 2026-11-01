@@ -11,9 +11,18 @@ is recorded as `UNRESOLVED_REQUIRES_REVIEW`.
 
 ```sh
 python -m atlas.claims build tests/atlas/claims/power-posing-reviewed.json --out .atlas/claims
-python -m atlas.claims show .atlas/claims/records.jsonl
+python -m atlas.claims show .atlas/claims/records.jsonl            # verified view
+python -m atlas.claims show .atlas/claims/records.jsonl --unverified
 python -m atlas.claims replay .atlas/claims/manifest.json .atlas/claims/records.jsonl --level content
 ```
+
+`show` replays the bundle at content level from the inputs it pins (resolved
+from `--root`, default the current directory) and renders only if every record
+re-derives; otherwise it prints `NOT_VERIFIED` and renders nothing. A verified
+view says which inputs it was derived from and that verification covers
+recording, not correctness. `--unverified` renders stored labels as written,
+under an `UNVERIFIED RENDERING OF STORED ASSERTIONS` banner that comes before
+any label; use it for a bundle whose inputs you do not have.
 
 ## What it reads
 
@@ -39,15 +48,37 @@ continuation text, are accepted. Anything else is reported in `parse_issues`
 and left unparsed. A full upstream claim map pasted into an output is not
 parsed by this version.
 
+Each field number must carry its instrument label (1: *What was literally
+measured*, 3: *Weaker defensible claim*, 6: *Claim under audit*; case and
+spacing differences are accepted and recorded as `CASE_OR_SPACE_ONLY`). Every
+entry is kept as a `ClaimStatement`, and each field gets a status:
+
+| Status | Meaning | Linkable |
+| --- | --- | --- |
+| `USABLE` | One non-empty entry with its own label | yes |
+| `LABEL_MISMATCH` | Label belongs to another field or none | no |
+| `DUPLICATE_ENTRIES` | More than one entry for the number; all kept, in order, none preferred | no |
+| `EMPTY` | No text | no |
+| `OUTSIDE_FALLBACK` | A field number the fallback does not define (2, 4, 5A, 5B) | no |
+
+Only `USABLE` statements may be compared or designated as the audited claim.
+Any other Field 6 leaves the findings with no designated target
+(`designated_target_state` names why; the conflicting entries are listed as
+candidates, not linked), and a bare "Claim map field 6" reference becomes
+`UNRESOLVED_REQUIRES_REVIEW`. A map with any defect is `PRESENT_WITH_DEFECTS`.
+Confirmation lines follow the same rule. The validator enforces this: a
+comparison or designation that touches a non-`USABLE` statement, or a
+`SAME_TEXT*` identity without the comparison that backs it, is rejected.
+
 ## Records (`atlas-claimlink/0.1`)
 
 | Type | Holds |
 | --- | --- |
 | `ClaimLinkRun` | Dependency identity and status, method, whether a source (paper) statement is available and why not, counts by claim identity |
 | `ClaimMap` | The output's own map: state, native label, fields present, fields absent with reason, reconciliation state, parse issues |
-| `ClaimStatement` | One statement as written: role, exact text and hash, code-point span in the output, who wrote it (the audit run). ID is content-addressed, so changed wording gets a new identity |
+| `ClaimStatement` | One statement as written: role, native label, field status, exact text and hash, code-point span in the output, who wrote it (the audit run). ID is run + role/occurrence + text hash: changed wording gets a new identity, and identical sentences in different runs or roles stay distinct records |
 | `TextComparison` | Exact and `nfc-whitespace/2` comparison of two statements: `MATCH`, `NORMALIZED_MATCH_ONLY` or `MISMATCH`. Semantic equivalence is `UNASSESSED` unless the text is identical |
-| `TargetAlignment` | Per finding: target kind, comparisons with Field 6 and its confirmation, claim identity, the output's own mentions of Field 6, bound and detached reviews |
+| `TargetAlignment` | Per finding: target kind, designated target and its state (or candidates when ambiguous), comparisons, claim identity, the output's own mentions of Field 6, bound and detached reviews |
 | `ReviewScope` | Per review: binding, the finding field and span it reviews, its parts and dispositions, reviewer, and whether it reviews the target claim |
 | `ClaimLinkManifest` | Code, parser, contract and dependency identities; environment; record list and hash |
 
@@ -94,6 +125,9 @@ unreviewed power-posing run (no decomposition).
 
 ## Limits
 
+- Statement IDs are scoped to a run and a role. They are not global claim
+  identities and must not be used to merge identical sentences across runs;
+  semantic claims, when introduced, need their own records.
 - Text comparison is not meaning. A paraphrase and a scope change look the
   same here: both are `MISMATCH`.
 - Content-addressed statement IDs give changed wording a new identity;

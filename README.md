@@ -51,7 +51,7 @@ for dir in tests/atlas/claims/receipts/*/; do
 done
 ```
 
-Expected: checker regression `PASS`, 175 tests `OK`, six import content
+Expected: checker regression `PASS`, 187 tests `OK`, six import content
 replays and one claim-link content replay pass. `historical-*` receipts were produced by earlier code and are not
 replayable. CI runs the same steps (`.github/workflows/atlas-adapter.yml`).
 

@@ -34,16 +34,18 @@ FIELDS = {
     "ClaimLinkRun": {"dependency": dict, "method": str, "source_statement": dict,
                      "claim_map_id": str, "alignment_ids": list, "counts": dict},
     "ClaimMap": {"claim_link_run_id": str, "state": str, "producer": dict, "fields_present": list,
-                 "fields_absent": dict, "field_statement_ids": dict, "reconciliation": str,
-                 "parse_issues": list},
+                 "fields_usable": list, "field_status": dict, "fields_absent": dict,
+                 "field_statement_ids": dict, "reconciliation": str, "parse_issues": list},
     "ClaimStatement": {"claim_link_run_id": str, "role": str, "exact_text": str,
                        "exact_text_sha256": str, "normalized_text": str, "anchor": dict,
-                       "written_by": dict, "statement_kind": str},
+                       "written_by": dict, "statement_kind": str, "field_status": str,
+                       "native_label": (str, type(None))},
     "TextComparison": {"claim_link_run_id": str, "subject_id": str, "object_id": str,
                        "exact_match": bool, "normalized_match": bool, "result": str,
                        "semantic_equivalence": str, "basis": str},
     "TargetAlignment": {"claim_link_run_id": str, "finding_id": str, "target_kind": str,
-                        "designated_target_id": (str, type(None)), "finding_target_id": (str, type(None)),
+                        "designated_target_id": (str, type(None)), "designated_target_state": str,
+                        "designated_target_candidate_ids": list, "finding_target_id": (str, type(None)),
                         "comparison_ids": list, "claim_identity": str, "native_field_6_mentions": list,
                         "reviewer_decomposition_ids": list, "detached_review_ids": list,
                         "finding_import_status": str},
@@ -65,11 +67,20 @@ LABELS = {
     ("TargetAlignment", "claim_identity"): {"SAME_TEXT", "SAME_TEXT_AFTER_NORMALIZATION",
                                             "DECLARED_BY_REFERENCE", "DECLARED_NOT_ON_MAP",
                                             "UNRESOLVED_REQUIRES_REVIEW", "NO_TARGET_STATED"},
-    ("ClaimStatement", "role"): {"MAP_FIELD_1", "MAP_FIELD_3", "MAP_FIELD_6", "CONFIRMATION_FIELD_1",
-                                 "CONFIRMATION_FIELD_3", "CONFIRMATION_FIELD_6",
+    ("ClaimStatement", "role"): {"MAP_FIELD_1", "MAP_FIELD_3", "MAP_FIELD_6", "MAP_FIELD_OUTSIDE_FALLBACK",
+                                 "CONFIRMATION_FIELD_1", "CONFIRMATION_FIELD_3", "CONFIRMATION_FIELD_6",
                                  "CONFIRMATION_TARGET_LAYER", "FINDING_TARGET_CLAIM"},
+    ("ClaimStatement", "field_status"): {*standalone.FIELD_STATUSES, "NOT_APPLICABLE"},
+    ("ClaimMap", "state"): {"ABSENT", "PRESENT", "PRESENT_WITH_DEFECTS", "MALFORMED"},
+    ("TargetAlignment", "designated_target_state"): {
+        "MAP_FIELD_6_IN_OUTPUT", "FIELD_6_DUPLICATE_ENTRIES", "FIELD_6_LABEL_MISMATCH", "FIELD_6_EMPTY",
+        "FIELD_6_NOT_IN_MAP", "MAP_MALFORMED", "FIELD_6_TEXT_NOT_IN_INPUTS"},
     ("ReviewScope", "binding"): {"MATCH", "TARGET_MISMATCH"},
 }
+# A statement may be compared or designated only if it is a finding target or a
+# field/line the parser marked USABLE (one entry, label matching its number).
+LINKABLE = {"USABLE", "NOT_APPLICABLE"}
+IDENTITY_FROM_RESULT = {"SAME_TEXT": "MATCH", "SAME_TEXT_AFTER_NORMALIZATION": "NORMALIZED_MATCH_ONLY"}
 FIELD_6_REFERENCE = re.compile(r"claim map field 6\b(.*)", re.IGNORECASE | re.DOTALL)
 
 
@@ -121,6 +132,24 @@ def validate(records: list[dict], external_ids: set[str]) -> None:
                         "NORMALIZED_MATCH_ONLY" if item["normalized_match"] else "MISMATCH")
             if item["result"] != expected or (item["exact_match"] and not item["normalized_match"]):
                 raise ContractError(f"INVALID_LABEL: comparison contradicts its match fields: {item['id']}")
+            for end in (item["subject_id"], item["object_id"]):
+                if by_id.get(end, {}).get("field_status") not in LINKABLE:
+                    raise ContractError(f"INELIGIBLE_LINK_TARGET: {item['id']} compares {end}")
+        if item["type"] == "TargetAlignment":
+            designated = by_id.get(item["designated_target_id"]) if item["designated_target_id"] else None
+            if item["designated_target_id"] and (
+                    designated is None or designated.get("role") != "MAP_FIELD_6"
+                    or designated.get("field_status") != "USABLE"
+                    or item["designated_target_state"] != "MAP_FIELD_6_IN_OUTPUT"):
+                raise ContractError(f"INELIGIBLE_LINK_TARGET: {item['id']} designates {item['designated_target_id']}")
+            if not item["designated_target_id"] and item["designated_target_state"] == "MAP_FIELD_6_IN_OUTPUT":
+                raise ContractError(f"INVALID_LABEL: {item['id']} designated state without a target")
+            if item["claim_identity"] in IDENTITY_FROM_RESULT:
+                backing = [by_id.get(c, {}) for c in item["comparison_ids"]]
+                if not designated or not any(
+                        c.get("subject_id") == item["finding_target_id"] and c.get("object_id") == designated["id"]
+                        and c.get("result") == IDENTITY_FROM_RESULT[item["claim_identity"]] for c in backing):
+                    raise ContractError(f"UNSUPPORTED_IDENTITY: {item['id']} {item['claim_identity']}")
     manifests = [r for r in records if r["type"] == "ClaimLinkManifest"]
     if len(manifests) != 1:
         raise ContractError("INVALID_MANIFEST_COVERAGE: exactly one ClaimLinkManifest required")
@@ -190,7 +219,8 @@ def build(context: dict, root: Path) -> dict:
                   "historical_instrument": run["historical_instrument"]}
     records, statements = [], {}
 
-    def statement(role: str, span: dict, suffix: str, extra_refs=()) -> dict:
+    def statement(role: str, span: dict, suffix: str, extra_refs=(), field_status="NOT_APPLICABLE",
+                  native_label=None) -> dict:
         text = raw[span["char_start"]:span["char_end"]]
         text_sha = sha256(text.encode("utf-8"))
         item = record("ClaimStatement", f"{rid}/statement/{suffix}/{text_sha[:16]}",
@@ -201,6 +231,7 @@ def build(context: dict, root: Path) -> dict:
                               "char_end": span["char_end"], "char_unit": "unicode_codepoint",
                               "char_interval": "half_open"},
                       written_by=written_by, statement_kind="AUDIT_OUTPUT_TEXT",
+                      field_status=field_status, native_label=native_label,
                       refs=[rid, run["id"], *extra_refs])
         records.append(item)
         return item
@@ -216,33 +247,56 @@ def build(context: dict, root: Path) -> dict:
         records.append(item)
         return item
 
-    for number, item in parsed["map"]["fields"].items():
-        if number in standalone.FALLBACK_FIELDS:
-            statements[f"MAP_FIELD_{number}"] = statement(f"MAP_FIELD_{number}", item, f"map-field-{number}")
-    for key, item in parsed["confirmation"]["items"].items():
+    # Every entry becomes a statement, so conflicting or mislabelled text is kept.
+    # Only USABLE ones enter `statements`, the set that may be compared or designated.
+    map_entry_ids: dict[str, list[str]] = {}
+    for number, entries in parsed["map"]["entries"].items():
+        status = parsed["map"]["field_status"][number]
+        role = f"MAP_FIELD_{number}" if number in standalone.FALLBACK_FIELDS else "MAP_FIELD_OUTSIDE_FALLBACK"
+        for index, entry in enumerate(entries, 1):
+            if entry["text"] is None:
+                continue
+            suffix = f"map-field-{number}" if len(entries) == 1 else f"map-field-{number}-entry-{index}"
+            item = statement(role, entry, suffix, field_status=status, native_label=entry["native_label"])
+            map_entry_ids.setdefault(number, []).append(item["id"])
+            if status == "USABLE":
+                statements[role] = item
+    for key, entries in parsed["confirmation"]["entries"].items():
+        status = parsed["confirmation"]["item_status"][key]
         role = "CONFIRMATION_TARGET_LAYER" if key == "target_layer" else f"CONFIRMATION_{key.upper()}"
-        statements[role] = statement(role, item, f"confirmation-{key.replace('_', '-')}")
+        for index, entry in enumerate(entries, 1):
+            if entry["text"] is None:
+                continue
+            suffix = f"confirmation-{key.replace('_', '-')}" + ("" if len(entries) == 1 else f"-entry-{index}")
+            item = statement(role, entry, suffix, field_status=status, native_label=entry["native_label"])
+            if status == "USABLE":
+                statements[role] = item
     for number in standalone.FALLBACK_FIELDS:
         a, b = statements.get(f"MAP_FIELD_{number}"), statements.get(f"CONFIRMATION_FIELD_{number}")
         if a and b:
             comparison(a, b, f"map-field-{number}~confirmation-field-{number}")
 
     map_state = parsed["map"]["state"]
+    has_map = map_state in ("PRESENT", "PRESENT_WITH_DEFECTS")
     claim_map_id = f"{rid}/claim-map"
-    present = sorted(parsed["map"]["fields"]) if map_state == "PRESENT" else []
+    present = sorted(parsed["map"]["entries"])
+    field_status = dict(sorted(parsed["map"]["field_status"].items()))
+    usable_fields = [f for f in present if field_status[f] == "USABLE"]
     absent = {}
     for field in CONTRACT_ROWS:
         if field in present:
             continue
-        if map_state == "PRESENT" and field not in standalone.FALLBACK_FIELDS:
+        if map_state == "MALFORMED":
+            absent[field] = "MAP_MALFORMED: duplicate map headings; entries not parsed"
+        elif has_map and field not in standalone.FALLBACK_FIELDS:
             absent[field] = "NOT_IN_STANDALONE_FALLBACK: the instrument defines only fields 1, 3 and 6"
-        elif map_state == "PRESENT":
+        elif has_map:
             absent[field] = "FALLBACK_FIELD_NOT_FOUND_IN_OUTPUT"
         else:
             absent[field] = "NO_CLAIM_MAP_IN_OUTPUT"
     records.append(record(
         "ClaimMap", claim_map_id, claim_link_run_id=rid, state=map_state,
-        producer={"instrument": "citation-network", "mode": "DEGRADED_STANDALONE" if map_state == "PRESENT" else None,
+        producer={"instrument": "citation-network", "mode": "DEGRADED_STANDALONE" if has_map else None,
                   "native_label": parsed["map"]["native_label"], "heading_line": parsed["map"]["heading_line"],
                   "standalone_warning": parsed["warning"],
                   "claim_extraction_output": False,
@@ -250,18 +304,17 @@ def build(context: dict, root: Path) -> dict:
                            "instrument and not equivalent to an upstream map.")},
         compared_contract={"path": contract["path"], "sha256": contract["sha256"],
                            "git_blob_sha1": contract["git_blob_sha1"], "fields": list(CONTRACT_ROWS)},
-        fields_present=present, fields_absent=absent,
-        claim_inventory="NOT_PRODUCED",
-        field_statement_ids={f: statements[f"MAP_FIELD_{f}"]["id"] for f in present
-                             if f"MAP_FIELD_{f}" in statements},
+        fields_present=present, fields_usable=usable_fields, field_status=field_status,
+        fields_absent=absent, claim_inventory="NOT_PRODUCED",
+        field_statement_ids={f: ids for f, ids in sorted(map_entry_ids.items())},
         confirmation={"state": parsed["confirmation"]["state"],
-                      "heading_line": parsed["confirmation"]["heading_line"]},
+                      "heading_line": parsed["confirmation"]["heading_line"],
+                      "item_status": dict(sorted(parsed["confirmation"]["item_status"].items()))},
         reconciliation=("NOT_PERFORMED: the instrument requires reconciliation against an upstream map "
-                        "before combining this audit with others" if map_state == "PRESENT"
-                        else "NOT_APPLICABLE: no map in output"),
+                        "before combining this audit with others" if has_map
+                        else "NOT_APPLICABLE: no parsable map in output"),
         parse_issues=parsed["issues"], output_map_gap_lines=parsed["map_gap_lines"],
-        refs=[rid, run["id"], *[statements[f"MAP_FIELD_{f}"]["id"] for f in present
-                                if f"MAP_FIELD_{f}" in statements]]))
+        refs=[rid, run["id"], *[i for f in sorted(map_entry_ids) for i in map_entry_ids[f]]]))
 
     # Reviews: structured evidence reviews bind to a span of one finding field.
     review_scopes: dict[str, list[dict]] = {}
@@ -303,6 +356,17 @@ def build(context: dict, root: Path) -> dict:
 
     designated = statements.get("MAP_FIELD_6")
     confirmation = statements.get("CONFIRMATION_FIELD_6")
+    candidates = map_entry_ids.get("6", [])
+    if designated:
+        designated_state = "MAP_FIELD_6_IN_OUTPUT"
+    elif map_state == "MALFORMED":
+        designated_state = "MAP_MALFORMED"
+    elif not has_map:
+        designated_state = "FIELD_6_TEXT_NOT_IN_INPUTS"
+    else:
+        designated_state = {"DUPLICATE_ENTRIES": "FIELD_6_DUPLICATE_ENTRIES",
+                            "LABEL_MISMATCH": "FIELD_6_LABEL_MISMATCH",
+                            "EMPTY": "FIELD_6_EMPTY"}.get(field_status.get("6"), "FIELD_6_NOT_IN_MAP")
     alignment_ids, counts = [], {}
     findings = sorted((r for r in dep["records"] if r["type"] == "AuditFinding" and r["audit_run_id"] == run["id"]),
                       key=lambda r: int(r["id"].rsplit("/", 1)[1]))
@@ -332,9 +396,13 @@ def build(context: dict, root: Path) -> dict:
             identity = "DECLARED_NOT_ON_MAP"
         elif kind == "FIELD_6_REFERENCE":
             qualifier = FIELD_6_REFERENCE.match(value).group(1).strip()
-            identity = "UNRESOLVED_REQUIRES_REVIEW" if qualifier else "DECLARED_BY_REFERENCE"
+            # A bare reference resolves only when no map is present to contradict it,
+            # or the map's Field 6 is usable. A defective Field 6 makes it ambiguous.
+            resolvable = designated_state in ("MAP_FIELD_6_IN_OUTPUT", "FIELD_6_TEXT_NOT_IN_INPUTS")
+            identity = "DECLARED_BY_REFERENCE" if resolvable and not qualifier else "UNRESOLVED_REQUIRES_REVIEW"
         else:
-            vs_designated = comparisons[0]["result"] if designated else None
+            vs_designated = next((c["result"] for c in comparisons if designated
+                                  and c["object_id"] == designated["id"]), None)
             identity = {"MATCH": "SAME_TEXT", "NORMALIZED_MATCH_ONLY": "SAME_TEXT_AFTER_NORMALIZATION"}.get(
                 vs_designated, "UNRESOLVED_REQUIRES_REVIEW")
         counts[identity] = counts.get(identity, 0) + 1
@@ -351,8 +419,8 @@ def build(context: dict, root: Path) -> dict:
             "TargetAlignment", aid, claim_link_run_id=rid, finding_id=finding["id"],
             finding_number=str(native["number"]), target_kind=kind,
             designated_target_id=designated["id"] if designated else None,
-            designated_target_state=("MAP_FIELD_6_IN_OUTPUT" if designated else
-                                     "FIELD_6_TEXT_NOT_IN_INPUTS"),
+            designated_target_state=designated_state,
+            designated_target_candidate_ids=[] if designated else candidates,
             finding_target_id=target["id"] if target else None,
             comparison_ids=[c["id"] for c in comparisons], claim_identity=identity,
             native_field_6_mentions=mentions, reviewer_decomposition_ids=attached,
@@ -362,7 +430,7 @@ def build(context: dict, root: Path) -> dict:
                     "audited_claim": designated["id"] if designated else None,
                     "finding_target": target["id"] if target else None,
                     "reviewer_decompositions": attached},
-            refs=[rid, finding["id"], *([designated["id"]] if designated else []),
+            refs=[rid, finding["id"], *([designated["id"]] if designated else candidates),
                   *([target["id"]] if target else []), *[c["id"] for c in comparisons], *attached, *detached]))
 
     target_work = run["target_work_id"]

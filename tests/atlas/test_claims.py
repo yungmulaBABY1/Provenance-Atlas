@@ -78,6 +78,7 @@ class CommittedCaseTests(unittest.TestCase):
         self.assertEqual(cmap["producer"]["mode"], "DEGRADED_STANDALONE")
         self.assertFalse(cmap["producer"]["claim_extraction_output"])
         self.assertEqual(cmap["fields_present"], ["1", "3", "6"])
+        self.assertEqual(cmap["fields_usable"], ["1", "3", "6"])
         self.assertEqual(sorted(cmap["fields_absent"]), ["2", "4", "5A", "5B"])
         self.assertTrue(all(v.startswith("NOT_IN_STANDALONE_FALLBACK") for v in cmap["fields_absent"].values()))
         self.assertEqual(cmap["claim_inventory"], "NOT_PRODUCED")
@@ -155,6 +156,7 @@ class CommittedCaseTests(unittest.TestCase):
             self.assertEqual(cli("build", "tests/atlas/claims/power-posing-reviewed.json", "--out", str(out)).returncode, 0)
             shown = cli("show", str(out / "records.jsonl"))
             self.assertEqual(shown.returncode, 0, shown.stderr)
+            self.assertTrue(shown.stdout.startswith("VERIFIED RENDERING"))
             self.assertIn("claim identity: UNRESOLVED_REQUIRES_REVIEW", shown.stdout)
             self.assertIn("DOES_NOT_REVIEW_TARGET_CLAIM", shown.stdout)
             for level in ("strict", "content"):
@@ -283,6 +285,58 @@ class MutationTests(unittest.TestCase):
         self.assertEqual(al["reviewer_decomposition_ids"], [])
         self.assertEqual(sorted(al["detached_review_ids"]), sorted(s["id"] for s in scopes))
 
+    def assert_no_designated_target(self, bundle, state):
+        records = by_id(bundle)
+        for al in of_type(bundle, "TargetAlignment"):
+            self.assertIsNone(al["designated_target_id"])
+            self.assertEqual(al["designated_target_state"], state)
+            self.assertEqual(al["claim_identity"], "UNRESOLVED_REQUIRES_REVIEW")
+            roles = {records[records[c]["object_id"]]["role"] for c in al["comparison_ids"]}
+            self.assertNotIn("MAP_FIELD_6", roles)
+        self.assertFalse(any("/compare/map-field-6~" in c["id"] for c in of_type(bundle, "TextComparison")))
+
+    def test_field_6_with_another_fields_label_is_not_a_target(self):
+        # Wrong label, and text identical to the finding target: must not become SAME_TEXT.
+        original = "- Field 6 — Claim under audit:\n  " + FIELD_6
+        self.assertEqual(self.output.count(original), 1)
+        bundle, _ = self.link(self.output.replace(original, "- Field 6 — Weaker defensible claim: " + TARGET))
+        cmap = of_type(bundle, "ClaimMap")[0]
+        self.assertEqual(cmap["state"], "PRESENT_WITH_DEFECTS")
+        self.assertEqual(cmap["field_status"]["6"], "LABEL_MISMATCH")
+        self.assertNotIn("6", cmap["fields_usable"])
+        issue = next(i for i in cmap["parse_issues"] if i["code"] == "FIELD_LABEL_MISMATCH")
+        self.assertEqual(issue["native_labels"], ["Weaker defensible claim"])
+        kept = by_id(bundle)[cmap["field_statement_ids"]["6"][0]]
+        self.assertEqual((kept["exact_text"], kept["field_status"], kept["native_label"]),
+                         (TARGET, "LABEL_MISMATCH", "Weaker defensible claim"))
+        self.assert_no_designated_target(bundle, "FIELD_6_LABEL_MISMATCH")
+
+    def test_contradictory_duplicate_field_6_is_not_a_target(self):
+        # A second Field 6 entry whose text is identical to the finding target.
+        bundle, _ = self.link(self.output.replace(FIELD_6, FIELD_6 + "\n- Field 6 — Claim under audit: " + TARGET))
+        cmap = of_type(bundle, "ClaimMap")[0]
+        self.assertEqual(cmap["state"], "PRESENT_WITH_DEFECTS")
+        self.assertEqual(cmap["field_status"]["6"], "DUPLICATE_ENTRIES")
+        kept = [by_id(bundle)[i] for i in cmap["field_statement_ids"]["6"]]
+        self.assertEqual([k["exact_text"] for k in kept], [FIELD_6, TARGET])
+        self.assertEqual(len({k["id"] for k in kept}), 2)
+        self.assert_no_designated_target(bundle, "FIELD_6_DUPLICATE_ENTRIES")
+        self.assertEqual(sorted(alignment(bundle, 1)["designated_target_candidate_ids"]),
+                         sorted(k["id"] for k in kept))
+        # Neither order may let the first entry win.
+        reordered = self.output.replace(FIELD_6, TARGET + "\n- Field 6 — Claim under audit: " + FIELD_6.replace("\n  ", " "))
+        self.assert_no_designated_target(self.link(reordered)[0], "FIELD_6_DUPLICATE_ENTRIES")
+
+    def test_duplicate_confirmation_line_is_not_compared(self):
+        line = "- Claim under audit (map field 6): The cited literature independently establishes"
+        self.assertEqual(self.output.count(line), 1)
+        bundle, _ = self.link(self.output.replace(line, "- Claim under audit (map field 6): " + TARGET + "\n" + line))
+        cmap = of_type(bundle, "ClaimMap")[0]
+        self.assertEqual(cmap["confirmation"]["item_status"]["field_6"], "DUPLICATE_ENTRIES")
+        records = by_id(bundle)
+        for al in of_type(bundle, "TargetAlignment"):
+            self.assertEqual({records[records[c]["object_id"]]["role"] for c in al["comparison_ids"]}, {"MAP_FIELD_6"})
+
     def test_dependency_byte_change_without_new_pin_is_rejected(self):
         _, ctx = self.link(self.output)
         records = self.root / "dep/records.jsonl"
@@ -348,9 +402,11 @@ class TamperTests(unittest.TestCase):
             validate(self.tampered(change), self.ids)
 
     def test_consistent_relabel_fails_replay(self):
+        # Labels the static validator cannot check against anything in the bundle.
         def change(records):
             al = next(r for r in records if r["type"] == "TargetAlignment")
-            al["claim_identity"] = "SAME_TEXT_AFTER_NORMALIZATION"
+            al["finding_import_status"] = "IMPORTED_UNADJUDICATED"
+            al["claim_identity"] = "DECLARED_BY_REFERENCE"
         records = self.tampered(change)
         manifest = next(r for r in records if r["type"] == "ClaimLinkManifest")
         body = [r for r in records if r is not manifest]
@@ -359,6 +415,19 @@ class TamperTests(unittest.TestCase):
         validate(records, self.ids)  # internally consistent after re-hashing ...
         with self.assertRaisesRegex(ContractError, "REPLAY_MISMATCH"):  # ... but not re-derivable
             replay((canonical(manifest) + "\n").encode("utf-8"), jsonl(records), ROOT, "content")
+
+    def test_designating_an_ineligible_statement_is_rejected(self):
+        def change(records):
+            st = next(r for r in records if r["type"] == "ClaimStatement" and r["role"] == "MAP_FIELD_6")
+            st["field_status"] = "DUPLICATE_ENTRIES"
+        with self.assertRaisesRegex(ContractError, "INELIGIBLE_LINK_TARGET"):
+            validate(self.tampered(change), self.ids)
+
+    def test_same_text_without_backing_comparison_is_rejected(self):
+        def change(records):
+            next(r for r in records if r["type"] == "TargetAlignment")["claim_identity"] = "SAME_TEXT"
+        with self.assertRaisesRegex(ContractError, "UNSUPPORTED_IDENTITY"):
+            validate(self.tampered(change), self.ids)
 
     def test_unknown_label_is_rejected(self):
         def change(records):
@@ -373,21 +442,107 @@ class TamperTests(unittest.TestCase):
             validate(self.tampered(change), self.ids)
 
 
+class ViewerTests(unittest.TestCase):
+    """show verifies before rendering; --unverified renders under a banner."""
+
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temp.cleanup)
+        from atlas.claims.link import jsonl
+        records = [load_json(line) for line in (RECEIPT / "records.jsonl").read_bytes().splitlines()]
+        # Plausible false upgrades, re-hashed so the file is internally consistent.
+        scope = next(r for r in records if r["type"] == "ReviewScope")
+        scope["relation_to_finding_target"] = "REVIEWS_TARGET_CLAIM_FIELD"
+        link = next(r for r in records if r["type"] == "ClaimLinkRun")
+        link["dependency"]["syntax"] = "PASS"
+        manifest = next(r for r in records if r["type"] == "ClaimLinkManifest")
+        manifest["records_before_manifest_sha256"] = sha256(jsonl([r for r in records if r is not manifest]))
+        self.tampered = Path(self.temp.name) / "records.jsonl"
+        self.tampered.write_bytes(jsonl(records))
+        self.records = records
+
+    def cli(self, *args):
+        return subprocess.run([sys.executable, "-m", "atlas.claims", "show", *args], cwd=ROOT,
+                              capture_output=True, text=True)
+
+    def test_tampered_file_still_passes_static_validation(self):
+        validate(self.records, build(copy.deepcopy(CONTEXT), ROOT)["dependency_ids"])
+
+    def test_verified_view_refuses_a_tampered_file(self):
+        shown = self.cli(str(self.tampered))
+        self.assertNotEqual(shown.returncode, 0)
+        self.assertIn("NOT_VERIFIED", shown.stderr)
+        self.assertIn("REPLAY_MISMATCH", shown.stderr)
+        self.assertEqual(shown.stdout, "")
+
+    def test_unverified_view_puts_its_banner_before_any_stored_label(self):
+        shown = self.cli(str(self.tampered), "--unverified")
+        self.assertEqual(shown.returncode, 0, shown.stderr)
+        out = shown.stdout
+        self.assertTrue(out.startswith("=" * 10))
+        banner = out.index("UNVERIFIED RENDERING OF STORED ASSERTIONS")
+        for label in ("syntax PASS", "REVIEWS_TARGET_CLAIM_FIELD", "native projection VERIFIED"):
+            self.assertLess(banner, out.index(label), label)
+        self.assertFalse(out.startswith("VERIFIED RENDERING"))
+        self.assertNotIn("\nVERIFIED RENDERING", out)
+
+    def test_verified_view_of_committed_receipt(self):
+        shown = self.cli(str(RECEIPT / "records.jsonl"))
+        self.assertEqual(shown.returncode, 0, shown.stderr)
+        self.assertTrue(shown.stdout.startswith("VERIFIED RENDERING"))
+        self.assertNotIn("UNVERIFIED", shown.stdout)
+
+    def test_bundle_without_manifest_is_not_rendered_as_verified(self):
+        path = Path(self.temp.name) / "no-manifest.jsonl"
+        path.write_text("".join(canonical(r) + "\n" for r in self.records if r["type"] != "ClaimLinkManifest"),
+                        encoding="utf-8")
+        shown = self.cli(str(path))
+        self.assertNotEqual(shown.returncode, 0)
+        self.assertIn("NOT_VERIFIED", shown.stderr)
+        self.assertEqual(shown.stdout, "")
+
+
 class ParserTests(unittest.TestCase):
     def test_same_line_and_wrapped_text_with_each_dash(self):
         text = ("CLAIM MAP MISSING: x\n\nCLAIM MAP: SELF-GENERATED – PROVISIONAL\n"
                 "- Field 1 - Measured: a b\n- Field 3 — Weaker:\n  c\n  d\n- Field 6 – Claim: e\n\nNEXT\n")
         parsed = standalone.parse(text)
-        self.assertEqual(parsed["issues"], [])
-        fields = parsed["map"]["fields"]
-        self.assertEqual({k: v["text"] for k, v in fields.items()}, {"1": "a b", "3": "c\n  d", "6": "e"})
-        for item in fields.values():
+        # Spans are exact, but these labels are not the instrument's, so each is reported.
+        self.assertEqual({i["code"] for i in parsed["issues"]}, {"FIELD_LABEL_MISMATCH"})
+        entries = {k: v[0] for k, v in parsed["map"]["entries"].items()}
+        self.assertEqual({k: v["text"] for k, v in entries.items()}, {"1": "a b", "3": "c\n  d", "6": "e"})
+        for item in entries.values():
             self.assertEqual(text[item["char_start"]:item["char_end"]], item["text"])
+        good = ("CLAIM MAP MISSING: x\nCLAIM MAP: SELF-GENERATED — PROVISIONAL\n"
+                "- Field 1 – What was literally measured: a\n- Field 3 - weaker defensible  claim:\n  c\n"
+                "- Field 6 — Claim under audit: e\n")
+        parsed = standalone.parse(good)
+        self.assertEqual((parsed["map"]["state"], parsed["issues"]), ("PRESENT", []))
+        self.assertEqual(parsed["map"]["entries"]["3"][0]["label_match"], "CASE_OR_SPACE_ONLY")
+
+    def test_each_field_number_requires_its_own_label(self):
+        labels = ("What was literally measured", "Weaker defensible claim", "Claim under audit")
+        for number in ("1", "3", "6"):
+            for label in labels:
+                text = f"CLAIM MAP MISSING: x\nCLAIM MAP: SELF-GENERATED - PROVISIONAL\n- Field {number} - {label}: t\n"
+                status = standalone.parse(text)["map"]["field_status"][number]
+                expected = "USABLE" if standalone.EXPECTED_LABELS[number] == label else "LABEL_MISMATCH"
+                self.assertEqual(status, expected, (number, label))
+
+    def test_duplicates_keep_every_entry_in_order(self):
+        text = ("CLAIM MAP MISSING: x\nCLAIM MAP: SELF-GENERATED - PROVISIONAL\n"
+                "- Field 6 - Claim under audit: A\n- Field 6 - Claim under audit: not A\n")
+        parsed = standalone.parse(text)
+        self.assertEqual(parsed["map"]["field_status"]["6"], "DUPLICATE_ENTRIES")
+        self.assertEqual([e["text"] for e in parsed["map"]["entries"]["6"]], ["A", "not A"])
+        self.assertEqual(parsed["map"]["state"], "PRESENT_WITH_DEFECTS")
 
     def test_invented_field_and_missing_field_are_reported(self):
-        text = "CLAIM MAP MISSING: x\nCLAIM MAP: SELF-GENERATED - PROVISIONAL\n- Field 1 - M: a\n- Field 2 - S: b\n"
-        codes = {i["code"] for i in standalone.parse(text)["issues"]}
-        self.assertEqual(codes, {"FIELD_OUTSIDE_FALLBACK", "FALLBACK_FIELD_MISSING"})
+        text = ("CLAIM MAP MISSING: x\nCLAIM MAP: SELF-GENERATED - PROVISIONAL\n"
+                "- Field 1 - What was literally measured: a\n- Field 2 - S: b\n")
+        parsed = standalone.parse(text)
+        self.assertEqual({i["code"] for i in parsed["issues"]}, {"FIELD_OUTSIDE_FALLBACK", "FALLBACK_FIELD_MISSING"})
+        self.assertEqual(parsed["map"]["state"], "PRESENT_WITH_DEFECTS")
 
     def test_table_rows_are_not_headings(self):
         text = "| PRE-AUDIT CLAIM CONFIRMATION | yes |\n| CLAIM MAP: SELF-GENERATED - PROVISIONAL |\n"
@@ -401,7 +556,7 @@ class ParserTests(unittest.TestCase):
     def test_unicode_offsets_are_code_points(self):
         text = ("\U0001F600 CLAIM MAP MISSING: x\nCLAIM MAP: SELF-GENERATED - PROVISIONAL\n"
                 "- Field 1 - M: µ a\n- Field 3 - W: b\n- Field 6 - C: c\n")
-        item = standalone.parse(text)["map"]["fields"]["1"]
+        item = standalone.parse(text)["map"]["entries"]["1"][0]
         self.assertEqual(text[item["char_start"]:item["char_end"]], "µ a")
 
 

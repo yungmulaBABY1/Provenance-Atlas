@@ -505,6 +505,10 @@ Increment A — connected records:
   paper's statement is recorded NOT_AVAILABLE (no Field 2; S1 RETRIEVAL_FAILED).
   Claim-link records live in their own bundle that pins the import receipt;
   ledger integration would need adapter record types and new import receipts.
+  Review fixes (claim links 0.2.0, before merge): a mislabelled or repeated map
+  field is kept but never used as a linking target; `show` verifies by content
+  replay before rendering, or renders under an UNVERIFIED banner. Statement IDs
+  are run- and role-scoped, not global claim identities.
 
 Increment B — bounded execution:
   Add the smallest executor able to create a fresh source-linked claim extraction
@@ -664,9 +668,10 @@ Read S8 (now in Project sources) and prompts/1-claim-extraction.txt first.
 The Revision 1 handoff below is retained as the M0 brief it was written as.
 
 Revision 3: M0 merged. M1 Increment A is in draft PR #2. After review: Increment
-B (smallest executor: one recorded claim extraction producing a real six-field
-map for the power-posing case, plus one declared evidence check), linked with
-atlas.claims; then Increment C (readable report and attributed challenge).
+B (smallest executor: one recorded six-field claim extraction from an accessible
+real paper, plus one declared evidence check), linked with atlas.claims; the
+historical provisional map stays intact alongside it. Then Increment C
+(readable report and attributed challenge).
 
 Begin M0, the migration-only milestone in section 6. Recheck current Provenance
 main; the last verified baseline here is c1bcb8bf186ea45c3cf751efc70afbd945810f51.
