@@ -1,0 +1,17 @@
+{
+  "schema_version": "atlas-claimlink-context/0.1",
+  "run": {
+    "id": "urn:atlas:claimlink:power-posing-reviewed:1",
+    "operator": "Deterministic program atlas.claims 0.1.0. Context authored by Claude (Anthropic) in a Claude Code session, 31 October 2026.",
+    "purpose": "M1 Increment A development case: connect the power-posing citation-network output's own claim statements to its findings and bound reviews. Development material, not validation of the audit or of the method."
+  },
+  "dependency": {
+    "audit_run_id": "urn:atlas:import:power-posing-sources:3",
+    "manifest": {"path": "tests/atlas/receipts/power-sources-reviewed/manifest.json",
+                 "sha256": "4f1fb4595eb1daef6503460076dda790fcff4b1b3ef0d25c3e8beaff15ff8200"},
+    "records": {"path": "tests/atlas/receipts/power-sources-reviewed/records.jsonl",
+                "sha256": "fc50071691e86276199a14398fd1ef7ac7e3d596526442588770b1143ac53356"}
+  },
+  "claim_extraction_contract": {"path": "prompts/1-claim-extraction.txt",
+                                "sha256": "656b11c301931726a5435b231774f40797a10fd0cab950224616fc18951c035f"}
+}

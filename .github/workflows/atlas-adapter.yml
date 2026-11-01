@@ -29,3 +29,15 @@ jobs:
             count=$((count + 1))
           done
           test "$count" -gt 0
+      # Claim-link receipts (atlas.claims) pin an import receipt above as their
+      # dependency; content replay rebuilds them from it.
+      - name: Content replay of claim-link receipts
+        run: |
+          set -euo pipefail
+          count=0
+          for dir in tests/atlas/claims/receipts/*/; do
+            echo "claims replay --level content: $dir"
+            python -m atlas.claims replay "${dir}manifest.json" "${dir}records.jsonl" --level content
+            count=$((count + 1))
+          done
+          test "$count" -gt 0
