@@ -1,5 +1,22 @@
 # Atlas adapter changelog
 
+## Unreleased — claim links 0.1.0 (`atlas.claims`, M1 Increment A)
+
+- New package `atlas/claims/` with its own record schema `atlas-claimlink/0.1`,
+  context schema, CLI (`python -m atlas.claims build|replay|show`) and receipt
+  (`tests/atlas/claims/receipts/power-posing-reviewed/`). See
+  [claims.md](claims.md).
+- Links the power-posing run `:3` output's own standalone claim map and
+  pre-audit confirmation lines to its findings' target claims and to the two
+  bound reviews, by exact and normalized text comparison only.
+- The import adapter is unchanged: no `atlas/*.py` file changed, so the six
+  current import receipts and their code pins are unchanged. CI adds a
+  content-replay step for claim-link receipts.
+- 32 new tests (`tests/atlas/test_claims.py`): committed case, real controls
+  from three other receipts, output mutations (identical, wrapped, polarity
+  and scope changes, review detachment), dependency and contract pins,
+  tampering, parser grammar.
+
 ## Unreleased — adapter 0.3.0: review binding contract `atlas-evidence-review/2`
 
 - Reviews now bind each passage by a full descriptor: source version, component,
