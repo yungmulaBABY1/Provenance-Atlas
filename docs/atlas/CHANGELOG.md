@@ -1,5 +1,25 @@
 # Atlas adapter changelog
 
+## Unreleased — recorded extraction 0.1.0 (`atlas.extraction`, M1 Increment B)
+
+- New package `atlas/extraction/` (schema `atlas-extraction/0.1`) and the first
+  recorded run: a claim-extraction map of S2 (Ranehill et al. 2015) by a
+  declared external runner, with its packet pinned. See [extraction.md](extraction.md).
+- Two stages. Local (private full output + PDF): source hashes, extraction hash,
+  48 quotes matched (8 exact, 36 normalized only, 4 mismatched; 44/44 on their
+  stated page). Public (CI): redacted output, published quotes re-checked
+  against public excerpts, links, evidence check.
+- Source-light: the full output stays private; 43 block quotes are withheld by
+  hash; one new bounded excerpt (A2.3, 361 bytes) is committed as evidence.
+- Links: four anchors lie inside the passages the two model reviews are bound
+  to; the historical provisional map targets S1, so it is recorded as a
+  different target, not merged.
+- Evidence check `reported-statistics-consistency/1` on the run's Field 6:
+  transcription, p from t, t from CI — all consistent.
+- 30 new tests (217 total; one needs the private inputs and is skipped in CI).
+  CI adds a content-replay step for extraction receipts. No existing module,
+  receipt, fixture or instrument changed.
+
 ## Unreleased — claim links 0.2.0 (`atlas.claims`, M1 Increment A)
 
 Revised in review before merge; supersedes 0.1.0 (schema `atlas-claimlink/0.1`,

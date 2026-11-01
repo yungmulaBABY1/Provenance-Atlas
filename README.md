@@ -26,9 +26,13 @@ Implemented, with mechanical test coverage:
   linked to its findings and bound reviews by exact and normalized text
   comparison, with mismatches recorded rather than resolved
   ([docs/atlas/claims.md](docs/atlas/claims.md)).
+- Recorded claim extraction (`atlas.extraction`): one externally run
+  six-field extraction of a real paper, with quotes checked against the source,
+  source-light publication, links to earlier records and one declared
+  arithmetic evidence check ([docs/atlas/extraction.md](docs/atlas/extraction.md)).
 
-Not implemented: running a new audit or claim extraction, any user interface,
-human adjudication, public release controls. Import is not a model
+Not implemented: running a model from this code, any user interface, human
+adjudication, public release controls. Import is not a model
 audit, and passage matching is not evidentiary support. See
 [`docs/atlas/README.md`](docs/atlas/README.md) for the full scope and limits.
 
@@ -49,10 +53,13 @@ done
 for dir in tests/atlas/claims/receipts/*/; do
   python -m atlas.claims replay "${dir}manifest.json" "${dir}records.jsonl" --level content
 done
+for dir in tests/atlas/extraction/*/receipt/; do
+  python -m atlas.extraction replay "${dir}manifest.json" "${dir}records.jsonl" --level content
+done
 ```
 
-Expected: checker regression `PASS`, 187 tests `OK`, six import content
-replays and one claim-link content replay pass. `historical-*` receipts were produced by earlier code and are not
+Expected: checker regression `PASS`, 217 tests `OK` (one skipped: it needs
+the private source PDF), and every content replay passes. `historical-*` receipts were produced by earlier code and are not
 replayable. CI runs the same steps (`.github/workflows/atlas-adapter.yml`).
 
 ## Layout

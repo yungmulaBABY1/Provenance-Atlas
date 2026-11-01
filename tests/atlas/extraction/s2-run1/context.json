@@ -1,0 +1,140 @@
+{
+  "schema_version": "atlas-extraction-context/0.1",
+  "run": {
+    "id": "urn:atlas:extraction:s2-claim-map:1",
+    "method": {
+      "name": "claim-extraction (Provenance instrument) under run prompt v1",
+      "instrument": {
+        "path": "prompts/1-claim-extraction.txt",
+        "commit": "12cb73fe0de8eca063661cf9d0c83d19bef9381a",
+        "git_blob_sha1": "894579a79e67508bdc4026b77c0a104681f903ad",
+        "sha256": "656b11c301931726a5435b231774f40797a10fd0cab950224616fc18951c035f"
+      },
+      "run_prompt": {
+        "path": "tests/atlas/extraction/s2-run1/run-prompt.txt",
+        "sha256": "182ffff47e5cad9fdc7b9ed1a282d7bd0809d01c9730e31c8ba7846d5d8ae57d"
+      },
+      "departures_from_instrument": [
+        "No retrieval: Field 4 provisional by the instrument's own rule (NO RETRIEVAL CAPABILITY).",
+        "Added sections after the required output: SOURCE ANCHORS and READ RECORD."
+      ],
+      "scope": "Claim map of one paper (Stage 1 of the Provenance sequence). Not an audit: no prosecutor, counter-audit or citation-network stage was run."
+    },
+    "runner": {
+      "identity": "Opus 5.5 Extra",
+      "interface": "claude.ai chat",
+      "basis": "OPERATOR_STATED",
+      "verification": "NOT_ESTABLISHED"
+    },
+    "conditions": {
+      "chat": "OPERATOR_STATED: incognito (no memory), fresh chat outside the Project",
+      "attachments": "OPERATOR_STATED: the instrument file and run prompt as supplied in the recording session, and the target PDF",
+      "attempt": "OPERATOR_STATED: first attempt; no regeneration or edit",
+      "web_search": "NOT_STATED_BY_OPERATOR; the run reports no web search, connectors or memory used",
+      "code_tool": "RUN_REPORTED: none available; instrument hash not computed by the run"
+    },
+    "executed_at": {
+      "kind": "approximate",
+      "value": "2026-10-31T18:40-07:00",
+      "basis": "OPERATOR_STATED as about 6:40 PM PST; US/Pacific was on PDT (UTC-7) on 2026-10-31"
+    },
+    "exposure": {
+      "run_context": "Fresh incognito chat given only the run prompt and two attachments",
+      "self_reported": "The run states prior exposure to this paper from training data",
+      "independence": "NOT_ESTABLISHED"
+    },
+    "operator": "repository owner (yungmulaBABY1)",
+    "recorded_by": "Claude (Anthropic) in a Claude Code session, 2026-11-01T02:04Z; recording only, not the runner"
+  },
+  "source": {
+    "work_id": "doi:10.1177/0956797614553946",
+    "packet_source_id": "S2",
+    "sources_json": {
+      "path": "tests/atlas/sources/power-posing/SOURCES.json",
+      "sha256": "d2706909e0483ccdab5212192e5a0a799e107138ec54082d08d8f1fd4d97be70"
+    },
+    "pdf": {
+      "sha256": "4ae91126e56da19721f44c6942a536e3c2dcb22fe3a23de727f788afeb481369",
+      "bytes": 374723,
+      "basis": "Operator-supplied copy, downloaded 2026-10-31; byte-identical to the 2026-10-30 retrieval recorded in SOURCES.json. Not redistributed."
+    },
+    "extraction": {
+      "tool": "pdftotext version 24.02.0",
+      "command": [
+        "pdftotext",
+        "-enc",
+        "UTF-8",
+        "<pdf>",
+        "<out>"
+      ],
+      "output_sha256": "afc448e6323772778979bd62ade1f343752f742c69c1ee56c5b702a4d5f7b3ad",
+      "output_characters": 16898
+    }
+  },
+  "output": {
+    "full_sha256": "6b3b9d6c779d5cf999c5b225dfe00b7b2e249d85c7ec3eb04c0cfb10cb829b83",
+    "full_bytes": 39090,
+    "received_as": "Copied from the chat with its copy control (Markdown) into a .txt file by the operator",
+    "retention": "PRIVATE: the full output is not committed (source-light). It is held by the operator and in the operator's Claude Project."
+  },
+  "local": {
+    "full_output_sha256": "6b3b9d6c779d5cf999c5b225dfe00b7b2e249d85c7ec3eb04c0cfb10cb829b83",
+    "pdf_sha256": "4ae91126e56da19721f44c6942a536e3c2dcb22fe3a23de727f788afeb481369",
+    "evidence_anchor_ids": [
+      "A2.3"
+    ],
+    "excerpt_dir": "tests/atlas/extraction/s2-run1",
+    "public_paths": {
+      "anchor_verification": "tests/atlas/extraction/s2-run1/anchor-verification.json",
+      "redacted_output": "tests/atlas/extraction/s2-run1/output-redacted.md"
+    }
+  },
+  "public": {
+    "anchor_verification": {
+      "path": "tests/atlas/extraction/s2-run1/anchor-verification.json",
+      "sha256": "24e02152df362e70e967a532b959353c52b19376afe742b9f4d7e55a56f9c3e2"
+    },
+    "redacted_output": {
+      "path": "tests/atlas/extraction/s2-run1/output-redacted.md",
+      "sha256": "4a5f7c0a6467993274d17610d8435865c442b809ca0b94822ff5ba23c6772e79"
+    },
+    "evidence_excerpts": [
+      {
+        "anchor_id": "A2.3",
+        "path": "tests/atlas/extraction/s2-run1/A2.3-excerpt.txt",
+        "sha256": "9e322e859ba1202ec5e40101b7b93c78f40b3d0b839c8dd98b4d81359d6d1ee7"
+      }
+    ]
+  },
+  "links": {
+    "import_bundle": {
+      "audit_run_id": "urn:atlas:import:power-posing-sources:3",
+      "manifest": {
+        "path": "tests/atlas/receipts/power-sources-reviewed/manifest.json",
+        "sha256": "4f1fb4595eb1daef6503460076dda790fcff4b1b3ef0d25c3e8beaff15ff8200"
+      },
+      "records": {
+        "path": "tests/atlas/receipts/power-sources-reviewed/records.jsonl",
+        "sha256": "fc50071691e86276199a14398fd1ef7ac7e3d596526442588770b1143ac53356"
+      }
+    },
+    "provisional_map_bundle": {
+      "claim_link_run_id": "urn:atlas:claimlink:power-posing-reviewed:1",
+      "manifest": {
+        "path": "tests/atlas/claims/receipts/power-posing-reviewed/manifest.json",
+        "sha256": "c5e145663cd14efaf6c12e9af79f606c309c10f610ef7d93f8db774f3dfc0346"
+      },
+      "records": {
+        "path": "tests/atlas/claims/receipts/power-posing-reviewed/records.jsonl",
+        "sha256": "fca7f8dd1b2e361a9b13041b9ff716784fbbef0087ca89a96cf3044e73e3b243"
+      }
+    }
+  },
+  "evidence_check": {
+    "id": "reported-statistics-consistency/1",
+    "target": "FIELD_6_SECTION",
+    "evidence_anchor_id": "A2.3",
+    "source_clause_from": "changes in testosterone",
+    "why_this_check": "The claim under audit is a quantified test result; checking that its reported numbers agree with each other and with the source is the smallest check that bears on it without a model or new data."
+  }
+}

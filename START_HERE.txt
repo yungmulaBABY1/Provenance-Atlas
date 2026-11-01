@@ -1,5 +1,5 @@
 ATLAS — START HERE
-Project map and next build brief | 31 October 2026 | Revision 3
+Project map and next build brief | 31 October 2026 | Revision 4
 It points; you judge.
 
 READ THIS FIRST — THE TWO-MINUTE VERSION
@@ -34,6 +34,10 @@ A readable local report is enough. A model-generated conclusion remains provisio
   3, 6). Both findings' target claims differ in wording from Field 6; that is
   recorded as UNRESOLVED_REQUIRES_REVIEW, not linked as the same claim.
   See docs/atlas/claims.md.
+  Revision 4 status: Increment B prepared on branch m1b-s2-extraction (draft PR
+  stacked on #2, not merged). One real six-field extraction of S2 by an external
+  runner, quotes checked against the source, one arithmetic evidence check.
+  See docs/atlas/extraction.md.
 
 YOU DO NOT NEED TO DECIDE NOW: cloud host, graph database, framework, agent fleet,
 bot interface, provider catalog, pricing, public launch or every future method.
@@ -517,6 +521,23 @@ Increment B — bounded execution:
   citation-network audit if it omits that instrument's required checks.
   Preserve model output, failures, source use and provisional assessments. Model
   choice is replaceable. Do not force identical prose on live reruns.
+  Revision 4 status: PREPARED, draft PR stacked on #2, not merged
+  (atlas/extraction/, docs/atlas/extraction.md, tests/atlas/extraction/s2-run1/).
+  Executor shape chosen: a pinned packet (instrument + run prompt + source PDF by
+  hash) run by a declared external runner (operator-stated: Opus 5.5 Extra on
+  claude.ai, incognito, first attempt), then recorded by code that calls no model.
+  Paper: S2. PDF byte-identical to the packet's recorded retrieval; pdftotext
+  output hash reproduced. 48 quotes: 8 MATCH, 36 NORMALIZED_MATCH_ONLY, 4 MISMATCH
+  (text-layer effects: soft hyphens, a page stamp, one restored hyphen); 44/44
+  located quotes on their stated page. Source-light: full output private, 43
+  quotes withheld by hash, one new bounded evidence excerpt. The run's Field 6
+  is S2's testosterone-change result; the historical provisional map (target S1)
+  is kept unchanged and recorded as a different target work. Four anchors lie in
+  the passages the two model reviews are bound to (paper statement / audited
+  claim / reviewer decomposition shown side by side). Declared evidence check
+  reported-statistics-consistency/1: transcription, p from t, t from CI —
+  CONSISTENT. The run reported INSTRUMENT VERSION UNVERIFIED (no hashing tool);
+  the operator's attestation is recorded separately.
 
 Increment C — inspect and challenge:
   Produce a readable report with the target, evidence, missingness, original labels,
@@ -672,6 +693,11 @@ B (smallest executor: one recorded six-field claim extraction from an accessible
 real paper, plus one declared evidence check), linked with atlas.claims; the
 historical provisional map stays intact alongside it. Then Increment C
 (readable report and attributed challenge).
+
+Revision 4: Increment B is in a draft PR stacked on #2. After review: Increment
+C — a readable report of the S2 case (target, anchors, missingness, labels,
+review history, the evidence check) and an attributed challenge record that
+sits beside the original without replacing it.
 
 Begin M0, the migration-only milestone in section 6. Recheck current Provenance
 main; the last verified baseline here is c1bcb8bf186ea45c3cf751efc70afbd945810f51.
@@ -842,5 +868,7 @@ Revision history:
               noted against §5 item 10. Diff against Revision 1 in Git.
   Revision 3  31 Oct 2026  M0 merged (12cb73f); Provenance pointer PR #13;
               M1 Increment A prepared on branch m1a-claim-links.
+  Revision 4  31 Oct 2026  M1 Increment B prepared on branch m1b-s2-extraction:
+              first recorded extraction (S2) and evidence check.
 
 END — It points; you judge.
