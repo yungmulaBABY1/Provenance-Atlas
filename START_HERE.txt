@@ -28,8 +28,8 @@ NEXT PRODUCT MILESTONE: one paper, one selected claim, one bounded evidence chec
 and a reviewable result. First connect the claim map to the existing finding and
 evidence records; then add a small executor that can produce a new bounded result.
 A readable local report is enough. A model-generated conclusion remains provisional.
-  Revision 3 status: Increment A prepared on branch m1a-claim-links (draft PR,
-  not merged). No real claim-extraction output exists for the power-posing case;
+  Revision 3 status: Increment A prepared on branch m1a-claim-links (draft PR
+  #2, CI run 41255557507 passed, not merged). No real claim-extraction output exists for the power-posing case;
   the only map is the citation-network run's own standalone fallback (fields 1,
   3, 6). Both findings' target claims differ in wording from Field 6; that is
   recorded as UNRESOLVED_REQUIRES_REVIEW, not linked as the same claim.
@@ -493,7 +493,7 @@ Increment A — connected records:
   rather than manufacture a successful cross-instrument relationship.
   Explicitly distinguish a paper's statement, the claim being audited, and a
   reviewer's decomposition of that statement.
-  Revision 3 status: PREPARED, draft PR, not merged (atlas/claims/,
+  Revision 3 status: PREPARED, draft PR #2, branch CI passed, not merged (atlas/claims/,
   docs/atlas/claims.md). Choice made: import the real archived material that
   exists — the citation-network output's own SELF-GENERATED — PROVISIONAL
   fallback map and PRE-AUDIT confirmation lines — rather than author a new map.
@@ -663,7 +663,7 @@ on Provenance-Atlas, then begin M1 Increment A from Provenance-Atlas main.
 Read S8 (now in Project sources) and prompts/1-claim-extraction.txt first.
 The Revision 1 handoff below is retained as the M0 brief it was written as.
 
-Revision 3: M0 merged. M1 Increment A is in a draft PR. After review: Increment
+Revision 3: M0 merged. M1 Increment A is in draft PR #2. After review: Increment
 B (smallest executor: one recorded claim extraction producing a real six-field
 map for the power-posing case, plus one declared evidence check), linked with
 atlas.claims; then Increment C (readable report and attributed challenge).
