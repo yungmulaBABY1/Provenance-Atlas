@@ -29,3 +29,28 @@ jobs:
             count=$((count + 1))
           done
           test "$count" -gt 0
+      # Claim-link receipts (atlas.claims) pin an import receipt above as their
+      # dependency; content replay rebuilds them from it.
+      - name: Content replay of claim-link receipts
+        run: |
+          set -euo pipefail
+          count=0
+          for dir in tests/atlas/claims/receipts/*/; do
+            echo "claims replay --level content: $dir"
+            python -m atlas.claims replay "${dir}manifest.json" "${dir}records.jsonl" --level content
+            count=$((count + 1))
+          done
+          test "$count" -gt 0
+      # Extraction receipts (atlas.extraction) rebuild from committed public files.
+      # The source PDF and full model output are not redistributed; their local
+      # verification is `python -m atlas.extraction local-verify` and is not run here.
+      - name: Content replay of extraction receipts
+        run: |
+          set -euo pipefail
+          count=0
+          for dir in tests/atlas/extraction/*/receipt/; do
+            echo "extraction replay --level content: $dir"
+            python -m atlas.extraction replay "${dir}manifest.json" "${dir}records.jsonl" --level content
+            count=$((count + 1))
+          done
+          test "$count" -gt 0

@@ -22,9 +22,17 @@ Implemented, with mechanical test coverage:
 - An append-only SQLite ledger with JSONL export, restore and replay.
 - Attributed evidence reviews bound to an exact finding span and passage
   descriptors.
+- Claim links (`atlas.claims`): an imported audit's own claim statements
+  linked to its findings and bound reviews by exact and normalized text
+  comparison, with mismatches recorded rather than resolved
+  ([docs/atlas/claims.md](docs/atlas/claims.md)).
+- Recorded claim extraction (`atlas.extraction`): one externally run
+  six-field extraction of a real paper, with quotes checked against the source,
+  source-light publication, links to earlier records and one declared
+  arithmetic evidence check ([docs/atlas/extraction.md](docs/atlas/extraction.md)).
 
-Not implemented: running a new audit, claim-map integration, any user
-interface, human adjudication, public release controls. Import is not a model
+Not implemented: running a model from this code, any user interface, human
+adjudication, public release controls. Import is not a model
 audit, and passage matching is not evidentiary support. See
 [`docs/atlas/README.md`](docs/atlas/README.md) for the full scope and limits.
 
@@ -42,10 +50,16 @@ for dir in tests/atlas/receipts/*/; do
   case "$dir" in */historical-*/) continue ;; esac
   python -m atlas replay "${dir}manifest.json" "${dir}records.jsonl" --level content
 done
+for dir in tests/atlas/claims/receipts/*/; do
+  python -m atlas.claims replay "${dir}manifest.json" "${dir}records.jsonl" --level content
+done
+for dir in tests/atlas/extraction/*/receipt/; do
+  python -m atlas.extraction replay "${dir}manifest.json" "${dir}records.jsonl" --level content
+done
 ```
 
-Expected: checker regression `PASS`, 143 tests `OK`, six content replays
-pass. `historical-*` receipts were produced by earlier code and are not
+Expected: checker regression `PASS`, 217 tests `OK` (one skipped: it needs
+the private source PDF), and every content replay passes. `historical-*` receipts were produced by earlier code and are not
 replayable. CI runs the same steps (`.github/workflows/atlas-adapter.yml`).
 
 ## Layout

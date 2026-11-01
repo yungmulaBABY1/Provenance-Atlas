@@ -1,5 +1,5 @@
 ATLAS — START HERE
-Project map and next build brief | 31 October 2026 | Revision 2
+Project map and next build brief | 31 October 2026 | Revision 4
 It points; you judge.
 
 READ THIS FIRST — THE TWO-MINUTE VERSION
@@ -21,11 +21,23 @@ from a fresh checkout. This is a migration, not a rewrite or a hosting decision.
   https://github.com/yungmulaBABY1/Provenance-Atlas on branch m0-migration,
   draft PR #1 (https://github.com/yungmulaBABY1/Provenance-Atlas/pull/1).
   Branch CI passed. Not merged. See section 3 and MIGRATION.md.
+  Revision 3 status: MERGED as 12cb73f (merge commit; main CI passed).
+  Provenance pointer notice: Provenance PR #13, open.
 
 NEXT PRODUCT MILESTONE: one paper, one selected claim, one bounded evidence check,
 and a reviewable result. First connect the claim map to the existing finding and
 evidence records; then add a small executor that can produce a new bounded result.
 A readable local report is enough. A model-generated conclusion remains provisional.
+  Revision 3 status: Increment A prepared on branch m1a-claim-links (draft PR
+  #2, CI run 41255557507 passed, not merged). No real claim-extraction output exists for the power-posing case;
+  the only map is the citation-network run's own standalone fallback (fields 1,
+  3, 6). Both findings' target claims differ in wording from Field 6; that is
+  recorded as UNRESOLVED_REQUIRES_REVIEW, not linked as the same claim.
+  See docs/atlas/claims.md.
+  Revision 4 status: Increment B prepared on branch m1b-s2-extraction (draft PR
+  stacked on #2, not merged). One real six-field extraction of S2 by an external
+  runner, quotes checked against the source, one arithmetic evidence check.
+  See docs/atlas/extraction.md.
 
 YOU DO NOT NEED TO DECIDE NOW: cloud host, graph database, framework, agent fleet,
 bot interface, provider catalog, pricing, public launch or every future method.
@@ -44,6 +56,10 @@ REVISION 2 TASK: M0 migration into Provenance-Atlas, verified locally from a
 fresh checkout. Provenance itself was not changed, archived or tagged. No model
 audit was run. No instrument, schema, fixture, receipt or label was changed.
 The draft PR is not merged; the user controls merge.
+
+REVISION 3 TASK: M1 Increment A (connected records) on a branch, for review.
+Deterministic linking only: no model call, no new extraction, no change to the
+import adapter or its receipts. The user controls merge.
 
 
 1. WHAT WE ARE BUILDING — AND WHAT THE WORDS MEAN
@@ -438,6 +454,8 @@ M0. Independent Atlas repository — migration only
     notice and any archival follow a reviewed merge.
     Merge with "Create a merge commit"; squash or rebase would drop or
     rewrite the imported Provenance commits.
+    Revision 3: MERGED as 12cb73f with a merge commit; every receipt-referenced
+    commit is reachable from main; main CI passed. Provenance pointer: PR #13.
 
 Deliver a reviewable migration from the verified current baseline. Carry atlas/,
 tests/atlas/, docs/atlas/, CI and their complete dependency closure. The tests and
@@ -464,7 +482,7 @@ needed. A short Provenance status notice/pointer follows a verified destination.
 GitHub's read-only archival switch and a final release tag are separate deliberate
 actions, not changes made by this document. Do not close unrelated PRs automatically.
 
-M1. One complete bounded investigation — NEXT, after the M0 merge
+M1. One complete bounded investigation — ACTIVE (Revision 3)
 
 Use the existing power-posing packet as a development candidate, not unbiased
 validation. Prefer its accessible S2 scope, but verify available bytes and reuse
@@ -479,6 +497,22 @@ Increment A — connected records:
   rather than manufacture a successful cross-instrument relationship.
   Explicitly distinguish a paper's statement, the claim being audited, and a
   reviewer's decomposition of that statement.
+  Revision 3 status: PREPARED, draft PR #2, branch CI passed, not merged (atlas/claims/,
+  docs/atlas/claims.md). Choice made: import the real archived material that
+  exists — the citation-network output's own SELF-GENERATED — PROVISIONAL
+  fallback map and PRE-AUDIT confirmation lines — rather than author a new map.
+  The six-field claim map does not exist for this case; Fields 2, 4, 5A, 5B are
+  recorded absent by instrument design. A full map belongs to Increment B, as a
+  recorded extraction. Findings' target claims are compared with Field 6 by
+  text only (MISMATCH, normalized match to the confirmation line); the two
+  model reviews bind to the S2 Evidence clause, not the target claim; the
+  paper's statement is recorded NOT_AVAILABLE (no Field 2; S1 RETRIEVAL_FAILED).
+  Claim-link records live in their own bundle that pins the import receipt;
+  ledger integration would need adapter record types and new import receipts.
+  Review fixes (claim links 0.2.0, before merge): a mislabelled or repeated map
+  field is kept but never used as a linking target; `show` verifies by content
+  replay before rendering, or renders under an UNVERIFIED banner. Statement IDs
+  are run- and role-scoped, not global claim identities.
 
 Increment B — bounded execution:
   Add the smallest executor able to create a fresh source-linked claim extraction
@@ -487,6 +521,23 @@ Increment B — bounded execution:
   citation-network audit if it omits that instrument's required checks.
   Preserve model output, failures, source use and provisional assessments. Model
   choice is replaceable. Do not force identical prose on live reruns.
+  Revision 4 status: PREPARED, draft PR stacked on #2, not merged
+  (atlas/extraction/, docs/atlas/extraction.md, tests/atlas/extraction/s2-run1/).
+  Executor shape chosen: a pinned packet (instrument + run prompt + source PDF by
+  hash) run by a declared external runner (operator-stated: Opus 5.5 Extra on
+  claude.ai, incognito, first attempt), then recorded by code that calls no model.
+  Paper: S2. PDF byte-identical to the packet's recorded retrieval; pdftotext
+  output hash reproduced. 48 quotes: 8 MATCH, 36 NORMALIZED_MATCH_ONLY, 4 MISMATCH
+  (text-layer effects: soft hyphens, a page stamp, one restored hyphen); 44/44
+  located quotes on their stated page. Source-light: full output private, 43
+  quotes withheld by hash, one new bounded evidence excerpt. The run's Field 6
+  is S2's testosterone-change result; the historical provisional map (target S1)
+  is kept unchanged and recorded as a different target work. Four anchors lie in
+  the passages the two model reviews are bound to (paper statement / audited
+  claim / reviewer decomposition shown side by side). Declared evidence check
+  reported-statistics-consistency/1: transcription, p from t, t from CI —
+  CONSISTENT. The run reported INSTRUMENT VERSION UNVERIFIED (no hashing tool);
+  the operator's attestation is recorded separately.
 
 Increment C — inspect and challenge:
   Produce a readable report with the target, evidence, missingness, original labels,
@@ -636,6 +687,17 @@ Revision 2: M0 is prepared (section 6). If its PR is merged, confirm main CI
 on Provenance-Atlas, then begin M1 Increment A from Provenance-Atlas main.
 Read S8 (now in Project sources) and prompts/1-claim-extraction.txt first.
 The Revision 1 handoff below is retained as the M0 brief it was written as.
+
+Revision 3: M0 merged. M1 Increment A is in draft PR #2. After review: Increment
+B (smallest executor: one recorded six-field claim extraction from an accessible
+real paper, plus one declared evidence check), linked with atlas.claims; the
+historical provisional map stays intact alongside it. Then Increment C
+(readable report and attributed challenge).
+
+Revision 4: Increment B is in a draft PR stacked on #2. After review: Increment
+C — a readable report of the S2 case (target, anchors, missingness, labels,
+review history, the evidence check) and an attributed challenge record that
+sits beside the original without replacing it.
 
 Begin M0, the migration-only milestone in section 6. Recheck current Provenance
 main; the last verified baseline here is c1bcb8bf186ea45c3cf751efc70afbd945810f51.
@@ -804,5 +866,9 @@ Revision history:
   Revision 2  31 Oct 2026  M0 prepared in Provenance-Atlas; baseline moved
               to cb795acc; validation results; S8 copy supplied; PR #12
               noted against §5 item 10. Diff against Revision 1 in Git.
+  Revision 3  31 Oct 2026  M0 merged (12cb73f); Provenance pointer PR #13;
+              M1 Increment A prepared on branch m1a-claim-links.
+  Revision 4  31 Oct 2026  M1 Increment B prepared on branch m1b-s2-extraction:
+              first recorded extraction (S2) and evidence check.
 
 END — It points; you judge.

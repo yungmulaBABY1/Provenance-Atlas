@@ -1,5 +1,63 @@
 # Atlas adapter changelog
 
+## Unreleased — recorded extraction 0.1.0 (`atlas.extraction`, M1 Increment B)
+
+- New package `atlas/extraction/` (schema `atlas-extraction/0.1`) and the first
+  recorded run: a claim-extraction map of S2 (Ranehill et al. 2015) by a
+  declared external runner, with its packet pinned. See [extraction.md](extraction.md).
+- Two stages. Local (private full output + PDF): source hashes, extraction hash,
+  48 quotes matched (8 exact, 36 normalized only, 4 mismatched; 44/44 on their
+  stated page). Public (CI): redacted output, published quotes re-checked
+  against public excerpts, links, evidence check.
+- Source-light: the full output stays private; 43 block quotes are withheld by
+  hash; one new bounded excerpt (A2.3, 361 bytes) is committed as evidence.
+- Links: four anchors lie inside the passages the two model reviews are bound
+  to; the historical provisional map targets S1, so it is recorded as a
+  different target, not merged.
+- Evidence check `reported-statistics-consistency/1` on the run's Field 6:
+  transcription, p from t, t from CI — all consistent.
+- 30 new tests (217 total; one needs the private inputs and is skipped in CI).
+  CI adds a content-replay step for extraction receipts. No existing module,
+  receipt, fixture or instrument changed.
+
+## Unreleased — claim links 0.2.0 (`atlas.claims`, M1 Increment A)
+
+Revised in review before merge; supersedes 0.1.0 (schema `atlas-claimlink/0.1`,
+parser 1) at bb017ec, which was never merged.
+
+- **Ambiguous map fields no longer become link targets.** Parser 2 validates
+  each field number against its instrument label and keeps every entry. A
+  mislabelled (`LABEL_MISMATCH`) or repeated (`DUPLICATE_ENTRIES`) Field 6 no
+  longer supplies a designated target; at bb017ec, "Field 6 - Weaker defensible
+  claim: A" was accepted silently and the first of two contradictory Field 6
+  entries was kept, so either could yield `SAME_TEXT`. Conflicting text is
+  preserved as statements and listed as candidates. The validator rejects
+  comparisons or designations that touch a non-`USABLE` statement and
+  `SAME_TEXT*` identities without a backing comparison. Schema `atlas-claimlink/0.2`.
+- **`show` verifies before rendering.** It replays the bundle at content level
+  and renders nothing if replay fails (`NOT_VERIFIED`). `--unverified` renders
+  stored assertions under a banner placed before any label. At bb017ec, `show`
+  displayed edited labels such as `VERIFIED` and review `MATCH` unchanged.
+- 12 new tests (44 in `test_claims.py`, 187 total). Reintroducing either
+  defect, or rendering without verification, fails the targeted tests.
+- Receipt `tests/atlas/claims/receipts/power-posing-reviewed/` regenerated
+  (code and schema changed). Its findings are unchanged.
+
+- New package `atlas/claims/` with its own record schema `atlas-claimlink/0.1`,
+  context schema, CLI (`python -m atlas.claims build|replay|show`) and receipt
+  (`tests/atlas/claims/receipts/power-posing-reviewed/`). See
+  [claims.md](claims.md).
+- Links the power-posing run `:3` output's own standalone claim map and
+  pre-audit confirmation lines to its findings' target claims and to the two
+  bound reviews, by exact and normalized text comparison only.
+- The import adapter is unchanged: no `atlas/*.py` file changed, so the six
+  current import receipts and their code pins are unchanged. CI adds a
+  content-replay step for claim-link receipts.
+- 32 new tests (`tests/atlas/test_claims.py`): committed case, real controls
+  from three other receipts, output mutations (identical, wrapped, polarity
+  and scope changes, review detachment), dependency and contract pins,
+  tampering, parser grammar.
+
 ## Unreleased — adapter 0.3.0: review binding contract `atlas-evidence-review/2`
 
 - Reviews now bind each passage by a full descriptor: source version, component,

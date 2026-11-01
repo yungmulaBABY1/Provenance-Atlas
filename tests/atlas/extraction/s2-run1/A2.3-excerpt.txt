@@ -1,0 +1,7 @@
+Two-tailed t tests
+indicated no significant impact of physical position on
+either risk-taking in the gain domain (mean difference =
+−0.033, 95% CI = [−0.085, 0.019]), t(198) = −1.245, p =
+.215, Cohen’s d = −0.176, or changes in testosterone
+(mean difference = −4.077, 95% CI = [−9.801, 1.647]),
+t(196) = −1.405, p = .162, Cohen’s d = −0.200.
