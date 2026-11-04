@@ -60,8 +60,15 @@ class BundleTests(unittest.TestCase):
         result = replay((RECEIPT / "manifest.json").read_bytes(), (RECEIPT / "records.jsonl").read_bytes(), ROOT,
                         "content")
         self.assertEqual(result["replay"], "PASS")
+        # Same interpreter: byte-identical. Committed receipt vs this interpreter: identical except the
+        # manifest's environment block, which differs whenever the test runs on another Python version
+        # than the one that built the receipt (CI pins 3.11; the receipt records its own interpreter).
         self.assertEqual(build(context(), ROOT)["jsonl"], self.bundle["jsonl"])
-        self.assertEqual((RECEIPT / "records.jsonl").read_bytes(), self.bundle["jsonl"])
+        def content(records):
+            return {r["id"]: {k: v for k, v in r.items()
+                              if not (r["type"] == "QuestionManifest" and k == "environment")} for r in records}
+        self.assertEqual(content(stored()), content(self.bundle["records"]))
+        self.assertEqual(not result["environment_delta"], (RECEIPT / "records.jsonl").read_bytes() == self.bundle["jsonl"])
 
     def test_counts_carry_their_denominator_and_recompute(self):
         cov = self.by_type["QuestionCoverage"][0]
