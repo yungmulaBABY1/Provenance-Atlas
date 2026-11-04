@@ -1,0 +1,46 @@
+== Part A: Table 4 replication (maketable4.dta, baseco==1), conventional SEs as in the paper ==
+T4c1 base                                                      n=64 unadjusted IV   0.94 (0.16)  FS  -0.61 (0.13) F= 22.95  AR95 [[np.float64(0.701), np.float64(1.431)]]
+T4c2 base + latitude                                           n=64 unadjusted IV   1.00 (0.22)  FS  -0.51 (0.14) F= 13.09  AR95 [[np.float64(0.676), np.float64(1.879)]]
+T4c3 base without Neo-Europes                                  n=60 unadjusted IV   1.28 (0.36)  FS  -0.39 (0.13) F=  8.65  AR95 [[np.float64(0.813), np.float64(3.327)]]
+T4c4 base without Neo-Europes + latitude                       n=60 unadjusted IV   1.21 (0.35)  FS  -0.39 (0.14) F=  7.83  AR95 [[np.float64(0.75), np.float64(3.444)]]
+T4c5 base without Africa                                       n=37 unadjusted IV   0.58 (0.10)  FS  -1.21 (0.22) F= 30.54  AR95 [[np.float64(0.39), np.float64(0.821)]]
+T4c6 base without Africa + latitude                            n=37 unadjusted IV   0.58 (0.12)  FS  -1.14 (0.24) F= 21.61  AR95 [[np.float64(0.35), np.float64(0.886)]]
+T4c7 base + continent dummies                                  n=64 unadjusted IV   0.98 (0.30)  FS  -0.43 (0.17) F=  6.23  AR95 [[np.float64(0.597), np.float64(3.585)]]
+T4c8 base + continent dummies + latitude                       n=64 unadjusted IV   1.11 (0.46)  FS  -0.34 (0.18) F=  3.46  AR95 UNBOUNDED
+T4c9 log output per worker                                     n=61 unadjusted IV   0.98 (0.17)  FS  -0.63 (0.13) F= 23.78  AR95 [[np.float64(0.727), np.float64(1.532)]]
+T4c1 base, HC1-robust SEs (not in paper)                       n=64 robust     IV   0.94 (0.18)  FS  -0.61 (0.15) F= 16.32  AR95 [[np.float64(0.688), np.float64(1.605)]]
+
+== dataset concordance == {"maketable4_base_n": 64, "rebuttal_n": 64, "merge": {"both": 64, "left_only": 0, "right_only": 0}, "max_abs_diff_logmort": 0.6580557823181152, "max_abs_diff_risk": 0.004545688629150391, "max_abs_diff_gdp": 0.74090576171875, "n_source0": 28, "n_campaign": 42, "n_slave": 4, "n_mortality_clusters": 36}
+
+== Part B: Albouy-style checks (posted rebuttal data; Albouy's own package NOT used) ==
+B0 full 64 | orig mortality | no controls                      n=64 robust     IV   0.93 (0.17)  FS  -0.61 (0.15) F= 16.33  AR95 [[np.float64(0.682), np.float64(1.567)]]
+B1 full 64 | orig mortality | no controls | cluster by shared rate n=64 cluster    IV   0.93 (0.20)  FS  -0.61 (0.17) F= 12.45  AR95 [[np.float64(0.654), np.float64(1.84)]]
+B2 own-country rates (source0) | orig mortality | no controls  n=28 robust     IV   0.87 (0.22)  FS  -0.59 (0.19) F=  9.24  AR95 [[np.float64(0.569), np.float64(2.071)]]
+B3 full 64 + campaign+laborer | orig mortality | no controls   n=64 cluster    IV   1.09 (0.38)  FS  -0.45 (0.18) F=  5.91  AR95 [[np.float64(0.616), np.float64(5.262)]]
+B4 own-country + campaign+laborer | orig mortality | no controls n=28 robust     IV   1.02 (0.52)  FS  -0.35 (0.22) F=  2.57  AR95 UNBOUNDED
+B0 full 64 | orig mortality | latitude                         n=64 robust     IV   0.96 (0.23)  FS  -0.52 (0.17) F=  9.70  AR95 [[np.float64(0.645), np.float64(2.117)]]
+B1 full 64 | orig mortality | latitude | cluster by shared rate n=64 cluster    IV   0.96 (0.27)  FS  -0.52 (0.19) F=  7.30  AR95 [[np.float64(0.619), np.float64(2.905)]]
+B2 own-country rates (source0) | orig mortality | latitude     n=28 robust     IV   0.82 (0.34)  FS  -0.42 (0.22) F=  3.62  AR95 UNBOUNDED
+B3 full 64 + campaign+laborer | orig mortality | latitude      n=64 cluster    IV   1.15 (0.51)  FS  -0.39 (0.20) F=  3.67  AR95 UNBOUNDED
+B4 own-country + campaign+laborer | orig mortality | latitude  n=28 robust     IV   0.90 (0.93)  FS  -0.21 (0.25) F=  0.67  AR95 UNBOUNDED
+B0 full 64 | capped at 250 | no controls                       n=64 robust     IV   0.82 (0.12)  FS  -0.94 (0.16) F= 32.29  AR95 [[np.float64(0.627), np.float64(1.136)]]
+B1 full 64 | capped at 250 | no controls | cluster by shared rate n=64 cluster    IV   0.82 (0.14)  FS  -0.94 (0.18) F= 28.09  AR95 [[np.float64(0.595), np.float64(1.231)]]
+B2 own-country rates (source0) | capped at 250 | no controls   n=28 robust     IV   0.83 (0.17)  FS  -0.95 (0.24) F= 15.63  AR95 [[np.float64(0.574), np.float64(1.448)]]
+B3 full 64 + campaign+laborer | capped at 250 | no controls    n=64 cluster    IV   0.86 (0.22)  FS  -0.77 (0.21) F= 13.78  AR95 [[np.float64(0.489), np.float64(1.648)]]
+B4 own-country + campaign+laborer | capped at 250 | no controls n=28 robust     IV   0.95 (0.32)  FS  -0.63 (0.28) F=  5.13  AR95 [[np.float64(0.342), np.float64(5.307)]]
+B0 full 64 | capped at 250 | latitude                          n=64 robust     IV   0.80 (0.13)  FS  -0.86 (0.18) F= 21.81  AR95 [[np.float64(0.561), np.float64(1.144)]]
+B1 full 64 | capped at 250 | latitude | cluster by shared rate n=64 cluster    IV   0.80 (0.15)  FS  -0.86 (0.20) F= 19.26  AR95 [[np.float64(0.536), np.float64(1.245)]]
+B2 own-country rates (source0) | capped at 250 | latitude      n=28 robust     IV   0.73 (0.23)  FS  -0.74 (0.29) F=  6.50  AR95 [[np.float64(0.213), np.float64(2.018)]]
+B3 full 64 + campaign+laborer | capped at 250 | latitude       n=64 cluster    IV   0.85 (0.26)  FS  -0.72 (0.23) F=  9.43  AR95 [[np.float64(0.367), np.float64(1.88)]]
+B4 own-country + campaign+laborer | capped at 250 | latitude   n=28 robust     IV   0.73 (0.53)  FS  -0.40 (0.29) F=  1.84  AR95 UNBOUNDED
+
+== Part C: AJR reply-style outlier checks ==
+C1 own-country, drop Gambia | orig | no controls               n=27 robust     IV   0.74 (0.11)  FS  -0.74 (0.15) F= 24.16  AR95 [[np.float64(0.531), np.float64(1.062)]]
+C2 own-country, drop Gambia + campaign+laborer | orig          n=27 robust     IV   0.77 (0.22)  FS  -0.51 (0.16) F=  9.72  AR95 [[np.float64(0.271), np.float64(1.506)]]
+C3 full 64 + AJR extended recoding campaignsj2+laborer | orig  n=64 cluster    IV   0.93 (0.21)  FS  -0.60 (0.18) F= 11.49  AR95 [[np.float64(0.636), np.float64(1.947)]]
+C4 own-country + campaignsj2+laborer | orig                    n=28 robust     IV   0.97 (0.32)  FS  -0.50 (0.22) F=  5.31  AR95 [[np.float64(0.57), np.float64(6.423)]]
+C5 own-country + campaignsj2+laborer | capped 250              n=28 robust     IV   0.94 (0.25)  FS  -0.83 (0.29) F=  7.99  AR95 [[np.float64(0.588), np.float64(2.582)]]
+C6 full 64 | naval benchmark method 2 | no controls            n=64 robust     IV   0.97 (0.19)  FS  -0.58 (0.15) F= 15.66  AR95 [[np.float64(0.711), np.float64(1.688)]]
+C7 full 64 | Caribbean benchmark | no controls                 n=64 robust     IV   0.96 (0.18)  FS  -0.59 (0.15) F= 15.47  AR95 [[np.float64(0.705), np.float64(1.669)]]
+
+wrote /workspace/acemoglu-audit/replication/results.json

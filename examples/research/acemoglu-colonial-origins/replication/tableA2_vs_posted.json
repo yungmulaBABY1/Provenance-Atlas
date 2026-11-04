@@ -1,0 +1,23 @@
+{
+ "parsed_rows": 64,
+ "mismatches": [
+  {
+   "shortnam": "GAB",
+   "gdp": "8.9",
+   "logpgp95": "8.907883",
+   "risk": "7.82",
+   "avexpr": "7.818182",
+   "mort": "280.0",
+   "posted_mort": "280.0"
+  },
+  {
+   "shortnam": "TZA",
+   "gdp": "6.25",
+   "logpgp95": "6.253829",
+   "risk": "6.64",
+   "avexpr": "6.6363635",
+   "mort": "145.0",
+   "posted_mort": "280.0"
+  }
+ ]
+}

@@ -1,0 +1,4 @@
+parsed rows: 64
+   shortnam   gdp  logpgp95  risk    avexpr   mort  posted_mort _merge
+20      GAB  8.90  8.907883  7.82  7.818182  280.0        280.0   both
+56      TZA  6.25  6.253829  6.64  6.636364  145.0        280.0   both

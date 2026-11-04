@@ -1,0 +1,20 @@
+STAGE 2C — CITATION-NETWORK AUDIT: NOT RUN (BLOCKER)
+
+Instrument: prompts/research-analysis/2-citation-network.txt @ ce028e1 (blob 7ac79f0da337c4d52e39e1490088d06c82a9d42b). Its identity was confirmed; it was not executed.
+
+Why it was not run:
+1. Scale. AJR 2001 has about 8,594 citing works in OpenAlex. The instrument needs per-citation context classification and attribution-chain tracing. A faithful run within this session's budget was not feasible, and a token sample would have yielded output that the repo checker could pass mechanically while being scientifically thin.
+2. Retrieval. The Semantic Scholar API returned HTTP 429. OpenAlex supplies metadata but not citation contexts, and there was no full-text corpus of citing papers.
+3. Integrity. A partial run dressed up as complete would violate the brief ("do not invent").
+
+Consequences:
+- Stage 3 sections A, B, C, F and the cartel-risk material are NOT ASSESSED or are limited to bounded OpenAlex title searches.
+- No uptake, suppression or laundering claim is made.
+- `atlas import` has no input: it accepts only citation-network native output validated by prompts/research-analysis/check-citation-network-output.py. So no Atlas import receipt exists for this run.
+
+What was done instead (reception only, not a substitute):
+- OpenAlex records for AJR 2001 (W3124166904; cited_by 8594; is_retracted false), Albouy 2012 (W1969918011; 295) and the AJR 2012 Reply (W3124131699; 6266, an implausible count and probably a work-merge artifact).
+- Filtered citing-title searches: "settler mortality" (2 hits), "colonial origins" (27 hits).
+Raw JSON is in sources/reception/.
+
+To unblock: run the instrument with a citation-context corpus (for example a Semantic Scholar key or OpenAlex plus full text), validate it with the repo checker, then run `python -m atlas import <context> --out <dir>` using a context modelled on tests/atlas/power-sources.json.
