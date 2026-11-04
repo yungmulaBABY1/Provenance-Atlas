@@ -34,6 +34,10 @@ Implemented, with mechanical test coverage:
 - Evidence view (`atlas.view`): a reader-first page and a text report rendered
   from the same verified records ([docs/atlas/views/s2-run1/](docs/atlas/views/s2-run1/),
   [docs/atlas/view.md](docs/atlas/view.md)).
+- Research questions (`atlas.question`): one declared question over a declared list
+  of sources, with what Atlas holds about each and no judgment added
+  ([docs/atlas/views/power-posing/](docs/atlas/views/power-posing/),
+  [docs/atlas/question.md](docs/atlas/question.md)).
 
 Not implemented: running a model from this code, an interactive or hosted
 interface, challenge records, human adjudication, public release controls. Import is not a model
@@ -60,7 +64,8 @@ done
 for dir in tests/atlas/extraction/*/receipt/; do
   python -m atlas.extraction replay "${dir}manifest.json" "${dir}records.jsonl" --level content
 done
-python -m atlas.view check tests/atlas/extraction/s2-run1/receipt docs/atlas/views/s2-run1
+python -m atlas.question replay tests/atlas/question/power-posing/receipt/manifest.json tests/atlas/question/power-posing/receipt/records.jsonl --level content
+python -m atlas.view check-all
 ```
 
 Expected: checker regression `PASS`, 230 tests `OK` (one skipped: it needs

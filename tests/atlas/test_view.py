@@ -24,23 +24,33 @@ from atlas.extraction import output  # noqa: E402
 from atlas.extraction.build import jsonl  # noqa: E402
 from atlas.view import labels  # noqa: E402
 from atlas.view.model import build_view, verify, view_json  # noqa: E402
+from atlas.view.pages import render_all  # noqa: E402
 from atlas.view.render import html_page, text_report  # noqa: E402
 
 RECEIPT = ROOT / "tests/atlas/extraction/s2-run1/receipt"
 VIEW_DIR = ROOT / "docs/atlas/views/s2-run1"
 REDACTED = ROOT / "tests/atlas/extraction/s2-run1/output-redacted.md"
+PAGES = ROOT / "docs/atlas/views/views.json"
 
 
 class CommittedViewTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.view = build_view(verify(RECEIPT, ROOT), ROOT)
-        cls.page = html_page(cls.view)
+        # The committed page is rendered from docs/atlas/views/views.json, with its question breadcrumb.
+        cls.files = render_all(PAGES, ROOT)
+        cls.view = json.loads(cls.files["docs/atlas/views/s2-run1"]["view.json"])
+        cls.page = cls.files["docs/atlas/views/s2-run1"]["index.html"].decode("utf-8")
 
     def test_committed_files_are_a_fresh_render(self):
-        self.assertEqual((VIEW_DIR / "view.json").read_bytes(), view_json(self.view))
-        self.assertEqual((VIEW_DIR / "index.html").read_text(encoding="utf-8"), self.page)
-        self.assertEqual((VIEW_DIR / "report.txt").read_text(encoding="utf-8"), text_report(self.view))
+        for out, files in self.files.items():
+            for name, data in files.items():
+                self.assertEqual((ROOT / out / name).read_bytes(), data, f"{out}/{name}")
+
+    def test_breadcrumb_changes_nothing_else(self):
+        alone = json.loads(view_json(build_view(verify(RECEIPT, ROOT), ROOT)))
+        self.assertEqual({k: v for k, v in self.view.items() if k != "context"}, alone)
+        self.assertEqual(self.view["context"]["denominator"], 4)
+        self.assertIn('href="../power-posing/index.html"', self.page)
 
     def test_only_public_quotes_are_shown(self):
         published = {normalize(a["quote"]["text"]) for a in output.parse(REDACTED.read_text(encoding="utf-8"))["anchors"]
@@ -126,14 +136,19 @@ class GuardTests(unittest.TestCase):
 
     def test_stale_committed_view_is_detected(self):
         with tempfile.TemporaryDirectory() as directory:
-            out = Path(directory)
-            for name in ("view.json", "index.html", "report.txt"):
-                shutil.copyfile(VIEW_DIR / name, out / name)
-            (out / "report.txt").write_text("edited\n", encoding="utf-8")
-            run = subprocess.run([sys.executable, "-m", "atlas.view", "check", str(RECEIPT), str(out)],
+            spec = load_json(PAGES.read_bytes())
+            for page in spec["pages"]:
+                out = Path(directory) / page["id"]
+                shutil.copytree(ROOT / page["out"], out)
+                page["out"] = str(out)
+            (Path(directory) / "s2-run1" / "report.txt").write_text("edited\n", encoding="utf-8")
+            pages = Path(directory) / "views.json"
+            pages.write_text(json.dumps(spec), encoding="utf-8")
+            run = subprocess.run([sys.executable, "-m", "atlas.view", "check-all", str(pages)],
                                  cwd=ROOT, capture_output=True, text=True)
             self.assertNotEqual(run.returncode, 0)
             self.assertIn("VIEW_STALE", run.stderr)
+            self.assertIn("s2-run1/report.txt", run.stderr)
 
     def test_untranslated_label_is_an_error(self):
         with self.assertRaisesRegex(ContractError, "UNTRANSLATED_LABEL"):

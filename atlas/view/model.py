@@ -45,7 +45,9 @@ def first(records: list[dict], kind: str, **match) -> dict:
     return found[0]
 
 
-def build_view(verified: dict, root: Path) -> dict:
+def build_view(verified: dict, root: Path, crumb: dict | None = None, crumb_ids: set[str] | None = None) -> dict:
+    """crumb: an optional question breadcrumb (atlas.view.question.question_context), whose
+    refs must be in crumb_ids. It changes nothing else on the page."""
     records = verified["records"]
     by_id = {r["id"]: r for r in records}
     context = verified["manifest"]["input_context"]
@@ -230,7 +232,9 @@ def build_view(verified: dict, root: Path) -> dict:
                   "Nothing here is a score or a verdict on whether the claim is true.",
                   "Every item links to the records it comes from (technical record, below)."],
     }
-    check_refs(view, set(by_id) | linked_ids)
+    if crumb is not None:
+        view["context"] = crumb
+    check_refs(view, set(by_id) | linked_ids | (crumb_ids or set()))
     return view
 
 
