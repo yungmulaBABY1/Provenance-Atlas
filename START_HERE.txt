@@ -1,5 +1,5 @@
 ATLAS — START HERE
-Project map and next build brief | 31 October 2026 | Revision 4
+Project map and next build brief | 4 November 2026 | Revision 5
 It points; you judge.
 
 READ THIS FIRST — THE TWO-MINUTE VERSION
@@ -38,6 +38,9 @@ A readable local report is enough. A model-generated conclusion remains provisio
   stacked on #2, not merged). One real six-field extraction of S2 by an external
   runner, quotes checked against the source, one arithmetic evidence check.
   See docs/atlas/extraction.md.
+  Revision 5 status: Increments A and B merged (PRs #2-#4). First reader screen
+  prepared on branch m1c-evidence-view: docs/atlas/views/s2-run1/ (page, text
+  report and view model from the same verified records). See docs/atlas/view.md.
 
 YOU DO NOT NEED TO DECIDE NOW: cloud host, graph database, framework, agent fleet,
 bot interface, provider catalog, pricing, public launch or every future method.
@@ -540,6 +543,9 @@ Increment B — bounded execution:
   the operator's attestation is recorded separately.
 
 Increment C — inspect and challenge:
+  Revision 5 status: part 1 (readable report) and M2's first screen PREPARED on
+  branch m1c-evidence-view, draft PR, not merged. Part 2 (attributed challenge
+  record) not started.
   Produce a readable report with the target, evidence, missingness, original labels,
   proposed support relation and review history. Permit a separately attributed
   challenge without replacing the original. Existing model reviews are exposed
@@ -870,5 +876,7 @@ Revision history:
               M1 Increment A prepared on branch m1a-claim-links.
   Revision 4  31 Oct 2026  M1 Increment B prepared on branch m1b-s2-extraction:
               first recorded extraction (S2) and evidence check.
+  Revision 5  4 Nov 2026   A and B merged. Reader view (atlas.view): one view
+              model rendered as page and report, from verified records.
 
 END — It points; you judge.

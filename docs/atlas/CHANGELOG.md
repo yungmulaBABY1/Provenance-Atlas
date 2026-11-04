@@ -1,5 +1,18 @@
 # Atlas adapter changelog
 
+## Unreleased — evidence view 0.1.0 (`atlas.view`, M1 Increment C part 1 / M2)
+
+- New package `atlas/view/`: verifies an extraction bundle by content replay, builds
+  one view model (`view.json`, schema `atlas-view/0.1`) in which every item names
+  the records it comes from, and renders it twice: a reader-first page
+  (`index.html`) and a plain-text report (`report.txt`). See [view.md](view.md).
+- First real screen: `docs/atlas/views/s2-run1/`, the S2 testosterone claim.
+- No paraphrase of content. Plain language only through the declared label table
+  `atlas-plain-labels/0.1`, always beside the native label; an unlisted label is
+  an error. No score or verdict.
+- 13 new tests. CI checks the committed view is a fresh render.
+- Not in this increment: the attributed challenge record (Increment C part 2).
+
 ## Unreleased — recorded extraction 0.1.0 (`atlas.extraction`, M1 Increment B)
 
 - New package `atlas/extraction/` (schema `atlas-extraction/0.1`) and the first

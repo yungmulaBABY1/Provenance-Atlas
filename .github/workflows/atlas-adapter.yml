@@ -54,3 +54,6 @@ jobs:
             count=$((count + 1))
           done
           test "$count" -gt 0
+      # The committed reader view must be a fresh render of the verified records.
+      - name: Reader view is current
+        run: python -m atlas.view check tests/atlas/extraction/s2-run1/receipt docs/atlas/views/s2-run1
