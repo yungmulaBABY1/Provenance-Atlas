@@ -1,0 +1,276 @@
+{
+ "probe": "anchor_probe/1 (scratch; not an Atlas contract)",
+ "output_file": "01_claim_extraction.md",
+ "output_sha256": "f6e7df18d9fcd8e533c2909b49b75603d3072c7948292afd97ac6d7a8a23ea3e",
+ "extraction_file": "/workspace/acemoglu-src/colonial-origins-of-comparative-development.txt",
+ "extraction_sha256": "d33c1a059fd8d1fca1f6424dec9c1d78e81374358bb76d3f2dd2624d75d45048",
+ "extraction_tool": "pdftotext version 25.03.0",
+ "parser": {
+  "name": "atlas-claim-extraction-output",
+  "version": "1"
+ },
+ "parse_issues": [],
+ "preflight_disposition": "IDENTITY CONFIRMED",
+ "table_fields": [
+  "1",
+  "2",
+  "3",
+  "4",
+  "5A",
+  "5B",
+  "6"
+ ],
+ "field_6_status": "USABLE",
+ "summaries": [
+  "CLAIM UNDER AUDIT",
+  "DOWNSTREAM FAILURE LOCATION",
+  "GAP TYPE",
+  "MAP CONFIDENCE",
+  "WITHIN-SOURCE FAILURE LOCATION"
+ ],
+ "anchors": [
+  {
+   "id": "A1.1",
+   "field": "1",
+   "kind": "RECONSTRUCTION",
+   "stated_page": null,
+   "stated_section": null
+  },
+  {
+   "id": "A1.2",
+   "field": "1",
+   "kind": "QUOTE",
+   "stated_page": 3,
+   "stated_section": "Introduction",
+   "state": "NORMALIZED_MATCH_ONLY",
+   "location": "UNIQUE",
+   "found_page": 3,
+   "page_consistent": true,
+   "quote_sha256": "613986bcd6c124dd65c1d2cbc999f403c6cdbb6d407fbe9f9970ad710af8ee14"
+  },
+  {
+   "id": "A1.3",
+   "field": "1",
+   "kind": "QUOTE",
+   "stated_page": 11,
+   "stated_section": "Section II footnote",
+   "state": "MATCH",
+   "location": "UNIQUE",
+   "found_page": 11,
+   "page_consistent": true,
+   "quote_sha256": "ae4f5bb0b94d8eeea9f9983fa012873eafa0830693b2c664542f8803e187d3b9"
+  },
+  {
+   "id": "A1.4",
+   "field": "1",
+   "kind": "QUOTE",
+   "stated_page": 16,
+   "stated_section": "Section III",
+   "state": "MATCH",
+   "location": "UNIQUE",
+   "found_page": 16,
+   "page_consistent": true,
+   "quote_sha256": "19ad4a1970c71e9ea80ce6502e82293826207cdc705071560e149ec9a00ff700"
+  },
+  {
+   "id": "A1.5",
+   "field": "1",
+   "kind": "QUOTE",
+   "stated_page": 16,
+   "stated_section": "Section III footnote 17",
+   "state": "NORMALIZED_MATCH_ONLY",
+   "location": "UNIQUE",
+   "found_page": 16,
+   "page_consistent": true,
+   "quote_sha256": "a4896918d656874d1b3f628c1fa274f0805c1fe625ccdfb80881b7c892fead50"
+  },
+  {
+   "id": "A1.6",
+   "field": "1",
+   "kind": "QUOTE",
+   "stated_page": 18,
+   "stated_section": "Section IV",
+   "state": "MATCH",
+   "location": "UNIQUE",
+   "found_page": 18,
+   "page_consistent": true,
+   "quote_sha256": "7a5e1d8356f58e60ff9064f12c8195c9bd0d4c4cd6e0f463e69682a8d08d8731"
+  },
+  {
+   "id": "A1.7",
+   "field": "1",
+   "kind": "QUOTE",
+   "stated_page": 4,
+   "stated_section": "Introduction",
+   "state": "NORMALIZED_MATCH_ONLY",
+   "location": "UNIQUE",
+   "found_page": 4,
+   "page_consistent": true,
+   "quote_sha256": "8d13137ef21afc72d2e725d9ae017d8bf5fa7f9350ab4e57c55ef85b43300a2d"
+  },
+  {
+   "id": "A1.8",
+   "field": "1",
+   "kind": "QUOTE",
+   "stated_page": 26,
+   "stated_section": "Section VI",
+   "state": "NORMALIZED_MATCH_ONLY",
+   "location": "UNIQUE",
+   "found_page": 26,
+   "page_consistent": true,
+   "quote_sha256": "26f761c312ca9356bafc3b6de5555289ca6c3807b490143e60989a671294a1da"
+  },
+  {
+   "id": "A1.9",
+   "field": "1",
+   "kind": "QUOTE",
+   "stated_page": 18,
+   "stated_section": "Section IV footnote 18",
+   "state": "NORMALIZED_MATCH_ONLY",
+   "location": "UNIQUE",
+   "found_page": 18,
+   "page_consistent": true,
+   "quote_sha256": "c01e191f7a26b0ffd5a8573124c72a4a4dd8d6fc3f333658b39a83392fbe9c13"
+  },
+  {
+   "id": "A1.10",
+   "field": "1",
+   "kind": "QUOTE",
+   "stated_page": 20,
+   "stated_section": "Section IV footnote 21",
+   "state": "NORMALIZED_MATCH_ONLY",
+   "location": "UNIQUE",
+   "found_page": 20,
+   "page_consistent": true,
+   "quote_sha256": "a1212d5dbeb8e81374a2a43fed5ef33494dd5f278dc5ab4345aae0628cf747e6"
+  },
+  {
+   "id": "A2.1",
+   "field": "2",
+   "kind": "QUOTE",
+   "stated_page": 2,
+   "stated_section": "Abstract",
+   "state": "NORMALIZED_MATCH_ONLY",
+   "location": "UNIQUE",
+   "found_page": 2,
+   "page_consistent": true,
+   "quote_sha256": "1ec49b0935035114ed15d395011667f937b10db2d040a1e3a8f87fe06c1fe464"
+  },
+  {
+   "id": "A2.2",
+   "field": "2",
+   "kind": "QUOTE",
+   "stated_page": 2,
+   "stated_section": "Abstract",
+   "state": "NORMALIZED_MATCH_ONLY",
+   "location": "UNIQUE",
+   "found_page": 2,
+   "page_consistent": true,
+   "quote_sha256": "cf79032718aa8589f0295952606c1e70991550d2c766cf4d6d3515a7ad624a12"
+  },
+  {
+   "id": "A2.3",
+   "field": "2",
+   "kind": "QUOTE",
+   "stated_page": 20,
+   "stated_section": "Section IV",
+   "state": "NORMALIZED_MATCH_ONLY",
+   "location": "UNIQUE",
+   "found_page": 20,
+   "page_consistent": true,
+   "quote_sha256": "c9ee741ed594192efbecc3da625e3ad3b5eb756acbf73a4eafd430fcf6f5ba85"
+  },
+  {
+   "id": "A2.4",
+   "field": "2",
+   "kind": "QUOTE",
+   "stated_page": 4,
+   "stated_section": "Introduction",
+   "state": "NORMALIZED_MATCH_ONLY",
+   "location": "UNIQUE",
+   "found_page": 4,
+   "page_consistent": true,
+   "quote_sha256": "88ea0747ded90bfd52ae6b8d5753954f5529fe7d389ab0fe7c4685c542461a6e"
+  },
+  {
+   "id": "A2.5",
+   "field": "2",
+   "kind": "QUOTE",
+   "stated_page": 20,
+   "stated_section": "Section IV",
+   "state": "MATCH",
+   "location": "UNIQUE",
+   "found_page": 20,
+   "page_consistent": true,
+   "quote_sha256": "240812e0455588ce736b59db8e74f11109defd8055a2fed85cc0054f34032dd8"
+  },
+  {
+   "id": "A2.6",
+   "field": "2",
+   "kind": "QUOTE",
+   "stated_page": 4,
+   "stated_section": "Introduction",
+   "state": "NORMALIZED_MATCH_ONLY",
+   "location": "UNIQUE",
+   "found_page": 4,
+   "page_consistent": true,
+   "quote_sha256": "a15f608b216baadcddc0d7297b28cb072a750d936d7ad41bd1f34218b0ff59a9"
+  },
+  {
+   "id": "A2.7",
+   "field": "2",
+   "kind": "QUOTE",
+   "stated_page": 26,
+   "stated_section": "Section VI",
+   "state": "NORMALIZED_MATCH_ONLY",
+   "location": "UNIQUE",
+   "found_page": 26,
+   "page_consistent": true,
+   "quote_sha256": "26e8ab3523d9639cb2e99cf86468ce6a14c23e89c3126f45d1c0129f9ea28c20"
+  },
+  {
+   "id": "A2.8",
+   "field": "2",
+   "kind": "SAME_AS",
+   "stated_page": null,
+   "stated_section": null
+  },
+  {
+   "id": "A2.9",
+   "field": "2",
+   "kind": "QUOTE",
+   "stated_page": 5,
+   "stated_section": "Introduction",
+   "state": "NORMALIZED_MATCH_ONLY",
+   "location": "UNIQUE",
+   "found_page": 5,
+   "page_consistent": true,
+   "quote_sha256": "ed32ae2acf4846c2583503acb751c025ea207154db23838eb186a846cc20d2fb"
+  },
+  {
+   "id": "A5.1",
+   "field": "5",
+   "kind": "QUOTE",
+   "stated_page": 26,
+   "stated_section": "Section VI",
+   "state": "NORMALIZED_MATCH_ONLY",
+   "location": "UNIQUE",
+   "found_page": 26,
+   "page_consistent": true,
+   "quote_sha256": "32a4aa4e3b7131d110a0aeec7e92e0be21a08ca55b40da2a0f0e6d83569cabd4"
+  },
+  {
+   "id": "A6.1",
+   "field": "6",
+   "kind": "SAME_AS",
+   "stated_page": null,
+   "stated_section": null
+  }
+ ],
+ "counts": {
+  "MATCH": 4,
+  "NORMALIZED_MATCH_ONLY": 14,
+  "MISMATCH": 0
+ },
+ "page_inconsistent": []
+}

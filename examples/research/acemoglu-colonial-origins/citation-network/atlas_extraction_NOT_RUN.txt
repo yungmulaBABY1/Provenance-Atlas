@@ -1,0 +1,17 @@
+atlas.extraction (atlas-extraction-context/0.1): NOT RUN. Assessed 2026-11-04 (PST).
+
+The earlier blocker B-ATLAS-3 (no AJR import bundle and no claim-link bundle to link to) is now partly lifted:
+this stage produced urn:atlas:import:ajr2001-citation-network:1 and urn:atlas:claimlink:ajr2001-citation-network:1.
+
+What still blocks it:
+1. run.method.run_prompt must name a hashed run-prompt file. Stage 01 was executed in-session from the instrument;
+   no separate run-prompt file exists. Pointing at tests/atlas/extraction/s2-run1/run-prompt.txt or writing one
+   now would fabricate the run's provenance.
+2. links.provisional_map_bundle is meant to hold the historical citation-network fallback claim map. The new
+   claim-link bundle records CLAIM MAP ABSENT (this output used the upstream map, which atlas.claims 0.1 does not parse),
+   so there is nothing to align with.
+3. The only evidence check, reported-statistics-consistency/1, covers one two-sample t test. Field 6 here is a 2SLS
+   coefficient (0.94, SE 0.16), so the check would be NOT_CHECKABLE (see ../atlas_probe/stats_check_probe.json).
+4. extraction is for the Stage-1 output (01_claim_extraction.md), not for this Stage-2c output.
+
+The adapter, contracts and fixtures were not modified.

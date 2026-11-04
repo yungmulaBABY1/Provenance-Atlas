@@ -1,0 +1,158 @@
+=== ATTEMPT 1 2026-11-04 12:06:02 UTC sha256 11923a7b690d8f35b92c1a0608558a0ca8d4958b74bcd1e0367f6f07daf2d21e
+$ python3 prompts/research-analysis/check-citation-network-output.py /workspace/acemoglu-audit/02c_citation_network.md
+Checked: /workspace/acemoglu-audit/02c_citation_network.md
+VERIFICATION_VOCAB_PASS	canonical_confirmed_tokens=165
+Required headings: 25
+Present: 25
+Missing: 0
+Placeholder-screen threshold: 12 words
+NOTICE	A body-length pass means only that the section is not empty or an obvious placeholder. It does not establish analytical adequacy.
+DERIVATION_SEPARATION_PASS	Derivation mode is separate from verification state.
+ORDER_PASS	ARTIFACT 9: NETWORK MAP precedes COMPLETION LEDGER
+ORDER_PASS	COMPLETION LEDGER precedes ARTIFACT 10: FINAL VERDICT
+ORDER_PASS	ARTIFACT 10: FINAL VERDICT precedes FINAL SECTION: STANDARDIZED FINDING TABLE
+PLACEHOLDER_SCREEN_PASS	PRE-AUDIT CLAIM CONFIRMATION	252 words	status=PROVISIONAL
+PLACEHOLDER_SCREEN_PASS	SECTION A: CITATION NETWORK STRUCTURE AND CARTEL DETECTION	1499 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION B: EVIDENCE TYPE CODING	1804 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION C: CITATION POLARITY AND CLAIM USE	387 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION D: CLAIM MUTATION TRACKING	521 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION E: ADJACENT FIELD ENGAGEMENT / NEGLECT	1509 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION F: HUB DEPENDENCY AND REVIEW-PAPER LAUNDERING	388 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION G: PATTERN RECOGNITION AND RATCHET BEHAVIOR	460 words	status=N/A
+PLACEHOLDER_SCREEN_PASS	SECTION H: IGNORED CRITIQUE AND NON-UPTAKE	501 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION I: AUTHOR, INSTITUTION, JOURNAL, AND FUNDING CLUSTERING	232 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION J: FALSE-POSITIVE AND BASELINE CHECK	288 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION J2: THE CONCEDE TEST	495 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION K: CARTEL-RISK SCORING	345 words	status=N/A,PROVISIONAL
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 1: TOP 15 CITATION SPINE TABLE	586 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 2: FOUNDING CLUSTER TABLE	162 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 3: RECENT 5-YEAR CITATION BEHAVIOR TABLE	908 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 4: CITATION POLARITY TABLE	363 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 5: CLAIM MUTATION TABLE	138 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 6: ADJACENT-LITERATURE NEGLECT TABLE	386 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 7: CRITIQUE-UPTAKE TABLE	152 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 8: CARTEL-RISK SCORECARD	492 words	status=N/A
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 9: NETWORK MAP	460 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	COMPLETION LEDGER	303 words	status=N/A
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 10: FINAL VERDICT	544 words	status=N/A,PROVISIONAL
+PLACEHOLDER_SCREEN_PASS	FINAL SECTION: STANDARDIZED FINDING TABLE	1549 words	status=N/A
+RISK_BAND_FORM_PASS	Explicit disposition is present.
+SOURCE_LOCK_METHOD_PASS	LOCKED QUERY
+SOURCE_LOCK_FORM_PASS	method and seven-field lock record present.
+SOURCE_CLASS_FORM_PASS	classified_sources=24	directly_adjudicating=4
+AGGREGATION_FORM_PASS	independent=8	nested=1	denominator=24
+GRAPH_RECEIPTS_PASS	All scored-density receipts are present.
+STATUS_SUMMARY	N/A=6	PROVISIONAL=3	INCOMPLETE=0	COMPLETED_INFERRED=18	UNMARKED_THIN=0
+STRUCTURAL_RESULT	PASS
+CONTENT_RESULT	PASS-WITH-REVIEW	items=3
+REVIEW_ITEM_1	SOURCE_LOCK_TRUTH — verify the lock predates citation inspection and the query/source list deterministically fixes the exemplars: SOURCE-LOCK DATABASE: OpenAlex works API (api.openalex.org), executed once; raw JSON responses saved and hashed | SOURCE-LOCK QUERY OR SOURCE LIST: filter=title.search:<terms>,to_publication_date:2000-12-31,type:article with terms F1 "malaria economic", F2 "geography economic development", F3 "human capital growth", F4 "weak instruments", F6 "institutions economic performance" | SOURCE-LOCK DATE CUTOFF: 2000-12-31 (publication on or before) | SOURCE-LOCK RANKING RULE: OpenAlex cited_by_count descending at query time | SOURCE-LOCK N: 10 (top 2 per field × 5 fields) | SOURCE-LOCK DEDUPLICATION RULE: by OpenAlex work ID; exact duplicates counted once; off-topic or mis-typed items retained and flagged, never replaced | SOURCE-LOCK TIMESTAMP OR HASH: 2026-11-04T11:42:25Z (03:42:25 PST); preregistration sha256 84847dd02aca0af819994008ae98d407fae5f75560c8d5de9b628346df965154; locked result list sha256 521b3a52716a5dc75e8684bf7464cb3d90aea124815282d19ff82ee25f855a3c
+REVIEW_ITEM_2	DIRECT_ADJUDICATION_SUBSTANCE — 4 source(s) classified DIRECTLY-ADJUDICATING; verify each classification and its actual result, favored explanation, weakened explanation, and required revision: line 196: | L3 | rival-explanation test (R1) | Sachs 2003, NBER WP 9490 | FULL-TEXT-CONFIRMED; CONTESTED | DIRECTLY-ADJUDICATING | "the null hypothesis may be readily rejected using an alternative geographical variable: malaria risk" (SA-E1) | R1 (direct disease effect) | L3 strong form (institutions as sole fundamental channel) | L3 must read "institutions are a major channel; a direct disease channel is not excluded" | POST HOC | no in AJR 2001 (timing); union AJR citers 494/11,316 = 4.4%; recent 67/2,695 = 2.5% | AJR-team engagement UNASSESSED (not retrieved); rarely co-cited by downstream citers | moderate weakness | || line 197: | L3 | rival-explanation test (R2) | Glaeser et al. 2004, NBER WP 10568 | FULL-TEXT-CONFIRMED; CONTESTED | DIRECTLY-ADJUDICATING | malaria risk significant alongside settler mortality; instruments may work through human capital (GL-E1, GL-E2) | R1 and R2 | L3 strong form; exclusion restriction behind field 6's causal reading | L3 must read "institutions or settler human capital (not separately identified)"; field 6 unchanged as an estimate | POST HOC | union 1,539/11,316 = 13.6%; 2005+ 1,524/10,897 = 14.0%; recent 202/2,695 = 7.5%; top-50 in-degree 9 | substantively engaged (AJR, Gallego & Robinson 2014 response noted in Nobel background NS-E3) | moderate weakness | || line 445: | L3 | R1 test | Sachs 2003 NBER WP 9490 | FULL-TEXT-CONFIRMED; CONTESTED | DIRECTLY-ADJUDICATING | null "readily rejected using … malaria risk" (SA-E1) | R1 | L3 strong form | L3: "institutions are a major channel; a direct disease channel is not excluded" | POST HOC | 4.4% of union citers | cited in passing | moderate weakness | || line 446: | L3 | R1/R2 test | Glaeser et al. 2004 NBER WP 10568 | FULL-TEXT-CONFIRMED; CONTESTED | DIRECTLY-ADJUDICATING | malaria risk significant alongside settler mortality; human-capital channel (GL-E1, GL-E2) | R1 and R2 | L3 strong form | L3: "institutions or settler human capital, not separately identified" | POST HOC | 13.6% of union citers | substantively engaged | moderate weakness |
+REVIEW_ITEM_3	NESTING_SUBSTANCE — 1 dimension(s) marked NESTED; verify the parent owns the shared evidence and no independent inferential work was lost: line 468: | Review-hub laundering | applicable | SCORED 1 | 1 | CROSS-SOURCE-CONFIRMED | self-authored hub drops upper bound; 1,400 recent works cite it without AJR 2001 | HB-E1; AJR-E2; recent_all_HB.json | WP version only | NESTED under Claim mutation | same HB-E1 passage owns the mutation | excluded from aggregate as NESTED | counts toward coverage |
+PASS-WITH-REVIEW: 3 items	All deterministic checks passed; the listed substantive judgments remain for human review.
+exit_code=0
+
+=== ATTEMPT 2 2026-11-04 12:06:14 UTC sha256 ddcfcfc6c5a7ad59bd7f64f17d7bebd7b1e7963563b3824bd4a4cfd9328deb07 (reason: attempt 1 passed; output-only wording corrections in two Section E cells: removed unverified '2014' year, harmonised engagement-quality wording with Artifact 6)
+$ python3 prompts/research-analysis/check-citation-network-output.py /workspace/acemoglu-audit/02c_citation_network.md
+Checked: /workspace/acemoglu-audit/02c_citation_network.md
+VERIFICATION_VOCAB_PASS	canonical_confirmed_tokens=165
+Required headings: 25
+Present: 25
+Missing: 0
+Placeholder-screen threshold: 12 words
+NOTICE	A body-length pass means only that the section is not empty or an obvious placeholder. It does not establish analytical adequacy.
+DERIVATION_SEPARATION_PASS	Derivation mode is separate from verification state.
+ORDER_PASS	ARTIFACT 9: NETWORK MAP precedes COMPLETION LEDGER
+ORDER_PASS	COMPLETION LEDGER precedes ARTIFACT 10: FINAL VERDICT
+ORDER_PASS	ARTIFACT 10: FINAL VERDICT precedes FINAL SECTION: STANDARDIZED FINDING TABLE
+PLACEHOLDER_SCREEN_PASS	PRE-AUDIT CLAIM CONFIRMATION	252 words	status=PROVISIONAL
+PLACEHOLDER_SCREEN_PASS	SECTION A: CITATION NETWORK STRUCTURE AND CARTEL DETECTION	1499 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION B: EVIDENCE TYPE CODING	1804 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION C: CITATION POLARITY AND CLAIM USE	387 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION D: CLAIM MUTATION TRACKING	521 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION E: ADJACENT FIELD ENGAGEMENT / NEGLECT	1516 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION F: HUB DEPENDENCY AND REVIEW-PAPER LAUNDERING	388 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION G: PATTERN RECOGNITION AND RATCHET BEHAVIOR	460 words	status=N/A
+PLACEHOLDER_SCREEN_PASS	SECTION H: IGNORED CRITIQUE AND NON-UPTAKE	501 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION I: AUTHOR, INSTITUTION, JOURNAL, AND FUNDING CLUSTERING	232 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION J: FALSE-POSITIVE AND BASELINE CHECK	288 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION J2: THE CONCEDE TEST	495 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION K: CARTEL-RISK SCORING	345 words	status=N/A,PROVISIONAL
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 1: TOP 15 CITATION SPINE TABLE	586 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 2: FOUNDING CLUSTER TABLE	162 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 3: RECENT 5-YEAR CITATION BEHAVIOR TABLE	908 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 4: CITATION POLARITY TABLE	363 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 5: CLAIM MUTATION TABLE	138 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 6: ADJACENT-LITERATURE NEGLECT TABLE	386 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 7: CRITIQUE-UPTAKE TABLE	152 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 8: CARTEL-RISK SCORECARD	492 words	status=N/A
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 9: NETWORK MAP	460 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	COMPLETION LEDGER	303 words	status=N/A
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 10: FINAL VERDICT	544 words	status=N/A,PROVISIONAL
+PLACEHOLDER_SCREEN_PASS	FINAL SECTION: STANDARDIZED FINDING TABLE	1549 words	status=N/A
+RISK_BAND_FORM_PASS	Explicit disposition is present.
+SOURCE_LOCK_METHOD_PASS	LOCKED QUERY
+SOURCE_LOCK_FORM_PASS	method and seven-field lock record present.
+SOURCE_CLASS_FORM_PASS	classified_sources=24	directly_adjudicating=4
+AGGREGATION_FORM_PASS	independent=8	nested=1	denominator=24
+GRAPH_RECEIPTS_PASS	All scored-density receipts are present.
+STATUS_SUMMARY	N/A=6	PROVISIONAL=3	INCOMPLETE=0	COMPLETED_INFERRED=18	UNMARKED_THIN=0
+STRUCTURAL_RESULT	PASS
+CONTENT_RESULT	PASS-WITH-REVIEW	items=3
+REVIEW_ITEM_1	SOURCE_LOCK_TRUTH — verify the lock predates citation inspection and the query/source list deterministically fixes the exemplars: SOURCE-LOCK DATABASE: OpenAlex works API (api.openalex.org), executed once; raw JSON responses saved and hashed | SOURCE-LOCK QUERY OR SOURCE LIST: filter=title.search:<terms>,to_publication_date:2000-12-31,type:article with terms F1 "malaria economic", F2 "geography economic development", F3 "human capital growth", F4 "weak instruments", F6 "institutions economic performance" | SOURCE-LOCK DATE CUTOFF: 2000-12-31 (publication on or before) | SOURCE-LOCK RANKING RULE: OpenAlex cited_by_count descending at query time | SOURCE-LOCK N: 10 (top 2 per field × 5 fields) | SOURCE-LOCK DEDUPLICATION RULE: by OpenAlex work ID; exact duplicates counted once; off-topic or mis-typed items retained and flagged, never replaced | SOURCE-LOCK TIMESTAMP OR HASH: 2026-11-04T11:42:25Z (03:42:25 PST); preregistration sha256 84847dd02aca0af819994008ae98d407fae5f75560c8d5de9b628346df965154; locked result list sha256 521b3a52716a5dc75e8684bf7464cb3d90aea124815282d19ff82ee25f855a3c
+REVIEW_ITEM_2	DIRECT_ADJUDICATION_SUBSTANCE — 4 source(s) classified DIRECTLY-ADJUDICATING; verify each classification and its actual result, favored explanation, weakened explanation, and required revision: line 196: | L3 | rival-explanation test (R1) | Sachs 2003, NBER WP 9490 | FULL-TEXT-CONFIRMED; CONTESTED | DIRECTLY-ADJUDICATING | "the null hypothesis may be readily rejected using an alternative geographical variable: malaria risk" (SA-E1) | R1 (direct disease effect) | L3 strong form (institutions as sole fundamental channel) | L3 must read "institutions are a major channel; a direct disease channel is not excluded" | POST HOC | no in AJR 2001 (timing); union AJR citers 494/11,316 = 4.4%; recent 67/2,695 = 2.5% | cited in passing (AJR-team engagement not retrieved; rarely co-cited by downstream citers) | moderate weakness | || line 197: | L3 | rival-explanation test (R2) | Glaeser et al. 2004, NBER WP 10568 | FULL-TEXT-CONFIRMED; CONTESTED | DIRECTLY-ADJUDICATING | malaria risk significant alongside settler mortality; instruments may work through human capital (GL-E1, GL-E2) | R1 and R2 | L3 strong form; exclusion restriction behind field 6's causal reading | L3 must read "institutions or settler human capital (not separately identified)"; field 6 unchanged as an estimate | POST HOC | union 1,539/11,316 = 13.6%; 2005+ 1,524/10,897 = 14.0%; recent 202/2,695 = 7.5%; top-50 in-degree 9 | substantively engaged (Nobel background NS-E3 records an Acemoglu, Gallego and Robinson response; that response was not retrieved) | moderate weakness | || line 445: | L3 | R1 test | Sachs 2003 NBER WP 9490 | FULL-TEXT-CONFIRMED; CONTESTED | DIRECTLY-ADJUDICATING | null "readily rejected using … malaria risk" (SA-E1) | R1 | L3 strong form | L3: "institutions are a major channel; a direct disease channel is not excluded" | POST HOC | 4.4% of union citers | cited in passing | moderate weakness | || line 446: | L3 | R1/R2 test | Glaeser et al. 2004 NBER WP 10568 | FULL-TEXT-CONFIRMED; CONTESTED | DIRECTLY-ADJUDICATING | malaria risk significant alongside settler mortality; human-capital channel (GL-E1, GL-E2) | R1 and R2 | L3 strong form | L3: "institutions or settler human capital, not separately identified" | POST HOC | 13.6% of union citers | substantively engaged | moderate weakness |
+REVIEW_ITEM_3	NESTING_SUBSTANCE — 1 dimension(s) marked NESTED; verify the parent owns the shared evidence and no independent inferential work was lost: line 468: | Review-hub laundering | applicable | SCORED 1 | 1 | CROSS-SOURCE-CONFIRMED | self-authored hub drops upper bound; 1,400 recent works cite it without AJR 2001 | HB-E1; AJR-E2; recent_all_HB.json | WP version only | NESTED under Claim mutation | same HB-E1 passage owns the mutation | excluded from aggregate as NESTED | counts toward coverage |
+PASS-WITH-REVIEW: 3 items	All deterministic checks passed; the listed substantive judgments remain for human review.
+exit_code=0
+
+=== ATTEMPT 3 2026-11-04 12:06:35 UTC sha256 884887fe5a7b98d77921fbc31b488c7c9b7dc8406eb60340e4d5881436f3016c (reason: attempt 2 passed; output-only factual correction found during native-parser review: N01 in-corpus in-degree is 40, not 49, in Section A and Finding 1)
+$ python3 prompts/research-analysis/check-citation-network-output.py /workspace/acemoglu-audit/02c_citation_network.md
+Checked: /workspace/acemoglu-audit/02c_citation_network.md
+VERIFICATION_VOCAB_PASS	canonical_confirmed_tokens=165
+Required headings: 25
+Present: 25
+Missing: 0
+Placeholder-screen threshold: 12 words
+NOTICE	A body-length pass means only that the section is not empty or an obvious placeholder. It does not establish analytical adequacy.
+DERIVATION_SEPARATION_PASS	Derivation mode is separate from verification state.
+ORDER_PASS	ARTIFACT 9: NETWORK MAP precedes COMPLETION LEDGER
+ORDER_PASS	COMPLETION LEDGER precedes ARTIFACT 10: FINAL VERDICT
+ORDER_PASS	ARTIFACT 10: FINAL VERDICT precedes FINAL SECTION: STANDARDIZED FINDING TABLE
+PLACEHOLDER_SCREEN_PASS	PRE-AUDIT CLAIM CONFIRMATION	252 words	status=PROVISIONAL
+PLACEHOLDER_SCREEN_PASS	SECTION A: CITATION NETWORK STRUCTURE AND CARTEL DETECTION	1499 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION B: EVIDENCE TYPE CODING	1804 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION C: CITATION POLARITY AND CLAIM USE	387 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION D: CLAIM MUTATION TRACKING	521 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION E: ADJACENT FIELD ENGAGEMENT / NEGLECT	1516 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION F: HUB DEPENDENCY AND REVIEW-PAPER LAUNDERING	388 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION G: PATTERN RECOGNITION AND RATCHET BEHAVIOR	460 words	status=N/A
+PLACEHOLDER_SCREEN_PASS	SECTION H: IGNORED CRITIQUE AND NON-UPTAKE	501 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION I: AUTHOR, INSTITUTION, JOURNAL, AND FUNDING CLUSTERING	232 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION J: FALSE-POSITIVE AND BASELINE CHECK	288 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION J2: THE CONCEDE TEST	495 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION K: CARTEL-RISK SCORING	345 words	status=N/A,PROVISIONAL
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 1: TOP 15 CITATION SPINE TABLE	586 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 2: FOUNDING CLUSTER TABLE	162 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 3: RECENT 5-YEAR CITATION BEHAVIOR TABLE	908 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 4: CITATION POLARITY TABLE	363 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 5: CLAIM MUTATION TABLE	138 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 6: ADJACENT-LITERATURE NEGLECT TABLE	386 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 7: CRITIQUE-UPTAKE TABLE	152 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 8: CARTEL-RISK SCORECARD	492 words	status=N/A
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 9: NETWORK MAP	460 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	COMPLETION LEDGER	303 words	status=N/A
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 10: FINAL VERDICT	544 words	status=N/A,PROVISIONAL
+PLACEHOLDER_SCREEN_PASS	FINAL SECTION: STANDARDIZED FINDING TABLE	1549 words	status=N/A
+RISK_BAND_FORM_PASS	Explicit disposition is present.
+SOURCE_LOCK_METHOD_PASS	LOCKED QUERY
+SOURCE_LOCK_FORM_PASS	method and seven-field lock record present.
+SOURCE_CLASS_FORM_PASS	classified_sources=24	directly_adjudicating=4
+AGGREGATION_FORM_PASS	independent=8	nested=1	denominator=24
+GRAPH_RECEIPTS_PASS	All scored-density receipts are present.
+STATUS_SUMMARY	N/A=6	PROVISIONAL=3	INCOMPLETE=0	COMPLETED_INFERRED=18	UNMARKED_THIN=0
+STRUCTURAL_RESULT	PASS
+CONTENT_RESULT	PASS-WITH-REVIEW	items=3
+REVIEW_ITEM_1	SOURCE_LOCK_TRUTH — verify the lock predates citation inspection and the query/source list deterministically fixes the exemplars: SOURCE-LOCK DATABASE: OpenAlex works API (api.openalex.org), executed once; raw JSON responses saved and hashed | SOURCE-LOCK QUERY OR SOURCE LIST: filter=title.search:<terms>,to_publication_date:2000-12-31,type:article with terms F1 "malaria economic", F2 "geography economic development", F3 "human capital growth", F4 "weak instruments", F6 "institutions economic performance" | SOURCE-LOCK DATE CUTOFF: 2000-12-31 (publication on or before) | SOURCE-LOCK RANKING RULE: OpenAlex cited_by_count descending at query time | SOURCE-LOCK N: 10 (top 2 per field × 5 fields) | SOURCE-LOCK DEDUPLICATION RULE: by OpenAlex work ID; exact duplicates counted once; off-topic or mis-typed items retained and flagged, never replaced | SOURCE-LOCK TIMESTAMP OR HASH: 2026-11-04T11:42:25Z (03:42:25 PST); preregistration sha256 84847dd02aca0af819994008ae98d407fae5f75560c8d5de9b628346df965154; locked result list sha256 521b3a52716a5dc75e8684bf7464cb3d90aea124815282d19ff82ee25f855a3c
+REVIEW_ITEM_2	DIRECT_ADJUDICATION_SUBSTANCE — 4 source(s) classified DIRECTLY-ADJUDICATING; verify each classification and its actual result, favored explanation, weakened explanation, and required revision: line 196: | L3 | rival-explanation test (R1) | Sachs 2003, NBER WP 9490 | FULL-TEXT-CONFIRMED; CONTESTED | DIRECTLY-ADJUDICATING | "the null hypothesis may be readily rejected using an alternative geographical variable: malaria risk" (SA-E1) | R1 (direct disease effect) | L3 strong form (institutions as sole fundamental channel) | L3 must read "institutions are a major channel; a direct disease channel is not excluded" | POST HOC | no in AJR 2001 (timing); union AJR citers 494/11,316 = 4.4%; recent 67/2,695 = 2.5% | cited in passing (AJR-team engagement not retrieved; rarely co-cited by downstream citers) | moderate weakness | || line 197: | L3 | rival-explanation test (R2) | Glaeser et al. 2004, NBER WP 10568 | FULL-TEXT-CONFIRMED; CONTESTED | DIRECTLY-ADJUDICATING | malaria risk significant alongside settler mortality; instruments may work through human capital (GL-E1, GL-E2) | R1 and R2 | L3 strong form; exclusion restriction behind field 6's causal reading | L3 must read "institutions or settler human capital (not separately identified)"; field 6 unchanged as an estimate | POST HOC | union 1,539/11,316 = 13.6%; 2005+ 1,524/10,897 = 14.0%; recent 202/2,695 = 7.5%; top-50 in-degree 9 | substantively engaged (Nobel background NS-E3 records an Acemoglu, Gallego and Robinson response; that response was not retrieved) | moderate weakness | || line 445: | L3 | R1 test | Sachs 2003 NBER WP 9490 | FULL-TEXT-CONFIRMED; CONTESTED | DIRECTLY-ADJUDICATING | null "readily rejected using … malaria risk" (SA-E1) | R1 | L3 strong form | L3: "institutions are a major channel; a direct disease channel is not excluded" | POST HOC | 4.4% of union citers | cited in passing | moderate weakness | || line 446: | L3 | R1/R2 test | Glaeser et al. 2004 NBER WP 10568 | FULL-TEXT-CONFIRMED; CONTESTED | DIRECTLY-ADJUDICATING | malaria risk significant alongside settler mortality; human-capital channel (GL-E1, GL-E2) | R1 and R2 | L3 strong form | L3: "institutions or settler human capital, not separately identified" | POST HOC | 13.6% of union citers | substantively engaged | moderate weakness |
+REVIEW_ITEM_3	NESTING_SUBSTANCE — 1 dimension(s) marked NESTED; verify the parent owns the shared evidence and no independent inferential work was lost: line 468: | Review-hub laundering | applicable | SCORED 1 | 1 | CROSS-SOURCE-CONFIRMED | self-authored hub drops upper bound; 1,400 recent works cite it without AJR 2001 | HB-E1; AJR-E2; recent_all_HB.json | WP version only | NESTED under Claim mutation | same HB-E1 passage owns the mutation | excluded from aggregate as NESTED | counts toward coverage |
+PASS-WITH-REVIEW: 3 items	All deterministic checks passed; the listed substantive judgments remain for human review.
+exit_code=0

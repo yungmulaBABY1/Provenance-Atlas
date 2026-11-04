@@ -1,0 +1,80 @@
+VERIFIED RENDERING: every record below was re-derived by content replay from
+the inputs this bundle pins (import bundle records sha256 5e8b7c167c3e41b1..., executor 0.2.0, parser 2).
+Environment delta: none.
+Verification covers recording only, not the correctness of any claim, finding or review.
+
+CLAIM LINKS  urn:atlas:claimlink:ajr2001-citation-network:1
+Dependency   urn:atlas:import:ajr2001-citation-network:1  (syntax PASS-WITH-REVIEW; findings IMPORTED_UNADJUDICATED; producing-instrument compliance CONFORMS; native projection VERIFIED)
+
+CLAIM MAP    ABSENT
+  present: none
+  absent 1: NO_CLAIM_MAP_IN_OUTPUT
+  absent 2: NO_CLAIM_MAP_IN_OUTPUT
+  absent 3: NO_CLAIM_MAP_IN_OUTPUT
+  absent 4: NO_CLAIM_MAP_IN_OUTPUT
+  absent 5A: NO_CLAIM_MAP_IN_OUTPUT
+  absent 5B: NO_CLAIM_MAP_IN_OUTPUT
+  absent 6: NO_CLAIM_MAP_IN_OUTPUT
+  claim-extraction output: False; claim inventory: NOT_PRODUCED
+  reconciliation: NOT_APPLICABLE: no parsable map in output
+
+PAPER STATEMENT  NOT_AVAILABLE
+    claim-map field 2 (source's strongest claim): NO_CLAIM_MAP_IN_OUTPUT
+    target work doi:10.1257/aer.91.5.1369 read state(s) in dependency: PARTIAL_READ
+
+FINDING 1  IMPORTED_UNADJUDICATED, UNREVIEWED
+  target claim (MAP_GAP_DECLARED, line 697):
+    MAP GAP: this finding targets the retrieval record of AJR 2001 (citation counts and
+    graph position), not map field 6.
+  claim identity: DECLARED_NOT_ON_MAP
+  designated target: none (FIELD_6_TEXT_NOT_IN_INPUTS)
+  output mentions field 6 in 'Severity' (line 701): moderate for any single-database network metric; none for field 6
+
+FINDING 2  IMPORTED_UNADJUDICATED, UNREVIEWED
+  target claim (MAP_GAP_DECLARED, line 717):
+    MAP GAP: this finding targets L3, "independent work confirms that colonial
+    institutions explain income differences", not map field 6.
+  claim identity: DECLARED_NOT_ON_MAP
+  designated target: none (FIELD_6_TEXT_NOT_IN_INPUTS)
+
+FINDING 3  IMPORTED_UNADJUDICATED, UNREVIEWED
+  target claim (MAP_GAP_DECLARED, line 737):
+    MAP GAP: this finding targets the hub restatement of the field-6 estimate's
+    magnitude implication, not map field 6 itself.
+  claim identity: DECLARED_NOT_ON_MAP
+  designated target: none (FIELD_6_TEXT_NOT_IN_INPUTS)
+  output mentions field 6 in 'Scope loss if NARROWS' (line 743): material — for the magnitude restatement, the surviving claim is that 0.94 implies up to about a 7-fold gap, an upper bound because of measurement error; incidental for field 6.
+
+FINDING 4  IMPORTED_UNADJUDICATED, UNREVIEWED
+  target claim (MAP_GAP_DECLARED, line 757):
+    MAP GAP: this finding targets map field 4 public wording (L4), not map field 6.
+  claim identity: DECLARED_NOT_ON_MAP
+  designated target: none (FIELD_6_TEXT_NOT_IN_INPUTS)
+
+FINDING 5  IMPORTED_UNADJUDICATED, UNREVIEWED
+  target claim (TEXT, line 777):
+    In the base sample of 64 former colonies, the 2SLS estimate of the effect of the
+    1985–95 protection-against-expropriation index on 1995 log GDP per capita,
+    instrumented by log settler mortality, is 0.94 (SE 0.16).
+  vs CONFIRMATION_FIELD_6: MATCH
+  claim identity: UNRESOLVED_REQUIRES_REVIEW
+  designated target: none (FIELD_6_TEXT_NOT_IN_INPUTS)
+
+FINDING 6  IMPORTED_UNADJUDICATED, UNREVIEWED
+  target claim (MAP_GAP_DECLARED, line 797):
+    MAP GAP: this finding targets L3, "institutions explain income differences", not map
+    field 6.
+  claim identity: DECLARED_NOT_ON_MAP
+  designated target: none (FIELD_6_TEXT_NOT_IN_INPUTS)
+
+FINDING 7  IMPORTED_UNADJUDICATED, UNREVIEWED
+  target claim (TEXT, line 817):
+    In the base sample of 64 former colonies, the 2SLS estimate of the effect of the
+    1985–95 protection-against-expropriation index on 1995 log GDP per capita,
+    instrumented by log settler mortality, is 0.94 (SE 0.16).
+  vs CONFIRMATION_FIELD_6: MATCH
+  claim identity: UNRESOLVED_REQUIRES_REVIEW
+  designated target: none (FIELD_6_TEXT_NOT_IN_INPUTS)
+
+Counts are of findings by claim identity, not a score: DECLARED_NOT_ON_MAP 5, UNRESOLVED_REQUIRES_REVIEW 2
+Text comparison only. Whether differently worded statements are the same claim is not decided here.

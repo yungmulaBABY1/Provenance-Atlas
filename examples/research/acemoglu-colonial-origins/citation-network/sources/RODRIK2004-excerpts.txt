@@ -1,0 +1,21 @@
+Bounded excerpts from RODRIK2004: Rodrik, Subramanian & Trebbi (2002/2004). Institutions Rule: The Primacy of Institutions over Geography and Integration in Economic Development. NBER WP 9305 (J. Econ. Growth 9:131-165, 2004).
+PDF SHA-256 fcf21eff336d97712b2f80bbb67c1e096b6f40dce7d3d9b5be35fd7accb5b4c0; extraction `pdftotext -enc UTF-8` (poppler) of that PDF, text SHA-256 bdcc9b3858c8d75ea82067ffceed19d2dc9adb1946ba41270fb9582da0f3d49f.
+Not the full document. Each excerpt body is an exact substring of the extraction output; offsets in that output and in this file are recorded in excerpts_manifest.json.
+
+=== RD-E1 | section | PDF page 6 ===
+The idea is that these two instruments, having
+passed what might be called the AER (American Economic Review)-test, are our best hope
+at the moment of unraveling the tangle of cause-and-effect relationships involved.
+=== end RD-E1 ===
+
+=== RD-E3 | section | PDF page 20 ===
+In our view,
+this distinction is not made adequately clear in AJR and is arguably blurred by Easterly and
+Levine (2002).
+=== end RD-E3 ===
+
+=== RD-E4 | section | PDF page 21 ===
+One problem is that AJR do not carry out a direct test
+of the impact of colonial policies and institutions.
+=== end RD-E4 ===
+

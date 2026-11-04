@@ -1,0 +1,10 @@
+Bounded excerpts from HW2008: Hanushek & Woessmann (2007/2008). The Role of Cognitive Skills in Economic Development. NBER WP 12832 (J. Econ. Lit. 46(3), 2008).
+PDF SHA-256 305ad6df71078b65d4a2f89716adff21002fba65c08a16255e607e74c2f9c9ce; extraction `pdftotext -enc UTF-8` (poppler) of that PDF, text SHA-256 b11dd7497dc9c995d53818bc58c37aabd1a739d5f25a876346a7a5e6a751bfc3.
+Not the full document. Each excerpt body is an exact substring of the extraction output; offsets in that output and in this file are recorded in excerpts_manifest.json.
+
+=== HW-E1 | section | PDF page 44 ===
+While Acemoglu, Johnson, and Robinson (2001, 2002, 2005) find that geographical features do not exert an effect
+
+on economic growth independent of institutions, this remains a disputed subject (cf., e.g., McArthur and Sachs (2001)).
+=== end HW-E1 ===
+

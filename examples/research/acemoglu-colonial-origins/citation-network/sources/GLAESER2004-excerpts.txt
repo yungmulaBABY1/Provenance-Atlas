@@ -1,0 +1,17 @@
+Bounded excerpts from GLAESER2004: Glaeser, La Porta, Lopez-de-Silanes & Shleifer (2004). Do Institutions Cause Growth? NBER WP 10568 (J. Econ. Growth 9:271-303, 2004).
+PDF SHA-256 a3176149a0ca2bdd31e3fbace1ef745418d64c8dedeba63d88a4ca2c64d6c092; extraction `pdftotext -enc UTF-8` (poppler) of that PDF, text SHA-256 d27c52f0a85c1cd771de850b0c7a2070808ca8fc3bd612411681fe710ffc9a7b.
+Not the full document. Each excerpt body is an exact substring of the extraction output; offsets in that output and in this file are recorded in excerpts_manifest.json.
+
+=== GL-E1 | section | PDF page 24 ===
+The impact of settler mortality on today’s institutions remains significant, but so is that of
+malaria risk. At least part of what settler mortality captures is the modern disease environment.
+These results suggest that the issue of modern disease environment is real, and one should exercise
+caution in treating AJR instruments as proxies for the colonial but not modern mortality risk.
+=== end GL-E1 ===
+
+=== GL-E2 | section | PDF page 24 ===
+Could the influence of AJR’s proposed
+instruments on today’s development work through human capital? Put differently, perhaps when
+colonizers settled, they brought with them their know-how rather than constraints on the executive.
+=== end GL-E2 ===
+

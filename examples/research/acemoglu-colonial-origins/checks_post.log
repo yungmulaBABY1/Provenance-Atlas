@@ -1,0 +1,36 @@
+### python: Python 3.13.5
+### HEAD: ce028e1294873df0143ca1ae00d6abf74a910563 branch audit/acemoglu-colonial-origins
+### checker regression
+PASS	dirty full fixture failed; Shen V1 whitelist control passed; clean fixture returned PASS; review fixture returned PASS-WITH-REVIEW.
+exit=0
+### unittest
+..................................................................................................................................................s......................................................................
+----------------------------------------------------------------------
+Ran 217 tests in 12.813s
+
+OK (skipped=1)
+exit=0
+### replay tests/atlas/receipts/case12-healthy/
+{"environment_delta":{"python":{"recorded":"3.11.17","replayed":"3.13.5"},"unicode":{"recorded":"14.0.0","replayed":"15.1.0"}},"level":"content","replay":"PASS","scope":"deterministic import replay; historical model run not reproduced"}
+exit=0
+### replay tests/atlas/receipts/case13-closed/
+{"environment_delta":{"python":{"recorded":"3.11.17","replayed":"3.13.5"},"unicode":{"recorded":"14.0.0","replayed":"15.1.0"}},"level":"content","replay":"PASS","scope":"deterministic import replay; historical model run not reproduced"}
+exit=0
+### replay tests/atlas/receipts/power-control/
+{"environment_delta":{"python":{"recorded":"3.11.17","replayed":"3.13.5"},"unicode":{"recorded":"14.0.0","replayed":"15.1.0"}},"level":"content","replay":"PASS","scope":"deterministic import replay; historical model run not reproduced"}
+exit=0
+### replay tests/atlas/receipts/power-sources-reviewed/
+{"environment_delta":{"python":{"recorded":"3.11.17","replayed":"3.13.5"},"unicode":{"recorded":"14.0.0","replayed":"15.1.0"}},"level":"content","replay":"PASS","scope":"deterministic import replay; historical model run not reproduced"}
+exit=0
+### replay tests/atlas/receipts/power-sources/
+{"environment_delta":{"python":{"recorded":"3.11.17","replayed":"3.13.5"},"unicode":{"recorded":"14.0.0","replayed":"15.1.0"}},"level":"content","replay":"PASS","scope":"deterministic import replay; historical model run not reproduced"}
+exit=0
+### replay tests/atlas/receipts/shen-known-bad/
+{"environment_delta":{"python":{"recorded":"3.11.17","replayed":"3.13.5"},"unicode":{"recorded":"14.0.0","replayed":"15.1.0"}},"level":"content","replay":"PASS","scope":"deterministic import replay; historical model run not reproduced"}
+exit=0
+### claims replay tests/atlas/claims/receipts/power-posing-reviewed/
+{"environment_delta": {"python": {"recorded": "3.11.18", "replayed": "3.13.5"}, "unicode": {"recorded": "14.0.0", "replayed": "15.1.0"}}, "level": "content", "replay": "PASS", "scope": "deterministic claim-link replay; no model run reproduced"}
+exit=0
+### extraction replay tests/atlas/extraction/s2-run1/receipt/
+{"environment_delta": {"python": {"recorded": "3.11.18", "replayed": "3.13.5"}, "unicode": {"recorded": "14.0.0", "replayed": "15.1.0"}}, "level": "content", "replay": "PASS", "scope": "deterministic extraction-bundle replay; the model run and the PDF are not reproduced"}
+exit=0

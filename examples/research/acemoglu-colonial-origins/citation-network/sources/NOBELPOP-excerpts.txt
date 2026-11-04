@@ -1,0 +1,10 @@
+Bounded excerpts from NOBELPOP: Royal Swedish Academy of Sciences (2024). Popular science background: They provided an explanation for why some countries are rich and others poor.
+PDF SHA-256 034ea71058dcabf10983eb1645ad69bfe81043bbd61ad2a6351f59a73e2ca97e; extraction `pdftotext -enc UTF-8` (poppler) of that PDF, text SHA-256 bd1742097cf18e4ba9bd3fa1ab5827b01af295fad7c5c95fe3c99d33b3e44167.
+Not the full document. Each excerpt body is an exact substring of the extraction output; offsets in that output and in this file are recorded in excerpts_manifest.json.
+
+=== NP-E1 | section | PDF page 4 ===
+Acemoglu, Johnson and Robinson have uncovered a clear chain of causality. Institutions that were
+created to exploit the masses are bad for long-run growth, while ones that establish fundamental
+economic freedoms and the rule of law are good for it.
+=== end NP-E1 ===
+

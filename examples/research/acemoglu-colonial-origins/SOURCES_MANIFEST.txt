@@ -1,0 +1,97 @@
+SOURCES MANIFEST - AJR 2001 audit (retrieved 2026-11-04, ~02:30-03:10 PST)
+
+S1  target, published version
+    file: colonial-origins-of-comparative-development.pdf  (899806 bytes, 34 pp)
+    sha256: bce991ebdb67555d7ee6d8b0f478cc69d54e78addb7037ccc4e99e0780e324bd
+    url: https://economics.mit.edu/sites/default/files/publications/colonial-origins-of-comparative-development.pdf
+    note: JSTOR-stamped copy (stable 2677930); PDF p.1 = JSTOR cover; journal page = PDF page + 1367. Text layer: pdftotext 25.03.0 (.txt sha256 d33c1a059fd8d1fca1f6424dec9c1d78e81374358bb76d3f2dd2624d75d45048)
+S2  working-paper version
+    file: w7771.pdf  (886050 bytes, 69 pp)
+    sha256: 4bfc8b943a19aa8295aa52764bb1c1221ce91de42a2b35e97c467a10a38d1280
+    url: https://www.nber.org/system/files/working_papers/w7771/w7771.pdf
+S3  authors' replication data (2001 tables)
+    file: colonial_origins.zip  (45278 bytes)
+    sha256: c6868b1b5b12eb6f9b4d68ff3442d482306952bacbe621be597120d217edc38c
+    url: https://www.dropbox.com/s/eo52btkmmnghz5p/colonial_origins.zip?dl=1
+    note: contains maketable1-8 .do/.dta; maketable4.dta sha256 2b34cce21b58a3a424a804e97a134106ab7010ef936bb68b3a244d3e271af404
+S3r  data readme
+    file: readme.TXT  (838 bytes)
+    sha256: fd6c4912d297502b581e1f513a857f3d226ace4896fd04b293ac10826a6b0ab5
+    url: https://www.dropbox.com/s/ss9l9sdamy4z6v4/readme.TXT?dl=1
+S4  authors' 2011 rebuttal dataset
+    file: reply_dataset.zip  (4143 bytes)
+    sha256: 414e551f0e27f143d874f981c5724c4dc4bbe646436cfb79aa44d9957b0d909e
+    url: https://economics.mit.edu/sites/default/files/inline-files/dataset.zip
+    note: 'dataset used for final AER rebuttal Sept 11 2011.dta' sha256 b752c34f1e6e0d981bbeaf79f088430220a31dc73c62bb1a7eccb0244bc38dcd
+S5  published critique
+    file: albouy2012_comment_mirror.pdf  (2114914 bytes, 19 pp)
+    sha256: cdc4fa8b0ac9f04f3228bba49fb9e918b94c1c7a40d8cc151ef58804cffbc24f
+    url: https://captgouda24.github.io/nicholas-decker.github.io/pdfs/Albouy_The_Colonial_Origins.pdf
+    note: third-party mirror of JSTOR copy; journal page = PDF page + 3057; default text layer column-jumbled, -layout used for quotes
+S6  critique, author-site version
+    file: albouy_site_AJRrev.pdf  (649271 bytes, 19 pp)
+    sha256: 72e8afb77a0f7082652139eff083d6f745f07adbab33f4d24c5a3b54cd7185f5
+    url: https://davidalbouy.com/s/AJRrev.pdf
+S7  critique appendix
+    file: albouy_site_AJRrev_App.pdf  (358217 bytes, 35 pp)
+    sha256: c345e191c7ad4728713aa4aaed8d7151d29f48978dc3c8de5dd4ee5b7da63fae
+    url: https://davidalbouy.com/s/AJRrev_App.pdf
+S8  published author reply
+    file: ajr2012_reply.pdf  (800933 bytes, 34 pp)
+    sha256: 5c4f73bb5d5fc10f8b12fe9650830a767a06e1071669220e1d59083a214c0f44
+    url: https://economics.mit.edu/sites/default/files/publications/The%20Colonial%20Origins%20of%20Compatayive%20Development%20-%20.pdf
+    note: journal page = PDF page + 3076
+S9  reply appendix
+    file: ajr2012_reply_appendix.pdf  (180718 bytes, 16 pp)
+    sha256: a969c666d9bf9c35dacef93e5e99a2b77c18b282518cd46ec1d6ece48a066912
+    url: https://economics.mit.edu/sites/default/files/publications/Hither%20Thou%20Shalt%20Come%20Appendix.pdf
+S10  data archive page
+    file: mit_data_archive.html  (232690 bytes)
+    sha256: eb67e81a42b26637c4d1e3d8f44314365b0397e3b921af5d3bd38d847ff68cd4
+    url: https://economics.mit.edu/people/faculty/daron-acemoglu/data-archive
+S11  publisher landing page (HTML only)
+    file: aer.91.5.1369  (29682 bytes)
+    sha256: 58e4524fe61d4db27e24e0238dadb20dba2f3ae1295d23de4b08f20fef3cac39
+    url: https://www.aeaweb.org/articles?id=10.1257/aer.91.5.1369
+R1  reception: OpenAlex AJR 2001 (W3124166904)
+    file: reception/openalex_ajr2001.json  (14811 bytes)
+    sha256: 82305441e3134a718cbcea9c26512b5fdff191de966465bcdb9f72ad83d75885
+    url: https://api.openalex.org/works/W3124166904
+    note: cited_by_count 8594; is_retracted false
+R1b  reception: OpenAlex Albouy 2012 (W1969918011)
+    file: reception/openalex_albouy2012.json  (13793 bytes)
+    sha256: 8c79ae445aa475f11b597af50560b27cf3571dc97d2071535e3eb3f73e62afbb
+    url: https://api.openalex.org/works/W1969918011
+    note: cited_by_count 295
+R1c  reception: OpenAlex AJR 2012 Reply (W3124131699)
+    file: reception/openalex_ajr2012reply.json  (23255 bytes)
+    sha256: 3776ffb4c55906fb5e050b31d088681848d3fa13cd966945990b0dc2ca5d3bc7
+    url: https://api.openalex.org/works/W3124131699
+    note: cited_by_count 6266 - implausible; likely work-merge artifact
+R2  reception: citing works, title 'settler mortality'
+    file: reception/openalex_citing_settler_mortality.json  (1602 bytes)
+    sha256: c678926784509131a1e5e4ce7f39a75db54c98206bad6e20ee0514f6358e8f8d
+    url: https://api.openalex.org/works?filter=cites:W3124166904,title.search:settler%20mortality
+    note: 2 results
+R2b  reception: citing works, title 'colonial origins'
+    file: reception/openalex_citing_colonial_origins.json  (7315 bytes)
+    sha256: 8dfbedd94bdccc5632885acb2b92b8e829b1cf6d8d81fb7d3324fb2b44106741
+    url: https://api.openalex.org/works?filter=cites:W3124166904,title.search:colonial%20origins
+    note: 27 results
+R3  downstream: 2024 Economics Prize press release
+    file: reception/nobel2024_press.html  (185989 bytes)
+    sha256: ebb969c747c8f34db982702202e6bdb88116cfa25b51a00bfca8464dcdeba84e
+    url: https://www.nobelprize.org/prizes/economic-sciences/2024/press-release/
+
+ACCESS FAILURES / NOT RETRIEVED
+- NBER w10354: retrieved but wrong paper; deleted, not used
+- Albouy 2012 PDF from aeaweb.org: returned HTML access page, not PDF
+- AJR 2001 PDF from aeaweb.org: landing page HTML only
+- alternate Dropbox maketable4 link and an ivmodels data link: returned HTML, not data
+- Semantic Scholar API: HTTP 429 rate-limited
+- Albouy replication package: NOT RETRIEVED; Part B is an approximation on AJR's data
+- NBER w14130 (Albouy 2008): NOT RETRIEVED
+- AJR 2005/2006/2008 responses: NOT RETRIEVED (2005 located by title in OpenAlex)
+- AJR 2000 Appendix B / Table A5 (alternative benchmarks): NOT RETRIEVED
+- PRS / Political Risk Services codebook: NOT RETRIEVED; index items inferred
+- Glaeser et al. 2004: NOT RETRIEVED; recalled only (PROVISIONAL)
