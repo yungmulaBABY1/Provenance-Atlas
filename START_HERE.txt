@@ -1,5 +1,5 @@
 ATLAS — START HERE
-Project map and next build brief | 31 October 2026 | Revision 4
+Project map and next build brief | 4 November 2026 | Revision 6
 It points; you judge.
 
 READ THIS FIRST — THE TWO-MINUTE VERSION
@@ -38,6 +38,15 @@ A readable local report is enough. A model-generated conclusion remains provisio
   stacked on #2, not merged). One real six-field extraction of S2 by an external
   runner, quotes checked against the source, one arithmetic evidence check.
   See docs/atlas/extraction.md.
+  Revision 5 status: Increments A and B merged (PRs #2-#4). First reader screen
+  prepared on branch m1c-evidence-view: docs/atlas/views/s2-run1/ (page, text
+  report and view model from the same verified records). See docs/atlas/view.md.
+  Revision 6 status: Increment D prepared on branch m1d-research-question, draft
+  PR stacked on the reader-view PR, not merged. One research question over the
+  four power-posing sources (atlas.question), built from existing receipts, with
+  a question page above the S2 page. No positions, no merged claims, no new runs.
+  The question wording is drafted by Claude and not confirmed. See
+  docs/atlas/question.md.
 
 YOU DO NOT NEED TO DECIDE NOW: cloud host, graph database, framework, agent fleet,
 bot interface, provider catalog, pricing, public launch or every future method.
@@ -539,7 +548,20 @@ Increment B — bounded execution:
   CONSISTENT. The run reported INSTRUMENT VERSION UNVERIFIED (no hashing tool);
   the operator's attestation is recorded separately.
 
+Increment D — one research question (Revision 6):
+  Revision 6 status: PREPARED on branch m1d-research-question, draft PR stacked on
+  m1c-evidence-view, not merged. Origin: the 4 November scoped source review
+  (Project doc claude/Atlas_Source_Review_Depth_Model_2026-11-04.txt, gap G1:
+  Research had no counterpart to the Media story family). Records the question,
+  its declared list and, per source, what Atlas holds; recomputed counts with
+  denominators; a passage stays with its speaker; claim identity across sources
+  only declared and attributed. Decisions still open (review K1-K3): drill order,
+  what "Field" means, entry point.
+
 Increment C — inspect and challenge:
+  Revision 5 status: part 1 (readable report) and M2's first screen PREPARED on
+  branch m1c-evidence-view, draft PR, not merged. Part 2 (attributed challenge
+  record) not started.
   Produce a readable report with the target, evidence, missingness, original labels,
   proposed support relation and review history. Permit a separately attributed
   challenge without replacing the original. Existing model reviews are exposed
@@ -870,5 +892,9 @@ Revision history:
               M1 Increment A prepared on branch m1a-claim-links.
   Revision 4  31 Oct 2026  M1 Increment B prepared on branch m1b-s2-extraction:
               first recorded extraction (S2) and evidence check.
+  Revision 5  4 Nov 2026   A and B merged. Reader view (atlas.view): one view
+              model rendered as page and report, from verified records.
+  Revision 6  4 Nov 2026   Increment D prepared on branch m1d-research-question:
+              research question record (atlas.question) and question page.
 
 END — It points; you judge.

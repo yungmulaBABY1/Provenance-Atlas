@@ -31,8 +31,16 @@ Implemented, with mechanical test coverage:
   source-light publication, links to earlier records and one declared
   arithmetic evidence check ([docs/atlas/extraction.md](docs/atlas/extraction.md)).
 
-Not implemented: running a model from this code, any user interface, human
-adjudication, public release controls. Import is not a model
+- Evidence view (`atlas.view`): a reader-first page and a text report rendered
+  from the same verified records ([docs/atlas/views/s2-run1/](docs/atlas/views/s2-run1/),
+  [docs/atlas/view.md](docs/atlas/view.md)).
+- Research questions (`atlas.question`): one declared question over a declared list
+  of sources, with what Atlas holds about each and no judgment added
+  ([docs/atlas/views/power-posing/](docs/atlas/views/power-posing/),
+  [docs/atlas/question.md](docs/atlas/question.md)).
+
+Not implemented: running a model from this code, an interactive or hosted
+interface, challenge records, human adjudication, public release controls. Import is not a model
 audit, and passage matching is not evidentiary support. See
 [`docs/atlas/README.md`](docs/atlas/README.md) for the full scope and limits.
 
@@ -56,10 +64,12 @@ done
 for dir in tests/atlas/extraction/*/receipt/; do
   python -m atlas.extraction replay "${dir}manifest.json" "${dir}records.jsonl" --level content
 done
+python -m atlas.question replay tests/atlas/question/power-posing/receipt/manifest.json tests/atlas/question/power-posing/receipt/records.jsonl --level content
+python -m atlas.view check-all
 ```
 
-Expected: checker regression `PASS`, 217 tests `OK` (one skipped: it needs
-the private source PDF), and every content replay passes. `historical-*` receipts were produced by earlier code and are not
+Expected: checker regression `PASS`, 230 tests `OK` (one skipped: it needs
+the private source PDF), every content replay passes, and the view is current. `historical-*` receipts were produced by earlier code and are not
 replayable. CI runs the same steps (`.github/workflows/atlas-adapter.yml`).
 
 ## Layout

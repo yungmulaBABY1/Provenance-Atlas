@@ -1,0 +1,161 @@
+POWER POSING: WHAT ATLAS HOLDS ABOUT EACH SOURCE
+
+Atlas does not answer this question. It shows what is on record about each source, what was
+checked, and what is missing. You judge.
+
+THE QUESTION
+    Do brief nonverbal displays (power poses) affect neuroendocrine levels and risk
+    tolerance?
+  Wording drafted by Claude, not by the person running the investigation [DRAFTED_BY_ASSISTANT]
+  Not yet confirmed by the person running the investigation [operator_confirmation: NOT_CONFIRMED]
+  Drafted by Claude from the title of S1 (Carney, Cuddy & Yap 2010) so the wording comes
+  from a source, not from a summary. The operator may confirm or replace it; a
+  replacement is a new question version.
+
+HOW THE SOURCES WERE CHOSEN
+  A declared list of sources, not a literature search [DECLARED_LIST]
+  The four sources already pinned in the power-sources import (compliance/PACKET.md).
+  Chosen because Atlas already holds records about them, not by a literature search.
+  Papers outside this list are not considered here.
+  As of 2026-11-04.
+
+AT A GLANCE
+  Retrieved copy: 2 of 4 sources (S2, S4)
+  Passages on record: 2 of 4 sources (S2, S4)
+  Described in another source's words: 1 of 4 sources (S3)
+  Recorded claim extraction: 1 of 4 sources (S2)
+  Target paper of an imported audit: 1 of 4 sources (S1)
+  Decision by a person on record: 0 of 4 sources
+
+THE SOURCES
+  Passage text is held in the import bundle as bounded excerpts that have not been
+  reviewed for public release, so it is not shown here. Each passage is listed by its
+  label, page and match result.
+
+  S1  Carney, Cuddy & Yap (2010). Power Posing: Brief Nonverbal Displays Affect Neuroendocrine Levels and Risk Tolerance. Psychological Science 21(10), 1363-1368.
+    No copy could be retrieved [RETRIEVAL_FAILED]
+    Only the title and identifier are on record [METADATA_ONLY]
+    Version: No copy retrieved; edition unknown.
+    Checks that need this source:
+      S1-founding-results: Could not be checked: the text it needs is not on record [INELIGIBLE_MISSING_EVIDENCE]
+    Audit records:
+      An archived audit imported into Atlas was about this paper [TARGET_OF_IMPORTED_AUDIT]
+        - Output of an archived pilot run, imported as it was [ARCHIVED_COMPLIANCE_PILOT_OUTPUT]
+        - The model could not confirm which version of its instructions it had [INSTRUMENT VERSION UNVERIFIED]
+        - No person has reviewed this [human_review: NOT_RECORDED]
+
+  S2  Ranehill, Dreber, Johannesson, Leiberg, Sul & Weber (2015). Assessing the Robustness of Power Posing: No Effect on Hormones and Risk Tolerance in a Large Sample of Men and Women. Psychological Science 26(5), 653-656.
+    A copy was retrieved [AVAILABLE]
+    Passages from a retrieved copy are on record [PASSAGES_ON_RECORD]
+    Version: PUBLISHER_PDF_AUTHOR_HOSTED: typeset journal article (journal header,
+    volume, pages and DOI printed on page 1) hosted on a co-author's faculty page; PDF
+    modified 2017-02-05 per its metadata. Not obtained from the publisher.
+    Passages on record:
+      S2-E1 p. 1: Journal, volume, pages and DOI printed on the article | Found word for word in the paper's text [MATCH]
+      S2-E2 p. 1: Opening summary of the study's results (before Method) | Found word for word in the paper's text [MATCH]
+      S2-E3 p. 2: Discussion, first paragraph: results restated | Found word for word in the paper's text [MATCH]
+    Checks that need this source:
+      S2-reported-outcomes: Could be checked, within stated limits [ELIGIBLE_WITH_LIMITATIONS]
+      S2-S4-venue: Could be checked, within stated limits [ELIGIBLE_WITH_LIMITATIONS]
+      S2-methods: Could not be checked: the text it needs is not on record [INELIGIBLE_MISSING_EVIDENCE]
+    Audit records:
+      A recorded claim extraction was run on this paper [TARGET_OF_EXTRACTION_RUN] Runner: Opus 5.5 Extra
+        - As stated by the person who ran it; not verified [OPERATOR_STATED]
+        - No person has reviewed this [human_review: NOT_RECORDED]
+        page: ../s2-run1/index.html
+      Passages from this paper are cited as evidence in an imported audit finding [PASSAGES_CITED_IN_IMPORTED_AUDIT]
+        - Not reviewed by a person [UNREVIEWED]
+        - Kept on record, but its format failed the current checks [QUARANTINED]
+      Passages from this paper are cited as evidence in an imported audit finding [PASSAGES_CITED_IN_IMPORTED_AUDIT]
+        - Not reviewed by a person [UNREVIEWED]
+        - Kept on record, but its format failed the current checks [QUARANTINED]
+      A model review judged passages from this paper [PASSAGES_REVIEWED] Reviewer: Claude (Anthropic), primary implementation session
+        - Reviewer: the passage supports this, with qualifications [SUPPORTS_WITH_QUALIFICATION]
+        - Independence: not established [independence: NOT_ESTABLISHED]
+        - No person has ruled on this [human_adjudication: NOT_RECORDED]
+      A model review judged passages from this paper [PASSAGES_REVIEWED] Reviewer: Claude (Anthropic), separate subagent context launched by the primary session
+        - Reviewer: the passage supports this [SUPPORTS]
+        - Independence: not established [independence: NOT_ESTABLISHED]
+        - No person has ruled on this [human_adjudication: NOT_RECORDED]
+
+  S3  Carney, Cuddy & Yap (2015). Review and Summary of Research on the Embodied Effects of Expansive (vs. Contractive) Nonverbal Displays. Psychological Science 26(5), 657-663.
+    No copy could be retrieved [RETRIEVAL_FAILED]
+    Only the title and identifier are on record [METADATA_ONLY]
+    Version: No copy retrieved; edition unknown.
+    Described in S4 (S4-E2, p. 2): S4's words, not S3's own.
+    Checks that need this source:
+      S3-engages-S2: Could not be checked: the text it needs is not on record [INELIGIBLE_MISSING_EVIDENCE]
+    Audit records: none.
+
+  S4  Simmons & Simonsohn (2017). Power Posing: P-Curving the Evidence. Psychological Science 28(5), 687-693.
+    A copy was retrieved [AVAILABLE]
+    Passages from a retrieved copy are on record [PASSAGES_ON_RECORD]
+    Version: ACCEPTED_MANUSCRIPT: author manuscript marked 'Forthcoming in Psychological
+    Science' (Word, created 2016-06-17), hosted on a faculty page. Not the version of
+    record; wording and pagination may differ from the published article.
+    Passages on record:
+      S4-E1 p. 1: Title, authors and publication status printed on the manuscript | Found word for word in the paper's text [MATCH]
+      S4-E2 p. 2: Introduction: S4's description of S3 (Carney et al., 2015); S4's words, not S3's; S4's words about S3 | Found word for word in the paper's text [MATCH]
+      S4-E3 p. 2: Introduction: question and stated conclusion | Found word for word in the paper's text [MATCH]
+      S4-E4 p. 7: Results: test for evidential value | Found word for word in the paper's text [MATCH]
+    Checks that need this source:
+      S4-evidential-value: Could be checked, within stated limits [ELIGIBLE_WITH_LIMITATIONS]
+      S2-S4-venue: Could be checked, within stated limits [ELIGIBLE_WITH_LIMITATIONS]
+      S4-describes-S3: Could be checked, within stated limits [ELIGIBLE_WITH_LIMITATIONS]
+    Audit records:
+      Passages from this paper are cited as evidence in an imported audit finding [PASSAGES_CITED_IN_IMPORTED_AUDIT]
+        - Not reviewed by a person [UNREVIEWED]
+        - Kept on record, but its format failed the current checks [QUARANTINED]
+      Passages from this paper are cited as evidence in an imported audit finding [PASSAGES_CITED_IN_IMPORTED_AUDIT]
+        - Not reviewed by a person [UNREVIEWED]
+        - Kept on record, but its format failed the current checks [QUARANTINED]
+
+CLAIMS ALREADY WRITTEN ABOUT THESE SOURCES
+  Each claim below was chosen for checking by a model run. The two runs had different
+  target papers, so Atlas records them as different claims. Neither is the question, and
+  neither is a source's own words.
+  Written by a model run. Not a source's words.
+    The cited literature independently establishes that briefly adopting expansive power
+    poses produces reliable behavioral and physiological benefits.
+    Written by the imported audit run (citation-network instrument, degraded standalone
+    mode). The run labels its own map: CLAIM MAP: SELF-GENERATED — PROVISIONAL. That
+    run's target paper: S1.
+    - Different papers [DIFFERENT_TARGET_WORKS]
+    - About a different paper, so not the same claim [NOT_THE_SAME_AUDIT_TARGET]
+  Written by a model run. Not a source's words.
+    In this sample, two-tailed t tests indicated no significant impact of physical
+    position (high- versus low-power pose) on change in salivary testosterone from
+    before to about 17 min after the manipulation (mean difference = −4.077 pg/ml, 95%
+    CI = [−9.801, 1.647], t(196) = −1.405, p = .162, Cohen's d = −0.200).
+    Written by the extraction run (claim-extraction instrument). Runner: Opus 5.5 Extra.
+    That run's target paper: S2.
+    - Different papers [DIFFERENT_TARGET_WORKS]
+    - About a different paper, so not the same claim [NOT_THE_SAME_AUDIT_TARGET]
+
+NOT ESTABLISHED
+  - The wording of the question has not been confirmed by the person running the
+    investigation.
+  - Atlas holds no record giving any source a position on this question (supports,
+    contradicts or qualifies). Positions are a later, attributed step.
+  - No claim is recorded as the same claim across sources.
+  - Whether these sources are independent of each other, or share data or authors, has
+    not been assessed.
+  - No retrieved copy: 2 of 4 sources (S1, S3). Checks that need their text did not run:
+    S1-founding-results, S3-engages-S2.
+  - No person has made a decision on any record here.
+  - The passages on record were chosen for the imported audit, not for this question.
+    Its own note: “Excerpts chosen to test the archived findings' Evidence fields;
+    chosen after reading those findings, so selection is not blind.”
+
+TECHNICAL RECORD
+  replay: PASS (content)
+  receipt path: tests/atlas/question/power-posing/receipt
+  receipt manifest_sha256: 1e2f370f524808c86b8c4061fe6d7de03e68371f239c9f14547b129b7ffdf1ac
+  receipt records_sha256: b2e9a8ea50a92f2257fa32cc7a6706c4f5dd51e3dd49ea2c030902cd7ab807eb
+
+Atlas adds no judgment here: no source is given a position, no claims are merged, and
+every count is recomputed from the records with its denominator.
+Model-written text is quoted and labelled. Plain-language labels come from a fixed table
+and sit beside the original label.
+Every item links to the records it comes from (technical record, below).
+Generated by atlas-view 0.1.0; labels atlas-plain-labels/0.2.

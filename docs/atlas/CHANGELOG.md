@@ -1,5 +1,41 @@
 # Atlas adapter changelog
 
+## Unreleased — research questions 0.1.0 (`atlas.question`, M1 Increment D)
+
+- New package `atlas/question/` (schema `atlas-question/0.1`): one declared question
+  over a declared list of sources, built from pinned receipts only. Records the
+  question and who worded it, the corpus and its selection rule, and per source:
+  access, passages with speaker and subject, checks and eligibility, audit records
+  and reviews. See [question.md](question.md).
+- First question: power posing over S1-S4, wording drafted by Claude from S1's title
+  and marked not confirmed. Coverage today: 2/4 retrieved, 2/4 passages on record,
+  1/4 described in another source's words, 1/4 extracted, 1/4 target of an imported
+  audit, 0/4 with a decision by a person.
+- No judgment: score/verdict/stance/position fields are rejected, counts recompute
+  from the members, a passage stays with its speaker, and claim identity across
+  sources is declared and attributed only.
+- `atlas.view`: question page (`docs/atlas/views/power-posing/`, no source text) and
+  a breadcrumb on the S2 page with the same denominator. Pages are now declared in
+  `docs/atlas/views/views.json` and rendered with `build-all`/`check-all`.
+  Labels table bumped to `atlas-plain-labels/0.2` (additions only).
+- Fixes to the 0.1.0 view (PR #5): wrapped list items in report.txt repeated their
+  bullet on every line; one table could widen the page by 2px at 390px.
+- 22 new tests (252 total, one skipped without private inputs). CI adds question
+  replay and checks every declared page.
+
+## Unreleased — evidence view 0.1.0 (`atlas.view`, M1 Increment C part 1 / M2)
+
+- New package `atlas/view/`: verifies an extraction bundle by content replay, builds
+  one view model (`view.json`, schema `atlas-view/0.1`) in which every item names
+  the records it comes from, and renders it twice: a reader-first page
+  (`index.html`) and a plain-text report (`report.txt`). See [view.md](view.md).
+- First real screen: `docs/atlas/views/s2-run1/`, the S2 testosterone claim.
+- No paraphrase of content. Plain language only through the declared label table
+  `atlas-plain-labels/0.1`, always beside the native label; an unlisted label is
+  an error. No score or verdict.
+- 13 new tests. CI checks the committed view is a fresh render.
+- Not in this increment: the attributed challenge record (Increment C part 2).
+
 ## Unreleased — recorded extraction 0.1.0 (`atlas.extraction`, M1 Increment B)
 
 - New package `atlas/extraction/` (schema `atlas-extraction/0.1`) and the first

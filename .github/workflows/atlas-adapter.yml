@@ -54,3 +54,18 @@ jobs:
             count=$((count + 1))
           done
           test "$count" -gt 0
+      # Question receipts (atlas.question) rebuild from the receipts they pin; this also
+      # content-replays every extraction receipt the question names.
+      - name: Content replay of question receipts
+        run: |
+          set -euo pipefail
+          count=0
+          for dir in tests/atlas/question/*/receipt/; do
+            echo "question replay --level content: $dir"
+            python -m atlas.question replay "${dir}manifest.json" "${dir}records.jsonl" --level content
+            count=$((count + 1))
+          done
+          test "$count" -gt 0
+      # Every committed page (docs/atlas/views/views.json) must be a fresh render of verified records.
+      - name: Reader views are current
+        run: python -m atlas.view check-all

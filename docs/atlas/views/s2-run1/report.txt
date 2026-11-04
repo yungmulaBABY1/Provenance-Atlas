@@ -1,0 +1,180 @@
+Part of a question (../power-posing/index.html): this paper is S2, one of 4 declared
+sources for “Do brief nonverbal displays (power poses) affect neuroendocrine levels and
+risk tolerance?”
+  Question wording: Wording drafted by Claude, not by the person running the investigation [DRAFTED_BY_ASSISTANT]; Not yet confirmed by the person running the investigation [operator_confirmation: NOT_CONFIRMED]
+
+POWER POSING AND TESTOSTERONE: WHAT THE RECORD SHOWS
+Ranehill, Dreber, Johannesson, Leiberg, Sul & Weber (2015). Assessing the Robustness of
+Power Posing: No Effect on Hormones and Risk Tolerance in a Large Sample of Men and
+Women. Psychological Science 26(5), 653-656.
+
+Atlas does not say whether this claim is true. It shows what was checked, what held up, what is
+missing, and who disagrees. You judge.
+
+THE CLAIM BEING CHECKED
+  Written by the extraction run (model output). Not the paper's words.
+    In this sample, two-tailed t tests indicated no significant impact of physical
+    position (high- versus low-power pose) on change in salivary testosterone from
+    before to about 17 min after the manipulation (mean difference = −4.077 pg/ml, 95%
+    CI = [−9.801, 1.647], t(196) = −1.405, p = .162, Cohen's d = −0.200).
+
+AT A GLANCE
+  [Checked] The paper
+      The run was given the full 4-page article. Atlas confirmed the file is byte-
+      identical to the copy on record and that its text extracts the same way.
+  [Checked] Quotes
+      48 quotes from the run were checked against the paper's text: 8 word for word, 36
+      differing only in spacing, 4 not found exactly. 44 of 44 located quotes are on the
+      page the run gave.
+      - Found word for word in the paper's text [MATCH]
+      - Found in the paper's text, differing only in spacing or line breaks [NORMALIZED_MATCH_ONLY]
+      - Not found exactly in the paper's text [MISMATCH]
+  [Checked] The numbers
+      3 of 3 arithmetic checks agree.
+      - The reported numbers agree with each other [CONSISTENT]
+  [Limited] Earlier reviews
+      2 model reviews judged a sentence about what this paper reports. They gave
+      different results: “supports this” and “supports this, with qualifications”.
+      Neither is independent of the other.
+      - Reviewer: the passage supports this [SUPPORTS]
+      - Reviewer: the passage supports this, with qualifications [SUPPORTS_WITH_QUALIFICATION]
+      - Independence: not established [independence: NOT_ESTABLISHED]
+  [Not done] A person's ruling
+      No person has ruled on this claim or on the reviews.
+      - No person has ruled on this [human_adjudication: NOT_RECORDED]
+  [Limited] Who ran the extraction
+      Opus 5.5 Extra on claude.ai chat, as stated by the person who ran it. The run
+      reports it had seen this paper before, in training.
+      - As stated by the person who ran it; not verified [OPERATOR_STATED]
+      - Independence: not established [independence: NOT_ESTABLISHED]
+  [Not done] How others use this paper
+      Not searched. The run had no web access, by design.
+      - Provisional: not enough was available to settle this [PROVISIONAL]
+
+WHAT THE PAPER ITSELF SAYS
+    Consistent with the findings of Carney et al., our results showed a significant
+    effect of power posing on self-reported feelings of power.
+      p. 1, untitled opening section | A2.10 | Found in the paper's text, differing only in spacing or line breaks [NORMALIZED_MATCH_ONLY]
+    However, we found no significant effect of power posing on hormonal levels or in any
+    of the three behavioral tasks.
+      p. 1, untitled opening section | A2.2 | Found in the paper's text, differing only in spacing or line breaks [NORMALIZED_MATCH_ONLY]
+    Two-tailed t tests indicated no significant impact of physical position on either
+    risk-taking in the gain domain (mean difference = −0.033, 95% CI = [−0.085, 0.019]),
+    t(198) = −1.245, p = .215, Cohen’s d = −0.176, or changes in testosterone (mean
+    difference = −4.077, 95% CI = [−9.801, 1.647]), t(196) = −1.405, p = .162, Cohen’s d
+    = −0.200.
+      p. 2, Results | A2.3 | Found in the paper's text, differing only in spacing or line breaks [NORMALIZED_MATCH_ONLY]
+    Using a much larger sample size but similar procedures as Carney et al. did, we
+    failed to confirm an effect of power posing on testosterone, cortisol, and financial
+    risk taking.
+      p. 2, Discussion | A2.6 | Found in the paper's text, differing only in spacing or line breaks [NORMALIZED_MATCH_ONLY]
+    We did find that power posing affected self-reported feelings of power; however,
+    this did not yield behavioral effects.
+      p. 2, Discussion | A2.7 | Found in the paper's text, differing only in spacing or line breaks [NORMALIZED_MATCH_ONLY]
+  5 passages are shown because they are already public excerpts. The other 43 quoted
+  passages were checked against the paper but are not reproduced here.
+
+DO THE NUMBERS ADD UP?
+  The reported numbers agree with each other [CONSISTENT] (reported-statistics-consistency/1)
+  Scope: whether the numbers a source reports for one two-sample t test agree with each
+  other at their reported precision, and whether a claim restates them faithfully. It
+  does not reanalyse data, judge the analysis, or say whether a non-significant result
+  shows the absence of an effect.
+  - Does the claim repeat the paper's numbers exactly? The reported numbers agree with each other [CONSISTENT]
+      mean_difference: claim −4.077 | paper −4.077 | same
+      ci: claim [−9.801, 1.647] | paper [−9.801, 1.647] | same
+      t: claim [196, −1.405] | paper [196, −1.405] | same
+      p: claim .162 | paper .162 | same
+      d: claim −0.200 | paper −0.200 | same
+  - Recomputing p from the test statistic and its degrees of freedom: does it match the reported p? The reported numbers agree with each other [CONSISTENT]
+      recomputed p [0.161456, 0.161753]; reported [0.1615, 0.1625]; df 196
+  - Is the test statistic consistent with the reported mean difference and 95% confidence interval? The reported numbers agree with each other [CONSISTENT]
+      implied t [-1.40498, -1.404391]; reported [-1.4055, -1.4045]; CI centred: yes
+  Not checked: Cohen's d (group sizes are not reported in the main text); The data, the choice of test, and the paper's interpretation
+
+WHAT THE EXTRACTION RUN FOUND
+  A model wrote this map. Quoted as written; not reviewed by a person.
+  What the study measured (field 1: Literally measured)
+      Randomized two-condition lab experiment, N = 200 (98 women, 102 men), one
+      participant per session. Two postures from Carney et al., held 3 min each.
+      Outcomes: salivary testosterone and cortisol (before and about 17 min after),
+      proportion of risky choices (6 gain, 6 loss, 50/50 gambles), tournament choice,
+      4-point self-reported power. Two-tailed t tests. Population, site, dates,
+      postures, stakes and item wording not stated in the main text
+      run's own label: FULL-TEXT-CONFIRMED (main text). Supplement-dependent details are PROVISIONAL (not attached)
+  The paper's strongest statement (field 2: Source's strongest claim)
+      Title: "No Effect on Hormones and Risk Tolerance…". Body: "no significant effect",
+      "failed to confirm". Discussion: effects "certainly plausible" under specific
+      conditions; "more research is needed"
+      run's own label: FULL-TEXT-CONFIRMED
+  The narrower claim the evidence supports (field 3: Weaker defensible claim)
+      In this protocol and sample, self-reported power was higher (d = 0.344). No
+      significant difference in testosterone change, cortisol or gain-domain risk (CIs
+      as reported). Other tasks not significant
+      run's own label: author reconstruction from Field 1
+  How others use the paper (field 4: Downstream claim)
+      None retrieved. Limitation is NO RETRIEVAL CAPABILITY, not absence of use
+      run's own label: PROVISIONAL
+  Where the wording grows inside the paper (field 5A: Within-source)
+      "no significant impact" / "failed to confirm" → title "No Effect" (also once in
+      Results, for cortisol). Secondary: two analytes → "Hormones". PAPER
+      run's own label: FULL-TEXT-CONFIRMED (wording read; materiality not assessed)
+  Where it grows downstream (field 5B: Downstream)
+      Not assessed; no anchor-eligible items
+      run's own label: PROVISIONAL
+  The claim chosen for checking (field 6: Claim under audit)
+      Testosterone-change null as quantified in Results
+      run's own label: FULL-TEXT-CONFIRMED that the source states it. Statistics not recomputed; OSF data not accessed
+
+EARLIER REVIEWS OF THE SAME PASSAGES
+  Review F1-S2-review-A by Claude (Anthropic), primary implementation session: Reviewer: the passage supports this, with qualifications [SUPPORTS_WITH_QUALIFICATION]
+      Sentence reviewed: “S2 reports self-reported-power replication but no hormonal or
+      behavioral effects”
+      part a: S2 reports a replication of the self-reported feelings-of-power effect | Reviewer: the passage supports this [SUPPORTS]
+      part b: S2 reports no hormonal effect of power posing | Reviewer: the passage supports this, with qualifications [SUPPORTS_WITH_QUALIFICATION]
+      part c: S2 reports no behavioral effect of power posing | Reviewer: the passage supports this, with qualifications [SUPPORTS_WITH_QUALIFICATION]
+      Independence: not established [independence: NOT_ESTABLISHED]; No person has ruled on this [human_adjudication: NOT_RECORDED]
+      paper quotes inside its passages: A2.10, A2.2, A2.6, A2.7
+  Review F1-S2-review-B by Claude (Anthropic), separate subagent context launched by the primary session: Reviewer: the passage supports this [SUPPORTS]
+      Sentence reviewed: “S2 reports self-reported-power replication but no hormonal or
+      behavioral effects”
+      part a: S2 reports a replication of the self-reported feelings-of-power effect | Reviewer: the passage supports this [SUPPORTS]
+      part b: S2 reports no hormonal effect of power posing | Reviewer: the passage supports this [SUPPORTS]
+      part c: S2 reports no behavioral effect of power posing | Reviewer: the passage supports this [SUPPORTS]
+      Independence: not established [independence: NOT_ESTABLISHED]; No person has ruled on this [human_adjudication: NOT_RECORDED]
+      paper quotes inside its passages: A2.10, A2.2, A2.6, A2.7
+
+WHAT IS MISSING OR UNVERIFIED
+  - Not available: Supplemental Material (referenced on pp. 1-2; not retrieved)
+  - How other papers, media or policy use this paper: not searched.
+  - Which version of its instructions the model had: the model could not confirm it. The
+    person who ran it states the pinned file was attached.
+  - 4 quotes do not match the paper's text exactly; they are listed in the technical
+    record with the reason found.
+  - Not checked: Cohen's d (group sizes are not reported in the main text).
+  - Not checked: The data, the choice of test, and the paper's interpretation.
+  - No person has reviewed this extraction or the evidence check.
+
+RELATED RECORDS
+  An earlier claim map exists, made by a different audit. It is about a different paper,
+  doi:10.1177/0956797610383437, so it is not the same claim.
+    Different papers [DIFFERENT_TARGET_WORKS]; About a different paper, so not the same claim [NOT_THE_SAME_AUDIT_TARGET]
+
+TECHNICAL RECORD
+  replay: PASS (content)
+  pdf_sha256: 4ae91126e56da19721f44c6942a536e3c2dcb22fe3a23de727f788afeb481369
+  extraction_sha256: afc448e6323772778979bd62ade1f343752f742c69c1ee56c5b702a4d5f7b3ad
+  full_output_sha256: 6b3b9d6c779d5cf999c5b225dfe00b7b2e249d85c7ec3eb04c0cfb10cb829b83
+  redacted_output_sha256: 4a5f7c0a6467993274d17610d8435865c442b809ca0b94822ff5ba23c6772e79
+  instrument_sha256: 656b11c301931726a5435b231774f40797a10fd0cab950224616fc18951c035f
+  run_prompt_sha256: 182ffff47e5cad9fdc7b9ed1a282d7bd0809d01c9730e31c8ba7846d5d8ae57d
+  receipt path: tests/atlas/extraction/s2-run1/receipt
+  receipt manifest_sha256: fa133a218f53e0c8d12bc8868173459626aa7401ac833a2e9a60560aa373dc4c
+  receipt records_sha256: 2774dc55dbb73f0e6426418af5f3e27d471300940f37637bc280f9cb17aa802e
+
+Atlas does not paraphrase content. The paper's words are quoted; model-written text is
+quoted and labelled; plain-language labels come from a fixed table and sit beside the
+original label.
+Nothing here is a score or a verdict on whether the claim is true.
+Every item links to the records it comes from (technical record, below).
+Generated by atlas-view 0.1.0; labels atlas-plain-labels/0.2.
