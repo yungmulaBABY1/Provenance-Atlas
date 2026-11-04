@@ -1,0 +1,6 @@
+$ /workspace/venv-audit/bin/python -m atlas.claims build examples/research/acemoglu-colonial-origins/citation-network/claims-context.json --out examples/research/acemoglu-colonial-origins/citation-network/claims-receipt
+{"records": 23, "semantic_judgment": "NONE", "sha256": "203462e7e9b93be31d095193a576c030675f0c33e053e9250305522db2572c75"}
+exit_code=0
+$ /workspace/venv-audit/bin/python -m atlas.claims replay examples/research/acemoglu-colonial-origins/citation-network/claims-receipt/manifest.json examples/research/acemoglu-colonial-origins/citation-network/claims-receipt/records.jsonl --level content
+{"environment_delta": {}, "level": "content", "replay": "PASS", "scope": "deterministic claim-link replay; no model run reproduced"}
+exit_code=0

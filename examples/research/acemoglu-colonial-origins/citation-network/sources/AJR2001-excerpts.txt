@@ -1,0 +1,47 @@
+Bounded excerpts from AJR2001: Acemoglu, Johnson & Robinson (2001). The Colonial Origins of Comparative Development: An Empirical Investigation. AER 91(5):1369-1401. DOI 10.1257/aer.91.5.1369.
+PDF SHA-256 bce991ebdb67555d7ee6d8b0f478cc69d54e78addb7037ccc4e99e0780e324bd; extraction `pdftotext -enc UTF-8` (poppler) of that PDF, text SHA-256 d33c1a059fd8d1fca1f6424dec9c1d78e81374358bb76d3f2dd2624d75d45048.
+Not the full document. Each excerpt body is an exact substring of the extraction output; offsets in that output and in this file are recorded in excerpts_manifest.json.
+
+=== AJR-E1 | section | PDF page 4 ===
+institutions to the level of Chile could, in the
+long run, lead to as much as a 7-fold increase in
+Nigeria's income (in practice Chile is over 11
+times as rich as Nigeria).
+=== end AJR-E1 ===
+
+=== AJR-E2 | section | PDF page 20 ===
+Our 2SLS estimate, 0.94, implies that the 2.24
+differences in expropriationrisk between these
+two countriesshouldtranslateinto 206 log point
+(approximately
+7-fold) difference.In practice,the
+presence of measurementerrorcomplicatesthis
+interpretation,
+becausesome of the differencebetween Nigeria and Chile's expropriationindex
+may reflect measurementerror. Therefore,the
+7-fold differenceis an upperbound.In any case,
+the estimatesin Table 4 imply a substantial,but
+not implausiblylarge,effect of institutionaldifferences on income per capita.
+=== end AJR-E2 ===
+
+=== AJR-E4 | section | PDF page 24 ===
+In any case, controllingfor malariadoes not
+change our results. We do this in columns (1)
+and (2) by controlling for the fraction of the
+population who live in an area where falciporum malariais endemic in 1994 (as constructed
+and used by Gallup et al., 1998). Since malaria
+prevalence in 1994 is highly endogenous, the
+argumentin Appendix A implies that controlling for it directly will underestimatethe effect
+of institutions on performance.In fact, the coefficient on protection against expropriationis
+now estimated to be somewhat smaller, 0.69
+instead of 0.94 as in Table 4. Nevertheless,
+the effect remainshighly significantwith a standard error of 0.25
+=== end AJR-E4 ===
+
+=== AJR-E3 | section | PDF page 26 ===
+McArthurand Sachs (2001) also reportspecifications
+with more instruments.However, using six or seven instruments with only 64 observations leads to the "too-manyinstruments"problem, typically biasing the IV estimate
+towardsthe OLS estimate (see JohnBound et al., 1995). We
+thereforedid not pursue these estimates further.
+=== end AJR-E3 ===
+

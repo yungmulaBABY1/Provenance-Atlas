@@ -1,0 +1,399 @@
+[
+ {
+  "rank": 1,
+  "id": "W4292849668",
+  "doi": "https://doi.org/10.1002/bse.3223",
+  "title": "Digitalization and sustainable development: How could digital economy development improve green innovation in China?",
+  "year": 2022,
+  "cb": 849,
+  "type": "article",
+  "venue": "Business Strategy and the Environment",
+  "nrefs": 109,
+  "flags": [],
+  "lock": [],
+  "abstract": "Abstract In the context of sustainable development, countries around the world shed more light on green innovation in their environmental policies, and the digital economy may take a vital part in improving green innovation. Predicted on the panel data of 278 cities in China from 2011 to 2019, this research administrates the principal component analysis (PCA) to evaluate the advancement level of the urban digital economy and employs the number of urban green patent applications to represent green innovation level. Through the benchmark regression model, the mediating effect model, the spatial Durbin model, the dynamic threshold panel model, and the gradual difference\u2010in\u2010difference model, this paper explores the direct effect, indirect effect, spatial effect, nonlinear relationship, and policy effect of that digital economy has on green innovation. The development of the digital economy can improve green innovation levels in indirect ways, such as by boosting the degree of economic openness, optimizing the industrial structure, and expanding the market potential, and as economic openness, industrial structure, and market potential advance, the promotion intensity of digital economy on green innovation is becoming lower and lower. The development of green innovation has an obvious spatial spillover effect. Still, the enhancement of green innovation in more developed regions may inhibit green innovation in less developed regions due to talent flow and industrial transfer. Finally, the gradual difference\u2010in\u2010difference model founded on the \u2018Broadband China\u2019 pilot policy supplementarily verifies that digital economy enhancement can substantially advance urban green innovation."
+ },
+ {
+  "rank": 2,
+  "id": "W4212979054",
+  "doi": "https://doi.org/10.1111/coep.12567",
+  "title": "On the role of domestic trade flows for estimating the gravity model of trade",
+  "year": 2022,
+  "cb": 187,
+  "type": "article",
+  "venue": "Contemporary Economic Policy",
+  "nrefs": 114,
+  "flags": [],
+  "lock": [],
+  "abstract": "Abstract The gravity equation is the workhorse model of trade. Despite solid theoretical foundations and clear gains from theory\u2010consistent policy analysis, there are still gaps between gravity theory and empirics. This paper focuses on domestic trade flows, and I argue that there are significant benefits from adhering to theory by estimating gravity equations with domestic (in addition to international) trade flows. I review the related literature and synthesize 15 arguments for using domestic trade flows in gravity estimations. The analysis reveals the need for further theory contributions and new data developments, and points to opportunities for more policy applications."
+ },
+ {
+  "rank": 3,
+  "id": "W4223529822",
+  "doi": "https://doi.org/10.1016/j.jdeveco.2022.102853",
+  "title": "Land property rights and rural enterprise growth: Evidence from land titling reform in China",
+  "year": 2022,
+  "cb": 152,
+  "type": "article",
+  "venue": "Journal of Development Economics",
+  "nrefs": 42,
+  "flags": [],
+  "lock": [],
+  "abstract": ""
+ },
+ {
+  "rank": 4,
+  "id": "W4224261420",
+  "doi": "https://doi.org/10.1016/j.worlddev.2022.105822",
+  "title": "Women\u2019s political empowerment and economic growth",
+  "year": 2022,
+  "cb": 143,
+  "type": "article",
+  "venue": "World Development",
+  "nrefs": 95,
+  "flags": [
+   "RO"
+  ],
+  "lock": [],
+  "abstract": "We investigate whether and how women\u2019s political empowerment relates to technological change, the main driver of long-term economic growth. We argue that three aspects of empowerment \u2013 descriptive representation, civil liberties protection, and civil society participation \u2013 advance technological change and thereby economic growth through (a) increasing the number and variability of new ideas introduced in the economy and (b) improving the selection of more efficient ideas. Drawing on data from 182 countries and 221 years, we test various implications from our argument. Women\u2019s political empowerment is positively related to subsequent economic growth. This relationship persists across various model specifications and when accounting for different potential confounders. The three sub-components of empowerment are also, individually, related to growth, although not as strongly as the aggregated concept. The relationship is retained across different contexts, but is clearer for \u201cNon-Western\u201d countries and in earlier time periods. We also find evidence that women\u2019s political empowerment enhances technological change."
+ },
+ {
+  "rank": 5,
+  "id": "W3165371825",
+  "doi": "https://doi.org/10.1007/s00181-021-02175-4",
+  "title": "Does institutional quality foster economic complexity? The fundamental drivers of productive capabilities",
+  "year": 2022,
+  "cb": 133,
+  "type": "article",
+  "venue": "Empirical Economics",
+  "nrefs": 65,
+  "flags": [
+   "GL",
+   "SA",
+   "AL",
+   "RP",
+   "RO",
+   "EL"
+  ],
+  "lock": [],
+  "abstract": ""
+ },
+ {
+  "rank": 6,
+  "id": "W4307547529",
+  "doi": "https://doi.org/10.3390/su142113910",
+  "title": "How Do Institutional Quality, Natural Resources, Renewable Energy, and Financial Development Reduce Ecological Footprint without Hindering Economic Growth Trajectory? Evidence from China",
+  "year": 2022,
+  "cb": 126,
+  "type": "article",
+  "venue": "Sustainability",
+  "nrefs": 86,
+  "flags": [],
+  "lock": [],
+  "abstract": "Institutional quality, financial development, and natural resources primarily determine how economic representatives support their operational and production behaviors towards escalating the renewable energy share in the whole energy mix and protecting ecological quality. In this way, this paper is the first to investigate the influence of institutional quality, natural resources, financial development, and renewable energy on economic growth and the environment simultaneously in China from 1996 to 2020. The cointegration approaches verify the presence of a long-run association between the selected variables. The autoregressive distributed lag model outcomes reveal that institutional quality and renewable energy utilization greatly diminish ecological footprint. At the same time, other prospective indicators such as financial expansion and natural resources significantly enhance ecological footprint levels in the short- and long-run. Furthermore, institutional quality, financial expansion, renewable energy, and natural resources significantly trigger economic growth. Besides this, this study has revealed the unidirectional causal association from institutional quality and financial expansion to ecological footprint. In contrast, bidirectional causality occurs between renewable energy, natural resources, ecological footprint, and economic growth. The current research results offer some policy implications that will help to reduce the detrimental influence of environmental deprivation, without hindering the economic growth trajectory in the case of China."
+ },
+ {
+  "rank": 7,
+  "id": "W4319016949",
+  "doi": "https://doi.org/10.1016/j.leaqua.2022.101673",
+  "title": "Instrumental variables estimation: Assumptions, pitfalls, and guidelines",
+  "year": 2023,
+  "cb": 123,
+  "type": "article",
+  "venue": "The Leadership Quarterly",
+  "nrefs": 147,
+  "flags": [],
+  "lock": [],
+  "abstract": ""
+ },
+ {
+  "rank": 8,
+  "id": "W4200480718",
+  "doi": "https://doi.org/10.1016/j.jpolmod.2021.09.010",
+  "title": "Do economic growth and institutional quality reduce poverty and inequality in West Africa?",
+  "year": 2021,
+  "cb": 123,
+  "type": "article",
+  "venue": "Journal of Policy Modeling",
+  "nrefs": 83,
+  "flags": [
+   "HB",
+   "GL",
+   "SA",
+   "RO",
+   "EL"
+  ],
+  "lock": [
+   "W3121147769"
+  ],
+  "abstract": ""
+ },
+ {
+  "rank": 9,
+  "id": "W4206178768",
+  "doi": "https://doi.org/10.1007/s13132-021-00869-9",
+  "title": "Institutional Quality and Education Quality in Developing Countries: Effects and Transmission Channels",
+  "year": 2022,
+  "cb": 120,
+  "type": "article",
+  "venue": "Journal of the Knowledge Economy",
+  "nrefs": 70,
+  "flags": [
+   "GL"
+  ],
+  "lock": [],
+  "abstract": ""
+ },
+ {
+  "rank": 10,
+  "id": "W3211527536",
+  "doi": "https://doi.org/10.1086/718672",
+  "title": "Converging to Convergence",
+  "year": 2022,
+  "cb": 113,
+  "type": "article",
+  "venue": "NBER Macroeconomics Annual",
+  "nrefs": 39,
+  "flags": [
+   "GL"
+  ],
+  "lock": [],
+  "abstract": "Empirical tests in the 1990s found little evidence of poor countries catching up with rich\u2014unconditional convergence\u2014since the 1960s, and divergence over longer periods. This stylized fact spurred several developments in growth theory, including AK models, poverty trap models, and the concept of convergence conditional on determinants of steady-state income. We revisit these findings, using the subsequent 25 years as an outof-sample test, and document a trend toward unconditional convergence since 1990 and convergence since 2000, driven by both faster catch-up growth and slower growth of the frontier. During the same period, many of the correlates of growth\u2014human capital, policies, institutions, and culture\u2014also converged substantially and moved in the direction associated with higher income. Were these changes related? Using the omitted variable bias formula, we decompose the gap between unconditional and conditional convergence as the product of two cross-sectional slopes: (i) correlate-income slopes, which remained largely stable since 1990, and (ii) growth-correlate slopes controlling for income\u2014the coefficients of growth regressions\u2014which remained stable for fundamentals of the Solow model (investment rate, population growth, and human capital) but which flattened substantially for other correlates, leading unconditional convergence to converge toward conditional convergence."
+ },
+ {
+  "rank": 11,
+  "id": "W4285081985",
+  "doi": "https://doi.org/10.1016/j.jup.2022.101403",
+  "title": "Effects of income inequality and governance on energy poverty alleviation: Implications for sustainable development policy",
+  "year": 2022,
+  "cb": 112,
+  "type": "article",
+  "venue": "Utilities Policy",
+  "nrefs": 39,
+  "flags": [
+   "HB"
+  ],
+  "lock": [],
+  "abstract": ""
+ },
+ {
+  "rank": 12,
+  "id": "W4386322040",
+  "doi": "https://doi.org/10.1371/journal.pone.0290511",
+  "title": "RETRACTED: Country-level institutional quality and financial system efficiency: An international evidence",
+  "year": 2023,
+  "cb": 110,
+  "type": "article",
+  "venue": "PLoS ONE",
+  "nrefs": 62,
+  "flags": [],
+  "lock": [],
+  "abstract": "The optimum economic outcome of financial system development depends on its level of efficiency. The purpose of this study is to investigate the effect of institutional quality on financial system efficiency. For empirical analysis, we have used a panel dataset of 108 countries from 1996-2020 and employed fixed effect regression and two stages least squares (2SLS) regression methods. The empirical results show that institutional quality has a significant positive effect on financial system efficiency. Particularly all the constituting elements-voice and accountability, political stability and absence of violence, regulatory quality, government effectiveness, rule of law, and control of corruption-of institutional quality are found to have a significant positive impact on financial system efficiency. Moreover, we found that the effect of institutional quality is more pronounced in countries with low-income levels and strong institutional quality. These findings are robust across several robustness tests conducted using additional controls, alternative methodologies, an alternative measure of institutional quality, and financial system efficiency. The results of the study suggest that policy makers should prioritize both enhancing and sustaining institutional quality to promote the efficiency of the financial system, which is crucial for sustainable growth and development."
+ },
+ {
+  "rank": 13,
+  "id": "W4292663674",
+  "doi": "https://doi.org/10.1057/s41267-022-00527-5",
+  "title": "Informal institutions and international business: Toward an integrative research agenda",
+  "year": 2022,
+  "cb": 101,
+  "type": "editorial",
+  "venue": "Journal of International Business Studies",
+  "nrefs": 250,
+  "flags": [],
+  "lock": [],
+  "abstract": ""
+ },
+ {
+  "rank": 14,
+  "id": "W3124497653",
+  "doi": "https://doi.org/10.1287/mnsc.2022.4403",
+  "title": "The Impact of Institutions on Innovation",
+  "year": 2022,
+  "cb": 99,
+  "type": "article",
+  "venue": "Management Science",
+  "nrefs": 71,
+  "flags": [
+   "RV",
+   "HJ",
+   "GL"
+  ],
+  "lock": [],
+  "abstract": "We study the impact of inclusive institutions on innovation using novel, hand-collected, county-level data for Imperial Germany. We use the timing and geography of the French occupation of different German regions after the French Revolution of 1789 as an instrument for institutional quality. We find that the number of patents per capita in counties with the longest occupation was more than double that in unoccupied counties. Among the institutional changes brought by the French, the introduction of the Code civil, ensuring equality before the law, and the promotion of commercial freedom through the abolition of guilds and trade licenses had a stronger effect on innovation than the abolition of serfdom, which increased labor market mobility, and agricultural reforms that broke up the power of rural elites. The effect of institutions on innovation is particularly pronounced for high-tech innovation, suggesting that innovation might be a key channel through which institutions ultimately affect economic growth. Our findings highlight inclusive institutions as a first-order determinant of innovation. This paper was accepted by Gustavo Manso, finance. Funding: During his Ph.D. at London Business School, Jean-Marie Meier received a grant from the Deloitte Institute of Innovation and Entrepreneurship (an internal research institute at London Business School) for this paper. Supplemental Material: The data files and online appendices are available at https://doi.org/10.1287/mnsc.2022.4403 ."
+ },
+ {
+  "rank": 15,
+  "id": "W4318937711",
+  "doi": "https://doi.org/10.1016/j.techfore.2023.122365",
+  "title": "Climate risk, institutional quality, and total factor productivity",
+  "year": 2023,
+  "cb": 97,
+  "type": "article",
+  "venue": "Technological Forecasting and Social Change",
+  "nrefs": 89,
+  "flags": [],
+  "lock": [
+   "W2618788771"
+  ],
+  "abstract": ""
+ },
+ {
+  "rank": 16,
+  "id": "W4388274323",
+  "doi": "https://doi.org/10.1111/1475-679x.12517",
+  "title": "Cultural Origin and Minority Shareholder Expropriation: Historical Evidence",
+  "year": 2023,
+  "cb": 95,
+  "type": "article",
+  "venue": "Journal of Accounting Research",
+  "nrefs": 93,
+  "flags": [
+   "RV",
+   "HB"
+  ],
+  "lock": [],
+  "abstract": "ABSTRACT Can culture explain regional differences in minority shareholder expropriation? Examining regional variation in China, we document that the influence of historical Confucian values persists, despite decades of political movements clamping down on these values, and that these values reduce minority shareholder expropriation in local public firms. The effect on minority shareholder expropriation, in part, operates through the establishment of oversight mechanisms (i.e., greater financial reporting quality and dividend payouts) that constrain expropriation. The findings have important implications for understanding the origins of enduring regional differences in minority shareholder expropriation and capital market development."
+ },
+ {
+  "rank": 17,
+  "id": "W4281705180",
+  "doi": "https://doi.org/10.1080/09638199.2022.2079709",
+  "title": "The effects of FDI on economic growth in Africa",
+  "year": 2022,
+  "cb": 93,
+  "type": "article",
+  "venue": "Journal of International Trade & Economic Development",
+  "nrefs": 92,
+  "flags": [
+   "RO"
+  ],
+  "lock": [
+   "W2010235856"
+  ],
+  "abstract": "This paper investigates the growth effects of FDI in Africa for the period 1990\u20132016 using a dynamically common correlated effect approach for an error-correction model. It uses an analytical classification of African economies, with each being fragile, factor-driven or investment-driven. It also accounts for interaction effects and the problem of cross-sectional dependence that previous studies overlooked. While the long-run effect of FDI on growth is significantly positive in investment- and factor-driven economies, its short-run effect is insignificant in the latter type of economies. The effect of FDI on growth is insignificant in the fragile category both in the short-run and long-run, however."
+ },
+ {
+  "rank": 18,
+  "id": "W4387877962",
+  "doi": "https://doi.org/10.1108/qrfm-05-2022-0086",
+  "title": "Regulatory issues inhibiting the financial inclusion: a case study among Islamic banks and MSMEs in Indonesia",
+  "year": 2023,
+  "cb": 91,
+  "type": "article",
+  "venue": "Qualitative Research in Financial Markets",
+  "nrefs": 48,
+  "flags": [],
+  "lock": [],
+  "abstract": "Purpose The primary objective of this study aims to intensively explore the environment of Indonesian regulations and laws related to the Islamic banking system and micro-, small- and medium-sized enterprises (MSME) and unveil the restrictive laws and regulatory flaws that potentially hinder the Islamic banking institution and MSME industry in achieving financial inclusion and promoting sustainable growth. Design/methodology/approach This paper implements a qualitative method by implementing a multi-case study research strategy, both from the Islamic banking institutions and the MSME industries. The data were gathered primarily through an interview approach by adopting purposive uncontrolled quota sampling. Findings The findings of this paper reveal two essential issues: First, the regulatory imbalances and restrictions could demotivate and hinder the efforts of Islamic banks in providing access to finance for the MSME segment, hence, encumbering the achievement of the financial inclusion agenda from the Islamic banking industry. Second, the flaws in MSME registration and taxation might discourage the formal MSMEs from extending their business license and prevent the informal MSME units from registering their business. This issue would potentially lower their chance of accessing external financing from the formal financial institutions and participating in supportive government programmes due to the absence of proper legality. Research limitations/implications Since this paper only observed six Islamic banks and 22 MSME units in urban and rural locations in Indonesia using a case study approach, the empirical findings and case discussions were limited to those respective Islamic banks and MSME participants. Practical implications By referring to the recommendations as presented in this paper, two critical policy implications could be expected from adopting the proposed recommendations, among others: By addressing the issues of the regulatory imbalance associated with the Islamic banking industry and introduce the deregulatory policies on profit and loss sharing (PLS) scheme implementation, this approach will motivate the Islamic banking industry in serving the MSME sector better and provide greater access to financial services, particularly in using the PLS financing schemes. By resolving the problems on MSME registration and taxation, this strategy will enhance the sustainability of the formal MSMEs\u2019 operation and encourage the informal ones to register, hence, improving their inclusion into the formal financing services and government assistance programmes. Originality/value The present study attempts to address the literature shortcomings and helps to fill the gaps \u2013 both theoretical and empirical \u2013 by incorporating the multi-case study among Indonesian Islamic banks and MSMEs to extensively explore the Indonesia regulatory environment pertaining to the Islamic banking system (supply-side) and MSMEs (demand-side), and thoroughly investigates and reveals the restrictive laws and regulatory flaws that could potentially hinder the Islamic banking institutions and MSME industries in attaining financial inclusion and contributing to sustainable development."
+ },
+ {
+  "rank": 19,
+  "id": "W4386647200",
+  "doi": "https://doi.org/10.1016/j.eneco.2023.107041",
+  "title": "The role of public environmental concern on corporate social responsibility: Evidence from search index of web users",
+  "year": 2023,
+  "cb": 90,
+  "type": "article",
+  "venue": "Energy Economics",
+  "nrefs": 101,
+  "flags": [
+   "RO"
+  ],
+  "lock": [],
+  "abstract": ""
+ },
+ {
+  "rank": 20,
+  "id": "W3124943234",
+  "doi": "https://doi.org/10.1016/j.jinteco.2024.104027",
+  "title": "The standard errors of persistence",
+  "year": 2024,
+  "cb": 87,
+  "type": "article",
+  "venue": "Journal of International Economics",
+  "nrefs": 46,
+  "flags": [
+   "RV"
+  ],
+  "lock": [],
+  "abstract": ""
+ },
+ {
+  "rank": 21,
+  "id": "W4293403519",
+  "doi": "https://doi.org/10.1016/j.jenvman.2022.116053",
+  "title": "Effect of environmental regulation policy synergy on carbon emissions in China under consideration of the mediating role of industrial structure",
+  "year": 2022,
+  "cb": 87,
+  "type": "article",
+  "venue": "Journal of Environmental Management",
+  "nrefs": 79,
+  "flags": [],
+  "lock": [],
+  "abstract": ""
+ },
+ {
+  "rank": 22,
+  "id": "W4200592490",
+  "doi": "https://doi.org/10.1016/j.techfore.2021.121401",
+  "title": "Can female entrepreneurs boost social mobility in developing countries? An institutional analysis",
+  "year": 2021,
+  "cb": 87,
+  "type": "article",
+  "venue": "Technological Forecasting and Social Change",
+  "nrefs": 150,
+  "flags": [
+   "RV",
+   "GL"
+  ],
+  "lock": [],
+  "abstract": "Entrepreneurship has been linked to economic development at the regional and national levels, yet the microeconomic nuances of entrepreneurial diversity and the challenges that different entrepreneurs face in producing social benefits remain unexplored. Numerous studies have recognised that a gender gap exists not only in entrepreneurship but also in development outcomes, such as firm performance and poverty alleviation. Few, though, have considered the role of institutions in incentivising women and men in the generational improvement process, such as social mobility. Hence, does the institutional environment framing gender differences constrain or enable potential effects of female (compared with male) entrepreneurs on microeconomic outcomes such as social mobility? We investigate the institutional influence on the probability of becoming a female entrepreneur and the effect of this decision on social mobility in developing countries. We test gender comparisons through two-stage probit least squares (2SPLS), showing that post-materialism, autonomy, network membership, democracy, and respect for human rights have positive effects on both women's and men's self-employment jointly as well as female self-employment specifically. We also show that the decision to become an entrepreneur has a greater influence on social mobility for female than for male entrepreneurs. Policy implications regarding gender equality are discussed."
+ },
+ {
+  "rank": 23,
+  "id": "W4391180104",
+  "doi": "https://doi.org/10.1016/j.eneco.2024.107321",
+  "title": "Technological innovation and its influence on energy risk management: Unpacking China\u2019s energy consumption structure optimisation amidst climate change",
+  "year": 2024,
+  "cb": 86,
+  "type": "article",
+  "venue": "Energy Economics",
+  "nrefs": 63,
+  "flags": [],
+  "lock": [],
+  "abstract": ""
+ },
+ {
+  "rank": 24,
+  "id": "W4390870694",
+  "doi": "https://doi.org/10.1016/j.worlddev.2023.106501",
+  "title": "Aid effectiveness and donor motives",
+  "year": 2024,
+  "cb": 84,
+  "type": "article",
+  "venue": "World Development",
+  "nrefs": 245,
+  "flags": [],
+  "lock": [],
+  "abstract": "A vast literature evaluates the effectiveness of development aid, often reaching sobering conclusions. We argue that a key shortcoming of this literature is the focus on a narrow concept of effectiveness\u2014mostly economic growth\u2014that does not match the kind of effectiveness that aid donors actually aim at. To determine actual donor motives, we first survey the literature on aid allocation and identify a large set of motives that is common to many donors. We then employ this set of donor motives for compiling a survey of the aid effectiveness literature by donor motive. The literature shows that while aid has a moderate effect on economic development at best, it seems effective in achieving many of the other effects primarily intended by aid donors. We conclude by speculating that future research on aid effectiveness will be more likely to identify significant effects of aid when taking donor motives into account."
+ },
+ {
+  "rank": 25,
+  "id": "W4200071543",
+  "doi": "https://doi.org/10.1016/j.ecosys.2021.100937",
+  "title": "Institutional quality and human capital development in Africa",
+  "year": 2021,
+  "cb": 78,
+  "type": "article",
+  "venue": "Economic Systems",
+  "nrefs": 98,
+  "flags": [
+   "EL"
+  ],
+  "lock": [
+   "W2010235856"
+  ],
+  "abstract": ""
+ }
+]

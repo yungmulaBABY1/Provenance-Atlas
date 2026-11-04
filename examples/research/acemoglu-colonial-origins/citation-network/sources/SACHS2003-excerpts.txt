@@ -1,0 +1,12 @@
+Bounded excerpts from SACHS2003: Sachs (2003). Institutions Don't Rule: Direct Effects of Geography on Per Capita Income. NBER WP 9490.
+PDF SHA-256 d8c218e3b3ed20379c99ea2b2bb1e341843d60d74a5f97fa53ba57330ae3cbc4; extraction `pdftotext -enc UTF-8` (poppler) of that PDF, text SHA-256 fde2f7fce43be33569f571aa9854aaef09f12a25b9631dc03e8904fd7567c154.
+Not the full document. Each excerpt body is an exact substring of the extraction output; offsets in that output and in this file are recorded in excerpts_manifest.json.
+
+=== SA-E1 | section | PDF page 10 ===
+The chief strength of the AJR, EL, and RST papers is that a clear null hypothesis is
+advanced. As Karl Popper taught many years ago, the failure to reject a null hypothesis on one
+set of data does not imply the correctness of the hypothesis more generally. This paper shows,
+indeed, that the null hypothesis may be readily rejected using an alternative geographical
+variable: malaria risk.
+=== end SA-E1 ===
+

@@ -1,0 +1,3 @@
+$ /workspace/venv-audit/bin/python -m atlas import examples/research/acemoglu-colonial-origins/citation-network/atlas-context.json --root . --out examples/research/acemoglu-colonial-origins/citation-network/atlas-receipt
+{"checker":"PASS-WITH-REVIEW","notices":[],"records":82,"scientific_validation":"NOT_PERFORMED","sha256":"5e8b7c167c3e41b1671223885a0b74d8f4e9817d104c3f8cef08b5da66e61a81","syntax":"PASS-WITH-REVIEW"}
+exit_code=0

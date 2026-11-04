@@ -1,0 +1,2432 @@
+{
+ "schema_version": "atlas-adapter/0.1",
+ "run": {
+  "id": "urn:atlas:import:ajr2001-citation-network:1",
+  "target_work_id": "doi:10.1257/aer.91.5.1369",
+  "imported_at": "2026-11-04T12:09:12Z",
+  "origin": "LIVE_EXECUTION_THIS_RUN",
+  "model": {
+   "identity": "Grok Bot (executor subagent)",
+   "verification": "SELF_REPORTED_NOT_INDEPENDENTLY_VERIFIED"
+  },
+  "runner": {
+   "identity": "Grok Bot audit run on branch audit/acemoglu-colonial-origins (main ce028e1)",
+   "verification": "SELF_REPORTED_NOT_INDEPENDENTLY_VERIFIED"
+  },
+  "historical_instrument": {
+   "identity": "7ac79f0da337c4d52e39e1490088d06c82a9d42b",
+   "verification": "VERIFIED"
+  },
+  "exposure": {
+   "prior_outputs_seen": "YES: the same session produced 01_claim_extraction, 02a, 02b, 03_counter_audit and 05_final_assessment before this stage",
+   "independence": "NOT_INDEPENDENT_OF_PRIOR_AUDIT_STAGES",
+   "basis": "Runner authored the earlier stages; instrument identity checked by git blob hash of prompts/research-analysis/2-citation-network.txt at commit ce028e1 against atlas/baseline.json before execution."
+  }
+ },
+ "output": {
+  "path": "examples/research/acemoglu-colonial-origins/citation-network/02c_citation_network.md",
+  "sha256": "884887fe5a7b98d77921fbc31b488c7c9b7dc8406eb60340e4d5881436f3016c"
+ },
+ "works": [
+  {
+   "id": "doi:10.1257/aer.91.5.1369",
+   "title": "The Colonial Origins of Comparative Development: An Empirical Investigation",
+   "kind": "research",
+   "identity_basis": "DOI printed on the article; OpenAlex W2011474190 (baseline identity check, Section A)."
+  },
+  {
+   "id": "doi:10.1016/s1574-0684(05)01006-3",
+   "title": "Institutions as a Fundamental Cause of Long-Run Growth",
+   "kind": "research",
+   "identity_basis": "OpenAlex N11 (handbook chapter) and N05 (NBER w10481) records; working paper is the chapter's prior version."
+  },
+  {
+   "id": "url:https://www.nobelprize.org/uploads/2024/10/advanced-economicsciencesprize2024.pdf",
+   "title": "Scientific Background to the Sveriges Riksbank Prize in Economic Sciences 2024",
+   "kind": "research",
+   "identity_basis": "Publisher URL (nobelprize.org)."
+  },
+  {
+   "id": "url:https://www.nobelprize.org/uploads/2024/10/popular-economicsciencesprize2024.pdf",
+   "title": "Popular Science Background: Explaining Prosperity Differences between Nations (Nobel 2024)",
+   "kind": "research",
+   "identity_basis": "Publisher URL (nobelprize.org)."
+  },
+  {
+   "id": "doi:10.1023/b:joeg.0000031425.72248.85",
+   "title": "Institutions Rule: The Primacy of Institutions over Geography and Integration in Economic Development",
+   "kind": "research",
+   "identity_basis": "OpenAlex N02 record DOI."
+  },
+  {
+   "id": "doi:10.1023/b:joeg.0000038933.16398.ed",
+   "title": "Do Institutions Cause Growth?",
+   "kind": "research",
+   "identity_basis": "OpenAlex N03 record DOI."
+  },
+  {
+   "id": "doi:10.3386/w9490",
+   "title": "Institutions Don't Rule: Direct Effects of Geography on Per Capita Income",
+   "kind": "research",
+   "identity_basis": "NBER working paper number w9490 (Section E post hoc directly-adjudicating row)."
+  },
+  {
+   "id": "doi:10.1016/s0304-3932(02)00200-3",
+   "title": "Tropics, Germs, and Crops: How Endowments Influence Economic Development",
+   "kind": "research",
+   "identity_basis": "OpenAlex N21 record DOI."
+  },
+  {
+   "id": "doi:10.1111/ectj.12097",
+   "title": "Double/Debiased Machine Learning for Treatment and Structural Parameters",
+   "kind": "research",
+   "identity_basis": "OpenAlex N06 record DOI."
+  },
+  {
+   "id": "doi:10.1257/jel.46.3.607",
+   "title": "The Role of Cognitive Skills in Economic Development",
+   "kind": "research",
+   "identity_basis": "OpenAlex N12 record DOI."
+  },
+  {
+   "id": "doi:10.1111/j.1468-0297.2006.01045.x",
+   "title": "Institutions and the Resource Curse (Mehlum, Moene, Torvik 2006)",
+   "kind": "research",
+   "identity_basis": "OpenAlex top-50 citer record DOI."
+  },
+  {
+   "id": "doi:10.1257/jel.49.2.366",
+   "title": "Natural Resources: Curse or Blessing? (van der Ploeg 2011)",
+   "kind": "research",
+   "identity_basis": "OpenAlex top-50 citer record DOI."
+  }
+ ],
+ "sources": [
+  {
+   "id": "doi:10.1257/aer.91.5.1369/version/pdf-sha256-bce991ebdb67555d",
+   "work_id": "doi:10.1257/aer.91.5.1369",
+   "version": "PUBLISHER_PDF_AUTHOR_HOSTED (JSTOR-stamped); PDF SHA-256 bce991ebdb67555d7ee6d8b0f478cc69d54e78addb7037ccc4e99e0780e324bd",
+   "version_basis": "Typeset AER article with JSTOR cover page, hosted on economics.mit.edu; journal page = PDF page + 1367. accessed_at is approximate: SOURCES_MANIFEST.json records retrieval approx. 02:30-03:10 PST in the earlier stage; the earliest bound is used.",
+   "version_confidence": "BYTES_PINNED_PUBLISHER_PDF_AUTHOR_HOSTED",
+   "source_uri": "https://economics.mit.edu/sites/default/files/publications/colonial-origins-of-comparative-development.pdf",
+   "accessed_at": "2026-11-04T10:30:00Z",
+   "access_outcome": "AVAILABLE",
+   "rights": "BOUNDED_EXCERPTS_ONLY; NOT_REVIEWED_FOR_PUBLIC_RELEASE",
+   "extraction": {
+    "engine": "plain-utf8",
+    "version": "1",
+    "configuration": {}
+   },
+   "text_artifact": {
+    "path": "examples/research/acemoglu-colonial-origins/citation-network/sources/AJR2001-excerpts.txt",
+    "sha256": "fbcc5dc85c0ecee424fdde14941091158136176ade8636eb581e900a560db235"
+   },
+   "components": [
+    {
+     "id": "AJR-E1",
+     "kind": "section",
+     "start": 615,
+     "end": 787
+    },
+    {
+     "id": "AJR-E2",
+     "kind": "section",
+     "start": 847,
+     "end": 1390
+    },
+    {
+     "id": "AJR-E4",
+     "kind": "section",
+     "start": 1450,
+     "end": 2109
+    },
+    {
+     "id": "AJR-E3",
+     "kind": "section",
+     "start": 2169,
+     "end": 2490
+    }
+   ],
+   "requested_components": [
+    "AJR-E1",
+    "AJR-E2",
+    "AJR-E4",
+    "AJR-E3"
+   ],
+   "warnings": [
+    "Text artifact holds bounded excerpts copied from pdftotext output of the retrieved PDF (SHA-256 bce991ebdb67555d7ee6d8b0f478cc69d54e78addb7037ccc4e99e0780e324bd). The adapter verifies the excerpt bytes only, not PDF rendering or extraction fidelity. PDF not committed (rights)."
+   ],
+   "failed_components": [],
+   "origin_id": "https://economics.mit.edu/sites/default/files/publications/colonial-origins-of-comparative-development.pdf"
+  },
+  {
+   "id": "doi:10.1016/s1574-0684(05)01006-3/version/pdf-sha256-abcf176a6d08e7bc",
+   "work_id": "doi:10.1016/s1574-0684(05)01006-3",
+   "version": "NBER_WORKING_PAPER w10481; PDF SHA-256 abcf176a6d08e7bcfbf9de6504da1221a70f3509edb5903a6e4be58e8367b653",
+   "version_basis": "NBER working paper version, not the published Handbook of Economic Growth chapter (published chapter NOT_RETRIEVED).",
+   "version_confidence": "BYTES_PINNED_WORKING_PAPER",
+   "source_uri": "https://www.nber.org/system/files/working_papers/w10481/w10481.pdf",
+   "accessed_at": "2026-11-04T11:46:42Z",
+   "access_outcome": "AVAILABLE",
+   "rights": "BOUNDED_EXCERPTS_ONLY; NOT_REVIEWED_FOR_PUBLIC_RELEASE",
+   "extraction": {
+    "engine": "plain-utf8",
+    "version": "1",
+    "configuration": {}
+   },
+   "text_artifact": {
+    "path": "examples/research/acemoglu-colonial-origins/citation-network/sources/HB2004-excerpts.txt",
+    "sha256": "4192933e87a87024fe23441673d315fb83d2f4ec50f82fb4ce65af768981a782"
+   },
+   "components": [
+    {
+     "id": "HB-E1",
+     "kind": "section",
+     "start": 629,
+     "end": 1520
+    }
+   ],
+   "requested_components": [
+    "HB-E1"
+   ],
+   "warnings": [
+    "Text artifact holds bounded excerpts copied from pdftotext output of the retrieved PDF (SHA-256 abcf176a6d08e7bcfbf9de6504da1221a70f3509edb5903a6e4be58e8367b653). The adapter verifies the excerpt bytes only, not PDF rendering or extraction fidelity. PDF not committed (rights)."
+   ],
+   "failed_components": [],
+   "origin_id": "https://www.nber.org/system/files/working_papers/w10481/w10481.pdf"
+  },
+  {
+   "id": "url:https://www.nobelprize.org/uploads/2024/10/advanced-economicsciencesprize2024.pdf/version/pdf-sha256-0a8e2746fef87c24",
+   "work_id": "url:https://www.nobelprize.org/uploads/2024/10/advanced-economicsciencesprize2024.pdf",
+   "version": "PUBLISHER_PDF; PDF SHA-256 0a8e2746fef87c2481880f8fb479d0d51e1725c86771a12e54d3a298391cfcd2",
+   "version_basis": "Official PDF retrieved from nobelprize.org.",
+   "version_confidence": "BYTES_PINNED_PUBLISHER_PDF",
+   "source_uri": "https://www.nobelprize.org/uploads/2024/10/advanced-economicsciencesprize2024.pdf",
+   "accessed_at": "2026-11-04T11:46:43Z",
+   "access_outcome": "AVAILABLE",
+   "rights": "BOUNDED_EXCERPTS_ONLY; NOT_REVIEWED_FOR_PUBLIC_RELEASE",
+   "extraction": {
+    "engine": "plain-utf8",
+    "version": "1",
+    "configuration": {}
+   },
+   "text_artifact": {
+    "path": "examples/research/acemoglu-colonial-origins/citation-network/sources/NOBELSCI-excerpts.txt",
+    "sha256": "0d7a4d737c5b7ba5c71e7375dd9da3d092fd5457845236d1ec670281d0a9ee05"
+   },
+   "components": [
+    {
+     "id": "NS-E1",
+     "kind": "section",
+     "start": 588,
+     "end": 1171
+    },
+    {
+     "id": "NS-E2",
+     "kind": "section",
+     "start": 1229,
+     "end": 1760
+    },
+    {
+     "id": "NS-E3",
+     "kind": "section",
+     "start": 1818,
+     "end": 2050
+    }
+   ],
+   "requested_components": [
+    "NS-E1",
+    "NS-E2",
+    "NS-E3"
+   ],
+   "warnings": [
+    "Text artifact holds bounded excerpts copied from pdftotext output of the retrieved PDF (SHA-256 0a8e2746fef87c2481880f8fb479d0d51e1725c86771a12e54d3a298391cfcd2). The adapter verifies the excerpt bytes only, not PDF rendering or extraction fidelity. PDF not committed (rights)."
+   ],
+   "failed_components": [],
+   "origin_id": "https://www.nobelprize.org/uploads/2024/10/advanced-economicsciencesprize2024.pdf"
+  },
+  {
+   "id": "url:https://www.nobelprize.org/uploads/2024/10/popular-economicsciencesprize2024.pdf/version/pdf-sha256-034ea71058dcabf1",
+   "work_id": "url:https://www.nobelprize.org/uploads/2024/10/popular-economicsciencesprize2024.pdf",
+   "version": "PUBLISHER_PDF; PDF SHA-256 034ea71058dcabf10983eb1645ad69bfe81043bbd61ad2a6351f59a73e2ca97e",
+   "version_basis": "Official PDF retrieved from nobelprize.org.",
+   "version_confidence": "BYTES_PINNED_PUBLISHER_PDF",
+   "source_uri": "https://www.nobelprize.org/uploads/2024/10/popular-economicsciencesprize2024.pdf",
+   "accessed_at": "2026-11-04T11:46:43Z",
+   "access_outcome": "AVAILABLE",
+   "rights": "BOUNDED_EXCERPTS_ONLY; NOT_REVIEWED_FOR_PUBLIC_RELEASE",
+   "extraction": {
+    "engine": "plain-utf8",
+    "version": "1",
+    "configuration": {}
+   },
+   "text_artifact": {
+    "path": "examples/research/acemoglu-colonial-origins/citation-network/sources/NOBELPOP-excerpts.txt",
+    "sha256": "c379015af6da9615ce32686cf56038997ce5cfe98ed6e021b60eb091672c8e24"
+   },
+   "components": [
+    {
+     "id": "NP-E1",
+     "kind": "section",
+     "start": 601,
+     "end": 849
+    }
+   ],
+   "requested_components": [
+    "NP-E1"
+   ],
+   "warnings": [
+    "Text artifact holds bounded excerpts copied from pdftotext output of the retrieved PDF (SHA-256 034ea71058dcabf10983eb1645ad69bfe81043bbd61ad2a6351f59a73e2ca97e). The adapter verifies the excerpt bytes only, not PDF rendering or extraction fidelity. PDF not committed (rights)."
+   ],
+   "failed_components": [],
+   "origin_id": "https://www.nobelprize.org/uploads/2024/10/popular-economicsciencesprize2024.pdf"
+  },
+  {
+   "id": "doi:10.1023/b:joeg.0000031425.72248.85/version/pdf-sha256-fcf21eff336d9771",
+   "work_id": "doi:10.1023/b:joeg.0000031425.72248.85",
+   "version": "NBER_WORKING_PAPER w9305; PDF SHA-256 fcf21eff336d97712b2f80bbb67c1e096b6f40dce7d3d9b5be35fd7accb5b4c0",
+   "version_basis": "NBER working paper version, not the Journal of Economic Growth article.",
+   "version_confidence": "BYTES_PINNED_WORKING_PAPER",
+   "source_uri": "https://www.nber.org/system/files/working_papers/w9305/w9305.pdf",
+   "accessed_at": "2026-11-04T11:46:38Z",
+   "access_outcome": "AVAILABLE",
+   "rights": "BOUNDED_EXCERPTS_ONLY; NOT_REVIEWED_FOR_PUBLIC_RELEASE",
+   "extraction": {
+    "engine": "plain-utf8",
+    "version": "1",
+    "configuration": {}
+   },
+   "text_artifact": {
+    "path": "examples/research/acemoglu-colonial-origins/citation-network/sources/RODRIK2004-excerpts.txt",
+    "sha256": "fbf18cbead0eedb59c635bf9cc22c1f67ce3bb8063766bd380fbb9340dfd5ac3"
+   },
+   "components": [
+    {
+     "id": "RD-E1",
+     "kind": "section",
+     "start": 648,
+     "end": 864
+    },
+    {
+     "id": "RD-E3",
+     "kind": "section",
+     "start": 922,
+     "end": 1042
+    },
+    {
+     "id": "RD-E4",
+     "kind": "section",
+     "start": 1100,
+     "end": 1207
+    }
+   ],
+   "requested_components": [
+    "RD-E1",
+    "RD-E3",
+    "RD-E4"
+   ],
+   "warnings": [
+    "Text artifact holds bounded excerpts copied from pdftotext output of the retrieved PDF (SHA-256 fcf21eff336d97712b2f80bbb67c1e096b6f40dce7d3d9b5be35fd7accb5b4c0). The adapter verifies the excerpt bytes only, not PDF rendering or extraction fidelity. PDF not committed (rights)."
+   ],
+   "failed_components": [],
+   "origin_id": "https://www.nber.org/system/files/working_papers/w9305/w9305.pdf"
+  },
+  {
+   "id": "doi:10.1023/b:joeg.0000038933.16398.ed/version/pdf-sha256-a3176149a0ca2bdd",
+   "work_id": "doi:10.1023/b:joeg.0000038933.16398.ed",
+   "version": "NBER_WORKING_PAPER w10568; PDF SHA-256 a3176149a0ca2bdd31e3fbace1ef745418d64c8dedeba63d88a4ca2c64d6c092",
+   "version_basis": "NBER working paper version, not the Journal of Economic Growth article.",
+   "version_confidence": "BYTES_PINNED_WORKING_PAPER",
+   "source_uri": "https://www.nber.org/system/files/working_papers/w10568/w10568.pdf",
+   "accessed_at": "2026-11-04T11:46:37Z",
+   "access_outcome": "AVAILABLE",
+   "rights": "BOUNDED_EXCERPTS_ONLY; NOT_REVIEWED_FOR_PUBLIC_RELEASE",
+   "extraction": {
+    "engine": "plain-utf8",
+    "version": "1",
+    "configuration": {}
+   },
+   "text_artifact": {
+    "path": "examples/research/acemoglu-colonial-origins/citation-network/sources/GLAESER2004-excerpts.txt",
+    "sha256": "45f853017015a9effc2524076136c13befcb3a7314a49ca9369f4edffca886e4"
+   },
+   "components": [
+    {
+     "id": "GL-E1",
+     "kind": "section",
+     "start": 591,
+     "end": 978
+    },
+    {
+     "id": "GL-E2",
+     "kind": "section",
+     "start": 1036,
+     "end": 1266
+    }
+   ],
+   "requested_components": [
+    "GL-E1",
+    "GL-E2"
+   ],
+   "warnings": [
+    "Text artifact holds bounded excerpts copied from pdftotext output of the retrieved PDF (SHA-256 a3176149a0ca2bdd31e3fbace1ef745418d64c8dedeba63d88a4ca2c64d6c092). The adapter verifies the excerpt bytes only, not PDF rendering or extraction fidelity. PDF not committed (rights)."
+   ],
+   "failed_components": [],
+   "origin_id": "https://www.nber.org/system/files/working_papers/w10568/w10568.pdf"
+  },
+  {
+   "id": "doi:10.3386/w9490/version/pdf-sha256-d8c218e3b3ed2037",
+   "work_id": "doi:10.3386/w9490",
+   "version": "NBER_WORKING_PAPER w9490; PDF SHA-256 d8c218e3b3ed20379c99ea2b2bb1e341843d60d74a5f97fa53ba57330ae3cbc4",
+   "version_basis": "NBER working paper; this is the cited work itself.",
+   "version_confidence": "BYTES_PINNED_WORKING_PAPER",
+   "source_uri": "https://www.nber.org/system/files/working_papers/w9490/w9490.pdf",
+   "accessed_at": "2026-11-04T11:46:40Z",
+   "access_outcome": "AVAILABLE",
+   "rights": "BOUNDED_EXCERPTS_ONLY; NOT_REVIEWED_FOR_PUBLIC_RELEASE",
+   "extraction": {
+    "engine": "plain-utf8",
+    "version": "1",
+    "configuration": {}
+   },
+   "text_artifact": {
+    "path": "examples/research/acemoglu-colonial-origins/citation-network/sources/SACHS2003-excerpts.txt",
+    "sha256": "2503109cdf54f112d18dae24c292ff55eff77b84bb752c2ac4df9f0f39cd99d7"
+   },
+   "components": [
+    {
+     "id": "SA-E1",
+     "kind": "section",
+     "start": 558,
+     "end": 947
+    }
+   ],
+   "requested_components": [
+    "SA-E1"
+   ],
+   "warnings": [
+    "Text artifact holds bounded excerpts copied from pdftotext output of the retrieved PDF (SHA-256 d8c218e3b3ed20379c99ea2b2bb1e341843d60d74a5f97fa53ba57330ae3cbc4). The adapter verifies the excerpt bytes only, not PDF rendering or extraction fidelity. PDF not committed (rights)."
+   ],
+   "failed_components": [],
+   "origin_id": "https://www.nber.org/system/files/working_papers/w9490/w9490.pdf"
+  },
+  {
+   "id": "doi:10.1016/s0304-3932(02)00200-3/version/pdf-sha256-d18ba14408a29939",
+   "work_id": "doi:10.1016/s0304-3932(02)00200-3",
+   "version": "NBER_WORKING_PAPER w9106; PDF SHA-256 d18ba14408a2993999a141e4c3fbbd4e1b52f4afe99d301683d20032b46a8ebf",
+   "version_basis": "NBER working paper version, not the Journal of Monetary Economics article.",
+   "version_confidence": "BYTES_PINNED_WORKING_PAPER",
+   "source_uri": "https://www.nber.org/system/files/working_papers/w9106/w9106.pdf",
+   "accessed_at": "2026-11-04T11:46:43Z",
+   "access_outcome": "AVAILABLE",
+   "rights": "BOUNDED_EXCERPTS_ONLY; NOT_REVIEWED_FOR_PUBLIC_RELEASE",
+   "extraction": {
+    "engine": "plain-utf8",
+    "version": "1",
+    "configuration": {}
+   },
+   "text_artifact": {
+    "path": "examples/research/acemoglu-colonial-origins/citation-network/sources/EL2003-excerpts.txt",
+    "sha256": "250c951be95cd24681f6468cf480cdffa59050d288fd59937ca0bde89ae7b0c9"
+   },
+   "components": [
+    {
+     "id": "EL-E1",
+     "kind": "section",
+     "start": 604,
+     "end": 806
+    },
+    {
+     "id": "EL-E2",
+     "kind": "section",
+     "start": 864,
+     "end": 1083
+    }
+   ],
+   "requested_components": [
+    "EL-E1",
+    "EL-E2"
+   ],
+   "warnings": [
+    "Text artifact holds bounded excerpts copied from pdftotext output of the retrieved PDF (SHA-256 d18ba14408a2993999a141e4c3fbbd4e1b52f4afe99d301683d20032b46a8ebf). The adapter verifies the excerpt bytes only, not PDF rendering or extraction fidelity. PDF not committed (rights)."
+   ],
+   "failed_components": [],
+   "origin_id": "https://www.nber.org/system/files/working_papers/w9106/w9106.pdf"
+  },
+  {
+   "id": "doi:10.1111/ectj.12097/version/pdf-sha256-3186133dacb9f4a3",
+   "work_id": "doi:10.1111/ectj.12097",
+   "version": "ARXIV_PREPRINT 1608.00060; PDF SHA-256 3186133dacb9f4a31c004a00150627de1e5cf26e203d1522a25a5444c7dbdf78",
+   "version_basis": "arXiv preprint (latest version served at retrieval), not the Econometrics Journal article.",
+   "version_confidence": "BYTES_PINNED_PREPRINT",
+   "source_uri": "https://arxiv.org/pdf/1608.00060",
+   "accessed_at": "2026-11-04T11:49:06Z",
+   "access_outcome": "AVAILABLE",
+   "rights": "BOUNDED_EXCERPTS_ONLY; NOT_REVIEWED_FOR_PUBLIC_RELEASE",
+   "extraction": {
+    "engine": "plain-utf8",
+    "version": "1",
+    "configuration": {}
+   },
+   "text_artifact": {
+    "path": "examples/research/acemoglu-colonial-origins/citation-network/sources/DML2018-excerpts.txt",
+    "sha256": "47887ade0d8afb15008670cab2af9d58ad5747a76c862f3a261041370182ea95"
+   },
+   "components": [
+    {
+     "id": "DML-E1",
+     "kind": "section",
+     "start": 614,
+     "end": 1161
+    },
+    {
+     "id": "DML-E2",
+     "kind": "section",
+     "start": 1221,
+     "end": 1551
+    }
+   ],
+   "requested_components": [
+    "DML-E1",
+    "DML-E2"
+   ],
+   "warnings": [
+    "Text artifact holds bounded excerpts copied from pdftotext output of the retrieved PDF (SHA-256 3186133dacb9f4a31c004a00150627de1e5cf26e203d1522a25a5444c7dbdf78). The adapter verifies the excerpt bytes only, not PDF rendering or extraction fidelity. PDF not committed (rights)."
+   ],
+   "failed_components": [],
+   "origin_id": "https://arxiv.org/pdf/1608.00060"
+  },
+  {
+   "id": "doi:10.1257/jel.46.3.607/version/pdf-sha256-305ad6df71078b65",
+   "work_id": "doi:10.1257/jel.46.3.607",
+   "version": "NBER_WORKING_PAPER w12832; PDF SHA-256 305ad6df71078b65d4a2f89716adff21002fba65c08a16255e607e74c2f9c9ce",
+   "version_basis": "NBER working paper version, not the Journal of Economic Literature article.",
+   "version_confidence": "BYTES_PINNED_WORKING_PAPER",
+   "source_uri": "https://www.nber.org/system/files/working_papers/w12832/w12832.pdf",
+   "accessed_at": "2026-11-04T11:49:17Z",
+   "access_outcome": "AVAILABLE",
+   "rights": "BOUNDED_EXCERPTS_ONLY; NOT_REVIEWED_FOR_PUBLIC_RELEASE",
+   "extraction": {
+    "engine": "plain-utf8",
+    "version": "1",
+    "configuration": {}
+   },
+   "text_artifact": {
+    "path": "examples/research/acemoglu-colonial-origins/citation-network/sources/HW2008-excerpts.txt",
+    "sha256": "62211d70df92a6df294f184031fa3e7e6e42aabf70651f141741790e9f476f5b"
+   },
+   "components": [
+    {
+     "id": "HW-E1",
+     "kind": "section",
+     "start": 583,
+     "end": 815
+    }
+   ],
+   "requested_components": [
+    "HW-E1"
+   ],
+   "warnings": [
+    "Text artifact holds bounded excerpts copied from pdftotext output of the retrieved PDF (SHA-256 305ad6df71078b65d4a2f89716adff21002fba65c08a16255e607e74c2f9c9ce). The adapter verifies the excerpt bytes only, not PDF rendering or extraction fidelity. PDF not committed (rights)."
+   ],
+   "failed_components": [],
+   "origin_id": "https://www.nber.org/system/files/working_papers/w12832/w12832.pdf"
+  },
+  {
+   "id": "doi:10.1111/j.1468-0297.2006.01045.x/version/not-retrieved",
+   "work_id": "doi:10.1111/j.1468-0297.2006.01045.x",
+   "version": "UNKNOWN",
+   "version_basis": "No copy retrieved; edition unknown.",
+   "version_confidence": "UNKNOWN",
+   "source_uri": "https://www.sv.uio.no/econ/personer/vit/kmoene/InstitutionsResourceCurse.pdf",
+   "accessed_at": "2026-11-04T11:49:25Z",
+   "access_outcome": "RETRIEVAL_FAILED",
+   "rights": "NOT_REVIEWED_FOR_PUBLIC_RELEASE",
+   "extraction": {
+    "engine": "plain-utf8",
+    "version": "1",
+    "configuration": {}
+   },
+   "text_artifact": null,
+   "components": [],
+   "requested_components": [
+    "citing_passages"
+   ],
+   "warnings": [
+    "HTTP 404 on 2026-11-04T11:49:25Z; no workaround attempted."
+   ],
+   "failed_components": [],
+   "origin_id": "UNKNOWN"
+  },
+  {
+   "id": "doi:10.1257/jel.49.2.366/version/not-retrieved",
+   "work_id": "doi:10.1257/jel.49.2.366",
+   "version": "UNKNOWN",
+   "version_basis": "No copy retrieved; edition unknown.",
+   "version_confidence": "UNKNOWN",
+   "source_uri": "https://ora.ox.ac.uk/objects/uuid:9ee86a44-e6c5-4337-9aac-b3c66bbbfd1a/files/m30d52f1b3c27c7b0c75ebaa4b6e2df8d",
+   "accessed_at": "2026-11-04T11:49:32Z",
+   "access_outcome": "RETRIEVAL_FAILED",
+   "rights": "NOT_REVIEWED_FOR_PUBLIC_RELEASE",
+   "extraction": {
+    "engine": "plain-utf8",
+    "version": "1",
+    "configuration": {}
+   },
+   "text_artifact": null,
+   "components": [],
+   "requested_components": [
+    "citing_passages"
+   ],
+   "warnings": [
+    "HTTP 500 x3 (gave up) on 2026-11-04T11:49:32Z; no workaround attempted."
+   ],
+   "failed_components": [],
+   "origin_id": "UNKNOWN"
+  }
+ ],
+ "passages": [
+  {
+   "id": "AJR-E1",
+   "source_version_id": "doi:10.1257/aer.91.5.1369/version/pdf-sha256-bce991ebdb67555d",
+   "component_id": "AJR-E1",
+   "start": 615,
+   "end": 787,
+   "quote": "institutions to the level of Chile could, in the\nlong run, lead to as much as a 7-fold increase in\nNigeria's income (in practice Chile is over 11\ntimes as rich as Nigeria).",
+   "normalized_sha256": "6cca52363075479e679e6fdaaa2950a5e1f31e46f8de579fe6bcd2ca35d6f477",
+   "pdf_page": 4,
+   "label": "Acemoglu, Johnson & Robinson (2001). The Colonial Origins of Comparative Development: An Empirical Investigation. AER 91(5):1369-1401. DOI 10.1257/aer.91.5.1369. PDF p. 4"
+  },
+  {
+   "id": "AJR-E2",
+   "source_version_id": "doi:10.1257/aer.91.5.1369/version/pdf-sha256-bce991ebdb67555d",
+   "component_id": "AJR-E2",
+   "start": 847,
+   "end": 1390,
+   "quote": "Our 2SLS estimate, 0.94, implies that the 2.24\ndifferences in expropriationrisk between these\ntwo countriesshouldtranslateinto 206 log point\n(approximately\n7-fold) difference.In practice,the\npresence of measurementerrorcomplicatesthis\ninterpretation,\nbecausesome of the differencebetween Nigeria and Chile's expropriationindex\nmay reflect measurementerror. Therefore,the\n7-fold differenceis an upperbound.In any case,\nthe estimatesin Table 4 imply a substantial,but\nnot implausiblylarge,effect of institutionaldifferences on income per capita.",
+   "normalized_sha256": "49d2f567430ad0441cb30bbfc79ae3dea067d7c33c0e47b3453250fcce78b0db",
+   "pdf_page": 20,
+   "label": "Acemoglu, Johnson & Robinson (2001). The Colonial Origins of Comparative Development: An Empirical Investigation. AER 91(5):1369-1401. DOI 10.1257/aer.91.5.1369. PDF p. 20"
+  },
+  {
+   "id": "AJR-E4",
+   "source_version_id": "doi:10.1257/aer.91.5.1369/version/pdf-sha256-bce991ebdb67555d",
+   "component_id": "AJR-E4",
+   "start": 1450,
+   "end": 2109,
+   "quote": "In any case, controllingfor malariadoes not\nchange our results. We do this in columns (1)\nand (2) by controlling for the fraction of the\npopulation who live in an area where falciporum malariais endemic in 1994 (as constructed\nand used by Gallup et al., 1998). Since malaria\nprevalence in 1994 is highly endogenous, the\nargumentin Appendix A implies that controlling for it directly will underestimatethe effect\nof institutions on performance.In fact, the coefficient on protection against expropriationis\nnow estimated to be somewhat smaller, 0.69\ninstead of 0.94 as in Table 4. Nevertheless,\nthe effect remainshighly significantwith a standard error of 0.25",
+   "normalized_sha256": "49c35c5aeb7b33edc6a65717c11c84523643daa50dba8e4afaf20ef3c8bd8ec4",
+   "pdf_page": 24,
+   "label": "Acemoglu, Johnson & Robinson (2001). The Colonial Origins of Comparative Development: An Empirical Investigation. AER 91(5):1369-1401. DOI 10.1257/aer.91.5.1369. PDF p. 24"
+  },
+  {
+   "id": "AJR-E3",
+   "source_version_id": "doi:10.1257/aer.91.5.1369/version/pdf-sha256-bce991ebdb67555d",
+   "component_id": "AJR-E3",
+   "start": 2169,
+   "end": 2490,
+   "quote": "McArthurand Sachs (2001) also reportspecifications\nwith more instruments.However, using six or seven instruments with only 64 observations leads to the \"too-manyinstruments\"problem, typically biasing the IV estimate\ntowardsthe OLS estimate (see JohnBound et al., 1995). We\nthereforedid not pursue these estimates further.",
+   "normalized_sha256": "42c37410c3fcbc8213f5718959f6510653e0a7136be32d17ace0ddc1969f9d46",
+   "pdf_page": 26,
+   "label": "Acemoglu, Johnson & Robinson (2001). The Colonial Origins of Comparative Development: An Empirical Investigation. AER 91(5):1369-1401. DOI 10.1257/aer.91.5.1369. PDF p. 26"
+  },
+  {
+   "id": "HB-E1",
+   "source_version_id": "doi:10.1016/s1574-0684(05)01006-3/version/pdf-sha256-abcf176a6d08e7bc",
+   "component_id": "HB-E1",
+   "start": 629,
+   "end": 1520,
+   "quote": "In Acemoglu, Johnson and Robinson (2001) we showed, using European mortality\nas an instrument for the current enforcement of property rights, that most of the gap\nbetween rich and poor countries today is due to diﬀerences in economic institutions.\nMore precisely, we showed (p. 1387) that if one took two typical–in the sense that\nthey both lie on the regression line–countries with high and low expropriation risk,\nlike Nigeria and Chile, then almost the entire diﬀerence in incomes per-capita between\nthem could be explained by the diﬀerences in the security of property rights. We also\npresented regression evidence that showed that once the eﬀect of economic institutions\non GDP per-capita was properly controlled for, geographical variables, such as latitude,\nwhether or not a country is land-locked and the current disease environment, have no\nexplanatory power for current prosperity.",
+   "normalized_sha256": "e3f7f13faa858453e5aa32f2e287d55b5a7deceaa860600af87e8912449e3bdd",
+   "pdf_page": 29,
+   "label": "Acemoglu, Johnson & Robinson (2004). Institutions as the Fundamental Cause of Long-Run Growth. NBER Working Paper 10481 (later Handbook of Economic Growth vol. 1A ch. 6, 2005). PDF p. 29"
+  },
+  {
+   "id": "NS-E1",
+   "source_version_id": "url:https://www.nobelprize.org/uploads/2024/10/advanced-economicsciencesprize2024.pdf/version/pdf-sha256-0a8e2746fef87c24",
+   "component_id": "NS-E1",
+   "start": 588,
+   "end": 1171,
+   "quote": "The actual IV-estimate should thus be taken with a grain of salt. Nevertheless, the\nevidence presented by Acemoglu, Johnson, and Robinson strongly suggests that the type of\ninstitutions implemented by the colonizers is a key mechanism driving the relationship\nbetween contemporary GDP and the conditions at colonization. Moreover, it is difficult to\nimagine that we would observe a reversal of fortune, where once prosperous regions became\nless so, had it not been for the extractive institutions established by the colonizers in the areas\nthat were prosperous prior to colonization.",
+   "normalized_sha256": "565b06d5a8660cf740a7c6879afb00bc2495922090e7e2e19cb85e1314c265a4",
+   "pdf_page": 19,
+   "label": "Committee for the Prize in Economic Sciences in Memory of Alfred Nobel (2024). Scientific Background: Acemoglu, Johnson and Robinson. PDF p. 19"
+  },
+  {
+   "id": "NS-E2",
+   "source_version_id": "url:https://www.nobelprize.org/uploads/2024/10/advanced-economicsciencesprize2024.pdf/version/pdf-sha256-0a8e2746fef87c24",
+   "component_id": "NS-E2",
+   "start": 1229,
+   "end": 1760,
+   "quote": "Another point of discussion involves the reliability of the data on settler mortality\nfrom the 18th century, which are sometimes sketchy and provide rough estimates on initial\nsettler mortality (see Albouy, 2012, for criticism). However, the core results hold up when the\nauthors exclude African nations, which were the subject of much of the dispute. Moreover,\nthe results are robust to capping settler mortality from above, to ensure that identification\ndoes not come from extremely high estimates of the settler mortality rates.",
+   "normalized_sha256": "957abad94ffa12378003edfb393c20484ff7773b67e80da9a30867996526258b",
+   "pdf_page": 19,
+   "label": "Committee for the Prize in Economic Sciences in Memory of Alfred Nobel (2024). Scientific Background: Acemoglu, Johnson and Robinson. PDF p. 19"
+  },
+  {
+   "id": "NS-E3",
+   "source_version_id": "url:https://www.nobelprize.org/uploads/2024/10/advanced-economicsciencesprize2024.pdf/version/pdf-sha256-0a8e2746fef87c24",
+   "component_id": "NS-E3",
+   "start": 1818,
+   "end": 2050,
+   "quote": "Ultimately, however, human\ncapital and institutions are both determinants of growth, and it is very hard to distinguish\nAcemoglu, Gallego, and Robinson’s argument from the fact that human capital has an\nindependent effect on growth.",
+   "normalized_sha256": "4d5dff1e93c9c01f3f2b4c1762ebd7839847c5c71433e801b7025584c90c7cba",
+   "pdf_page": 19,
+   "label": "Committee for the Prize in Economic Sciences in Memory of Alfred Nobel (2024). Scientific Background: Acemoglu, Johnson and Robinson. PDF p. 19"
+  },
+  {
+   "id": "NP-E1",
+   "source_version_id": "url:https://www.nobelprize.org/uploads/2024/10/popular-economicsciencesprize2024.pdf/version/pdf-sha256-034ea71058dcabf1",
+   "component_id": "NP-E1",
+   "start": 601,
+   "end": 849,
+   "quote": "Acemoglu, Johnson and Robinson have uncovered a clear chain of causality. Institutions that were\ncreated to exploit the masses are bad for long-run growth, while ones that establish fundamental\neconomic freedoms and the rule of law are good for it.",
+   "normalized_sha256": "866ee1f9a930783351e4996ab7b972dd950c3470d40f9d269d26cb5c0d825b4c",
+   "pdf_page": 4,
+   "label": "Royal Swedish Academy of Sciences (2024). Popular science background: They provided an explanation for why some countries are rich and others poor. PDF p. 4"
+  },
+  {
+   "id": "RD-E1",
+   "source_version_id": "doi:10.1023/b:joeg.0000031425.72248.85/version/pdf-sha256-fcf21eff336d9771",
+   "component_id": "RD-E1",
+   "start": 648,
+   "end": 864,
+   "quote": "The idea is that these two instruments, having\npassed what might be called the AER (American Economic Review)-test, are our best hope\nat the moment of unraveling the tangle of cause-and-effect relationships involved.",
+   "normalized_sha256": "970636c0a6a964c23b963371e7e1db2d5cd289a7af411de723cd6a1311bb6bb5",
+   "pdf_page": 6,
+   "label": "Rodrik, Subramanian & Trebbi (2002/2004). Institutions Rule: The Primacy of Institutions over Geography and Integration in Economic Development. NBER WP 9305 (J. Econ. Growth 9:131-165, 2004). PDF p. 6"
+  },
+  {
+   "id": "RD-E3",
+   "source_version_id": "doi:10.1023/b:joeg.0000031425.72248.85/version/pdf-sha256-fcf21eff336d9771",
+   "component_id": "RD-E3",
+   "start": 922,
+   "end": 1042,
+   "quote": "In our view,\nthis distinction is not made adequately clear in AJR and is arguably blurred by Easterly and\nLevine (2002).",
+   "normalized_sha256": "0ab60a7b229dc374a77e81939eca83801128cd537a57c097f3c315f5f884b16e",
+   "pdf_page": 20,
+   "label": "Rodrik, Subramanian & Trebbi (2002/2004). Institutions Rule: The Primacy of Institutions over Geography and Integration in Economic Development. NBER WP 9305 (J. Econ. Growth 9:131-165, 2004). PDF p. 20"
+  },
+  {
+   "id": "RD-E4",
+   "source_version_id": "doi:10.1023/b:joeg.0000031425.72248.85/version/pdf-sha256-fcf21eff336d9771",
+   "component_id": "RD-E4",
+   "start": 1100,
+   "end": 1207,
+   "quote": "One problem is that AJR do not carry out a direct test\nof the impact of colonial policies and institutions.",
+   "normalized_sha256": "50ce3f791507141165d83ad49e4d194df6f2359967b07cab944520baf5979157",
+   "pdf_page": 21,
+   "label": "Rodrik, Subramanian & Trebbi (2002/2004). Institutions Rule: The Primacy of Institutions over Geography and Integration in Economic Development. NBER WP 9305 (J. Econ. Growth 9:131-165, 2004). PDF p. 21"
+  },
+  {
+   "id": "GL-E1",
+   "source_version_id": "doi:10.1023/b:joeg.0000038933.16398.ed/version/pdf-sha256-a3176149a0ca2bdd",
+   "component_id": "GL-E1",
+   "start": 591,
+   "end": 978,
+   "quote": "The impact of settler mortality on today’s institutions remains significant, but so is that of\nmalaria risk. At least part of what settler mortality captures is the modern disease environment.\nThese results suggest that the issue of modern disease environment is real, and one should exercise\ncaution in treating AJR instruments as proxies for the colonial but not modern mortality risk.",
+   "normalized_sha256": "3c4d8de09a556d6ef34cbc9ba31dbe4e9bf53a3b9c2cf15f914612f662c1063f",
+   "pdf_page": 24,
+   "label": "Glaeser, La Porta, Lopez-de-Silanes & Shleifer (2004). Do Institutions Cause Growth? NBER WP 10568 (J. Econ. Growth 9:271-303, 2004). PDF p. 24"
+  },
+  {
+   "id": "GL-E2",
+   "source_version_id": "doi:10.1023/b:joeg.0000038933.16398.ed/version/pdf-sha256-a3176149a0ca2bdd",
+   "component_id": "GL-E2",
+   "start": 1036,
+   "end": 1266,
+   "quote": "Could the influence of AJR’s proposed\ninstruments on today’s development work through human capital? Put differently, perhaps when\ncolonizers settled, they brought with them their know-how rather than constraints on the executive.",
+   "normalized_sha256": "b1af0c8bb4a72c934dcaa8beb34776dcb836451c318a0b9bd07d05d774aa5499",
+   "pdf_page": 24,
+   "label": "Glaeser, La Porta, Lopez-de-Silanes & Shleifer (2004). Do Institutions Cause Growth? NBER WP 10568 (J. Econ. Growth 9:271-303, 2004). PDF p. 24"
+  },
+  {
+   "id": "SA-E1",
+   "source_version_id": "doi:10.3386/w9490/version/pdf-sha256-d8c218e3b3ed2037",
+   "component_id": "SA-E1",
+   "start": 558,
+   "end": 947,
+   "quote": "The chief strength of the AJR, EL, and RST papers is that a clear null hypothesis is\nadvanced. As Karl Popper taught many years ago, the failure to reject a null hypothesis on one\nset of data does not imply the correctness of the hypothesis more generally. This paper shows,\nindeed, that the null hypothesis may be readily rejected using an alternative geographical\nvariable: malaria risk.",
+   "normalized_sha256": "d428f46e2ae9ab52f9041e623c004606aa382971987b1d7ccc077c0ff983c9af",
+   "pdf_page": 10,
+   "label": "Sachs (2003). Institutions Don't Rule: Direct Effects of Geography on Per Capita Income. NBER WP 9490. PDF p. 10"
+  },
+  {
+   "id": "EL-E1",
+   "source_version_id": "doi:10.1016/s0304-3932(02)00200-3/version/pdf-sha256-d18ba14408a29939",
+   "component_id": "EL-E1",
+   "start": 604,
+   "end": 806,
+   "quote": "We find no evidence that tropics, germs, and crops affect country incomes directly other than\nthrough institutions, nor do we find any effect of policies on development once we control for institutions.",
+   "normalized_sha256": "94860a419ce57f3542b979f12f912692f76c6b916d99b61cfc02ee3f5650292d",
+   "pdf_page": 2,
+   "label": "Easterly & Levine (2002/2003). Tropics, Germs, and Crops: How Endowments Influence Economic Development. NBER WP 9106 (J. Monetary Econ. 50:3-39, 2003). PDF p. 2"
+  },
+  {
+   "id": "EL-E2",
+   "source_version_id": "doi:10.1016/s0304-3932(02)00200-3/version/pdf-sha256-d18ba14408a29939",
+   "component_id": "EL-E2",
+   "start": 864,
+   "end": 1083,
+   "quote": "SETTLER MORTALITY equals the logarithm of annualized deaths per thousand of\nEuropean solders (with each death replaced with a new soldier) during the early 19th century, for\n72 former colonies. AJR (2001) compiles data.",
+   "normalized_sha256": "04d37b15068625c421f81d1e6e44a25fd482a646651ef51bbf26e4ee8b37b403",
+   "pdf_page": 15,
+   "label": "Easterly & Levine (2002/2003). Tropics, Germs, and Crops: How Endowments Influence Economic Development. NBER WP 9106 (J. Monetary Econ. 50:3-39, 2003). PDF p. 15"
+  },
+  {
+   "id": "DML-E1",
+   "source_version_id": "doi:10.1111/ectj.12097/version/pdf-sha256-3186133dacb9f4a3",
+   "component_id": "DML-E1",
+   "start": 614,
+   "end": 1161,
+   "quote": "We use the same set of 64 country-level observations as AJR. The data set contains\nmeasurements of GDP, settler morality, an index which measures protection against expropriation risk and geographic information. The outcome variable, Y, is the logarithm of\nGDP per capita and the endogenous explanatory variable, D, is a measure of the strength\nof individual property rights that is used as a proxy for the strength of institutions. To\ndeal with endogeneity, we use an instrumental variable Z, which is mortality rates for\nearly European settlers.",
+   "normalized_sha256": "ee0081184d082632cc17c43f52aa2dea764719492997277f947695619f1beca1",
+   "pdf_page": 45,
+   "label": "Chernozhukov et al. (2016/2018). Double/Debiased Machine Learning for Treatment and Structural Parameters. arXiv 1608.00060 (Econometrics Journal 21(1), 2018). PDF p. 45"
+  },
+  {
+   "id": "DML-E2",
+   "source_version_id": "doi:10.1111/ectj.12097/version/pdf-sha256-3186133dacb9f4a3",
+   "component_id": "DML-E2",
+   "start": 1221,
+   "end": 1551,
+   "quote": "Finally, although the estimates are\nsomewhat smaller than the baseline estimates reported in AJR - an estimated coefficient\nof 1.10 with estimated standard error of 0.46 (Acemoglu et al. (2001), Table 4, Panel A,\ncolumn 7) - the results are qualitatively similar, indicating a strong and positive effect\nof institutions on output.",
+   "normalized_sha256": "016536b3d40239d50759f21e31db2b779a8f5355ccc612d1e8b47895a0897018",
+   "pdf_page": 46,
+   "label": "Chernozhukov et al. (2016/2018). Double/Debiased Machine Learning for Treatment and Structural Parameters. arXiv 1608.00060 (Econometrics Journal 21(1), 2018). PDF p. 46"
+  },
+  {
+   "id": "HW-E1",
+   "source_version_id": "doi:10.1257/jel.46.3.607/version/pdf-sha256-305ad6df71078b65",
+   "component_id": "HW-E1",
+   "start": 583,
+   "end": 815,
+   "quote": "While Acemoglu, Johnson, and Robinson (2001, 2002, 2005) find that geographical features do not exert an effect\n\non economic growth independent of institutions, this remains a disputed subject (cf., e.g., McArthur and Sachs (2001)).",
+   "normalized_sha256": "000e5f6a46dc9baabdff4cfd9a3f2e91f9af2679807f7db62b73af5e8d2e5d9f",
+   "pdf_page": 44,
+   "label": "Hanushek & Woessmann (2007/2008). The Role of Cognitive Skills in Economic Development. NBER WP 12832 (J. Econ. Lit. 46(3), 2008). PDF p. 44"
+  }
+ ],
+ "checks": [
+  {
+   "id": "RD-shared-instruments",
+   "kind": "content",
+   "scope": "Rodrik et al. on reuse of AJR's instruments",
+   "mapping_basis": "Finding 2 Evidence: 'RD-E1, EL-E2, DML-E1, DML-E2'",
+   "requirements": [
+    {
+     "source_version_id": "doi:10.1023/b:joeg.0000031425.72248.85/version/pdf-sha256-fcf21eff336d9771",
+     "component_ids": [
+      "RD-E1"
+     ],
+     "passage_ids": [
+      "RD-E1"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "EL-settler-mortality-variable",
+   "kind": "content",
+   "scope": "Easterly-Levine's settler-mortality variable definition",
+   "mapping_basis": "Finding 2 Evidence: 'RD-E1, EL-E2, DML-E1, DML-E2'",
+   "requirements": [
+    {
+     "source_version_id": "doi:10.1016/s0304-3932(02)00200-3/version/pdf-sha256-d18ba14408a29939",
+     "component_ids": [
+      "EL-E2"
+     ],
+     "passage_ids": [
+      "EL-E2"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "DML-reuses-AJR-data",
+   "kind": "content",
+   "scope": "DML reuses AJR's 64-country data and compares estimates",
+   "mapping_basis": "Finding 2 Evidence: 'RD-E1, EL-E2, DML-E1, DML-E2'",
+   "requirements": [
+    {
+     "source_version_id": "doi:10.1111/ectj.12097/version/pdf-sha256-3186133dacb9f4a3",
+     "component_ids": [
+      "DML-E1",
+      "DML-E2"
+     ],
+     "passage_ids": [
+      "DML-E1",
+      "DML-E2"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "AJR-upper-bound",
+   "kind": "content",
+   "scope": "AJR 2001 own magnitude interpretation",
+   "mapping_basis": "Finding 3 Evidence: 'AJR-E2 ... and HB-E1'",
+   "requirements": [
+    {
+     "source_version_id": "doi:10.1257/aer.91.5.1369/version/pdf-sha256-bce991ebdb67555d",
+     "component_ids": [
+      "AJR-E2"
+     ],
+     "passage_ids": [
+      "AJR-E2"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "HB-restatement",
+   "kind": "content",
+   "scope": "Handbook restatement of AJR 2001",
+   "mapping_basis": "Finding 3 Evidence: 'AJR-E2 ... and HB-E1'",
+   "requirements": [
+    {
+     "source_version_id": "doi:10.1016/s1574-0684(05)01006-3/version/pdf-sha256-abcf176a6d08e7bc",
+     "component_ids": [
+      "HB-E1"
+     ],
+     "passage_ids": [
+      "HB-E1"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "NP-causal-chain-wording",
+   "kind": "content",
+   "scope": "Nobel popular background wording",
+   "mapping_basis": "Finding 4 Evidence: 'NP-E1; NS-E1; NS-E2; NS-E3'",
+   "requirements": [
+    {
+     "source_version_id": "url:https://www.nobelprize.org/uploads/2024/10/popular-economicsciencesprize2024.pdf/version/pdf-sha256-034ea71058dcabf1",
+     "component_ids": [
+      "NP-E1"
+     ],
+     "passage_ids": [
+      "NP-E1"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "NS-qualifiers",
+   "kind": "content",
+   "scope": "Nobel scientific background qualifiers",
+   "mapping_basis": "Finding 4 Evidence: 'NP-E1; NS-E1; NS-E2; NS-E3'",
+   "requirements": [
+    {
+     "source_version_id": "url:https://www.nobelprize.org/uploads/2024/10/advanced-economicsciencesprize2024.pdf/version/pdf-sha256-0a8e2746fef87c24",
+     "component_ids": [
+      "NS-E1",
+      "NS-E2",
+      "NS-E3"
+     ],
+     "passage_ids": [
+      "NS-E1",
+      "NS-E2",
+      "NS-E3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "NS-data-critique",
+   "kind": "content",
+   "scope": "Nobel scientific background on settler-mortality data reliability",
+   "mapping_basis": "Finding 5 Evidence: '... NS-E2'",
+   "requirements": [
+    {
+     "source_version_id": "url:https://www.nobelprize.org/uploads/2024/10/advanced-economicsciencesprize2024.pdf/version/pdf-sha256-0a8e2746fef87c24",
+     "component_ids": [
+      "NS-E2"
+     ],
+     "passage_ids": [
+      "NS-E2"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "AJR-malaria-control",
+   "kind": "content",
+   "scope": "AJR 2001 malaria control result",
+   "mapping_basis": "Finding 6 Evidence: 'AJR-E4; SA-E1; GL-E1; GL-E2; NS-E3'",
+   "requirements": [
+    {
+     "source_version_id": "doi:10.1257/aer.91.5.1369/version/pdf-sha256-bce991ebdb67555d",
+     "component_ids": [
+      "AJR-E4"
+     ],
+     "passage_ids": [
+      "AJR-E4"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "SA-null-hypothesis",
+   "kind": "content",
+   "scope": "Sachs 2003 framing of the null",
+   "mapping_basis": "Finding 6 Evidence: 'AJR-E4; SA-E1; GL-E1; GL-E2; NS-E3'",
+   "requirements": [
+    {
+     "source_version_id": "doi:10.3386/w9490/version/pdf-sha256-d8c218e3b3ed2037",
+     "component_ids": [
+      "SA-E1"
+     ],
+     "passage_ids": [
+      "SA-E1"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "GL-rival-channel",
+   "kind": "content",
+   "scope": "Glaeser et al. 2004 malaria / human-capital rival tests",
+   "mapping_basis": "Finding 6 Evidence: 'AJR-E4; SA-E1; GL-E1; GL-E2; NS-E3'",
+   "requirements": [
+    {
+     "source_version_id": "doi:10.1023/b:joeg.0000038933.16398.ed/version/pdf-sha256-a3176149a0ca2bdd",
+     "component_ids": [
+      "GL-E1",
+      "GL-E2"
+     ],
+     "passage_ids": [
+      "GL-E1",
+      "GL-E2"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "NS-hard-to-disentangle",
+   "kind": "content",
+   "scope": "Nobel scientific background on disentangling channels",
+   "mapping_basis": "Finding 6 Evidence: 'AJR-E4; SA-E1; GL-E1; GL-E2; NS-E3'",
+   "requirements": [
+    {
+     "source_version_id": "url:https://www.nobelprize.org/uploads/2024/10/advanced-economicsciencesprize2024.pdf/version/pdf-sha256-0a8e2746fef87c24",
+     "component_ids": [
+      "NS-E3"
+     ],
+     "passage_ids": [
+      "NS-E3"
+     ]
+    }
+   ]
+  }
+ ],
+ "finding_checks": {
+  "1": [],
+  "2": [
+   "RD-shared-instruments",
+   "EL-settler-mortality-variable",
+   "DML-reuses-AJR-data"
+  ],
+  "3": [
+   "AJR-upper-bound",
+   "HB-restatement"
+  ],
+  "4": [
+   "NP-causal-chain-wording",
+   "NS-qualifiers"
+  ],
+  "5": [
+   "NS-data-critique"
+  ],
+  "6": [
+   "AJR-malaria-control",
+   "SA-null-hypothesis",
+   "GL-rival-channel",
+   "NS-hard-to-disentangle"
+  ],
+  "7": []
+ },
+ "null_check_ids": [],
+ "corpus": {
+  "id": "ajr2001-citation-network-openalex-50",
+  "boundary": "OpenAlex top-50 citers of AJR 2001 (union of W2011474190 and conflated W3124131699 records) with their OpenAlex reference lists; 10 locked adjacent-field sources (Section E LOCKED QUERY); recent citers since 2021-11-04 (2,695) for co-citation counts; bounded excerpts from 10 retrieved full texts.",
+  "selection": "Top-50 by OpenAlex cited_by_count; adjacent-field lock by preregistered query; excerpts chosen after drafting findings to test their Evidence fields, so excerpt selection is not blind.",
+  "retrieval_events": [
+   {
+    "source": "lock_F1.json",
+    "requested_url": "https://api.openalex.org/works?filter=title.search%3Amalaria%20economic%2Cto_publication_date%3A2000-12-31%2Ctype%3Aarticle&sort=cited_by_count:desc&per-page=2&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=title.search%3Amalaria%20economic%2Cto_publication_date%3A2000-12-31%2Ctype%3Aarticle&sort=cited_by_count:desc&per-page=2&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:42:31Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "lock_F2.json",
+    "requested_url": "https://api.openalex.org/works?filter=title.search%3Ageography%20economic%20development%2Cto_publication_date%3A2000-12-31%2Ctype%3Aarticle&sort=cited_by_count:desc&per-page=2&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=title.search%3Ageography%20economic%20development%2Cto_publication_date%3A2000-12-31%2Ctype%3Aarticle&sort=cited_by_count:desc&per-page=2&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:42:32Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "lock_F3.json",
+    "requested_url": "https://api.openalex.org/works?filter=title.search%3Ahuman%20capital%20growth%2Cto_publication_date%3A2000-12-31%2Ctype%3Aarticle&sort=cited_by_count:desc&per-page=2&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=title.search%3Ahuman%20capital%20growth%2Cto_publication_date%3A2000-12-31%2Ctype%3Aarticle&sort=cited_by_count:desc&per-page=2&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:42:33Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "lock_F4.json",
+    "requested_url": "https://api.openalex.org/works?filter=title.search%3Aweak%20instruments%2Cto_publication_date%3A2000-12-31%2Ctype%3Aarticle&sort=cited_by_count:desc&per-page=2&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=title.search%3Aweak%20instruments%2Cto_publication_date%3A2000-12-31%2Ctype%3Aarticle&sort=cited_by_count:desc&per-page=2&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:42:33Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "lock_F6.json",
+    "requested_url": "https://api.openalex.org/works?filter=title.search%3Ainstitutions%20economic%20performance%2Cto_publication_date%3A2000-12-31%2Ctype%3Aarticle&sort=cited_by_count:desc&per-page=2&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=title.search%3Ainstitutions%20economic%20performance%2Cto_publication_date%3A2000-12-31%2Ctype%3Aarticle&sort=cited_by_count:desc&per-page=2&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:42:33Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "ajr2001_work.json",
+    "requested_url": "https://api.openalex.org/works/W3124166904?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works/W3124166904?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:42:48Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "top50_citers.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites%3AW3124166904&sort=cited_by_count:desc&per-page=50&page=1&select=id,doi,display_name,publication_year,publication_date,cited_by_count,type,authorships,primary_location,referenced_works,ids&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites%3AW3124166904&sort=cited_by_count:desc&per-page=50&page=1&select=id,doi,display_name,publication_year,publication_date,cited_by_count,type,authorships,primary_location,referenced_works,ids&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:42:48Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "recent5y_top25.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites%3AW3124166904%2Cfrom_publication_date%3A2021-11-04&sort=cited_by_count:desc&per-page=25&page=1&select=id,doi,display_name,publication_year,publication_date,cited_by_count,type,authorships,primary_location,referenced_works,ids&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites%3AW3124166904%2Cfrom_publication_date%3A2021-11-04&sort=cited_by_count:desc&per-page=25&page=1&select=id,doi,display_name,publication_year,publication_date,cited_by_count,type,authorships,primary_location,referenced_works,ids&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:42:48Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "citers_by_year.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites:W3124166904&group_by=publication_year&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites:W3124166904&group_by=publication_year&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:42:48Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "citers_also_albouy_by_year.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites:W3124166904,cites:W1969918011&group_by=publication_year&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites:W3124166904,cites:W1969918011&group_by=publication_year&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:42:49Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "albouy_citers_by_year.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites:W1969918011&group_by=publication_year&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites:W1969918011&group_by=publication_year&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:42:49Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "albouy2012_work.json",
+    "requested_url": "https://api.openalex.org/works/W1969918011?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works/W1969918011?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:42:49Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "ajr2012reply_work.json",
+    "requested_url": "https://api.openalex.org/works/W3124131699?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works/W3124131699?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:42:49Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "citers_groupby_authorships_author_id.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites:W3124166904&group_by=authorships.author.id&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites:W3124166904&group_by=authorships.author.id&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:42:50Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "citers_groupby_authorships_institutions_id.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites:W3124166904&group_by=authorships.institutions.id&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites:W3124166904&group_by=authorships.institutions.id&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:42:51Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "citers_groupby_primary_location_source_id.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites:W3124166904&group_by=primary_location.source.id&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites:W3124166904&group_by=primary_location.source.id&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:42:51Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "citers_groupby_grants_funder.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites:W3124166904&group_by=grants.funder&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites:W3124166904&group_by=grants.funder&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:42:51Z",
+    "http_status": 400,
+    "outcome": "HTTP_ERROR_RETRIED_OR_ABANDONED"
+   },
+   {
+    "source": "search_reversal.json",
+    "requested_url": "https://api.openalex.org/works?search=reversal%20of%20fortune%20geography%20institutions&per-page=6&select=id,display_name,publication_year,cited_by_count,doi,type,authorships&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?search=reversal%20of%20fortune%20geography%20institutions&per-page=6&select=id,display_name,publication_year,cited_by_count,doi,type,authorships&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:43:04Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "search_sachs.json",
+    "requested_url": "https://api.openalex.org/works?search=institutions%20don%27t%20rule&per-page=6&select=id,display_name,publication_year,cited_by_count,doi,type,authorships&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?search=institutions%20don%27t%20rule&per-page=6&select=id,display_name,publication_year,cited_by_count,doi,type,authorships&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:43:05Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "search_albouy.json",
+    "requested_url": "https://api.openalex.org/works?search=colonial%20origins%20comparative%20development%20reinvestigation&per-page=6&select=id,display_name,publication_year,cited_by_count,doi,type,authorships&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?search=colonial%20origins%20comparative%20development%20reinvestigation&per-page=6&select=id,display_name,publication_year,cited_by_count,doi,type,authorships&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:43:05Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "search_hall_jones.json",
+    "requested_url": "https://api.openalex.org/works?search=why%20do%20some%20countries%20produce%20so%20much%20more%20output%20per%20worker&per-page=6&select=id,display_name,publication_year,cited_by_count,doi,type,authorships&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?search=why%20do%20some%20countries%20produce%20so%20much%20more%20output%20per%20worker&per-page=6&select=id,display_name,publication_year,cited_by_count,doi,type,authorships&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:43:09Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "search_ajr_why.json",
+    "requested_url": "https://api.openalex.org/works?search=why%20nations%20fail&per-page=6&select=id,display_name,publication_year,cited_by_count,doi,type,authorships&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?search=why%20nations%20fail&per-page=6&select=id,display_name,publication_year,cited_by_count,doi,type,authorships&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:43:10Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "reply2012_citers_by_year.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites:W3124131699&group_by=publication_year&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites:W3124131699&group_by=publication_year&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:43:40Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "reply_and_ajr_both.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites:W3124131699,cites:W3124166904&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites:W3124131699,cites:W3124166904&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:43:40Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_ajr2001.json",
+    "requested_url": "https://api.crossref.org/works/10.1257/aer.91.5.1369?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1257/aer.91.5.1369?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:43:47Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_reply2012.json",
+    "requested_url": "https://api.crossref.org/works/10.1257/aer.102.6.3077?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1257/aer.102.6.3077?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:43:47Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_albouy2012.json",
+    "requested_url": "https://api.crossref.org/works/10.1257/aer.102.6.3059?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1257/aer.102.6.3059?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:43:48Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_glaeser2004.json",
+    "requested_url": "https://api.crossref.org/works/10.1023/B:JOEG.0000038933.16398.ed?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1023/B:JOEG.0000038933.16398.ed?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:43:48Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_rodrik2004.json",
+    "requested_url": "https://api.crossref.org/works/10.1023/B:JOEG.0000031425.72248.85?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1023/B:JOEG.0000031425.72248.85?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:43:49Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "s2_ajr2001.json",
+    "requested_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1257/aer.91.5.1369?fields=paperId,title,citationCount,externalIds",
+    "final_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1257/aer.91.5.1369?fields=paperId,title,citationCount,externalIds",
+    "retrieved_at": "2026-11-04T11:44:11Z",
+    "http_status": 429,
+    "outcome": "HTTP_ERROR_RETRIED_OR_ABANDONED"
+   },
+   {
+    "source": "s2_ajr2001.json",
+    "requested_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1257/aer.91.5.1369?fields=paperId,title,citationCount,externalIds",
+    "final_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1257/aer.91.5.1369?fields=paperId,title,citationCount,externalIds",
+    "retrieved_at": "2026-11-04T11:44:14Z",
+    "http_status": 429,
+    "outcome": "HTTP_ERROR_RETRIED_OR_ABANDONED"
+   },
+   {
+    "source": "s2_ajr2001.json",
+    "requested_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1257/aer.91.5.1369?fields=paperId,title,citationCount,externalIds",
+    "final_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1257/aer.91.5.1369?fields=paperId,title,citationCount,externalIds",
+    "retrieved_at": "2026-11-04T11:44:19Z",
+    "http_status": 429,
+    "outcome": "HTTP_ERROR_RETRIED_OR_ABANDONED"
+   },
+   {
+    "source": "s2_ajr2001.json",
+    "requested_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1257/aer.91.5.1369?fields=paperId,title,citationCount,externalIds",
+    "final_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1257/aer.91.5.1369?fields=paperId,title,citationCount,externalIds",
+    "retrieved_at": "2026-11-04T11:44:27Z",
+    "http_status": 429,
+    "outcome": "HTTP_ERROR_RETRIED_OR_ABANDONED"
+   },
+   {
+    "source": "s2_ajr2001.json",
+    "requested_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1257/aer.91.5.1369?fields=paperId,title,citationCount,externalIds",
+    "final_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1257/aer.91.5.1369?fields=paperId,title,citationCount,externalIds",
+    "retrieved_at": "2026-11-04T11:44:44Z",
+    "http_status": 429,
+    "outcome": "HTTP_ERROR_RETRIED_OR_ABANDONED"
+   },
+   {
+    "source": "s2_ajr2001.json",
+    "requested_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1257/aer.91.5.1369?fields=paperId,title,citationCount,externalIds",
+    "final_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1257/aer.91.5.1369?fields=paperId,title,citationCount,externalIds",
+    "retrieved_at": "2026-11-04T11:45:17Z",
+    "http_status": 429,
+    "outcome": "HTTP_ERROR_RETRIED_OR_ABANDONED"
+   },
+   {
+    "source": "s2_ajr2001.json",
+    "requested_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1257/aer.91.5.1369?fields=paperId,title,citationCount,externalIds",
+    "final_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1257/aer.91.5.1369?fields=paperId,title,citationCount,externalIds",
+    "retrieved_at": "2026-11-04T11:46:21Z",
+    "http_status": 429,
+    "outcome": "RETRIEVAL_FAILED"
+   },
+   {
+    "source": "glaeser2004_nber_w10568.pdf",
+    "requested_url": "https://www.nber.org/system/files/working_papers/w10568/w10568.pdf",
+    "final_url": "https://www.nber.org/system/files/working_papers/w10568/w10568.pdf",
+    "retrieved_at": "2026-11-04T11:46:37Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "rodrik2004_nber_w9305.pdf",
+    "requested_url": "https://www.nber.org/system/files/working_papers/w9305/w9305.pdf",
+    "final_url": "https://www.nber.org/system/files/working_papers/w9305/w9305.pdf",
+    "retrieved_at": "2026-11-04T11:46:38Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "sachs2003_nber_w9490.pdf",
+    "requested_url": "https://www.nber.org/system/files/working_papers/w9490/w9490.pdf",
+    "final_url": "https://www.nber.org/system/files/working_papers/w9490/w9490.pdf",
+    "retrieved_at": "2026-11-04T11:46:40Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "ajr_handbook_nber_w10481.pdf",
+    "requested_url": "https://www.nber.org/system/files/working_papers/w10481/w10481.pdf",
+    "final_url": "https://www.nber.org/system/files/working_papers/w10481/w10481.pdf",
+    "retrieved_at": "2026-11-04T11:46:42Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "easterly_levine_nber_w9106.pdf",
+    "requested_url": "https://www.nber.org/system/files/working_papers/w9106/w9106.pdf",
+    "final_url": "https://www.nber.org/system/files/working_papers/w9106/w9106.pdf",
+    "retrieved_at": "2026-11-04T11:46:43Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "nobel2024_scientific_background.pdf",
+    "requested_url": "https://www.nobelprize.org/uploads/2024/10/advanced-economicsciencesprize2024.pdf",
+    "final_url": "https://www.nobelprize.org/uploads/2024/10/advanced-economicsciencesprize2024.pdf",
+    "retrieved_at": "2026-11-04T11:46:43Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "nobel2024_popular.pdf",
+    "requested_url": "https://www.nobelprize.org/uploads/2024/10/popular-economicsciencesprize2024.pdf",
+    "final_url": "https://www.nobelprize.org/uploads/2024/10/popular-economicsciencesprize2024.pdf",
+    "retrieved_at": "2026-11-04T11:46:43Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "union_citers_2013plus.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites:W3124166904|W3124131699,from_publication_date:2013-01-01&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites:W3124166904|W3124131699,from_publication_date:2013-01-01&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:47:26Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "union_citers_2013plus_albouy.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites:W3124166904|W3124131699,from_publication_date:2013-01-01,cites:W1969918011&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites:W3124166904|W3124131699,from_publication_date:2013-01-01,cites:W1969918011&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:47:26Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "union_citers_all.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites:W3124166904|W3124131699&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites:W3124166904|W3124131699&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:47:26Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "union_citers_glaeser.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites:W3124166904|W3124131699,cites:W2890314743&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites:W3124166904|W3124131699,cites:W2890314743&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:47:26Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "union_citers_sachs.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites:W3124166904|W3124131699,cites:W2105278501|W3125747705&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites:W3124166904|W3124131699,cites:W2105278501|W3125747705&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:47:27Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "union_citers_2005plus.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites:W3124166904|W3124131699,from_publication_date:2005-01-01&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites:W3124166904|W3124131699,from_publication_date:2005-01-01&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:47:27Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "union_citers_2005plus_glaeser.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites:W3124166904|W3124131699,from_publication_date:2005-01-01,cites:W2890314743&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites:W3124166904|W3124131699,from_publication_date:2005-01-01,cites:W2890314743&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:47:27Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "s2_ajr2001.json",
+    "requested_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1257/aer.91.5.1369?fields=paperId,title,citationCount,externalIds",
+    "final_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1257/aer.91.5.1369?fields=paperId,title,citationCount,externalIds",
+    "retrieved_at": "2026-11-04T11:47:33Z",
+    "http_status": 429,
+    "outcome": "HTTP_ERROR_RETRIED_OR_ABANDONED"
+   },
+   {
+    "source": "search_fr1999.json",
+    "requested_url": "https://api.openalex.org/works?search=does%20trade%20cause%20growth&per-page=4&select=id,display_name,publication_year,cited_by_count,type,authorships&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?search=does%20trade%20cause%20growth&per-page=4&select=id,display_name,publication_year,cited_by_count,type,authorships&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:47:36Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "search_rr2000.json",
+    "requested_url": "https://api.openalex.org/works?search=trade%20policy%20and%20economic%20growth%20a%20skeptic%27s%20guide%20to%20the%20cross-national%20evidence&per-page=4&select=id,display_name,publication_year,cited_by_count,type,authorships&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?search=trade%20policy%20and%20economic%20growth%20a%20skeptic%27s%20guide%20to%20the%20cross-national%20evidence&per-page=4&select=id,display_name,publication_year,cited_by_count,type,authorships&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:47:37Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "baseline_fr_2001plus.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites:W2011474190,from_publication_date:2001-01-01&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites:W2011474190,from_publication_date:2001-01-01&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:47:42Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "baseline_fr_2001plus_rr.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites:W2011474190,from_publication_date:2001-01-01,cites:W2588728401|W3121212119&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites:W2011474190,from_publication_date:2001-01-01,cites:W2588728401|W3121212119&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:47:43Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "s2_ajr2001.json",
+    "requested_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1257/aer.91.5.1369?fields=paperId,title,citationCount,externalIds",
+    "final_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1257/aer.91.5.1369?fields=paperId,title,citationCount,externalIds",
+    "retrieved_at": "2026-11-04T11:47:44Z",
+    "http_status": 429,
+    "outcome": "HTTP_ERROR_RETRIED_OR_ABANDONED"
+   },
+   {
+    "source": "s2_ajr2001.json",
+    "requested_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1257/aer.91.5.1369?fields=paperId,title,citationCount,externalIds",
+    "final_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1257/aer.91.5.1369?fields=paperId,title,citationCount,externalIds",
+    "retrieved_at": "2026-11-04T11:48:04Z",
+    "http_status": 429,
+    "outcome": "HTTP_ERROR_RETRIED_OR_ABANDONED"
+   },
+   {
+    "source": "lockabs_F1a.json",
+    "requested_url": "https://api.openalex.org/works/W139828295?select=id,display_name,abstract_inverted_index,type,authorships,primary_location&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works/W139828295?select=id,display_name,abstract_inverted_index,type,authorships,primary_location&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:48:22Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "lockabs_F1b.json",
+    "requested_url": "https://api.openalex.org/works/W2088758477?select=id,display_name,abstract_inverted_index,type,authorships,primary_location&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works/W2088758477?select=id,display_name,abstract_inverted_index,type,authorships,primary_location&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:48:22Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "lockabs_F2a.json",
+    "requested_url": "https://api.openalex.org/works/W2618788771?select=id,display_name,abstract_inverted_index,type,authorships,primary_location&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works/W2618788771?select=id,display_name,abstract_inverted_index,type,authorships,primary_location&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:48:22Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "lockabs_F2b.json",
+    "requested_url": "https://api.openalex.org/works/W1492460295?select=id,display_name,abstract_inverted_index,type,authorships,primary_location&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works/W1492460295?select=id,display_name,abstract_inverted_index,type,authorships,primary_location&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:48:22Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "lockabs_F3a.json",
+    "requested_url": "https://api.openalex.org/works/W3121822366?select=id,display_name,abstract_inverted_index,type,authorships,primary_location&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works/W3121822366?select=id,display_name,abstract_inverted_index,type,authorships,primary_location&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:48:23Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "lockabs_F3b.json",
+    "requested_url": "https://api.openalex.org/works/W2035652178?select=id,display_name,abstract_inverted_index,type,authorships,primary_location&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works/W2035652178?select=id,display_name,abstract_inverted_index,type,authorships,primary_location&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:48:23Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "lockabs_F4a.json",
+    "requested_url": "https://api.openalex.org/works/W2165144879?select=id,display_name,abstract_inverted_index,type,authorships,primary_location&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works/W2165144879?select=id,display_name,abstract_inverted_index,type,authorships,primary_location&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:48:23Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "lockabs_F4b.json",
+    "requested_url": "https://api.openalex.org/works/W1980412904?select=id,display_name,abstract_inverted_index,type,authorships,primary_location&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works/W1980412904?select=id,display_name,abstract_inverted_index,type,authorships,primary_location&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:48:23Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "lockabs_F6a.json",
+    "requested_url": "https://api.openalex.org/works/W3121147769?select=id,display_name,abstract_inverted_index,type,authorships,primary_location&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works/W3121147769?select=id,display_name,abstract_inverted_index,type,authorships,primary_location&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:48:23Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "lockabs_F6b.json",
+    "requested_url": "https://api.openalex.org/works/W2010235856?select=id,display_name,abstract_inverted_index,type,authorships,primary_location&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works/W2010235856?select=id,display_name,abstract_inverted_index,type,authorships,primary_location&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:48:24Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "s2_ajr2001.json",
+    "requested_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1257/aer.91.5.1369?fields=paperId,title,citationCount,externalIds",
+    "final_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1257/aer.91.5.1369?fields=paperId,title,citationCount,externalIds",
+    "retrieved_at": "2026-11-04T11:48:45Z",
+    "http_status": 429,
+    "outcome": "HTTP_ERROR_RETRIED_OR_ABANDONED"
+   },
+   {
+    "source": "top50_abstracts.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites:W3124166904&sort=cited_by_count:desc&per-page=50&select=id,abstract_inverted_index&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites:W3124166904&sort=cited_by_count:desc&per-page=50&select=id,abstract_inverted_index&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:48:52Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "T04_rajan_zingales_nber_w8178.pdf",
+    "requested_url": "https://www.nber.org/system/files/working_papers/w8178/w8178.pdf",
+    "final_url": "https://www.nber.org/system/files/working_papers/w8178/w8178.pdf",
+    "retrieved_at": "2026-11-04T11:49:05Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "T06_chernozhukov_dml_arxiv1608.00060.pdf",
+    "requested_url": "https://arxiv.org/pdf/1608.00060",
+    "final_url": "https://arxiv.org/pdf/1608.00060",
+    "retrieved_at": "2026-11-04T11:49:06Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "T08_hidalgo_productspace_arxiv0708.2090.pdf",
+    "requested_url": "https://arxiv.org/pdf/0708.2090",
+    "final_url": "https://arxiv.org/pdf/0708.2090",
+    "retrieved_at": "2026-11-04T11:49:06Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "T09_levine_finance_nber_w10766.pdf",
+    "requested_url": "https://www.nber.org/system/files/working_papers/w10766/w10766.pdf",
+    "final_url": "https://www.nber.org/system/files/working_papers/w10766/w10766.pdf",
+    "retrieved_at": "2026-11-04T11:49:12Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "T12_hanushek_woessmann_nber_w12832.pdf",
+    "requested_url": "https://www.nber.org/system/files/working_papers/w12832/w12832.pdf",
+    "final_url": "https://www.nber.org/system/files/working_papers/w12832/w12832.pdf",
+    "retrieved_at": "2026-11-04T11:49:17Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "T13_keller_nber_w8573.pdf",
+    "requested_url": "https://www.nber.org/system/files/working_papers/w8573/w8573.pdf",
+    "final_url": "https://www.nber.org/system/files/working_papers/w8573/w8573.pdf",
+    "retrieved_at": "2026-11-04T11:49:19Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "T14_dell_jones_olken_nber_w19578.pdf",
+    "requested_url": "https://www.nber.org/system/files/working_papers/w19578/w19578.pdf",
+    "final_url": "https://www.nber.org/system/files/working_papers/w19578/w19578.pdf",
+    "retrieved_at": "2026-11-04T11:49:23Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "T16_dell_jones_olken_nber_w14132.pdf",
+    "requested_url": "https://www.nber.org/system/files/working_papers/w14132/w14132.pdf",
+    "final_url": "https://www.nber.org/system/files/working_papers/w14132/w14132.pdf",
+    "retrieved_at": "2026-11-04T11:49:25Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "T10_mehlum_moene_torvik_oslo.pdf",
+    "requested_url": "https://www.sv.uio.no/econ/personer/vit/kmoene/InstitutionsResourceCurse.pdf",
+    "final_url": "https://www.sv.uio.no/econ/personer/vit/kmoene/InstitutionsResourceCurse.pdf",
+    "retrieved_at": "2026-11-04T11:49:25Z",
+    "http_status": 404,
+    "outcome": "HTTP_ERROR_RETRIED_OR_ABANDONED"
+   },
+   {
+    "source": "T15_vanderploeg_oxcarre.pdf",
+    "requested_url": "https://ora.ox.ac.uk/objects/uuid:9ee86a44-e6c5-4337-9aac-b3c66bbbfd1a/files/m30d52f1b3c27c7b0c75ebaa4b6e2df8d",
+    "final_url": "https://ora.ox.ac.uk/objects/uuid:9ee86a44-e6c5-4337-9aac-b3c66bbbfd1a/files/m30d52f1b3c27c7b0c75ebaa4b6e2df8d",
+    "retrieved_at": "2026-11-04T11:49:26Z",
+    "http_status": 500,
+    "outcome": "HTTP_ERROR_RETRIED_OR_ABANDONED"
+   },
+   {
+    "source": "T15_vanderploeg_oxcarre.pdf",
+    "requested_url": "https://ora.ox.ac.uk/objects/uuid:9ee86a44-e6c5-4337-9aac-b3c66bbbfd1a/files/m30d52f1b3c27c7b0c75ebaa4b6e2df8d",
+    "final_url": "https://ora.ox.ac.uk/objects/uuid:9ee86a44-e6c5-4337-9aac-b3c66bbbfd1a/files/m30d52f1b3c27c7b0c75ebaa4b6e2df8d",
+    "retrieved_at": "2026-11-04T11:49:28Z",
+    "http_status": 500,
+    "outcome": "HTTP_ERROR_RETRIED_OR_ABANDONED"
+   },
+   {
+    "source": "T15_vanderploeg_oxcarre.pdf",
+    "requested_url": "https://ora.ox.ac.uk/objects/uuid:9ee86a44-e6c5-4337-9aac-b3c66bbbfd1a/files/m30d52f1b3c27c7b0c75ebaa4b6e2df8d",
+    "final_url": "https://ora.ox.ac.uk/objects/uuid:9ee86a44-e6c5-4337-9aac-b3c66bbbfd1a/files/m30d52f1b3c27c7b0c75ebaa4b6e2df8d",
+    "retrieved_at": "2026-11-04T11:49:32Z",
+    "http_status": 500,
+    "outcome": "RETRIEVAL_FAILED"
+   },
+   {
+    "source": "s2_ajr2001.json",
+    "requested_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1257/aer.91.5.1369?fields=paperId,title,citationCount,externalIds",
+    "final_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1257/aer.91.5.1369?fields=paperId,title,citationCount,externalIds",
+    "retrieved_at": "2026-11-04T11:50:06Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "s2_refs_T01_W3124131699.json",
+    "requested_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1257/aer.102.6.3077/references?fields=paperId,title,contexts,intents,isInfluential&limit=1000",
+    "final_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1257/aer.102.6.3077/references?fields=paperId,title,contexts,intents,isInfluential&limit=1000",
+    "retrieved_at": "2026-11-04T11:50:07Z",
+    "http_status": 429,
+    "outcome": "HTTP_ERROR_RETRIED_OR_ABANDONED"
+   },
+   {
+    "source": "s2_refs_T01_W3124131699.json",
+    "requested_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1257/aer.102.6.3077/references?fields=paperId,title,contexts,intents,isInfluential&limit=1000",
+    "final_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1257/aer.102.6.3077/references?fields=paperId,title,contexts,intents,isInfluential&limit=1000",
+    "retrieved_at": "2026-11-04T11:50:16Z",
+    "http_status": 429,
+    "outcome": "HTTP_ERROR_RETRIED_OR_ABANDONED"
+   },
+   {
+    "source": "s2_refs_T01_W3124131699.json",
+    "requested_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1257/aer.102.6.3077/references?fields=paperId,title,contexts,intents,isInfluential&limit=1000",
+    "final_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1257/aer.102.6.3077/references?fields=paperId,title,contexts,intents,isInfluential&limit=1000",
+    "retrieved_at": "2026-11-04T11:50:33Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "s2_refs_T02_W2994756033.json",
+    "requested_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1023/b:joeg.0000031425.72248.85/references?fields=paperId,title,contexts,intents,isInfluential&limit=1000",
+    "final_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1023/b:joeg.0000031425.72248.85/references?fields=paperId,title,contexts,intents,isInfluential&limit=1000",
+    "retrieved_at": "2026-11-04T11:50:34Z",
+    "http_status": 429,
+    "outcome": "HTTP_ERROR_RETRIED_OR_ABANDONED"
+   },
+   {
+    "source": "s2_refs_T02_W2994756033.json",
+    "requested_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1023/b:joeg.0000031425.72248.85/references?fields=paperId,title,contexts,intents,isInfluential&limit=1000",
+    "final_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1023/b:joeg.0000031425.72248.85/references?fields=paperId,title,contexts,intents,isInfluential&limit=1000",
+    "retrieved_at": "2026-11-04T11:50:43Z",
+    "http_status": 429,
+    "outcome": "HTTP_ERROR_RETRIED_OR_ABANDONED"
+   },
+   {
+    "source": "crossref_top01.json",
+    "requested_url": "https://api.crossref.org/works/10.1257/aer.102.6.3077?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1257/aer.102.6.3077?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:50:44Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top02.json",
+    "requested_url": "https://api.crossref.org/works/10.1023/b:joeg.0000031425.72248.85?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1023/b:joeg.0000031425.72248.85?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:50:44Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top03.json",
+    "requested_url": "https://api.crossref.org/works/10.1023/b:joeg.0000038933.16398.ed?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1023/b:joeg.0000038933.16398.ed?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:50:45Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top04.json",
+    "requested_url": "https://api.crossref.org/works/10.1016/s0304-405x(03)00125-9?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1016/s0304-405x(03)00125-9?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:50:45Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top05.json",
+    "requested_url": "https://api.crossref.org/works/10.3386/w10481?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.3386/w10481?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:50:46Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top06.json",
+    "requested_url": "https://api.crossref.org/works/10.1111/ectj.12097?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1111/ectj.12097?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:50:47Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top07.json",
+    "requested_url": "https://api.crossref.org/works/10.1007/978-3-319-38936-3_2?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1007/978-3-319-38936-3_2?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:50:47Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top08.json",
+    "requested_url": "https://api.crossref.org/works/10.1126/science.1144581?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1126/science.1144581?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:50:48Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top09.json",
+    "requested_url": "https://api.crossref.org/works/10.1016/s1574-0684(05)01012-9?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1016/s1574-0684(05)01012-9?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:50:48Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top10.json",
+    "requested_url": "https://api.crossref.org/works/10.1111/j.1468-0297.2006.01045.x?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1111/j.1468-0297.2006.01045.x?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:50:49Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top11.json",
+    "requested_url": "https://api.crossref.org/works/10.1016/s1574-0684(05)01006-3?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1016/s1574-0684(05)01006-3?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:50:49Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top12.json",
+    "requested_url": "https://api.crossref.org/works/10.1257/jel.46.3.607?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1257/jel.46.3.607?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:50:50Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top13.json",
+    "requested_url": "https://api.crossref.org/works/10.1257/0022051042177685?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1257/0022051042177685?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:50:50Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top14.json",
+    "requested_url": "https://api.crossref.org/works/10.1257/jel.52.3.740?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1257/jel.52.3.740?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:50:51Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top15.json",
+    "requested_url": "https://api.crossref.org/works/10.1257/jel.49.2.366?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1257/jel.49.2.366?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:50:51Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top16.json",
+    "requested_url": "https://api.crossref.org/works/10.1257/mac.4.3.66?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1257/mac.4.3.66?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:50:52Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top17.json",
+    "requested_url": "https://api.crossref.org/works/10.1111/j.1542-4774.2010.tb00537.x?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1111/j.1542-4774.2010.tb00537.x?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:50:52Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top18.json",
+    "requested_url": "https://api.crossref.org/works/10.1257/aer.101.7.3221?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1257/aer.101.7.3221?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:50:53Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top19.json",
+    "requested_url": "https://api.crossref.org/works/10.1596/1813-9450-3630?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1596/1813-9450-3630?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:50:53Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top20.json",
+    "requested_url": "https://api.crossref.org/works/10.1257/089533005774357860?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1257/089533005774357860?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:50:54Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top21.json",
+    "requested_url": "https://api.crossref.org/works/10.1016/s0304-3932(02)00200-3?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1016/s0304-3932(02)00200-3?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:50:54Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top22.json",
+    "requested_url": "https://api.crossref.org/works/10.1257/aer.99.4.1218?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1257/aer.99.4.1218?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:50:55Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top23.json",
+    "requested_url": "https://api.crossref.org/works/10.1257/jel.48.1.3?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1257/jel.48.1.3?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:50:55Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top25.json",
+    "requested_url": "https://api.crossref.org/works/10.1257/aer.98.3.808?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1257/aer.98.3.808?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:50:56Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top26.json",
+    "requested_url": "https://api.crossref.org/works/10.1257/jep.24.2.3?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1257/jep.24.2.3?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:50:56Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top27.json",
+    "requested_url": "https://api.crossref.org/works/10.1016/s0304-405x(02)00255-6?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1016/s0304-405x(02)00255-6?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:50:57Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top28.json",
+    "requested_url": "https://api.crossref.org/works/10.1080/00220380500405261?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1080/00220380500405261?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:50:57Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top29.json",
+    "requested_url": "https://api.crossref.org/works/10.1257/jel.53.4.898?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1257/jel.53.4.898?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:50:58Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top30.json",
+    "requested_url": "https://api.crossref.org/works/10.1162/jeea.2006.4.1.37?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1162/jeea.2006.4.1.37?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:50:58Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top31.json",
+    "requested_url": "https://api.crossref.org/works/10.1016/s0304-3932(02)00208-8?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1016/s0304-3932(02)00208-8?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:50:59Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top32.json",
+    "requested_url": "https://api.crossref.org/works/10.1093/0199267669.001.0001?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1093/0199267669.001.0001?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:51:00Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "s2_refs_T02_W2994756033.json",
+    "requested_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1023/b:joeg.0000031425.72248.85/references?fields=paperId,title,contexts,intents,isInfluential&limit=1000",
+    "final_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1023/b:joeg.0000031425.72248.85/references?fields=paperId,title,contexts,intents,isInfluential&limit=1000",
+    "retrieved_at": "2026-11-04T11:51:00Z",
+    "http_status": 404,
+    "outcome": "HTTP_ERROR_RETRIED_OR_ABANDONED"
+   },
+   {
+    "source": "crossref_top33.json",
+    "requested_url": "https://api.crossref.org/works/10.1146/annurev.polisci.10.081205.095418?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1146/annurev.polisci.10.081205.095418?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:51:00Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top34.json",
+    "requested_url": "https://api.crossref.org/works/10.1111/j.1468-0491.2008.00391.x?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1111/j.1468-0491.2008.00391.x?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:51:01Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "s2_refs_T03_W2890314743.json",
+    "requested_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1023/b:joeg.0000038933.16398.ed/references?fields=paperId,title,contexts,intents,isInfluential&limit=1000",
+    "final_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1023/b:joeg.0000038933.16398.ed/references?fields=paperId,title,contexts,intents,isInfluential&limit=1000",
+    "retrieved_at": "2026-11-04T11:51:02Z",
+    "http_status": 429,
+    "outcome": "HTTP_ERROR_RETRIED_OR_ABANDONED"
+   },
+   {
+    "source": "crossref_top35.json",
+    "requested_url": "https://api.crossref.org/works/10.1162/0034653053970339?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1162/0034653053970339?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:51:02Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top36.json",
+    "requested_url": "https://api.crossref.org/works/10.1257/aer.98.1.439?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1257/aer.98.1.439?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:51:02Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top37.json",
+    "requested_url": "https://api.crossref.org/works/10.1007/s10887-012-9081-x?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1007/s10887-012-9081-x?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:51:03Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top38.json",
+    "requested_url": "https://api.crossref.org/works/10.1007/s10887-005-4712-0?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1007/s10887-005-4712-0?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:51:03Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top39.json",
+    "requested_url": "https://api.crossref.org/works/10.1257/jel.48.2.424?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1257/jel.48.2.424?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:51:04Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top40.json",
+    "requested_url": "https://api.crossref.org/works/10.1257/aer.100.5.2060?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1257/aer.100.5.2060?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:51:04Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top41.json",
+    "requested_url": "https://api.crossref.org/works/10.1257/aer.98.1.267?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1257/aer.98.1.267?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:51:05Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top42.json",
+    "requested_url": "https://api.crossref.org/works/10.1257/0002828054825574?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1257/0002828054825574?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:51:05Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top43.json",
+    "requested_url": "https://api.crossref.org/works/10.1257/jep.23.2.29?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1257/jep.23.2.29?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:51:06Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top44.json",
+    "requested_url": "https://api.crossref.org/works/10.1080/00343404.2012.748978?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1080/00343404.2012.748978?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:51:06Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top45.json",
+    "requested_url": "https://api.crossref.org/works/10.1093/jae/ejs033?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1093/jae/ejs033?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:51:07Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top46.json",
+    "requested_url": "https://api.crossref.org/works/10.1162/rest_a_00161?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1162/rest_a_00161?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:51:07Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top47.json",
+    "requested_url": "https://api.crossref.org/works/10.1016/j.jce.2003.08.005?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1016/j.jce.2003.08.005?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:51:08Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top48.json",
+    "requested_url": "https://api.crossref.org/works/10.1111/j.1467-937x.2007.00435.x?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1111/j.1467-937x.2007.00435.x?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:51:08Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top49.json",
+    "requested_url": "https://api.crossref.org/works/10.1162/qjec.2008.123.1.139?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1162/qjec.2008.123.1.139?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:51:09Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "crossref_top50.json",
+    "requested_url": "https://api.crossref.org/works/10.1162/rest.90.4.643?mailto=grokbot-audit@localhost",
+    "final_url": "https://api.crossref.org/works/10.1162/rest.90.4.643?mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:51:09Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "s2_refs_T03_W2890314743.json",
+    "requested_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1023/b:joeg.0000038933.16398.ed/references?fields=paperId,title,contexts,intents,isInfluential&limit=1000",
+    "final_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1023/b:joeg.0000038933.16398.ed/references?fields=paperId,title,contexts,intents,isInfluential&limit=1000",
+    "retrieved_at": "2026-11-04T11:51:10Z",
+    "http_status": 429,
+    "outcome": "HTTP_ERROR_RETRIED_OR_ABANDONED"
+   },
+   {
+    "source": "s2_refs_T03_W2890314743.json",
+    "requested_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1023/b:joeg.0000038933.16398.ed/references?fields=paperId,title,contexts,intents,isInfluential&limit=1000",
+    "final_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1023/b:joeg.0000038933.16398.ed/references?fields=paperId,title,contexts,intents,isInfluential&limit=1000",
+    "retrieved_at": "2026-11-04T11:51:27Z",
+    "http_status": 429,
+    "outcome": "HTTP_ERROR_RETRIED_OR_ABANDONED"
+   },
+   {
+    "source": "recent25_abstracts.json",
+    "requested_url": "https://api.openalex.org/works?filter=openalex:W4292849668|W4212979054|W4223529822|W4224261420|W3165371825|W4307547529|W4319016949|W4200480718|W4206178768|W3211527536|W4285081985|W4386322040|W4292663674|W3124497653|W4318937711|W4388274323|W4281705180|W4387877962|W4386647200|W3124943234|W4293403519|W4200592490|W4391180104|W4390870694|W4200071543&per-page=50&select=id,abstract_inverted_index&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=openalex:W4292849668|W4212979054|W4223529822|W4224261420|W3165371825|W4307547529|W4319016949|W4200480718|W4206178768|W3211527536|W4285081985|W4386322040|W4292663674|W3124497653|W4318937711|W4388274323|W4281705180|W4387877962|W4386647200|W3124943234|W4293403519|W4200592490|W4391180104|W4390870694|W4200071543&per-page=50&select=id,abstract_inverted_index&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:51:44Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "s2_refs_T03_W2890314743.json",
+    "requested_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1023/b:joeg.0000038933.16398.ed/references?fields=paperId,title,contexts,intents,isInfluential&limit=1000",
+    "final_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1023/b:joeg.0000038933.16398.ed/references?fields=paperId,title,contexts,intents,isInfluential&limit=1000",
+    "retrieved_at": "2026-11-04T11:51:59Z",
+    "http_status": 429,
+    "outcome": "HTTP_ERROR_RETRIED_OR_ABANDONED"
+   },
+   {
+    "source": "s2_refs_T03_W2890314743.json",
+    "requested_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1023/b:joeg.0000038933.16398.ed/references?fields=paperId,title,contexts,intents,isInfluential&limit=1000",
+    "final_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1023/b:joeg.0000038933.16398.ed/references?fields=paperId,title,contexts,intents,isInfluential&limit=1000",
+    "retrieved_at": "2026-11-04T11:53:04Z",
+    "http_status": 429,
+    "outcome": "HTTP_ERROR_RETRIED_OR_ABANDONED"
+   },
+   {
+    "source": "s2_refs_T03_W2890314743.json",
+    "requested_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1023/b:joeg.0000038933.16398.ed/references?fields=paperId,title,contexts,intents,isInfluential&limit=1000",
+    "final_url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1023/b:joeg.0000038933.16398.ed/references?fields=paperId,title,contexts,intents,isInfluential&limit=1000",
+    "retrieved_at": "2026-11-04T11:55:12Z",
+    "http_status": 429,
+    "outcome": "HTTP_ERROR_RETRIED_OR_ABANDONED"
+   },
+   {
+    "source": "recent_cocite_RO.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites:W3124166904,cites:W2994756033,from_publication_date:2021-11-04&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites:W3124166904,cites:W2994756033,from_publication_date:2021-11-04&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:56:00Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "recent_cocite_HB.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites:W3124166904,cites:W1580107285|W2108614304,from_publication_date:2021-11-04&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites:W3124166904,cites:W1580107285|W2108614304,from_publication_date:2021-11-04&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:56:01Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "recent_cocite_RV.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites:W3124166904,cites:W3125412951|W3021593216|W1568632324,from_publication_date:2021-11-04&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites:W3124166904,cites:W3125412951|W3021593216|W1568632324,from_publication_date:2021-11-04&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:56:01Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "recent_cocite_GL.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites:W3124166904,cites:W2890314743,from_publication_date:2021-11-04&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites:W3124166904,cites:W2890314743,from_publication_date:2021-11-04&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:56:01Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "recent_cocite_SA.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites:W3124166904,cites:W2105278501|W3125747705,from_publication_date:2021-11-04&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites:W3124166904,cites:W2105278501|W3125747705,from_publication_date:2021-11-04&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:56:02Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "recent_cocite_AL.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites:W3124166904,cites:W1969918011,from_publication_date:2021-11-04&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites:W3124166904,cites:W1969918011,from_publication_date:2021-11-04&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:56:02Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "recent_cocite_EL.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites:W3124166904,cites:W3122513675,from_publication_date:2021-11-04&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites:W3124166904,cites:W3122513675,from_publication_date:2021-11-04&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:56:02Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "recent_cocite_HJ.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites:W3124166904,cites:W3122705141|W2128423609|W2891061867,from_publication_date:2021-11-04&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites:W3124166904,cites:W3122705141|W2128423609|W2891061867,from_publication_date:2021-11-04&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:56:02Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "recent_cocite_F2a.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites:W3124166904,cites:W2618788771,from_publication_date:2021-11-04&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites:W3124166904,cites:W2618788771,from_publication_date:2021-11-04&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:56:03Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "recent_cocite_F6a.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites:W3124166904,cites:W3121147769,from_publication_date:2021-11-04&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites:W3124166904,cites:W3121147769,from_publication_date:2021-11-04&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:56:03Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "recent_cocite_F6b.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites:W3124166904,cites:W2010235856,from_publication_date:2021-11-04&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites:W3124166904,cites:W2010235856,from_publication_date:2021-11-04&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:56:03Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "recent_cocite_F4b.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites:W3124166904,cites:W1980412904,from_publication_date:2021-11-04&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites:W3124166904,cites:W1980412904,from_publication_date:2021-11-04&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:56:04Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "recent_cocite_F4a.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites:W3124166904,cites:W2165144879,from_publication_date:2021-11-04&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites:W3124166904,cites:W2165144879,from_publication_date:2021-11-04&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:56:04Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "recent_all_RO.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites:W2994756033,from_publication_date:2021-11-04&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites:W2994756033,from_publication_date:2021-11-04&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:56:04Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "recent_all_HB.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites:W1580107285|W2108614304,from_publication_date:2021-11-04&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites:W1580107285|W2108614304,from_publication_date:2021-11-04&per-page=1&select=id&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:56:05Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "citers_groupby_grants_funder.json",
+    "requested_url": "https://api.openalex.org/works?filter=cites:W3124166904&group_by=grants.funder&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works?filter=cites:W3124166904&group_by=grants.funder&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:58:27Z",
+    "http_status": 400,
+    "outcome": "HTTP_ERROR_RETRIED_OR_ABANDONED"
+   },
+   {
+    "source": "work_W2011474190.json",
+    "requested_url": "https://api.openalex.org/works/W2011474190?select=id,display_name,publication_year,authorships&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works/W2011474190?select=id,display_name,publication_year,authorships&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:58:44Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "work_W2588728401.json",
+    "requested_url": "https://api.openalex.org/works/W2588728401?select=id,display_name,publication_year,authorships&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works/W2588728401?select=id,display_name,publication_year,authorships&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:58:44Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   },
+   {
+    "source": "work_W3121212119.json",
+    "requested_url": "https://api.openalex.org/works/W3121212119?select=id,display_name,publication_year,authorships&mailto=grokbot-audit@localhost",
+    "final_url": "https://api.openalex.org/works/W3121212119?select=id,display_name,publication_year,authorships&mailto=grokbot-audit@localhost",
+    "retrieved_at": "2026-11-04T11:58:44Z",
+    "http_status": 200,
+    "outcome": "AVAILABLE"
+   }
+  ],
+  "limitations": [
+   "Instrument validated only on supplied packets (<=26 sources, <=70 edges); this open-retrieval run is outside its validation boundary.",
+   "Semantic Scholar citation contexts: HTTP 429 repeatedly; citing-passage coverage 13/50 top citers and 0/25 sampled recent citers.",
+   "Mehlum et al. 2006 (404) and van der Ploeg 2011 (500 x3) not retrieved.",
+   "OpenAlex conflates AJR 2001 with the 2012 Reply and truncates AJR's own reference list (13 indexed).",
+   "Most full texts are working-paper or preprint versions, not the published versions."
+  ]
+ },
+ "declared_inputs": [
+  {
+   "path": "examples/research/acemoglu-colonial-origins/citation-network/sources/AJR2001-excerpts.txt",
+   "sha256": "fbcc5dc85c0ecee424fdde14941091158136176ade8636eb581e900a560db235"
+  },
+  {
+   "path": "examples/research/acemoglu-colonial-origins/citation-network/sources/HB2004-excerpts.txt",
+   "sha256": "4192933e87a87024fe23441673d315fb83d2f4ec50f82fb4ce65af768981a782"
+  },
+  {
+   "path": "examples/research/acemoglu-colonial-origins/citation-network/sources/NOBELSCI-excerpts.txt",
+   "sha256": "0d7a4d737c5b7ba5c71e7375dd9da3d092fd5457845236d1ec670281d0a9ee05"
+  },
+  {
+   "path": "examples/research/acemoglu-colonial-origins/citation-network/sources/NOBELPOP-excerpts.txt",
+   "sha256": "c379015af6da9615ce32686cf56038997ce5cfe98ed6e021b60eb091672c8e24"
+  },
+  {
+   "path": "examples/research/acemoglu-colonial-origins/citation-network/sources/RODRIK2004-excerpts.txt",
+   "sha256": "fbf18cbead0eedb59c635bf9cc22c1f67ce3bb8063766bd380fbb9340dfd5ac3"
+  },
+  {
+   "path": "examples/research/acemoglu-colonial-origins/citation-network/sources/GLAESER2004-excerpts.txt",
+   "sha256": "45f853017015a9effc2524076136c13befcb3a7314a49ca9369f4edffca886e4"
+  },
+  {
+   "path": "examples/research/acemoglu-colonial-origins/citation-network/sources/SACHS2003-excerpts.txt",
+   "sha256": "2503109cdf54f112d18dae24c292ff55eff77b84bb752c2ac4df9f0f39cd99d7"
+  },
+  {
+   "path": "examples/research/acemoglu-colonial-origins/citation-network/sources/EL2003-excerpts.txt",
+   "sha256": "250c951be95cd24681f6468cf480cdffa59050d288fd59937ca0bde89ae7b0c9"
+  },
+  {
+   "path": "examples/research/acemoglu-colonial-origins/citation-network/sources/DML2018-excerpts.txt",
+   "sha256": "47887ade0d8afb15008670cab2af9d58ad5747a76c862f3a261041370182ea95"
+  },
+  {
+   "path": "examples/research/acemoglu-colonial-origins/citation-network/sources/HW2008-excerpts.txt",
+   "sha256": "62211d70df92a6df294f184031fa3e7e6e42aabf70651f141741790e9f476f5b"
+  },
+  {
+   "path": "examples/research/acemoglu-colonial-origins/citation-network/sources/excerpts_manifest.json",
+   "sha256": "63361f2f44631d5d90259b9c194e50215948a37bdbe3accdf23206f5e803b922"
+  },
+  {
+   "path": "examples/research/acemoglu-colonial-origins/citation-network/lock/section_E_preregistration.md",
+   "sha256": "84847dd02aca0af819994008ae98d407fae5f75560c8d5de9b628346df965154"
+  },
+  {
+   "path": "examples/research/acemoglu-colonial-origins/citation-network/lock/locked_sources.json",
+   "sha256": "521b3a52716a5dc75e8684bf7464cb3d90aea124815282d19ff82ee25f855a3c"
+  },
+  {
+   "path": "examples/research/acemoglu-colonial-origins/citation-network/lock/section_E_lock_time.txt",
+   "sha256": "64ebd67b23fc7569ea787b1108c36198594df728ddfefbcf1dc863af796200ad"
+  },
+  {
+   "path": "examples/research/acemoglu-colonial-origins/citation-network/retrieval/retrieval_log.jsonl",
+   "sha256": "b28d9cfa5d1ad618e53299df2dd2bccbf540afab95b158e22aedfd6839175296"
+  }
+ ],
+ "reviews": []
+}

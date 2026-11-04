@@ -1,0 +1,92 @@
+{
+ "F1": [
+  {
+   "id": "https://openalex.org/W139828295",
+   "doi": null,
+   "title": "Economic impact of malaria in Malawian households.",
+   "year": 1994,
+   "cited_by": 135,
+   "venue": "PubMed"
+  },
+  {
+   "id": "https://openalex.org/W2088758477",
+   "doi": "https://doi.org/10.1016/0035-9203(95)90471-9",
+   "title": "Socio-economic risk factors for malaria in a peri-urban area of The Gambia",
+   "year": 1995,
+   "cited_by": 127,
+   "venue": "Transactions of the Royal Society of Tropical Medicine and Hygiene"
+  }
+ ],
+ "F2": [
+  {
+   "id": "https://openalex.org/W2618788771",
+   "doi": "https://doi.org/10.1177/016001799761012334",
+   "title": "Geography and Economic Development",
+   "year": 1999,
+   "cited_by": 1361,
+   "venue": "International Regional Science Review"
+  },
+  {
+   "id": "https://openalex.org/W1492460295",
+   "doi": "https://doi.org/10.2307/144349",
+   "title": "Development, Geography, and Economic Theory",
+   "year": 1998,
+   "cited_by": 1307,
+   "venue": "Economic Geography"
+  }
+ ],
+ "F3": [
+  {
+   "id": "https://openalex.org/W3121822366",
+   "doi": "https://doi.org/10.1086/261723",
+   "title": "Human Capital, Fertility, and Economic Growth",
+   "year": 1990,
+   "cited_by": 1988,
+   "venue": "Journal of Political Economy"
+  },
+  {
+   "id": "https://openalex.org/W2035652178",
+   "doi": "https://doi.org/10.1086/261841",
+   "title": "Public versus Private Investment in Human Capital: Endogenous Growth and Income Inequality",
+   "year": 1992,
+   "cited_by": 1038,
+   "venue": "Journal of Political Economy"
+  }
+ ],
+ "F4": [
+  {
+   "id": "https://openalex.org/W2165144879",
+   "doi": "https://doi.org/10.2307/2171753",
+   "title": "Instrumental Variables Regression with Weak Instruments",
+   "year": 1997,
+   "cited_by": 7336,
+   "venue": "Econometrica"
+  },
+  {
+   "id": "https://openalex.org/W1980412904",
+   "doi": "https://doi.org/10.1080/01621459.1995.10476536",
+   "title": "Problems with Instrumental Variables Estimation when the Correlation between the Instruments and the Endogenous Explanatory Variable is Weak",
+   "year": 1995,
+   "cited_by": 3713,
+   "venue": "Journal of the American Statistical Association"
+  }
+ ],
+ "F6": [
+  {
+   "id": "https://openalex.org/W3121147769",
+   "doi": "https://doi.org/10.2307/1060065",
+   "title": "Institutions, Institutional Change and Economic Performance",
+   "year": 1991,
+   "cited_by": 25224,
+   "venue": "Southern Economic Journal"
+  },
+  {
+   "id": "https://openalex.org/W2010235856",
+   "doi": "https://doi.org/10.1111/j.1468-0343.1995.tb00111.x",
+   "title": "INSTITUTIONS AND ECONOMIC PERFORMANCE: CROSS\u2010COUNTRY TESTS USING ALTERNATIVE INSTITUTIONAL MEASURES",
+   "year": 1995,
+   "cited_by": 5131,
+   "venue": "Economics and Politics"
+  }
+ ]
+}

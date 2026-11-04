@@ -1,0 +1,30 @@
+Bounded excerpts from NOBELSCI: Committee for the Prize in Economic Sciences in Memory of Alfred Nobel (2024). Scientific Background: Acemoglu, Johnson and Robinson.
+PDF SHA-256 0a8e2746fef87c2481880f8fb479d0d51e1725c86771a12e54d3a298391cfcd2; extraction `pdftotext -enc UTF-8` (poppler) of that PDF, text SHA-256 5ea7ef5080e8d1145a72e248fd7f1d981a2777ab267afedb4a6920a0e72d36db.
+Not the full document. Each excerpt body is an exact substring of the extraction output; offsets in that output and in this file are recorded in excerpts_manifest.json.
+
+=== NS-E1 | section | PDF page 19 ===
+The actual IV-estimate should thus be taken with a grain of salt. Nevertheless, the
+evidence presented by Acemoglu, Johnson, and Robinson strongly suggests that the type of
+institutions implemented by the colonizers is a key mechanism driving the relationship
+between contemporary GDP and the conditions at colonization. Moreover, it is difficult to
+imagine that we would observe a reversal of fortune, where once prosperous regions became
+less so, had it not been for the extractive institutions established by the colonizers in the areas
+that were prosperous prior to colonization.
+=== end NS-E1 ===
+
+=== NS-E2 | section | PDF page 19 ===
+Another point of discussion involves the reliability of the data on settler mortality
+from the 18th century, which are sometimes sketchy and provide rough estimates on initial
+settler mortality (see Albouy, 2012, for criticism). However, the core results hold up when the
+authors exclude African nations, which were the subject of much of the dispute. Moreover,
+the results are robust to capping settler mortality from above, to ensure that identification
+does not come from extremely high estimates of the settler mortality rates.
+=== end NS-E2 ===
+
+=== NS-E3 | section | PDF page 19 ===
+Ultimately, however, human
+capital and institutions are both determinants of growth, and it is very hard to distinguish
+Acemoglu, Gallego, and Robinson’s argument from the fact that human capital has an
+independent effect on growth.
+=== end NS-E3 ===
+

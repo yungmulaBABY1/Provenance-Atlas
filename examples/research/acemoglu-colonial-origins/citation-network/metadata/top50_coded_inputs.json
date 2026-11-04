@@ -1,0 +1,778 @@
+[
+ {
+  "node": "N01",
+  "id": "W3124131699",
+  "doi": "https://doi.org/10.1257/aer.102.6.3077",
+  "title": "The Colonial Origins of Comparative Development: An Empirical Investigation: Reply",
+  "authors": "Daron Acemo\u011flu, Simon Johnson, James A. Robinson",
+  "year": 2012,
+  "cb": 6266,
+  "type": "article",
+  "venue": "American Economic Review",
+  "flags": [
+   "RV",
+   "HJ",
+   "AL",
+   "EL"
+  ],
+  "abstract": "Acemoglu, Johnson, and Robinson (2001) established that economic institutions today are correlated with expected mortality of European colonialists. David Albouy argues this relationship is not robust. He drops all data from Latin America and much of the data from Africa, making up almost 60 percent of our sample, despite much information on the mortality of Europeans in those places during the colonial period. He also includes a \u201ccampaign\u201d dummy that is coded inconsistently; even modest corrections undermine his claims. We also show that limiting the effect of outliers strengthens our results, making them robust to even extreme versions of Albouy's critiques. (JEL D02, E23, F54, I12, N40, O43, P14)"
+ },
+ {
+  "node": "N02",
+  "id": "W2994756033",
+  "doi": "https://doi.org/10.1023/b:joeg.0000031425.72248.85",
+  "title": "Institutions Rule: The Primacy of Institutions Over Geography and Integration in Economic Development",
+  "authors": "Dani Rodrik, Arvind Subramanian, Francesco Trebbi",
+  "year": 2004,
+  "cb": 5484,
+  "type": "article",
+  "venue": "Journal of Economic Growth",
+  "flags": [
+   "RV",
+   "HJ",
+   "SA",
+   "EL"
+  ],
+  "abstract": ""
+ },
+ {
+  "node": "N03",
+  "id": "W2890314743",
+  "doi": "https://doi.org/10.1023/b:joeg.0000038933.16398.ed",
+  "title": "Do Institutions Cause Growth?",
+  "authors": "Edward L. Glaeser, Rafael La Porta, Florencio L\u00f3pez\u2010de\u2010Silanes",
+  "year": 2004,
+  "cb": 3990,
+  "type": "article",
+  "venue": "Journal of Economic Growth",
+  "flags": [
+   "RV",
+   "HJ",
+   "RO",
+   "EL"
+  ],
+  "abstract": "We revisit the debate over whether political institutions cause economic growth, or whether, alternatively, growth and human capital accumulation lead to institutional improvement. We find that most indicators of institutional quality used to establish the proposition that institutions cause growth are constructed to be conceptually unsuitable for that purpose. We also find that some of the instrumental variable techniques used in the literature are flawed. Basic OLS results, as well as a variety of additional evidence, suggest that (a) human capital is a more basic source of growth than are the institutions, (b) poor countries get out of poverty through good policies, often pursued by dictators, and (c) subsequently improve their political institutions."
+ },
+ {
+  "node": "N04",
+  "id": "W3122778615",
+  "doi": "https://doi.org/10.1016/s0304-405x(03)00125-9",
+  "title": "The great reversals: the politics of financial development in the twentieth century",
+  "authors": "Raghuram G. Rajan, Luigi Zingales",
+  "year": 2003,
+  "cb": 3350,
+  "type": "article",
+  "venue": "Journal of Financial Economics",
+  "flags": [],
+  "abstract": ""
+ },
+ {
+  "node": "N05",
+  "id": "W2108614304",
+  "doi": "https://doi.org/10.3386/w10481",
+  "title": "Institutions as the Fundamental Cause of Long-Run Growth",
+  "authors": "Daron Acemo\u011flu, Simon Johnson, James A. Robinson",
+  "year": 2004,
+  "cb": 3181,
+  "type": "report",
+  "venue": "National Bureau of Economic Research",
+  "flags": [
+   "RV",
+   "HJ"
+  ],
+  "abstract": "This paper develops the empirical and theoretical case that differences in economic institutions are the fundamental cause of differences in economic development.We first document the empirical importance of institutions by focusing on two \"quasi-natural experiments\" in history, the division of Korea into two parts with very different economic institutions and the colonization of much of the world by European powers starting in the fifteenth century.We then develop the basic outline of a framework for thinking about why economic institutions differ across countries.Economic institutions determine the incentives of and the constraints on economic actors, and shape economic outcomes.As such, they are social decisions, chosen for their consequences.Because different groups and individuals typically benefit from different economic institutions, there is generally a conflict over these social choices, ultimately resolved in favor of groups with greater political power.The distribution of political power in society is in turn determined by political institutions and the distribution of resources.Political institutions allocate de jure political power, while groups with greater economic might typically possess greater de facto political power.We therefore view the appropriate theoretical framework as a dynamic one with political institutions and the distribution of resources as the state variables.These variables themselves change over time because prevailing economic institutions affect the distribution of resources, and because groups with de facto political power today strive to change political institutions in order to increase their de jure political power in the future.Economic institutions encouraging economic growth emerge when political institutions allocate power to groups with interests in broad-based property rights enforcement, when they create effective constraints on power-holders, and when there are relatively few rents to be captured by power-holders.We illustrate the assumptions, the workings and the implications of this framework using a number of historical examples."
+ },
+ {
+  "node": "N06",
+  "id": "W3123436326",
+  "doi": "https://doi.org/10.1111/ectj.12097",
+  "title": "Double/debiased machine learning for treatment and structural parameters",
+  "authors": "Victor Chernozhukov, Denis Chetverikov, Mert Demirer",
+  "year": 2017,
+  "cb": 3112,
+  "type": "article",
+  "venue": "Econometrics Journal",
+  "flags": [],
+  "abstract": "We revisit the classic semi\u2010parametric problem of inference on a low\u2010dimensional parameter \u03b80 in the presence of high\u2010dimensional nuisance parameters \u03b70. We depart from the classical setting by allowing for \u03b70 to be so high\u2010dimensional that the traditional assumptions (e.g. Donsker properties) that limit complexity of the parameter space for this object break down. To estimate \u03b70, we consider the use of statistical or machine learning (ML) methods, which are particularly well suited to estimation in modern, very high\u2010dimensional cases. ML methods perform well by employing regularization to reduce variance and trading off regularization bias with overfitting in practice. However, both regularization bias and overfitting in estimating \u03b70 cause a heavy bias in estimators of \u03b80 that are obtained by naively plugging ML estimators of \u03b70 into estimating equations for \u03b80. This bias results in the naive estimator failing to be N\u22121/2 consistent, where N is the sample size. We show that the impact of regularization bias and overfitting on estimation of the parameter of interest \u03b80 can be removed by using two simple, yet critical, ingredients: (1) using Neyman\u2010orthogonal moments/scores that have reduced sensitivity with respect to nuisance parameters to estimate \u03b80; (2) making use of cross\u2010fitting, which provides an efficient form of data\u2010splitting. We call the resulting set of methods double or debiased ML (DML). We verify that DML delivers point estimators that concentrate in an N\u22121/2\u2010neighbourhood of the true parameter values and are approximately unbiased and normally distributed, which allows construction of valid confidence statements. The generic statistical theory of DML is elementary and simultaneously relies on only weak theoretical requirements, which will admit the use of a broad array of modern ML methods for estimating the nuisance parameters, such as random forests, lasso, ridge, deep neural nets, boosted trees, and various hybrids and ensembles of these methods. We illustrate the general theory by applying it to provide theoretical properties of the following: DML applied to learn the main regression parameter in a partially linear regression model; DML applied to learn the coefficient on an endogenous variable in a partially linear instrumental variables model; DML applied to learn the average treatment effect and the average treatment effect on the treated under unconfoundedness; DML applied to learn the local average treatment effect in an instrumental variables setting. In addition to these theoretical applications, we also illustrate the use of DML in three empirical examples."
+ },
+ {
+  "node": "N07",
+  "id": "W2556507681",
+  "doi": "https://doi.org/10.1007/978-3-319-38936-3_2",
+  "title": "The Theory of Economic Development",
+  "authors": "Simone Raudino",
+  "year": 2016,
+  "cb": 3019,
+  "type": "book-chapter",
+  "venue": "Springer eBooks",
+  "flags": [],
+  "abstract": ""
+ },
+ {
+  "node": "N08",
+  "id": "W2064927380",
+  "doi": "https://doi.org/10.1126/science.1144581",
+  "title": "The Product Space Conditions the Development of Nations",
+  "authors": "C\u00e9sar A. Hidalgo, Bailey Klinger, Albert-\u0139aszl\u00f3 Barab\u00e1si",
+  "year": 2007,
+  "cb": 2957,
+  "type": "article",
+  "venue": "Science",
+  "flags": [],
+  "abstract": "Economies grow by upgrading the products they produce and export. The technology, capital, institutions, and skills needed to make newer products are more easily adapted from some products than from others. Here, we study this network of relatedness between products, or \"product space,\" finding that more-sophisticated products are located in a densely connected core whereas less-sophisticated products occupy a less-connected periphery. Empirically, countries move through the product space by developing goods close to those they currently produce. Most countries can reach the core only by traversing empirically infrequent distances, which may help explain why poor countries have trouble developing more competitive exports and fail to converge to the income levels of rich countries."
+ },
+ {
+  "node": "N09",
+  "id": "W1588189399",
+  "doi": "https://doi.org/10.1016/s1574-0684(05)01012-9",
+  "title": "Chapter 12 Finance and Growth: Theory and Evidence",
+  "authors": "Ross Eric Levine",
+  "year": 2005,
+  "cb": 2893,
+  "type": "book-chapter",
+  "venue": "Elsevier eBooks",
+  "flags": [
+   "EL"
+  ],
+  "abstract": ""
+ },
+ {
+  "node": "N10",
+  "id": "W1484474409",
+  "doi": "https://doi.org/10.1111/j.1468-0297.2006.01045.x",
+  "title": "Institutions and the Resource Curse",
+  "authors": "Halvor Mehlum A, Karl Ove Moene, Ragnar Torvik",
+  "year": 2006,
+  "cb": 2874,
+  "type": "article",
+  "venue": "The Economic Journal",
+  "flags": [
+   "HJ"
+  ],
+  "abstract": "Countries rich in natural resources constitute both growth losers and growth winners. We claim that the main reason for these diverging experiences is differences in the quality of institutions. More natural resources push aggregate income down, when institutions are grabber friendly, while more resources raise income, when institutions are producer friendly. We test this theory building on Sachs and Warner\u2019s influential works on the resource curse. Our main hypothesis \u2013 that institutions are decisive for the resource curse \u2013 is confirmed. Our results contrast the claims of Sachs and Warner that institutions do not play a role."
+ },
+ {
+  "node": "N11",
+  "id": "W1580107285",
+  "doi": "https://doi.org/10.1016/s1574-0684(05)01006-3",
+  "title": "Chapter 6 Institutions as a Fundamental Cause of Long-Run Growth",
+  "authors": "Daron Acemo\u011flu, Simon Johnson, James A. Robinson",
+  "year": 2005,
+  "cb": 2498,
+  "type": "book-chapter",
+  "venue": "Elsevier eBooks",
+  "flags": [
+   "RV",
+   "HJ"
+  ],
+  "abstract": ""
+ },
+ {
+  "node": "N12",
+  "id": "W1480274481",
+  "doi": "https://doi.org/10.1257/jel.46.3.607",
+  "title": "The Role of Cognitive Skills in Economic Development",
+  "authors": "Eric Alan Hanushek, Ludger Woessmann",
+  "year": 2008,
+  "cb": 2485,
+  "type": "article",
+  "venue": "Journal of Economic Literature",
+  "flags": [
+   "RV",
+   "HB",
+   "HJ"
+  ],
+  "abstract": "The role of improved schooling, a central part of most development strategies, has become controversial because expansion of school attainment has not guaranteed improved economic conditions. This paper reviews the role of cognitive skills in promoting economic well-being, with a particular focus on the role of school quality and quantity. It concludes that there is strong evidence that the cognitive skills of the population\u2014rather than mere school attainment\u2014are powerfully related to individual earnings, to the distribution of income, and to economic growth. New empirical results show the importance of both minimal and high level skills, the complementarity of skills and the quality of economic institutions, and the robustness of the relationship between skills and growth. International comparisons incorporating expanded data on cognitive skills reveal much larger skill deficits in developing countries than generally derived from just school enrollment and attainment. The magnitude of change needed makes clear that closing the economic gap with developed countries will require major structural changes in schooling institutions."
+ },
+ {
+  "node": "N13",
+  "id": "W3125697804",
+  "doi": "https://doi.org/10.1257/0022051042177685",
+  "title": "International Technology Diffusion",
+  "authors": "Wolfgang Keller",
+  "year": 2004,
+  "cb": 2398,
+  "type": "article",
+  "venue": "Journal of Economic Literature",
+  "flags": [
+   "HJ"
+  ],
+  "abstract": "This paper surveys what is known about the extent of international technology diffusion and channels through which technology spreads. Productivity differences explain much of the variation in incomes across countries, and technology plays a key role in determining productivity. The pattern of worldwide technical change is determined largely by international technology diffusion because a few rich countries account for most of the world's creation of new technology. Cross-country income convergence turns on whether technology diffusion is global or local. There is no indication that international diffusion is inevitable or automatic, but rather, domestic technology investments are necessary. Better understanding of what determines the effectiveness of technology diffusion sheds light on the pace at which the world's technology frontier may expand."
+ },
+ {
+  "node": "N14",
+  "id": "W2104834906",
+  "doi": "https://doi.org/10.1257/jel.52.3.740",
+  "title": "What Do We Learn from the Weather? The New Climate-Economy Literature",
+  "authors": "Melissa Dell, Benjamin F. Jones, Benjamin Olken",
+  "year": 2014,
+  "cb": 2310,
+  "type": "article",
+  "venue": "Journal of Economic Literature",
+  "flags": [
+   "SA",
+   "RO"
+  ],
+  "abstract": "A rapidly growing body of research applies panel methods to examine how temperature, precipitation, and windstorms influence economic outcomes. These studies focus on changes in weather realizations over time within a given spatial area and demonstrate impacts on agricultural output, industrial output, labor productivity, energy demand, health, conflict, and economic growth, among other outcomes. By harnessing exogenous variation over time within a given spatial unit, these studies help credibly identify (i) the breadth of channels linking weather and the economy, (ii) heterogeneous treatment effects across different types of locations, and (iii) nonlinear effects of weather variables. This paper reviews the new literature with two purposes. First, we summarize recent work, providing a guide to its methodologies, datasets, and findings. Second, we consider applications of the new literature, including insights for the \u201cdamage function\u201d within models that seek to assess the potential economic effects of future climate change. (JEL C51, D72, O13, Q51, Q54)"
+ },
+ {
+  "node": "N15",
+  "id": "W3123261979",
+  "doi": "https://doi.org/10.1257/jel.49.2.366",
+  "title": "Natural Resources: Curse or Blessing?",
+  "authors": "Frederick van der Ploeg",
+  "year": 2011,
+  "cb": 2309,
+  "type": "article",
+  "venue": "Journal of Economic Literature",
+  "flags": [
+   "HJ",
+   "GL",
+   "RO"
+  ],
+  "abstract": "Are natural resources a \u201ccurse\u201d or a \u201cblessing\u201d? The empirical evidence suggests either outcome is possible. The paper surveys a variety of hypotheses and supporting evidence for why some countries benefit and others lose from the presence of natural resources. These include that a resource bonanza induces appreciation of the real exchange rate, deindustrialization and bad growth prospects, and that these adverse effects are more severe in volatile countries with bad institutions and lack of rule of law, corruption, presidential democracies, and underdeveloped financial systems. Another hypothesis is that a resource boom reinforces rent grabbing and civil conflict especially if institutions are bad, induces corruption especially in non-democratic countries, and keeps in place bad policies. Finally, resource rich developing economies seem unable to successfully convert their depleting exhaustible resources into other productive assets. The survey also offers some welfare-based fiscal rules for harnessing resource windfalls in developed and developing economies."
+ },
+ {
+  "node": "N16",
+  "id": "W2109890836",
+  "doi": "https://doi.org/10.1257/mac.4.3.66",
+  "title": "Temperature Shocks and Economic Growth: Evidence from the Last Half Century",
+  "authors": "Melissa Dell, Benjamin F. Jones, Benjamin Olken",
+  "year": 2012,
+  "cb": 2267,
+  "type": "article",
+  "venue": "American Economic Journal Macroeconomics",
+  "flags": [
+   "RV",
+   "SA",
+   "RO"
+  ],
+  "abstract": "This paper uses historical fluctuations in temperature within countries to identify its effects on aggregate economic outcomes. We find three primary results. First, higher temperatures substantially reduce economic growth in poor countries. Second, higher temperatures may reduce growth rates, not just the level of output. Third, higher temperatures have wide-ranging effects, reducing agricultural output, industrial output, and political stability. These findings inform debates over climate's role in economic development and suggest the possibility of substantial negative impacts of higher temperatures on poor countries. (JEL E23, O13, Q54, Q56)"
+ },
+ {
+  "node": "N17",
+  "id": "W2148534039",
+  "doi": "https://doi.org/10.1111/j.1542-4774.2010.tb00537.x",
+  "title": "Culture and Institutions: Economic Development in the Regions of Europe",
+  "authors": "Guido Tabellini",
+  "year": 2010,
+  "cb": 2262,
+  "type": "article",
+  "venue": "Journal of the European Economic Association",
+  "flags": [
+   "HJ",
+   "GL",
+   "RO",
+   "EL"
+  ],
+  "abstract": "Does culture have a causal effect on economic development? The data on European regions suggest that it does. Culture is measured by indicators of individual values and beliefs, such as trust and respect for others, and confidence in individual self determination. To isolate the exogenous variation in culture, we rely on two historical variables used as instruments: the literacy rate at the end of the 19th century, and the political institutions in place over the past several centuries. The political and social history of Europe provides a rich source of variation in these two variables at a regional level. The exogenous component of culture due to history is strongly correlated with current regional economic development, after controlling for contemporaneous education, urbanization rates around 1850, and national effects."
+ },
+ {
+  "node": "N18",
+  "id": "W2145309110",
+  "doi": "https://doi.org/10.1257/aer.101.7.3221",
+  "title": "The Slave Trade and the Origins of Mistrust in Africa",
+  "authors": "Nathan Nunn, L\u00e9onard Wantchekon",
+  "year": 2011,
+  "cb": 2208,
+  "type": "article",
+  "venue": "American Economic Review",
+  "flags": [
+   "RV"
+  ],
+  "abstract": "We show that current differences in trust levels within Africa can be traced back to the transatlantic and Indian Ocean slave trades. Combining contemporary individual-level survey data with historical data on slave shipments by ethnic group, we find that individuals whose ancestors were heavily raided during the slave trade are less trusting today. Evidence from a variety of identification strategies suggests that the relationship is causal. Examining causal mechanisms, we show that most of the impact of the slave trade is through factors that are internal to the individual, such as cultural norms, beliefs, and values. (JEL J15, N57, Z13)"
+ },
+ {
+  "node": "N19",
+  "id": "W1934649023",
+  "doi": "https://doi.org/10.1596/1813-9450-3630",
+  "title": "Governance Matters IV : Governance Indicators For 1996-2004",
+  "authors": "Daniel Kaufmann, Aart Kraay, Massimo Mastruzzi",
+  "year": 2005,
+  "cb": 1861,
+  "type": "report",
+  "venue": "World Bank, Washington, DC eBooks",
+  "flags": [
+   "HJ",
+   "GL",
+   "RO"
+  ],
+  "abstract": "Kaufmann, Kraay and Mastruzzi present the newly updated estimates of six dimensions of governance covering 209 countries and territories for five time periods: 1996, 1998, 2000, 2002 and 2004. These indicators are based on several hundred individual variables measuring perceptions of governance, drawn from 37 separate data sources constructed by 31 different organizations. The authors assign these individual measures of governance to categories capturing key dimensions of governance, and use an unobserved component model to construct six aggregate governance indicators in each of the four periods. They present the point estimates of the dimensions of governance as well as the margins of error for each country for the four periods. These margins of error are not unique to perceptions-based measures of governance, but are an important feature of all efforts to measure governance, including objective indicators. In fact, the authors provide examples of how individual objective measures provide an incomplete picture of even the quite particular dimensions of governance that they are intended to measure. The paper also analyzes in some detail changes over time in our estimates of governance; provide a framework for assessing the statistical significance of changes in governance; and suggest a simple rule of thumb for identifying statistically significant changes in country governance over time. The ability to identify significant changes in governance over time is much higher for our aggregate indicators than for any individual indicator. While they find that the quality of governance in a number of countries has changed significantly (in both directions), the authors also provide evidence suggesting that there are no trends, for better or worse, in global averages of governance. Finally, the authors interpret the strong observed correlation between income and governance, and argue against recent efforts to apply a discount to governance performance in low income countries."
+ },
+ {
+  "node": "N20",
+  "id": "W3023420463",
+  "doi": "https://doi.org/10.1257/089533005774357860",
+  "title": "Eight Questions about Corruption",
+  "authors": "Jakob Svensson",
+  "year": 2005,
+  "cb": 1777,
+  "type": "article",
+  "venue": "The Journal of Economic Perspectives",
+  "flags": [
+   "GL"
+  ],
+  "abstract": "This paper will discuss eight frequently asked questions about public corruption: (1) What is corruption? (2) Which countries are the most corrupt? (3) What are the common characteristics of countries with high corruption? (4) What is the magnitude of corruption? (5) Do higher wages for bureaucrats reduce corruption? (6) Can competition reduce corruption?( 7) Why have there been so few (recent) successful attempts to fight corruption? (8) Does corruption adversely affect growth?"
+ },
+ {
+  "node": "N21",
+  "id": "W3122513675",
+  "doi": "https://doi.org/10.1016/s0304-3932(02)00200-3",
+  "title": "Tropics, germs, and crops: how endowments influence economic development",
+  "authors": "William Russell Easterly, Ross Eric Levine",
+  "year": 2003,
+  "cb": 1748,
+  "type": "article",
+  "venue": "Journal of Monetary Economics",
+  "flags": [
+   "RV",
+   "HJ"
+  ],
+  "abstract": ""
+ },
+ {
+  "node": "N22",
+  "id": "W2789051288",
+  "doi": "https://doi.org/10.1257/aer.99.4.1218",
+  "title": "The Origins of State Capacity: Property Rights, Taxation, and Politics",
+  "authors": "Timothy J. Besley, Torsten Persson",
+  "year": 2009,
+  "cb": 1637,
+  "type": "article",
+  "venue": "American Economic Review",
+  "flags": [
+   "HJ"
+  ],
+  "abstract": "Economists generally assume that the state has sufficient institutional capacity to support markets and levy taxes. This paper develops a framework where \u201cpolicy choices\u201d in market regulation and taxation are constrained by past investments in legal and fiscal capacity. It studies the economic and political determinants of such investments, demonstrating that legal and fiscal capacity are typically complements. The results show that, among other things, common interest public goods, such as fighting external wars, as well as political stability and inclusive political institutions, are conducive to building state capacity. Some correlations in cross-country data are consistent with the theory. (JEL D72, E62, H11, H20, P14)"
+ },
+ {
+  "node": "N23",
+  "id": "W4253884756",
+  "doi": "https://doi.org/10.1257/jel.48.1.3",
+  "title": "Civil War",
+  "authors": "Christopher Blattman, Edward A. Miguel",
+  "year": 2010,
+  "cb": 1617,
+  "type": "article",
+  "venue": "Journal of Economic Literature",
+  "flags": [],
+  "abstract": "Most nations have experienced an internal armed conflict since 1960. Yet while civil war is central to many nations' development, it has stood at the periphery of economics research and teaching. The past decade has witnessed a long overdue explosion of research into war's causes and consequences. We summarize progress, identify weaknesses, and chart a path forward. Why war? Existing theory is provocative but incomplete, omitting advances in behavioral economics and making little progress in key areas, like why armed groups form and cohere, or how more than two armed sides compete. Empirical work finds that low per capita incomes and slow economic growth are both robustly linked to civil war. Yet there is little consensus on the most effective policies to avert conflicts or promote postwar recovery. Cross-country analysis of war will benefit from more attention to causal identification and stronger links to theory. We argue that micro-level analysis and case studies are also crucial to decipher war's causes, conduct, and consequences. We bring a growth theoretic approach to the study of conflict consequences to highlight areas for research, most of all the study of war's impact on institutions. We conclude with a plea for new and better data. (JEL D72, D74, O17)"
+ },
+ {
+  "node": "N24",
+  "id": "W2150851272",
+  "doi": null,
+  "title": "1 Economic Geography and International Inequality",
+  "authors": "Globalisation Programme, Stephen J. Redding, Anthony J. Venables",
+  "year": 2010,
+  "cb": 1604,
+  "type": "article",
+  "venue": null,
+  "flags": [
+   "HJ"
+  ],
+  "abstract": "This paper estimates a structural model of economic geography using cross-country data on per capita income, bilateral trade, and the relative price of manufacturing goods. More than 70 % of the variation in per capita income can be explained by the geography of access to markets and to sources of supply of intermediate inputs. These results are robust to the inclusion of other geographical, social, and institutional characteristics. The estimated coefficients are consistent with plausible values for the structural parameters of the model. We find quantitatively important effects of distance, access to the"
+ },
+ {
+  "node": "N25",
+  "id": "W3121534672",
+  "doi": "https://doi.org/10.1257/aer.98.3.808",
+  "title": "Income and Democracy",
+  "authors": "Daron Acemo\u011flu, Simon Johnson, James A. Robinson",
+  "year": 2005,
+  "cb": 1604,
+  "type": "article",
+  "venue": "American Economic Review",
+  "flags": [
+   "RV",
+   "HB"
+  ],
+  "abstract": "Existing studies establish a strong cross-country correlation between income and democracy but do not control for factors that simultaneously affect both variables. We show that controlling for such factors by including country fixed effects removes the statistical association between income per capita and various measures of democracy. We present instrumental-variables estimates that also show no causal effect of income on democracy. The cross-country correlation between income and democracy reflects a positive correlation between changes in income and democracy over the past 500 years. This pattern is consistent with the idea that societies embarked on divergent political-economic development paths at certain critical junctures. (JEL D72, E21)"
+ },
+ {
+  "node": "N26",
+  "id": "W3123293195",
+  "doi": "https://doi.org/10.1257/jep.24.2.3",
+  "title": "The Credibility Revolution in Empirical Economics: How Better Research Design is Taking the Con out of Econometrics",
+  "authors": "Joshua D. Angrist, J\u00f6rn\u2010Steffen Pischke",
+  "year": 2010,
+  "cb": 1590,
+  "type": "article",
+  "venue": "The Journal of Economic Perspectives",
+  "flags": [],
+  "abstract": "Since Edward Leamer's memorable 1983 paper, \u201cLet's Take the Con out of Econometrics,\u201d empirical microeconomics has experienced a credibility revolution. While Leamer's suggested remedy, sensitivity analysis, has played a role in this, we argue that the primary engine driving improvement has been a focus on the quality of empirical research designs. The advantages of a good research design are perhaps most easily apparent in research using random assignment. We begin with an overview of Leamer's 1983 critique and his proposed remedies. We then turn to the key factors we see contributing to improved empirical work, including the availability of more and better data, along with advances in theoretical econometric understanding, but especially the fact that research design has moved front and center in much of empirical micro. We offer a brief digression into macroeconomics and industrial organization, where progress\u2014by our lights\u2014is less dramatic, although there is work in both fields that we find encouraging. Finally, we discuss the view that the design pendulum has swung too far. Critics of design-driven studies argue that in pursuit of clean and credible research designs, researchers seek good answers instead of good questions. We briefly respond to this concern, which worries us little."
+ },
+ {
+  "node": "N27",
+  "id": "W3122513589",
+  "doi": "https://doi.org/10.1016/s0304-405x(02)00255-6",
+  "title": "Cronyism and capital controls: evidence from Malaysia",
+  "authors": "Simon Johnson, Todd Mitton",
+  "year": 2002,
+  "cb": 1578,
+  "type": "article",
+  "venue": "Journal of Financial Economics",
+  "flags": [],
+  "abstract": ""
+ },
+ {
+  "node": "N28",
+  "id": "W2046507863",
+  "doi": "https://doi.org/10.1080/00220380500405261",
+  "title": "The economics of poverty traps and persistent poverty: An asset-based approach",
+  "authors": "Michael Ross Carter, Christopher B. Barrett",
+  "year": 2006,
+  "cb": 1550,
+  "type": "article",
+  "venue": "The Journal of Development Studies",
+  "flags": [],
+  "abstract": "Longitudinal data on household living standards open the way to a deeper analysis of the nature and extent of poverty. While a number of studies have exploited this type of data to distinguish transitory from more chronic forms of income or expenditure poverty, this paper develops an asset-based approach to poverty analysis that makes it possible to distinguish deep-rooted, persistent structural poverty from poverty that passes naturally with time due to systemic growth processes. Drawing on the economic theory of poverty traps and bifurcated accumulation strategies, this paper briefly discusses some feasible estimation strategies for empirically identifying poverty traps and long-term, persistent structural poverty, as well as relevant extensions of the popular Foster-Greer-Thorbecke class of poverty measures. The paper closes with reflections on how asset-based poverty can be used to underwrite the design of persistent poverty reduction strategies."
+ },
+ {
+  "node": "N29",
+  "id": "W2591654989",
+  "doi": "https://doi.org/10.1257/jel.53.4.898",
+  "title": "Culture and Institutions",
+  "authors": "Alberto Alesina, Paola Giuliano",
+  "year": 2015,
+  "cb": 1547,
+  "type": "article",
+  "venue": "Journal of Economic Literature",
+  "flags": [
+   "HB",
+   "GL",
+   "EL"
+  ],
+  "abstract": "A growing body of empirical work measuring different types of cultural traits has shown that culture matters for a variety of economic outcomes. This paper focuses on one specific aspect of the relevance of culture: its relationship to institutions. We review work with a theoretical, empirical, and historical bent to assess the presence of a two-way causal effect between culture and institutions. ( JEL D02, D72, I32, J12, Z13)"
+ },
+ {
+  "node": "N30",
+  "id": "W3125767605",
+  "doi": "https://doi.org/10.1162/jeea.2006.4.1.37",
+  "title": "Distance to Frontier, Selection, and Economic Growth",
+  "authors": "Daron Acemo\u011flu, Philippe Aghion, Fabrizio Zilibotti",
+  "year": 2006,
+  "cb": 1520,
+  "type": "article",
+  "venue": "Journal of the European Economic Association",
+  "flags": [],
+  "abstract": "We analyze an economy where firms undertake both innovation and adoption of technologies from the world technology frontier. The selection of high-skill managers and firms is more important for innovation than for adoption. As the economy approaches the frontier, selection becomes more important. Countries at early stages of development pursue an investment-based strategy, which relies on existing firms and managers to maximize investment but sacrifices selection. Closer to the world technology frontier, economies switch to an innovation-based strategy with short-term relationships, younger firms, less investment, and better selection of firms and managers. We show that relatively backward economies may switch out of the investment-based strategy too soon, so certain policies such as limits on product market competition or investment subsidies, which encourage the investment-based strategy, may be beneficial. However, these policies may have significant long-run costs because they make it more likely that a society will be trapped in the investment-based strategy and fail to converge to the world technology frontier."
+ },
+ {
+  "node": "N31",
+  "id": "W3124753968",
+  "doi": "https://doi.org/10.1016/s0304-3932(02)00208-8",
+  "title": "Institutional causes, macroeconomic symptoms: volatility, crises and growth",
+  "authors": "Daron Acemo\u011flu, Simon Johnson, James A. Robinson",
+  "year": 2003,
+  "cb": 1520,
+  "type": "article",
+  "venue": "Journal of Monetary Economics",
+  "flags": [
+   "RV",
+   "HJ",
+   "EL"
+  ],
+  "abstract": ""
+ },
+ {
+  "node": "N32",
+  "id": "W2490362664",
+  "doi": "https://doi.org/10.1093/0199267669.001.0001",
+  "title": "Fighting Poverty in the US and Europe",
+  "authors": "Alberto Alesina, Edward L. Glaeser",
+  "year": 2004,
+  "cb": 1513,
+  "type": "book",
+  "venue": null,
+  "flags": [],
+  "abstract": "Abstract This book explores the difference in the distributive policies of the United States and Europe. It seeks answers to why Americans are less willing than Europeans to redistribute from the rich to the poor. It finds that redistribution is influenced by political institutions, ethnic heterogeneity, and beliefs about the nature of poverty."
+ },
+ {
+  "node": "N33",
+  "id": "W2114854852",
+  "doi": "https://doi.org/10.1146/annurev.polisci.10.081205.095418",
+  "title": "What Have We Learned About the Causes of Corruption from Ten Years of Cross-National Empirical Research?",
+  "authors": "Daniel S. Treisman",
+  "year": 2007,
+  "cb": 1487,
+  "type": "review",
+  "venue": "Annual Review of Political Science",
+  "flags": [
+   "GL",
+   "RO"
+  ],
+  "abstract": "\u25aa Abstract I review recent efforts by political scientists and economists to explain cross-national variation in corruption using subjective ratings, and examine the robustness of reported findings. Quite strong evidence suggests that highly developed, long-established liberal democracies, with a free and widely read press, a high share of women in government, and a history of openness to trade, are perceived as less corrupt. Countries that depend on fuel exports or have intrusive business regulations and unpredictable inflation are judged more corrupt. Although the causal direction is usually unclear, instrumenting with income as of 1700 suggests higher development does cause lower perceived corruption. However, controlling for income, most factors that predict perceived corruption do not correlate with recently available measures of actual corruption experiences (based on surveys of business people and citizens that ask whether they have been expected to pay bribes recently). Reported corruption experiences correlate with lower development, and possibly with dependence on fuel exports, lower trade openness, and more intrusive regulations. The subjective data may reflect opinion rather than experience, and future research could usefully focus on experience-based indicators."
+ },
+ {
+  "node": "N34",
+  "id": "W2123148076",
+  "doi": "https://doi.org/10.1111/j.1468-0491.2008.00391.x",
+  "title": "What Is Quality of Government? A Theory of Impartial Government Institutions",
+  "authors": "Bo Rothstein, Jan Teorell",
+  "year": 2008,
+  "cb": 1460,
+  "type": "article",
+  "venue": "Governance",
+  "flags": [
+   "RV",
+   "HJ",
+   "RO",
+   "EL"
+  ],
+  "abstract": "The recent growth in research on \u201cgood governance\u201d and the quality of government institutions has been propelled by empirical findings that show that such institutions may hold the key to understanding economic growth and social welfare in developing and transition countries. We argue, however, that a key issue has not been addressed, namely, what quality of government (QoG) actually means at the conceptual level. Based on analyses of political theory, we propose a more coherent and specific definition of QoG: the impartiality of institutions that exercise government authority. We relate the idea of impartiality to a series of criticisms stemming from the fields of public administration, public choice, multiculturalism, and feminism. To place the theory of impartiality in a larger context, we then contrast its scope and meaning with that of a threefold set of competing concepts of quality of government: democracy, the rule of law, and efficiency/effectiveness."
+ },
+ {
+  "node": "N35",
+  "id": "W3121354442",
+  "doi": "https://doi.org/10.1162/0034653053970339",
+  "title": "The Death Toll from Natural Disasters: The Role of Income, Geography, and Institutions",
+  "authors": "Matthew E. Kahn",
+  "year": 2005,
+  "cb": 1401,
+  "type": "article",
+  "venue": "The Review of Economics and Statistics",
+  "flags": [
+   "RV",
+   "RO",
+   "EL"
+  ],
+  "abstract": "Using a new data set on annual deaths from natural disasters in 48 nations from 1980 to 1999, this paper tests several hypotheses concerning disaster mitigation. While richer nations do not experience fewer natural disaster shocks than poorer nations, richer nations do suffer less death from disaster. Democracies and nations with higher quality institutions suffer less death from natural disaster. The results are relevant for judging the incidence of a Global Warming induced increased in the count of natural disaster shocks."
+ },
+ {
+  "node": "N36",
+  "id": "W2152556759",
+  "doi": "https://doi.org/10.1257/aer.98.1.439",
+  "title": "Growth Dynamics: The Myth of Economic Recovery",
+  "authors": "Valerie Cerra, Sweta Saxena",
+  "year": 2008,
+  "cb": 1356,
+  "type": "article",
+  "venue": "American Economic Review",
+  "flags": [],
+  "abstract": "Using panel data for a large set of high-income, emerging market, developing, and transition countries, we find robust evidence that the large output loss from financial crises and some types of political crises is highly persistent. The results on financial crises are also highly robust to the assumption on exogeneity. Moreover, we find strong evidence of growth over optimism before financial crises. We also find a distinction between the output impact of civil wars versus other crises, in that there is a partial output rebound for civil wars but no significant rebound for financial crises or the other political crises. (JEL D72, D74, E32, E44, O17, O47)"
+ },
+ {
+  "node": "N37",
+  "id": "W2891506482",
+  "doi": "https://doi.org/10.1007/s10887-012-9081-x",
+  "title": "Do better schools lead to more growth? Cognitive skills, economic outcomes, and causation",
+  "authors": "Eric Alan Hanushek, Ludger Woessmann",
+  "year": 2012,
+  "cb": 1346,
+  "type": "article",
+  "venue": "Journal of Economic Growth",
+  "flags": [
+   "HB",
+   "GL"
+  ],
+  "abstract": ""
+ },
+ {
+  "node": "N38",
+  "id": "W3193006831",
+  "doi": "https://doi.org/10.1007/s10887-005-4712-0",
+  "title": "Growth Accelerations",
+  "authors": "Ricardo Hausmann, Lant H. Pritchett, Dani Rodrik",
+  "year": 2005,
+  "cb": 1325,
+  "type": "article",
+  "venue": "Journal of Economic Growth",
+  "flags": [
+   "HJ"
+  ],
+  "abstract": ""
+ },
+ {
+  "node": "N39",
+  "id": "W2103130810",
+  "doi": "https://doi.org/10.1257/jel.48.2.424",
+  "title": "Instruments, Randomization, and Learning about Development",
+  "authors": "Angus Deaton",
+  "year": 2010,
+  "cb": 1295,
+  "type": "article",
+  "venue": "Journal of Economic Literature",
+  "flags": [],
+  "abstract": "There is currently much debate about the effectiveness of foreign aid and about what kind of projects can engender economic development. There is skepticism about the ability of econometric analysis to resolve these issues or of development agencies to learn from their own experience. In response, there is increasing use in development economics of randomized controlled trials (RCTs) to accumulate credible knowledge of what works, without overreliance on questionable theory or statistical methods. When RCTs are not possible, the proponents of these methods advocate quasi-randomization through instrumental variable (IV) techniques or natural experiments. I argue that many of these applications are unlikely to recover quantities that are useful for policy or understanding: two key issues are the misunderstanding of exogeneity and the handling of heterogeneity. I illustrate from the literature on aid and growth. Actual randomization faces similar problems as does quasi-randomization, notwithstanding rhetoric to the contrary. I argue that experiments have no special ability to produce more credible knowledge than other methods, and that actual experiments are frequently subject to practical problems that undermine any claims to statistical or epistemic superiority. I illustrate using prominent experiments in development and elsewhere. As with IV methods, RCT-based evaluation of projects, without guidance from an understanding of underlying mechanisms, is unlikely to lead to scientific progress in the understanding of economic development. I welcome recent trends in development experimentation away from the evaluation of projects and toward the evaluation of theoretical mechanisms. (JEL C21, F35, O19)"
+ },
+ {
+  "node": "N40",
+  "id": "W2090766907",
+  "doi": "https://doi.org/10.1257/aer.100.5.2060",
+  "title": "Inherited Trust and Growth",
+  "authors": "Yann Algan, Pierre Cahuc",
+  "year": 2010,
+  "cb": 1294,
+  "type": "article",
+  "venue": "American Economic Review",
+  "flags": [
+   "HJ",
+   "GL",
+   "SA",
+   "RO"
+  ],
+  "abstract": "This paper develops a new method to uncover the causal effect of trust on economic growth by focusing on the inherited component of trust and its time variation. We show that inherited trust of descendants of US immigrants is significantly influenced by the country of origin and the timing of arrival of their forebears. We thus use the inherited trust of descendants of US immigrants as a time-varying measure of inherited trust in their country of origin. This strategy allows to identify the sizeable causal impact of inherited trust on worldwide growth during the twentieth century by controlling for country fixed effects. (JEL N11, N12, N31, N32, O47, Z13)"
+ },
+ {
+  "node": "N41",
+  "id": "W3125033761",
+  "doi": "https://doi.org/10.1257/aer.98.1.267",
+  "title": "Persistence of Power, Elites, and Institutions",
+  "authors": "Daron Acemo\u011flu, James A. Robinson",
+  "year": 2008,
+  "cb": 1278,
+  "type": "article",
+  "venue": "American Economic Review",
+  "flags": [
+   "RV",
+   "HB",
+   "HJ"
+  ],
+  "abstract": "We construct a model to study the implications of changes in political institutions for economic institutions. A change in political institutions alters the distribution of de jure political power, but creates incentives for investments in de facto political power to partially or even fully offset change in de jure power. The model can imply a pattern of captured democracy, whereby a democratic regime may survive but choose economic institutions favoring an elite. The model provides conditions under which economic or policy outcomes will be invariant to changes in political institutions, and economic institutions themselves will persist over time. (JEL D02, D72) The domination of an organized minority \u2026 over the unorganized majority is inevitable. The power of any minority is irresistible as against each single individual in the majority, who stands alone before the totality of the organized minority. At the same time, the minority is organized for the very reason that it is a minority. \u2014Gaetano Mosca (1939, 53)."
+ },
+ {
+  "node": "N42",
+  "id": "W1511665033",
+  "doi": "https://doi.org/10.1257/0002828054825574",
+  "title": "History, Institutions, and Economic Performance: The Legacy of Colonial Land Tenure Systems in India",
+  "authors": "Abhijit Banerjee, Lakshmi Iyer",
+  "year": 2005,
+  "cb": 1277,
+  "type": "article",
+  "venue": "American Economic Review",
+  "flags": [
+   "RV"
+  ],
+  "abstract": "We analyze the colonial land revenue institutions set up by the British in India, and show that differences in historical property rights institutions lead to sustained differences in economic outcomes. Areas in which proprietary rights in land were historically given to landlords have significantly lower agricultural investments and productivity in the post-independence period than areas in which these rights were given to the cultivators. These areas also have significantly lower investments in health and education. These differences are not driven by omitted variables or endogeneity problems; they probably arise because differences in historical institutions lead to very different policy choices."
+ },
+ {
+  "node": "N43",
+  "id": "W2107205575",
+  "doi": "https://doi.org/10.1257/jep.23.2.29",
+  "title": "The Economic Effects of Climate Change",
+  "authors": "Richard S.J. Tol",
+  "year": 2009,
+  "cb": 1264,
+  "type": "article",
+  "venue": "The Journal of Economic Perspectives",
+  "flags": [
+   "RV",
+   "EL"
+  ],
+  "abstract": "I review the literature on the economic impacts of climate change, an externality that is unprecedentedly large, complex, and uncertain. Only 14 estimates of the total damage cost of climate change have been published, a research effort that is in sharp contrast to the urgency of the public debate and the proposed expenditure on greenhouse gas emission reduction. These estimates show that climate change initially improves economic welfare. However, these benefits are sunk. Impacts would be predominantly negative later in the century. Global average impacts would be comparable to the welfare loss of a few percent of income, but substantially higher in poor countries. Still, the impact of climate change over a century is comparable to economic growth over a few years. There are over 200 estimates of the marginal damage cost of carbon dioxide emissions. The uncertainty about the social cost of carbon is large and right-skewed. For a standard discount rate, the expected value is $50/tC, which is much lower than the price of carbon in the European Union but much higher than the price of carbon elsewhere. Current estimates of the damage costs of climate change are incomplete, with positive and negative biases. Most important among the missing impacts are the indirect effects of climate change on economic development; large-scale biodiversity loss; low-probability, high-impact scenarios; the impact of climate change on violent conflict; and the impacts of climate change beyond 2100. From a welfare perspective, the impact of climate change is problematic because population is endogenous, and because policy analyses should separate impatience, risk aversion, and inequity aversion between and within countries."
+ },
+ {
+  "node": "N44",
+  "id": "W2113596540",
+  "doi": "https://doi.org/10.1080/00343404.2012.748978",
+  "title": "Do Institutions Matter for Regional Development?",
+  "authors": "Andr\u00e9s Rodr\u00edguez\u2010Pose",
+  "year": 2013,
+  "cb": 1245,
+  "type": "article",
+  "venue": "Regional Studies",
+  "flags": [
+   "HB",
+   "HJ",
+   "GL",
+   "RO",
+   "EL"
+  ],
+  "abstract": "Rodr\u00edguez-Pose A. Do institutions matter for regional development?, Regional Studies. This paper discusses whether institutions matter for regional development and how to integrate them in regional development strategies. It is found that while institutions are crucial for economic development, generating an institution-based regional development strategy is likely to be undermined by the lack of definition of what are efficient institutions. Problems related to the measurement of institutions, to their space and time variability, to the difficulties in establishing the right mix of formal and informal institutions, and to the endogeneity between institutions and economic development make one-size-fits-all approaches to operationalizing institutions difficult. The paper posits that, in order to overcome these problems, it is crucial to distinguish between the \u2018institutional environment\u2019 and \u2018institutional arrangements\u2019, that is, to target not the institutions which shape the unique character of any territory, but the institutional factors that represent barriers for the efficacy of other factors influencing economic development (that is, education, training and skills, innovation, infrastructure and the like). Rodr\u00edguez-Pose A. \u5236\u5ea6\u5bf9\u533a\u57df\u53d1\u5c55\u800c\u8a00\u662f\u5426\u91cd\u8981\uff0c\u533a\u57df\u7814\u7a76\u3002\u672c\u6587\u63a2\u8ba8\u5236\u5ea6\u5bf9\u533a\u57df\u53d1\u5c55\u800c\u8a00\u662f\u5426\u91cd\u8981\uff0c\u4ee5\u53ca\u5982\u4f55\u5c06\u5176\u6574\u5408\u81f3\u533a\u57df\u53d1\u5c55\u7b56\u7565\u4e4b\u4e2d\u3002\u7814\u7a76\u53d1\u73b0\uff0c\u5236\u5ea6\u867d\u7136\u662f\u7ecf\u6d4e\u53d1\u5c55\u7684\u5173\u952e\uff0c\u4f46\u5efa\u6784\u4ee5\u5236\u5ea6\u4e3a\u57fa\u7840\u7684\u533a\u57df\u53d1\u5c55\u7b56\u7565\uff0c\u6709\u53ef\u80fd\u56e0\u7f3a\u4e4f\u5bf9\u4e8e\u6709\u6548\u5236\u5ea6\u7684\u5b9a\u4e49\u800c\u53d7\u5230\u7834\u574f\u3002\u6709\u5173\u6d4b\u91cf\u5236\u5ea6\u548c\u5176\u65f6\u7a7a\u53d8\u5f02\u3001\u5efa\u7acb\u6b63\u5f0f\u4e0e\u975e\u6b63\u5f0f\u5236\u5ea6\u7684\u6b63\u786e\u6df7\u5408\u7684\u56f0\u96be\u6027\uff0c\u4ee5\u53ca\u5236\u5ea6\u548c\u7ecf\u6d4e\u53d1\u5c55\u95f4\u5185\u751f\u6027\u7684\u95ee\u9898\uff0c\u5bfc\u81f4\u96be\u4ee5\u5efa\u6784\u4e00\u4e2a\u64cd\u4f5c\u5236\u5ea6\u7684\u4e00\u4f53\u9002\u7528\u65b9\u6cd5\u3002\u672c\u6587\u6307\u51fa\uff0c\u4e3a\u4e86\u514b\u670d\u4e0a\u8ff0\u56f0\u96be\uff0c\u533a\u8fa8\u201c\u5236\u5ea6\u73af\u5883\u201d\u548c\u201c\u5236\u5ea6\u5b89\u6392\u201d\u76f8\u5f53\u91cd\u8981\uff0c\u610f\u5373\u4e0d\u662f\u5bf9\u51c6\u5f62\u5851\u7279\u5b9a\u9886\u57df\u4e2d\u72ec\u7279\u6027\u8d28\u7684\u5236\u5ea6\uff0c\u800c\u662f\u7784\u51c6\u5bf9\u5176\u4ed6\u5f71\u54cd\u7ecf\u6d4e\u53d1\u5c55\u56e0\u7d20\u6709\u6548\u6027 (\u4ea6\u5373\u6559\u80b2\u3001\u6280\u672f\u8bad\u7ec3\u3001\u521b\u65b0\u3001\u57fa\u7840\u5efa\u8bbe\u7b49) \u5448\u73b0\u963b\u788d\u7684\u5236\u5ea6\u6027\u56e0\u7d20\u3002 \u5236\u5ea6 \u533a\u57df\u53d1\u5c55 \u53d1\u5c55\u7b56\u7565 \u4ee5\u5730\u65b9\u4e3a\u57fa\u7840\u7684\u653f\u7b56 Rodr\u00edguez-Pose A. Les institutions, sont-elles importantes pour l'am\u00e9nagement du territoire?, Regional Studies. Cet article cherche \u00e0 discuter si, oui ou non, les institutions sont importantes pour l'am\u00e9nagement du territoire et comment les int\u00e9grer dans les strat\u00e9gies d'am\u00e9nagement du territoire. Alors que les institutions sont essentielles au d\u00e9veloppement \u00e9conomique, il s'av\u00e8re que la mise en oeuvre d'une strat\u00e9gie d'am\u00e9nagement du territoire fond\u00e9e sur les institutions risque d'\u00eatre entrav\u00e9e par le manque d'une d\u00e9finition de ce que c'est une institution efficace. Les probl\u00e8mes li\u00e9s \u00e0 l'\u00e9valuation des institutions, \u00e0 leur variabilit\u00e9 dans le temps et l'espace, aux difficult\u00e9s dans la mise en place de la bonne combinaison d'institutions, \u00e0 la fois formelles et informelles, et \u00e0 l'endog\u00e9n\u00e9it\u00e9 entre les institutions et le d\u00e9veloppement \u00e9conomique, rendent difficile la mise au point d'une solution universelle \u00e0 la mise en place des institutions. L'article pr\u00e9cise qu'il est essentiel de distinguer entre le \u2018milieu institutionnel\u2019 et les \u2018dispositifs institutionnels\u2019, autrement dit, il ne faut pas cibler les institutions qui fa\u00e7onnent le caract\u00e8re unique d'un territoire, mais plut\u00f4t les facteurs institutionnels qui constituent des obstacles \u00e0 l'efficacit\u00e9 d'autres facteurs qui influent sur le d\u00e9veloppement \u00e9conomique (\u00e0 savoir, l'\u00e9ducation, la formation et les comp\u00e9tences, l'innovation, l'infrastructure et ainsi de suite). Institutions Am\u00e9nagement du territoire Strat\u00e9gies d'am\u00e9nagement du territoire Politiques localis\u00e9es Rodr\u00edguez-Pose A. Spielen Institutionen bei der Regionalentwicklung eine Rolle?, Regional Studies. In diesem Beitrag wird untersucht, ob Institutionen bei der Regionalentwicklung eine Rolle spielen und wie sie sich in Strategien zur Regionalentwicklung integrieren lassen. Es wird festgestellt, dass Institutionen f\u00fcr die Regionalentwicklung zwar eine wichtige Rolle spielen, aber die Ausarbeitung einer institutionell basierten Regionalentwicklungsstrategie durch das Fehlen einer Definition f\u00fcr eine effiziente Institution tendenziell untergraben wird. Probleme im Zusammenhang mit der Messung von Institutionen, ihrer r\u00e4umlichen und zeitlichen Variabilit\u00e4t, den Schwierigkeiten bei der Ermittlung der richtigen Kombination von formellen und informellen Institutionen sowie der Endogenit\u00e4t von Institutionen und Wirtschaftsentwicklung erschweren die Entwicklung von einheitlichen Ans\u00e4tzen zur Behandlung von Institutionen. In diesem Beitrag wird argumentiert, dass zur \u00dcberwindung dieser Probleme zwischen \u2018institutioneller Umgebung\u2019 und \u2018institutionellen Vorkehrungen\u2019 unterschieden werden muss. Anders ausgedr\u00fcckt, sollte nicht auf die Institutionen abgezielt werden, die den einzigartigen Charakter eines Gebiets ausmachen, sondern auf die institutionellen Faktoren, die die Wirksamkeit von anderen Faktoren der Wirtschaftsentwicklung (Bildung, Ausbildung und Qualifikation, Innovation, Infrastruktur usw.) beeintr\u00e4chtigen. Institutionen Regionalentwicklung Entwicklungsstrategien Ortsbasierte Politiken Rodr\u00edguez-Pose A. \u00bfAfectan las instituciones al desarrollo regional?, Regional Studies. En este art\u00edculo se examina hasta qu\u00e9 punto las instituciones afectan al desarrollo regional y c\u00f3mo las condiciones institucionales de cada espacio se pueden integrar en las estrategias de desarrollo regional. El argumento fundamental del art\u00edculo es que, mientras que las instituciones son esenciales para el desarrollo econ\u00f3mico, la puesta en marcha de estrategias de desarrollo regional basadas en instituciones debe confrontar el problema de la falta de definici\u00f3n de lo que son instituciones eficaces. Los problemas ligados a la medida de las instituciones, a su variaci\u00f3n en el espacio y en el tiempo, a las dificultades para calibrar la mezcla adecuada de instituciones formales e informales y a la endogeneidad entre instituciones y desarrollo regional limitan la posibilidad de aplicar enfoques gen\u00e9ricos al tema. En el art\u00edculo se argumenta que para salvar estas barreras resulta esencial distinguir entre el \u2018contexto institucional\u2019 y los \u2018arreglos institucionales\u2019. Esto significa centrarse no en las instituciones que modelan el car\u00e1cter \u00fanico de cada territorio, sino en los factores institucionales que representan los principales obst\u00e1culos para la eficacia de otros factores que afectan al desarrollo econ\u00f3mico (educaci\u00f3n, formaci\u00f3n, innovaci\u00f3n, infraestructura y factores similares). Instituciones Desarrollo regional Estrategias de desarrollo Pol\u00edticas basadas en el territorio"
+ },
+ {
+  "node": "N45",
+  "id": "W2131499322",
+  "doi": "https://doi.org/10.1093/jae/ejs033",
+  "title": "Addressing the Natural Resource Curse: An Illustration from Nigeria",
+  "authors": "Xavier Sala-i-Mart\u00edn, Arvind Subramanian",
+  "year": 2012,
+  "cb": 1215,
+  "type": "article",
+  "venue": "Journal of African Economies",
+  "flags": [
+   "HJ",
+   "EL"
+  ],
+  "abstract": "Some natural resources\u2014oil and minerals in particular\u2014exert a negative and non-linear impact on growth via their deleterious impact on institutional quality. We show this result to be very robust. The Nigerian experience provides telling confirmation of this aspect of natural resources. Waste and poor institutional quality stemming from oil appear to have been responsible for its poor long-run economic performance. We propose a solution for addressing this resource curse which involves directly distributing the oil revenues to the public. Even with all the difficulties that will, no doubt, plague its actual implementation, our proposal will, at the least, be vastly superior to the status quo. At best, however, it could fundamentally improve the quality of public institutions and, as a result, durably raise long-run growth performance."
+ },
+ {
+  "node": "N46",
+  "id": "W2889827801",
+  "doi": "https://doi.org/10.1162/rest_a_00161",
+  "title": "Ruggedness: The Blessing of Bad Geography in Africa",
+  "authors": "Nathan Nunn, Diego Puga",
+  "year": 2009,
+  "cb": 1206,
+  "type": "article",
+  "venue": "The Review of Economics and Statistics",
+  "flags": [
+   "RV"
+  ],
+  "abstract": "There is controversy about whether geography matters mainly because of its contemporaneous impact on economic outcomes or because of its interaction with historical events.Looking at terrain ruggedness, we are able to estimate the importance of these two channels.Because rugged terrain hinders trade and most productive activities, it has a negative direct effect on income.However, in Africa rugged terrain afforded protection to those being raided during the slave trades.Since the slave trades retarded subsequent economic development, in Africa ruggedness has also had a historical indirect positive effect on income.Studying all countries worldwide, we find that both effects are significant statistically and that for Africa the indirect positive effect dominates the direct negative effect.Looking within Africa, we also provide evidence that the indirect effect operates through the slave trades."
+ },
+ {
+  "node": "N47",
+  "id": "W2891433665",
+  "doi": "https://doi.org/10.1016/j.jce.2003.08.005",
+  "title": "The New Comparative Economics",
+  "authors": "Simeon Djankov, Edward L. Glaeser, Rafael La Porta",
+  "year": 2003,
+  "cb": 1204,
+  "type": "article",
+  "venue": "Journal of Comparative Economics",
+  "flags": [
+   "HJ",
+   "RO",
+   "EL"
+  ],
+  "abstract": ""
+ },
+ {
+  "node": "N48",
+  "id": "W3123773675",
+  "doi": "https://doi.org/10.1111/j.1467-937x.2007.00435.x",
+  "title": "Institutional Quality and International Trade",
+  "authors": "Andrei A. Levchenko",
+  "year": 2007,
+  "cb": 1162,
+  "type": "article",
+  "venue": "The Review of Economic Studies",
+  "flags": [
+   "RV",
+   "HJ"
+  ],
+  "abstract": "Institutions\u2014quality of contract enforcement, property rights, shareholder protection, and the like\u2014have received a great deal of attention in recent years. Yet trade theory has not considered the implications of institutional differences, beyond treating them simply as different technologies or taxes. The purpose of this paper is twofold. First, we propose a simple model of international trade in which institutional differences are modelled within the framework of incomplete contracts. We show that doing so reverses many of the conclusions obtained by equating institutions with productivity. Institutional differences as a source of comparative advantage imply, among other things, that the less developed country may not gain from trade and factor prices may actually diverge as a result of trade. Second, we test empirically whether institutions act as a source of trade, using data on U.S. imports disaggregated by country and industry. The empirical results provide evidence of \u201cinstitutional content of trade\u201d: institutional differences are an important determinant of trade flows."
+ },
+ {
+  "node": "N49",
+  "id": "W3121532354",
+  "doi": "https://doi.org/10.1162/qjec.2008.123.1.139",
+  "title": "The Long-Term Effects of Africa's Slave Trades *",
+  "authors": "Nathan Nunn",
+  "year": 2008,
+  "cb": 1159,
+  "type": "article",
+  "venue": "The Quarterly Journal of Economics",
+  "flags": [
+   "RV"
+  ],
+  "abstract": "Can part of Africa's current underdevelopment be explained by its slave trades? To explore this question, I use data from shipping records and historical documents reporting slave ethnicities to construct estimates of the number of slaves exported from each country during Africa's slave trades. I find a robust negative relationship between the number of slaves exported from a country and current economic performance. To better understand if the relationship is causal, I examine the historical evidence on selection into the slave trades and use instrumental variables. Together the evidence suggests that the slave trades had an adverse effect on economic development."
+ },
+ {
+  "node": "N50",
+  "id": "W3126058703",
+  "doi": "https://doi.org/10.1162/rest.90.4.643",
+  "title": "Aid and Growth: What Does the Cross-Country Evidence Really Show?",
+  "authors": "Raghuram G. Rajan, Arvind Subramanian",
+  "year": 2008,
+  "cb": 1149,
+  "type": "article",
+  "venue": "The Review of Economics and Statistics",
+  "flags": [
+   "HJ"
+  ],
+  "abstract": "We examine the effects of aid on growth in cross-sectional and panel data\u2014after correcting for the possible bias that poorer (or stronger) growth may draw aid contributions to recipient countries. Even after this correction, we find little robust evidence of a positive (or negative) relationship between aid inflows into a country and its economic growth. We also find no evidence that aid works better in better policy or geographical environments, or that certain forms of aid work better than others. Our findings suggest that for aid to be effective in the future, the aid apparatus will have to be rethought."
+ }
+]
