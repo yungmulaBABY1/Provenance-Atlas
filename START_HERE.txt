@@ -1,5 +1,5 @@
 ATLAS — START HERE
-Project map and next build brief | 4 November 2026 | Revision 6
+Project map and next build brief | 4 November 2026 | Revision 7
 It points; you judge.
 
 READ THIS FIRST — THE TWO-MINUTE VERSION
@@ -47,6 +47,11 @@ A readable local report is enough. A model-generated conclusion remains provisio
   a question page above the S2 page. No positions, no merged claims, no new runs.
   The question wording is drafted by Claude and not confirmed. See
   docs/atlas/question.md.
+  Revision 7 status: Increments C part 1 and D merged (PRs #5, #6). An external
+  agent (Grok) ran the Provenance sequence on AJR 2001 (PR #7, open; its rights
+  review is the owner's decision). Increment E prepared on branch m1e-upstream-map,
+  draft PR, not merged: atlas.maplink links that run's findings to the upstream
+  Stage-1 map that atlas.claims could not read. See docs/atlas/maplink.md.
 
 YOU DO NOT NEED TO DECIDE NOW: cloud host, graph database, framework, agent fleet,
 bot interface, provider catalog, pricing, public launch or every future method.
@@ -557,6 +562,25 @@ Increment D — one research question (Revision 6):
   denominators; a passage stays with its speaker; claim identity across sources
   only declared and attributed. Decisions still open (review K1-K3): drill order,
   what "Field" means, entry point.
+  Revision 7: K1-K3 decided by the owner on 4 November 2026, open to redesign
+  (Project doc review, Rev. 2). Question-first is the main path, with paper pages
+  as a side entry. Field holds aggregates over audited records only, and the 44-
+  question Field Diagnostic is set aside. Browse is the front door, then Field
+  within a domain, then questions.
+
+Increment E — upstream claim map (Revision 7):
+  Revision 7 status: PREPARED on branch m1e-upstream-map, draft PR, not merged.
+  The branch merges PR #7's branch, because its receipt pins those files.
+  Origin: Grok's AJR 2001 citation-network output names its Stage-1 map
+  (01_claim_extraction.md) instead of carrying one, so atlas.claims recorded
+  CLAIM MAP ABSENT. atlas.maplink content-replays that claim-link receipt and
+  parses the pinned map. It records provenance as declared (no run prompt, no
+  run receipt), reconciles the audit's restatement of fields 1/3/6 against the
+  map as text only, and classifies MAP GAP declarations by the instrument's two
+  forms. A new package, so atlas.claims and atlas.extraction receipts are
+  untouched. Not done: verifying the map's quotes against AJR 2001 (the source
+  text is not committed), and adapters for the IV, construct-validity and
+  counter-audit outputs.
 
 Increment C — inspect and challenge:
   Revision 5 status: part 1 (readable report) and M2's first screen PREPARED on
@@ -896,5 +920,7 @@ Revision history:
               model rendered as page and report, from verified records.
   Revision 6  4 Nov 2026   Increment D prepared on branch m1d-research-question:
               research question record (atlas.question) and question page.
+  Revision 7  4 Nov 2026   C part 1 and D merged; K1-K3 decided; Grok AJR run
+              (PR #7); Increment E (atlas.maplink) on branch m1e-upstream-map.
 
 END — It points; you judge.
