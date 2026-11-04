@@ -167,11 +167,12 @@ JSON: print a blank artifact already bound to the exact item. In it:
   python -m atlas.challenge show tests/atlas/challenge/ajr2001/receipt/records.jsonl
 
 The build rejects an artifact if:
-  - the target is not the current item: it is kept, but shown as detached;
   - no reason is given;
   - the outcome is outside the four above;
   - it has a score or verdict field;
   - it cites evidence that does not resolve;
   - it declares the producer or the code author.
+An artifact whose target is not the current item is not rejected. It is kept and
+shown as detached, and it does not count toward the item.
 
 END
