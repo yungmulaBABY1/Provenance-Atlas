@@ -1,5 +1,26 @@
 # Atlas adapter changelog
 
+## Unreleased — map links 0.1.0 (`atlas.maplink`, M1 Increment E)
+
+- New package `atlas/maplink/` (schema `atlas-maplink/0.1`). It links an imported
+  audit's findings to a separately produced Stage-1 claim map, for outputs that carry
+  no map of their own (`atlas.claims`: `CLAIM MAP ABSENT`).
+  - It content-replays the claim-link receipt it depends on.
+  - It parses the pinned map with `atlas-claim-extraction-output/1`.
+  - It records the map's provenance as declared: `run_prompt: NOT_RECORDED`,
+    `run_receipt: NONE`.
+  - See [maplink.md](maplink.md).
+- First receipt: Grok's AJR 2001 citation-network run (PR #7).
+  - The output names its map at line 5.
+  - Reconciliation of fields 1, 3 and 6 is `UNRESOLVED_REQUIRES_REVIEW` for all three:
+    the citation stage reworded the map.
+  - Findings: 4 `DECLARED_NOT_FIELD_6` and 3 `UNRESOLVED_REQUIRES_REVIEW`.
+- MAP GAP declarations are classified by the instrument's two forms, matched as
+  written. A field mentioned inside a gap is never resolved as the target.
+- `atlas.claims` and `atlas.extraction` are unchanged, so every existing receipt still
+  replays.
+- 28 new tests. CI adds map-link replay.
+
 ## Unreleased — research questions 0.1.0 (`atlas.question`, M1 Increment D)
 
 - New package `atlas/question/` (schema `atlas-question/0.1`): one declared question

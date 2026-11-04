@@ -66,6 +66,36 @@ jobs:
             count=$((count + 1))
           done
           test "$count" -gt 0
+      # Receipts that came with an external agent's run under examples/: the import and
+      # claim-link receipts the map-link receipt below depends on.
+      - name: Content replay of example-run receipts
+        run: |
+          set -euo pipefail
+          count=0
+          for dir in examples/research/*/citation-network/atlas-receipt/; do
+            echo "replay --level content: $dir"
+            python -m atlas replay "${dir}manifest.json" "${dir}records.jsonl" --level content
+            count=$((count + 1))
+          done
+          for dir in examples/research/*/citation-network/claims-receipt/; do
+            echo "claims replay --level content: $dir"
+            python -m atlas.claims replay "${dir}manifest.json" "${dir}records.jsonl" --level content
+            count=$((count + 1))
+          done
+          test "$count" -gt 0
+      # Map-link receipts (atlas.maplink) content-replay the claim-link receipt they pin,
+      # then re-parse the pinned upstream Stage-1 map. The AJR receipt pins files under
+      # examples/research/acemoglu-colonial-origins/ (Grok's run, PR #7).
+      - name: Content replay of map-link receipts
+        run: |
+          set -euo pipefail
+          count=0
+          for dir in tests/atlas/maplink/*/receipt/; do
+            echo "maplink replay --level content: $dir"
+            python -m atlas.maplink replay "${dir}manifest.json" "${dir}records.jsonl" --level content
+            count=$((count + 1))
+          done
+          test "$count" -gt 0
       # Every committed page (docs/atlas/views/views.json) must be a fresh render of verified records.
       - name: Reader views are current
         run: python -m atlas.view check-all

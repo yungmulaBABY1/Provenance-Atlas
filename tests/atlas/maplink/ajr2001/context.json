@@ -1,0 +1,40 @@
+{
+ "schema_version": "atlas-maplink-context/0.1",
+ "run": {
+  "id": "urn:atlas:maplink:ajr2001-citation-network:1",
+  "operator": "Deterministic program atlas.maplink.",
+  "purpose": "Link the AJR 2001 citation-network findings to the upstream Stage-1 claim map that the audit output names, which atlas.claims 0.1 does not read (CLAIM MAP ABSENT). Records text relations only. It does not validate the audit, the map or the paper.",
+  "recorded_by": "Context written by Claude (Anthropic) in a Claude Code session, 4 November 2026, at the repository owner's request. Records built by the deterministic program atlas.maplink."
+ },
+ "claim_link_bundle": {
+  "claim_link_run_id": "urn:atlas:claimlink:ajr2001-citation-network:1",
+  "manifest": {
+   "path": "examples/research/acemoglu-colonial-origins/citation-network/claims-receipt/manifest.json",
+   "sha256": "1ddc39fd5b5b4610ddc100f83b4de57a5344dd594bdd8ed089d350adecf2417b"
+  },
+  "records": {
+   "path": "examples/research/acemoglu-colonial-origins/citation-network/claims-receipt/records.jsonl",
+   "sha256": "203462e7e9b93be31d095193a576c030675f0c33e053e9250305522db2572c75"
+  }
+ },
+ "upstream_map": {
+  "output": {
+   "path": "examples/research/acemoglu-colonial-origins/01_claim_extraction.md",
+   "sha256": "f6e7df18d9fcd8e533c2909b49b75603d3072c7948292afd97ac6d7a8a23ea3e"
+  },
+  "instrument": {
+   "path": "prompts/1-claim-extraction.txt",
+   "sha256": "656b11c301931726a5435b231774f40797a10fd0cab950224616fc18951c035f"
+  },
+  "work_id": "doi:10.1257/aer.91.5.1369",
+  "producer": {
+   "kind": "MODEL_AGENT",
+   "identity": "Grok Bot (audit run), as named in the map's runner disclosure and in the commits that added it (b108bab)",
+   "verification": "SELF_REPORTED_NOT_INDEPENDENTLY_VERIFIED"
+  },
+  "run_prompt": null,
+  "run_receipt": null,
+  "declared_by": "Claude (Anthropic), writing this context",
+  "basis": "The map's runner disclosure says one AI agent ran this stage and every later stage in one session, with no separate run prompt. The commit that added the map is b108bab on audit/acemoglu-colonial-origins."
+ }
+}
