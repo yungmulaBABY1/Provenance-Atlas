@@ -1,0 +1,6 @@
+$ /workspace/venv-audit/bin/python -m atlas replay examples/research/acemoglu-colonial-origins/citation-network/atlas-receipt/manifest.json examples/research/acemoglu-colonial-origins/citation-network/atlas-receipt/records.jsonl 
+{"environment_delta":{},"level":"strict","replay":"PASS","scope":"deterministic import replay; historical model run not reproduced"}
+exit_code=0
+$ /workspace/venv-audit/bin/python -m atlas replay examples/research/acemoglu-colonial-origins/citation-network/atlas-receipt/manifest.json examples/research/acemoglu-colonial-origins/citation-network/atlas-receipt/records.jsonl --level content
+{"environment_delta":{},"level":"content","replay":"PASS","scope":"deterministic import replay; historical model run not reproduced"}
+exit_code=0

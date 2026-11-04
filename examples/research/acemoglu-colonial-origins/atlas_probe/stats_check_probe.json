@@ -1,0 +1,108 @@
+{
+ "probe": "stats.check scratch probe (no receipt written)",
+ "check_id": "reported-statistics-consistency/1",
+ "claim": "The 2SLS estimate of the effect of average protection against expropriation risk on log GDP per capita is 0.94 (standard error 0.16), n = 64.",
+ "source": "AJR 2001 txt PDF page 19 text",
+ "result": {
+  "check": "reported-statistics-consistency/1",
+  "result": "NOT_CHECKABLE",
+  "claim_statistics": {
+   "mean_difference": {
+    "status": "NOT_FOUND",
+    "occurrences": 0
+   },
+   "ci": {
+    "status": "NOT_FOUND",
+    "occurrences": 0
+   },
+   "t": {
+    "status": "NOT_FOUND",
+    "occurrences": 0
+   },
+   "p": {
+    "status": "NOT_FOUND",
+    "occurrences": 0
+   },
+   "d": {
+    "status": "NOT_FOUND",
+    "occurrences": 0
+   }
+  },
+  "source_statistics": {
+   "mean_difference": {
+    "status": "NOT_FOUND",
+    "occurrences": 0
+   },
+   "ci": {
+    "status": "NOT_FOUND",
+    "occurrences": 0
+   },
+   "t": {
+    "status": "NOT_FOUND",
+    "occurrences": 0
+   },
+   "p": {
+    "status": "NOT_FOUND",
+    "occurrences": 0
+   },
+   "d": {
+    "status": "NOT_FOUND",
+    "occurrences": 0
+   }
+  },
+  "sub_checks": [
+   {
+    "sub_check": "TRANSCRIPTION",
+    "result": "NOT_CHECKABLE",
+    "rows": [
+     {
+      "statistic": "mean_difference",
+      "result": "NOT_COMPARABLE",
+      "claim": "NOT_FOUND",
+      "source": "NOT_FOUND"
+     },
+     {
+      "statistic": "ci",
+      "result": "NOT_COMPARABLE",
+      "claim": "NOT_FOUND",
+      "source": "NOT_FOUND"
+     },
+     {
+      "statistic": "t",
+      "result": "NOT_COMPARABLE",
+      "claim": "NOT_FOUND",
+      "source": "NOT_FOUND"
+     },
+     {
+      "statistic": "p",
+      "result": "NOT_COMPARABLE",
+      "claim": "NOT_FOUND",
+      "source": "NOT_FOUND"
+     },
+     {
+      "statistic": "d",
+      "result": "NOT_COMPARABLE",
+      "claim": "NOT_FOUND",
+      "source": "NOT_FOUND"
+     }
+    ],
+    "basis": "Reported strings compared after reading each statistic; numerals must be identical."
+   },
+   {
+    "sub_check": "P_FROM_T",
+    "result": "NOT_CHECKABLE",
+    "reason": "t or p not found once"
+   },
+   {
+    "sub_check": "T_FROM_CI",
+    "result": "NOT_CHECKABLE",
+    "reason": "t, mean difference or CI not found once"
+   }
+  ],
+  "not_checked": [
+   "Cohen's d (group sizes are not reported in the main text)",
+   "The data, the choice of test, and the paper's interpretation"
+  ],
+  "scope": "Scope: whether the numbers a source reports for one two-sample t test agree with each other at their reported precision, and whether a claim restates them faithfully. It does not reanalyse data, judge the analysis, or say whether a non-significant result shows the absence of an effect."
+ }
+}

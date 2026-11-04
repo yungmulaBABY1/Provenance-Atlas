@@ -1,0 +1,342 @@
+{
+ "AJR2001": {
+  "file": "AJR2001-excerpts.txt",
+  "sha256": "fbcc5dc85c0ecee424fdde14941091158136176ade8636eb581e900a560db235",
+  "pdf": "colonial-origins-of-comparative-development.pdf",
+  "pdf_sha256": "bce991ebdb67555d7ee6d8b0f478cc69d54e78addb7037ccc4e99e0780e324bd",
+  "text_sha256": "d33c1a059fd8d1fca1f6424dec9c1d78e81374358bb76d3f2dd2624d75d45048",
+  "cite": "Acemoglu, Johnson & Robinson (2001). The Colonial Origins of Comparative Development: An Empirical Investigation. AER 91(5):1369-1401. DOI 10.1257/aer.91.5.1369.",
+  "excerpts": [
+   {
+    "id": "AJR-E1",
+    "kind": "section",
+    "start": 615,
+    "end": 787,
+    "pdf_page": 4,
+    "extraction_start": 10993,
+    "extraction_end": 11165,
+    "quote": "institutions to the level of Chile could, in the\nlong run, lead to as much as a 7-fold increase in\nNigeria's income (in practice Chile is over 11\ntimes as rich as Nigeria).",
+    "normalized_sha256": "6cca52363075479e679e6fdaaa2950a5e1f31e46f8de579fe6bcd2ca35d6f477",
+    "formfeed_removed": false
+   },
+   {
+    "id": "AJR-E2",
+    "kind": "section",
+    "start": 847,
+    "end": 1390,
+    "pdf_page": 20,
+    "extraction_start": 72477,
+    "extraction_end": 73020,
+    "quote": "Our 2SLS estimate, 0.94, implies that the 2.24\ndifferences in expropriationrisk between these\ntwo countriesshouldtranslateinto 206 log point\n(approximately\n7-fold) difference.In practice,the\npresence of measurementerrorcomplicatesthis\ninterpretation,\nbecausesome of the differencebetween Nigeria and Chile's expropriationindex\nmay reflect measurementerror. Therefore,the\n7-fold differenceis an upperbound.In any case,\nthe estimatesin Table 4 imply a substantial,but\nnot implausiblylarge,effect of institutionaldifferences on income per capita.",
+    "normalized_sha256": "49d2f567430ad0441cb30bbfc79ae3dea067d7c33c0e47b3453250fcce78b0db",
+    "formfeed_removed": false
+   },
+   {
+    "id": "AJR-E4",
+    "kind": "section",
+    "start": 1450,
+    "end": 2109,
+    "pdf_page": 24,
+    "extraction_start": 92092,
+    "extraction_end": 92751,
+    "quote": "In any case, controllingfor malariadoes not\nchange our results. We do this in columns (1)\nand (2) by controlling for the fraction of the\npopulation who live in an area where falciporum malariais endemic in 1994 (as constructed\nand used by Gallup et al., 1998). Since malaria\nprevalence in 1994 is highly endogenous, the\nargumentin Appendix A implies that controlling for it directly will underestimatethe effect\nof institutions on performance.In fact, the coefficient on protection against expropriationis\nnow estimated to be somewhat smaller, 0.69\ninstead of 0.94 as in Table 4. Nevertheless,\nthe effect remainshighly significantwith a standard error of 0.25",
+    "normalized_sha256": "49c35c5aeb7b33edc6a65717c11c84523643daa50dba8e4afaf20ef3c8bd8ec4",
+    "formfeed_removed": false
+   },
+   {
+    "id": "AJR-E3",
+    "kind": "section",
+    "start": 2169,
+    "end": 2490,
+    "pdf_page": 26,
+    "extraction_start": 98840,
+    "extraction_end": 99161,
+    "quote": "McArthurand Sachs (2001) also reportspecifications\nwith more instruments.However, using six or seven instruments with only 64 observations leads to the \"too-manyinstruments\"problem, typically biasing the IV estimate\ntowardsthe OLS estimate (see JohnBound et al., 1995). We\nthereforedid not pursue these estimates further.",
+    "normalized_sha256": "42c37410c3fcbc8213f5718959f6510653e0a7136be32d17ace0ddc1969f9d46",
+    "formfeed_removed": false
+   }
+  ]
+ },
+ "HB2004": {
+  "file": "HB2004-excerpts.txt",
+  "sha256": "4192933e87a87024fe23441673d315fb83d2f4ec50f82fb4ce65af768981a782",
+  "pdf": "ajr_handbook_nber_w10481.pdf",
+  "pdf_sha256": "abcf176a6d08e7bcfbf9de6504da1221a70f3509edb5903a6e4be58e8367b653",
+  "text_sha256": "cfaaa035fb0c9793ca3df24318dc51aec1c0afc131342c4f918671245f47ae30",
+  "cite": "Acemoglu, Johnson & Robinson (2004). Institutions as the Fundamental Cause of Long-Run Growth. NBER Working Paper 10481 (later Handbook of Economic Growth vol. 1A ch. 6, 2005).",
+  "excerpts": [
+   {
+    "id": "HB-E1",
+    "kind": "section",
+    "start": 629,
+    "end": 1520,
+    "pdf_page": 29,
+    "extraction_start": 75748,
+    "extraction_end": 76639,
+    "quote": "In Acemoglu, Johnson and Robinson (2001) we showed, using European mortality\nas an instrument for the current enforcement of property rights, that most of the gap\nbetween rich and poor countries today is due to diﬀerences in economic institutions.\nMore precisely, we showed (p. 1387) that if one took two typical–in the sense that\nthey both lie on the regression line–countries with high and low expropriation risk,\nlike Nigeria and Chile, then almost the entire diﬀerence in incomes per-capita between\nthem could be explained by the diﬀerences in the security of property rights. We also\npresented regression evidence that showed that once the eﬀect of economic institutions\non GDP per-capita was properly controlled for, geographical variables, such as latitude,\nwhether or not a country is land-locked and the current disease environment, have no\nexplanatory power for current prosperity.",
+    "normalized_sha256": "e3f7f13faa858453e5aa32f2e287d55b5a7deceaa860600af87e8912449e3bdd",
+    "formfeed_removed": false
+   }
+  ]
+ },
+ "NOBELSCI": {
+  "file": "NOBELSCI-excerpts.txt",
+  "sha256": "0d7a4d737c5b7ba5c71e7375dd9da3d092fd5457845236d1ec670281d0a9ee05",
+  "pdf": "nobel2024_scientific_background.pdf",
+  "pdf_sha256": "0a8e2746fef87c2481880f8fb479d0d51e1725c86771a12e54d3a298391cfcd2",
+  "text_sha256": "5ea7ef5080e8d1145a72e248fd7f1d981a2777ab267afedb4a6920a0e72d36db",
+  "cite": "Committee for the Prize in Economic Sciences in Memory of Alfred Nobel (2024). Scientific Background: Acemoglu, Johnson and Robinson.",
+  "excerpts": [
+   {
+    "id": "NS-E1",
+    "kind": "section",
+    "start": 588,
+    "end": 1171,
+    "pdf_page": 19,
+    "extraction_start": 40722,
+    "extraction_end": 41305,
+    "quote": "The actual IV-estimate should thus be taken with a grain of salt. Nevertheless, the\nevidence presented by Acemoglu, Johnson, and Robinson strongly suggests that the type of\ninstitutions implemented by the colonizers is a key mechanism driving the relationship\nbetween contemporary GDP and the conditions at colonization. Moreover, it is difficult to\nimagine that we would observe a reversal of fortune, where once prosperous regions became\nless so, had it not been for the extractive institutions established by the colonizers in the areas\nthat were prosperous prior to colonization.",
+    "normalized_sha256": "565b06d5a8660cf740a7c6879afb00bc2495922090e7e2e19cb85e1314c265a4",
+    "formfeed_removed": false
+   },
+   {
+    "id": "NS-E2",
+    "kind": "section",
+    "start": 1229,
+    "end": 1760,
+    "pdf_page": 19,
+    "extraction_start": 41306,
+    "extraction_end": 41837,
+    "quote": "Another point of discussion involves the reliability of the data on settler mortality\nfrom the 18th century, which are sometimes sketchy and provide rough estimates on initial\nsettler mortality (see Albouy, 2012, for criticism). However, the core results hold up when the\nauthors exclude African nations, which were the subject of much of the dispute. Moreover,\nthe results are robust to capping settler mortality from above, to ensure that identification\ndoes not come from extremely high estimates of the settler mortality rates.",
+    "normalized_sha256": "957abad94ffa12378003edfb393c20484ff7773b67e80da9a30867996526258b",
+    "formfeed_removed": false
+   },
+   {
+    "id": "NS-E3",
+    "kind": "section",
+    "start": 1818,
+    "end": 2050,
+    "pdf_page": 19,
+    "extraction_start": 40486,
+    "extraction_end": 40718,
+    "quote": "Ultimately, however, human\ncapital and institutions are both determinants of growth, and it is very hard to distinguish\nAcemoglu, Gallego, and Robinson’s argument from the fact that human capital has an\nindependent effect on growth.",
+    "normalized_sha256": "4d5dff1e93c9c01f3f2b4c1762ebd7839847c5c71433e801b7025584c90c7cba",
+    "formfeed_removed": false
+   }
+  ]
+ },
+ "NOBELPOP": {
+  "file": "NOBELPOP-excerpts.txt",
+  "sha256": "c379015af6da9615ce32686cf56038997ce5cfe98ed6e021b60eb091672c8e24",
+  "pdf": "nobel2024_popular.pdf",
+  "pdf_sha256": "034ea71058dcabf10983eb1645ad69bfe81043bbd61ad2a6351f59a73e2ca97e",
+  "text_sha256": "bd1742097cf18e4ba9bd3fa1ab5827b01af295fad7c5c95fe3c99d33b3e44167",
+  "cite": "Royal Swedish Academy of Sciences (2024). Popular science background: They provided an explanation for why some countries are rich and others poor.",
+  "excerpts": [
+   {
+    "id": "NP-E1",
+    "kind": "section",
+    "start": 601,
+    "end": 849,
+    "pdf_page": 4,
+    "extraction_start": 11958,
+    "extraction_end": 12206,
+    "quote": "Acemoglu, Johnson and Robinson have uncovered a clear chain of causality. Institutions that were\ncreated to exploit the masses are bad for long-run growth, while ones that establish fundamental\neconomic freedoms and the rule of law are good for it.",
+    "normalized_sha256": "866ee1f9a930783351e4996ab7b972dd950c3470d40f9d269d26cb5c0d825b4c",
+    "formfeed_removed": false
+   }
+  ]
+ },
+ "RODRIK2004": {
+  "file": "RODRIK2004-excerpts.txt",
+  "sha256": "fbf18cbead0eedb59c635bf9cc22c1f67ce3bb8063766bd380fbb9340dfd5ac3",
+  "pdf": "rodrik2004_nber_w9305.pdf",
+  "pdf_sha256": "fcf21eff336d97712b2f80bbb67c1e096b6f40dce7d3d9b5be35fd7accb5b4c0",
+  "text_sha256": "bdcc9b3858c8d75ea82067ffceed19d2dc9adb1946ba41270fb9582da0f3d49f",
+  "cite": "Rodrik, Subramanian & Trebbi (2002/2004). Institutions Rule: The Primacy of Institutions over Geography and Integration in Economic Development. NBER WP 9305 (J. Econ. Growth 9:131-165, 2004).",
+  "excerpts": [
+   {
+    "id": "RD-E1",
+    "kind": "section",
+    "start": 648,
+    "end": 864,
+    "pdf_page": 6,
+    "extraction_start": 12991,
+    "extraction_end": 13207,
+    "quote": "The idea is that these two instruments, having\npassed what might be called the AER (American Economic Review)-test, are our best hope\nat the moment of unraveling the tangle of cause-and-effect relationships involved.",
+    "normalized_sha256": "970636c0a6a964c23b963371e7e1db2d5cd289a7af411de723cd6a1311bb6bb5",
+    "formfeed_removed": false
+   },
+   {
+    "id": "RD-E3",
+    "kind": "section",
+    "start": 922,
+    "end": 1042,
+    "pdf_page": 20,
+    "extraction_start": 59208,
+    "extraction_end": 59328,
+    "quote": "In our view,\nthis distinction is not made adequately clear in AJR and is arguably blurred by Easterly and\nLevine (2002).",
+    "normalized_sha256": "0ab60a7b229dc374a77e81939eca83801128cd537a57c097f3c315f5f884b16e",
+    "formfeed_removed": false
+   },
+   {
+    "id": "RD-E4",
+    "kind": "section",
+    "start": 1100,
+    "end": 1207,
+    "pdf_page": 21,
+    "extraction_start": 60475,
+    "extraction_end": 60582,
+    "quote": "One problem is that AJR do not carry out a direct test\nof the impact of colonial policies and institutions.",
+    "normalized_sha256": "50ce3f791507141165d83ad49e4d194df6f2359967b07cab944520baf5979157",
+    "formfeed_removed": false
+   }
+  ]
+ },
+ "GLAESER2004": {
+  "file": "GLAESER2004-excerpts.txt",
+  "sha256": "45f853017015a9effc2524076136c13befcb3a7314a49ca9369f4edffca886e4",
+  "pdf": "glaeser2004_nber_w10568.pdf",
+  "pdf_sha256": "a3176149a0ca2bdd31e3fbace1ef745418d64c8dedeba63d88a4ca2c64d6c092",
+  "text_sha256": "d27c52f0a85c1cd771de850b0c7a2070808ca8fc3bd612411681fe710ffc9a7b",
+  "cite": "Glaeser, La Porta, Lopez-de-Silanes & Shleifer (2004). Do Institutions Cause Growth? NBER WP 10568 (J. Econ. Growth 9:271-303, 2004).",
+  "excerpts": [
+   {
+    "id": "GL-E1",
+    "kind": "section",
+    "start": 591,
+    "end": 978,
+    "pdf_page": 24,
+    "extraction_start": 46382,
+    "extraction_end": 46769,
+    "quote": "The impact of settler mortality on today’s institutions remains significant, but so is that of\nmalaria risk. At least part of what settler mortality captures is the modern disease environment.\nThese results suggest that the issue of modern disease environment is real, and one should exercise\ncaution in treating AJR instruments as proxies for the colonial but not modern mortality risk.",
+    "normalized_sha256": "3c4d8de09a556d6ef34cbc9ba31dbe4e9bf53a3b9c2cf15f914612f662c1063f",
+    "formfeed_removed": false
+   },
+   {
+    "id": "GL-E2",
+    "kind": "section",
+    "start": 1036,
+    "end": 1266,
+    "pdf_page": 24,
+    "extraction_start": 47312,
+    "extraction_end": 47542,
+    "quote": "Could the influence of AJR’s proposed\ninstruments on today’s development work through human capital? Put differently, perhaps when\ncolonizers settled, they brought with them their know-how rather than constraints on the executive.",
+    "normalized_sha256": "b1af0c8bb4a72c934dcaa8beb34776dcb836451c318a0b9bd07d05d774aa5499",
+    "formfeed_removed": false
+   }
+  ]
+ },
+ "SACHS2003": {
+  "file": "SACHS2003-excerpts.txt",
+  "sha256": "2503109cdf54f112d18dae24c292ff55eff77b84bb752c2ac4df9f0f39cd99d7",
+  "pdf": "sachs2003_nber_w9490.pdf",
+  "pdf_sha256": "d8c218e3b3ed20379c99ea2b2bb1e341843d60d74a5f97fa53ba57330ae3cbc4",
+  "text_sha256": "fde2f7fce43be33569f571aa9854aaef09f12a25b9631dc03e8904fd7567c154",
+  "cite": "Sachs (2003). Institutions Don't Rule: Direct Effects of Geography on Per Capita Income. NBER WP 9490.",
+  "excerpts": [
+   {
+    "id": "SA-E1",
+    "kind": "section",
+    "start": 558,
+    "end": 947,
+    "pdf_page": 10,
+    "extraction_start": 16300,
+    "extraction_end": 16689,
+    "quote": "The chief strength of the AJR, EL, and RST papers is that a clear null hypothesis is\nadvanced. As Karl Popper taught many years ago, the failure to reject a null hypothesis on one\nset of data does not imply the correctness of the hypothesis more generally. This paper shows,\nindeed, that the null hypothesis may be readily rejected using an alternative geographical\nvariable: malaria risk.",
+    "normalized_sha256": "d428f46e2ae9ab52f9041e623c004606aa382971987b1d7ccc077c0ff983c9af",
+    "formfeed_removed": false
+   }
+  ]
+ },
+ "EL2003": {
+  "file": "EL2003-excerpts.txt",
+  "sha256": "250c951be95cd24681f6468cf480cdffa59050d288fd59937ca0bde89ae7b0c9",
+  "pdf": "easterly_levine_nber_w9106.pdf",
+  "pdf_sha256": "d18ba14408a2993999a141e4c3fbbd4e1b52f4afe99d301683d20032b46a8ebf",
+  "text_sha256": "58cba36ea429a87821b1144f51e77ac7acccad5ffe14a012c4dd0df09510ab06",
+  "cite": "Easterly & Levine (2002/2003). Tropics, Germs, and Crops: How Endowments Influence Economic Development. NBER WP 9106 (J. Monetary Econ. 50:3-39, 2003).",
+  "excerpts": [
+   {
+    "id": "EL-E1",
+    "kind": "section",
+    "start": 604,
+    "end": 806,
+    "pdf_page": 2,
+    "extraction_start": 1510,
+    "extraction_end": 1712,
+    "quote": "We find no evidence that tropics, germs, and crops affect country incomes directly other than\nthrough institutions, nor do we find any effect of policies on development once we control for institutions.",
+    "normalized_sha256": "94860a419ce57f3542b979f12f912692f76c6b916d99b61cfc02ee3f5650292d",
+    "formfeed_removed": false
+   },
+   {
+    "id": "EL-E2",
+    "kind": "section",
+    "start": 864,
+    "end": 1083,
+    "pdf_page": 15,
+    "extraction_start": 25989,
+    "extraction_end": 26208,
+    "quote": "SETTLER MORTALITY equals the logarithm of annualized deaths per thousand of\nEuropean solders (with each death replaced with a new soldier) during the early 19th century, for\n72 former colonies. AJR (2001) compiles data.",
+    "normalized_sha256": "04d37b15068625c421f81d1e6e44a25fd482a646651ef51bbf26e4ee8b37b403",
+    "formfeed_removed": false
+   }
+  ]
+ },
+ "DML2018": {
+  "file": "DML2018-excerpts.txt",
+  "sha256": "47887ade0d8afb15008670cab2af9d58ad5747a76c862f3a261041370182ea95",
+  "pdf": "T06_chernozhukov_dml_arxiv1608.00060.pdf",
+  "pdf_sha256": "3186133dacb9f4a31c004a00150627de1e5cf26e203d1522a25a5444c7dbdf78",
+  "text_sha256": "e1a628a5737b9e544a5afa1be187bbea9eb563f2b5b87f5c3070086ae7ef404d",
+  "cite": "Chernozhukov et al. (2016/2018). Double/Debiased Machine Learning for Treatment and Structural Parameters. arXiv 1608.00060 (Econometrics Journal 21(1), 2018).",
+  "excerpts": [
+   {
+    "id": "DML-E1",
+    "kind": "section",
+    "start": 614,
+    "end": 1161,
+    "pdf_page": 45,
+    "extraction_start": 132635,
+    "extraction_end": 133182,
+    "quote": "We use the same set of 64 country-level observations as AJR. The data set contains\nmeasurements of GDP, settler morality, an index which measures protection against expropriation risk and geographic information. The outcome variable, Y, is the logarithm of\nGDP per capita and the endogenous explanatory variable, D, is a measure of the strength\nof individual property rights that is used as a proxy for the strength of institutions. To\ndeal with endogeneity, we use an instrumental variable Z, which is mortality rates for\nearly European settlers.",
+    "normalized_sha256": "ee0081184d082632cc17c43f52aa2dea764719492997277f947695619f1beca1",
+    "formfeed_removed": false
+   },
+   {
+    "id": "DML-E2",
+    "kind": "section",
+    "start": 1221,
+    "end": 1551,
+    "pdf_page": 46,
+    "extraction_start": 135077,
+    "extraction_end": 135407,
+    "quote": "Finally, although the estimates are\nsomewhat smaller than the baseline estimates reported in AJR - an estimated coefficient\nof 1.10 with estimated standard error of 0.46 (Acemoglu et al. (2001), Table 4, Panel A,\ncolumn 7) - the results are qualitatively similar, indicating a strong and positive effect\nof institutions on output.",
+    "normalized_sha256": "016536b3d40239d50759f21e31db2b779a8f5355ccc612d1e8b47895a0897018",
+    "formfeed_removed": false
+   }
+  ]
+ },
+ "HW2008": {
+  "file": "HW2008-excerpts.txt",
+  "sha256": "62211d70df92a6df294f184031fa3e7e6e42aabf70651f141741790e9f476f5b",
+  "pdf": "T12_hanushek_woessmann_nber_w12832.pdf",
+  "pdf_sha256": "305ad6df71078b65d4a2f89716adff21002fba65c08a16255e607e74c2f9c9ce",
+  "text_sha256": "b11dd7497dc9c995d53818bc58c37aabd1a739d5f25a876346a7a5e6a751bfc3",
+  "cite": "Hanushek & Woessmann (2007/2008). The Role of Cognitive Skills in Economic Development. NBER WP 12832 (J. Econ. Lit. 46(3), 2008).",
+  "excerpts": [
+   {
+    "id": "HW-E1",
+    "kind": "section",
+    "start": 583,
+    "end": 815,
+    "pdf_page": 44,
+    "extraction_start": 107783,
+    "extraction_end": 108015,
+    "quote": "While Acemoglu, Johnson, and Robinson (2001, 2002, 2005) find that geographical features do not exert an effect\n\non economic growth independent of institutions, this remains a disputed subject (cf., e.g., McArthur and Sachs (2001)).",
+    "normalized_sha256": "000e5f6a46dc9baabdff4cfd9a3f2e91f9af2679807f7db62b73af5e8d2e5d9f",
+    "formfeed_removed": false
+   }
+  ]
+ }
+}

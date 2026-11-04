@@ -1,0 +1,18 @@
+Bounded excerpts from HB2004: Acemoglu, Johnson & Robinson (2004). Institutions as the Fundamental Cause of Long-Run Growth. NBER Working Paper 10481 (later Handbook of Economic Growth vol. 1A ch. 6, 2005).
+PDF SHA-256 abcf176a6d08e7bcfbf9de6504da1221a70f3509edb5903a6e4be58e8367b653; extraction `pdftotext -enc UTF-8` (poppler) of that PDF, text SHA-256 cfaaa035fb0c9793ca3df24318dc51aec1c0afc131342c4f918671245f47ae30.
+Not the full document. Each excerpt body is an exact substring of the extraction output; offsets in that output and in this file are recorded in excerpts_manifest.json.
+
+=== HB-E1 | section | PDF page 29 ===
+In Acemoglu, Johnson and Robinson (2001) we showed, using European mortality
+as an instrument for the current enforcement of property rights, that most of the gap
+between rich and poor countries today is due to diﬀerences in economic institutions.
+More precisely, we showed (p. 1387) that if one took two typical–in the sense that
+they both lie on the regression line–countries with high and low expropriation risk,
+like Nigeria and Chile, then almost the entire diﬀerence in incomes per-capita between
+them could be explained by the diﬀerences in the security of property rights. We also
+presented regression evidence that showed that once the eﬀect of economic institutions
+on GDP per-capita was properly controlled for, geographical variables, such as latitude,
+whether or not a country is land-locked and the current disease environment, have no
+explanatory power for current prosperity.
+=== end HB-E1 ===
+

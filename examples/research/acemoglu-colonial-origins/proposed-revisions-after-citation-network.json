@@ -1,0 +1,98 @@
+{
+ "schema": "acemoglu-proposed-revisions/1",
+ "status": "PROPOSED; NOT APPLIED. 02a, 02b, 03_counter_audit, 05_final_assessment and findings.json are unchanged.",
+ "basis": "citation-network/02c_citation_network.md (sha256 884887fe5a7b98d77921fbc31b488c7c9b7dc8406eb60340e4d5881436f3016c); Atlas import urn:atlas:import:ajr2001-citation-network:1",
+ "validation_boundary": "The citation-network instrument is validated only on supplied packets (<=26 sources, <=70 edges); this open-retrieval run is outside that boundary. Mechanical checker PASS-WITH-REVIEW is not scientific verification.",
+ "revisions": [
+  {
+   "id": "IV-1",
+   "prior_outcome": "UPHELD-NARROWED",
+   "proposed_outcome": "UPHELD-NARROWED (unchanged)",
+   "change": "ADD_RECEPTION_NOTE",
+   "proposed_text": "Reception note: the Albouy critique is engaged by the AJR team (2012 Reply) but rarely carried by the citing mass: Albouy 2012 is co-cited by 50 of 2,695 recent AJR citers (1.9%) and appears in 3.0% of 2013+ citers in the OpenAlex union. The critique's survival in the literature is CONTESTED, not resolved.",
+   "evidence": [
+    "citation-network Finding 5",
+    "union_citers_2013plus_albouy.json",
+    "recent_cocite_AL.json",
+    "NS-E2"
+   ],
+   "verification_state": "RECEPTION-CONFIRMED; CONTESTED"
+  },
+  {
+   "id": "IV-2",
+   "change": "NONE"
+  },
+  {
+   "id": "IV-3",
+   "change": "NONE"
+  },
+  {
+   "id": "IV-4",
+   "change": "NONE"
+  },
+  {
+   "id": "IV-5",
+   "change": "NONE"
+  },
+  {
+   "id": "IV-6",
+   "prior_verification": "PROVISIONAL",
+   "prior_outcome": "UNRESOLVED (PENDING VERIFICATION)",
+   "change": "UPGRADE_VERIFICATION",
+   "proposed_verification": "FULL-TEXT-CONFIRMED; CONTESTED",
+   "proposed_outcome": "UNRESOLVED (CONTESTED IN THE LITERATURE); non-anchoring for field 6",
+   "proposed_text": "The rival-channel challenge is now read in full text: Glaeser et al. 2004 (GL-E1, GL-E2) report malaria risk and human capital as rival channels for the settler-mortality instrument; Sachs 2003 (SA-E1) frames the null; the Nobel scientific background (NS-E3) states that the channels are very hard to disentangle. AJR 2001 itself reports that controlling for malaria leaves 0.69 (SE 0.25) vs 0.94 (AJR-E4). The challenge is real, engaged, and unresolved; it does not defeat the field-6 estimate as reported.",
+   "evidence": [
+    "GL-E1",
+    "GL-E2",
+    "SA-E1",
+    "NS-E3",
+    "AJR-E4",
+    "citation-network Finding 6"
+   ]
+  },
+  {
+   "id": "IV-7",
+   "change": "NONE"
+  },
+  {
+   "id": "IV-A",
+   "change": "NONE",
+   "note": "Field-6 acquittal stands; citation-network Finding 7 (closure acquittal) is consistent with it."
+  },
+  {
+   "id": "CV-1",
+   "prior_outcome": "UPHELD-NARROWED (Field 2 abstract wording only)",
+   "change": "ADD_DOWNSTREAM_PROPAGATION; FAILURE_LOCATION_PAPER_TO_MIXED (proposed)",
+   "proposed_text": "Downstream propagation: the AJR team's own Handbook chapter broadens the proxy into 'institutions' and drops the upper-bound qualifier (HB-E1 vs AJR-E2); independent reusers (DML-E1, HW-E1) keep the narrower proxy wording. Failure location: MIXED (PAPER + CITATION), the citation part being self-authored.",
+   "proposed_outcome": "UPHELD-NARROWED (unchanged)",
+   "item_level_wording": "PROVISIONAL (PRS items still not retrieved)",
+   "evidence": [
+    "HB-E1",
+    "AJR-E2",
+    "DML-E1",
+    "HW-E1",
+    "citation-network Findings 2-3"
+   ]
+  },
+  {
+   "id": "CV-2",
+   "change": "NONE",
+   "note": "Downstream reuse of the same mortality series inherits its narrowness (citation-network Finding 2)."
+  },
+  {
+   "id": "CV-3",
+   "change": "NONE",
+   "note": "Intervention-evidence ratchet scored N/A at network level."
+  },
+  {
+   "id": "CV-A",
+   "change": "NONE"
+  },
+  {
+   "id": "OVERALL_VERDICT",
+   "change": "NONE",
+   "note": "Stage 2c is now run (was NOT_RUN). The verdict and the field-6 acquittal stand. The new scorecard gives 7/24 = 29.2% (band >20%-40%), mechanism: shared-data pseudo-convergence plus self-authored hub qualifier loss; no closure found."
+  }
+ ]
+}

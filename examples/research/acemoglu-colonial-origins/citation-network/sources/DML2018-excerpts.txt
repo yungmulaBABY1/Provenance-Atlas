@@ -1,0 +1,21 @@
+Bounded excerpts from DML2018: Chernozhukov et al. (2016/2018). Double/Debiased Machine Learning for Treatment and Structural Parameters. arXiv 1608.00060 (Econometrics Journal 21(1), 2018).
+PDF SHA-256 3186133dacb9f4a31c004a00150627de1e5cf26e203d1522a25a5444c7dbdf78; extraction `pdftotext -enc UTF-8` (poppler) of that PDF, text SHA-256 e1a628a5737b9e544a5afa1be187bbea9eb563f2b5b87f5c3070086ae7ef404d.
+Not the full document. Each excerpt body is an exact substring of the extraction output; offsets in that output and in this file are recorded in excerpts_manifest.json.
+
+=== DML-E1 | section | PDF page 45 ===
+We use the same set of 64 country-level observations as AJR. The data set contains
+measurements of GDP, settler morality, an index which measures protection against expropriation risk and geographic information. The outcome variable, Y, is the logarithm of
+GDP per capita and the endogenous explanatory variable, D, is a measure of the strength
+of individual property rights that is used as a proxy for the strength of institutions. To
+deal with endogeneity, we use an instrumental variable Z, which is mortality rates for
+early European settlers.
+=== end DML-E1 ===
+
+=== DML-E2 | section | PDF page 46 ===
+Finally, although the estimates are
+somewhat smaller than the baseline estimates reported in AJR - an estimated coefficient
+of 1.10 with estimated standard error of 0.46 (Acemoglu et al. (2001), Table 4, Panel A,
+column 7) - the results are qualitatively similar, indicating a strong and positive effect
+of institutions on output.
+=== end DML-E2 ===
+

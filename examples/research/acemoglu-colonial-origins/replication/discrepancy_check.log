@@ -1,0 +1,4 @@
+maketable4 as posted (TZA=ln280)                   {'iv': 0.9443, 'se': 0.1565, 'fs': -0.6068, 'fs_se': 0.1267, 'F': 22.947}
+maketable4 with TZA=ln145 (Table A2 value)         {'iv': 0.9234, 'se': 0.1523, 'fs': -0.6129, 'fs_se': 0.127, 'F': 23.305}
+rebuttal as posted (IDN loggdp=7.33, TZA=ln145)    {'iv': 0.9295, 'se': 0.1561, 'fs': -0.6133, 'fs_se': 0.1269, 'F': 23.341}
+rebuttal with IDN loggdp=8.07                      {'iv': 0.9235, 'se': 0.1523, 'fs': -0.6133, 'fs_se': 0.1269, 'F': 23.341}

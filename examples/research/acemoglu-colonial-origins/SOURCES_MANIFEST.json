@@ -1,0 +1,237 @@
+{
+ "schema": "acemoglu-audit-sources/1",
+ "run_date": "2026-11-04 (America/Los_Angeles)",
+ "sources": [
+  {
+   "id": "S1",
+   "role": "target, published version",
+   "cite": "Acemoglu, Johnson, Robinson (2001) AER 91(5):1369-1401",
+   "file": "colonial-origins-of-comparative-development.pdf",
+   "url": "https://economics.mit.edu/sites/default/files/publications/colonial-origins-of-comparative-development.pdf",
+   "pages": 34,
+   "note": "JSTOR-stamped copy (stable 2677930); PDF p.1 = JSTOR cover; journal page = PDF page + 1367. Text layer: pdftotext 25.03.0 (.txt sha256 d33c1a059fd8d1fca1f6424dec9c1d78e81374358bb76d3f2dd2624d75d45048)",
+   "sha256": "bce991ebdb67555d7ee6d8b0f478cc69d54e78addb7037ccc4e99e0780e324bd",
+   "bytes": 899806,
+   "retrieved": "2026-11-04, approx. 02:30-03:10 PST"
+  },
+  {
+   "id": "S2",
+   "role": "working-paper version",
+   "cite": "NBER Working Paper 7771 (2000)",
+   "file": "w7771.pdf",
+   "url": "https://www.nber.org/system/files/working_papers/w7771/w7771.pdf",
+   "pages": 69,
+   "sha256": "4bfc8b943a19aa8295aa52764bb1c1221ce91de42a2b35e97c467a10a38d1280",
+   "bytes": 886050,
+   "retrieved": "2026-11-04, approx. 02:30-03:10 PST"
+  },
+  {
+   "id": "S3",
+   "role": "authors' replication data (2001 tables)",
+   "cite": "AJR colonial_origins.zip",
+   "file": "colonial_origins.zip",
+   "url": "https://www.dropbox.com/s/eo52btkmmnghz5p/colonial_origins.zip?dl=1",
+   "note": "contains maketable1-8 .do/.dta; maketable4.dta sha256 2b34cce21b58a3a424a804e97a134106ab7010ef936bb68b3a244d3e271af404",
+   "sha256": "c6868b1b5b12eb6f9b4d68ff3442d482306952bacbe621be597120d217edc38c",
+   "bytes": 45278,
+   "retrieved": "2026-11-04, approx. 02:30-03:10 PST"
+  },
+  {
+   "id": "S3r",
+   "role": "data readme",
+   "file": "readme.TXT",
+   "url": "https://www.dropbox.com/s/ss9l9sdamy4z6v4/readme.TXT?dl=1",
+   "sha256": "fd6c4912d297502b581e1f513a857f3d226ace4896fd04b293ac10826a6b0ab5",
+   "bytes": 838,
+   "retrieved": "2026-11-04, approx. 02:30-03:10 PST"
+  },
+  {
+   "id": "S4",
+   "role": "authors' 2011 rebuttal dataset",
+   "file": "reply_dataset.zip",
+   "url": "https://economics.mit.edu/sites/default/files/inline-files/dataset.zip",
+   "note": "'dataset used for final AER rebuttal Sept 11 2011.dta' sha256 b752c34f1e6e0d981bbeaf79f088430220a31dc73c62bb1a7eccb0244bc38dcd",
+   "sha256": "414e551f0e27f143d874f981c5724c4dc4bbe646436cfb79aa44d9957b0d909e",
+   "bytes": 4143,
+   "retrieved": "2026-11-04, approx. 02:30-03:10 PST"
+  },
+  {
+   "id": "S5",
+   "role": "published critique",
+   "cite": "Albouy (2012) AER 102(6):3059-3076",
+   "file": "albouy2012_comment_mirror.pdf",
+   "url": "https://captgouda24.github.io/nicholas-decker.github.io/pdfs/Albouy_The_Colonial_Origins.pdf",
+   "pages": 19,
+   "note": "third-party mirror of JSTOR copy; journal page = PDF page + 3057; default text layer column-jumbled, -layout used for quotes",
+   "sha256": "cdc4fa8b0ac9f04f3228bba49fb9e918b94c1c7a40d8cc151ef58804cffbc24f",
+   "bytes": 2114914,
+   "retrieved": "2026-11-04, approx. 02:30-03:10 PST"
+  },
+  {
+   "id": "S6",
+   "role": "critique, author-site version",
+   "file": "albouy_site_AJRrev.pdf",
+   "url": "https://davidalbouy.com/s/AJRrev.pdf",
+   "pages": 19,
+   "sha256": "72e8afb77a0f7082652139eff083d6f745f07adbab33f4d24c5a3b54cd7185f5",
+   "bytes": 649271,
+   "retrieved": "2026-11-04, approx. 02:30-03:10 PST"
+  },
+  {
+   "id": "S7",
+   "role": "critique appendix",
+   "file": "albouy_site_AJRrev_App.pdf",
+   "url": "https://davidalbouy.com/s/AJRrev_App.pdf",
+   "pages": 35,
+   "sha256": "c345e191c7ad4728713aa4aaed8d7151d29f48978dc3c8de5dd4ee5b7da63fae",
+   "bytes": 358217,
+   "retrieved": "2026-11-04, approx. 02:30-03:10 PST"
+  },
+  {
+   "id": "S8",
+   "role": "published author reply",
+   "cite": "Acemoglu, Johnson, Robinson (2012) AER 102(6):3077-3110",
+   "file": "ajr2012_reply.pdf",
+   "url": "https://economics.mit.edu/sites/default/files/publications/The%20Colonial%20Origins%20of%20Compatayive%20Development%20-%20.pdf",
+   "pages": 34,
+   "note": "journal page = PDF page + 3076",
+   "sha256": "5c4f73bb5d5fc10f8b12fe9650830a767a06e1071669220e1d59083a214c0f44",
+   "bytes": 800933,
+   "retrieved": "2026-11-04, approx. 02:30-03:10 PST"
+  },
+  {
+   "id": "S9",
+   "role": "reply appendix",
+   "file": "ajr2012_reply_appendix.pdf",
+   "url": "https://economics.mit.edu/sites/default/files/publications/Hither%20Thou%20Shalt%20Come%20Appendix.pdf",
+   "pages": 16,
+   "sha256": "a969c666d9bf9c35dacef93e5e99a2b77c18b282518cd46ec1d6ece48a066912",
+   "bytes": 180718,
+   "retrieved": "2026-11-04, approx. 02:30-03:10 PST"
+  },
+  {
+   "id": "S10",
+   "role": "data archive page",
+   "file": "mit_data_archive.html",
+   "url": "https://economics.mit.edu/people/faculty/daron-acemoglu/data-archive",
+   "sha256": "eb67e81a42b26637c4d1e3d8f44314365b0397e3b921af5d3bd38d847ff68cd4",
+   "bytes": 232690,
+   "retrieved": "2026-11-04, approx. 02:30-03:10 PST"
+  },
+  {
+   "id": "S11",
+   "role": "publisher landing page (HTML only)",
+   "file": "aer.91.5.1369",
+   "url": "https://www.aeaweb.org/articles?id=10.1257/aer.91.5.1369",
+   "sha256": "58e4524fe61d4db27e24e0238dadb20dba2f3ae1295d23de4b08f20fef3cac39",
+   "bytes": 29682,
+   "retrieved": "2026-11-04, approx. 02:30-03:10 PST"
+  },
+  {
+   "id": "R1",
+   "role": "reception: OpenAlex AJR 2001 (W3124166904)",
+   "file": "reception/openalex_ajr2001.json",
+   "url": "https://api.openalex.org/works/W3124166904",
+   "note": "cited_by_count 8594; is_retracted false",
+   "sha256": "82305441e3134a718cbcea9c26512b5fdff191de966465bcdb9f72ad83d75885",
+   "bytes": 14811,
+   "retrieved": "2026-11-04, approx. 02:30-03:10 PST"
+  },
+  {
+   "id": "R1b",
+   "role": "reception: OpenAlex Albouy 2012 (W1969918011)",
+   "file": "reception/openalex_albouy2012.json",
+   "url": "https://api.openalex.org/works/W1969918011",
+   "note": "cited_by_count 295",
+   "sha256": "8c79ae445aa475f11b597af50560b27cf3571dc97d2071535e3eb3f73e62afbb",
+   "bytes": 13793,
+   "retrieved": "2026-11-04, approx. 02:30-03:10 PST"
+  },
+  {
+   "id": "R1c",
+   "role": "reception: OpenAlex AJR 2012 Reply (W3124131699)",
+   "file": "reception/openalex_ajr2012reply.json",
+   "url": "https://api.openalex.org/works/W3124131699",
+   "note": "cited_by_count 6266 - implausible; likely work-merge artifact",
+   "sha256": "3776ffb4c55906fb5e050b31d088681848d3fa13cd966945990b0dc2ca5d3bc7",
+   "bytes": 23255,
+   "retrieved": "2026-11-04, approx. 02:30-03:10 PST"
+  },
+  {
+   "id": "R2",
+   "role": "reception: citing works, title 'settler mortality'",
+   "file": "reception/openalex_citing_settler_mortality.json",
+   "url": "https://api.openalex.org/works?filter=cites:W3124166904,title.search:settler%20mortality",
+   "note": "2 results",
+   "sha256": "c678926784509131a1e5e4ce7f39a75db54c98206bad6e20ee0514f6358e8f8d",
+   "bytes": 1602,
+   "retrieved": "2026-11-04, approx. 02:30-03:10 PST"
+  },
+  {
+   "id": "R2b",
+   "role": "reception: citing works, title 'colonial origins'",
+   "file": "reception/openalex_citing_colonial_origins.json",
+   "url": "https://api.openalex.org/works?filter=cites:W3124166904,title.search:colonial%20origins",
+   "note": "27 results",
+   "sha256": "8dfbedd94bdccc5632885acb2b92b8e829b1cf6d8d81fb7d3324fb2b44106741",
+   "bytes": 7315,
+   "retrieved": "2026-11-04, approx. 02:30-03:10 PST"
+  },
+  {
+   "id": "R3",
+   "role": "downstream: 2024 Economics Prize press release",
+   "file": "reception/nobel2024_press.html",
+   "url": "https://www.nobelprize.org/prizes/economic-sciences/2024/press-release/",
+   "sha256": "ebb969c747c8f34db982702202e6bdb88116cfa25b51a00bfca8464dcdeba84e",
+   "bytes": 185989,
+   "retrieved": "2026-11-04, approx. 02:30-03:10 PST"
+  }
+ ],
+ "access_failures": [
+  {
+   "item": "NBER w10354",
+   "outcome": "retrieved but wrong paper; deleted, not used"
+  },
+  {
+   "item": "Albouy 2012 PDF from aeaweb.org",
+   "outcome": "returned HTML access page, not PDF"
+  },
+  {
+   "item": "AJR 2001 PDF from aeaweb.org",
+   "outcome": "landing page HTML only"
+  },
+  {
+   "item": "alternate Dropbox maketable4 link and an ivmodels data link",
+   "outcome": "returned HTML, not data"
+  },
+  {
+   "item": "Semantic Scholar API",
+   "outcome": "HTTP 429 rate-limited"
+  },
+  {
+   "item": "Albouy replication package",
+   "outcome": "NOT RETRIEVED; Part B is an approximation on AJR's data"
+  },
+  {
+   "item": "NBER w14130 (Albouy 2008)",
+   "outcome": "NOT RETRIEVED"
+  },
+  {
+   "item": "AJR 2005/2006/2008 responses",
+   "outcome": "NOT RETRIEVED (2005 located by title in OpenAlex)"
+  },
+  {
+   "item": "AJR 2000 Appendix B / Table A5 (alternative benchmarks)",
+   "outcome": "NOT RETRIEVED"
+  },
+  {
+   "item": "PRS / Political Risk Services codebook",
+   "outcome": "NOT RETRIEVED; index items inferred"
+  },
+  {
+   "item": "Glaeser et al. 2004",
+   "outcome": "NOT RETRIEVED; recalled only (PROVISIONAL)"
+  }
+ ],
+ "note": "Binary sources (PDF, .dta, .zip) are NOT committed to the repo; re-fetch from URLs and verify sha256."
+}

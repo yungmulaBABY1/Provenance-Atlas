@@ -1,0 +1,15 @@
+Bounded excerpts from EL2003: Easterly & Levine (2002/2003). Tropics, Germs, and Crops: How Endowments Influence Economic Development. NBER WP 9106 (J. Monetary Econ. 50:3-39, 2003).
+PDF SHA-256 d18ba14408a2993999a141e4c3fbbd4e1b52f4afe99d301683d20032b46a8ebf; extraction `pdftotext -enc UTF-8` (poppler) of that PDF, text SHA-256 58cba36ea429a87821b1144f51e77ac7acccad5ffe14a012c4dd0df09510ab06.
+Not the full document. Each excerpt body is an exact substring of the extraction output; offsets in that output and in this file are recorded in excerpts_manifest.json.
+
+=== EL-E1 | section | PDF page 2 ===
+We find no evidence that tropics, germs, and crops affect country incomes directly other than
+through institutions, nor do we find any effect of policies on development once we control for institutions.
+=== end EL-E1 ===
+
+=== EL-E2 | section | PDF page 15 ===
+SETTLER MORTALITY equals the logarithm of annualized deaths per thousand of
+European solders (with each death replaced with a new soldier) during the early 19th century, for
+72 former colonies. AJR (2001) compiles data.
+=== end EL-E2 ===
+

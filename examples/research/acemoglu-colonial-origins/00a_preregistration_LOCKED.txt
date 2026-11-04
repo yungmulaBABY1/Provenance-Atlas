@@ -1,0 +1,34 @@
+PRE-REGISTERED EXPECTATIONS — WRITTEN BEFORE READING THE TARGET'S BODY TEXT OR STAGE 1
+Written: 2026-11-04 (America/Los_Angeles), by the runner (Grok Bot executor), before Stage 1.
+
+Disclosure of what had already happened when this was written (not hidden):
+- The target PDF (AJR 2001, published version) had been downloaded and only its first page
+  (JSTOR cover + title block) printed to screen to confirm identity.
+- Web-search result snippets had been seen for: Albouy (2012) abstract; AJR (2012) Reply abstract
+  and a few snippet sentences (e.g. "Albouy needs to discard almost 60 percent of our original
+  sample", capping mortality at 250, Gambia outlier); the carlos-mendez.org tutorial snippet
+  stating OLS 0.522 / 2SLS 0.944. These are exposure, not evidence, and are disclosed so that a
+  reader can discount the expectations below accordingly.
+- The runner has substantial prior (training-data) exposure to AJR 2001 and the Albouy exchange.
+  Independence from prior knowledge is NOT established.
+
+Expectations:
+1. Field 6 will likely be the quantified 2SLS estimate in Table 4 (base sample, 64 countries):
+   a coefficient near 0.94 on average protection against expropriation risk (log GDP per capita
+   1995), stated as the causal effect of institutions on income per capita.
+2. The construct-establishment check will trigger, because the paper moves from a measured
+   index (PRS expropriation risk, 1985-95) to a causal claim about "institutions".
+3. Internal validity will centre on (a) the exclusion restriction (settler mortality affecting
+   income through channels other than current expropriation risk: disease, geography, human
+   capital, settler human capital) and (b) the construction of the mortality series
+   (Albouy's critique). I expect the dispute to remain technically UNRESOLVED in this run,
+   because the competing analyses depend on historical coding judgments this runner cannot
+   adjudicate.
+4. I expect a light reanalysis with the authors' posted data to reproduce Table 4 column 1
+   to within rounding, and to show that conclusions about robustness depend on which
+   observations/coding (campaign, rate-assignment) are adopted. I do not expect to be able to
+   reproduce Albouy's full specifications without his replication package.
+5. I expect no formal correction/retraction/expression of concern for AJR 2001.
+
+LOCK: These expectations are not to be revised after Stage 1. Departures will be reported in
+the final assessment as observed outcomes, not edited here.
