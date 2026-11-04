@@ -7,7 +7,9 @@ Every rendering shows the plain text and the native label together.
 
 from ..contract import ContractError
 
-TABLE_ID = "atlas-plain-labels/0.1"
+TABLE_ID = "atlas-plain-labels/0.2"
+# 0.2 (2026-11-04): adds the labels a research-question page needs (access, record
+# state, eligibility, question wording, audit relations). No 0.1 entry changed.
 
 PLAIN = {
     # Quote matching (atlas.extraction.anchors)
@@ -38,6 +40,24 @@ PLAIN = {
     "UNRESOLVED_REQUIRES_REVIEW": "Not decided: needs a person to judge",
     # Links
     "ANCHOR_WITHIN_IMPORTED_PASSAGE": "This quote lies inside the passage the reviewers were given",
+    # Source access and what Atlas holds (atlas.sources, atlas.question)
+    "AVAILABLE": "A copy was retrieved",
+    "RETRIEVAL_FAILED": "No copy could be retrieved",
+    "METADATA_ONLY": "Only the title and identifier are on record",
+    "RETRIEVED_NO_PASSAGES": "A copy was retrieved, but no passages are on record",
+    "PASSAGES_ON_RECORD": "Passages from a retrieved copy are on record",
+    # Per-check eligibility (C-03 source-read gate)
+    "ELIGIBLE_WITH_LIMITATIONS": "Could be checked, within stated limits",
+    "INELIGIBLE_MISSING_EVIDENCE": "Could not be checked: the text it needs is not on record",
+    # Research questions (atlas.question)
+    "DRAFTED_BY_ASSISTANT": "Wording drafted by Claude, not by the person running the investigation",
+    "DECLARED_BY_OPERATOR": "Wording given by the person running the investigation",
+    "DECLARED_LIST": "A declared list of sources, not a literature search",
+    "TARGET_OF_IMPORTED_AUDIT": "An archived audit imported into Atlas was about this paper",
+    "TARGET_OF_EXTRACTION_RUN": "A recorded claim extraction was run on this paper",
+    "PASSAGES_CITED_IN_IMPORTED_AUDIT": "Passages from this paper are cited as evidence in an imported audit finding",
+    "PASSAGES_REVIEWED": "A model review judged passages from this paper",
+    "ARCHIVED_COMPLIANCE_PILOT_OUTPUT": "Output of an archived pilot run, imported as it was",
 }
 
 
@@ -45,6 +65,9 @@ PLAIN = {
 PLAIN_IN_FIELD = {
     ("independence", "NOT_ESTABLISHED"): "Independence: not established",
     ("human_adjudication", "NOT_RECORDED"): "No person has ruled on this",
+    ("human_review", "NOT_RECORDED"): "No person has reviewed this",
+    ("operator_confirmation", "NOT_CONFIRMED"): "Not yet confirmed by the person running the investigation",
+    ("operator_confirmation", "CONFIRMED"): "Confirmed by the person running the investigation",
 }
 
 

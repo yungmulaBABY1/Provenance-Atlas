@@ -33,7 +33,7 @@ def short(record_id: str) -> str:
     """Readable link text: the record path after its run, or the run's own name."""
     if "/" in record_id:
         return record_id.split("/", 1)[1]
-    return record_id.rsplit(":", 2)[-2] + " run"
+    return record_id.rsplit(":", 2)[-2] + (" question" if ":question:" in record_id else " run")
 
 
 def slug(record_id: str) -> str:
@@ -73,7 +73,7 @@ CSS = """
 }
 * { box-sizing: border-box; }
 /* Grid and flex children may shrink below their longest word: hashes and IDs wrap, tables scroll. */
-main > *, section > *, .card > *, .row > *, details > div > *, blockquote > * { min-width: 0; }
+main > *, section > *, .card > *, .row > *, .subs > *, .crumb > *, details > div > *, blockquote > * { min-width: 0; }
 code, .refs, .tag, .mono { overflow-wrap: anywhere; }
 html, body { margin: 0; }
 body { background: var(--paper); color: var(--ink); font: 16px/1.55 var(--font-body); }
@@ -119,6 +119,7 @@ td code { white-space: nowrap; }
 .model .state { font-size: .8rem; color: var(--muted); }
 .reviews { display: grid; gap: .75rem; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); }
 .reviews ul, .missing ul { margin: 0; padding-left: 1.1rem; display: grid; gap: .35rem; }
+.crumb { font-size: .88rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: .3rem .6rem; align-items: baseline; }
 .parts li { font-size: .9rem; }
 .refs { font: .72rem/1.4 var(--font-mono); color: var(--muted); display: inline-flex; flex-wrap: wrap; gap: .2rem .5rem; }
 .refs a, a { color: var(--accent); }
@@ -151,6 +152,12 @@ def html_page(view: dict) -> str:
       f"<style>{CSS}</style>\n</head>\n<body>\n<main>\n")
 
     claim = view["claim"]
+    ctx = view.get("context")
+    if ctx:
+        w(f'<nav class="crumb" aria-label="Question"><a href="{e(ctx["href"])}">&larr; The question</a>'
+          f'<span>This paper is {e(ctx["member_label"])}, one of {e(ctx["denominator"])} declared sources for: '
+          f'&ldquo;{e(ctx["question_text"])}&rdquo;</span>{chip(ctx["wording"])}{chip(ctx["confirmation"])}'
+          f'{R(ctx["refs"])}</nav>\n')
     w('<header>\n<div class="eyebrow">Provenance Atlas &middot; one claim, one paper</div>\n'
       "<h1>Power posing and testosterone: what the record shows</h1>\n"
       f'<p class="citation">{e(view["paper"]["citation"])}</p>\n'
@@ -296,7 +303,9 @@ def html_page(view: dict) -> str:
 
 
 def wrap(text: str, indent: str = "") -> str:
-    return textwrap.fill(" ".join(str(text).split()), 88, initial_indent=indent, subsequent_indent=indent)
+    # A bullet marker starts the first line only; continuation lines align under the text.
+    rest = indent[:-2] + "  " if indent.endswith("- ") else indent
+    return textwrap.fill(" ".join(str(text).split()), 88, initial_indent=indent, subsequent_indent=rest)
 
 
 def lab(label: dict) -> str:
@@ -304,7 +313,11 @@ def lab(label: dict) -> str:
 
 
 def text_report(view: dict) -> str:
-    out = ["POWER POSING AND TESTOSTERONE: WHAT THE RECORD SHOWS", wrap(view["paper"]["citation"]), "",
+    ctx = view.get("context")
+    crumb = ([wrap(f"Part of a question ({ctx['href']}): this paper is {ctx['member_label']}, one of "
+                   f"{ctx['denominator']} declared sources for “{ctx['question_text']}”"),
+              f"  Question wording: {lab(ctx['wording'])}; {lab(ctx['confirmation'])}", ""] if ctx else [])
+    out = [*crumb, "POWER POSING AND TESTOSTERONE: WHAT THE RECORD SHOWS", wrap(view["paper"]["citation"]), "",
            "Atlas does not say whether this claim is true. It shows what was checked, what held up, what is",
            "missing, and who disagrees. You judge.", "",
            "THE CLAIM BEING CHECKED", wrap(view["claim"]["written_by"], "  "), wrap(view["claim"]["text"], "    "), "",
@@ -343,7 +356,7 @@ def text_report(view: dict) -> str:
         out += [f"      {lab(r['independence'])}; {lab(r['human_adjudication'])}",
                 f"      paper quotes inside its passages: {', '.join(r['paper_quotes_inside_its_passages'])}"]
     out += ["", "WHAT IS MISSING OR UNVERIFIED"]
-    out += [wrap(m["item"], "  - ").replace("  - ", "  - ", 1) for m in view["missing"]]
+    out += [wrap(m["item"], "  - ") for m in view["missing"]]
     out += ["", "RELATED RECORDS"]
     for r in view["related"]:
         out += [wrap(r["text"], "  "), f"    {lab(r['relation'])}; {lab(r['identity'])}"]
