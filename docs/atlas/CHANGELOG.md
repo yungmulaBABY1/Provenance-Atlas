@@ -1,5 +1,22 @@
 # Atlas adapter changelog
 
+## Unreleased — challenges 0.1.0 (`atlas.challenge`, M1 Increment C part 2)
+
+- New package `atlas/challenge/` (schema `atlas-challenge/0.1`, artifacts
+  `atlas-challenge-artifact/0.1`). It records attributed decisions on the review items
+  a checker leaves open. See [challenge.md](challenge.md).
+  - It content-replays the import receipt.
+  - It re-runs the vendored checker on the run's output bytes.
+  - Every item has a stated challenge state.
+  - Challenges bind to the exact item and only append.
+- The run's producer and the declared code author cannot record a decision.
+- A changed target detaches a challenge but keeps it, and disagreeing challenges are
+  all kept.
+- AJR 2001: three items (`SOURCE_LOCK_TRUTH`, `DIRECT_ADJUDICATION_SUBSTANCE`,
+  `NESTING_SUBSTANCE`), all `NOT_CHALLENGED`. A reviewer packet is in
+  `challenge-packets/`.
+- 23 new tests. CI adds challenge replay.
+
 ## Unreleased — map links 0.1.0 (`atlas.maplink`, M1 Increment E)
 
 - New package `atlas/maplink/` (schema `atlas-maplink/0.1`). It links an imported

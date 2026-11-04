@@ -41,9 +41,12 @@ Implemented, with mechanical test coverage:
 - Map links (`atlas.maplink`): an imported audit's findings linked by text to a
   separately produced Stage-1 claim map, with that map's provenance as declared
   ([docs/atlas/maplink.md](docs/atlas/maplink.md)).
+- Challenges (`atlas.challenge`): attributed decisions on the items an audit's checker
+  leaves for review, each item with a stated challenge state; this code decides none
+  ([docs/atlas/challenge.md](docs/atlas/challenge.md)).
 
 Not implemented: running a model from this code, an interactive or hosted
-interface, challenge records, human adjudication, public release controls. Import is not a model
+interface, decisions by a person on record (the format exists; none is recorded), public release controls. Import is not a model
 audit, and passage matching is not evidentiary support. See
 [`docs/atlas/README.md`](docs/atlas/README.md) for the full scope and limits.
 
@@ -75,10 +78,11 @@ for dir in examples/research/*/citation-network/claims-receipt/; do
   python -m atlas.claims replay "${dir}manifest.json" "${dir}records.jsonl" --level content
 done
 python -m atlas.maplink replay tests/atlas/maplink/ajr2001/receipt/manifest.json tests/atlas/maplink/ajr2001/receipt/records.jsonl --level content
+python -m atlas.challenge replay tests/atlas/challenge/ajr2001/receipt/manifest.json tests/atlas/challenge/ajr2001/receipt/records.jsonl --level content
 python -m atlas.view check-all
 ```
 
-Expected: checker regression `PASS`, 280 tests `OK` (one skipped: it needs
+Expected: checker regression `PASS`, 303 tests `OK` (one skipped: it needs
 the private source PDF), every content replay passes, and the view is current. `historical-*` receipts were produced by earlier code and are not
 replayable. CI runs the same steps (`.github/workflows/atlas-adapter.yml`).
 

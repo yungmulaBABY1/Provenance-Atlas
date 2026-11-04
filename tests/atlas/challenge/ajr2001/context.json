@@ -1,0 +1,25 @@
+{
+ "schema_version": "atlas-challenge-context/0.1",
+ "run": {
+  "id": "urn:atlas:challenge:ajr2001-citation-network:1",
+  "operator": "Deterministic program atlas.challenge.",
+  "purpose": "Record the three items the citation-network checker leaves for human review on the AJR 2001 run, each with its challenge state, and any challenge decided by a person or a separately run reviewer. As of this context no challenge has been made.",
+  "recorded_by": "Context written by Claude (Anthropic) in a Claude Code session, 4 November 2026, at the repository owner's request. Records built by the deterministic program atlas.challenge."
+ },
+ "import_bundle": {
+  "audit_run_id": "urn:atlas:import:ajr2001-citation-network:1",
+  "manifest": {
+   "path": "examples/research/acemoglu-colonial-origins/citation-network/atlas-receipt/manifest.json",
+   "sha256": "51ad44250340ad33904cc80151c444b279d2f7423cc5fef97e736998b3764a67"
+  },
+  "records": {
+   "path": "examples/research/acemoglu-colonial-origins/citation-network/atlas-receipt/records.jsonl",
+   "sha256": "5e8b7c167c3e41b1671223885a0b74d8f4e9817d104c3f8cef08b5da66e61a81"
+  }
+ },
+ "code_author": {
+  "identity": "Claude (Anthropic), Claude Code session 017YUqUaM2ka4XtLriA1p3fD",
+  "basis": "Wrote atlas.challenge and this context. A challenger declaring this identity, or declaring atlas_code_author YES, is rejected. Identity strings are declared, so this is a guard against honest error, not proof."
+ },
+ "challenges": []
+}

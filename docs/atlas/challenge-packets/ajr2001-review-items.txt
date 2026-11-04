@@ -1,0 +1,177 @@
+PROVENANCE ATLAS: REVIEWER PACKET
+AJR 2001 citation-network audit: the three items its checker leaves for review
+Prepared 4 November 2026 for atlas.challenge 0.1 (challenge records).
+
+WHAT THIS IS
+
+An external agent (Grok Bot) ran the Provenance citation-network instrument on
+Acemoglu, Johnson & Robinson (2001), "The Colonial Origins of Comparative
+Development", doi:10.1257/aer.91.5.1369. Atlas imported that run. Its checker
+passes the output on form but leaves three items for a person to decide
+(PASS-WITH-REVIEW). Atlas records all three as NOT_CHALLENGED.
+
+Your answer to an item becomes one challenge record. That record is attributed to
+you, bound to the exact item, and appended next to the audit. It replaces nothing:
+the audit, its checker status and its findings stay as they are. You may answer one
+item, two or all three. "Cannot determine" is a valid answer.
+
+WHO MAY ANSWER
+
+  - You (the repository owner), recorded as a PERSON.
+  - A separately run reviewer, recorded as a MODEL_AGENT.
+
+  Atlas refuses two kinds of answer:
+  - from the run's producer (Grok Bot);
+  - from the author of this code (the Claude session that wrote atlas.challenge and
+    this packet).
+
+  Independence is declared, not verified, so say what the reviewer is and what it saw.
+
+  A reviewer that has already given a view on these items has a prior position, and
+  that must be stated. This applies, for example, to the model that wrote the
+  "Acemoglu audit v2 - review" note.
+
+BEFORE YOU START
+
+Record what you read before deciding. In particular, record whether you read either
+of these, because each contains the author's or another model's views:
+  - Claude's verification note
+    (Project doc claude/Atlas_Acemoglu_Grok_Run_Verification_2026-11-04.txt);
+  - the two review notes supplied in chat.
+Reading them is allowed, but it is exposure.
+
+Files are on branch audit/acemoglu-colonial-origins (PR #7), or on any branch that
+contains it. Paths below are relative to examples/research/acemoglu-colonial-origins/.
+"02c" means citation-network/02c_citation_network.md. Line numbers refer to that
+file at sha256 884887fe5a7b98d77921fbc31b488c7c9b7dc8406eb60340e4d5881436f3016c,
+the output the import receipt pins.
+
+OUTCOMES (pick one per item; parts may differ)
+
+  CONDITION_MET                     what the item asks you to verify holds.
+  CONDITION_MET_WITH_QUALIFICATION  it holds, within limits you state.
+  CONDITION_NOT_MET                 it does not hold.
+  CANNOT_DETERMINE                  the available material does not settle it.
+
+
+======================================================================
+ITEM 1  SOURCE_LOCK_TRUTH
+======================================================================
+Checker's instruction (verbatim):
+  verify the lock predates citation inspection and the query/source list
+  deterministically fixes the exemplars
+
+What the audit states: 02c lines 154-165 (Section E, SOURCE-LOCK record). The lock
+time stated is 2026-11-04T11:42:25Z. Also see the exposure disclosure at 02c line 9.
+
+Where to look:
+  citation-network/lock/section_E_preregistration.md  (and its .sha256)
+  citation-network/lock/section_E_lock_time.txt
+  citation-network/lock/locked_sources.json
+  citation-network/retrieval/retrieval_log.jsonl      (every request, with "at" times)
+  git history: commit b108bab (11:19:16Z) added the earlier stages;
+               commit 693175d (12:11:52Z) added the lock files and the results
+  00a_preregistration_LOCKED.txt                       (the run's stage-0 lock)
+
+Questions:
+  1a. Does anything you can inspect show that the lock was written before any
+      citing-work record was inspected? Which files or times show it?
+  1b. Given the locked query and ranking rule, would re-running them fix the same
+      ten exemplars? Do the stated query and the locked result list agree?
+
+
+======================================================================
+ITEM 2  DIRECT_ADJUDICATION_SUBSTANCE
+======================================================================
+Checker's instruction (verbatim):
+  4 source(s) classified DIRECTLY-ADJUDICATING; verify each classification and
+  its actual result, favored explanation, weakened explanation, and required
+  revision
+
+The four classifications are at 02c lines 196, 197, 445 and 446. Lines 196 and 445
+name Sachs 2003 (NBER WP 9490); lines 197 and 446 name Glaeser et al. 2004 (NBER WP
+10568). Lines 445-446 are in a second table.
+
+Where to look:
+  citation-network/sources/SACHS2003-excerpts.txt    (passage SA-E1)
+  citation-network/sources/GLAESER2004-excerpts.txt  (passages GL-E1, GL-E2)
+  The full working papers are public (NBER). They are not in the repository.
+
+Questions, for each of Sachs 2003 and Glaeser et al. 2004 (use parts):
+  2a. Does the source directly test the rival explanation it is credited with (R1
+      direct disease channel; R2 settler human capital)?
+  2b. Is its stated result, as quoted or summarized, what the source reports?
+  2c. Does the required revision to L3 follow from that result? Compare
+      "institutions are a major channel; a direct disease channel is not
+      excluded" and "institutions or settler human capital, not separately
+      identified".
+  2d. Should the four rows count as two classifications or four?
+
+A source that offers a rival explanation has not thereby shown it to be correct.
+Say which you are judging.
+
+
+======================================================================
+ITEM 3  NESTING_SUBSTANCE
+======================================================================
+Checker's instruction (verbatim):
+  1 dimension(s) marked NESTED; verify the parent owns the shared evidence and no
+  independent inferential work was lost
+
+What the audit states:
+  - 02c line 468: "Review-hub laundering" is NESTED under "Claim mutation".
+  - 02c line 310: the stated reason, which is that both use passage HB-E1.
+  - 02c line 286: finding 3, the claim mutation.
+
+Where to look:
+  citation-network/sources/HB2004-excerpts.txt  (passage HB-E1)
+  citation-network/sources/AJR2001-excerpts.txt (passage AJR-E2)
+  citation-network/metadata/                     (recent citation counts)
+
+Questions:
+  3a. Do both dimensions rest on the same HB-E1 passage?
+  3b. Does "review-hub laundering" make an inference that "claim mutation" does
+      not? An example would be the reach of the hub, such as "1,400 recent works
+      cite it without AJR 2001". If so, is that inference lost by excluding the
+      dimension from the aggregate?
+
+
+======================================================================
+HOW TO ANSWER
+======================================================================
+
+Either reply in plain words, item by item, or fill in a JSON artifact.
+
+Plain words: for each item, give:
+  - the outcome;
+  - your reasons;
+  - the files and lines you relied on;
+  - what would change your answer;
+  - what you read first;
+  - any prior position.
+Claude will transcribe your words into the artifact without changing them. It will
+record "recorded_by: Claude, transcribing <you> verbatim", and you can check the
+file before it is committed.
+
+JSON: print a blank artifact already bound to the exact item. In it:
+  - fill every FILL IN;
+  - list evidence as {"kind": "FILE", "path": ..., "sha256": ..., "lines": [a, b]}
+    or {"kind": "RECORD", "id": ...};
+  - add the file to "challenges" in tests/atlas/challenge/ajr2001/context.json with
+    its sha256;
+  - rebuild.
+
+  python -m atlas.challenge template tests/atlas/challenge/ajr2001/context.json 1
+  python -m atlas.challenge build tests/atlas/challenge/ajr2001/context.json \
+      --out tests/atlas/challenge/ajr2001/receipt
+  python -m atlas.challenge show tests/atlas/challenge/ajr2001/receipt/records.jsonl
+
+The build rejects an artifact if:
+  - the target is not the current item: it is kept, but shown as detached;
+  - no reason is given;
+  - the outcome is outside the four above;
+  - it has a score or verdict field;
+  - it cites evidence that does not resolve;
+  - it declares the producer or the code author.
+
+END

@@ -52,6 +52,10 @@ A readable local report is enough. A model-generated conclusion remains provisio
   review is the owner's decision). Increment E prepared on branch m1e-upstream-map,
   draft PR, not merged: atlas.maplink links that run's findings to the upstream
   Stage-1 map that atlas.claims could not read. See docs/atlas/maplink.md.
+  Increment C part 2 prepared on branch m1f-challenge-records (stacked on
+  m1e-upstream-map), draft PR: atlas.challenge records decisions on the AJR
+  checker's three review items. All three are NOT_CHALLENGED; the decisions are
+  for the owner or a separate reviewer. See docs/atlas/challenge.md.
 
 YOU DO NOT NEED TO DECIDE NOW: cloud host, graph database, framework, agent fleet,
 bot interface, provider catalog, pricing, public launch or every future method.
@@ -586,6 +590,10 @@ Increment C — inspect and challenge:
   Revision 5 status: part 1 (readable report) and M2's first screen PREPARED on
   branch m1c-evidence-view, draft PR, not merged. Part 2 (attributed challenge
   record) not started.
+  Revision 7: part 2 PREPARED on branch m1f-challenge-records as atlas.challenge,
+  aimed first at the AJR checker's review items rather than S2 (the 4 Nov
+  verification note). Finding-field challenges on extraction runs are a second
+  target kind, not built yet.
   Produce a readable report with the target, evidence, missingness, original labels,
   proposed support relation and review history. Permit a separately attributed
   challenge without replacing the original. Existing model reviews are exposed
@@ -921,6 +929,7 @@ Revision history:
   Revision 6  4 Nov 2026   Increment D prepared on branch m1d-research-question:
               research question record (atlas.question) and question page.
   Revision 7  4 Nov 2026   C part 1 and D merged; K1-K3 decided; Grok AJR run
-              (PR #7); Increment E (atlas.maplink) on branch m1e-upstream-map.
+              (PR #7); Increment E (atlas.maplink) on branch m1e-upstream-map;
+              C part 2 (atlas.challenge) on branch m1f-challenge-records.
 
 END — It points; you judge.
