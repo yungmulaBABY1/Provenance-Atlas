@@ -184,7 +184,8 @@
    "url": "https://www.nobelprize.org/prizes/economic-sciences/2024/press-release/",
    "sha256": "ebb969c747c8f34db982702202e6bdb88116cfa25b51a00bfca8464dcdeba84e",
    "bytes": 185989,
-   "retrieved": "2026-11-04, approx. 02:30-03:10 PST"
+   "retrieved": "2026-11-04, approx. 02:30-03:10 PST",
+   "removed_from_repository": "2026-11-05, rights cleanup: the full saved page is no longer committed; the url and sha256 above identify it. The bounded NOBELPOP and NOBELSCI excerpts stay."
   }
  ],
  "access_failures": [
