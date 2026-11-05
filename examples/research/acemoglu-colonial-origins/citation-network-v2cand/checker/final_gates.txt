@@ -1,0 +1,36 @@
+INFO	inference I01	GRAPH-STRUCTURE	CORPUS	declared SUPPORTED	recomputed SUPPORTED
+INFO	inference I02	GRAPH-STRUCTURE	CORPUS	declared SUPPORTED	recomputed SUPPORTED
+INFO	inference I03	DATABASE-RECORD	CORPUS	declared SUPPORTED	recomputed SUPPORTED
+INFO	inference I04	GRAPH-STRUCTURE	CORPUS	declared SUPPORTED	recomputed SUPPORTED
+INFO	inference I05	CITATION-USE	WITHIN-SAMPLE	declared SUPPORTED-WITHIN-SAMPLE	recomputed SUPPORTED-WITHIN-SAMPLE
+INFO	inference I06	CITATION-USE	CORPUS	declared INSUFFICIENT	recomputed INSUFFICIENT
+INFO	inference I07	CITATION-USE	WITHIN-SAMPLE	declared SUPPORTED-WITHIN-SAMPLE	recomputed SUPPORTED-WITHIN-SAMPLE
+INFO	inference I08	RESTATEMENT	NAMED	declared SUPPORTED	recomputed SUPPORTED
+INFO	inference I09	RESTATEMENT	NAMED	declared SUPPORTED	recomputed SUPPORTED
+INFO	inference I10	CITATION-USE	NAMED	declared SUPPORTED	recomputed SUPPORTED
+INFO	inference I11	SOURCE-RESULT	NAMED	declared SUPPORTED	recomputed SUPPORTED
+INFO	inference I12	SOURCE-RESULT	NAMED	declared SUPPORTED	recomputed SUPPORTED
+INFO	inference I13	ABSENCE	WITHIN-SAMPLE	declared SUPPORTED-WITHIN-SAMPLE	recomputed SUPPORTED-WITHIN-SAMPLE
+INFO	inference I14	ABSENCE	LITERATURE	declared INSUFFICIENT	recomputed INSUFFICIENT
+INFO	inference I15	COMPOSITION	CORPUS	declared SUPPORTED	recomputed SUPPORTED
+INFO	inference I16	COMPOSITION	CORPUS	declared SUPPORTED	recomputed SUPPORTED
+INFO	inference I17	COMPOSITION	CORPUS	declared SUPPORTED	recomputed SUPPORTED
+INFO	inference I18	ENGAGEMENT	NAMED	declared SUPPORTED	recomputed SUPPORTED
+INFO	inference I19	ENGAGEMENT	NAMED	declared SUPPORTED	recomputed SUPPORTED
+INFO	inference I20	CO-CITATION	POPULATION	declared SUPPORTED	recomputed SUPPORTED
+INFO	inference I21	DATA-ORIGIN	NAMED	declared SUPPORTED	recomputed SUPPORTED
+INFO	inference I22	ENGAGEMENT	NAMED	declared NOT-ASSESSED	recomputed INSUFFICIENT
+INFO	inference I23	RESTATEMENT	NAMED	declared NOT-ASSESSED	recomputed INSUFFICIENT
+INFO	inference I24	DATABASE-RECORD	NAMED	declared SUPPORTED	recomputed SUPPORTED
+INFO	dimension class map	cn7-map-2
+INFO	corpus RECEPTION-1	RECEPTION	members 50	contexts inspected 14	discovery NONE
+INFO	corpus RECENT-1	RECEPTION	members 25	contexts inspected 2	discovery NONE
+INFO	corpus ADJUDICATION-1	ADJUDICATION	members 58	contexts inspected 1	discovery SEARCHED
+COVERAGE_DECLARED	8/10 applicable SCORED (80%)
+COVERAGE_AFTER_GATES	8/10 (80%)
+COVERAGE_IF_REVIEW_ITEMS_WITHDRAWN	7/10 (70%)	withdrawn: recent-paper dependence
+PROVISIONAL_70_GATE	MET	(engineering threshold, not validated)
+REVIEW_ITEM_1	CODED_FROM_METADATA — 10 rows carry a relevance or contribution code from METADATA-only access; confirm each record shows it: ADJ07, ADJ08, ADJ10, ADJ12, ADJ13, ADJ19, ADJ21, ADJ25, ADJ27, ADJ58
+REVIEW_ITEM_2	SAMPLE_DECLARED_RANDOM — I06: confirm the inspected sample was drawn at random before inspection and that the statement is an estimate with its uncertainty
+REVIEW_ITEM_3	BY_CONSTRUCTION_RISK — Recent-paper dependence uses I04 on a set selected on target citation; confirm it measures citation beyond the target
+V2_GATES_RESULT	PASS-WITH-REVIEW	items=3

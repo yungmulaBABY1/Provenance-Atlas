@@ -1,0 +1,51 @@
+L=json.load(open('out/ledger.json'))['rows']
+def corp(cn): return [r for r in L if cn in r['mem'].split('+')]
+P("4. CORPORA STATS")
+for cn,size,role,disc in [('RECEPTION-1',50,'RECEPTION','NONE'),('RECENT-1',25,'RECEPTION','NONE'),('ADJUDICATION-1',58,'ADJUDICATION','SEARCHED')]:
+    rs=corp(cn)
+    cc=lambda k,first=False: dict(sorted(collections.Counter((r[k].split()[0] if first else r[k]) for r in rs).items()))
+    P(f"  {cn} ({role}, discovery {disc}, size {len(rs)}): CITATION CONTEXT COVERAGE {sum(r['ctx']=='INSPECTED' for r in rs)}/{len(rs)}")
+    P(f"    relevance {cc('rel',True)}")
+    P(f"    contribution {cc('con')}")
+    P(f"    access {cc('acc',True)}")
+    P(f"    context {cc('ctx')}")
+    rel=collections.Counter()
+    for r in rs:
+        for u in r['relat'].split('+'): rel[u]+=1
+    P(f"    relation {dict(sorted(rel.items()))}")
+P("  Locks: ADJUDICATION-1 CORPUS LOCK 8:30:42 PM PST (04:30:42Z), search record sha256 05ae137a5db11167164e758a2228f8e176f470bc6575b1694ad0de6541f90916, before any screening. RECENT-1 sample seed 20261104 recorded 8:33:36 PM PST (04:33:36Z) before inspection.")
+P("  Overlap: W2994756033 (Rodrik et al.) in RECEPTION-1 (N02) and ADJUDICATION-1 (ADJ29), one ledger row. OUTSIDE rows X01–X15 (target, named sources, reused v1 Section E list). Ledger rows total "+str(len(L))+".")
+P("  Duplicate records inflating RECEPTION-1 coverage: Rodrik ×2 (N02, N32), Reversal ×2 (N06, N18), AJR handbook ×2 (N09, N16), Levine ×2 (N05, N11). RECEPTION-1 coverage 14/50 by record; three inspected pairs are duplicates (Rodrik, Levine, handbook), so 11 distinct works were inspected out of 46 distinct works.")
+P("  Drift vs v1 (the earlier v1 run): RECEPTION-1 12/50 members changed; RECENT population 2,695 → 3,026; AJR 2001 OpenAlex referenced_works 13 → 55.\n")
+P("5. INFERENCES BY CLASS AND DISPOSITION (declared = recomputed by the gate checker for all passing inferences)")
+inf=[l for l in md if re.match(r'^\| I\d\d \|',l)]
+byc=collections.defaultdict(list)
+for l in inf:
+    c_=[x.strip() for x in l.strip('|').split('|')]
+    byc[c_[1]].append((c_[0],c_[3],c_[6]))
+for k_,v in sorted(byc.items()): P(f"  {k_:16s} "+"; ".join(f"{a} {s} {d}" for a,s,d in v))
+dc=collections.Counter(c_[2] for v in byc.values() for c_ in v)
+P(f"  Totals: {len(inf)} inferences; "+", ".join(f"{k_} {n}" for k_,n in sorted(dc.items())))
+P("  Withheld / reasons:")
+P("    I06 CITATION-USE, RECENT-1, PRESPECIFIED-RANDOM — INSUFFICIENT: 4/6 sampled full texts not retrieved (403 ×3 sources, 500 ×1); would be sufficient with all 6 inspected.")
+P("    I14 ABSENCE, ADJUDICATION-1, LITERATURE — INSUFFICIENT: 2 members (ADJ37, ADJ44) relevance UNKNOWN; LITERATURE scope requires no UNKNOWN members.")
+P("    I22 ENGAGEMENT (Glaeser uptake by the AJR team) — NOT-ASSESSED: response text not retrieved (checker recomputes INSUFFICIENT; no member).")
+P("    I23 RESTATEMENT (downstream reliance on the handbook) — NOT-ASSESSED: no hub-citing passages inspected (checker recomputes INSUFFICIENT).")
+P("    I13 ABSENCE, WITHIN-SAMPLE 56/58 — SUPPORTED-WITHIN-SAMPLE but deliberately NOT used to score lack of decisive tests: Glaeser 2004, a known L3-R2 test, lies outside the search bound, so the bounded absence would misdescribe the literature.\n")
+P("6. DIMENSIONS, GATE COVERAGE AND RISK BAND")
+i0=md.index('| Scorecard dimension | Scorecard disposition | Inference IDs | Basis note |')
+for l in md[i0+2:i0+13]:
+    c_=[x.strip() for x in l.strip('|').split('|')]; P(f"  {c_[0]:30s} {c_[1]:11s} {c_[2]}")
+P("  Aggregation: 7 INDEPENDENT scored + 1 NESTED (Proxy mismatch under Claim mutation; shared HB-E1); verified risk 3/21 = 14.3%; evidentiary coverage 8/10 (80%); execution completeness 10/10.")
+for l in GL_COV: P("  "+l)
+P("  ARITHMETIC BAND POSITION: 0%–20% (healthy or low-risk network)")
+P("  "+[l for l in md if l.startswith('RISK BAND:')][0])
+P("  "+[l for l in md if l.startswith('MECHANISM LABEL:')][0])
+P("  Best formal label: insufficient evidence. Confidence: Low (CITATION CONTEXT COVERAGE RECEPTION-1 14/50; RECENT-1 2/25; ADJUDICATION-1 1/58).\n")
+P("7. CHECKERS (run with python3 -I on examples/research/acemoglu-colonial-origins/citation-network-v2cand/02c_citation_network_v2cand2.md; full outputs in checker/)")
+P("  Attempts: 1 (first run of each passed; no iteration on the output was needed). Attempt-1 outputs retained as checker/try1_v1.txt and checker/try1_gates.txt (run on the pre-copy path).")
+for name,fn,code in CHK: P(f"  {name}: exit code {code}; final line verbatim: {fn}")
+P("")
+P("8. REVIEW ITEMS (verbatim)")
+for l in REV: P("  "+l)
+P("")

@@ -1,0 +1,67 @@
+{"t":"2026-11-05T04:28:20Z","section":"identity","event":"start"}
+{"t":"2026-11-05T04:28:30Z","section":"identity","retrieval":"https://raw.githubusercontent.com/yungmulaBABY1/Provenance/07b72b585c934c5daff63953b22cf6424bfa8f6b/candidates/research-analysis/2-citation-network.v2-candidate.txt","status":200}
+{"t":"2026-11-05T04:28:30Z","section":"identity","retrieval":"https://raw.githubusercontent.com/yungmulaBABY1/Provenance/07b72b585c934c5daff63953b22cf6424bfa8f6b/candidates/research-analysis/check-citation-network-v2-gates.py","status":200}
+{"t":"2026-11-05T04:28:30Z","section":"identity","retrieval":"https://raw.githubusercontent.com/yungmulaBABY1/Provenance/07b72b585c934c5daff63953b22cf6424bfa8f6b/prompts/research-analysis/check-citation-network-output.py","status":200}
+{"t":"2026-11-05T04:28:30Z","section":"identity","retrieval":"https://raw.githubusercontent.com/yungmulaBABY1/Provenance-Atlas/b6d786947030902cf58cb114055d6cd48df6ad9c/examples/research/acemoglu-colonial-origins/01_claim_extraction.md","status":200}
+{"t":"2026-11-05T04:28:53Z","section":"identity","event":"end","note":"all 4 identities match; branch head b6d7869 ok; main moved ce028e1->f7ae360 (not by this run)"}
+{"t":"2026-11-05T04:28:53Z","section":"read-instrument","event":"start"}
+{"t":"2026-11-05T04:29:30Z","section":"identity","tool_call":1,"note":"fetch-branch-head"}
+{"t":"2026-11-05T04:29:30Z","section":"identity","tool_call":1,"note":"fetch-pinned"}
+{"t":"2026-11-05T04:29:30Z","section":"exposure","tool_call":1,"note":"rg-forbidden"}
+{"t":"2026-11-05T04:29:30Z","section":"exposure","tool_call":1,"note":"provenance-clone-inspect"}
+{"t":"2026-11-05T04:29:30Z","section":"exposure","tool_call":1,"note":"GetDynamicTools"}
+{"t":"2026-11-05T04:29:30Z","section":"exposure","tool_call":1,"note":"SearchTranscripts"}
+{"t":"2026-11-05T04:29:30Z","section":"read-instrument","tool_call":1,"note":"wc"}
+{"t":"2026-11-05T04:29:30Z","section":"read-instrument","tool_call":1,"note":"read1"}
+{"t":"2026-11-05T04:29:30Z","section":"read-instrument","tool_call":1,"note":"read2"}
+{"t":"2026-11-05T04:29:30Z","section":"read-instrument","tool_call":1,"note":"read3"}
+{"t":"2026-11-05T04:29:30Z","section":"read-instrument","tool_call":1,"note":"read4"}
+{"t":"2026-11-05T04:29:30Z","section":"read-instrument","tool_call":1,"note":"gatechk1"}
+{"t":"2026-11-05T04:29:30Z","section":"read-instrument","tool_call":1,"note":"gatechk2"}
+{"t":"2026-11-05T04:29:30Z","section":"corpora-reception","tool_call":1,"note":"inspect v1 queries"}
+{"t":"2026-11-05T04:29:30Z","section":"read-instrument","event":"end"}
+{"t":"2026-11-05T04:29:30Z","section":"corpora-reception","event":"start"}
+{"t":"2026-11-05T04:29:45Z","section":"corpora-reception","tool_call":1,"note":"fetch RECEPTION-1, RECENT-1, AJR record"}
+{"t":"2026-11-05T04:29:56Z","section":"corpora-reception","tool_call":1,"note":"grep v1 layers/rivals"}
+{"t":"2026-11-05T04:30:42Z","section":"adjudication-lock","tool_call":1,"note":"write+hash search record"}
+{"t":"2026-11-05T04:30:42Z","section":"corpora-reception","event":"end"}
+{"t":"2026-11-05T04:30:42Z","section":"adjudication-lock","event":"start"}
+{"t":"2026-11-05T04:30:42Z","section":"adjudication-lock","event":"end","lock":"05ae137a5db11167164e758a2228f8e176f470bc6575b1694ad0de6541f90916"}
+{"t":"2026-11-05T04:30:49Z","section":"adjudication-search","tool_call":1,"note":"run Q1-Q6"}
+{"t":"2026-11-05T04:30:49Z","section":"adjudication-search","event":"start"}
+{"t":"2026-11-05T04:32:08Z","section":"adjudication-search","tool_call":1,"note":"retry Q6 after 429"}
+{"t":"2026-11-05T04:32:20Z","section":"adjudication-screen","tool_call":1,"note":"dump for screening"}
+{"t":"2026-11-05T04:32:20Z","section":"adjudication-search","event":"end"}
+{"t":"2026-11-05T04:32:20Z","section":"adjudication-screen","event":"start"}
+{"t":"2026-11-05T04:33:24Z","section":"adjudication-screen","tool_call":1,"note":"full abstracts for some; overlaps"}
+{"t":"2026-11-05T04:33:36Z","section":"sampling","tool_call":1,"note":"RECENT-1 random sample lock"}
+{"t":"2026-11-05T04:33:36Z","section":"adjudication-screen","event":"pause"}
+{"t":"2026-11-05T04:33:36Z","section":"recent-sample","event":"start"}
+{"t":"2026-11-05T04:33:43Z","section":"recent-sample","tool_call":1,"note":"fetch OA records for sample"}
+{"t":"2026-11-05T04:33:52Z","section":"recent-sample","tool_call":1,"note":"attempt full texts"}
+{"t":"2026-11-05T04:34:54Z","section":"recent-sample","tool_call":1,"note":"utrgv pdf link + locate citations"}
+{"t":"2026-11-05T04:35:11Z","section":"recent-sample","tool_call":1,"note":"curl fallback utrgv"}
+{"t":"2026-11-05T04:35:29Z","section":"reception-inspect","tool_call":1,"note":"map v1 fulltexts to R1"}
+{"t":"2026-11-05T04:35:29Z","section":"recent-sample","event":"end"}
+{"t":"2026-11-05T04:35:29Z","section":"reception-inspect","event":"start"}
+{"t":"2026-11-05T04:35:41Z","section":"reception-inspect","tool_call":1,"note":"locate AJR cites in v1 fulltexts"}
+{"t":"2026-11-05T04:37:04Z","section":"drafting","tool_call":1,"note":"v1 output structure"}
+{"t":"2026-11-05T04:37:23Z","section":"analysis","tool_call":1,"note":"graph computations"}
+{"t":"2026-11-05T04:37:23Z","section":"reception-inspect","event":"end"}
+{"t":"2026-11-05T04:37:23Z","section":"analysis","event":"start"}
+{"t":"2026-11-05T04:37:36Z","section":"analysis","tool_call":1,"note":"excerpt manifest ids"}
+{"t":"2026-11-05T04:38:53Z","section":"analysis","tool_call":1,"note":"grep v1 checker rules"}
+{"t":"2026-11-05T04:38:58Z","section":"analysis","tool_call":1,"note":"co-citation counts"}
+{"t":"2026-11-05T04:39:16Z","section":"analysis","tool_call":1,"note":"abstracts for R1 and RECENT-1"}
+{"t":"2026-11-05T04:39:25Z","section":"drafting","tool_call":1,"note":"instrument vocab lookup"}
+{"t":"2026-11-05T04:39:25Z","section":"analysis","event":"end"}
+{"t":"2026-11-05T04:39:25Z","section":"drafting","event":"start"}
+{"t":"2026-11-05T04:39:34Z","section":"drafting","tool_call":1,"note":"adj compact list"}
+{"t":"2026-11-05T04:40:14Z","section":"drafting","tool_call":1,"note":"check Hidalgo/RZ citation markers"}
+{"t":"2026-11-05T04:41:37Z","section":"drafting","tool_call":1,"note":"instrument table headers"}
+{"t":"2026-11-05T04:43:00Z","section":"drafting","tool_call":1,"note":"write generator part 1 (ledger)"}
+{"t":"2026-11-05T04:48:22Z","section":"drafting","tool_call":1,"note":"classifier error on first gen_doc write; retry"}
+{"t":"2026-11-05T04:55:56Z","section":"checker","tool_call":1,"note":"run both checkers attempt 1"}
+{"t":"2026-11-05T04:56:22Z","section":"checker","tool_call":1,"note":"attempt 1 PASS-WITH-REVIEW both; quotes verified"}
+{"t":"2026-11-05T04:56:22Z","section":"checker","event":"end"}
+{"t":"2026-11-05T04:56:22Z","section":"packaging","event":"start"}

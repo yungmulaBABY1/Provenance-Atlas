@@ -1,0 +1,2 @@
+CORPUS LOCK: 2026-11-05T04:30:42Z sha256 05ae137a5db11167164e758a2228f8e176f470bc6575b1694ad0de6541f90916 (lock/ADJUDICATION-1_search_record.md, 3846 bytes)
+Written before any ADJUDICATION-1 query was executed or any result screened.

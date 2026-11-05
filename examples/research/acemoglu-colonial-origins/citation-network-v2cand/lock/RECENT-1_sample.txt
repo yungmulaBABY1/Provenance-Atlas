@@ -1,0 +1,6 @@
+RECENT-1 citation-context sample (PRESPECIFIED-RANDOM), drawn before any RECENT-1 member was inspected.
+Population: the 25 RECENT-1 members (raw/recent1_top25.json, sha256 987779797143fc948f37f2b82ba2415b7abdf05bc7cfad1cdd88ca2967a4dbe6).
+Procedure: Python 3 random.Random(20261104).sample(sorted(OpenAlex IDs), 6); sample = sorted result.
+Sample: W4223529822, W4292663674, W4292849668, W4319016949, W4387877962, W4391180104
+Inspection plan: retrieve each sampled work's open-access full text via its OpenAlex open_access/best_oa_location URL (one attempt per URL, plus the DOI landing page); locate every passage citing Acemoglu, Johnson and Robinson (2001) with a page locator. A sampled work that cannot be retrieved stays NOT-INSPECTED; it is not replaced.
+Drawn: 2026-11-05T04:33:36Z
