@@ -1,0 +1,20 @@
+REPLICATION: NOT_ASSESSABLE
+Target: Baumeister, Bratslavsky, Muraven & Tice (1998), JPSP 74(5):1252-1265, DOI 10.1037/0022-3514.74.5.1252
+Central estimate (Field 6): Experiment 1 persistence, radish 8.35 vs chocolate 18.90 vs no-food 20.86 min (secondhand; target body not read).
+
+REASON: no public data. No dataset, supplement, or data-availability statement for the 1998 experiments was found.
+The article predates journal data-posting policy, and APA lists no supplemental material for it.
+
+SEARCHES (all logged in logs/retrieval_log.jsonl, stage "replication"):
+- OSF API v2 search (api.osf.io/v2/search/?q=...)                  -> HTTP 404 (endpoint not available); fell back to web search
+- Harvard Dataverse search API, q="ego depletion" Baumeister 1998    -> HTTP 200; 6714 hits for loose token match, top hits are unrelated image files; no dataset for the target
+- OpenAlex works type:dataset, search "ego depletion Baumeister 1998" -> HTTP 429 x3, then HTTP 200; 4 hits, none is the target's data
+- Web search "Baumeister ... 1998 ego depletion original raw data available OSF request" -> only the article, the author's metadata page, PubMed and an unauthorized course copy; no data
+- APA PsycNET (publisher) -> HTTP 403 (cannot check for supplements; Crossref record lists no supplement relation)
+
+NOT DONE (by rule): no reconstruction of data from reported means or test statistics
+(S1 slide means, S2 t-values) - "Do not reconstruct data from tables."
+
+Note: later large tests (Hagger et al. 2016 RRR; Vohs et al. 2021; Dang et al. 2021) have public data on OSF,
+but they test L2 with different paradigms; re-analysing them is not a reproduction of the target's central estimate
+and was not attempted.

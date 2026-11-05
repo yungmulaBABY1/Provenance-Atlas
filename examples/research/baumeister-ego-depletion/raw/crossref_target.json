@@ -1,0 +1,190 @@
+{
+ "status": "ok",
+ "message-type": "work",
+ "message-version": "1.0.0",
+ "message": {
+  "indexed": {
+   "date-parts": [
+    [
+     2026,
+     11,
+     4
+    ]
+   ],
+   "date-time": "2026-11-04T02:36:22Z",
+   "timestamp": 1793759782203,
+   "version": "4.6.1"
+  },
+  "reference-count": 0,
+  "publisher": "American Psychological Association (APA)",
+  "issue": "5",
+  "content-domain": {
+   "domain": [],
+   "crossmark-restriction": false
+  },
+  "short-container-title": [
+   "Journal of Personality and Social Psychology"
+  ],
+  "DOI": "10.1037/0022-3514.74.5.1252",
+  "type": "journal-article",
+  "created": {
+   "date-parts": [
+    [
+     2005,
+     9,
+     22
+    ]
+   ],
+   "date-time": "2005-09-22T13:44:19Z",
+   "timestamp": 1127396659000
+  },
+  "page": "1252-1265",
+  "source": "Crossref",
+  "is-referenced-by-count": 3920,
+  "title": [
+   "Ego depletion: Is the active self a limited resource?"
+  ],
+  "prefix": "10.1037",
+  "volume": "74",
+  "author": [
+   {
+    "given": "Roy F.",
+    "family": "Baumeister",
+    "sequence": "first",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Ellen",
+    "family": "Bratslavsky",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Mark",
+    "family": "Muraven",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   },
+   {
+    "given": "Dianne M.",
+    "family": "Tice",
+    "sequence": "additional",
+    "affiliation": [],
+    "role": [
+     {
+      "vocabulary": "crossref",
+      "role": "author"
+     }
+    ]
+   }
+  ],
+  "member": "15",
+  "published-online": {
+   "date-parts": [
+    [
+     1998
+    ]
+   ]
+  },
+  "container-title": [
+   "Journal of Personality and Social Psychology"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+   {
+    "URL": "http://psycnet.apa.org/journals/psp/74/5/1252.pdf",
+    "content-type": "unspecified",
+    "content-version": "vor",
+    "intended-application": "similarity-checking"
+   }
+  ],
+  "deposited": {
+   "date-parts": [
+    [
+     2024,
+     2,
+     6
+    ]
+   ],
+   "date-time": "2024-02-06T15:32:47Z",
+   "timestamp": 1707233567000
+  },
+  "score": 1,
+  "resource": {
+   "primary": {
+    "URL": "https://doi.apa.org/doi/10.1037/0022-3514.74.5.1252"
+   }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+   "date-parts": [
+    [
+     1998
+    ]
+   ]
+  },
+  "references-count": 0,
+  "aliases": [
+   "10.1037//0022-3514.74.5.1252",
+   "10.1037//0022-3514.74.5.1252"
+  ],
+  "journal-issue": {
+   "issue": "5",
+   "published-online": {
+    "date-parts": [
+     [
+      1998
+     ]
+    ]
+   }
+  },
+  "alternative-id": [
+   "1998-01923-011",
+   "9599441"
+  ],
+  "URL": "https://doi.org/10.1037/0022-3514.74.5.1252",
+  "relation": {},
+  "ISSN": [
+   "1939-1315",
+   "0022-3514"
+  ],
+  "issn-type": [
+   {
+    "value": "1939-1315",
+    "type": "electronic"
+   },
+   {
+    "value": "0022-3514",
+    "type": "print"
+   }
+  ],
+  "subject": [],
+  "published": {
+   "date-parts": [
+    [
+     1998
+    ]
+   ]
+  }
+ }
+}

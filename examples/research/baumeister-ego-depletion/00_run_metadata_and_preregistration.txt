@@ -1,0 +1,97 @@
+BAUMEISTER ET AL. (JPSP 1998) FULL-CHAIN RUN — BATCH 2 OF THE HELD-OUT LIVE-RUN BRIEF
+RUN METADATA, INSTRUMENT PREFLIGHTS, AND LOCKED PRE-REGISTRATION
+============================================================
+
+RUN DATE
+--------
+2026-11-05, America/Los_Angeles (PST, UTC-8).
+- Work ran from 03:10 PST (11:10:43Z) through packaging at about 04:40 PST.
+- Log timestamps (worklog.jsonl, retrieval_log.jsonl) are UTC, marked "Z".
+- A box restore at about 11:32Z (03:32 PST) lost the stage outputs written so far:
+  - 01, 02a and 02b (Stage 1 at 11:18Z, 02a at 11:23Z, 02b at 11:26Z);
+  - the 2c out/ directory.
+  - The raw corpora, the locks and the full texts on the box survived. replication/NOT_ASSESSABLE.txt was recovered verbatim from the session record.
+  - 01, 02a and 02b were regenerated at 11:53-11:57Z (03:53-03:57 PST) from the same pinned instruments and the same already-retrieved sources (see DEVIATIONS in RUN_REPORT.txt).
+  - Work then resumed without restarting any completed stage. 2c was finished from the existing raw and lock data; no corpus was relocked or rescreened.
+
+TARGET
+------
+Roy F. Baumeister, Ellen Bratslavsky, Mark Muraven and Dianne M. Tice (1998), "Ego depletion: Is
+the active self a limited resource?", Journal of Personality and Social Psychology 74(5):
+1252-1265. DOI: 10.1037/0022-3514.74.5.1252. OpenAlex W2123817056. PubMed 9599441.
+
+Version obtained and access state: RESTRICTED-ACCESS RUN.
+- Published version: NOT obtained.
+  - APA PsycNET landing page and full-text PDF: HTTP 403.
+  - Unpaywall / OpenAlex: closed access, no OA location.
+  - The author's site publication page returned HTTP 403.
+  - The SUNY institutional repository record (researchconnect.suny.edu) is metadata only, with no file.
+  - Copies found by web search on course pages and third-party hosts were NOT used (rights rule).
+- Abstract: PubMed efetch, HTTP 200. Read in full. NOT committed.
+- Body-level facts: secondhand only. Sources:
+  - the first author's LSE public-lecture slides (2012);
+  - Schimmack (2016) Replicability Report No. 1;
+  - Hagger et al. 2016 RRR p.548;
+  - the Carter et al. (2015) Table 1 coding of Experiments 1 and 3.
+- Reference list: OpenAlex referenced_works, 57/58 titles resolved (metadata).
+- Corrections: Crossref shows no update or relation records (raw/crossref_updates.json).
+
+REPOSITORY AND BRANCH
+---------------------
+- Repository: yungmulaBABY1/Provenance-Atlas.
+- Branch: audit/baumeister-ego-depletion, created from main at 6c651d7593abfb5c4b6d2eb9f6846a5212fe001c, as the brief requires.
+- origin/main is at ce6ced3. The branch was NOT rebased or merged onto it.
+- Only examples/research/baumeister-ego-depletion/ was written. No PR, no merge, no push to main.
+
+IMMUTABLE INSTRUMENT IDENTITY (TOOL-004)
+============================================================
+All instruments were fetched from yungmulaBABY1/Provenance at commit a58d165d9a986edca220f8143fc0c0d9316c8a13 via raw.githubusercontent.com at that immutable commit (HTTP 200 each, 11:10:43Z; see retrieval_log.jsonl). For each fetched file, `git hash-object` and sha256 matched the blob and sha256 pinned in the brief, and the blobs were checked against the commit tree. No VERSION COLLISION occurred. The pinned copies were re-hashed at packaging time (12:34Z) and were unchanged.
+
+INSTRUMENT PREFLIGHT: prompts/1-claim-extraction.txt @ commit a58d165d9a986edca220f8143fc0c0d9316c8a13 | blob 894579a79e67508bdc4026b77c0a104681f903ad | sha256 656b11c301931726a5435b231774f40797a10fd0cab950224616fc18951c035f | 1038 lines | 44072 bytes | markers PRESENT | IDENTITY CONFIRMED
+INSTRUMENT PREFLIGHT: prompts/research-analysis/2-internal-validity.txt @ commit a58d165d9a986edca220f8143fc0c0d9316c8a13 | blob ff54b2a6e88d25cfef37c4626aee256d2d2442e8 | sha256 55e8aa1635c33088f91178c275d2776cbb378a95abd0fd9196efec08fbdb5007 | 970 lines | 46009 bytes | markers PRESENT | IDENTITY CONFIRMED
+INSTRUMENT PREFLIGHT: prompts/research-analysis/2-construct-validity.txt @ commit a58d165d9a986edca220f8143fc0c0d9316c8a13 | blob 7f3db5ed66db3cb4c5ca84f9e71760d134ced9c8 | sha256 8f87676ae76ecf745748a58a7e68b285255c324da25a92a22f3d1a797f6feadb | 1255 lines | 44222 bytes | markers PRESENT | IDENTITY CONFIRMED
+INSTRUMENT PREFLIGHT: candidates/research-analysis/2-citation-network.v2-candidate.txt @ commit a58d165d9a986edca220f8143fc0c0d9316c8a13 | blob fcbf4e80cfbaf1558784d052d3b8933b594310c7 | sha256 efc1a9fc336c30a67645ac9257701aa2ebe07dcc0be59f8e28523b0800d53064 | 2001 lines | 89337 bytes | markers PRESENT | IDENTITY CONFIRMED (CANDIDATE, not canonical; INSTRUMENT VERSION: 2-citation-network v2-candidate.3; DIMENSION CLASS MAP: cn7-map-3)
+INSTRUMENT PREFLIGHT: prompts/research-analysis/3-counter-audit.txt @ commit a58d165d9a986edca220f8143fc0c0d9316c8a13 | blob 74357f08562a47fa8fdbbde4325657ad3c9cd871 | sha256 291f2339992eeaca83c60281263975d3b5643d64ec6e5d118fa39c44b6c9ede9 | 915 lines | 42287 bytes | markers PRESENT | IDENTITY CONFIRMED
+
+Checkers (run with python3 -I; not edited):
+CHECKER IDENTITY: prompts/research-analysis/check-citation-network-output.py @ a58d165 | blob a3da0827067a2f8b47b9039db15d56f74fabd751 | sha256 f66650fe086455fa5dd80afadf1ec78685ee212825923d670d25b24e62d79f27 | 920 lines | 34112 bytes | CONFIRMED
+CHECKER IDENTITY: candidates/research-analysis/check-citation-network-v2-gates.py @ a58d165 | blob b75a27e7bf18139b4b13be00be84589f5cdfa3fb | sha256 ce6661a5e683aebcc842cafec2cd715b8cbf8aa1d64842bcb4023387d70d9e24 | 1027 lines | 51344 bytes | CONFIRMED
+
+LOCKED PRE-REGISTERED EXPECTATIONS
+============================================================
+File: 00a_preregistration_LOCKED.txt
+sha256 a76bf588154ce8d7214ee6de4b8d66ae0f5aece8197e0813235961e037cc3d28
+
+When written:
+- Written, hashed and made read-only at 03:11:44 PST (11:11:44Z; worklog "prereg").
+  - This was before any retrieval of the target (target retrieval began at 11:11:53Z) and before Stage 1.
+- The file's own header says "11:11 PST (11:11Z)". The PST label is wrong: 11:11Z is 03:11 PST. This discrepancy is recorded as a deviation; the file was not edited.
+- After the box restore (11:32Z) the file's mtime reads 11:32:47Z.
+  - Its content hash equals the hash recorded at lock time in 00a.sha256 (that file was also restored, mtime 11:32:44Z).
+  - No copy of the lock-time hash outside the box exists to re-verify against.
+
+Contents:
+- It discloses substantial training-data exposure to the paper and its replication history.
+- It lists 12 known claim-testing works (K1-K12), all marked NOT READ.
+
+Post-lock exposure:
+- Only the stage retrievals logged in retrieval_log.jsonl.
+- No expectation was revised.
+- 00a was re-opened during Stage 3 preparation (about 12:26Z / 04:26 PST), before 05. This is disclosed in 03 J2 and 05.
+- Unblinding is in 05_final_assessment.md.
+
+SOURCE RETRIEVAL DEPTH
+============================================================
+- Target: ABSTRACT-CONFIRMED only (PubMed). Body: secondhand (see above).
+- Hagger et al. 2016 RRR (PPS 11(4)): Maastricht University repository (CRIS) PDF, FULL-TEXT.
+- Vohs et al. 2021 (Psychological Science 32(10)): eScholarship (CC BY), FULL-TEXT.
+- Dang et al. 2021 (SPPS 12(1)): PMC8186735 author manuscript via pmc.ncbi.nlm.nih.gov HTML (Europe PMC full-text XML returned HTTP 500 x4), VERSION-SUBSTITUTE.
+- Carter, Kofler, Forster & McCullough 2015 (JEP:General 144(4)): author copy on the McCullough UCSD faculty page, FULL-TEXT (circulated revision; VERSION-SUBSTITUTE for page numbers).
+- Baumeister & Vohs 2016 comment (PPS 11(4)): manuscript hosted by APS (psychologicalscience.org), FULL-TEXT. The Carlson School copy returned HTTP 403.
+- Englert & Bertrams 2021 (Frontiers in Human Neuroscience): publisher OA, FULL-TEXT.
+- Schimmack 2016 Replicability Report No. 1: author's blog (replicationindex.com).
+- Baumeister 2012 LSE public-lecture slides: lse.ac.uk.
+- APA "Is willpower a limited resource?": apa.org PDF.
+- Citation contexts: Semantic Scholar, EXCERPT access. Request and response hashes are recorded; s2/ is not committed.
+- Reception, adjudication and Section E corpora: OpenAlex, using select= lists that omit abstract_inverted_index.
+- Hashes, URLs and access failures are in SOURCES_MANIFEST.json.

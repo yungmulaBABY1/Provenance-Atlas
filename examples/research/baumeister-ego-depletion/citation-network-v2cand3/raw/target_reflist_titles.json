@@ -1,0 +1,3611 @@
+{
+ "meta": {
+  "notice": "No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address. Get a free key with its own $1/day at https://openalex.org/settings/api and add api_key=YOUR_KEY to your requests. An AI agent can get one for its user in one call: POST https://api.openalex.org/api-keys with {\"email\": \"<your user's email>\"}; we email them a link, and the key works once they click it. Docs for agents: https://help.openalex.org/llms.txt",
+  "count": 57,
+  "db_response_time_ms": 387,
+  "page": 1,
+  "per_page": 100,
+  "groups_count": null,
+  "x_query": {
+   "oql": "get works where openalex id is (W1488837022 or W1511087920 or W1557998370 or W1584033246 or W1585013689 or W1614549126 or W1615876832 or W1656851898 or W1697657576 or W1703134475 or W1749181751 or W1767956543 or W1854040280 or W1949366217 or W1964633509 or W1966114254 or W1969039856 or W1971749549 or W1971882196 or W1974927712 or W1976542268 or W1992433314 or W2004508718 or W2013149394 or W2017680376 or W2022513174 or W2029856018 or W2031900716 or W2040428046 or W2046037438 or W2047377442 or W2059135316 or W2059509263 or W2062575785 or W2066333328 or W2087790480 or W2087888104 or W2089959033 or W2112263555 or W2115030450 or W2121077653 or W2122780943 or W2124668684 or W2129844115 or W2130418016 or W2134469114 or W2164715962 or W2165201543 or W2174993737 or W2493734635 or W2783497009 or W2806053047 or W2948559562 or W3108534824 or W4237884282 or W4246490679 or W46156708 or W649995511)",
+   "x_new_oql": "get works where openalex id is (W1488837022 or W1511087920 or W1557998370 or W1584033246 or W1585013689 or W1614549126 or W1615876832 or W1656851898 or W1697657576 or W1703134475 or W1749181751 or W1767956543 or W1854040280 or W1949366217 or W1964633509 or W1966114254 or W1969039856 or W1971749549 or W1971882196 or W1974927712 or W1976542268 or W1992433314 or W2004508718 or W2013149394 or W2017680376 or W2022513174 or W2029856018 or W2031900716 or W2040428046 or W2046037438 or W2047377442 or W2059135316 or W2059509263 or W2062575785 or W2066333328 or W2087790480 or W2087888104 or W2089959033 or W2112263555 or W2115030450 or W2121077653 or W2122780943 or W2124668684 or W2129844115 or W2130418016 or W2134469114 or W2164715962 or W2165201543 or W2174993737 or W2493734635 or W2783497009 or W2806053047 or W2948559562 or W3108534824 or W4237884282 or W4246490679 or W46156708 or W649995511)",
+   "oqo": {
+    "get_rows": "works",
+    "filter_rows": [
+     {
+      "join": "or",
+      "filters": [
+       {
+        "column_id": "ids.openalex",
+        "value": "W1488837022"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W1511087920"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W1557998370"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W1584033246"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W1585013689"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W1614549126"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W1615876832"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W1656851898"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W1697657576"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W1703134475"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W1749181751"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W1767956543"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W1854040280"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W1949366217"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W1964633509"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W1966114254"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W1969039856"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W1971749549"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W1971882196"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W1974927712"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W1976542268"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W1992433314"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W2004508718"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W2013149394"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W2017680376"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W2022513174"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W2029856018"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W2031900716"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W2040428046"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W2046037438"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W2047377442"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W2059135316"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W2059509263"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W2062575785"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W2066333328"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W2087790480"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W2087888104"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W2089959033"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W2112263555"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W2115030450"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W2121077653"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W2122780943"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W2124668684"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W2129844115"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W2130418016"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W2134469114"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W2164715962"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W2165201543"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W2174993737"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W2493734635"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W2783497009"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W2806053047"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W2948559562"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W3108534824"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W4237884282"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W4246490679"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W46156708"
+       },
+       {
+        "column_id": "ids.openalex",
+        "value": "W649995511"
+       }
+      ]
+     }
+    ]
+   },
+   "url": "/works?filter=ids.openalex:W1488837022|W1511087920|W1557998370|W1584033246|W1585013689|W1614549126|W1615876832|W1656851898|W1697657576|W1703134475|W1749181751|W1767956543|W1854040280|W1949366217|W1964633509|W1966114254|W1969039856|W1971749549|W1971882196|W1974927712|W1976542268|W1992433314|W2004508718|W2013149394|W2017680376|W2022513174|W2029856018|W2031900716|W2040428046|W2046037438|W2047377442|W2059135316|W2059509263|W2062575785|W2066333328|W2087790480|W2087888104|W2089959033|W2112263555|W2115030450|W2121077653|W2122780943|W2124668684|W2129844115|W2130418016|W2134469114|W2164715962|W2165201543|W2174993737|W2493734635|W2783497009|W2806053047|W2948559562|W3108534824|W4237884282|W4246490679|W46156708|W649995511&per_page=100",
+   "order": "most cited (age-adjusted) first",
+   "order_default": true
+  },
+  "cost_usd": 0.0001
+ },
+ "results": [
+  {
+   "id": "https://openalex.org/W1966114254",
+   "display_name": "A Theory of Cognitive Dissonance",
+   "publication_year": 2017,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5043488271",
+      "display_name": "Camille Morvan",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I97018004",
+       "display_name": "Stanford University",
+       "ror": "https://ror.org/00f54p054",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I97018004"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Camille Morvan",
+     "raw_affiliation_strings": [
+      "STANFORD U"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "STANFORD U",
+       "institution_ids": [
+        "https://openalex.org/I97018004"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": null,
+      "display_name": "Alexander O’Connor",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Alexander O’Connor",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    }
+   ],
+   "type": "book"
+  },
+  {
+   "id": "https://openalex.org/W1614549126",
+   "display_name": "The Standard Edition of the Complete Psychological Works of Sigmund Freud",
+   "publication_year": 1953,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5112140704",
+      "display_name": "Sigmund Freud",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": true,
+     "raw_author_name": "Sigmund Freud",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    }
+   ],
+   "type": "book"
+  },
+  {
+   "id": "https://openalex.org/W1488837022",
+   "display_name": "The Handbook of Social Psychology",
+   "publication_year": 1969,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5007804931",
+      "display_name": "Arthur E. Gravatt",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Arthur E. Gravatt",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5060250811",
+      "display_name": "Gardner E. Lindzey",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "G. Lindzey",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5098318197",
+      "display_name": "F. Aronson",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "F. Aronson",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W1585013689",
+   "display_name": "Motivation reconsidered: The concept of competence.",
+   "publication_year": 1963,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5103705455",
+      "display_name": "Robert W. White",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": true,
+     "raw_author_name": "Robert W. White",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    }
+   ],
+   "type": "book-chapter"
+  },
+  {
+   "id": "https://openalex.org/W2046037438",
+   "display_name": "A Theory of Psychological Reactance",
+   "publication_year": 1968,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5056972043",
+      "display_name": "E. Paul Torrance",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "E. Paul Torrance",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5025196627",
+      "display_name": "Jack W. Brehm",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I170897317",
+       "display_name": "Duke University",
+       "ror": "https://ror.org/00py81415",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I170897317"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Jack W. Brehm",
+     "raw_affiliation_strings": [
+      "Duke U"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Duke U",
+       "institution_ids": [
+        "https://openalex.org/I170897317"
+       ]
+      }
+     ]
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W1557998370",
+   "display_name": "Handbook of Social Cognition",
+   "publication_year": 2014,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5021219790",
+      "display_name": "Robert S. Wyer",
+      "orcid": "https://orcid.org/0000-0002-3776-5678",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-3776-5678"
+      ]
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Robert S. Wyer, Jr.",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5080660220",
+      "display_name": "Thomas K. Srull",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Thomas K. Srull",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    }
+   ],
+   "type": "book"
+  },
+  {
+   "id": "https://openalex.org/W1969039856",
+   "display_name": "The illusion of control.",
+   "publication_year": 1975,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5052478281",
+      "display_name": "Ellen J. Langer",
+      "orcid": "https://orcid.org/0000-0001-8435-2131",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-8435-2131"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I121847817",
+       "display_name": "The Graduate Center, CUNY",
+       "ror": "https://ror.org/00awd9g61",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I121847817"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I174216632",
+       "display_name": "City University of New York",
+       "ror": "https://ror.org/00453a208",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I174216632"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Ellen J. Langer",
+     "raw_affiliation_strings": [
+      "Graduate School & University Ctr, City U New York"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Graduate School & University Ctr, City U New York",
+       "institution_ids": [
+        "https://openalex.org/I121847817",
+        "https://openalex.org/I174216632"
+       ]
+      }
+     ]
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W2493734635",
+   "display_name": "Attention and Self-Regulation",
+   "publication_year": 1981,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5050785530",
+      "display_name": "Charles S. Carver",
+      "orcid": "https://orcid.org/0000-0002-3688-8545",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-3688-8545"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I145608581",
+       "display_name": "University of Miami",
+       "ror": "https://ror.org/02dgjyy92",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I145608581"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Charles S. Carver",
+     "raw_affiliation_strings": [
+      "Department of Psychology, University of Miami, Coral Gables, USA"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Psychology, University of Miami, Coral Gables, USA",
+       "institution_ids": [
+        "https://openalex.org/I145608581"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5077813096",
+      "display_name": "Michael F. Scheier",
+      "orcid": "https://orcid.org/0000-0003-1005-3598",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-1005-3598"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I74973139",
+       "display_name": "Carnegie Mellon University",
+       "ror": "https://ror.org/05x2bcf33",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I74973139"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Michael F. Scheier",
+     "raw_affiliation_strings": [
+      "Department of Psychology, Carnegie-Mellon University, Pittsburgh, USA"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Psychology, Carnegie-Mellon University, Pittsburgh, USA",
+       "institution_ids": [
+        "https://openalex.org/I74973139"
+       ]
+      }
+     ]
+    }
+   ],
+   "type": "book"
+  },
+  {
+   "id": "https://openalex.org/W2124668684",
+   "display_name": "Impression management: A literature review and two-component model.",
+   "publication_year": 1990,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5071679701",
+      "display_name": "Mark R. Leary",
+      "orcid": "https://orcid.org/0000-0001-9373-6081",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-9373-6081"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I47251452",
+       "display_name": "Wake Forest University",
+       "ror": "https://ror.org/0207ad724",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I47251452"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Mark R. Leary",
+     "raw_affiliation_strings": [
+      "Wake Forest U, Winston-Salem, NC, US"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Wake Forest U, Winston-Salem, NC, US",
+       "institution_ids": [
+        "https://openalex.org/I47251452"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5055706199",
+      "display_name": "Robin Marie Kowalski",
+      "orcid": "https://orcid.org/0000-0002-9667-3116",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-9667-3116",
+       "https://orcid.org/0000-0003-4383-6388"
+      ]
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Robin M. Kowalski",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W1964633509",
+   "display_name": "New Introductory Lectures on Psycho-Analysis.",
+   "publication_year": 1935,
+   "authorships": [],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W1971749549",
+   "display_name": "Adjustment to threatening events: A theory of cognitive adaptation.",
+   "publication_year": 1983,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5030925103",
+      "display_name": "Shelley E. Taylor",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": true,
+     "raw_author_name": "Shelley E. Taylor",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W2017680376",
+   "display_name": "Cognitive consequences of forced compliance.",
+   "publication_year": 1959,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5072009257",
+      "display_name": "Léon Festinger",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Leon Festinger",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5039149458",
+      "display_name": "J. Merrill Carlsmith",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "James M. Carlsmith",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W1615876832",
+   "display_name": "A motivational approach to self: integration in personality.",
+   "publication_year": 1990,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5004154542",
+      "display_name": "Edward L. Deci",
+      "orcid": "https://orcid.org/0000-0001-8246-8536",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-8246-8536"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I5388228",
+       "display_name": "University of Rochester",
+       "ror": "https://ror.org/022kthw22",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I5388228"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "E L Deci",
+     "raw_affiliation_strings": [
+      "University of Rochester"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "University of Rochester",
+       "institution_ids": [
+        "https://openalex.org/I5388228"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5001390698",
+      "display_name": "Richard M. Ryan",
+      "orcid": "https://orcid.org/0000-0002-2355-6154",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-2355-6154",
+       "https://orcid.org/0000-0002-7083-0873"
+      ]
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "R M Ryan",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    }
+   ],
+   "type": "conference-paper"
+  },
+  {
+   "id": "https://openalex.org/W1949366217",
+   "display_name": "A theory of objective self awareness",
+   "publication_year": 1972,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5081374295",
+      "display_name": "Shelley Duval",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I1174212",
+       "display_name": "University of Southern California",
+       "ror": "https://ror.org/03taz7m60",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I1174212"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Shelley Duval",
+     "raw_affiliation_strings": [
+      "U. Southern California"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "U. Southern California",
+       "institution_ids": [
+        "https://openalex.org/I1174212"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5025925413",
+      "display_name": "Robert A. Wicklund",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Robert A. Wicklund",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    }
+   ],
+   "type": "book"
+  },
+  {
+   "id": "https://openalex.org/W2062575785",
+   "display_name": "Ironic processes of mental control.",
+   "publication_year": 1994,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5109804111",
+      "display_name": "Daniel M. Wegner",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I51556381",
+       "display_name": "University of Virginia",
+       "ror": "https://ror.org/0153tk833",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I51556381"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Daniel M. Wegner",
+     "raw_affiliation_strings": [
+      "U Virginia, Charlottesville, US"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "U Virginia, Charlottesville, US",
+       "institution_ids": [
+        "https://openalex.org/I51556381"
+       ]
+      }
+     ]
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W2806053047",
+   "display_name": "Social cognition, 2nd ed.",
+   "publication_year": 1991,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5080791781",
+      "display_name": "Susan T. Fiske",
+      "orcid": "https://orcid.org/0000-0002-1693-3425",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-1693-3425"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I24603500",
+       "display_name": "University of Massachusetts Amherst",
+       "ror": "https://ror.org/0072zz521",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I24603500"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Susan T. Fiske",
+     "raw_affiliation_strings": [
+      "U Massachusetts, Professor of Social Psychology, Amherst, MA, US"
+     ],
+     "raw_orcid": "https://orcid.org/0000-0002-1693-3425",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "U Massachusetts, Professor of Social Psychology, Amherst, MA, US",
+       "institution_ids": [
+        "https://openalex.org/I24603500"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5030925103",
+      "display_name": "Shelley E. Taylor",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Shelley E. Taylor",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W1992433314",
+   "display_name": "Paradoxical effects of thought suppression.",
+   "publication_year": 1987,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5109804111",
+      "display_name": "Daniel M. Wegner",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Daniel M. Wegner",
+     "raw_affiliation_strings": [
+      "Trinity U"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Trinity U",
+       "institution_ids": []
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": null,
+      "display_name": "David J. Schneider",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "David J. Schneider",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5047785991",
+      "display_name": "Samuel Roberts Carter",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Samuel R. Carter",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5008025320",
+      "display_name": "Teri L. White",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Teri L. White",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W2164715962",
+   "display_name": "Changing the world and changing the self: A two-process model of perceived control.",
+   "publication_year": 1982,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5079808607",
+      "display_name": "Fred M. Rothbaum",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I121934306",
+       "display_name": "Tufts University",
+       "ror": "https://ror.org/05wvpxv85",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I121934306"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Fred Rothbaum",
+     "raw_affiliation_strings": [
+      "[Tufts U]"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "[Tufts U]",
+       "institution_ids": [
+        "https://openalex.org/I121934306"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5052176535",
+      "display_name": "John R. Weisz",
+      "orcid": "https://orcid.org/0000-0002-5560-6814",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-5560-6814"
+      ]
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "John R. Weisz",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5059555235",
+      "display_name": "Samuel S. Snyder",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Samuel S. Snyder",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W2134469114",
+   "display_name": "Self-control as a limited resource: Regulatory depletion patterns.",
+   "publication_year": 1998,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5025096563",
+      "display_name": "Mark Muraven",
+      "orcid": "https://orcid.org/0000-0003-3057-4323",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-3057-4323"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I58956616",
+       "display_name": "Case Western Reserve University",
+       "ror": "https://ror.org/051fd9666",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I58956616"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Mark Muraven",
+     "raw_affiliation_strings": [
+      "Department of Psychology, Case Western Reserve University, Cleveland, Ohio 44106-7123, USA",
+      "Case Western Reserve U, Dept of Psychology, Cleveland, OH, US"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Psychology, Case Western Reserve University, Cleveland, Ohio 44106-7123, USA",
+       "institution_ids": [
+        "https://openalex.org/I58956616"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Case Western Reserve U, Dept of Psychology, Cleveland, OH, US",
+       "institution_ids": [
+        "https://openalex.org/I58956616"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5089533820",
+      "display_name": "Dianne M. Tice",
+      "orcid": "https://orcid.org/0000-0003-2427-6899",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-2427-6899"
+      ]
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Dianne M. Tice",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5083945877",
+      "display_name": "Roy Frederick Baumeister",
+      "orcid": "https://orcid.org/0000-0003-1413-3296",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-1413-3296"
+      ]
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Roy F. Baumeister",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W2059135316",
+   "display_name": "Impression Management: The Self-Concept, Social Identity, and Interpersonal Relations.",
+   "publication_year": 1981,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5110843300",
+      "display_name": "Marvin B. Scott",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Marvin B. Scott",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5013883829",
+      "display_name": "Barry R. Schlenker",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Barry R. Schlenker",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W1703134475",
+   "display_name": "Toward a Self-Evaluation Maintenance Model of Social Behavior",
+   "publication_year": 1988,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5058041842",
+      "display_name": "Abraham Tesser",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I165733156",
+       "display_name": "University of Georgia",
+       "ror": "https://ror.org/00te3t702",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I165733156"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Abraham Tesser",
+     "raw_affiliation_strings": [
+      "Institute for Behavioral Research, University of Georgia, Athens, Georgia 30602"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Institute for Behavioral Research, University of Georgia, Athens, Georgia 30602",
+       "institution_ids": [
+        "https://openalex.org/I165733156"
+       ]
+      }
+     ]
+    }
+   ],
+   "type": "book-chapter"
+  },
+  {
+   "id": "https://openalex.org/W2783497009",
+   "display_name": "The four horsemen of automaticity: Awareness, intention, efficiency, and control in social cognition.",
+   "publication_year": 1994,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5000424744",
+      "display_name": "John A. Bargh",
+      "orcid": "https://orcid.org/0000-0003-2114-1921",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-2114-1921"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I57206974",
+       "display_name": "New York University",
+       "ror": "https://ror.org/0190ak572",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I57206974"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "John A. Bargh",
+     "raw_affiliation_strings": [
+      "New York U, New York, NY, US"
+     ],
+     "raw_orcid": "https://orcid.org/0000-0003-2114-1921",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "New York U, New York, NY, US",
+       "institution_ids": [
+        "https://openalex.org/I57206974"
+       ]
+      }
+     ]
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W1971882196",
+   "display_name": "The self-concept revisited: Or a theory of a theory.",
+   "publication_year": 1973,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5076394569",
+      "display_name": "Seymour J. Epstein",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": true,
+     "raw_author_name": "Seymour Epstein",
+     "raw_affiliation_strings": [
+      "U. Massachusetts"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "U. Massachusetts",
+       "institution_ids": []
+      }
+     ]
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W1767956543",
+   "display_name": "Handbook Of Mental Control",
+   "publication_year": 1992,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5109804111",
+      "display_name": "Daniel M. Wegner",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Daniel M. Wegner",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5062276512",
+      "display_name": "James W. Pennebaker",
+      "orcid": "https://orcid.org/0000-0001-9091-214X",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-9091-214X"
+      ]
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "James W. Pennebaker",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W1697657576",
+   "display_name": "The automaticity of everyday life.",
+   "publication_year": 1997,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5000424744",
+      "display_name": "John A. Bargh",
+      "orcid": "https://orcid.org/0000-0003-2114-1921",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-2114-1921"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I57206974",
+       "display_name": "New York University",
+       "ror": "https://ror.org/0190ak572",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I57206974"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "John A. Bargh",
+     "raw_affiliation_strings": [
+      "New York U, New YOrk, NY, US"
+     ],
+     "raw_orcid": "https://orcid.org/0000-0003-2114-1921",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "New York U, New YOrk, NY, US",
+       "institution_ids": [
+        "https://openalex.org/I57206974"
+       ]
+      }
+     ]
+    }
+   ],
+   "type": "book"
+  },
+  {
+   "id": "https://openalex.org/W1656851898",
+   "display_name": "Self-presentation: Impression Management And Interpersonal Behavior",
+   "publication_year": 1994,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5071679701",
+      "display_name": "Mark R. Leary",
+      "orcid": "https://orcid.org/0000-0001-9373-6081",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-9373-6081"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I47251452",
+       "display_name": "Wake Forest University",
+       "ror": "https://ror.org/0207ad724",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I47251452"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Mark R. Leary",
+     "raw_affiliation_strings": [
+      "Wake Forest U, Winston-Salem, NC, US"
+     ],
+     "raw_orcid": "https://orcid.org/0000-0001-9373-6081",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Wake Forest U, Winston-Salem, NC, US",
+       "institution_ids": [
+        "https://openalex.org/I47251452"
+       ]
+      }
+     ]
+    }
+   ],
+   "type": "book"
+  },
+  {
+   "id": "https://openalex.org/W4246490679",
+   "display_name": "The experience and meta-experience of mood.",
+   "publication_year": 1988,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5057213413",
+      "display_name": "John David Mayer",
+      "orcid": "https://orcid.org/0000-0003-1644-707X",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-1644-707X"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I103497121",
+       "display_name": "Purchase College",
+       "ror": "https://ror.org/057trrr89",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I103497121"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I1327163397",
+       "display_name": "State University of New York",
+       "ror": "https://ror.org/01q1z8k08",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I1327163397"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "John D. Mayer",
+     "raw_affiliation_strings": [
+      "Division of Natural Sciences, State University of New York, Purchase 10577"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Division of Natural Sciences, State University of New York, Purchase 10577",
+       "institution_ids": [
+        "https://openalex.org/I103497121",
+        "https://openalex.org/I1327163397"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5010074951",
+      "display_name": "Yvonne N. Gaschke",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Yvonne N. Gaschke",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W2004508718",
+   "display_name": "Accountability and complexity of thought.",
+   "publication_year": 1983,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5102797797",
+      "display_name": "Philip E. Tetlock",
+      "orcid": "https://orcid.org/0000-0002-6535-530X",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-6535-530X"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I95457486",
+       "display_name": "University of California, Berkeley",
+       "ror": "https://ror.org/01an7q238",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I95457486"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Philip E. Tetlock",
+     "raw_affiliation_strings": [
+      "U. CALIFORNIA, BERKELEY"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "U. CALIFORNIA, BERKELEY",
+       "institution_ids": [
+        "https://openalex.org/I95457486"
+       ]
+      }
+     ]
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W1584033246",
+   "display_name": "A New Look at Dissonance Theory",
+   "publication_year": 1984,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5112194590",
+      "display_name": "Joel Cooper",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I20089843",
+       "display_name": "Princeton University",
+       "ror": "https://ror.org/00hx57361",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I20089843"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Joel Cooper",
+     "raw_affiliation_strings": [
+      "Department of Psychology Princeton University Princeton, New Jersey",
+      "Psychology"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Psychology Princeton University Princeton, New Jersey",
+       "institution_ids": [
+        "https://openalex.org/I20089843"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Psychology",
+       "institution_ids": []
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5064459726",
+      "display_name": "Russell H. Fázio",
+      "orcid": "https://orcid.org/0000-0002-0754-8234",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-0754-8234"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4210119109",
+       "display_name": "Indiana University Bloomington",
+       "ror": "https://ror.org/02k40bc56",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I4210119109",
+        "https://openalex.org/I592451"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I592451",
+       "display_name": "Indiana University",
+       "ror": "https://ror.org/01kg8sb98",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I592451"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Russell H. Fazio",
+     "raw_affiliation_strings": [
+      "Department of Psychology Indiana University Bloomington, Indiana",
+      "Indiana University. Bloomington"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Psychology Indiana University Bloomington, Indiana",
+       "institution_ids": [
+        "https://openalex.org/I4210119109",
+        "https://openalex.org/I592451"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Indiana University. Bloomington",
+       "institution_ids": [
+        "https://openalex.org/I4210119109"
+       ]
+      }
+     ]
+    }
+   ],
+   "type": "book-chapter"
+  },
+  {
+   "id": "https://openalex.org/W2112263555",
+   "display_name": "Anxiety, restraint, and eating behavior.",
+   "publication_year": 1975,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5054423471",
+      "display_name": "C. Peter Herman",
+      "orcid": "https://orcid.org/0000-0001-5738-6803",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-5738-6803"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I111979921",
+       "display_name": "Northwestern University",
+       "ror": "https://ror.org/000e0be47",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I111979921"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "C. Peter Herman",
+     "raw_affiliation_strings": [
+      "NORTHWESTERN U"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "NORTHWESTERN U",
+       "institution_ids": [
+        "https://openalex.org/I111979921"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5085362329",
+      "display_name": "Janet Polivy",
+      "orcid": "https://orcid.org/0000-0003-3997-8586",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-3997-8586"
+      ]
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Janet Polivy",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W2130418016",
+   "display_name": "Aftereffects of stress on human performance and social behavior: A review of research and theory.",
+   "publication_year": 1980,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5019172558",
+      "display_name": "Sheldon Cohen",
+      "orcid": "https://orcid.org/0000-0003-2248-4600",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-2248-4600"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I181233156",
+       "display_name": "University of Oregon",
+       "ror": "https://ror.org/0293rh119",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I181233156"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Sheldon Cohen",
+     "raw_affiliation_strings": [
+      "U Oregon"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "U Oregon",
+       "institution_ids": [
+        "https://openalex.org/I181233156"
+       ]
+      }
+     ]
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W2013149394",
+   "display_name": "Accountability: A Social Check on the Fundamental Attribution Error",
+   "publication_year": 1985,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5102797797",
+      "display_name": "Philip E. Tetlock",
+      "orcid": "https://orcid.org/0000-0002-6535-530X",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-6535-530X"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I95457486",
+       "display_name": "University of California, Berkeley",
+       "ror": "https://ror.org/01an7q238",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I95457486"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Philip E. Tetlock",
+     "raw_affiliation_strings": [
+      "U. CALIFORNIA, BERKELEY"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "U. CALIFORNIA, BERKELEY",
+       "institution_ids": [
+        "https://openalex.org/I95457486"
+       ]
+      }
+     ]
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W2948559562",
+   "display_name": "Human autonomy : The basis for true self-esteem",
+   "publication_year": 1995,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5004154542",
+      "display_name": "Edward L. Deci",
+      "orcid": "https://orcid.org/0000-0001-8246-8536",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-8246-8536"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I5388228",
+       "display_name": "University of Rochester",
+       "ror": "https://ror.org/022kthw22",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I5388228"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Edward L. Deci",
+     "raw_affiliation_strings": [
+      "U Rochester, Dept of Psychology, Rochester, NY, US"
+     ],
+     "raw_orcid": "https://orcid.org/0000-0001-8246-8536",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "U Rochester, Dept of Psychology, Rochester, NY, US",
+       "institution_ids": [
+        "https://openalex.org/I5388228"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5001390698",
+      "display_name": "Richard M. Ryan",
+      "orcid": "https://orcid.org/0000-0002-2355-6154",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-2355-6154",
+       "https://orcid.org/0000-0002-7083-0873"
+      ]
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Richard M. Ryan",
+     "raw_affiliation_strings": [],
+     "raw_orcid": "https://orcid.org/0000-0002-2355-6154",
+     "affiliations": []
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W2022513174",
+   "display_name": "Dissonance and the pill: An attribution approach to studying the arousal properties of dissonance.",
+   "publication_year": 1974,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5020298857",
+      "display_name": "Mark P. Zanna",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I20089843",
+       "display_name": "Princeton University",
+       "ror": "https://ror.org/00hx57361",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I20089843"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Mark P. Zanna",
+     "raw_affiliation_strings": [
+      "Princeton U"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Princeton U",
+       "institution_ids": [
+        "https://openalex.org/I20089843"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5112194590",
+      "display_name": "Joel Cooper",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Joel Cooper",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W1749181751",
+   "display_name": "Efficacy, Agency, and Self-Esteem",
+   "publication_year": 1995,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5014459976",
+      "display_name": "Michael H. Kernis",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I165733156",
+       "display_name": "University of Georgia",
+       "ror": "https://ror.org/00te3t702",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I165733156"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Michael H. Kernis",
+     "raw_affiliation_strings": [
+      "Department of Psychology and Institute for Behavioral Research, University of Georgia, Athens, Georgia, 30602, USA",
+      "University of Georgia, Athens, Georgia, USA"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Psychology and Institute for Behavioral Research, University of Georgia, Athens, Georgia, 30602, USA",
+       "institution_ids": [
+        "https://openalex.org/I165733156"
+       ]
+      },
+      {
+       "raw_affiliation_string": "University of Georgia, Athens, Georgia, USA",
+       "institution_ids": [
+        "https://openalex.org/I165733156"
+       ]
+      }
+     ]
+    }
+   ],
+   "type": "book-chapter"
+  },
+  {
+   "id": "https://openalex.org/W1976542268",
+   "display_name": "Attention and automaticity in the processing of self-relevant information.",
+   "publication_year": 1982,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5000424744",
+      "display_name": "John A. Bargh",
+      "orcid": "https://orcid.org/0000-0003-2114-1921",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-2114-1921"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I57206974",
+       "display_name": "New York University",
+       "ror": "https://ror.org/0190ak572",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I57206974"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "John A. Bargh",
+     "raw_affiliation_strings": [
+      "NEW YORK U"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "NEW YORK U",
+       "institution_ids": [
+        "https://openalex.org/I57206974"
+       ]
+      }
+     ]
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W2174993737",
+   "display_name": "The Self in Social Contexts",
+   "publication_year": 1994,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5015258558",
+      "display_name": "Mahzarin R. Banaji",
+      "orcid": "https://orcid.org/0000-0002-5941-7455",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-5941-7455"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I32971472",
+       "display_name": "Yale University",
+       "ror": "https://ror.org/03v76x132",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I32971472"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "M R Banaji",
+     "raw_affiliation_strings": [
+      "Yale U, Dept of Psychology, New Haven, CT, US"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Yale U, Dept of Psychology, New Haven, CT, US",
+       "institution_ids": [
+        "https://openalex.org/I32971472"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5055914985",
+      "display_name": "Deborah A. Prentice",
+      "orcid": "https://orcid.org/0000-0002-7244-5151",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-7244-5151"
+      ]
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "D A Prentice",
+     "raw_affiliation_strings": [
+      "Psychology"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Psychology",
+       "institution_ids": []
+      }
+     ]
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W2165201543",
+   "display_name": "Accountability: A social magnifier of the dilution effect.",
+   "publication_year": 1989,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5014744641",
+      "display_name": "Philip E. Tetlock",
+      "orcid": "https://orcid.org/0000-0002-3199-0292",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-3199-0292"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I95457486",
+       "display_name": "University of California, Berkeley",
+       "ror": "https://ror.org/01an7q238",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I95457486"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Philip E. Tetlock",
+     "raw_affiliation_strings": [
+      "Institute of Personality Assessment and Research, University of California, Berkeley 94720",
+      "U California, Inst of Personality Assessment & Research, Berkeley, US"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Institute of Personality Assessment and Research, University of California, Berkeley 94720",
+       "institution_ids": [
+        "https://openalex.org/I95457486"
+       ]
+      },
+      {
+       "raw_affiliation_string": "U California, Inst of Personality Assessment & Research, Berkeley, US",
+       "institution_ids": [
+        "https://openalex.org/I95457486"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5088652070",
+      "display_name": "Richard Boettger",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Richard Boettger",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W2087790480",
+   "display_name": "Negative reactions to increases in perceived personal control.",
+   "publication_year": 1989,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5086122055",
+      "display_name": "Jerry M. Burger",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I16269868",
+       "display_name": "Santa Clara University",
+       "ror": "https://ror.org/03ypqe447",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I16269868"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Jerry M. Burger",
+     "raw_affiliation_strings": [
+      "Santa Clara U, CA, US"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Santa Clara U, CA, US",
+       "institution_ids": [
+        "https://openalex.org/I16269868"
+       ]
+      }
+     ]
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W2121077653",
+   "display_name": "Decision freedom as a determinant of the role of incentive magnitude in attitude change.",
+   "publication_year": 1967,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5016061490",
+      "display_name": "Darwyn E. Linder",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I170897317",
+       "display_name": "Duke University",
+       "ror": "https://ror.org/00py81415",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I170897317"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Darwyn E. Linder",
+     "raw_affiliation_strings": [
+      "[Duke University, Durham, NC, US]"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "[Duke University, Durham, NC, US]",
+       "institution_ids": [
+        "https://openalex.org/I170897317"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5112194590",
+      "display_name": "Joel Cooper",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I170897317",
+       "display_name": "Duke University",
+       "ror": "https://ror.org/00py81415",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I170897317"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Joel Cooper",
+     "raw_affiliation_strings": [
+      "[Duke University, Durham, NC, US]"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "[Duke University, Durham, NC, US]",
+       "institution_ids": [
+        "https://openalex.org/I170897317"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5109170721",
+      "display_name": "EDWARD E. JONES",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I170897317",
+       "display_name": "Duke University",
+       "ror": "https://ror.org/00py81415",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I170897317"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Edward E. Jones",
+     "raw_affiliation_strings": [
+      "[Duke University, Durham, NC, US]"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "[Duke University, Durham, NC, US]",
+       "institution_ids": [
+        "https://openalex.org/I170897317"
+       ]
+      }
+     ]
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W2029856018",
+   "display_name": "Psychic cost of adaptation to an environmental stressor.",
+   "publication_year": 1969,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5014226256",
+      "display_name": "David C. Glass",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I57206974",
+       "display_name": "New York University",
+       "ror": "https://ror.org/0190ak572",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I57206974"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "David C. Glass",
+     "raw_affiliation_strings": [
+      "New York U., Research Center for Human Relations"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "New York U., Research Center for Human Relations",
+       "institution_ids": [
+        "https://openalex.org/I57206974"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5013501604",
+      "display_name": "Jerome E. Singer",
+      "orcid": "https://orcid.org/0009-0007-4414-9527",
+      "observed_orcids": [
+       "https://orcid.org/0009-0007-4414-9527"
+      ]
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Jerome E. Singer",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5078775394",
+      "display_name": "Lucy N. Friedman",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Lucy N. Friedman",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W2129844115",
+   "display_name": "From good intentions to willpower.",
+   "publication_year": 1996,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5015918546",
+      "display_name": "Walter Mischel",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I78577930",
+       "display_name": "Columbia University",
+       "ror": "https://ror.org/00hj8s172",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I78577930"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Walter Mischel",
+     "raw_affiliation_strings": [
+      "Columbia U, Dept of Psychology, New York, NY, US"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Columbia U, Dept of Psychology, New York, NY, US",
+       "institution_ids": [
+        "https://openalex.org/I78577930"
+       ]
+      }
+     ]
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W4237884282",
+   "display_name": "Arousal as a necessary condition for attitude change following induced compliance.",
+   "publication_year": 1978,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5112194590",
+      "display_name": "Joel Cooper",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Joel Cooper",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5020298857",
+      "display_name": "Mark P. Zanna",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Mark P. Zanna",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5020685248",
+      "display_name": "Peter A. Taves",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Peter A. Taves",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W46156708",
+   "display_name": "The Psychology of persuasion (psikologi persuasi) / Kevin Hogan; Alih bahasa: Anton Adiwiyoto, editor Lyndon Saputra",
+   "publication_year": 1996,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5027125290",
+      "display_name": "Kevin Hogan",
+      "orcid": "https://orcid.org/0000-0001-9043-7852",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-9043-7852"
+      ]
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": true,
+     "raw_author_name": "Kevin Hogan",
+     "raw_affiliation_strings": [],
+     "raw_orcid": "https://orcid.org/0000-0001-9043-7852",
+     "affiliations": []
+    }
+   ],
+   "type": "book"
+  },
+  {
+   "id": "https://openalex.org/W3108534824",
+   "display_name": "White bears and other unwanted thoughts",
+   "publication_year": 1990,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5109804111",
+      "display_name": "Daniel M. Wegner",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": true,
+     "raw_author_name": "Daniel M. Wegner",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    }
+   ],
+   "type": "book"
+  },
+  {
+   "id": "https://openalex.org/W2066333328",
+   "display_name": "The relationship of persistence at a task to expectation of success and achievement related motives.",
+   "publication_year": 1961,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5071020961",
+      "display_name": "N. T. Feather",
+      "orcid": "https://orcid.org/0000-0003-2016-382X",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-2016-382X"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I27837315",
+       "display_name": "University of Michigan",
+       "ror": "https://ror.org/00jmfr291",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I27837315"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "N. T. Feather",
+     "raw_affiliation_strings": [
+      "U. Michigan#TAB#"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "U. Michigan#TAB#",
+       "institution_ids": [
+        "https://openalex.org/I27837315"
+       ]
+      }
+     ]
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W1974927712",
+   "display_name": "Factors affecting withdrawal from an escalating conflict: Quitting before it's too late",
+   "publication_year": 1979,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5030496826",
+      "display_name": "Joel Brockner",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4864440",
+       "display_name": "SUNY Brockport",
+       "ror": "https://ror.org/0306aeb62",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I4864440"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Joel Brockner",
+     "raw_affiliation_strings": [
+      "SUNY-Brockport, USA"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "SUNY-Brockport, USA",
+       "institution_ids": [
+        "https://openalex.org/I4864440"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5056729858",
+      "display_name": "Myril C Shaw",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I195575238",
+       "display_name": "Middlebury College",
+       "ror": "https://ror.org/0217hb928",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I195575238"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Myril C Shaw",
+     "raw_affiliation_strings": [
+      "Middlebury College , USA"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Middlebury College , USA",
+       "institution_ids": [
+        "https://openalex.org/I195575238"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5111449613",
+      "display_name": "Jeffrey Z. Rubin",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I121934306",
+       "display_name": "Tufts University",
+       "ror": "https://ror.org/05wvpxv85",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I121934306"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Jeffrey Z Rubin",
+     "raw_affiliation_strings": [
+      "Tufts university, USA"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Tufts university, USA",
+       "institution_ids": [
+        "https://openalex.org/I121934306"
+       ]
+      }
+     ]
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W2059509263",
+   "display_name": "The feature-positive effect in the self-perception process: Does not doing matter as much as doing?",
+   "publication_year": 1982,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5064459726",
+      "display_name": "Russell H. Fázio",
+      "orcid": "https://orcid.org/0000-0002-0754-8234",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-0754-8234"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4210119109",
+       "display_name": "Indiana University Bloomington",
+       "ror": "https://ror.org/02k40bc56",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I4210119109",
+        "https://openalex.org/I592451"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I592451",
+       "display_name": "Indiana University",
+       "ror": "https://ror.org/01kg8sb98",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I592451"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Russell H. Fazio",
+     "raw_affiliation_strings": [
+      "Indiana U, Bloomington"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Indiana U, Bloomington",
+       "institution_ids": [
+        "https://openalex.org/I4210119109",
+        "https://openalex.org/I592451"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5107279800",
+      "display_name": "Steven J. Sherman",
+      "orcid": "https://orcid.org/0000-0002-8106-9303",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-8106-9303"
+      ]
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Steven J. Sherman",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5062105875",
+      "display_name": "Paul M. Herr",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Paul M. Herr",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W2115030450",
+   "display_name": "On Doing the Decision: Effects of Active versus Passive Choice on Commitment and Self-Perception",
+   "publication_year": 1996,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5038873949",
+      "display_name": "Delia Cioffi",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I107672454",
+       "display_name": "Dartmouth College",
+       "ror": "https://ror.org/049s0rh22",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I107672454"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Delia Cioffi",
+     "raw_affiliation_strings": [
+      "Dartmouth College",
+      "Dartmouth Coll, Dept of Psychology, Hanover, NH, US"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Dartmouth College",
+       "institution_ids": [
+        "https://openalex.org/I107672454"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Dartmouth Coll, Dept of Psychology, Hanover, NH, US",
+       "institution_ids": [
+        "https://openalex.org/I107672454"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5084840636",
+      "display_name": "Randy Garner",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I44461941",
+       "display_name": "University of Houston",
+       "ror": "https://ror.org/048sx0r50",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I44461941"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Randy Garner",
+     "raw_affiliation_strings": [
+      "University of Houston"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "University of Houston",
+       "institution_ids": [
+        "https://openalex.org/I44461941"
+       ]
+      }
+     ]
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W2089959033",
+   "display_name": "The Feature-Positive Effect, Attitude Strength, and Degree of Perceived Consensus",
+   "publication_year": 1988,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5108635425",
+      "display_name": "Scott T. Allison",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I158012942",
+       "display_name": "University of Richmond",
+       "ror": "https://ror.org/03y71xh61",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I158012942"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Scott T. Allison",
+     "raw_affiliation_strings": [
+      "University of Richmond"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "University of Richmond",
+       "institution_ids": [
+        "https://openalex.org/I158012942"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5038285628",
+      "display_name": "David M. Messick",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I154570441",
+       "display_name": "University of California, Santa Barbara",
+       "ror": "https://ror.org/02t274463",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I154570441"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "David M. Messick",
+     "raw_affiliation_strings": [
+      "University of California, Santa Barbara"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "University of California, Santa Barbara",
+       "institution_ids": [
+        "https://openalex.org/I154570441"
+       ]
+      }
+     ]
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W2122780943",
+   "display_name": "Motivational basis of dissonance: The singular role of behavioral consequences.",
+   "publication_year": 1989,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5044496368",
+      "display_name": "Steven J. Scher",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I20089843",
+       "display_name": "Princeton University",
+       "ror": "https://ror.org/00hx57361",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I20089843"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Steven J. Scher",
+     "raw_affiliation_strings": [
+      "Department of Psychology, Princeton University, New Jersey 08544"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Psychology, Princeton University, New Jersey 08544",
+       "institution_ids": [
+        "https://openalex.org/I20089843"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5104086011",
+      "display_name": "Joel David Cooper",
+      "orcid": "https://orcid.org/0000-0003-2434-6738",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-2434-6738"
+      ]
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Joel Cooper",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W2087888104",
+   "display_name": "Is dissonance phenomenologically aversive?",
+   "publication_year": 1976,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5020298857",
+      "display_name": "Mark P. Zanna",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I151746483",
+       "display_name": "University of Waterloo",
+       "ror": "https://ror.org/01aff2v68",
+       "country_code": "CA",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I151746483"
+       ]
+      }
+     ],
+     "countries": [
+      "CA"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Mark P. Zanna",
+     "raw_affiliation_strings": [
+      "University of Waterloo, Ontario, Canada"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "University of Waterloo, Ontario, Canada",
+       "institution_ids": [
+        "https://openalex.org/I151746483"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5071206281",
+      "display_name": "Edward Tory Higgins",
+      "orcid": "https://orcid.org/0000-0003-4157-8207",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-4157-8207"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I20089843",
+       "display_name": "Princeton University",
+       "ror": "https://ror.org/00hx57361",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I20089843"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "E.Tory Higgins",
+     "raw_affiliation_strings": [
+      "Princeton University, USA"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Princeton University, USA",
+       "institution_ids": [
+        "https://openalex.org/I20089843"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5020685248",
+      "display_name": "Peter A. Taves",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I20089843",
+       "display_name": "Princeton University",
+       "ror": "https://ror.org/00hx57361",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I20089843"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Peter A. Taves",
+     "raw_affiliation_strings": [
+      "Princeton University, USA"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Princeton University, USA",
+       "institution_ids": [
+        "https://openalex.org/I20089843"
+       ]
+      }
+     ]
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W2031900716",
+   "display_name": "Self-Reported Effort versus Actual Performance in Information Processing Paradigms",
+   "publication_year": 1995,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": null,
+      "display_name": "Nancy E. Johnson",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I26538001",
+       "display_name": "San Diego State University",
+       "ror": "https://ror.org/0264fdx42",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I26538001"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Nancy E. Johnson",
+     "raw_affiliation_strings": [
+      "Department of Psychology, San Diego State University, USA",
+      "Dept. of Psychology, San Diego State University, USA"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Psychology, San Diego State University, USA",
+       "institution_ids": [
+        "https://openalex.org/I26538001"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Dept. of Psychology, San Diego State University, USA",
+       "institution_ids": [
+        "https://openalex.org/I26538001"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5112154820",
+      "display_name": "Dennis P. Saccuzzo",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I26538001",
+       "display_name": "San Diego State University",
+       "ror": "https://ror.org/0264fdx42",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I26538001"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Dennis P. Saccuzzo",
+     "raw_affiliation_strings": [
+      "Department of Psychology, San Diego State University, USA",
+      "Dept. of Psychology, San Diego State University, USA"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Psychology, San Diego State University, USA",
+       "institution_ids": [
+        "https://openalex.org/I26538001"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Dept. of Psychology, San Diego State University, USA",
+       "institution_ids": [
+        "https://openalex.org/I26538001"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5029940560",
+      "display_name": "Gerald E. Larson",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Gerald E. Larson",
+     "raw_affiliation_strings": [
+      "Testing Systems Department, Navy Personnel Research and Development Center, San Diego, California, USA"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Testing Systems Department, Navy Personnel Research and Development Center, San Diego, California, USA",
+       "institution_ids": []
+      }
+     ]
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W2047377442",
+   "display_name": "Persistence in the Face of Failure",
+   "publication_year": 1985,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5078877082",
+      "display_name": "Dean B. McFarlin",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I63190737",
+       "display_name": "University at Buffalo, State University of New York",
+       "ror": "https://ror.org/01y64my43",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I63190737"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Dean B. McFarlin",
+     "raw_affiliation_strings": [
+      "State University of New York at Buffalo"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "State University of New York at Buffalo",
+       "institution_ids": [
+        "https://openalex.org/I63190737"
+       ]
+      }
+     ]
+    }
+   ],
+   "type": "article"
+  },
+  {
+   "id": "https://openalex.org/W1854040280",
+   "display_name": "Losing control: how and why people fail at self-regulation",
+   "publication_year": 1995,
+   "authorships": [],
+   "type": "book-review"
+  },
+  {
+   "id": "https://openalex.org/W1511087920",
+   "display_name": "Positive illusions: creative self-deception and the healthy mind",
+   "publication_year": 1990,
+   "authorships": [],
+   "type": "book-review"
+  },
+  {
+   "id": "https://openalex.org/W649995511",
+   "display_name": "Perspectives On Motivation",
+   "publication_year": 2022,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5016459573",
+      "display_name": "Richard A. Dienstbier",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": true,
+     "raw_author_name": "Richard A. Dienstbier",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    }
+   ],
+   "type": "other"
+  }
+ ],
+ "group_by": []
+}

@@ -1,0 +1,2964 @@
+{
+ "meta": {
+  "notice": "No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address. The mailto parameter doesn't raise this limit. Get a free key with its own $1/day at https://openalex.org/settings/api and add api_key=YOUR_KEY to your requests. An AI agent can get one for its user in one call: POST https://api.openalex.org/api-keys with {\"email\": \"<your user's email>\"}; we email them a link, and the key works once they click it. Docs for agents: https://help.openalex.org/llms.txt",
+  "count": 182,
+  "db_response_time_ms": 139,
+  "page": 1,
+  "per_page": 10,
+  "groups_count": null,
+  "x_query": {
+   "oql": "get works from 1998-01-01 through 2026-11-05 with (stemmed \"ego depletion\" AND (stemmed \"manipulation check\" OR fatigue OR frustration OR mood)) in the title or abstract where type is ([article](article) or [book-chapter](book-chapter) or [preprint](preprint) or [review](review))",
+   "x_new_oql": "get works from 1998-01-01 through 2026-11-05 with (stemmed \"ego depletion\" AND (stemmed \"manipulation check\" OR fatigue OR frustration OR mood)) in the title or abstract where type is ([article](article) or [book-chapter](book-chapter) or [preprint](preprint) or [review](review))",
+   "oqo": {
+    "get_rows": "works",
+    "filter_rows": [
+     {
+      "column_id": "from_publication_date",
+      "value": "1998-01-01"
+     },
+     {
+      "column_id": "title_and_abstract.search",
+      "value": "\"ego depletion\"",
+      "operator": "has"
+     },
+     {
+      "column_id": "to_publication_date",
+      "value": "2026-11-05"
+     },
+     {
+      "join": "or",
+      "filters": [
+       {
+        "column_id": "title_and_abstract.search",
+        "value": "\"manipulation check\"",
+        "operator": "has"
+       },
+       {
+        "column_id": "title_and_abstract.search",
+        "value": "fatigue",
+        "operator": "has"
+       },
+       {
+        "column_id": "title_and_abstract.search",
+        "value": "frustration",
+        "operator": "has"
+       },
+       {
+        "column_id": "title_and_abstract.search",
+        "value": "mood",
+        "operator": "has"
+       }
+      ]
+     },
+     {
+      "join": "or",
+      "filters": [
+       {
+        "column_id": "type",
+        "value": "article"
+       },
+       {
+        "column_id": "type",
+        "value": "book-chapter"
+       },
+       {
+        "column_id": "type",
+        "value": "preprint"
+       },
+       {
+        "column_id": "type",
+        "value": "review"
+       }
+      ]
+     }
+    ]
+   },
+   "url": "/works?filter=from_publication_date:1998-01-01,title_and_abstract.search:%22ego depletion%22,to_publication_date:2026-11-05,title_and_abstract.search:%22manipulation check%22|fatigue|frustration|mood,type:article|book-chapter|preprint|review&per_page=10",
+   "order": "best matches first",
+   "order_default": true
+  },
+  "cost_usd": 0.001
+ },
+ "results": [
+  {
+   "id": "https://openalex.org/W2144295133",
+   "doi": "https://doi.org/10.1177/1948550610386123",
+   "display_name": "Ego Depletion Is Not Just Fatigue",
+   "publication_year": 2010,
+   "type": "article",
+   "cited_by_count": 116,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5007916326",
+      "display_name": "Kathleen D. Vohs",
+      "orcid": "https://orcid.org/0000-0001-5858-2603",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-5858-2603"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I130238516",
+       "display_name": "University of Minnesota",
+       "ror": "https://ror.org/017zqws13",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I130238516"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Kathleen D. Vohs",
+     "raw_affiliation_strings": [
+      "University of Minnesota, Minneapolis, MN, USA",
+      "Carlson School of Management, University of Minnesota, Minneapolis, MN, US"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "University of Minnesota, Minneapolis, MN, USA",
+       "institution_ids": [
+        "https://openalex.org/I130238516"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Carlson School of Management, University of Minnesota, Minneapolis, MN, US",
+       "institution_ids": [
+        "https://openalex.org/I130238516"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5046488498",
+      "display_name": "Brian D. Glass",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I86519309",
+       "display_name": "The University of Texas at Austin",
+       "ror": "https://ror.org/00hj54h04",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I86519309"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Brian D. Glass",
+     "raw_affiliation_strings": [
+      "University of Texas, Austin, TX, USA",
+      "University of Texas at Austin, Austin, TX, US"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "University of Texas, Austin, TX, USA",
+       "institution_ids": [
+        "https://openalex.org/I86519309"
+       ]
+      },
+      {
+       "raw_affiliation_string": "University of Texas at Austin, Austin, TX, US",
+       "institution_ids": [
+        "https://openalex.org/I86519309"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5032781961",
+      "display_name": "W. Todd Maddox",
+      "orcid": "https://orcid.org/0000-0002-6116-7037",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-6116-7037"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I86519309",
+       "display_name": "The University of Texas at Austin",
+       "ror": "https://ror.org/00hj54h04",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I86519309"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "W. Todd Maddox",
+     "raw_affiliation_strings": [
+      "University of Texas, Austin, TX, USA",
+      "Institute for Neuroscience, University of Texas at Austin, Austin, TX, US"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "University of Texas, Austin, TX, USA",
+       "institution_ids": [
+        "https://openalex.org/I86519309"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Institute for Neuroscience, University of Texas at Austin, Austin, TX, US",
+       "institution_ids": [
+        "https://openalex.org/I86519309"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5046157332",
+      "display_name": "Arthur B. Markman",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I86519309",
+       "display_name": "The University of Texas at Austin",
+       "ror": "https://ror.org/00hj54h04",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I86519309"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Arthur B. Markman",
+     "raw_affiliation_strings": [
+      "University of Texas, Austin, TX, USA"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "University of Texas, Austin, TX, USA",
+       "institution_ids": [
+        "https://openalex.org/I86519309"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1177/1948550610386123",
+    "doi": "https://doi.org/10.1177/1948550610386123",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1177/1948550610386123",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S138235560",
+     "display_name": "Social Psychological and Personality Science",
+     "issn_l": "1948-5506",
+     "issn": [
+      "1948-5506",
+      "1948-5514"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "abdc-b",
+      "anvur-scientific",
+      "cwts-core",
+      "dongbi-a",
+      "erih-plus",
+      "jufo-2",
+      "norway-1",
+      "poland-100",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320017",
+     "host_organization_name": "SAGE Publishing",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320017"
+     ],
+     "host_organization_lineage_names": [
+      "SAGE Publishing"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Social Psychological and Personality Science",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W6684813",
+    "https://openalex.org/W1523757835",
+    "https://openalex.org/W1580245243",
+    "https://openalex.org/W1969390138",
+    "https://openalex.org/W1971495036",
+    "https://openalex.org/W1978026023",
+    "https://openalex.org/W1983752985",
+    "https://openalex.org/W2001219106",
+    "https://openalex.org/W2007739397",
+    "https://openalex.org/W2008515441",
+    "https://openalex.org/W2010802751",
+    "https://openalex.org/W2012281587",
+    "https://openalex.org/W2012371206",
+    "https://openalex.org/W2020058523",
+    "https://openalex.org/W2020191227",
+    "https://openalex.org/W2023392364",
+    "https://openalex.org/W2024351077",
+    "https://openalex.org/W2030988365",
+    "https://openalex.org/W2033837921",
+    "https://openalex.org/W2047672958",
+    "https://openalex.org/W2048223277",
+    "https://openalex.org/W2060763381",
+    "https://openalex.org/W2064517867",
+    "https://openalex.org/W2067346281",
+    "https://openalex.org/W2071394381",
+    "https://openalex.org/W2072610600",
+    "https://openalex.org/W2088614104",
+    "https://openalex.org/W2095782929",
+    "https://openalex.org/W2108897328",
+    "https://openalex.org/W2109223890",
+    "https://openalex.org/W2109861317",
+    "https://openalex.org/W2112066825",
+    "https://openalex.org/W2114862369",
+    "https://openalex.org/W2123817056",
+    "https://openalex.org/W2131376805",
+    "https://openalex.org/W2134469114",
+    "https://openalex.org/W2134537068",
+    "https://openalex.org/W2141076134",
+    "https://openalex.org/W2146569853",
+    "https://openalex.org/W2150526511",
+    "https://openalex.org/W2153525033",
+    "https://openalex.org/W2153950939",
+    "https://openalex.org/W2160538643",
+    "https://openalex.org/W2164313413",
+    "https://openalex.org/W2168420562",
+    "https://openalex.org/W2220571647",
+    "https://openalex.org/W2325605806",
+    "https://openalex.org/W2492886855",
+    "https://openalex.org/W3022671937",
+    "https://openalex.org/W4211028057",
+    "https://openalex.org/W4297851201"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W1546584494",
+   "doi": "https://doi.org/10.1177/1088868315597841",
+   "display_name": "The Nature of Self-Regulatory Fatigue and “Ego Depletion”",
+   "publication_year": 2015,
+   "type": "article",
+   "cited_by_count": 172,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5032063398",
+      "display_name": "Daniel R. Evans",
+      "orcid": "https://orcid.org/0000-0002-9818-5001",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-9818-5001"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I143302722",
+       "display_name": "University of Kentucky",
+       "ror": "https://ror.org/02k3smh20",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I143302722"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I27804330",
+       "display_name": "Brown University",
+       "ror": "https://ror.org/05gq02987",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I27804330"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Daniel R. Evans",
+     "raw_affiliation_strings": [
+      "Alpert Medical School of Brown University, Providence, RI, USA",
+      "University of Kentucky, Lexington, USA",
+      "1University of Kentucky, Lexington, USA",
+      "2Alpert Medical School of Brown University, Providence, RI, USA"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Alpert Medical School of Brown University, Providence, RI, USA",
+       "institution_ids": [
+        "https://openalex.org/I27804330"
+       ]
+      },
+      {
+       "raw_affiliation_string": "University of Kentucky, Lexington, USA",
+       "institution_ids": [
+        "https://openalex.org/I143302722"
+       ]
+      },
+      {
+       "raw_affiliation_string": "1University of Kentucky, Lexington, USA",
+       "institution_ids": [
+        "https://openalex.org/I143302722"
+       ]
+      },
+      {
+       "raw_affiliation_string": "2Alpert Medical School of Brown University, Providence, RI, USA",
+       "institution_ids": [
+        "https://openalex.org/I27804330"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5042084201",
+      "display_name": "Ian A. Boggero",
+      "orcid": "https://orcid.org/0000-0001-8891-0292",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-8891-0292"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I143302722",
+       "display_name": "University of Kentucky",
+       "ror": "https://ror.org/02k3smh20",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I143302722"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Ian A. Boggero",
+     "raw_affiliation_strings": [
+      "University of Kentucky, Lexington, USA",
+      "#N# 1University of Kentucky, Lexington, USA"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "University of Kentucky, Lexington, USA",
+       "institution_ids": [
+        "https://openalex.org/I143302722"
+       ]
+      },
+      {
+       "raw_affiliation_string": "#N# 1University of Kentucky, Lexington, USA",
+       "institution_ids": [
+        "https://openalex.org/I143302722"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5056573109",
+      "display_name": "Suzanne C. Segerstrom",
+      "orcid": "https://orcid.org/0000-0002-4020-111X",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-4020-111X"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I143302722",
+       "display_name": "University of Kentucky",
+       "ror": "https://ror.org/02k3smh20",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I143302722"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Suzanne C. Segerstrom",
+     "raw_affiliation_strings": [
+      "University of Kentucky, Lexington, USA",
+      "#N# 1University of Kentucky, Lexington, USA"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "University of Kentucky, Lexington, USA",
+       "institution_ids": [
+        "https://openalex.org/I143302722"
+       ]
+      },
+      {
+       "raw_affiliation_string": "#N# 1University of Kentucky, Lexington, USA",
+       "institution_ids": [
+        "https://openalex.org/I143302722"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1177/1088868315597841",
+    "doi": "https://doi.org/10.1177/1088868315597841",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1177/1088868315597841",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S37739784",
+     "display_name": "Personality and Social Psychology Review",
+     "issn_l": "1088-8683",
+     "issn": [
+      "1088-8683",
+      "1532-7957"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "cwts-core",
+      "dongbi-b",
+      "erih-plus",
+      "jufo-3",
+      "medline",
+      "norway-1",
+      "poland-200",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320017",
+     "host_organization_name": "SAGE Publishing",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320017"
+     ],
+     "host_organization_lineage_names": [
+      "SAGE Publishing"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Personality and Social Psychology Review",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W16669664",
+    "https://openalex.org/W43284170",
+    "https://openalex.org/W95372231",
+    "https://openalex.org/W188562495",
+    "https://openalex.org/W1480582778",
+    "https://openalex.org/W1482798267",
+    "https://openalex.org/W1562792231",
+    "https://openalex.org/W1590033121",
+    "https://openalex.org/W1605345838",
+    "https://openalex.org/W1737567839",
+    "https://openalex.org/W1854040280",
+    "https://openalex.org/W1898711361",
+    "https://openalex.org/W1946761155",
+    "https://openalex.org/W1952062595",
+    "https://openalex.org/W1963707158",
+    "https://openalex.org/W1964713666",
+    "https://openalex.org/W1965616764",
+    "https://openalex.org/W1966090828",
+    "https://openalex.org/W1970253825",
+    "https://openalex.org/W1973540631",
+    "https://openalex.org/W1975170473",
+    "https://openalex.org/W1976771764",
+    "https://openalex.org/W1976941847",
+    "https://openalex.org/W1977825155",
+    "https://openalex.org/W1977982518",
+    "https://openalex.org/W1978486653",
+    "https://openalex.org/W1978594131",
+    "https://openalex.org/W1978776641",
+    "https://openalex.org/W1979208993",
+    "https://openalex.org/W1981171998",
+    "https://openalex.org/W1984271517",
+    "https://openalex.org/W1984367991",
+    "https://openalex.org/W1984939891",
+    "https://openalex.org/W1986627290",
+    "https://openalex.org/W1986883807",
+    "https://openalex.org/W1988113868",
+    "https://openalex.org/W1989768409",
+    "https://openalex.org/W1991462700",
+    "https://openalex.org/W1993635829",
+    "https://openalex.org/W1994269859",
+    "https://openalex.org/W1998082110",
+    "https://openalex.org/W2000141755",
+    "https://openalex.org/W2000265708",
+    "https://openalex.org/W2001085696",
+    "https://openalex.org/W2002628354",
+    "https://openalex.org/W2003483232",
+    "https://openalex.org/W2004783769",
+    "https://openalex.org/W2005784221",
+    "https://openalex.org/W2007739397",
+    "https://openalex.org/W2008157835",
+    "https://openalex.org/W2009770437",
+    "https://openalex.org/W2014194180",
+    "https://openalex.org/W2015756822",
+    "https://openalex.org/W2016521818",
+    "https://openalex.org/W2017491171",
+    "https://openalex.org/W2017507647",
+    "https://openalex.org/W2019100827",
+    "https://openalex.org/W2020055733",
+    "https://openalex.org/W2022342090",
+    "https://openalex.org/W2022530056",
+    "https://openalex.org/W2022872743",
+    "https://openalex.org/W2025996975",
+    "https://openalex.org/W2026173079",
+    "https://openalex.org/W2026266146",
+    "https://openalex.org/W2027189552",
+    "https://openalex.org/W2029545682",
+    "https://openalex.org/W2029870183",
+    "https://openalex.org/W2031227788",
+    "https://openalex.org/W2032796047",
+    "https://openalex.org/W2033837921",
+    "https://openalex.org/W2033923862",
+    "https://openalex.org/W2035246146",
+    "https://openalex.org/W2036352890",
+    "https://openalex.org/W2038127987",
+    "https://openalex.org/W2040532020",
+    "https://openalex.org/W2043528056",
+    "https://openalex.org/W2043868514",
+    "https://openalex.org/W2046048075",
+    "https://openalex.org/W2047265728",
+    "https://openalex.org/W2047318588",
+    "https://openalex.org/W2048424306",
+    "https://openalex.org/W2049098529",
+    "https://openalex.org/W2051708330",
+    "https://openalex.org/W2053889950",
+    "https://openalex.org/W2054634198",
+    "https://openalex.org/W2055799459",
+    "https://openalex.org/W2057127647",
+    "https://openalex.org/W2058890001",
+    "https://openalex.org/W2060079194",
+    "https://openalex.org/W2060763381",
+    "https://openalex.org/W2064482980",
+    "https://openalex.org/W2066018239",
+    "https://openalex.org/W2068273936",
+    "https://openalex.org/W2069977035",
+    "https://openalex.org/W2071175864",
+    "https://openalex.org/W2072976356",
+    "https://openalex.org/W2073313855",
+    "https://openalex.org/W2074535854",
+    "https://openalex.org/W2079345841",
+    "https://openalex.org/W2081561663",
+    "https://openalex.org/W2082203749",
+    "https://openalex.org/W2083253892",
+    "https://openalex.org/W2084436409",
+    "https://openalex.org/W2086855173",
+    "https://openalex.org/W2088063590",
+    "https://openalex.org/W2088982663",
+    "https://openalex.org/W2090789142",
+    "https://openalex.org/W2092813663",
+    "https://openalex.org/W2093468101",
+    "https://openalex.org/W2093842456",
+    "https://openalex.org/W2093980670",
+    "https://openalex.org/W2094136133",
+    "https://openalex.org/W2096855176",
+    "https://openalex.org/W2097337929",
+    "https://openalex.org/W2102748276",
+    "https://openalex.org/W2103251342",
+    "https://openalex.org/W2105437741",
+    "https://openalex.org/W2105623177",
+    "https://openalex.org/W2107337543",
+    "https://openalex.org/W2107354492",
+    "https://openalex.org/W2108207203",
+    "https://openalex.org/W2108897328",
+    "https://openalex.org/W2109861317",
+    "https://openalex.org/W2111309369",
+    "https://openalex.org/W2113113059",
+    "https://openalex.org/W2113390049",
+    "https://openalex.org/W2115554895",
+    "https://openalex.org/W2117566298",
+    "https://openalex.org/W2118108696",
+    "https://openalex.org/W2118900266",
+    "https://openalex.org/W2119121152",
+    "https://openalex.org/W2121530901",
+    "https://openalex.org/W2122404311",
+    "https://openalex.org/W2122550273",
+    "https://openalex.org/W2123411291",
+    "https://openalex.org/W2123817056",
+    "https://openalex.org/W2124595304",
+    "https://openalex.org/W2125211589",
+    "https://openalex.org/W2125981840",
+    "https://openalex.org/W2128394280",
+    "https://openalex.org/W2128720831",
+    "https://openalex.org/W2130594379",
+    "https://openalex.org/W2131376805",
+    "https://openalex.org/W2133244276",
+    "https://openalex.org/W2133768260",
+    "https://openalex.org/W2134077691",
+    "https://openalex.org/W2134469114",
+    "https://openalex.org/W2136109573",
+    "https://openalex.org/W2137526341",
+    "https://openalex.org/W2140385446",
+    "https://openalex.org/W2140622685",
+    "https://openalex.org/W2141309263",
+    "https://openalex.org/W2142240447",
+    "https://openalex.org/W2142436499",
+    "https://openalex.org/W2143594821",
+    "https://openalex.org/W2144829197",
+    "https://openalex.org/W2146569853",
+    "https://openalex.org/W2146572468",
+    "https://openalex.org/W2146803949",
+    "https://openalex.org/W2147043622",
+    "https://openalex.org/W2147352830",
+    "https://openalex.org/W2150197223",
+    "https://openalex.org/W2150495553",
+    "https://openalex.org/W2150911794",
+    "https://openalex.org/W2152858830",
+    "https://openalex.org/W2153335360",
+    "https://openalex.org/W2158550575",
+    "https://openalex.org/W2164682760",
+    "https://openalex.org/W2165453261",
+    "https://openalex.org/W2165508369",
+    "https://openalex.org/W2165993970",
+    "https://openalex.org/W2166783284",
+    "https://openalex.org/W2167163400",
+    "https://openalex.org/W2168592337",
+    "https://openalex.org/W2169013317",
+    "https://openalex.org/W2170214771",
+    "https://openalex.org/W2171211600",
+    "https://openalex.org/W2177016730",
+    "https://openalex.org/W2195472783",
+    "https://openalex.org/W2208406147",
+    "https://openalex.org/W2239486811",
+    "https://openalex.org/W2262558576",
+    "https://openalex.org/W2313304565",
+    "https://openalex.org/W2324390888",
+    "https://openalex.org/W2332843004",
+    "https://openalex.org/W2396660085",
+    "https://openalex.org/W2412180702",
+    "https://openalex.org/W2416925112",
+    "https://openalex.org/W2418035269",
+    "https://openalex.org/W2496215691",
+    "https://openalex.org/W2506565548",
+    "https://openalex.org/W2738943438",
+    "https://openalex.org/W2995765190",
+    "https://openalex.org/W3119584081",
+    "https://openalex.org/W3165240530",
+    "https://openalex.org/W4234550906",
+    "https://openalex.org/W4240702397",
+    "https://openalex.org/W4242883546",
+    "https://openalex.org/W4245393395",
+    "https://openalex.org/W4248866487",
+    "https://openalex.org/W4252517476",
+    "https://openalex.org/W4255608656",
+    "https://openalex.org/W4288074524",
+    "https://openalex.org/W4360754735"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W2035672781",
+   "doi": "https://doi.org/10.1016/j.jesp.2012.03.007",
+   "display_name": "Too fatigued to care: Ego depletion, guilt, and prosocial behavior",
+   "publication_year": 2012,
+   "type": "article",
+   "cited_by_count": 146,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5081380898",
+      "display_name": "Hanyi Xu",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I118618916",
+       "display_name": "Université Pierre Mendès France",
+       "ror": "https://ror.org/02f7wz369",
+       "country_code": "FR",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I118618916",
+        "https://openalex.org/I899635006"
+       ]
+      }
+     ],
+     "countries": [
+      "FR"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Hanyi Xu",
+     "raw_affiliation_strings": [
+      "University of Grenoble 2, France"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "University of Grenoble 2, France",
+       "institution_ids": [
+        "https://openalex.org/I118618916"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5034929906",
+      "display_name": "Laurent Bègue",
+      "orcid": "https://orcid.org/0000-0001-8078-5802",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-8078-5802"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I118618916",
+       "display_name": "Université Pierre Mendès France",
+       "ror": "https://ror.org/02f7wz369",
+       "country_code": "FR",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I118618916",
+        "https://openalex.org/I899635006"
+       ]
+      }
+     ],
+     "countries": [
+      "FR"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Laurent Bègue",
+     "raw_affiliation_strings": [
+      "University of Grenoble 2, France"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "University of Grenoble 2, France",
+       "institution_ids": [
+        "https://openalex.org/I118618916"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5059407618",
+      "display_name": "Brad J. Bushman",
+      "orcid": "https://orcid.org/0000-0002-1266-5101",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-1266-5101"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I52357470",
+       "display_name": "The Ohio State University",
+       "ror": "https://ror.org/00rs6vg23",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I52357470"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I865915315",
+       "display_name": "Vrije Universiteit Amsterdam",
+       "ror": "https://ror.org/008xxew50",
+       "country_code": "NL",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I865915315"
+       ]
+      }
+     ],
+     "countries": [
+      "NL",
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Brad J. Bushman",
+     "raw_affiliation_strings": [
+      "The Ohio State University, USA & VU University, Amsterdam, The Netherlands"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "The Ohio State University, USA & VU University, Amsterdam, The Netherlands",
+       "institution_ids": [
+        "https://openalex.org/I52357470",
+        "https://openalex.org/I865915315"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1016/j.jesp.2012.03.007",
+    "doi": "https://doi.org/10.1016/j.jesp.2012.03.007",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1016/j.jesp.2012.03.007",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S12410666",
+     "display_name": "Journal of Experimental Social Psychology",
+     "issn_l": "0022-1031",
+     "issn": [
+      "0022-1031",
+      "1096-0465"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "abdc-a",
+      "anvur-class-a",
+      "anvur-scientific",
+      "cwts-core",
+      "dongbi-b",
+      "erih-plus",
+      "fnege-3",
+      "jufo-2",
+      "ki-jl-1",
+      "norway-1",
+      "poland-140",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320990",
+     "host_organization_name": "Elsevier BV",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320990"
+     ],
+     "host_organization_lineage_names": [
+      "Elsevier BV"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Journal of Experimental Social Psychology",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W1699002944",
+    "https://openalex.org/W1968178512",
+    "https://openalex.org/W1979071675",
+    "https://openalex.org/W1995031937",
+    "https://openalex.org/W2060763381",
+    "https://openalex.org/W2065659429",
+    "https://openalex.org/W2067879790",
+    "https://openalex.org/W2076879021",
+    "https://openalex.org/W2088982663",
+    "https://openalex.org/W2120618638",
+    "https://openalex.org/W2123817056",
+    "https://openalex.org/W2136267579",
+    "https://openalex.org/W2140534852",
+    "https://openalex.org/W2148905283",
+    "https://openalex.org/W2153155150",
+    "https://openalex.org/W2158643823",
+    "https://openalex.org/W2164123189",
+    "https://openalex.org/W2172292046"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W2110882073",
+   "doi": "https://doi.org/10.1016/j.jenvp.2014.06.004",
+   "display_name": "Natural resistance: Exposure to nature and self-regulation, mood, and physiology after ego-depletion",
+   "publication_year": 2014,
+   "type": "article",
+   "cited_by_count": 132,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5055669421",
+      "display_name": "Femke Beute",
+      "orcid": "https://orcid.org/0000-0002-4767-0648",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-4767-0648"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I83019370",
+       "display_name": "Eindhoven University of Technology",
+       "ror": "https://ror.org/02c2kyt77",
+       "country_code": "NL",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I83019370"
+       ]
+      }
+     ],
+     "countries": [
+      "NL"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "F. Beute",
+     "raw_affiliation_strings": [
+      "Human Technology Interaction, Eindhoven University of Technology, The Netherlands"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Human Technology Interaction, Eindhoven University of Technology, The Netherlands",
+       "institution_ids": [
+        "https://openalex.org/I83019370"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5054894304",
+      "display_name": "Yvonne A. W. de Kort",
+      "orcid": "https://orcid.org/0000-0002-8127-397X",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-8127-397X"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I83019370",
+       "display_name": "Eindhoven University of Technology",
+       "ror": "https://ror.org/02c2kyt77",
+       "country_code": "NL",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I83019370"
+       ]
+      }
+     ],
+     "countries": [
+      "NL"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Y.A.W. de Kort",
+     "raw_affiliation_strings": [
+      "Human Technology Interaction, Eindhoven University of Technology, The Netherlands"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Human Technology Interaction, Eindhoven University of Technology, The Netherlands",
+       "institution_ids": [
+        "https://openalex.org/I83019370"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1016/j.jenvp.2014.06.004",
+    "doi": "https://doi.org/10.1016/j.jenvp.2014.06.004",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1016/j.jenvp.2014.06.004",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S32271328",
+     "display_name": "Journal of Environmental Psychology",
+     "issn_l": "0272-4944",
+     "issn": [
+      "0272-4944",
+      "1522-9610"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "abdc-a",
+      "anvur-class-a",
+      "anvur-scientific",
+      "cwts-core",
+      "dongbi-c",
+      "erih-plus",
+      "jufo-3",
+      "ki-jl-2",
+      "norway-2",
+      "poland-140",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320990",
+     "host_organization_name": "Elsevier BV",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320990"
+     ],
+     "host_organization_lineage_names": [
+      "Elsevier BV"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Journal of Environmental Psychology",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W331461184",
+    "https://openalex.org/W1043420141",
+    "https://openalex.org/W1488837022",
+    "https://openalex.org/W1492096501",
+    "https://openalex.org/W1566577700",
+    "https://openalex.org/W1724628074",
+    "https://openalex.org/W1866281937",
+    "https://openalex.org/W1903888040",
+    "https://openalex.org/W1966401421",
+    "https://openalex.org/W1967298019",
+    "https://openalex.org/W1980393047",
+    "https://openalex.org/W1981603681",
+    "https://openalex.org/W1984792290",
+    "https://openalex.org/W1997544838",
+    "https://openalex.org/W2000141755",
+    "https://openalex.org/W2003224869",
+    "https://openalex.org/W2007892532",
+    "https://openalex.org/W2012462205",
+    "https://openalex.org/W2019398887",
+    "https://openalex.org/W2024351077",
+    "https://openalex.org/W2033342135",
+    "https://openalex.org/W2033837921",
+    "https://openalex.org/W2035331608",
+    "https://openalex.org/W2035540416",
+    "https://openalex.org/W2042083501",
+    "https://openalex.org/W2043148105",
+    "https://openalex.org/W2043746588",
+    "https://openalex.org/W2045180589",
+    "https://openalex.org/W2060763381",
+    "https://openalex.org/W2069583809",
+    "https://openalex.org/W2071175864",
+    "https://openalex.org/W2082624874",
+    "https://openalex.org/W2096417948",
+    "https://openalex.org/W2097123720",
+    "https://openalex.org/W2102065154",
+    "https://openalex.org/W2106032582",
+    "https://openalex.org/W2108384867",
+    "https://openalex.org/W2108897328",
+    "https://openalex.org/W2113113059",
+    "https://openalex.org/W2117504085",
+    "https://openalex.org/W2119225338",
+    "https://openalex.org/W2123232906",
+    "https://openalex.org/W2132314079",
+    "https://openalex.org/W2133589238",
+    "https://openalex.org/W2134077691",
+    "https://openalex.org/W2134537068",
+    "https://openalex.org/W2149907349",
+    "https://openalex.org/W2150495553",
+    "https://openalex.org/W2156230143",
+    "https://openalex.org/W2156395333",
+    "https://openalex.org/W2164740960",
+    "https://openalex.org/W2167557160",
+    "https://openalex.org/W2169368100",
+    "https://openalex.org/W2285072859",
+    "https://openalex.org/W2938558181",
+    "https://openalex.org/W4233245153",
+    "https://openalex.org/W4248007026"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W1988113868",
+   "doi": "https://doi.org/10.1177/0146167206288008",
+   "display_name": "Choice and Ego-Depletion: The Moderating Role of Autonomy",
+   "publication_year": 2006,
+   "type": "article",
+   "cited_by_count": 539,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5032504269",
+      "display_name": "Arlen C. Moller",
+      "orcid": "https://orcid.org/0000-0003-4464-6973",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-4464-6973"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I5388228",
+       "display_name": "University of Rochester",
+       "ror": "https://ror.org/022kthw22",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I5388228"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Arlen C. Moller",
+     "raw_affiliation_strings": [
+      "Department of Psychology, University of Rochester, NY 14627, USA. moller@psych.rochester.edu",
+      "Department of Psychology , University of Rochester , NY 14627, USA"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Psychology, University of Rochester, NY 14627, USA. moller@psych.rochester.edu",
+       "institution_ids": [
+        "https://openalex.org/I5388228"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Department of Psychology , University of Rochester , NY 14627, USA",
+       "institution_ids": [
+        "https://openalex.org/I5388228"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5004154542",
+      "display_name": "Edward L. Deci",
+      "orcid": "https://orcid.org/0000-0001-8246-8536",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-8246-8536"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I5388228",
+       "display_name": "University of Rochester",
+       "ror": "https://ror.org/022kthw22",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I5388228"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Edward L. Deci",
+     "raw_affiliation_strings": [
+      "UNIVERSITY OF ROCHESTER (Rochester, NY, US)"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "UNIVERSITY OF ROCHESTER (Rochester, NY, US)",
+       "institution_ids": [
+        "https://openalex.org/I5388228"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5001390698",
+      "display_name": "Richard M. Ryan",
+      "orcid": "https://orcid.org/0000-0002-2355-6154",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-2355-6154",
+       "https://orcid.org/0000-0002-7083-0873"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I5388228",
+       "display_name": "University of Rochester",
+       "ror": "https://ror.org/022kthw22",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I5388228"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Richard M. Ryan",
+     "raw_affiliation_strings": [
+      "University of Rochester",
+      "UNIVERSITY OF ROCHESTER (Rochester, NY, US)"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "University of Rochester",
+       "institution_ids": [
+        "https://openalex.org/I5388228"
+       ]
+      },
+      {
+       "raw_affiliation_string": "UNIVERSITY OF ROCHESTER (Rochester, NY, US)",
+       "institution_ids": [
+        "https://openalex.org/I5388228"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1177/0146167206288008",
+    "doi": "https://doi.org/10.1177/0146167206288008",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1177/0146167206288008",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S187348256",
+     "display_name": "Personality and Social Psychology Bulletin",
+     "issn_l": "0146-1672",
+     "issn": [
+      "0146-1672",
+      "1552-7433"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "abdc-a-star",
+      "cwts-core",
+      "dongbi-b",
+      "erih-plus",
+      "jufo-3",
+      "ki-jl-2",
+      "medline",
+      "norway-2",
+      "poland-140",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320017",
+     "host_organization_name": "SAGE Publishing",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320017"
+     ],
+     "host_organization_lineage_names": [
+      "SAGE Publishing"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Personality and Social Psychology Bulletin",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W185931177",
+    "https://openalex.org/W1536400451",
+    "https://openalex.org/W1615876832",
+    "https://openalex.org/W1665332082",
+    "https://openalex.org/W1688595998",
+    "https://openalex.org/W1847780722",
+    "https://openalex.org/W1887964395",
+    "https://openalex.org/W1966340987",
+    "https://openalex.org/W1967605054",
+    "https://openalex.org/W1970696296",
+    "https://openalex.org/W1971440513",
+    "https://openalex.org/W1976876708",
+    "https://openalex.org/W1981678973",
+    "https://openalex.org/W1984355279",
+    "https://openalex.org/W1992433314",
+    "https://openalex.org/W1994096198",
+    "https://openalex.org/W2006451753",
+    "https://openalex.org/W2006905596",
+    "https://openalex.org/W2017546717",
+    "https://openalex.org/W2018689505",
+    "https://openalex.org/W2021498365",
+    "https://openalex.org/W2025617882",
+    "https://openalex.org/W2029009881",
+    "https://openalex.org/W2052729098",
+    "https://openalex.org/W2052748684",
+    "https://openalex.org/W2063080745",
+    "https://openalex.org/W2072059287",
+    "https://openalex.org/W2077052197",
+    "https://openalex.org/W2078002908",
+    "https://openalex.org/W2083771381",
+    "https://openalex.org/W2084290446",
+    "https://openalex.org/W2100834612",
+    "https://openalex.org/W2109861317",
+    "https://openalex.org/W2113113059",
+    "https://openalex.org/W2113390049",
+    "https://openalex.org/W2122447448",
+    "https://openalex.org/W2122517769",
+    "https://openalex.org/W2123817056",
+    "https://openalex.org/W2126311339",
+    "https://openalex.org/W2130175054",
+    "https://openalex.org/W2134469114",
+    "https://openalex.org/W2151091572",
+    "https://openalex.org/W2153525033",
+    "https://openalex.org/W2166050856",
+    "https://openalex.org/W3019273456",
+    "https://openalex.org/W3107277953",
+    "https://openalex.org/W3125727143",
+    "https://openalex.org/W3131215869",
+    "https://openalex.org/W3172175068",
+    "https://openalex.org/W4246490679",
+    "https://openalex.org/W4247564017"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W2984573913",
+   "doi": "https://doi.org/10.1016/j.peh.2019.100150",
+   "display_name": "The effect of ego depletion or mental fatigue on subsequent physical endurance performance: A meta-analysis",
+   "publication_year": 2019,
+   "type": "review",
+   "cited_by_count": 154,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5012007640",
+      "display_name": "Louis‐Solal Giboin",
+      "orcid": "https://orcid.org/0000-0003-4396-8225",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-4396-8225"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I189712700",
+       "display_name": "University of Konstanz",
+       "ror": "https://ror.org/0546hnb39",
+       "country_code": "DE",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I189712700"
+       ]
+      }
+     ],
+     "countries": [
+      "DE"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Louis-Solal Giboin",
+     "raw_affiliation_strings": [
+      "Sensorimotor Performance Lab, Human Performance Research Centre, University of Konstanz, Germany"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Sensorimotor Performance Lab, Human Performance Research Centre, University of Konstanz, Germany",
+       "institution_ids": [
+        "https://openalex.org/I189712700"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5017569540",
+      "display_name": "Wanja Wolff",
+      "orcid": "https://orcid.org/0000-0001-8130-0272",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-8130-0272"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I118564535",
+       "display_name": "University of Bern",
+       "ror": "https://ror.org/02k7v4d05",
+       "country_code": "CH",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I118564535"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I189712700",
+       "display_name": "University of Konstanz",
+       "ror": "https://ror.org/0546hnb39",
+       "country_code": "DE",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I189712700"
+       ]
+      }
+     ],
+     "countries": [
+      "CH",
+      "DE"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Wanja Wolff",
+     "raw_affiliation_strings": [
+      "University of Bern, Department of Educational Psychology, Bern, Switzerland",
+      "University of Konstanz, Department of Sport Science, Sport Psychology, Germany"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "University of Bern, Department of Educational Psychology, Bern, Switzerland",
+       "institution_ids": [
+        "https://openalex.org/I118564535"
+       ]
+      },
+      {
+       "raw_affiliation_string": "University of Konstanz, Department of Sport Science, Sport Psychology, Germany",
+       "institution_ids": [
+        "https://openalex.org/I189712700"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1016/j.peh.2019.100150",
+    "doi": "https://doi.org/10.1016/j.peh.2019.100150",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1016/j.peh.2019.100150",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S2764777161",
+     "display_name": "Performance Enhancement & Health",
+     "issn_l": "2211-2669",
+     "issn": [
+      "2211-2669"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "cwts-core",
+      "dongbi-d",
+      "jufo-1",
+      "norway-1",
+      "poland-40",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320990",
+     "host_organization_name": "Elsevier BV",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320990"
+     ],
+     "host_organization_lineage_names": [
+      "Elsevier BV"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Performance Enhancement &amp; Health",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W13437719",
+    "https://openalex.org/W1137407773",
+    "https://openalex.org/W1491721220",
+    "https://openalex.org/W1532906348",
+    "https://openalex.org/W1598602811",
+    "https://openalex.org/W1720333833",
+    "https://openalex.org/W1838223761",
+    "https://openalex.org/W1964647816",
+    "https://openalex.org/W1982434152",
+    "https://openalex.org/W1988287306",
+    "https://openalex.org/W1992322615",
+    "https://openalex.org/W1995190455",
+    "https://openalex.org/W1996248830",
+    "https://openalex.org/W1997267053",
+    "https://openalex.org/W2005323615",
+    "https://openalex.org/W2006366990",
+    "https://openalex.org/W2013068849",
+    "https://openalex.org/W2014453502",
+    "https://openalex.org/W2018488045",
+    "https://openalex.org/W2026173079",
+    "https://openalex.org/W2031474948",
+    "https://openalex.org/W2041967587",
+    "https://openalex.org/W2046566443",
+    "https://openalex.org/W2050384607",
+    "https://openalex.org/W2052297276",
+    "https://openalex.org/W2060763381",
+    "https://openalex.org/W2061005379",
+    "https://openalex.org/W2076029586",
+    "https://openalex.org/W2083725346",
+    "https://openalex.org/W2105687755",
+    "https://openalex.org/W2105824687",
+    "https://openalex.org/W2109887283",
+    "https://openalex.org/W2114494142",
+    "https://openalex.org/W2117553976",
+    "https://openalex.org/W2118108696",
+    "https://openalex.org/W2125068113",
+    "https://openalex.org/W2125435699",
+    "https://openalex.org/W2126718722",
+    "https://openalex.org/W2126930838",
+    "https://openalex.org/W2130594379",
+    "https://openalex.org/W2134077691",
+    "https://openalex.org/W2134469114",
+    "https://openalex.org/W2135272506",
+    "https://openalex.org/W2141076134",
+    "https://openalex.org/W2143594200",
+    "https://openalex.org/W2144980029",
+    "https://openalex.org/W2145155297",
+    "https://openalex.org/W2151315308",
+    "https://openalex.org/W2156098321",
+    "https://openalex.org/W2167382627",
+    "https://openalex.org/W2217129899",
+    "https://openalex.org/W2220131028",
+    "https://openalex.org/W2274591123",
+    "https://openalex.org/W2297195260",
+    "https://openalex.org/W2301647011",
+    "https://openalex.org/W2464442807",
+    "https://openalex.org/W2499154041",
+    "https://openalex.org/W2500474003",
+    "https://openalex.org/W2515839452",
+    "https://openalex.org/W2525718045",
+    "https://openalex.org/W2527448328",
+    "https://openalex.org/W2527604003",
+    "https://openalex.org/W2538029607",
+    "https://openalex.org/W2563742216",
+    "https://openalex.org/W2593153671",
+    "https://openalex.org/W2593685149",
+    "https://openalex.org/W2600886565",
+    "https://openalex.org/W2620631745",
+    "https://openalex.org/W2727895845",
+    "https://openalex.org/W2735498619",
+    "https://openalex.org/W2757965623",
+    "https://openalex.org/W2767454217",
+    "https://openalex.org/W2777924741",
+    "https://openalex.org/W2786277287",
+    "https://openalex.org/W2787001020",
+    "https://openalex.org/W2787887681",
+    "https://openalex.org/W2792752952",
+    "https://openalex.org/W2792966579",
+    "https://openalex.org/W2801424895",
+    "https://openalex.org/W2810018031",
+    "https://openalex.org/W2810843790",
+    "https://openalex.org/W2836146784",
+    "https://openalex.org/W2885415258",
+    "https://openalex.org/W2889297542",
+    "https://openalex.org/W2890001938",
+    "https://openalex.org/W2893842868",
+    "https://openalex.org/W2897216035",
+    "https://openalex.org/W2898552719",
+    "https://openalex.org/W2901072692",
+    "https://openalex.org/W2902097346",
+    "https://openalex.org/W2922454775",
+    "https://openalex.org/W2931164202",
+    "https://openalex.org/W2941343729",
+    "https://openalex.org/W2964053224",
+    "https://openalex.org/W2987127991",
+    "https://openalex.org/W2991792334",
+    "https://openalex.org/W3121900038",
+    "https://openalex.org/W3122967980",
+    "https://openalex.org/W4244406062",
+    "https://openalex.org/W4249127163",
+    "https://openalex.org/W4254504261",
+    "https://openalex.org/W4294215472",
+    "https://openalex.org/W4320164613",
+    "https://openalex.org/W4362504902"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W3159013860",
+   "doi": "https://doi.org/10.2139/ssrn.3797263",
+   "display_name": "Reconceptualizing Ego Depletion as Transient Cognitive Fatigue",
+   "publication_year": 2021,
+   "type": "preprint",
+   "cited_by_count": 6,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5032374633",
+      "display_name": "Patrick J. Hurley",
+      "orcid": "https://orcid.org/0000-0003-4117-187X",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-4117-187X"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I12912129",
+       "display_name": "Northeastern University",
+       "ror": "https://ror.org/04t5xt781",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I12912129"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Patrick J. Hurley",
+     "raw_affiliation_strings": [
+      "Northeastern University - Accounting Group, 360 Huntington Ave., Boston, MA 02115, United States",
+      "Northeastern University, 360 Huntington Avenue, Boston, MA 02115",
+      "School of Business, Northeastern University"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Northeastern University - Accounting Group, 360 Huntington Ave., Boston, MA 02115, United States",
+       "institution_ids": [
+        "https://openalex.org/I12912129"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Northeastern University, 360 Huntington Avenue, Boston, MA 02115",
+       "institution_ids": [
+        "https://openalex.org/I12912129"
+       ]
+      },
+      {
+       "raw_affiliation_string": "School of Business, Northeastern University",
+       "institution_ids": [
+        "https://openalex.org/I12912129"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.2139/ssrn.3797263",
+    "doi": "https://doi.org/10.2139/ssrn.3797263",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.2139/ssrn.3797263",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S4210172589",
+     "display_name": "SSRN Electronic Journal",
+     "issn_l": "1556-5068",
+     "issn": [
+      "1556-5068"
+     ],
+     "is_oa": true,
+     "is_in_doaj": false,
+     "is_core": false,
+     "listed_in": [],
+     "host_organization": "https://openalex.org/I1318003438",
+     "host_organization_name": "RELX Group (Netherlands)",
+     "host_organization_lineage": [
+      "https://openalex.org/I1318003438"
+     ],
+     "host_organization_lineage_names": [],
+     "type": "repository"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "SSRN Electronic Journal",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W1546584494",
+    "https://openalex.org/W1562208008",
+    "https://openalex.org/W1580871000",
+    "https://openalex.org/W1950299194",
+    "https://openalex.org/W1965706257",
+    "https://openalex.org/W1966401421",
+    "https://openalex.org/W1975791421",
+    "https://openalex.org/W1977717792",
+    "https://openalex.org/W1984916726",
+    "https://openalex.org/W1985825329",
+    "https://openalex.org/W1986627290",
+    "https://openalex.org/W1988113868",
+    "https://openalex.org/W1990421115",
+    "https://openalex.org/W1992997294",
+    "https://openalex.org/W1998082110",
+    "https://openalex.org/W1999752882",
+    "https://openalex.org/W2000141755",
+    "https://openalex.org/W2002537929",
+    "https://openalex.org/W2003102314",
+    "https://openalex.org/W2004133746",
+    "https://openalex.org/W2004436294",
+    "https://openalex.org/W2005014832",
+    "https://openalex.org/W2005059988",
+    "https://openalex.org/W2005938104",
+    "https://openalex.org/W2006674698",
+    "https://openalex.org/W2007393966",
+    "https://openalex.org/W2010370367",
+    "https://openalex.org/W2010802751",
+    "https://openalex.org/W2011659276",
+    "https://openalex.org/W2012281587",
+    "https://openalex.org/W2012666970",
+    "https://openalex.org/W2013046974",
+    "https://openalex.org/W2014194180",
+    "https://openalex.org/W2015218205",
+    "https://openalex.org/W2017520484",
+    "https://openalex.org/W2023829956",
+    "https://openalex.org/W2024351077",
+    "https://openalex.org/W2026173079",
+    "https://openalex.org/W2030892204",
+    "https://openalex.org/W2033585778",
+    "https://openalex.org/W2034469274",
+    "https://openalex.org/W2036134172",
+    "https://openalex.org/W2052055301",
+    "https://openalex.org/W2055690535",
+    "https://openalex.org/W2055799459",
+    "https://openalex.org/W2055839463",
+    "https://openalex.org/W2056699334",
+    "https://openalex.org/W2060763381",
+    "https://openalex.org/W2064482980",
+    "https://openalex.org/W2067346281",
+    "https://openalex.org/W2071175864",
+    "https://openalex.org/W2077106910",
+    "https://openalex.org/W2081413820",
+    "https://openalex.org/W2083253892",
+    "https://openalex.org/W2084221958",
+    "https://openalex.org/W2089457241",
+    "https://openalex.org/W2092813663",
+    "https://openalex.org/W2093404477",
+    "https://openalex.org/W2093980919",
+    "https://openalex.org/W2096476371",
+    "https://openalex.org/W2103834847",
+    "https://openalex.org/W2105220251",
+    "https://openalex.org/W2105300968",
+    "https://openalex.org/W2106127451",
+    "https://openalex.org/W2107354492",
+    "https://openalex.org/W2109301184",
+    "https://openalex.org/W2109861317",
+    "https://openalex.org/W2115818240",
+    "https://openalex.org/W2116574052",
+    "https://openalex.org/W2121161929",
+    "https://openalex.org/W2123817056",
+    "https://openalex.org/W2124831657",
+    "https://openalex.org/W2126784370",
+    "https://openalex.org/W2133299302",
+    "https://openalex.org/W2134469114",
+    "https://openalex.org/W2134537068",
+    "https://openalex.org/W2134873723",
+    "https://openalex.org/W2136015137",
+    "https://openalex.org/W2136989120",
+    "https://openalex.org/W2138407399",
+    "https://openalex.org/W2141309263",
+    "https://openalex.org/W2142478512",
+    "https://openalex.org/W2143594200",
+    "https://openalex.org/W2143605883",
+    "https://openalex.org/W2144162268",
+    "https://openalex.org/W2144295133",
+    "https://openalex.org/W2145101532",
+    "https://openalex.org/W2145548908",
+    "https://openalex.org/W2146569853",
+    "https://openalex.org/W2146572468",
+    "https://openalex.org/W2147851174",
+    "https://openalex.org/W2148080836",
+    "https://openalex.org/W2150495553",
+    "https://openalex.org/W2151091572",
+    "https://openalex.org/W2151781250",
+    "https://openalex.org/W2152858830",
+    "https://openalex.org/W2156926719",
+    "https://openalex.org/W2160509113",
+    "https://openalex.org/W2164682760",
+    "https://openalex.org/W2165879934",
+    "https://openalex.org/W2165993970",
+    "https://openalex.org/W2166720535",
+    "https://openalex.org/W2167503762",
+    "https://openalex.org/W2167652505",
+    "https://openalex.org/W2167735806",
+    "https://openalex.org/W2168398923",
+    "https://openalex.org/W2168592337",
+    "https://openalex.org/W2182796495",
+    "https://openalex.org/W2186516452",
+    "https://openalex.org/W2208406147",
+    "https://openalex.org/W2281024698",
+    "https://openalex.org/W2281113764",
+    "https://openalex.org/W2312564765",
+    "https://openalex.org/W2313304565",
+    "https://openalex.org/W2319738097",
+    "https://openalex.org/W2324743036",
+    "https://openalex.org/W2344734883",
+    "https://openalex.org/W2480065108",
+    "https://openalex.org/W2484225033",
+    "https://openalex.org/W2485592237",
+    "https://openalex.org/W2489271800",
+    "https://openalex.org/W2497438933",
+    "https://openalex.org/W2499154041",
+    "https://openalex.org/W2506565548",
+    "https://openalex.org/W2506924923",
+    "https://openalex.org/W2513408855",
+    "https://openalex.org/W2529112977",
+    "https://openalex.org/W2561069816",
+    "https://openalex.org/W2563742216",
+    "https://openalex.org/W2588069705",
+    "https://openalex.org/W2591641564",
+    "https://openalex.org/W2591911202",
+    "https://openalex.org/W2594537847",
+    "https://openalex.org/W2604293295",
+    "https://openalex.org/W2604804505",
+    "https://openalex.org/W2613682186",
+    "https://openalex.org/W2622390736",
+    "https://openalex.org/W2695681217",
+    "https://openalex.org/W2752443224",
+    "https://openalex.org/W2767738702",
+    "https://openalex.org/W2781312890",
+    "https://openalex.org/W2781957993",
+    "https://openalex.org/W2789505653",
+    "https://openalex.org/W2794580436",
+    "https://openalex.org/W2794855405",
+    "https://openalex.org/W2807547917",
+    "https://openalex.org/W2810843790",
+    "https://openalex.org/W2811226816",
+    "https://openalex.org/W2913276869",
+    "https://openalex.org/W2916218612",
+    "https://openalex.org/W2921552805",
+    "https://openalex.org/W2951399413",
+    "https://openalex.org/W2965655506",
+    "https://openalex.org/W2979369947",
+    "https://openalex.org/W2982850703",
+    "https://openalex.org/W2989238341",
+    "https://openalex.org/W2989363433",
+    "https://openalex.org/W3121414047",
+    "https://openalex.org/W3122967980",
+    "https://openalex.org/W3123335404",
+    "https://openalex.org/W3124505198",
+    "https://openalex.org/W3154436751",
+    "https://openalex.org/W3187771857",
+    "https://openalex.org/W3201934522",
+    "https://openalex.org/W4230957748",
+    "https://openalex.org/W4235464748",
+    "https://openalex.org/W4242507760",
+    "https://openalex.org/W4245684530",
+    "https://openalex.org/W4245861227",
+    "https://openalex.org/W4247056056",
+    "https://openalex.org/W4253785576",
+    "https://openalex.org/W4256555852",
+    "https://openalex.org/W4283450745",
+    "https://openalex.org/W4293586167",
+    "https://openalex.org/W4300107936",
+    "https://openalex.org/W6641604142",
+    "https://openalex.org/W6723979521",
+    "https://openalex.org/W6987518190",
+    "https://openalex.org/W7064327665"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W1992322615",
+   "doi": "https://doi.org/10.1177/0146167201279008",
+   "display_name": "Ostracism and Ego Depletion: The Strains of Silence",
+   "publication_year": 2001,
+   "type": "article",
+   "cited_by_count": 158,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5081103277",
+      "display_name": "Natalie J. Ciarocco",
+      "orcid": "https://orcid.org/0000-0001-8269-1084",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-8269-1084"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I58956616",
+       "display_name": "Case Western Reserve University",
+       "ror": "https://ror.org/051fd9666",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I58956616"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Natalie J. Ciarocco",
+     "raw_affiliation_strings": [
+      "Case Western Reserve University",
+      "Case Western Reserve U, Cleveland, OH, US"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Case Western Reserve University",
+       "institution_ids": [
+        "https://openalex.org/I58956616"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Case Western Reserve U, Cleveland, OH, US",
+       "institution_ids": [
+        "https://openalex.org/I58956616"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5082720652",
+      "display_name": "Kristin L. Sommer",
+      "orcid": "https://orcid.org/0000-0001-8658-9204",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-8658-9204"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I141810926",
+       "display_name": "Baruch College",
+       "ror": "https://ror.org/023qavy03",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I141810926"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Kristin L. Sommer",
+     "raw_affiliation_strings": [
+      "Baruch College",
+      "Baruch College#TAB#"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Baruch College",
+       "institution_ids": [
+        "https://openalex.org/I141810926"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Baruch College#TAB#",
+       "institution_ids": [
+        "https://openalex.org/I141810926"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5083945877",
+      "display_name": "Roy Frederick Baumeister",
+      "orcid": "https://orcid.org/0000-0003-1413-3296",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-1413-3296"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I58956616",
+       "display_name": "Case Western Reserve University",
+       "ror": "https://ror.org/051fd9666",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I58956616"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Roy F. Baumeister",
+     "raw_affiliation_strings": [
+      "Case Western Reserve University,"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Case Western Reserve University,",
+       "institution_ids": [
+        "https://openalex.org/I58956616"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1177/0146167201279008",
+    "doi": "https://doi.org/10.1177/0146167201279008",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1177/0146167201279008",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S187348256",
+     "display_name": "Personality and Social Psychology Bulletin",
+     "issn_l": "0146-1672",
+     "issn": [
+      "0146-1672",
+      "1552-7433"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "abdc-a-star",
+      "cwts-core",
+      "dongbi-b",
+      "erih-plus",
+      "jufo-3",
+      "ki-jl-2",
+      "medline",
+      "norway-2",
+      "poland-140",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320017",
+     "host_organization_name": "SAGE Publishing",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320017"
+     ],
+     "host_organization_lineage_names": [
+      "SAGE Publishing"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Personality and Social Psychology Bulletin",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W619135380",
+    "https://openalex.org/W1537666571",
+    "https://openalex.org/W1748197048",
+    "https://openalex.org/W1971440513",
+    "https://openalex.org/W2003573008",
+    "https://openalex.org/W2017433325",
+    "https://openalex.org/W2038150191",
+    "https://openalex.org/W2059415778",
+    "https://openalex.org/W2113390049",
+    "https://openalex.org/W2118511810",
+    "https://openalex.org/W2123817056",
+    "https://openalex.org/W2134469114",
+    "https://openalex.org/W2142082882",
+    "https://openalex.org/W2164558494",
+    "https://openalex.org/W2476616278",
+    "https://openalex.org/W2789649479",
+    "https://openalex.org/W4214907476"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W2060763381",
+   "doi": "https://doi.org/10.1037/a0019486",
+   "display_name": "Ego depletion and the strength model of self-control: A meta-analysis.",
+   "publication_year": 2010,
+   "type": "article",
+   "cited_by_count": 2298,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5057291202",
+      "display_name": "Martin S. Hagger",
+      "orcid": "https://orcid.org/0000-0002-2685-1546",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-2685-1546"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I142263535",
+       "display_name": "University of Nottingham",
+       "ror": "https://ror.org/01ee9ar58",
+       "country_code": "GB",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I142263535"
+       ]
+      }
+     ],
+     "countries": [
+      "GB"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Martin S. Hagger",
+     "raw_affiliation_strings": [
+      "School of Psychology, University of Nottingham, Nottingham, Nottinghamshire, United Kingdom. martin.hagger@nottingham.ac.uk",
+      "School of Psychology, University of Nottingham, Nottingham, NTT, United Kingdom"
+     ],
+     "raw_orcid": "https://orcid.org/0000-0002-2685-1546",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "School of Psychology, University of Nottingham, Nottingham, Nottinghamshire, United Kingdom. martin.hagger@nottingham.ac.uk",
+       "institution_ids": [
+        "https://openalex.org/I142263535"
+       ]
+      },
+      {
+       "raw_affiliation_string": "School of Psychology, University of Nottingham, Nottingham, NTT, United Kingdom",
+       "institution_ids": [
+        "https://openalex.org/I142263535"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5000415054",
+      "display_name": "Chantelle Wood",
+      "orcid": "https://orcid.org/0000-0001-6451-7859",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-6451-7859"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I142263535",
+       "display_name": "University of Nottingham",
+       "ror": "https://ror.org/01ee9ar58",
+       "country_code": "GB",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I142263535"
+       ]
+      }
+     ],
+     "countries": [
+      "GB"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Chantelle Wood",
+     "raw_affiliation_strings": [
+      "School of Psychology, University of Nottingham, Nottingham, NTT, United Kingdom"
+     ],
+     "raw_orcid": "https://orcid.org/0000-0001-6451-7859",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "School of Psychology, University of Nottingham, Nottingham, NTT, United Kingdom",
+       "institution_ids": [
+        "https://openalex.org/I142263535"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5085947902",
+      "display_name": "Chris Stiff",
+      "orcid": "https://orcid.org/0000-0002-5342-0274",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-5342-0274"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I142263535",
+       "display_name": "University of Nottingham",
+       "ror": "https://ror.org/01ee9ar58",
+       "country_code": "GB",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I142263535"
+       ]
+      }
+     ],
+     "countries": [
+      "GB"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Chris Stiff",
+     "raw_affiliation_strings": [
+      "School of Psychology, University of Nottingham, Nottingham, NTT, United Kingdom"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "School of Psychology, University of Nottingham, Nottingham, NTT, United Kingdom",
+       "institution_ids": [
+        "https://openalex.org/I142263535"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5038009996",
+      "display_name": "Nikos L. D. Chatzisarantis",
+      "orcid": "https://orcid.org/0000-0001-7059-6805",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-7059-6805"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I172675005",
+       "display_name": "Nanyang Technological University",
+       "ror": "https://ror.org/02e7b5302",
+       "country_code": "SG",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I172675005"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I194744927",
+       "display_name": "National Institute of Education",
+       "ror": "https://ror.org/02fhgbp51",
+       "country_code": "SG",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I172675005",
+        "https://openalex.org/I194744927"
+       ]
+      }
+     ],
+     "countries": [
+      "SG"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Nikos L. D. Chatzisarantis",
+     "raw_affiliation_strings": [
+      "National Institute of Education, Nanyang Technical University, Singapore"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "National Institute of Education, Nanyang Technical University, Singapore",
+       "institution_ids": [
+        "https://openalex.org/I172675005",
+        "https://openalex.org/I194744927"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1037/a0019486",
+    "doi": "https://doi.org/10.1037/a0019486",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1037/a0019486",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S75627607",
+     "display_name": "Psychological Bulletin",
+     "issn_l": "0033-2909",
+     "issn": [
+      "0033-2909",
+      "1939-1455"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "abdc-a-star",
+      "anvur-scientific",
+      "cwts-core",
+      "dongbi-a",
+      "erih-plus",
+      "jufo-3",
+      "ki-jl-2",
+      "medline",
+      "norway-2",
+      "poland-200",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320262",
+     "host_organization_name": "American Psychological Association",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320262"
+     ],
+     "host_organization_lineage_names": [
+      "American Psychological Association"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Psychological Bulletin",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W3124686",
+    "https://openalex.org/W16723540",
+    "https://openalex.org/W171375216",
+    "https://openalex.org/W173217656",
+    "https://openalex.org/W206314563",
+    "https://openalex.org/W1504946553",
+    "https://openalex.org/W1511920456",
+    "https://openalex.org/W1517229207",
+    "https://openalex.org/W1600000079",
+    "https://openalex.org/W1688595998",
+    "https://openalex.org/W1723155957",
+    "https://openalex.org/W1854040280",
+    "https://openalex.org/W1857029958",
+    "https://openalex.org/W1966401421",
+    "https://openalex.org/W1966891611",
+    "https://openalex.org/W1967023094",
+    "https://openalex.org/W1967859970",
+    "https://openalex.org/W1967979063",
+    "https://openalex.org/W1969233283",
+    "https://openalex.org/W1970655212",
+    "https://openalex.org/W1970671664",
+    "https://openalex.org/W1971287708",
+    "https://openalex.org/W1974108058",
+    "https://openalex.org/W1975989187",
+    "https://openalex.org/W1977835193",
+    "https://openalex.org/W1979583539",
+    "https://openalex.org/W1983786736",
+    "https://openalex.org/W1984355279",
+    "https://openalex.org/W1986452344",
+    "https://openalex.org/W1988113868",
+    "https://openalex.org/W1990980558",
+    "https://openalex.org/W1992322615",
+    "https://openalex.org/W1992433314",
+    "https://openalex.org/W1992744669",
+    "https://openalex.org/W1994338024",
+    "https://openalex.org/W1995721365",
+    "https://openalex.org/W1996328891",
+    "https://openalex.org/W1996714358",
+    "https://openalex.org/W1997337411",
+    "https://openalex.org/W1997548126",
+    "https://openalex.org/W1999649023",
+    "https://openalex.org/W2002314058",
+    "https://openalex.org/W2003483232",
+    "https://openalex.org/W2004576346",
+    "https://openalex.org/W2004704125",
+    "https://openalex.org/W2005477454",
+    "https://openalex.org/W2006619603",
+    "https://openalex.org/W2007739397",
+    "https://openalex.org/W2008157835",
+    "https://openalex.org/W2009113178",
+    "https://openalex.org/W2009770437",
+    "https://openalex.org/W2011620338",
+    "https://openalex.org/W2012281587",
+    "https://openalex.org/W2012371206",
+    "https://openalex.org/W2014944622",
+    "https://openalex.org/W2015076196",
+    "https://openalex.org/W2015555517",
+    "https://openalex.org/W2016187149",
+    "https://openalex.org/W2017656020",
+    "https://openalex.org/W2018488045",
+    "https://openalex.org/W2018913979",
+    "https://openalex.org/W2020191227",
+    "https://openalex.org/W2022490769",
+    "https://openalex.org/W2023829956",
+    "https://openalex.org/W2024351077",
+    "https://openalex.org/W2024368456",
+    "https://openalex.org/W2025617882",
+    "https://openalex.org/W2027313579",
+    "https://openalex.org/W2031227788",
+    "https://openalex.org/W2031540326",
+    "https://openalex.org/W2033837921",
+    "https://openalex.org/W2036652101",
+    "https://openalex.org/W2036738818",
+    "https://openalex.org/W2037124948",
+    "https://openalex.org/W2037338622",
+    "https://openalex.org/W2039629033",
+    "https://openalex.org/W2040518779",
+    "https://openalex.org/W2042279182",
+    "https://openalex.org/W2043326387",
+    "https://openalex.org/W2044537605",
+    "https://openalex.org/W2044754442",
+    "https://openalex.org/W2044928313",
+    "https://openalex.org/W2045345523",
+    "https://openalex.org/W2046633367",
+    "https://openalex.org/W2047672958",
+    "https://openalex.org/W2050517694",
+    "https://openalex.org/W2056972503",
+    "https://openalex.org/W2057244545",
+    "https://openalex.org/W2058738343",
+    "https://openalex.org/W2061583500",
+    "https://openalex.org/W2061600289",
+    "https://openalex.org/W2062046273",
+    "https://openalex.org/W2062189119",
+    "https://openalex.org/W2064517867",
+    "https://openalex.org/W2065082257",
+    "https://openalex.org/W2067651430",
+    "https://openalex.org/W2069556893",
+    "https://openalex.org/W2069799520",
+    "https://openalex.org/W2071226957",
+    "https://openalex.org/W2073528135",
+    "https://openalex.org/W2076774753",
+    "https://openalex.org/W2088276883",
+    "https://openalex.org/W2088614104",
+    "https://openalex.org/W2088982663",
+    "https://openalex.org/W2090623954",
+    "https://openalex.org/W2094832470",
+    "https://openalex.org/W2096446536",
+    "https://openalex.org/W2096782516",
+    "https://openalex.org/W2101888660",
+    "https://openalex.org/W2103443185",
+    "https://openalex.org/W2103902275",
+    "https://openalex.org/W2106816187",
+    "https://openalex.org/W2106858590",
+    "https://openalex.org/W2107031757",
+    "https://openalex.org/W2108897328",
+    "https://openalex.org/W2109861317",
+    "https://openalex.org/W2112868206",
+    "https://openalex.org/W2113390049",
+    "https://openalex.org/W2114862369",
+    "https://openalex.org/W2117200377",
+    "https://openalex.org/W2118796101",
+    "https://openalex.org/W2119061952",
+    "https://openalex.org/W2120357670",
+    "https://openalex.org/W2120700180",
+    "https://openalex.org/W2123358705",
+    "https://openalex.org/W2123376091",
+    "https://openalex.org/W2123523473",
+    "https://openalex.org/W2123817056",
+    "https://openalex.org/W2124524195",
+    "https://openalex.org/W2124831657",
+    "https://openalex.org/W2125068113",
+    "https://openalex.org/W2125435699",
+    "https://openalex.org/W2125460170",
+    "https://openalex.org/W2126784370",
+    "https://openalex.org/W2126831721",
+    "https://openalex.org/W2126930838",
+    "https://openalex.org/W2129656608",
+    "https://openalex.org/W2129844115",
+    "https://openalex.org/W2131346371",
+    "https://openalex.org/W2131376805",
+    "https://openalex.org/W2131584527",
+    "https://openalex.org/W2132175441",
+    "https://openalex.org/W2133683614",
+    "https://openalex.org/W2134077691",
+    "https://openalex.org/W2134469114",
+    "https://openalex.org/W2134537068",
+    "https://openalex.org/W2134882159",
+    "https://openalex.org/W2136453049",
+    "https://openalex.org/W2138715619",
+    "https://openalex.org/W2140401578",
+    "https://openalex.org/W2141076134",
+    "https://openalex.org/W2141874699",
+    "https://openalex.org/W2143505359",
+    "https://openalex.org/W2146569853",
+    "https://openalex.org/W2148905283",
+    "https://openalex.org/W2150495553",
+    "https://openalex.org/W2152831629",
+    "https://openalex.org/W2153525033",
+    "https://openalex.org/W2153873230",
+    "https://openalex.org/W2153950939",
+    "https://openalex.org/W2154720372",
+    "https://openalex.org/W2157858098",
+    "https://openalex.org/W2159537095",
+    "https://openalex.org/W2159680570",
+    "https://openalex.org/W2160506388",
+    "https://openalex.org/W2161078751",
+    "https://openalex.org/W2162571494",
+    "https://openalex.org/W2162717534",
+    "https://openalex.org/W2162932673",
+    "https://openalex.org/W2163179304",
+    "https://openalex.org/W2164030952",
+    "https://openalex.org/W2166254025",
+    "https://openalex.org/W2168592337",
+    "https://openalex.org/W2172195574",
+    "https://openalex.org/W2172292046",
+    "https://openalex.org/W2313304565",
+    "https://openalex.org/W2323132578",
+    "https://openalex.org/W2904580421",
+    "https://openalex.org/W2920897010",
+    "https://openalex.org/W2954450010",
+    "https://openalex.org/W3172175068",
+    "https://openalex.org/W4231054364",
+    "https://openalex.org/W4246490679",
+    "https://openalex.org/W4321429508"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W2986926076",
+   "doi": "https://doi.org/10.1027/1864-9335/a000365",
+   "display_name": "The Limits of Ego Depletion",
+   "publication_year": 2019,
+   "type": "article",
+   "cited_by_count": 14,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5000987371",
+      "display_name": "Mario Wenzel",
+      "orcid": "https://orcid.org/0000-0003-2839-9482",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-2839-9482"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I197323543",
+       "display_name": "Johannes Gutenberg University Mainz",
+       "ror": "https://ror.org/023b0x485",
+       "country_code": "DE",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I197323543"
+       ]
+      }
+     ],
+     "countries": [
+      "DE"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Mario Wenzel",
+     "raw_affiliation_strings": [
+      "Institute of Psychology, Johannes Gutenberg \t\t\t\t\tUniversity Mainz, Germany"
+     ],
+     "raw_orcid": "https://orcid.org/0000-0003-2839-9482",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Institute of Psychology, Johannes Gutenberg \t\t\t\t\tUniversity Mainz, Germany",
+       "institution_ids": [
+        "https://openalex.org/I197323543"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5046757517",
+      "display_name": "Marina Lind",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I197323543",
+       "display_name": "Johannes Gutenberg University Mainz",
+       "ror": "https://ror.org/023b0x485",
+       "country_code": "DE",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I197323543"
+       ]
+      }
+     ],
+     "countries": [
+      "DE"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Marina Lind",
+     "raw_affiliation_strings": [
+      "Institute of Psychology, Johannes Gutenberg \t\t\t\t\tUniversity Mainz, Germany"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Institute of Psychology, Johannes Gutenberg \t\t\t\t\tUniversity Mainz, Germany",
+       "institution_ids": [
+        "https://openalex.org/I197323543"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5068308257",
+      "display_name": "Zarah Rowland",
+      "orcid": "https://orcid.org/0000-0002-3902-1488",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-3902-1488"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I197323543",
+       "display_name": "Johannes Gutenberg University Mainz",
+       "ror": "https://ror.org/023b0x485",
+       "country_code": "DE",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I197323543"
+       ]
+      }
+     ],
+     "countries": [
+      "DE"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Zarah Rowland",
+     "raw_affiliation_strings": [
+      "Institute of Psychology, Johannes Gutenberg \t\t\t\t\tUniversity Mainz, Germany"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Institute of Psychology, Johannes Gutenberg \t\t\t\t\tUniversity Mainz, Germany",
+       "institution_ids": [
+        "https://openalex.org/I197323543"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5061956214",
+      "display_name": "Daniela Zahn",
+      "orcid": "https://orcid.org/0000-0002-0477-1369",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-0477-1369"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I197323543",
+       "display_name": "Johannes Gutenberg University Mainz",
+       "ror": "https://ror.org/023b0x485",
+       "country_code": "DE",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I197323543"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I2799476385",
+       "display_name": "Bundesinstitut für Öffentliche Gesundheit",
+       "ror": "https://ror.org/054c9y537",
+       "country_code": "DE",
+       "type": "government",
+       "lineage": [
+        "https://openalex.org/I2799476385",
+        "https://openalex.org/I4210166069"
+       ]
+      }
+     ],
+     "countries": [
+      "DE"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Daniela Zahn",
+     "raw_affiliation_strings": [
+      "Federal Centre for Health Education, Bonn, Germany",
+      "Institute of Psychology, Johannes Gutenberg \t\t\t\t\tUniversity Mainz, Germany",
+      "Institute of Psychology, Johannes Gutenberg \t\t\t\t\tUniversity Mainz, Germany Federal Centre for Health Education, Bonn, \t\t\t\t\t\tGermany"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Federal Centre for Health Education, Bonn, Germany",
+       "institution_ids": [
+        "https://openalex.org/I2799476385"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Institute of Psychology, Johannes Gutenberg \t\t\t\t\tUniversity Mainz, Germany",
+       "institution_ids": [
+        "https://openalex.org/I197323543"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Institute of Psychology, Johannes Gutenberg \t\t\t\t\tUniversity Mainz, Germany Federal Centre for Health Education, Bonn, \t\t\t\t\t\tGermany",
+       "institution_ids": [
+        "https://openalex.org/I197323543"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5013559022",
+      "display_name": "Thomas Kubiak",
+      "orcid": "https://orcid.org/0000-0003-0095-9265",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-0095-9265"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I197323543",
+       "display_name": "Johannes Gutenberg University Mainz",
+       "ror": "https://ror.org/023b0x485",
+       "country_code": "DE",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I197323543"
+       ]
+      }
+     ],
+     "countries": [
+      "DE"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Thomas Kubiak",
+     "raw_affiliation_strings": [
+      "Institute of Psychology, Johannes Gutenberg \t\t\t\t\tUniversity Mainz, Germany"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Institute of Psychology, Johannes Gutenberg \t\t\t\t\tUniversity Mainz, Germany",
+       "institution_ids": [
+        "https://openalex.org/I197323543"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1027/1864-9335/a000365",
+    "doi": "https://doi.org/10.1027/1864-9335/a000365",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1027/1864-9335/a000365",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S114339905",
+     "display_name": "Social Psychology",
+     "issn_l": "1864-9335",
+     "issn": [
+      "1864-9335",
+      "2151-2590"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "cwts-core",
+      "dongbi-c",
+      "erih-plus",
+      "jufo-1",
+      "norway-1",
+      "poland-140",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310319871",
+     "host_organization_name": "Hogrefe Verlag",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310319871"
+     ],
+     "host_organization_lineage_names": [
+      "Hogrefe Verlag"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Social Psychology",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W11710114",
+    "https://openalex.org/W1488544311",
+    "https://openalex.org/W1546743508",
+    "https://openalex.org/W1568266824",
+    "https://openalex.org/W1602136620",
+    "https://openalex.org/W1918210014",
+    "https://openalex.org/W1955927543",
+    "https://openalex.org/W1964342261",
+    "https://openalex.org/W1973297629",
+    "https://openalex.org/W1980393047",
+    "https://openalex.org/W1981788920",
+    "https://openalex.org/W1989768409",
+    "https://openalex.org/W1996398934",
+    "https://openalex.org/W1997176614",
+    "https://openalex.org/W2000141755",
+    "https://openalex.org/W2000625275",
+    "https://openalex.org/W2002132341",
+    "https://openalex.org/W2006393891",
+    "https://openalex.org/W2007393966",
+    "https://openalex.org/W2017800711",
+    "https://openalex.org/W2039003275",
+    "https://openalex.org/W2045565916",
+    "https://openalex.org/W2050316645",
+    "https://openalex.org/W2056104166",
+    "https://openalex.org/W2060763381",
+    "https://openalex.org/W2071666535",
+    "https://openalex.org/W2084546532",
+    "https://openalex.org/W2102309966",
+    "https://openalex.org/W2108897328",
+    "https://openalex.org/W2109861317",
+    "https://openalex.org/W2110023610",
+    "https://openalex.org/W2110476643",
+    "https://openalex.org/W2118108696",
+    "https://openalex.org/W2123817056",
+    "https://openalex.org/W2126831721",
+    "https://openalex.org/W2133084664",
+    "https://openalex.org/W2136989120",
+    "https://openalex.org/W2141309263",
+    "https://openalex.org/W2171849072",
+    "https://openalex.org/W2186516452",
+    "https://openalex.org/W2270668874",
+    "https://openalex.org/W2289744309",
+    "https://openalex.org/W2345613236",
+    "https://openalex.org/W2410246571",
+    "https://openalex.org/W2484069400",
+    "https://openalex.org/W2484225033",
+    "https://openalex.org/W2499154041",
+    "https://openalex.org/W2506924923",
+    "https://openalex.org/W2529112977",
+    "https://openalex.org/W2570897177",
+    "https://openalex.org/W2591641564",
+    "https://openalex.org/W2610765860",
+    "https://openalex.org/W2622390736",
+    "https://openalex.org/W2760799729",
+    "https://openalex.org/W3124690569",
+    "https://openalex.org/W3125052208",
+    "https://openalex.org/W4232068434",
+    "https://openalex.org/W4247658282",
+    "https://openalex.org/W4300870773"
+   ]
+  }
+ ],
+ "group_by": []
+}

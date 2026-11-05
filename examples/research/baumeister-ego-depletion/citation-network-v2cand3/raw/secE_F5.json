@@ -1,0 +1,569 @@
+{
+ "meta": {
+  "notice": "No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address. The mailto parameter doesn't raise this limit. Get a free key with its own $1/day at https://openalex.org/settings/api and add api_key=YOUR_KEY to your requests. An AI agent can get one for its user in one call: POST https://api.openalex.org/api-keys with {\"email\": \"<your user's email>\"}; we email them a link, and the key works once they click it. Docs for agents: https://help.openalex.org/llms.txt",
+  "count": 139,
+  "db_response_time_ms": 520,
+  "page": 1,
+  "per_page": 3,
+  "groups_count": null,
+  "x_query": {
+   "oql": "get articles through 1998-04-30 with (mental effort) in the title, most cited first",
+   "x_new_oql": "get articles through 1998-04-30 with (mental effort) in the title, most cited first",
+   "oqo": {
+    "get_rows": "works",
+    "filter_rows": [
+     {
+      "column_id": "display_name.search",
+      "value": "mental effort",
+      "operator": "has"
+     },
+     {
+      "column_id": "to_publication_date",
+      "value": "1998-04-30"
+     },
+     {
+      "column_id": "type",
+      "value": "article"
+     }
+    ],
+    "sort_by": [
+     {
+      "column_id": "cited_by_count",
+      "direction": "desc"
+     }
+    ]
+   },
+   "url": "/works?filter=display_name.search:mental effort,to_publication_date:1998-04-30,type:article&sort=cited_by_count:desc&per_page=3",
+   "order": "most cited first",
+   "order_default": false
+  },
+  "cost_usd": 0.001
+ },
+ "results": [
+  {
+   "id": "https://openalex.org/W2074791822",
+   "doi": "https://doi.org/10.1037//0022-0663.76.4.647",
+   "display_name": "Television is \"easy\" and print is \"tough\": The differential investment of mental effort in learning as a function of perceptions and attributions.",
+   "publication_year": 1984,
+   "type": "article",
+   "cited_by_count": 1015,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5113615982",
+      "display_name": "Gavriel Salomon",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I16391192",
+       "display_name": "Tel Aviv University",
+       "ror": "https://ror.org/04mhzgx49",
+       "country_code": "IL",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I16391192"
+       ]
+      }
+     ],
+     "countries": [
+      "IL"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Gavriel Salomon",
+     "raw_affiliation_strings": [
+      "Tel-Aviv U, School of Education, Ramat-Aviv, Israel"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Tel-Aviv U, School of Education, Ramat-Aviv, Israel",
+       "institution_ids": [
+        "https://openalex.org/I16391192"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1037//0022-0663.76.4.647",
+    "doi": "https://doi.org/10.1037//0022-0663.76.4.647",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1037//0022-0663.76.4.647",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S61703936",
+     "display_name": "Journal of Educational Psychology",
+     "issn_l": "0022-0663",
+     "issn": [
+      "0022-0663",
+      "1939-2176"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "cwts-core",
+      "dongbi-b",
+      "erih-plus",
+      "jufo-3",
+      "ki-jl-1",
+      "norway-2",
+      "poland-140",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320262",
+     "host_organization_name": "American Psychological Association",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320262"
+     ],
+     "host_organization_lineage_names": [
+      "American Psychological Association"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Journal of Educational Psychology",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W186765568",
+    "https://openalex.org/W578879011",
+    "https://openalex.org/W1498488428",
+    "https://openalex.org/W1508363014",
+    "https://openalex.org/W1529266707",
+    "https://openalex.org/W1574824596",
+    "https://openalex.org/W1966905091",
+    "https://openalex.org/W1970987546",
+    "https://openalex.org/W1982210139",
+    "https://openalex.org/W1987705045",
+    "https://openalex.org/W1989304657",
+    "https://openalex.org/W1989314580",
+    "https://openalex.org/W1990451873",
+    "https://openalex.org/W2000233057",
+    "https://openalex.org/W2005852998",
+    "https://openalex.org/W2009228691",
+    "https://openalex.org/W2013068849",
+    "https://openalex.org/W2015913045",
+    "https://openalex.org/W2016441627",
+    "https://openalex.org/W2041622415",
+    "https://openalex.org/W2045385178",
+    "https://openalex.org/W2045597501",
+    "https://openalex.org/W2063279474",
+    "https://openalex.org/W2065778132",
+    "https://openalex.org/W2070163848",
+    "https://openalex.org/W2073679939",
+    "https://openalex.org/W2087275828",
+    "https://openalex.org/W2089572111",
+    "https://openalex.org/W2089757604",
+    "https://openalex.org/W2092723856",
+    "https://openalex.org/W2095289782",
+    "https://openalex.org/W2099353414",
+    "https://openalex.org/W2129395987",
+    "https://openalex.org/W2134049139",
+    "https://openalex.org/W3036097324"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W2098813016",
+   "doi": "https://doi.org/10.1177/001872089303500412",
+   "display_name": "The Efficiency of Instructional Conditions: An Approach to Combine Mental Effort and Performance Measures",
+   "publication_year": 1993,
+   "type": "article",
+   "cited_by_count": 925,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5028053852",
+      "display_name": "FRED G. W. C. PAAS",
+      "orcid": "https://orcid.org/0000-0002-1647-5305",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-1647-5305"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I94624287",
+       "display_name": "University of Twente",
+       "ror": "https://ror.org/006hf6230",
+       "country_code": "NL",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I94624287"
+       ]
+      }
+     ],
+     "countries": [
+      "NL"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Fred G. W. C. Paas",
+     "raw_affiliation_strings": [
+      "University of Twente, Enschede, Netherlands"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "University of Twente, Enschede, Netherlands",
+       "institution_ids": [
+        "https://openalex.org/I94624287"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5023940180",
+      "display_name": "Jeroen J. G. van Merriënboer",
+      "orcid": "https://orcid.org/0000-0002-5868-7031",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-5868-7031"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I94624287",
+       "display_name": "University of Twente",
+       "ror": "https://ror.org/006hf6230",
+       "country_code": "NL",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I94624287"
+       ]
+      }
+     ],
+     "countries": [
+      "NL"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Jeroen J. G. Van Merriënboer",
+     "raw_affiliation_strings": [
+      "University of Twente, Enschede, Netherlands"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "University of Twente, Enschede, Netherlands",
+       "institution_ids": [
+        "https://openalex.org/I94624287"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1177/001872089303500412",
+    "doi": "https://doi.org/10.1177/001872089303500412",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1177/001872089303500412",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S83386566",
+     "display_name": "Human Factors The Journal of the Human Factors and Ergonomics Society",
+     "issn_l": "0018-7208",
+     "issn": [
+      "0018-7208",
+      "1547-8181"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "anvur-scientific",
+      "cwts-core",
+      "dongbi-a",
+      "erih-plus",
+      "jufo-2",
+      "ki-jl-1",
+      "medline",
+      "norway-1",
+      "poland-100",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320017",
+     "host_organization_name": "SAGE Publishing",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320017"
+     ],
+     "host_organization_lineage_names": [
+      "SAGE Publishing"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Human Factors: The Journal of the Human Factors and Ergonomics Society",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W1037489097",
+    "https://openalex.org/W1888386172",
+    "https://openalex.org/W1942906747",
+    "https://openalex.org/W1967181315",
+    "https://openalex.org/W1976109055",
+    "https://openalex.org/W1983020879",
+    "https://openalex.org/W2081811286",
+    "https://openalex.org/W2116669434",
+    "https://openalex.org/W2732760206",
+    "https://openalex.org/W4254808929"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W2129275476",
+   "doi": "https://doi.org/10.1016/s0166-4328(05)80033-6",
+   "display_name": "Vegetative response during imagined movement is proportional to mental effort",
+   "publication_year": 1991,
+   "type": "article",
+   "cited_by_count": 442,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5054358759",
+      "display_name": "Jean Decety A",
+      "orcid": "https://orcid.org/0000-0002-6165-9891",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-6165-9891"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I154526488",
+       "display_name": "Inserm",
+       "ror": "https://ror.org/02vjkv261",
+       "country_code": "FR",
+       "type": "government",
+       "lineage": [
+        "https://openalex.org/I154526488"
+       ]
+      }
+     ],
+     "countries": [
+      "FR"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "J. Decety",
+     "raw_affiliation_strings": [
+      "Vision et Motricité, INSERM U94, Bron, France",
+      "Vision et Motricite, INSERM U94, Bron, France"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Vision et Motricité, INSERM U94, Bron, France",
+       "institution_ids": [
+        "https://openalex.org/I154526488"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Vision et Motricite, INSERM U94, Bron, France",
+       "institution_ids": [
+        "https://openalex.org/I154526488"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5110464792",
+      "display_name": "Marc Jeannerod",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I154526488",
+       "display_name": "Inserm",
+       "ror": "https://ror.org/02vjkv261",
+       "country_code": "FR",
+       "type": "government",
+       "lineage": [
+        "https://openalex.org/I154526488"
+       ]
+      }
+     ],
+     "countries": [
+      "FR"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "M. Jeannerod",
+     "raw_affiliation_strings": [
+      "Vision et Motricité, INSERM U94, Bron (France)",
+      "Vision et Motricite, INSERM U94, Bron, France"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Vision et Motricité, INSERM U94, Bron (France)",
+       "institution_ids": [
+        "https://openalex.org/I154526488"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Vision et Motricite, INSERM U94, Bron, France",
+       "institution_ids": [
+        "https://openalex.org/I154526488"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5110229287",
+      "display_name": "M. Germain",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I1294671590",
+       "display_name": "Centre National de la Recherche Scientifique",
+       "ror": "https://ror.org/02feahw73",
+       "country_code": "FR",
+       "type": "government",
+       "lineage": [
+        "https://openalex.org/I1294671590"
+       ]
+      }
+     ],
+     "countries": [
+      "FR"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "M. Germain",
+     "raw_affiliation_strings": [
+      "Unité Associée 621, CNRS Lyon (France)"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Unité Associée 621, CNRS Lyon (France)",
+       "institution_ids": [
+        "https://openalex.org/I1294671590"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5025331533",
+      "display_name": "J. Pastene",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I1294671590",
+       "display_name": "Centre National de la Recherche Scientifique",
+       "ror": "https://ror.org/02feahw73",
+       "country_code": "FR",
+       "type": "government",
+       "lineage": [
+        "https://openalex.org/I1294671590"
+       ]
+      }
+     ],
+     "countries": [
+      "FR"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "J. Pastene",
+     "raw_affiliation_strings": [
+      "Unité Associée 621, CNRS Lyon (France)"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Unité Associée 621, CNRS Lyon (France)",
+       "institution_ids": [
+        "https://openalex.org/I1294671590"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1016/s0166-4328(05)80033-6",
+    "doi": "https://doi.org/10.1016/s0166-4328(05)80033-6",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1016/s0166-4328(05)80033-6",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S81474683",
+     "display_name": "Behavioural Brain Research",
+     "issn_l": "0166-4328",
+     "issn": [
+      "0166-4328",
+      "1872-7549"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "anvur-class-a",
+      "anvur-scientific",
+      "cwts-core",
+      "dongbi-d",
+      "doyens",
+      "erih-plus",
+      "jufo-1",
+      "ki-jl-1",
+      "medline",
+      "norway-1",
+      "poland-100",
+      "russia-white-list-2",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320990",
+     "host_organization_name": "Elsevier BV",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320990"
+     ],
+     "host_organization_lineage_names": [
+      "Elsevier BV"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Behavioural Brain Research",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W1899425877",
+    "https://openalex.org/W1965991612",
+    "https://openalex.org/W1980367903",
+    "https://openalex.org/W2025405929",
+    "https://openalex.org/W2049434834",
+    "https://openalex.org/W2057476408",
+    "https://openalex.org/W2057808550",
+    "https://openalex.org/W2059952714",
+    "https://openalex.org/W2060655597",
+    "https://openalex.org/W2117101743",
+    "https://openalex.org/W2127309574",
+    "https://openalex.org/W2162126348",
+    "https://openalex.org/W2324493891"
+   ]
+  }
+ ],
+ "group_by": []
+}
