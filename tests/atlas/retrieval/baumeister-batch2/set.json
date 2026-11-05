@@ -1,0 +1,137 @@
+{
+ "schema": "atlas-retrieval-set/0.1",
+ "id": "baumeister-1998-batch2",
+ "description": "Batch 2 (Baumeister et al. 1998), citation-network v2-candidate.3, Grok Bot run merged in Provenance-Atlas #15. Fourteen OpenAlex page-1 queries the run executed and saved: ADJUDICATION-1 Q1-Q7, Section E F1-F5, RECEPTION-1 and RECENT-1. Specs were reconstructed after the run; see each spec's reconstructed_from.",
+ "items": [
+  {
+   "spec": "specs/adj1-Q1.json",
+   "response": "examples/research/baumeister-ego-depletion/citation-network-v2cand3/raw/adj1_Q1.json",
+   "executor_log": "examples/research/baumeister-ego-depletion/logs/retrieval_log.jsonl",
+   "log_file_key": "raw/adj1_Q1.json"
+  },
+  {
+   "spec": "specs/adj1-Q2.json",
+   "response": "examples/research/baumeister-ego-depletion/citation-network-v2cand3/raw/adj1_Q2.json",
+   "executor_log": "examples/research/baumeister-ego-depletion/logs/retrieval_log.jsonl",
+   "log_file_key": "raw/adj1_Q2.json"
+  },
+  {
+   "spec": "specs/adj1-Q3.json",
+   "response": "examples/research/baumeister-ego-depletion/citation-network-v2cand3/raw/adj1_Q3.json",
+   "executor_log": "examples/research/baumeister-ego-depletion/logs/retrieval_log.jsonl",
+   "log_file_key": "raw/adj1_Q3.json"
+  },
+  {
+   "spec": "specs/adj1-Q4.json",
+   "response": "examples/research/baumeister-ego-depletion/citation-network-v2cand3/raw/adj1_Q4.json",
+   "executor_log": "examples/research/baumeister-ego-depletion/logs/retrieval_log.jsonl",
+   "log_file_key": "raw/adj1_Q4.json"
+  },
+  {
+   "spec": "specs/adj1-Q5.json",
+   "response": "examples/research/baumeister-ego-depletion/citation-network-v2cand3/raw/adj1_Q5.json",
+   "executor_log": "examples/research/baumeister-ego-depletion/logs/retrieval_log.jsonl",
+   "log_file_key": "raw/adj1_Q5.json"
+  },
+  {
+   "spec": "specs/adj1-Q6.json",
+   "response": "examples/research/baumeister-ego-depletion/citation-network-v2cand3/raw/adj1_Q6.json",
+   "executor_log": "examples/research/baumeister-ego-depletion/logs/retrieval_log.jsonl",
+   "log_file_key": "raw/adj1_Q6.json"
+  },
+  {
+   "spec": "specs/adj1-Q7.json",
+   "response": "examples/research/baumeister-ego-depletion/citation-network-v2cand3/raw/adj1_Q7.json",
+   "executor_log": "examples/research/baumeister-ego-depletion/logs/retrieval_log.jsonl",
+   "log_file_key": "raw/adj1_Q7.json"
+  },
+  {
+   "spec": "specs/secE-F1.json",
+   "response": "examples/research/baumeister-ego-depletion/citation-network-v2cand3/raw/secE_F1.json",
+   "executor_log": "examples/research/baumeister-ego-depletion/logs/retrieval_log.jsonl",
+   "log_file_key": "raw/secE_F1.json"
+  },
+  {
+   "spec": "specs/secE-F2.json",
+   "response": "examples/research/baumeister-ego-depletion/citation-network-v2cand3/raw/secE_F2.json",
+   "executor_log": "examples/research/baumeister-ego-depletion/logs/retrieval_log.jsonl",
+   "log_file_key": "raw/secE_F2.json"
+  },
+  {
+   "spec": "specs/secE-F3.json",
+   "response": "examples/research/baumeister-ego-depletion/citation-network-v2cand3/raw/secE_F3.json",
+   "executor_log": "examples/research/baumeister-ego-depletion/logs/retrieval_log.jsonl",
+   "log_file_key": "raw/secE_F3.json"
+  },
+  {
+   "spec": "specs/secE-F4.json",
+   "response": "examples/research/baumeister-ego-depletion/citation-network-v2cand3/raw/secE_F4.json",
+   "executor_log": "examples/research/baumeister-ego-depletion/logs/retrieval_log.jsonl",
+   "log_file_key": "raw/secE_F4.json"
+  },
+  {
+   "spec": "specs/secE-F5.json",
+   "response": "examples/research/baumeister-ego-depletion/citation-network-v2cand3/raw/secE_F5.json",
+   "executor_log": "examples/research/baumeister-ego-depletion/logs/retrieval_log.jsonl",
+   "log_file_key": "raw/secE_F5.json"
+  },
+  {
+   "spec": "specs/reception1-top50.json",
+   "response": "examples/research/baumeister-ego-depletion/citation-network-v2cand3/raw/reception1_top50.json",
+   "executor_log": "examples/research/baumeister-ego-depletion/logs/retrieval_log.jsonl",
+   "log_file_key": "raw/reception1_top50.json"
+  },
+  {
+   "spec": "specs/recent1-top25.json",
+   "response": "examples/research/baumeister-ego-depletion/citation-network-v2cand3/raw/recent1_top25.json",
+   "executor_log": "examples/research/baumeister-ego-depletion/logs/retrieval_log.jsonl",
+   "log_file_key": "raw/recent1_top25.json"
+  }
+ ],
+ "sample_checks": [
+  {
+   "name": "RECEPTION-1 inspection sample",
+   "spec_id": "baumeister-1998-batch2/reception1-top50",
+   "seed": 20261105,
+   "population": 50,
+   "k": 12,
+   "declared": {
+    "path": "examples/research/baumeister-ego-depletion/citation-network-v2cand3/lock/SAMPLES_draw.txt",
+    "sha256": "cddd163f3db599c0ab84b4589764ee2c8f247a09bc8887479803511833df5a2f",
+    "positions": [
+     7,
+     9,
+     10,
+     11,
+     20,
+     27,
+     28,
+     39,
+     40,
+     41,
+     42,
+     44
+    ],
+    "ids": [
+     "W1968689002",
+     "W2108897328",
+     "W2022472850",
+     "W2093761921",
+     "W2058490785",
+     "W1976788357",
+     "W2100482303",
+     "W3122622199",
+     "W2105985103",
+     "W2146569853",
+     "W2122634808",
+     "W2081900501"
+    ]
+   }
+  }
+ ],
+ "outputs": {
+  "saved_records": "saved-records.jsonl",
+  "samples": "samples.json",
+  "report": "REPORT.txt"
+ }
+}

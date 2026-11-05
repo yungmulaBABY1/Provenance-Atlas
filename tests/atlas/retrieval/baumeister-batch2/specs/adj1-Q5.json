@@ -1,0 +1,46 @@
+{
+ "schema": "atlas-retrieval-spec/0.1",
+ "id": "baumeister-1998-batch2/adj1-Q5",
+ "provider": "openalex",
+ "endpoint": "https://api.openalex.org/works",
+ "params": [
+  [
+   "filter",
+   "title_and_abstract.search:(\"ego depletion\" OR willpower) AND (\"implicit theories\" OR \"lay theories\" OR beliefs),from_publication_date:1998-01-01,to_publication_date:2026-11-05,type:article|preprint|book-chapter|review"
+  ],
+  [
+   "per-page",
+   "10"
+  ],
+  [
+   "select",
+   "id,doi,display_name,publication_year,type,cited_by_count,authorships,primary_location,referenced_works"
+  ]
+ ],
+ "pages": "first-only",
+ "provenance": "reconstructed-after-run",
+ "reconstructed_from": {
+  "executor_log": "examples/research/baumeister-ego-depletion/logs/retrieval_log.jsonl",
+  "line": 45,
+  "method": "parameters of the last successful logged request, mailto removed; declared terms copied from the declaration by hand (Claude, 2026-11-05)"
+ },
+ "declared": {
+  "path": "examples/research/baumeister-ego-depletion/citation-network-v2cand3/lock/ADJUDICATION-1_search_record.md",
+  "sha256": "d1e398eacd9045935a0a110659281f7c44970e6d9d4e46ff44d1b5fef938d7f7",
+  "kind": "pre-run-lock",
+  "locked_at": "2026-11-05T11:28:23Z",
+  "locked_at_source": "examples/research/baumeister-ego-depletion/citation-network-v2cand3/lock/ADJUDICATION-1_lock.txt (executor-written)",
+  "requires": [
+   "title_and_abstract.search",
+   "(\"ego depletion\" OR willpower) AND (\"implicit theories\" OR \"lay theories\" OR beliefs)",
+   "from_publication_date:1998-01-01",
+   "to_publication_date:2026-11-05",
+   "type:article|preprint|book-chapter|review",
+   "per-page=10",
+   "select=id,doi,display_name,publication_year,type,cited_by_count,authorships,primary_location,referenced_works"
+  ]
+ },
+ "notes": [
+  "Declared ranking is OpenAlex relevance, 'the default for a search filter'. The request has no sort parameter and relevance_score was not selected, so the ranking actually applied is not checked here."
+ ]
+}

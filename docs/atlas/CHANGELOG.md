@@ -1,5 +1,26 @@
 # Atlas adapter changelog
 
+## Unreleased — locked queries 0.1.0 (`atlas.retrieval`, X1)
+
+- New package `atlas/retrieval/` (schemas `atlas-retrieval-spec/0.1`,
+  `atlas-retrieval-record/0.1`, `atlas-retrieval-set/0.1`, `atlas-retrieval-drift/0.1`).
+  It records an audit's locked literature searches by code. See
+  [retrieval.md](retrieval.md).
+  - Saved mode checks the declaration, the executor's logged request, the
+    executor's logged file hash and the committed response against each other.
+  - Live mode records every attempt and retries only on 429 and 5xx.
+  - The response digest follows the Provenance #14 SEARCH_DIGESTS convention.
+  - Credentials are never recorded.
+- First set: the fourteen OpenAlex page-1 queries of Batch 2 (Baumeister 1998),
+  with specs reconstructed after the run.
+  - All 14 are consistent.
+  - One query (secE-F2) was re-executed after a success.
+  - The RECEPTION-1 sample reproduces.
+- CI step `Locked-query records are current` (offline). Manual workflow
+  `retrieval-live-replay.yml`, which needs network and never runs on push.
+- 29 new tests. The live replay has not been run: Claude's workspace is denied
+  egress to api.openalex.org.
+
 ## Unreleased — audit page (`atlas.view`, kind `audit`)
 
 - New page `docs/atlas/views/ajr2001/`: a paper page for Grok's AJR 2001

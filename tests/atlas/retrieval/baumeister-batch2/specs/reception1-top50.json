@@ -1,0 +1,45 @@
+{
+ "schema": "atlas-retrieval-spec/0.1",
+ "id": "baumeister-1998-batch2/reception1-top50",
+ "provider": "openalex",
+ "endpoint": "https://api.openalex.org/works",
+ "params": [
+  [
+   "filter",
+   "cites:W2123817056"
+  ],
+  [
+   "sort",
+   "cited_by_count:desc"
+  ],
+  [
+   "per-page",
+   "50"
+  ],
+  [
+   "select",
+   "id,doi,display_name,publication_year,type,cited_by_count,authorships,primary_location,referenced_works"
+  ]
+ ],
+ "pages": "first-only",
+ "provenance": "reconstructed-after-run",
+ "reconstructed_from": {
+  "executor_log": "examples/research/baumeister-ego-depletion/logs/retrieval_log.jsonl",
+  "line": 53,
+  "method": "parameters of the last successful logged request, mailto removed; declared terms copied from the declaration by hand (Claude, 2026-11-05)"
+ },
+ "declared": {
+  "path": "examples/research/baumeister-ego-depletion/citation-network-v2cand3/02c_citation_network_v2cand3.md",
+  "sha256": "d117eb0ae123d074b3c510224bffa0be4b9436260671e0ebd675cb342a7f3a59",
+  "kind": "run-output",
+  "requires": [
+   "filter=cites:W2123817056",
+   "sort=cited_by_count:desc",
+   "per-page=50"
+  ],
+  "response_sha256": "dc54ce7c6ef2fb6440b0a4bf9ac0b54acd48cc57b823c8f6c0160cd602916a25"
+ },
+ "notes": [
+  "Declared in the run output (02c CORPUS SELECTION RULE), not in a pre-run lock."
+ ]
+}
