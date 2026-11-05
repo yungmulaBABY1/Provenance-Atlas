@@ -1,5 +1,29 @@
 # Atlas adapter changelog
 
+## Unreleased — challenges 0.1.0 (`atlas.challenge`, M1 Increment C part 2)
+
+- New package `atlas/challenge/` (schema `atlas-challenge/0.1`, artifacts
+  `atlas-challenge-artifact/0.1`). It records attributed decisions on the review items
+  a checker leaves open. See [challenge.md](challenge.md).
+  - It content-replays the import receipt.
+  - It re-runs the vendored checker on the run's output bytes.
+  - Every item has a stated challenge state.
+  - Challenges bind to the exact item and only append.
+- The run's producer and the declared code author cannot record a decision.
+- A changed target detaches a challenge but keeps it, and disagreeing challenges are
+  all kept.
+- AJR 2001: three items (`SOURCE_LOCK_TRUTH`, `DIRECT_ADJUDICATION_SUBSTANCE`,
+  `NESTING_SUBSTANCE`). A reviewer packet is in `challenge-packets/`. Two model
+  reviewers answered it, ChatGPT/Codex and ChatGPT (GPT-6), and both answers are
+  transcribed verbatim:
+  - item 1: `CANNOT_DETERMINE` / `CONDITION_MET_WITH_QUALIFICATION` (they disagree);
+  - item 2: `CONDITION_MET_WITH_QUALIFICATION` from both;
+  - item 3: `CONDITION_NOT_MET` from both.
+  0 of 3 items have a decision by a person.
+- Evidence may be `EXTERNAL` (kept as cited, not resolved), and file evidence may carry a note. An artifact may name a
+  pinned `transcribed_from` source, whose text fields are then checked verbatim.
+- 26 new tests. CI adds challenge replay.
+
 ## Unreleased — map links 0.1.0 (`atlas.maplink`, M1 Increment E)
 
 - New package `atlas/maplink/` (schema `atlas-maplink/0.1`). It links an imported

@@ -96,6 +96,18 @@ jobs:
             count=$((count + 1))
           done
           test "$count" -gt 0
+      # Challenge receipts (atlas.challenge) content-replay the import receipt they pin,
+      # re-run the vendored checker and re-read every pinned challenge artifact.
+      - name: Content replay of challenge receipts
+        run: |
+          set -euo pipefail
+          count=0
+          for dir in tests/atlas/challenge/*/receipt/; do
+            echo "challenge replay --level content: $dir"
+            python -m atlas.challenge replay "${dir}manifest.json" "${dir}records.jsonl" --level content
+            count=$((count + 1))
+          done
+          test "$count" -gt 0
       # Every committed page (docs/atlas/views/views.json) must be a fresh render of verified records.
       - name: Reader views are current
         run: python -m atlas.view check-all

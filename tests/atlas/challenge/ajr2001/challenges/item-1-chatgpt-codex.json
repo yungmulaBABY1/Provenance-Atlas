@@ -1,0 +1,218 @@
+{
+ "schema": "atlas-challenge-artifact/0.1",
+ "challenge_id": "ajr2001-item-1-chatgpt-codex",
+ "target": {
+  "kind": "CHECKER_REVIEW_ITEM",
+  "audit_run_id": "urn:atlas:import:ajr2001-citation-network:1",
+  "output_sha256": "884887fe5a7b98d77921fbc31b488c7c9b7dc8406eb60340e4d5881436f3016c",
+  "checker_sha256": "f66650fe086455fa5dd80afadf1ec78685ee212825923d670d25b24e62d79f27",
+  "item_number": 1,
+  "item_code": "SOURCE_LOCK_TRUTH",
+  "item_text_sha256": "7f4b6ce4e535fe87e7b6c5c416b1c76b2b10769aacbc94477f1ab7d2a62baad9"
+ },
+ "challenger": {
+  "identity": "ChatGPT/Codex",
+  "kind": "MODEL_AGENT",
+  "context": "This review session, as stated by the reviewer. Run separately and supplied by the repository owner on 4 November 2026. Reviewed the repository at commit 9f371b0."
+ },
+ "relation_to_run": {
+  "producer": "NO",
+  "atlas_code_author": "NO",
+  "basis": "DECLARED_BY_CHALLENGER: Reviewer: ChatGPT/Codex, MODEL_AGENT, this review session. I am neither Grok Bot, the run’s producer, nor the Claude session that authored atlas.challenge. Independence is declared, not independently verified."
+ },
+ "recorded_by": "Claude (Anthropic), Claude Code session 017YUqUaM2ka4XtLriA1p3fD, which is the code author. It transcribed the reviewer's plain-language answer as supplied by the repository owner, pinned in transcribed_from. Text fields are copied verbatim, line by line. The recorder arranged the parts, the outcome per part (each part's first line is the reviewer's own labelled line) and the evidence list, using transcribe_chatgpt_codex.py. performed_at is the date the owner supplied the answer (US/Pacific); the reviewer stated no date. The reviewer states that one exposure declaration applies to all three records.",
+ "performed_at": "2026-11-04",
+ "exposure": {
+  "seen_before_deciding": [
+   "I read your packet first, followed by PR #10’s description, the audit output, the specified lock files and excerpts, retrieval records, commit information, saved API responses, and relevant instrument rules. Earlier Grok-produced audit material also appeared in the retrieved commit diffs. I then inspected the relevant methods, results, and limitations in the Sachs and Glaeser working papers.",
+   "Repository evidence was inspected at commit ⁠￼9f371b0⁠￼. I independently computed the audit’s SHA-256 and confirmed the packet’s value:",
+   "884887fe5a7b98d77921fbc31b488c7c9b7dc8406eb60340e4d5881436f3016c"
+  ],
+  "prior_position": "I did not read Claude’s verification note or either of the two separate chat review notes. Their contents were not supplied in this conversation. No prior substantive judgment on these items is available in my current context. Whether an earlier ChatGPT session authored the “Acemoglu audit v2 – review” note is UNKNOWN; this should not be recorded as verified absence of a prior position."
+ },
+ "outcome": "CANNOT_DETERMINE",
+ "parts": [
+  {
+   "part": "1a",
+   "outcome": "CANNOT_DETERMINE",
+   "reasons": [
+    "1a. Did the lock precede citation inspection? — CANNOT_DETERMINE.",
+    "The recorded sequence is consistent with that claim:",
+    "Event\tRecorded UTC time",
+    "Section E lock\t11:42:25",
+    "Five adjacent-field queries\t11:42:31–11:42:33",
+    "Top-50 and recent-25 citing-work retrievals\t11:42:48",
+    "Commit adding lock files and results\t12:11:52",
+    "However, the timestamp file and retrieval log are producer-controlled records. The matching hash establishes which bytes were preserved; it does not independently establish when those bytes were written.",
+    "Commit b108bab, dated 11:19:16, contains the earlier stages but not this Section E lock. Commit 693175d introduces the lock and results together after the recorded retrievals. Consequently, the inspected Git history supplies no pre-retrieval commitment to this particular lock.",
+    "The exposure disclosure also limits the claim: the executor had already read AJR’s bibliography, Albouy, and AJR’s reply. The defensible interpretation concerns this stage’s OpenAlex citing-work inspection, not absence of all prior exposure to citing literature."
+   ]
+  },
+  {
+   "part": "1b",
+   "outcome": "CONDITION_MET_WITH_QUALIFICATION",
+   "reasons": [
+    "1b. Do the query and locked results agree, and are they reproducible? — CONDITION_MET_WITH_QUALIFICATION.",
+    "Yes, for the saved retrieval snapshot. All five logged requests match the declared terms, publication cutoff, article filter, descending citation-count ordering, and two-results-per-field rule. Their ten returned IDs match locked_sources.json. The five response hashes match the retrieval log; the preregistration and locked-list hashes also match the audit.",
+    "A fresh live query is not guaranteed to return the same ten works. Citation counts, indexing, record types, and search behavior can change; no tie-break rule is specified. The preserved responses and explicit IDs fix this run’s exemplars. The query alone does not fix future results."
+   ]
+  }
+ ],
+ "reasons": [
+  "Overall outcome: CANNOT_DETERMINE.",
+  "1a. Did the lock precede citation inspection? — CANNOT_DETERMINE.",
+  "The recorded sequence is consistent with that claim:",
+  "Event\tRecorded UTC time",
+  "Section E lock\t11:42:25",
+  "Five adjacent-field queries\t11:42:31–11:42:33",
+  "Top-50 and recent-25 citing-work retrievals\t11:42:48",
+  "Commit adding lock files and results\t12:11:52",
+  "However, the timestamp file and retrieval log are producer-controlled records. The matching hash establishes which bytes were preserved; it does not independently establish when those bytes were written.",
+  "Commit b108bab, dated 11:19:16, contains the earlier stages but not this Section E lock. Commit 693175d introduces the lock and results together after the recorded retrievals. Consequently, the inspected Git history supplies no pre-retrieval commitment to this particular lock.",
+  "The exposure disclosure also limits the claim: the executor had already read AJR’s bibliography, Albouy, and AJR’s reply. The defensible interpretation concerns this stage’s OpenAlex citing-work inspection, not absence of all prior exposure to citing literature.",
+  "1b. Do the query and locked results agree, and are they reproducible? — CONDITION_MET_WITH_QUALIFICATION.",
+  "Yes, for the saved retrieval snapshot. All five logged requests match the declared terms, publication cutoff, article filter, descending citation-count ordering, and two-results-per-field rule. Their ten returned IDs match locked_sources.json. The five response hashes match the retrieval log; the preregistration and locked-list hashes also match the audit.",
+  "A fresh live query is not guaranteed to return the same ten works. Citation counts, indexing, record types, and search behavior can change; no tie-break rule is specified. The preserved responses and explicit IDs fix this run’s exemplars. The query alone does not fix future results."
+ ],
+ "evidence": [
+  {
+   "kind": "FILE",
+   "path": "examples/research/acemoglu-colonial-origins/citation-network/02c_citation_network.md",
+   "sha256": "884887fe5a7b98d77921fbc31b488c7c9b7dc8406eb60340e4d5881436f3016c",
+   "lines": [
+    9,
+    9
+   ]
+  },
+  {
+   "kind": "FILE",
+   "path": "examples/research/acemoglu-colonial-origins/citation-network/02c_citation_network.md",
+   "sha256": "884887fe5a7b98d77921fbc31b488c7c9b7dc8406eb60340e4d5881436f3016c",
+   "lines": [
+    154,
+    169
+   ]
+  },
+  {
+   "kind": "FILE",
+   "path": "examples/research/acemoglu-colonial-origins/citation-network/lock/section_E_preregistration.md",
+   "sha256": "84847dd02aca0af819994008ae98d407fae5f75560c8d5de9b628346df965154",
+   "lines": [
+    5,
+    10
+   ]
+  },
+  {
+   "kind": "FILE",
+   "path": "examples/research/acemoglu-colonial-origins/citation-network/lock/section_E_preregistration.md",
+   "sha256": "84847dd02aca0af819994008ae98d407fae5f75560c8d5de9b628346df965154",
+   "lines": [
+    39,
+    52
+   ]
+  },
+  {
+   "kind": "FILE",
+   "path": "examples/research/acemoglu-colonial-origins/citation-network/lock/section_E_lock_time.txt",
+   "sha256": "64ebd67b23fc7569ea787b1108c36198594df728ddfefbcf1dc863af796200ad",
+   "lines": [
+    1,
+    1
+   ]
+  },
+  {
+   "kind": "FILE",
+   "path": "examples/research/acemoglu-colonial-origins/citation-network/lock/section_E_preregistration.sha256",
+   "sha256": "a280040a4c34b071270f0f5df594dd1cd0185837092837cd596b3214c6f75521",
+   "lines": [
+    1,
+    1
+   ]
+  },
+  {
+   "kind": "FILE",
+   "path": "examples/research/acemoglu-colonial-origins/citation-network/lock/locked_sources.json",
+   "sha256": "521b3a52716a5dc75e8684bf7464cb3d90aea124815282d19ff82ee25f855a3c",
+   "lines": [
+    1,
+    92
+   ]
+  },
+  {
+   "kind": "FILE",
+   "path": "examples/research/acemoglu-colonial-origins/citation-network/retrieval/retrieval_log.jsonl",
+   "sha256": "b28d9cfa5d1ad618e53299df2dd2bccbf540afab95b158e22aedfd6839175296",
+   "lines": [
+    1,
+    8
+   ]
+  },
+  {
+   "kind": "FILE",
+   "path": "examples/research/acemoglu-colonial-origins/citation-network/metadata/raw-api/lock_F1.json",
+   "sha256": "f393f6213e8ecf59c8badb8e75369261205be7ba3789808dca73a3162b501e37",
+   "lines": [
+    1,
+    1
+   ]
+  },
+  {
+   "kind": "FILE",
+   "path": "examples/research/acemoglu-colonial-origins/citation-network/metadata/raw-api/lock_F2.json",
+   "sha256": "8d45da708557a77774d81f1566185211ac33cd803dae47a22bb17bb76da500c1",
+   "lines": [
+    1,
+    1
+   ]
+  },
+  {
+   "kind": "FILE",
+   "path": "examples/research/acemoglu-colonial-origins/citation-network/metadata/raw-api/lock_F3.json",
+   "sha256": "2f96461f3de3306a22c6e718caaeb20a6616571eb0e4c7f9fb3a97529e42d30e",
+   "lines": [
+    1,
+    1
+   ]
+  },
+  {
+   "kind": "FILE",
+   "path": "examples/research/acemoglu-colonial-origins/citation-network/metadata/raw-api/lock_F4.json",
+   "sha256": "34c678057d76568b0a17571195a061fa8e46e6241d7845257396fe128543c406",
+   "lines": [
+    1,
+    1
+   ]
+  },
+  {
+   "kind": "FILE",
+   "path": "examples/research/acemoglu-colonial-origins/citation-network/metadata/raw-api/lock_F6.json",
+   "sha256": "f8f8b26fa96bd29837cd2bd3a9466db37972c985b9c8b661d00f2e542a2a01b0",
+   "lines": [
+    1,
+    1
+   ]
+  },
+  {
+   "kind": "EXTERNAL",
+   "identifier": "git commit b108bab",
+   "note": "in this repository's history; Commits b108bab and 693175d; stage-0 preregistration, especially its exposure disclosure."
+  },
+  {
+   "kind": "EXTERNAL",
+   "identifier": "git commit 693175d",
+   "note": "in this repository's history; Commits b108bab and 693175d; stage-0 preregistration, especially its exposure disclosure."
+  },
+  {
+   "kind": "FILE",
+   "path": "examples/research/acemoglu-colonial-origins/00a_preregistration_LOCKED.txt",
+   "sha256": "b9d9085f751e04dfed9d28637ee532f0ce42ebe9a9715faef6cf94077973b531"
+  }
+ ],
+ "what_would_change": [
+  "What would change my answer: An independently timestamped pre-inspection commitment containing the Section E lock’s hash, supported by an execution trace establishing ordering. Evidence of earlier inspection would instead support CONDITION_NOT_MET. A frozen database snapshot and deterministic tie-breaking would strengthen live-query reproducibility."
+ ],
+ "transcribed_from": {
+  "path": "tests/atlas/challenge/ajr2001/challenges/source/chatgpt-codex-answer-2026-11-04.txt",
+  "sha256": "36dbb0c359c06794ef8eadce43f67c904fe0b2cc44cf5c14ce263e20d9c92e26"
+ }
+}
