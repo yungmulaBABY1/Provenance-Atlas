@@ -1,0 +1,49 @@
+{
+ "schema": "atlas-retrieval-spec/0.1",
+ "id": "baumeister-1998-batch2/secE-F5",
+ "provider": "openalex",
+ "endpoint": "https://api.openalex.org/works",
+ "params": [
+  [
+   "filter",
+   "title.search:mental effort,to_publication_date:1998-04-30,type:article"
+  ],
+  [
+   "sort",
+   "cited_by_count:desc"
+  ],
+  [
+   "per-page",
+   "3"
+  ],
+  [
+   "select",
+   "id,doi,display_name,publication_year,type,cited_by_count,authorships,primary_location,referenced_works"
+  ]
+ ],
+ "pages": "first-only",
+ "provenance": "reconstructed-after-run",
+ "reconstructed_from": {
+  "executor_log": "examples/research/baumeister-ego-depletion/logs/retrieval_log.jsonl",
+  "line": 71,
+  "method": "parameters of the last successful logged request, mailto removed; declared terms copied from the declaration by hand (Claude, 2026-11-05)"
+ },
+ "declared": {
+  "path": "examples/research/baumeister-ego-depletion/citation-network-v2cand3/lock/section_E_preregistration.md",
+  "sha256": "791e03ac0bbe7ff3abe4e806ce0d17b57c1bc3e55d7816afe5d5c86ea6bed737",
+  "kind": "pre-run-lock",
+  "locked_at": "2026-11-05T11:28:40Z",
+  "locked_at_source": "examples/research/baumeister-ego-depletion/citation-network-v2cand3/lock/section_E_lock.txt (executor-written)",
+  "requires": [
+   "title.search:",
+   "to_publication_date:1998-04-30",
+   "type:article",
+   "sort=cited_by_count:desc",
+   "per-page=3",
+   "mental effort"
+  ]
+ },
+ "notes": [
+  "The lock writes the term in quotes (F5 \"mental effort\"); the request sends it unquoted (title.search:mental effort). The lock does not say whether the quotes mark a phrase or only delimit the term."
+ ]
+}

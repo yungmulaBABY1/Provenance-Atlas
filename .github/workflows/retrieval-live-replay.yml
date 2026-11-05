@@ -1,0 +1,41 @@
+name: Locked-query live replay (manual)
+# Runs one set of locked queries against the provider from a GitHub runner and
+# uploads the records, drift.json and DRIFT.txt as an artifact. Never runs on push.
+# Nothing is committed automatically: committing the output is a separate, reviewed step.
+# Optional repository secret OPENALEX_API_KEY. It is sent only in the Authorization
+# header and never written. Without it, OpenAlex's keyless budget applies, and 429s are
+# recorded as failed attempts.
+on:
+  workflow_dispatch:
+    inputs:
+      set:
+        description: Path to a set.json
+        required: true
+        default: tests/atlas/retrieval/baumeister-batch2/set.json
+permissions:
+  contents: read
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.11'
+      - name: Live replay
+        env:
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+          SET_PATH: ${{ inputs.set }}
+        run: |
+          set -euo pipefail
+          case "$SET_PATH" in *..*) echo "no .. in the set path"; exit 2 ;; esac
+          case "$SET_PATH" in tests/atlas/retrieval/*/set.json) ;; *) echo "set must be under tests/atlas/retrieval/"; exit 2 ;; esac
+          python -m atlas.retrieval check "$SET_PATH"
+          out="live-$(date -u +%Y%m%dT%H%M%SZ)"
+          python -m atlas.retrieval run-live "$SET_PATH" --out "$out"
+          echo "LIVE_OUT=$out" >> "$GITHUB_ENV"
+          cat "$out/DRIFT.txt"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: locked-query-live-replay
+          path: ${{ env.LIVE_OUT }}
