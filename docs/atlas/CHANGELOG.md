@@ -1,5 +1,20 @@
 # Atlas adapter changelog
 
+## Unreleased — audit page (`atlas.view`, kind `audit`)
+
+- New page `docs/atlas/views/ajr2001/`: a paper page for Grok's AJR 2001
+  citation-network audit. It is rendered from the verified map-link and challenge
+  bundles, which must pin the same import. It covers the glance rows, the audit on
+  record, the claim under audit and its wordings, the seven findings with the run's
+  labels and their map alignment, the three review items with all six challenges
+  (item 1's disagreement shown), the sources and what is not established.
+- No source text is shown. Model-written text quoting 8 or more consecutive words
+  of a source passage is withheld with a notice. On AJR this applies to finding 4,
+  which quotes NS-E1.
+- Label table `atlas-plain-labels/0.3` (additions only). Refs name bundle runs by
+  kind; one ref on the power-posing page now reads "import" where it read "run".
+- 10 new tests.
+
 ## Unreleased — challenges 0.1.0 (`atlas.challenge`, M1 Increment C part 2)
 
 - New package `atlas/challenge/` (schema `atlas-challenge/0.1`, artifacts

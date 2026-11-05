@@ -29,11 +29,19 @@ def refs(ids: list[str], present: set[str]) -> str:
     return '<span class="refs">' + " ".join(items) + "</span>"
 
 
+# Bundle kinds whose run IDs share a name with the audit they describe (atlas.view 0.1 pages
+# show the others as "run" or "question", unchanged).
+RUN_WORD = {"import": "import", "claimlink": "claim links", "maplink": "map links", "challenge": "challenges"}
+
+
 def short(record_id: str) -> str:
     """Readable link text: the record path after its run, or the run's own name."""
     if "/" in record_id:
         return record_id.split("/", 1)[1]
-    return record_id.rsplit(":", 2)[-2] + (" question" if ":question:" in record_id else " run")
+    if ":question:" in record_id:
+        return record_id.rsplit(":", 2)[-2] + " question"
+    kind = record_id.split(":")[2] if record_id.count(":") >= 3 else ""
+    return record_id.rsplit(":", 2)[-2] + " " + RUN_WORD.get(kind, "run")
 
 
 def slug(record_id: str) -> str:

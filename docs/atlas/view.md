@@ -52,10 +52,44 @@ every record, every fingerprint, linked from the items above it.
 7. **Drill-down keeps the corpus.** A page reached from a question says which
    declared source it is and out of how many, and links back.
 
+8. **No source text, even inside model text.** Model-written text that quotes 8 or
+   more consecutive words of a source passage is withheld on the page, with a
+   notice naming the passage, while the passages are not reviewed for public
+   release (audit pages).
+
+## Audit pages (kind `audit`)
+
+`docs/atlas/views/ajr2001/` is a paper page for one imported audit, Grok's AJR 2001
+citation-network run. It is rendered from two verified bundles: map links
+(`tests/atlas/maplink/ajr2001/receipt`) and challenges
+(`tests/atlas/challenge/ajr2001/receipt`). Both are content-replayed before rendering,
+and each replay re-verifies what it pins. Both must pin the same import
+(`AUDIT_RECEIPTS_DISAGREE`).
+
+It shows, in this order:
+- at a glance: what was checked, what is limited, what was not done;
+- the audit on record;
+- the claim under audit, in each of its wordings;
+- the seven findings, with the run's own labels and how each lines up with the map;
+- the three review items, with every challenger's outcome and a notice where they
+  disagree;
+- the sources, with read states and passage counts;
+- what is not established.
+
+No research question record exists for AJR 2001 yet. `atlas.question` is built around
+the power-posing packet, and extending it would rebuild that merged receipt, so the
+page says it is a paper page.
+
+Label table `atlas-plain-labels/0.3` adds the labels this page needs (additions only).
+Meanings of the run's own labels come from the instrument's definitions
+(`prompts/research-analysis/2-citation-network.txt`). Bare bundle IDs are now named by
+kind in refs: `import`, `claim links`, `map links`, `challenges`. This changed one
+ref's text on the power-posing page from "run" to "import".
+
 ## Limits
 
-- Two page kinds: extraction bundles and research questions. Other bundle kinds
-  need their own view model sections.
+- Three page kinds: extraction bundles, research questions and imported audits. Other
+  bundle kinds need their own view model sections.
 - Static. No search, filtering, graph or timeline yet.
 - Whether a non-specialist understands the evidence better with this page than
   with existing tools is untested. That needs people using it.

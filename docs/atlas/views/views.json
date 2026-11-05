@@ -6,7 +6,9 @@
       "kind": "question",
       "receipt": "tests/atlas/question/power-posing/receipt",
       "out": "docs/atlas/views/power-posing",
-      "links": {"urn:atlas:extraction:s2-claim-map:1": "s2-run1"}
+      "links": {
+        "urn:atlas:extraction:s2-claim-map:1": "s2-run1"
+      }
     },
     {
       "id": "s2-run1",
@@ -14,6 +16,13 @@
       "receipt": "tests/atlas/extraction/s2-run1/receipt",
       "out": "docs/atlas/views/s2-run1",
       "question": "power-posing"
+    },
+    {
+      "id": "ajr2001",
+      "kind": "audit",
+      "maplink_receipt": "tests/atlas/maplink/ajr2001/receipt",
+      "challenge_receipt": "tests/atlas/challenge/ajr2001/receipt",
+      "out": "docs/atlas/views/ajr2001"
     }
   ]
 }

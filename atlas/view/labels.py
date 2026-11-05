@@ -7,9 +7,13 @@ Every rendering shows the plain text and the native label together.
 
 from ..contract import ContractError
 
-TABLE_ID = "atlas-plain-labels/0.2"
+TABLE_ID = "atlas-plain-labels/0.3"
 # 0.2 (2026-11-04): adds the labels a research-question page needs (access, record
 # state, eligibility, question wording, audit relations). No 0.1 entry changed.
+# 0.3 (2026-11-04): adds the labels a paper page for an imported citation-network audit
+# needs: read state, the instrument's own finding labels (meanings from
+# prompts/research-analysis/2-citation-network.txt), map links (atlas.maplink) and
+# challenges (atlas.challenge). No 0.2 entry changed.
 
 PLAIN = {
     # Quote matching (atlas.extraction.anchors)
@@ -58,6 +62,46 @@ PLAIN = {
     "PASSAGES_CITED_IN_IMPORTED_AUDIT": "Passages from this paper are cited as evidence in an imported audit finding",
     "PASSAGES_REVIEWED": "A model review judged passages from this paper",
     "ARCHIVED_COMPLIANCE_PILOT_OUTPUT": "Output of an archived pilot run, imported as it was",
+    # 0.3: imported runs and their sources (atlas.adapter, atlas.sources)
+    "PARTIAL_READ": "Text was read, but not every requested part, or with a warning",
+    "SELF_REPORTED_NOT_INDEPENDENTLY_VERIFIED": "As the run reports it; not independently verified",
+    "PASS-WITH-REVIEW": "Passes the instrument's mechanical checks; some judgments are left for review",
+    "IMPORTED_UNADJUDICATED": "Imported as the run wrote it; no one has ruled on it",
+    # 0.3: the citation-network instrument's own finding labels
+    "SURVIVES": "The run's concede test: the audited claim still stands",
+    "NARROWS": "The run's concede test: the claim stands only in a narrower scope",
+    "DEFEATS": "The run's concede test: the audited claim does not follow",
+    "RECEPTION-CONFIRMED": "The run says it checked replies, replications or citation records against retrieved sources",
+    "CROSS-SOURCE-CONFIRMED": "The run says it read both the citing text and the cited source and compared them",
+    "CONTESTED": "The run says credible disagreement exists and who is right is unresolved",
+    "PAPER": "Where the run locates the failure: the paper itself",
+    "CITATION": "Where the run locates the failure: later literature",
+    "PR-MEDIA": "Where the run locates the failure: communications or coverage",
+    "MODEL-RETRIEVAL": "Where the run locates the failure: summarizers or search systems",
+    "MIXED": "Where the run locates the failure: more than one layer",
+    # 0.3: findings against a separately produced claim map (atlas.maplink)
+    "DECLARED_NOT_FIELD_6": "The finding says it targets something other than the claim under audit",
+    "DECLARED_NOT_ON_MAP": "The finding says its target is not on the claim map",
+    "DECLARED_BY_REFERENCE": "The finding points to the claim under audit by reference",
+    "SAME_TEXT": "Worded exactly like the claim under audit",
+    "SAME_TEXT_AFTER_NORMALIZATION": "Worded like the claim under audit, apart from spacing",
+    "NO_TARGET_STATED": "The finding states no target",
+    "WORDING_DIFFERS_FROM_INSTRUMENT_FORMS": "Its map-gap note is worded unlike both forms the instrument defines",
+    "UPSTREAM_STAGE_1_OUTPUT": "A separate claim-extraction output, not part of this audit run",
+    "PATH_NAMED_IN_AUDIT_OUTPUT": "The audit output names this file as its claim map",
+    "NOT_NAMED_LINK_DECLARED_IN_CONTEXT_ONLY": "The audit output does not name this file; the link is only declared",
+    "MAP_PRODUCER_RESTATEMENT_ONLY": "Only the map's statement of the paper's claim is on record, not the paper's words",
+    # 0.3: challenges on review items (atlas.challenge)
+    "CHALLENGED": "At least one reviewer has recorded a decision on this item",
+    "NOT_CHALLENGED": "No reviewer has recorded a decision on this item",
+    "CONDITION_MET": "Reviewer: what the item asks to verify holds",
+    "CONDITION_MET_WITH_QUALIFICATION": "Reviewer: it holds, within limits the reviewer states",
+    "CONDITION_NOT_MET": "Reviewer: it does not hold",
+    "CANNOT_DETERMINE": "Reviewer: the available material does not settle it",
+    "MODEL_AGENT": "Decided by a model, not a person",
+    "PERSON": "Decided by a person",
+    "TEXT_FIELDS_FOUND_VERBATIM_IN_SOURCE": "Transcribed: every text field is found word for word in the reviewer's answer",
+    "NOT_A_TRANSCRIPTION": "Written as a record directly, not transcribed",
 }
 
 
@@ -68,6 +112,24 @@ PLAIN_IN_FIELD = {
     ("human_review", "NOT_RECORDED"): "No person has reviewed this",
     ("operator_confirmation", "NOT_CONFIRMED"): "Not yet confirmed by the person running the investigation",
     ("operator_confirmation", "CONFIRMED"): "Confirmed by the person running the investigation",
+    # 0.3
+    ("run_prompt", "NOT_RECORDED"): "No run prompt was recorded",
+    ("run_receipt", "NONE"): "No run receipt exists",
+    ("text_comparison", "MATCH"): "Same wording, character for character",
+    ("text_comparison", "NORMALIZED_MATCH_ONLY"): "Same wording, apart from spacing or line breaks",
+    ("text_comparison", "MISMATCH"): "Worded differently",
+    ("status", "confirmed"): "The run marks this finding confirmed",
+    ("status", "contested"): "The run marks this finding contested",
+    ("status", "provisional"): "The run marks this finding provisional",
+    ("severity", "none"): "The run rates its severity: none",
+    ("severity", "minor"): "The run rates its severity: minor",
+    ("severity", "moderate"): "The run rates its severity: moderate",
+    ("severity", "major"): "The run rates its severity: major",
+    ("severity", "fatal-for-strong-claim"): "The run rates its severity: fatal for the strong claim",
+    ("producer", "NO"): "Declares it is not the run's producer",
+    ("producer", "UNKNOWN"): "Its relation to the run's producer is unknown",
+    ("atlas_code_author", "NO"): "Declares it is not the author of this code",
+    ("atlas_code_author", "UNKNOWN"): "Its relation to the author of this code is unknown",
 }
 
 

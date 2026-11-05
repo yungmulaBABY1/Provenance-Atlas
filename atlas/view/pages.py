@@ -2,8 +2,9 @@
 
 Each page names its receipt and output folder. A question page may link a member's
 audit record to another page; a paper page may name the question it belongs to,
-which adds a breadcrumb with the question's declared denominator. Every page is
-rendered only after its receipt (and the question's, where named) is re-verified.
+which adds a breadcrumb with the question's declared denominator. An audit page names
+a map-link and a challenge receipt over the same imported audit. Every page is
+rendered only after its receipts (and the question's, where named) are re-verified.
 """
 
 from __future__ import annotations
@@ -12,6 +13,7 @@ import os
 from pathlib import Path
 
 from ..contract import ContractError, load_json
+from .audit import build_audit_view, html_audit, text_audit, verify_audit
 from .model import build_view, verify, view_json
 from .question import build_question_view, external_ids, html_question, question_context, text_question, verify_question
 from .render import html_page, text_report
@@ -62,6 +64,10 @@ def render_all(pages_file: Path, root: Path) -> dict[str, dict[str, bytes]]:
             view = build_view(verified, root, context, ids)
             files[page["out"]] = {"view.json": view_json(view), "index.html": html_page(view).encode("utf-8"),
                                   "report.txt": text_report(view).encode("utf-8")}
+        elif page["kind"] == "audit":
+            view = build_audit_view(verify_audit(page, root), root)
+            files[page["out"]] = {"view.json": view_json(view), "index.html": html_audit(view).encode("utf-8"),
+                                  "report.txt": text_audit(view).encode("utf-8")}
         else:
             raise ContractError(f"UNKNOWN_PAGE_KIND: {page['kind']}")
     return files

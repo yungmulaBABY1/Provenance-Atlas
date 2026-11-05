@@ -33,7 +33,8 @@ Implemented, with mechanical test coverage:
 
 - Evidence view (`atlas.view`): a reader-first page and a text report rendered
   from the same verified records ([docs/atlas/views/s2-run1/](docs/atlas/views/s2-run1/),
-  [docs/atlas/view.md](docs/atlas/view.md)).
+  [docs/atlas/view.md](docs/atlas/view.md)). An audit page for Grok's AJR 2001 run:
+  [docs/atlas/views/ajr2001/](docs/atlas/views/ajr2001/).
 - Research questions (`atlas.question`): one declared question over a declared list
   of sources, with what Atlas holds about each and no judgment added
   ([docs/atlas/views/power-posing/](docs/atlas/views/power-posing/),
@@ -82,7 +83,7 @@ python -m atlas.challenge replay tests/atlas/challenge/ajr2001/receipt/manifest.
 python -m atlas.view check-all
 ```
 
-Expected: checker regression `PASS`, 306 tests `OK` (one skipped: it needs
+Expected: checker regression `PASS`, 316 tests `OK` (one skipped: it needs
 the private source PDF), every content replay passes, and the view is current. `historical-*` receipts were produced by earlier code and are not
 replayable. CI runs the same steps (`.github/workflows/atlas-adapter.yml`).
 
