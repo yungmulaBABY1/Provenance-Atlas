@@ -82,7 +82,7 @@ python -m atlas.challenge replay tests/atlas/challenge/ajr2001/receipt/manifest.
 python -m atlas.view check-all
 ```
 
-Expected: checker regression `PASS`, 303 tests `OK` (one skipped: it needs
+Expected: checker regression `PASS`, 306 tests `OK` (one skipped: it needs
 the private source PDF), every content replay passes, and the view is current. `historical-*` receipts were produced by earlier code and are not
 replayable. CI runs the same steps (`.github/workflows/atlas-adapter.yml`).
 

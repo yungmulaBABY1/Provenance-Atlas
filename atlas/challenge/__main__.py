@@ -41,6 +41,10 @@ def show(records: list[dict]) -> str:
                 wrap(item["instruction"])]
         if not item["challenge_ids"]:
             out.append("    No challenge on record. The audit's own handling of this item stands unreviewed.")
+        if len({o["outcome"] for o in item["outcomes"]}) > 1:
+            out.append(wrap("Challengers' outcomes differ: " + "; ".join(
+                f"{o['outcome']} ({by_id[o['challenge_id']]['challenger']['identity']})" for o in item["outcomes"])
+                + ". All are kept; nothing here merges or ranks them.", "    "))
         for cid in item["challenge_ids"]:
             c = by_id[cid]
             rel = c["relation_to_run"]
@@ -48,16 +52,25 @@ def show(records: list[dict]) -> str:
                     f"{c['performed_at']}",
                     f"    relation to the run: producer {rel['producer']}, Atlas code author "
                     f"{rel['atlas_code_author']} ({rel['verification']})",
-                    f"    recorded by: {c['recorded_by']}",
-                    "    seen before deciding: " + ("; ".join(c["exposure"]["seen_before_deciding"]) or "none stated"),
-                    f"    prior position: {c['exposure']['prior_position']}"]
+                    wrap(f"recorded by: {c['recorded_by']}", "    "),
+                    f"    transcription: {c['transcription']['state']}"
+                    + (f" ({c['transcription']['checked_fields']} text fields; source "
+                       f"{c['transcription']['source']['path']})" if c["transcription"].get("source") else ""),
+                    wrap("seen before deciding: " + (" | ".join(c["exposure"]["seen_before_deciding"])
+                                                      or "none stated"), "    "),
+                    wrap(f"prior position: {c['exposure']['prior_position']}", "    ")]
             out += [wrap("reason: " + r, "    ") for r in c["reasons"]]
             for part in c["parts"]:
                 out.append(wrap(f"part {part['part']}: {part['outcome']} — " + " ".join(part["reasons"]), "    "))
             for ev in c["evidence"]:
-                out.append("    evidence: " + (ev["id"] if ev["kind"] == "RECORD" else
-                                               f"{ev['path']}" + (f" lines {ev['lines'][0]}-{ev['lines'][1]}"
-                                                                   if ev.get("lines") else "")))
+                if ev["kind"] == "RECORD":
+                    out.append(f"    evidence: record {ev['id']}")
+                elif ev["kind"] == "EXTERNAL":
+                    out.append(wrap(f"evidence (external, not resolved here): {ev['identifier']} — {ev['note']}", "    "))
+                else:
+                    out.append(wrap(f"evidence: {ev['path']}" + (f" lines {ev['lines'][0]}-{ev['lines'][1]}"
+                                                                 if ev.get("lines") else "")
+                                    + (f" ({ev['note']})" if ev.get("note") else ""), "    "))
             out += [wrap("would change if: " + w, "    ") for w in c["what_would_change"]]
         for cid in item["detached_challenge_ids"]:
             c = by_id[cid]
@@ -90,7 +103,8 @@ def template(bundle: dict, number: int) -> dict:
             "performed_at": "YYYY-MM-DD",
             "exposure": {"seen_before_deciding": ["FILL IN"], "prior_position": "FILL IN or NONE_STATED"},
             "outcome": " | ".join(sorted(OUTCOMES)),
-            "parts": [], "reasons": ["FILL IN"], "evidence": [], "what_would_change": []}
+            "parts": [], "reasons": ["FILL IN"], "evidence": [], "what_would_change": [],
+            "transcribed_from": None}
 
 
 def main(argv=None) -> int:

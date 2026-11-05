@@ -54,8 +54,11 @@ A readable local report is enough. A model-generated conclusion remains provisio
   Stage-1 map that atlas.claims could not read. See docs/atlas/maplink.md.
   Increment C part 2 prepared on branch m1f-challenge-records (stacked on
   m1e-upstream-map), draft PR: atlas.challenge records decisions on the AJR
-  checker's three review items. All three are NOT_CHALLENGED; the decisions are
-  for the owner or a separate reviewer. See docs/atlas/challenge.md.
+  checker's three review items. Two separately run model reviewers answered
+  them (ChatGPT/Codex and ChatGPT GPT-6), each transcribed verbatim. They
+  disagree on item 1 (CANNOT_DETERMINE vs CONDITION_MET_WITH_QUALIFICATION) and
+  agree on item 2 (CONDITION_MET_WITH_QUALIFICATION) and item 3
+  (CONDITION_NOT_MET). No decision by a person yet. See docs/atlas/challenge.md.
 
 YOU DO NOT NEED TO DECIDE NOW: cloud host, graph database, framework, agent fleet,
 bot interface, provider catalog, pricing, public launch or every future method.

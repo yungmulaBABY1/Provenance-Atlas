@@ -13,9 +13,16 @@
 - A changed target detaches a challenge but keeps it, and disagreeing challenges are
   all kept.
 - AJR 2001: three items (`SOURCE_LOCK_TRUTH`, `DIRECT_ADJUDICATION_SUBSTANCE`,
-  `NESTING_SUBSTANCE`), all `NOT_CHALLENGED`. A reviewer packet is in
-  `challenge-packets/`.
-- 23 new tests. CI adds challenge replay.
+  `NESTING_SUBSTANCE`). A reviewer packet is in `challenge-packets/`. Two model
+  reviewers answered it, ChatGPT/Codex and ChatGPT (GPT-6), and both answers are
+  transcribed verbatim:
+  - item 1: `CANNOT_DETERMINE` / `CONDITION_MET_WITH_QUALIFICATION` (they disagree);
+  - item 2: `CONDITION_MET_WITH_QUALIFICATION` from both;
+  - item 3: `CONDITION_NOT_MET` from both.
+  0 of 3 items have a decision by a person.
+- Evidence may be `EXTERNAL` (kept as cited, not resolved), and file evidence may carry a note. An artifact may name a
+  pinned `transcribed_from` source, whose text fields are then checked verbatim.
+- 26 new tests. CI adds challenge replay.
 
 ## Unreleased — map links 0.1.0 (`atlas.maplink`, M1 Increment E)
 

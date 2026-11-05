@@ -1,0 +1,342 @@
+Provenance Atlas — Independent Reviewer Response
+
+AJR 2001 citation-network audit · November 4, 2026 · Proposed atlas.challenge/0.1 decisions
+
+I examined the pinned audit on GitHub, its source-lock records, saved OpenAlex responses, source excerpts, and the original Sachs and Glaeser papers.
+
+My recommended outcomes are:
+
+Review item	Outcome
+1. Source-lock truth	CONDITION_MET_WITH_QUALIFICATION
+2. Direct adjudication	CONDITION_MET_WITH_QUALIFICATION overall, with different outcomes for individual parts
+3. Evidence nesting	CONDITION_NOT_MET
+
+These are reviewer assessments, not scientifically certified findings. In particular, I distinguish evidence that Grok followed a recorded procedure from independent proof that it followed that procedure.
+
+Reviewer identity and exposure
+
+* Reviewer: ChatGPT, GPT-6, MODEL_AGENT.
+* Producer relationship: Not Grok Bot; did not execute the original audit.
+* Code-author relationship: Not the Claude session that implemented atlas.challenge.
+* Prior position: Yes. I previously reviewed the Acemoglu audit in this conversation. I had already concluded that the source-lock chronology appeared internally consistent but not independently established; that the rival tests required substantive review; and that the handbook nesting needed further examination.
+* Prior material read: The earlier ChatGPT Acemoglu audit review responses, Grok’s execution summaries, and the reviewer packet in your message.
+* Claude’s separate verification note: Not read. I have not accessed claude/Atlas_Acemoglu_Grok_Run_Verification_2026-11-04.txt.
+
+These disclosures mean this is a separately performed assessment, not a blind review. My conclusions should be attributed to a model reviewer, not transcribed as decisions made personally by the repository owner.
+
+Item 1 — SOURCE_LOCK_TRUTH
+
+CONDITION_MET_WITH_QUALIFICATION
+
+1a. Was the lock created before citation inspection?
+
+The evidence supports the recorded ordering, but does not independently prove it.
+
+I checked the following:
+
+Event	Recorded UTC time
+Earlier audit commit b108bab	11:19:16
+Section E lock timestamp	11:42:25
+First five logged OpenAlex lock queries	11:42:31–11:42:33
+Commit 693175d, containing lock and results	12:11:52
+
+The retrieval log begins six seconds after the declared lock time. The preregistration document identifies the rival explanations, candidate fields, query strings, ranking procedure, cutoff, and deduplication rule.
+
+This is internally consistent evidence of preregistration.
+
+However, the lock and its results were committed together after the investigation. A SHA-256 hash establishes the identity of the preserved contents, not when the contents first existed.
+
+Because the same agent generated the lock, timestamps, retrieval logs, and subsequent audit, I cannot independently exclude unrecorded inspection before the declared lock.
+
+My finding is therefore that the recorded chronology is consistent with the required sequence, but independent temporal verification is absent.
+
+1b. Does the locked query deterministically select the ten exemplars?
+
+Yes, for the preserved retrieval snapshot.
+
+I checked the five saved OpenAlex responses against locked_sources.json.
+
+Locked exemplars
+
+Saved query results
+
+F1
+
+2 of 2 match
+
+F2
+
+2 of 2 match
+
+F3
+
+2 of 2 match
+
+F4
+
+2 of 2 match
+
+F6
+
+2 of 2 match
+
+Total 10/10 matches
+
+The IDs, titles, years, and citation counts in the saved top-two results agree with the locked source list. There are no duplicate work IDs among those ten records.
+
+One important limitation remains: the ranking uses OpenAlex’s live cited_by_count. A query rerun today or months later could select different papers because citation counts, indexing, and work identities change.
+
+Thus, the procedure is reproducible against the saved response snapshot, not guaranteed to produce the identical results indefinitely.
+
+Evidence relied upon
+
+All repository paths below are relative to examples/research/acemoglu-colonial-origins/.
+
+* citation-network/02c_citation_network.md, lines 5–9 and 154–169.
+* citation-network/lock/section_E_preregistration.md, particularly steps 31–37.
+* citation-network/lock/section_E_lock_time.txt.
+* citation-network/lock/locked_sources.json.
+* citation-network/metadata/raw-api/lock_F1.json through lock_F6.json, excluding F5.
+* citation-network/retrieval/retrieval_log.jsonl, first five requests.
+* The two Git commit timestamps supplied in the packet.
+
+What would change my answer?
+
+A trusted pre-inspection timestamp—such as a Git commit or externally recorded immutable artifact containing the lock before retrieval—would substantially strengthen the chronology finding.
+
+Conversely, evidence that citation records were inspected before the lock, or that the source list was altered after seeing the results, would change this to CONDITION_NOT_MET.
+
+Decision: The lock’s recorded content and query-result agreement pass inspection, with a necessary qualification about independent timing and time-dependent database rankings.
+
+Item 2 — DIRECT_ADJUDICATION_SUBSTANCE
+
+CONDITION_MET_WITH_QUALIFICATION
+
+The two papers contain genuine empirical challenges to the broad institutional explanation. However, the classifications require qualification, especially for the settler-human-capital mechanism.
+
+Sachs (2003) — R1: Direct geography/disease channel
+
+Question	Assessment
+2a. Direct test?	CONDITION_MET
+2b. Result accurately reported?	CONDITION_MET
+2c. Required revision follows?	CONDITION_MET_WITH_QUALIFICATION
+
+2a. Direct test
+
+Sachs explicitly tests whether malaria risk explains cross-country income differences after accounting for measured institutional quality.
+
+He uses two-stage least squares, with ecological and geographic instruments for malaria risk and institutional quality. This is not simply a theoretical alternative; it is an empirical test of the institutions-only proposition.
+
+2b. Actual result
+
+The source reports statistically significant coefficients for both institutional quality and malaria risk across its tested specifications, and rejects the hypothesis that geography has no additional explanatory effect.
+
+That agrees with the audit’s representation of SA-E1. The NBER working paper confirms the study design and reported result. final.doc
+
+2c. Required revision
+
+The proposed revision is reasonable in direction:
+
+Institutions are a major channel; a direct disease channel is not excluded.
+
+But I would qualify the first half.
+
+Sachs finds an institutional coefficient alongside the malaria effect, but this does not independently establish the general magnitude of the institutional channel.
+
+I would prefer:
+
+The evidence is consistent with an institutional channel, but a direct disease/geography channel remains plausible. Their relative contributions are not settled by these results.
+
+This directly distinguishes the demonstrated regression result from a broader causal conclusion.
+
+The result also targets a stronger claim about institutional primacy, not the literal reproducibility of AJR’s original 0.94 estimate.
+
+Glaeser et al. (2004) — R2: Settler human capital
+
+Question	Assessment
+2a. Direct test?	CONDITION_MET_WITH_QUALIFICATION
+2b. Result accurately reported?	CONDITION_MET_WITH_QUALIFICATION
+2c. Required revision follows?	CONDITION_MET_WITH_QUALIFICATION
+
+2a. Direct test
+
+Glaeser and colleagues conduct empirical tests relevant to the human-capital explanation. They show that settler-mortality instruments predict schooling as well as institutional measures. Their Table 11 then estimates associations between instrumented schooling, executive constraints, and income.
+
+But they do not directly identify the historical transfer of settlers’ human capital as the causal mechanism.
+
+They provide evidence consistent with that explanation, rather than isolating it from competing pathways.
+
+2b. Actual result
+
+The audit’s summary is substantially accurate but incomplete.
+
+* GL-E1 correctly reports their finding that malaria risk is statistically significant alongside settler mortality in regressions predicting institutional measures.
+* GL-E2 only introduces the human-capital hypothesis as a question. It is not, by itself, evidence that the hypothesis was confirmed.
+* The substantive empirical evidence appears later, including Table 11, where instrumented schooling is significant and executive constraints are not in the reported specifications.
+
+The published paper supports these distinctions. epge.fgv.br +1
+
+Importantly, the authors themselves acknowledge that their instruments may operate through additional channels, and that their results do not conclusively separate those mechanisms.
+
+2c. Required revision
+
+The audit proposes:
+
+Institutions or settler human capital, not separately identified.
+
+The identification warning follows from the evidence. However, the binary framing is unnecessarily restrictive.
+
+I would recommend:
+
+The available instrumental-variable evidence does not separately identify the contributions of institutional quality, settler human capital, and other historically transmitted or geographical channels.
+
+This is closer to the limits stated in Glaeser et al.’s own discussion. epge.fgv.br
+
+There is another critical distinction: Glaeser et al. principally compare schooling with political-institution measures such as executive constraints, whereas AJR’s headline estimate uses a protection-against-expropriation index. These are not interchangeable constructs.
+
+The challenge is relevant to AJR’s wider causal interpretation, but it does not directly falsify the numerical estimate.
+
+2d. Two classifications or four?
+
+Two unique sources, not four independent classifications.
+
+The rows at 02c lines 196–197 are repeated at lines 445–446.
+
+They should remain visible in both native tables if required by the instrument, but should count as two unique source classifications for substantive review purposes.
+
+If future software counts each appearance independently, that would be duplicate-counting.
+
+Evidence relied upon
+
+Repository files:
+
+* citation-network/02c_citation_network.md, lines 184–199 and 431–448.
+* citation-network/sources/SACHS2003-excerpts.txt, SA-E1.
+* citation-network/sources/GLAESER2004-excerpts.txt, GL-E1 and GL-E2.
+* citation-network/02c_citation_network.md, lines 292–306, particularly Finding 6.
+
+External primary sources independently inspected:
+
+* Sachs (2003), NBER Working Paper 9490⁠￼ — estimation strategy, Table 1, conclusion.
+* Glaeser et al. (2004), Journal of Economic Growth⁠￼ — particularly pages 289–296, Tables 10–11, and discussion of identification.
+
+What would change my answer?
+
+A successful independent replication that invalidates Sachs’s malaria coefficient would weaken the R1 classification.
+
+For Glaeser et al., more directly identified evidence separating colonial human-capital transmission from institutional transmission could strengthen the R2 classification.
+
+Conversely, a successful identification test showing that the relevant instruments exclusively affect income through measured institutions would weaken the competing-channel objection.
+
+Decision: The two sources are legitimate empirical challenges to stronger interpretations of AJR. Their reported results are substantially represented correctly, but the required revisions must remain conditional and should not claim either rival explanation is established.
+
+Item 3 — NESTING_SUBSTANCE
+
+CONDITION_NOT_MET
+
+The shared evidence is real, but the stated nesting rationale is insufficient to establish that no independent inferential work is lost.
+
+3a. Do both dimensions use the same HB-E1 passage?
+
+Yes.
+
+The original AJR paper states that the implied Nigeria–Chile income difference is an upper bound because of measurement error.
+
+The subsequent AJR-authored handbook chapter restates the result in stronger terms without that qualification in the cited passage.
+
+That comparison supports the claim-mutation finding.
+
+The review-hub finding uses the same HB-E1 passage to establish that the handbook transmitted the stronger formulation.
+
+There is genuine shared evidence, and counting the same textual discrepancy twice would be inappropriate.
+
+3b. Does review-hub laundering add a distinct inference?
+
+Yes. The evidence of downstream reach is separate from the evidence of claim mutation.
+
+Consider the distinction:
+
+Dimension	What it investigates
+Claim mutation	Did the wording or strength of the claim change?
+Review-hub dissemination	How widely was the subsequent synthesis cited, including without the original study?
+
+The citation-network audit reports that, among works published since November 4, 2021:
+
+OpenAlex handbook citation records
+
+1,676
+
+Works citing the handbook
+
+276
+
+Also citing AJR 2001
+
+1,400 works
+
+Cite handbook without citing AJR 2001
+
+83.5%
+
+I checked the saved OpenAlex response counts: 1,676 total and 276 co-citations. The arithmetic difference is 1,400. This independently supports the reported citation-pattern calculation, not the substantive interpretation of those citations.
+
+That information is not contained in HB-E1. It comes from a separate set of database records.
+
+It describes the potential reach of the synthesis beyond direct citers of the original paper.
+
+However, an equally important limitation applies:
+
+A work citing the handbook without citing AJR 2001 has not necessarily reproduced the handbook’s stronger interpretation.
+
+The writer might cite the handbook for another argument, critically discuss it, or have read AJR without citing it.
+
+Consequently, the citation counts support a dissemination pattern, but not the stronger assertion that 1,400 works inherited the mutated claim without inspecting the original evidence.
+
+Is independent inferential work actually lost?
+
+The audit does preserve the handbook citation counts in Section F (lines 203–215), so the data are not erased from the narrative.
+
+But the aggregation explanation at line 310 and the scorecard at line 468 justify nesting only by reference to the shared HB-E1 passage.
+
+That does not adequately account for the separate graph-based evidence.
+
+My recommendation is to distinguish:
+
+* Shared textual evidence: HB-E1 is counted once as evidence of claim mutation.
+* Distinct citation evidence: The 1,400/1,676 citation pattern is preserved as a separate observation of potential dissemination.
+* Unverified claim propagation: Whether those citing works actually reproduced the stronger claim remains unresolved.
+
+I would not automatically turn the dissemination result into a second independently scored risk dimension. Doing so without examining the citing passages could replace one aggregation error with another.
+
+Rather, Atlas should preserve the distinction and mark the substantive dissemination interpretation as requiring further evidence.
+
+Evidence relied upon
+
+* citation-network/02c_citation_network.md, lines 203–215, 282–310, and 461–475.
+* citation-network/sources/HB2004-excerpts.txt, HB-E1.
+* citation-network/sources/AJR2001-excerpts.txt, AJR-E2.
+* citation-network/metadata/recent_cocite_counts.json.
+* citation-network/metadata/raw-api/recent_all_HB.json.
+* citation-network/metadata/raw-api/recent_cocite_HB.json.
+
+I checked the two raw API responses and confirmed their stored counts, but did not independently reconstruct the entire citing-work population from fresh database queries.
+
+What would change my answer?
+
+I would accept the original nesting rationale if the review-hub dimension were explicitly restricted to the shared textual mutation, and its separate dissemination evidence were preserved without implying it had been adjudicated.
+
+Alternatively, inspection of an appropriately sampled set of citing passages could establish that the handbook’s stronger claim was repeatedly reproduced. That would justify reassessing whether dissemination constitutes independent inferential work deserving its own classification.
+
+Decision: The shared-passage criterion holds, but the current explanation does not adequately account for the distinct citation-network evidence. The complete nesting condition is therefore not met.
+
+Final recommendation for atlas.challenge
+
+These assessments should be stored as three attributed challenge records from a previously exposed MODEL_AGENT reviewer, not as human adjudications.
+
+I recommend retaining Item 1 with its chronology qualification, Item 2 with explicit source-specific qualifications, and Item 3 as a challenge to the sufficiency of the nesting justification.
+
+I would also preserve the original checker status of PASS-WITH-REVIEW. None of these decisions establishes scientific validity or invalidity of AJR’s causal hypothesis.
+
+The distinction matters for the first public Atlas example: readers should be able to see precisely why an apparently successful audit can still contain a partly verified source lock, conditional methodological classifications, and a contested aggregation decision.
+
+That is exactly the kind of disagreement Atlas should preserve rather than resolve by silently replacing the original output.

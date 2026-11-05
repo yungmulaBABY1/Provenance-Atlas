@@ -11,7 +11,7 @@ from . import ARTIFACT_SCHEMA, CONTEXT_SCHEMA, SCHEMA, VERSION
 from .. import adapter
 from .. import replay as import_replay
 from ..claims import link as claimlink
-from ..contract import ContractError, canonical, load_json, read_artifact, require, sha256
+from ..contract import ContractError, canonical, load_json, normalize, read_artifact, require, sha256
 
 PACKAGE = Path(__file__).parent
 SHARED_MODULES = ("__init__.py", "adapter.py", "contract.py", "integrity.py", "native.py", "reviews.py",
@@ -30,7 +30,7 @@ FIELDS = {
                   "mismatched": list, "item_id": (str, type(None)), "target": dict, "challenger": dict,
                   "relation_to_run": dict, "recorded_by": str, "performed_at": str, "exposure": dict,
                   "outcome": str, "parts": list, "reasons": list, "evidence": list,
-                  "what_would_change": list, "decision_by": str, "effect": str},
+                  "what_would_change": list, "decision_by": str, "effect": str, "transcription": dict},
     "ChallengeManifest": {"challenge_run_id": str, "executor": dict, "input_context": dict,
                           "declared_input_receipts": list, "dependency": dict, "environment": dict,
                           "execution": dict, "record_ids": list, "records_before_manifest_sha256": str},
@@ -50,6 +50,8 @@ ITEM_LINE = re.compile(r"REVIEW_ITEM_(\d+)\t([A-Z_]+) — (.+)", re.DOTALL)
 ARTIFACT = {"schema": str, "challenge_id": str, "target": dict, "challenger": dict, "relation_to_run": dict,
             "recorded_by": str, "performed_at": str, "exposure": dict, "outcome": str, "parts": list,
             "reasons": list, "evidence": list, "what_would_change": list}
+# transcribed_from (null or a pin) is checked separately: require() takes one type per field.
+ARTIFACT_KEYS = set(ARTIFACT) | {"transcribed_from"}
 TARGET = {"kind": str, "audit_run_id": str, "output_sha256": str, "checker_sha256": str, "item_number": int,
           "item_code": str, "item_text_sha256": str}
 SLUG = re.compile(r"[a-z0-9][a-z0-9-]{2,80}")
@@ -99,8 +101,10 @@ def load_artifact(data: bytes, code_author: str, producer: str) -> dict:
     require(art, ARTIFACT, "challenge")
     if art["schema"] != ARTIFACT_SCHEMA:
         raise ContractError(f"UNSUPPORTED_CHALLENGE_SCHEMA: {art['schema']}")
-    if set(art) != set(ARTIFACT):
-        raise ContractError(f"INVALID_CHALLENGE: fields {sorted(set(art) ^ set(ARTIFACT))}")
+    if set(art) != ARTIFACT_KEYS:
+        raise ContractError(f"INVALID_CHALLENGE: fields {sorted(set(art) ^ ARTIFACT_KEYS)}")
+    if art["transcribed_from"] is not None:
+        require(art["transcribed_from"], {"path": str, "sha256": str}, "challenge.transcribed_from")
     if not SLUG.fullmatch(art["challenge_id"]):
         raise ContractError(f"INVALID_CHALLENGE: challenge_id {art['challenge_id']!r}")
     require(art["target"], TARGET, "challenge.target")
@@ -135,6 +139,11 @@ def load_artifact(data: bytes, code_author: str, producer: str) -> dict:
             require(item, {"kind": str, "id": str}, "challenge.evidence[]")
         elif item.get("kind") == "FILE":
             require(item, {"kind": str, "path": str, "sha256": str}, "challenge.evidence[]")
+            if set(item) - {"kind", "path", "sha256", "lines", "note"} or \
+                    ("note" in item and (type(item["note"]) is not str or not item["note"].strip())):
+                raise ContractError(f"INVALID_CHALLENGE: file evidence fields {sorted(item)}")
+        elif item.get("kind") == "EXTERNAL":
+            require(item, {"kind": str, "identifier": str, "note": str}, "challenge.evidence[]")
         else:
             raise ContractError(f"INVALID_CHALLENGE: evidence kind {item.get('kind')!r}")
     if forbidden_keys(art):
@@ -267,6 +276,26 @@ def review_items(run: dict) -> tuple[dict, list[dict]]:
     return checker, items
 
 
+def transcription_check(art: dict, root: Path) -> dict:
+    """If the artifact transcribes an answer, every text field must occur in it verbatim."""
+    pin = art["transcribed_from"]
+    if pin is None:
+        return {"state": "NOT_A_TRANSCRIPTION"}
+    data = read_artifact(root, pin)
+    source = normalize(data.decode("utf-8"))
+    texts = [*art["reasons"], *[r for part in art["parts"] for r in part["reasons"]], *art["what_would_change"],
+             *art["exposure"]["seen_before_deciding"], art["exposure"]["prior_position"]]
+    missing = [t for t in texts if normalize(t) not in source]
+    if missing:
+        raise ContractError(f"TRANSCRIPTION_NOT_VERBATIM: {len(missing)} text field(s) not in the source, "
+                            f"first: {missing[0][:80]!r}")
+    return {"state": "TEXT_FIELDS_FOUND_VERBATIM_IN_SOURCE", "source": {**pin, "bytes": len(data)},
+            "checked_fields": len(texts), "normalizer": "nfc-whitespace/2",
+            "scope": ("Checked: reasons, part reasons, what would change, exposure. Not checked: the outcome "
+                      "assigned to each part, part names and the evidence list, which the recorder arranged "
+                      "from the source.")}
+
+
 def build(context: dict, root: Path) -> dict:
     validate_context(context)
     rid = context["run"]["id"]
@@ -311,6 +340,8 @@ def build(context: dict, root: Path) -> dict:
                 if ev["id"] not in dep["by_id"]:
                     raise ContractError(f"EVIDENCE_UNRESOLVED: record {ev['id']}")
                 evidence.append({**ev, "resolved": "RECORD_IN_IMPORT_BUNDLE"})
+            elif ev["kind"] == "EXTERNAL":
+                evidence.append({**ev, "resolved": "NOT_RESOLVED_IN_BUILD: outside the repository; as cited"})
             else:
                 body = read_artifact(root, {"path": ev["path"], "sha256": ev["sha256"]})
                 lines = ev.get("lines")
@@ -318,6 +349,7 @@ def build(context: dict, root: Path) -> dict:
                                               and 1 <= lines[0] <= lines[1] <= body.count(b"\n") + 1):
                     raise ContractError(f"EVIDENCE_UNRESOLVED: lines {lines} in {ev['path']}")
                 evidence.append({**ev, "resolved": "FILE_PINNED", "bytes": len(body)})
+        transcription = transcription_check(art, root)
         cid = f"{rid}/challenge/{art['challenge_id']}"
         match = not mismatched
         item_id = item_ids[target["item_number"]] if match else None
@@ -329,6 +361,7 @@ def build(context: dict, root: Path) -> dict:
             recorded_by=art["recorded_by"], performed_at=art["performed_at"], exposure=art["exposure"],
             outcome=art["outcome"], parts=art["parts"], reasons=art["reasons"], evidence=evidence,
             what_would_change=art["what_would_change"], decision_by=art["challenger"]["kind"], effect=EFFECT,
+            transcription=transcription,
             refs=[rid, *([item_id] if item_id else []),
                   *dict.fromkeys(ev["id"] for ev in art["evidence"] if ev["kind"] == "RECORD")])
         challenge_records.append(challenge)

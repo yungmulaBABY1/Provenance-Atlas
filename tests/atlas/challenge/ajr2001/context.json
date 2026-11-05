@@ -3,7 +3,7 @@
  "run": {
   "id": "urn:atlas:challenge:ajr2001-citation-network:1",
   "operator": "Deterministic program atlas.challenge.",
-  "purpose": "Record the three items the citation-network checker leaves for human review on the AJR 2001 run, each with its challenge state, and any challenge decided by a person or a separately run reviewer. As of this context no challenge has been made.",
+  "purpose": "Record the three items the citation-network checker leaves for human review on the AJR 2001 run, each with its challenge state, and any challenge decided by a person or a separately run reviewer. Challenges on record: one per item by each of two separately run model reviewers, ChatGPT/Codex and ChatGPT (GPT-6), transcribed verbatim from their answers as supplied by the repository owner on 4 November 2026.",
   "recorded_by": "Context written by Claude (Anthropic) in a Claude Code session, 4 November 2026, at the repository owner's request. Records built by the deterministic program atlas.challenge."
  },
  "import_bundle": {
@@ -21,5 +21,30 @@
   "identity": "Claude (Anthropic), Claude Code session 017YUqUaM2ka4XtLriA1p3fD",
   "basis": "Wrote atlas.challenge and this context. A challenger declaring this identity, or declaring atlas_code_author YES, is rejected. Identity strings are declared, so this is a guard against honest error, not proof."
  },
- "challenges": []
+ "challenges": [
+  {
+   "path": "tests/atlas/challenge/ajr2001/challenges/item-1-chatgpt-codex.json",
+   "sha256": "74899edf0e5ff6c348204ac4f5d8da635bae03b10a3475dc2f97a63f318b66e8"
+  },
+  {
+   "path": "tests/atlas/challenge/ajr2001/challenges/item-2-chatgpt-codex.json",
+   "sha256": "4b2212b771d70fa8f69e9c0a128740bca2ad477f92fab5b5d1bcccc09dc009cf"
+  },
+  {
+   "path": "tests/atlas/challenge/ajr2001/challenges/item-3-chatgpt-codex.json",
+   "sha256": "95facd5161956ec41161771abcd6e899517cffa57ad856659da9a33e0e6b3336"
+  },
+  {
+   "path": "tests/atlas/challenge/ajr2001/challenges/item-1-chatgpt-gpt6.json",
+   "sha256": "ddd65b0e0fab3f45496837274d4d95313d0b0d1422213d473990188d0afdfb1b"
+  },
+  {
+   "path": "tests/atlas/challenge/ajr2001/challenges/item-2-chatgpt-gpt6.json",
+   "sha256": "31839476763317929782572e63d7822cb55bee75feb96ce229515136c5a17a70"
+  },
+  {
+   "path": "tests/atlas/challenge/ajr2001/challenges/item-3-chatgpt-gpt6.json",
+   "sha256": "23710847edb308c2cc027e6506e6e190678b9013b40e5f6244bc2255ad897ab1"
+  }
+ ]
 }
