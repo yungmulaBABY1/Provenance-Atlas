@@ -1,0 +1,1136 @@
+{
+ "date": "2026-11-05",
+ "reason": "abstract text (OpenAlex abstract indexes, Crossref abstracts, plain-text abstracts) removed: reconstructable abstract text in a public repository",
+ "files": [
+  {
+   "file": "citation-network/metadata/lock_abstracts.json",
+   "sha256_before": "b1f9ca72b645de0f475684027d829d838cd6b3e0a6bea689da56d6b953d07125",
+   "sha256_after": "38413915d9e4ed1e96b28896a2838057a5b5b2fa54d54a8fa3c72792c838420a",
+   "fields_replaced": 10,
+   "replacement": "marker"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/ajr2001_work.json",
+   "sha256_before": "0201704cb489948975eba5fd1cdcd29eba5392f4b462968f3d625408062528ce",
+   "sha256_after": "a609c42ac178fe5b96e0b8d50ff666a2b4c1f297842b0bbb92b19da8e4527863",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/ajr2012reply_work.json",
+   "sha256_before": "8f91a5337a4dccf293e5044ac070d7736177673b133ef38bb2ab8b8886f3bf8e",
+   "sha256_after": "935ae28c3da13ddb5ac426e711d2220a58f780d186f145230ca7776f963e32e9",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/albouy2012_work.json",
+   "sha256_before": "cc80294b2efdb628ed6037b31d327e4d98e62afe511aaba8fb2913e3df6e2b87",
+   "sha256_after": "d0faa66136e287918e38e55a25c8b76d1a0b0e68ee0747f8ef8c0b5f1e819cad",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_ajr2001.json",
+   "sha256_before": "8be25a25e57aa0306e2063f9d5dac90f0ef3b324827217e131a2add08771cf41",
+   "sha256_after": "a21780fe23d35e2548600e25429a292af473c224e065d7d97bf0bd7e51da037b",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_albouy2012.json",
+   "sha256_before": "3f1a00acc39c9b7f5b3d6057ff3014a1047eeaa6e340029465d7243210eee763",
+   "sha256_after": "d29e2e903ff53547c1210aa0d456e1bf3fd2fa2449caf794acea969ffee5305a",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_reply2012.json",
+   "sha256_before": "80bf80f043da6340da90f9af29bf9655e41f73aecb4d610811bcc19d7e6f228f",
+   "sha256_after": "eccec12c78f5ae0e9e54c918b68afc643dbd61d009e990c9d65bbf586acf257d",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top01.json",
+   "sha256_before": "80bf80f043da6340da90f9af29bf9655e41f73aecb4d610811bcc19d7e6f228f",
+   "sha256_after": "eccec12c78f5ae0e9e54c918b68afc643dbd61d009e990c9d65bbf586acf257d",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top08.json",
+   "sha256_before": "5db69c4d83ce4f7b87d975bec3914edde0f74861faa3d4851744e02e4fbaad48",
+   "sha256_after": "a5dc3be2d62c0f560567542db8ba4c1f13d3494374ccc5d79d950dcf3d8ec31d",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top12.json",
+   "sha256_before": "2b01b3e62974b079c310c7a4e7233063dbef64896ca2774eaaea8fed9b625032",
+   "sha256_after": "b8272eb0a465aabc9de0ee3ea7b919af58b8fda39f9204ec2c25d7dc33c3d687",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top13.json",
+   "sha256_before": "e50cc696f711c160bc4ec120ee459b92893448d9f46af644652bddae40932454",
+   "sha256_after": "59f02b0ea461db5b546206471b0b3ccebb1799a52387674bf584e83f2ecc8ea9",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top14.json",
+   "sha256_before": "4c1ac8b86768451439904f3c36ee39a26d2bedf9984e88c53c8e9827b24ba413",
+   "sha256_after": "7482499732a2a95ade1398ede1eea4df400ec42fbd1fcd24ae4727a8e4496a0c",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top15.json",
+   "sha256_before": "567dd04dc9d0cbf88dad1e5feef1172380b4669ff536b89c15efd9dcc094d7b0",
+   "sha256_after": "b1f1830cecb9bd4bf4dff5d7087036bf43a5051d67c444969a9a871834ad1dce",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top16.json",
+   "sha256_before": "8ca893b874d1b4a74bf1a5c371e1e7d135409d62ee04af84ec7c7c43cd63650a",
+   "sha256_after": "9db0e87d9533b880f83a38c2da65cf7f00c160b067156c98b3c093a28d0029e9",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top18.json",
+   "sha256_before": "24b8a9404d0360da181ac067e45b7ab7420136b43eb209dd0098157a86acc110",
+   "sha256_after": "025897220da1301be6d4455486aa47dacfc386e668c1bd212eba8cf557d07bea",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top20.json",
+   "sha256_before": "9f16def4f65e511d430dfb2a0e4a3ee383800812d718ab450572ed355f20eb0f",
+   "sha256_after": "cadf45db7536059025f50c092ad4ece7b881c5a8941dd29505aa278315e326a5",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top22.json",
+   "sha256_before": "52fc0fd8fd988202b15620c4ed9a2efd8d9a90042de1022966ed03e27db11a24",
+   "sha256_after": "bf8a0f6db22f884ae056d27f06532c1201b139b6a55949f22e706b9355da588a",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top23.json",
+   "sha256_before": "81fcda39794d5d3a2f37e3c473d8351003df18b5629eaf1e92639e5010a46a7a",
+   "sha256_after": "ab3e4530e40432b5c0ef6a1abced3a14d85bf7654ea9a5c5b79269299b3ec369",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top25.json",
+   "sha256_before": "d5a3a59759d45ef5b61292c1fb77f869fd0224da901fc7bb3101ea3ba1477b69",
+   "sha256_after": "22726cf0037977a4dfbd98798364e98a757227a980ed7b64d92b5bb3e7cbabcb",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top26.json",
+   "sha256_before": "6102b6257dc18ab0f5222a2a6228b4a74966d333712fc2f3a76a713e3a5ee01d",
+   "sha256_after": "0982cf8f7b5ce330a973f20f6364803c68db20d7b363bcc9e5aec916df456e4c",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top29.json",
+   "sha256_before": "caa6ce1febe976900af0176d6e40b869da3a6120b8dc14a160310a073af2f4b5",
+   "sha256_after": "907f1531d1a04bd34e978b2fe120865b8271707a11e9f7549913d5b2a35fc737",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top32.json",
+   "sha256_before": "1b449c5303b9b813c941eed3f5a814fc088a9f7a69a33304d3959373ba754588",
+   "sha256_after": "d9d3340366d904453764592b7488d524880fe2e0cb5ff25149c5b6f248936a65",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top33.json",
+   "sha256_before": "a7a3fdde896140b22083529d6cfd1dd63267fa68f9945816597fd19ea6657afd",
+   "sha256_after": "85d0c88cca459f6476c13582a1adf4ffd68410c45a682ac708b8eae0279ddf27",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top34.json",
+   "sha256_before": "4e7360693be8d2bb2b6046e5341f8fd3e2bab1123ed72308136a72f2ac379ac0",
+   "sha256_after": "07cbcb30db1af98d4ef71f5421c64176423b33b94453514ebacb9d24b5756052",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top36.json",
+   "sha256_before": "2c4236c500f70c16a9e7e374d3798fab7b9f72fcc1e03a8266c01b1634bc35aa",
+   "sha256_after": "7650abb0da626088cb1d5d7302004b5036db5a1e694ccb2d6519b7852a4cc7ae",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top39.json",
+   "sha256_before": "95854b451cd8916462ecc7dcb99ae8112e1f843277e292ced747617f4975cc3b",
+   "sha256_after": "8fc4777bcc004c8ce1b2b4635dda14cfa8d9b1ce77d779615e0cfeb226369bee",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top40.json",
+   "sha256_before": "d66ddce01154a3e17ba21b415fa3c2c363abd70c00d7c54b77916b05214d6365",
+   "sha256_after": "9522c0f3be3cf353327130d2f6201aab94f1af33900ea9017fdbe1da4c9f1af7",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top41.json",
+   "sha256_before": "a027f1b73845da1256437c762bffe7cf4fde9495623f47fa642842b152f7804f",
+   "sha256_after": "53aa8c3ab7146e4f3810ea08246b5530feb65b76caf3cfdc9b046ecf7ffe1bce",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top42.json",
+   "sha256_before": "df17bfd4245f94479b17332b6e2382a038277a1c758aa1c344c1e8883a59c22b",
+   "sha256_after": "d61d5a21cb370c50a2aeeaae52b603a83660f6a4b3f86d5196a48d5115ca3373",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top43.json",
+   "sha256_before": "8704954b88d6d8aa596b37a6ce79943c07edb5fc9cdf9a46fc0d64d9ad1a2d12",
+   "sha256_after": "4cce27b7bc30710528f98fdda7e9d48056994b3023ad20c63426f753ba6225cf",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/lockabs_F1a.json",
+   "sha256_before": "df067ed8cccc0d1971626a1bda413a91bfe46f362fa4e1461b9ed120844f8d23",
+   "sha256_after": "cef5738118f287fa6c0bc09e1f7a4fe5f7543b153e46e6931d0ca49c875eecdc",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/lockabs_F1b.json",
+   "sha256_before": "64f5ddd5b99c6ea117b134b08f2bdbd50b142a562a58ba1397cf5bbd16cb72df",
+   "sha256_after": "144b67f2318e6eb6d2a73d11288970242a285abbe2480f30885df6f9273bbefb",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/lockabs_F2a.json",
+   "sha256_before": "b9fb32595f5c042171bc75ade03a6e1cf46d97e43f2cb2899307d2517d48a3a5",
+   "sha256_after": "11c4505dbaf64dd1273651b7600450e3d9bae31172fac07916cd62ba77946da8",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/lockabs_F2b.json",
+   "sha256_before": "7e2d76abcd23784a2c53af030e1288abdc9ffb339ff1098335514d5172015c2e",
+   "sha256_after": "930b235b27e797b4c0b53e25ccf16e07244202ee23db19bc3e4e72b4013d1972",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/lockabs_F3a.json",
+   "sha256_before": "cf2bb028211aaedd6109db071727ee01b5e9bb76d36636ffa00df69619f6e671",
+   "sha256_after": "533ad5ac632df32fb255db3541675f5abe8d8d3510239441a5f328edb287a8c0",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/lockabs_F3b.json",
+   "sha256_before": "778502728bab94d0aad3f5fc1fdae90d6e6ad9629858ba88ba86874c41fdd946",
+   "sha256_after": "9b95d3d2b8e116d9c600a505bf4dcd70474268b11285a57e1d52f3a70e8fbf75",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/lockabs_F4a.json",
+   "sha256_before": "cb91dd80e58645331bb6bd670f7ee4e7d7cc7c09a47cec288390b375570f8dd4",
+   "sha256_after": "4199c88b79848c16bac1d98765ae33b447bf93eb75977bb8677e811cab019684",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/lockabs_F4b.json",
+   "sha256_before": "5d8c1aabeebe483ba00900f4bb39d3915cf2f111eabda27e0ef02c18c539385c",
+   "sha256_after": "1a0f757e98b531968740ad28ccfe4d9be8d4bdbbd4665205a524ee14c8e362da",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/lockabs_F6a.json",
+   "sha256_before": "0d8d0e37de7a944d42938a0d07a7a23f7cf64f95f087c3b5778fb4fd160c9419",
+   "sha256_after": "da17a426149d337a1e20b9d7b5704e224a2bd41f4a34604bf6d09e4aaec3497b",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/lockabs_F6b.json",
+   "sha256_before": "f0751a9b0b604dddc5b37e346f1e206c55e910905c4b668b4348b61784a0cfe9",
+   "sha256_after": "3134a9ea057b634a59081d5b3ff65432ea348096a60d22ab047785ff0dade0c7",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/recent25_abstracts.json",
+   "sha256_before": "172ea3a4db7354564a22712f456e21261165678ef85ccecaed0ac7d0554ca856",
+   "sha256_after": "4a64e04dbed3b243f122bd9ebf97fd1845ac542b33c5cd5cf8b9ceb5252246b1",
+   "fields_replaced": 12,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "sha256_before": "0c56fa26feb8bdc07a345bb27cae5fa3f30fc28525c1e1d6b801710a1c728fba",
+   "sha256_after": "c943828b5926aa319d0533a36314cf20325dfddd1bde5a4128a9dabf2ee84fc8",
+   "fields_replaced": 39,
+   "replacement": "null"
+  },
+  {
+   "file": "citation-network/metadata/recent25_coded_inputs.json",
+   "sha256_before": "30fff87b602fb4f675fb8c678a066a698128a3a6c291704b61a9b866a7194165",
+   "sha256_after": "6a8ae41a9781099fefa2a52ad70bbe4673b70a05f6dff5d307c252515b9b19d0",
+   "fields_replaced": 12,
+   "replacement": "marker"
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "sha256_before": "761132991f42d16a69d6745c7265d1b5800254b33509f26fe9cff584c3371fb8",
+   "sha256_after": "ac4c8dcd43ff7636d3504eae831f262cf35941a2aa0241f5003296dbbbaabf09",
+   "fields_replaced": 39,
+   "replacement": "marker"
+  },
+  {
+   "file": "sources/reception/openalex_ajr2001.json",
+   "sha256_before": "82305441e3134a718cbcea9c26512b5fdff191de966465bcdb9f72ad83d75885",
+   "sha256_after": "71430d5de67555587b0cb39cdae88a81f7dc09704c6240b1cc87e9a229a96245",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "sources/reception/openalex_ajr2012reply.json",
+   "sha256_before": "3776ffb4c55906fb5e050b31d088681848d3fa13cd966945990b0dc2ca5d3bc7",
+   "sha256_after": "f2750c88fb69545aaa54ca5fe89c439d0a4f101dc056bb377b889f3ac571aee3",
+   "fields_replaced": 1,
+   "replacement": "null"
+  },
+  {
+   "file": "sources/reception/openalex_albouy2012.json",
+   "sha256_before": "8c79ae445aa475f11b597af50560b27cf3571dc97d2071535e3eb3f73e62afbb",
+   "sha256_after": "771662174a4045357861e0c5cd607be6df776575a74d6401ccdddabe4dffd88b",
+   "fields_replaced": 1,
+   "replacement": "null"
+  }
+ ],
+ "works": [
+  {
+   "file": "citation-network/metadata/lock_abstracts.json",
+   "id": "F1a",
+   "words": 269
+  },
+  {
+   "file": "citation-network/metadata/lock_abstracts.json",
+   "id": "F1b",
+   "words": 154
+  },
+  {
+   "file": "citation-network/metadata/lock_abstracts.json",
+   "id": "F2a",
+   "words": 110
+  },
+  {
+   "file": "citation-network/metadata/lock_abstracts.json",
+   "id": "F2b",
+   "words": 204
+  },
+  {
+   "file": "citation-network/metadata/lock_abstracts.json",
+   "id": "F3a",
+   "words": 115
+  },
+  {
+   "file": "citation-network/metadata/lock_abstracts.json",
+   "id": "F3b",
+   "words": 98
+  },
+  {
+   "file": "citation-network/metadata/lock_abstracts.json",
+   "id": "F4a",
+   "words": 151
+  },
+  {
+   "file": "citation-network/metadata/lock_abstracts.json",
+   "id": "F4b",
+   "words": 245
+  },
+  {
+   "file": "citation-network/metadata/lock_abstracts.json",
+   "id": "F6a",
+   "words": 220
+  },
+  {
+   "file": "citation-network/metadata/lock_abstracts.json",
+   "id": "F6b",
+   "words": 103
+  },
+  {
+   "file": "citation-network/metadata/raw-api/ajr2001_work.json",
+   "id": "https://openalex.org/W3124166904",
+   "words": 104
+  },
+  {
+   "file": "citation-network/metadata/raw-api/ajr2012reply_work.json",
+   "id": "https://openalex.org/W3124131699",
+   "words": 109
+  },
+  {
+   "file": "citation-network/metadata/raw-api/albouy2012_work.json",
+   "id": "https://openalex.org/W1969918011",
+   "words": 105
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_ajr2001.json",
+   "id": "10.1257/aer.91.5.1369",
+   "words": 104
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_albouy2012.json",
+   "id": "10.1257/aer.102.6.3059",
+   "words": 105
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_reply2012.json",
+   "id": "10.1257/aer.102.6.3077",
+   "words": 109
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top01.json",
+   "id": "10.1257/aer.102.6.3077",
+   "words": 109
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top08.json",
+   "id": "10.1126/science.1144581",
+   "words": 113
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top12.json",
+   "id": "10.1257/jel.46.3.607",
+   "words": 163
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top13.json",
+   "id": "10.1257/0022051042177685",
+   "words": 120
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top14.json",
+   "id": "10.1257/jel.52.3.740",
+   "words": 153
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top15.json",
+   "id": "10.1257/jel.49.2.366",
+   "words": 155
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top16.json",
+   "id": "10.1257/mac.4.3.66",
+   "words": 88
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top18.json",
+   "id": "10.1257/aer.101.7.3221",
+   "words": 100
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top20.json",
+   "id": "10.1257/089533005774357860",
+   "words": 72
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top22.json",
+   "id": "10.1257/aer.99.4.1218",
+   "words": 105
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top23.json",
+   "id": "10.1257/jel.48.1.3",
+   "words": 204
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top25.json",
+   "id": "10.1257/aer.98.3.808",
+   "words": 105
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top26.json",
+   "id": "10.1257/jep.24.2.3",
+   "words": 199
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top29.json",
+   "id": "10.1257/jel.53.4.898",
+   "words": 69
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top32.json",
+   "id": "10.1093/0199267669.001.0001",
+   "words": 53
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top33.json",
+   "id": "10.1146/annurev.polisci.10.081205.095418",
+   "words": 181
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top34.json",
+   "id": "10.1111/j.1468-0491.2008.00391.x",
+   "words": 148
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top36.json",
+   "id": "10.1257/aer.98.1.439",
+   "words": 107
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top39.json",
+   "id": "10.1257/jel.48.2.424",
+   "words": 244
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top40.json",
+   "id": "10.1257/aer.100.5.2060",
+   "words": 109
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top41.json",
+   "id": "10.1257/aer.98.1.267",
+   "words": 160
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top42.json",
+   "id": "10.1257/0002828054825574",
+   "words": 100
+  },
+  {
+   "file": "citation-network/metadata/raw-api/crossref_top43.json",
+   "id": "10.1257/jep.23.2.29",
+   "words": 265
+  },
+  {
+   "file": "citation-network/metadata/raw-api/lockabs_F1a.json",
+   "id": "https://openalex.org/W139828295",
+   "words": 269
+  },
+  {
+   "file": "citation-network/metadata/raw-api/lockabs_F1b.json",
+   "id": "https://openalex.org/W2088758477",
+   "words": 154
+  },
+  {
+   "file": "citation-network/metadata/raw-api/lockabs_F2a.json",
+   "id": "https://openalex.org/W2618788771",
+   "words": 110
+  },
+  {
+   "file": "citation-network/metadata/raw-api/lockabs_F2b.json",
+   "id": "https://openalex.org/W1492460295",
+   "words": 204
+  },
+  {
+   "file": "citation-network/metadata/raw-api/lockabs_F3a.json",
+   "id": "https://openalex.org/W3121822366",
+   "words": 115
+  },
+  {
+   "file": "citation-network/metadata/raw-api/lockabs_F3b.json",
+   "id": "https://openalex.org/W2035652178",
+   "words": 98
+  },
+  {
+   "file": "citation-network/metadata/raw-api/lockabs_F4a.json",
+   "id": "https://openalex.org/W2165144879",
+   "words": 151
+  },
+  {
+   "file": "citation-network/metadata/raw-api/lockabs_F4b.json",
+   "id": "https://openalex.org/W1980412904",
+   "words": 245
+  },
+  {
+   "file": "citation-network/metadata/raw-api/lockabs_F6a.json",
+   "id": "https://openalex.org/W3121147769",
+   "words": 220
+  },
+  {
+   "file": "citation-network/metadata/raw-api/lockabs_F6b.json",
+   "id": "https://openalex.org/W2010235856",
+   "words": 103
+  },
+  {
+   "file": "citation-network/metadata/raw-api/recent25_abstracts.json",
+   "id": "https://openalex.org/W4292849668",
+   "words": 242
+  },
+  {
+   "file": "citation-network/metadata/raw-api/recent25_abstracts.json",
+   "id": "https://openalex.org/W4212979054",
+   "words": 99
+  },
+  {
+   "file": "citation-network/metadata/raw-api/recent25_abstracts.json",
+   "id": "https://openalex.org/W4224261420",
+   "words": 155
+  },
+  {
+   "file": "citation-network/metadata/raw-api/recent25_abstracts.json",
+   "id": "https://openalex.org/W4307547529",
+   "words": 202
+  },
+  {
+   "file": "citation-network/metadata/raw-api/recent25_abstracts.json",
+   "id": "https://openalex.org/W3211527536",
+   "words": 189
+  },
+  {
+   "file": "citation-network/metadata/raw-api/recent25_abstracts.json",
+   "id": "https://openalex.org/W4386322040",
+   "words": 190
+  },
+  {
+   "file": "citation-network/metadata/raw-api/recent25_abstracts.json",
+   "id": "https://openalex.org/W3124497653",
+   "words": 217
+  },
+  {
+   "file": "citation-network/metadata/raw-api/recent25_abstracts.json",
+   "id": "https://openalex.org/W4388274323",
+   "words": 94
+  },
+  {
+   "file": "citation-network/metadata/raw-api/recent25_abstracts.json",
+   "id": "https://openalex.org/W4281705180",
+   "words": 102
+  },
+  {
+   "file": "citation-network/metadata/raw-api/recent25_abstracts.json",
+   "id": "https://openalex.org/W4387877962",
+   "words": 445
+  },
+  {
+   "file": "citation-network/metadata/raw-api/recent25_abstracts.json",
+   "id": "https://openalex.org/W4200592490",
+   "words": 199
+  },
+  {
+   "file": "citation-network/metadata/raw-api/recent25_abstracts.json",
+   "id": "https://openalex.org/W4390870694",
+   "words": 148
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W3124131699",
+   "words": 109
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W2890314743",
+   "words": 113
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W2108614304",
+   "words": 289
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W3123436326",
+   "words": 396
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W2064927380",
+   "words": 113
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W1484474409",
+   "words": 97
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W1480274481",
+   "words": 163
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W3125697804",
+   "words": 120
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W2104834906",
+   "words": 153
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W3123261979",
+   "words": 150
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W2109890836",
+   "words": 88
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W2148534039",
+   "words": 127
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W2145309110",
+   "words": 100
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W1934649023",
+   "words": 298
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W3023420463",
+   "words": 72
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W2789051288",
+   "words": 105
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W4253884756",
+   "words": 204
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W2150851272",
+   "words": 93
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W3121534672",
+   "words": 105
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W3123293195",
+   "words": 199
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W2046507863",
+   "words": 138
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W2591654989",
+   "words": 69
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W3125767605",
+   "words": 161
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W2490362664",
+   "words": 53
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W2114854852",
+   "words": 181
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W2123148076",
+   "words": 148
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W3121354442",
+   "words": 81
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W2152556759",
+   "words": 107
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W2103130810",
+   "words": 244
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W2090766907",
+   "words": 109
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W3125033761",
+   "words": 160
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W1511665033",
+   "words": 100
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W2107205575",
+   "words": 265
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W2113596540",
+   "words": 767
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W2131499322",
+   "words": 126
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W2889827801",
+   "words": 127
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W3123773675",
+   "words": 158
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W3121532354",
+   "words": 101
+  },
+  {
+   "file": "citation-network/metadata/raw-api/top50_abstracts.json",
+   "id": "https://openalex.org/W3126058703",
+   "words": 100
+  },
+  {
+   "file": "citation-network/metadata/recent25_coded_inputs.json",
+   "id": "W4292849668",
+   "words": 242
+  },
+  {
+   "file": "citation-network/metadata/recent25_coded_inputs.json",
+   "id": "W4212979054",
+   "words": 99
+  },
+  {
+   "file": "citation-network/metadata/recent25_coded_inputs.json",
+   "id": "W4224261420",
+   "words": 155
+  },
+  {
+   "file": "citation-network/metadata/recent25_coded_inputs.json",
+   "id": "W4307547529",
+   "words": 202
+  },
+  {
+   "file": "citation-network/metadata/recent25_coded_inputs.json",
+   "id": "W3211527536",
+   "words": 189
+  },
+  {
+   "file": "citation-network/metadata/recent25_coded_inputs.json",
+   "id": "W4386322040",
+   "words": 190
+  },
+  {
+   "file": "citation-network/metadata/recent25_coded_inputs.json",
+   "id": "W3124497653",
+   "words": 217
+  },
+  {
+   "file": "citation-network/metadata/recent25_coded_inputs.json",
+   "id": "W4388274323",
+   "words": 94
+  },
+  {
+   "file": "citation-network/metadata/recent25_coded_inputs.json",
+   "id": "W4281705180",
+   "words": 102
+  },
+  {
+   "file": "citation-network/metadata/recent25_coded_inputs.json",
+   "id": "W4387877962",
+   "words": 445
+  },
+  {
+   "file": "citation-network/metadata/recent25_coded_inputs.json",
+   "id": "W4200592490",
+   "words": 199
+  },
+  {
+   "file": "citation-network/metadata/recent25_coded_inputs.json",
+   "id": "W4390870694",
+   "words": 148
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W3124131699",
+   "words": 109
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W2890314743",
+   "words": 113
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W2108614304",
+   "words": 289
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W3123436326",
+   "words": 396
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W2064927380",
+   "words": 113
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W1484474409",
+   "words": 97
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W1480274481",
+   "words": 163
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W3125697804",
+   "words": 120
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W2104834906",
+   "words": 153
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W3123261979",
+   "words": 150
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W2109890836",
+   "words": 88
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W2148534039",
+   "words": 127
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W2145309110",
+   "words": 100
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W1934649023",
+   "words": 298
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W3023420463",
+   "words": 72
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W2789051288",
+   "words": 105
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W4253884756",
+   "words": 204
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W2150851272",
+   "words": 93
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W3121534672",
+   "words": 105
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W3123293195",
+   "words": 199
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W2046507863",
+   "words": 138
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W2591654989",
+   "words": 69
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W3125767605",
+   "words": 161
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W2490362664",
+   "words": 53
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W2114854852",
+   "words": 181
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W2123148076",
+   "words": 148
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W3121354442",
+   "words": 81
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W2152556759",
+   "words": 107
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W2103130810",
+   "words": 244
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W2090766907",
+   "words": 109
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W3125033761",
+   "words": 160
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W1511665033",
+   "words": 100
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W2107205575",
+   "words": 265
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W2113596540",
+   "words": 767
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W2131499322",
+   "words": 126
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W2889827801",
+   "words": 127
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W3123773675",
+   "words": 158
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W3121532354",
+   "words": 101
+  },
+  {
+   "file": "citation-network/metadata/top50_coded_inputs.json",
+   "id": "W3126058703",
+   "words": 100
+  },
+  {
+   "file": "sources/reception/openalex_ajr2001.json",
+   "id": "https://openalex.org/W3124166904",
+   "words": 104
+  },
+  {
+   "file": "sources/reception/openalex_ajr2012reply.json",
+   "id": "https://openalex.org/W3124131699",
+   "words": 109
+  },
+  {
+   "file": "sources/reception/openalex_albouy2012.json",
+   "id": "https://openalex.org/W1969918011",
+   "words": 105
+  }
+ ],
+ "fields_replaced": 154,
+ "kept_pinned": [
+  {
+   "file": "citation-network/metadata/raw-api/lock_F1.json",
+   "fields_left": 2,
+   "sha256": "f393f6213e8ecf59c8badb8e75369261205be7ba3789808dca73a3162b501e37"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/lock_F2.json",
+   "fields_left": 2,
+   "sha256": "8d45da708557a77774d81f1566185211ac33cd803dae47a22bb17bb76da500c1"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/lock_F3.json",
+   "fields_left": 2,
+   "sha256": "2f96461f3de3306a22c6e718caaeb20a6616571eb0e4c7f9fb3a97529e42d30e"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/lock_F4.json",
+   "fields_left": 2,
+   "sha256": "34c678057d76568b0a17571195a061fa8e46e6241d7845257396fe128543c406"
+  },
+  {
+   "file": "citation-network/metadata/raw-api/lock_F6.json",
+   "fields_left": 2,
+   "sha256": "f8f8b26fa96bd29837cd2bd3a9466db37972c985b9c8b661d00f2e542a2a01b0"
+  }
+ ],
+ "kept_reason": "cited whole, by sha256, as reviewer evidence in tests/atlas/challenge/ajr2001/ (challenge records)"
+}
