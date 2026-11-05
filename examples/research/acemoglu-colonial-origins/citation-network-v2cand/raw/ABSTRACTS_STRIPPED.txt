@@ -1,0 +1,157 @@
+ABSTRACTS_STRIPPED
+Date: 2026-11-04 (America/Los_Angeles); written 2026-11-05 ~05:52 UTC.
+Branch: audit/acemoglu-colonial-origins-v2cand
+Reason: OpenAlex abstract_inverted_index values are reconstructable abstract text, and this branch is public.
+Commit 84d1800faf71788c46bb4c4e968ab3cb42d24b11 still contains the original abstracts in git history.
+Removing those originals from history is the repository owner's decision; this commit does not rewrite history.
+
+Why word counts are recorded:
+scripts/gen_ledger.py codes Source access ABSTRACT or METADATA from whether an abstract is present.
+Once the abstracts are stripped, rerunning gen_ledger.py would turn those rows into METADATA.
+Do not rerun it. The word counts below keep the committed ABSTRACT codes checkable.
+Word count = number of token positions in the inverted index (sum of position-list lengths); no abstract text is retained.
+
+Total abstract fields nulled: 100
+Distinct OpenAlex works: 98
+
+Per-file summary
+================
+adj1_Q1.json
+  sha256 at 84d1800: 5bce865fc785436298d66416d4606d962e48eab69bcaaf4e5f23ec79682cb127
+  sha256 after strip: f069156a24f11934db8481ae72291be386566e1122cbaf2e5cfd71d89daf7590
+  abstract fields removed: 7
+adj1_Q2.json
+  sha256 at 84d1800: 7eb69f33d2941b60b572e28d69e07b58bde0331d3dd761af9445a2737776a605
+  sha256 after strip: 6e5e0f130da3e5b110e8b65b62bf2ef789b20a71b87031cbad596dee29ae0a05
+  abstract fields removed: 8
+adj1_Q3.json
+  sha256 at 84d1800: 1d8f548027d319a0a45c53f0237d3bcd5e3625d57a0854febccafed601aca9fb
+  sha256 after strip: 7ceaeee636b49e547c54c1e13dea00685f7aba93137f727cd377971cb62388ef
+  abstract fields removed: 6
+adj1_Q4.json
+  sha256 at 84d1800: 8ffc728a5c3f738d82ea23772caba426f726297daca4d6ccda5fee40913f6103
+  sha256 after strip: b173768145a7e5873bcc5b64006a124229cca8afccb997170961616a83d40243
+  abstract fields removed: 8
+adj1_Q5.json
+  sha256 at 84d1800: 7350793f0d0dfb78417ef35c259c314afb4ea97783c56dd54d170d35b3068c8e
+  sha256 after strip: 403b935a47b47bdfd05cfadeb7f80fc294dbb2bc5bfd129b325b25413ae83181
+  abstract fields removed: 9
+adj1_Q6.json
+  sha256 at 84d1800: 805a7097f32ea08042aee6190b1102920e8bee041035e3615faf57a70bc5939d
+  sha256 after strip: 7111551910a0a6cdea36af932c4aba3ce17a4f2fbe79ac1c070e2be8a47acbde
+  abstract fields removed: 9
+ajr2001_work.json
+  sha256 at 84d1800: 9c78c8a840187aff3b84702a12d349f286b02077defffdcc3f9b58715b0ced38
+  sha256 after strip: 788ddef5faed04ed858d858e57552b1600285558edbad63a0a6374361807fba8
+  abstract fields removed: 1
+recent1_abstracts.json
+  sha256 at 84d1800: 2c0f36525a3fe0b15329cea86bd8d5c20932744df481fe6cd286f7e33cc28e22
+  sha256 after strip: b1d9431eba2a71e26c6daf2ed655da6c3f76c517fa1c8788129e9f850075a787
+  abstract fields removed: 13
+reception1_abstracts.json
+  sha256 at 84d1800: f277f6c00b21f133330b180422d4d23d685f519e98b54dea1dde4ebc0d882c36
+  sha256 after strip: 5bad44a0e028a7960209d1e46d7628e09bba35e863b8fe18db1b0140afb658e2
+  abstract fields removed: 39
+
+Per-work stripped (OpenAlex ID, word count)
+==========================================
+adj1_Q1.json	W7167818940	176
+adj1_Q1.json	W7110560615	285
+adj1_Q1.json	W140439859	151
+adj1_Q1.json	W2047459800	121
+adj1_Q1.json	W2612901723	114
+adj1_Q1.json	W1578613673	108
+adj1_Q1.json	W2945529632	92
+adj1_Q2.json	W1589075589	285
+adj1_Q2.json	W7110560615	285
+adj1_Q2.json	W2945529632	92
+adj1_Q2.json	W7137625625	203
+adj1_Q2.json	W2123048668	96
+adj1_Q2.json	W2086477250	268
+adj1_Q2.json	W3161497846	158
+adj1_Q2.json	W1978529482	126
+adj1_Q3.json	W4292553381	124
+adj1_Q3.json	W2600922460	188
+adj1_Q3.json	W1977418886	186
+adj1_Q3.json	W2802938645	198
+adj1_Q3.json	W192439523	625
+adj1_Q3.json	W7155374057	151
+adj1_Q4.json	W3124718896	100
+adj1_Q4.json	W3123032229	100
+adj1_Q4.json	W1988424882	303
+adj1_Q4.json	W1529198445	40
+adj1_Q4.json	W4296052492	149
+adj1_Q4.json	W144118490	128
+adj1_Q4.json	W2566351377	27
+adj1_Q4.json	W2001123479	173
+adj1_Q5.json	W4407425804	197
+adj1_Q5.json	W3022286213	91
+adj1_Q5.json	W7162082492	153
+adj1_Q5.json	W7161015320	202
+adj1_Q5.json	W2069316799	177
+adj1_Q5.json	W4323897988	93
+adj1_Q5.json	W2231632438	188
+adj1_Q5.json	W7168135264	192
+adj1_Q5.json	W2001270353	121
+adj1_Q6.json	W3119817639	129
+adj1_Q6.json	W2925821398	110
+adj1_Q6.json	W1560261142	109
+adj1_Q6.json	W1488479141	172
+adj1_Q6.json	W2143392786	97
+adj1_Q6.json	W1809608383	107
+adj1_Q6.json	W7168616766	237
+adj1_Q6.json	W4365447584	99
+adj1_Q6.json	W7165369567	183
+ajr2001_work.json	W3124166904	173
+recent1_abstracts.json	W4292849668	242
+recent1_abstracts.json	W4212979054	99
+recent1_abstracts.json	W4224261420	155
+recent1_abstracts.json	W4307547529	202
+recent1_abstracts.json	W4376140760	91
+recent1_abstracts.json	W4386322040	190
+recent1_abstracts.json	W4388274323	94
+recent1_abstracts.json	W4281705180	102
+recent1_abstracts.json	W4404201184	130
+recent1_abstracts.json	W4390870694	148
+recent1_abstracts.json	W4200592490	199
+recent1_abstracts.json	W4387877962	445
+recent1_abstracts.json	W4386028756	180
+reception1_abstracts.json	W3124131699	109
+reception1_abstracts.json	W2890314743	113
+reception1_abstracts.json	W2113844427	87
+reception1_abstracts.json	W3125412951	148
+reception1_abstracts.json	W3123436326	396
+reception1_abstracts.json	W2108614304	289
+reception1_abstracts.json	W2064927380	113
+reception1_abstracts.json	W1484474409	97
+reception1_abstracts.json	W4240669445	152
+reception1_abstracts.json	W1480274481	163
+reception1_abstracts.json	W3021593216	150
+reception1_abstracts.json	W3125697804	120
+reception1_abstracts.json	W2148534039	127
+reception1_abstracts.json	W3123261979	150
+reception1_abstracts.json	W2104834906	153
+reception1_abstracts.json	W2109890836	88
+reception1_abstracts.json	W2145309110	100
+reception1_abstracts.json	W3122357778	100
+reception1_abstracts.json	W1934649023	298
+reception1_abstracts.json	W2155346737	122
+reception1_abstracts.json	W2110434128	254
+reception1_abstracts.json	W3125767605	161
+reception1_abstracts.json	W3023420463	72
+reception1_abstracts.json	W1977433163	115
+reception1_abstracts.json	W2789051288	105
+reception1_abstracts.json	W4253884756	204
+reception1_abstracts.json	W2046507863	138
+reception1_abstracts.json	W3123293195	199
+reception1_abstracts.json	W2150851272	93
+reception1_abstracts.json	W3121534672	105
+reception1_abstracts.json	W2591654989	69
+reception1_abstracts.json	W2123148076	148
+reception1_abstracts.json	W2490362664	53
+reception1_abstracts.json	W2114854852	181
+reception1_abstracts.json	W3121354442	81
+reception1_abstracts.json	W3124568416	122
+reception1_abstracts.json	W2168966825	97
+reception1_abstracts.json	W2152556759	107
+reception1_abstracts.json	W3125033761	253

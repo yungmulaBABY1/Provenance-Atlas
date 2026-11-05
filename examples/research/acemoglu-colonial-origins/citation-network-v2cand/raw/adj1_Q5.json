@@ -1,1 +1,2191 @@
-{"meta": {"notice": "No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address. The mailto parameter doesn't raise this limit. Get a free key with its own $1/day at https://openalex.org/settings/api and add api_key=YOUR_KEY to your requests. An AI agent can get one for its user in one call: POST https://api.openalex.org/api-keys with {\"email\": \"<your user's email>\"}; we email them a link, and the key works once they click it. Docs for agents: https://help.openalex.org/llms.txt", "count": 276, "db_response_time_ms": 86, "page": 1, "per_page": 10, "groups_count": null, "x_query": {"oql": "get works from 2001-01-01 through 2026-11-04 with (institutions AND (stemmed \"economic development\" OR stemmed \"income per capita\") AND (stemmed \"instrumental variable\" OR stemmed \"instrumental variables\" OR stemmed \"natural experiment\") NOT stemmed \"settler mortality\") in the title or abstract where type is ([article](article) or [preprint](preprint))", "x_new_oql": "get works from 2001-01-01 through 2026-11-04 with (institutions AND (stemmed \"economic development\" OR stemmed \"income per capita\") AND (stemmed \"instrumental variable\" OR stemmed \"instrumental variables\" OR stemmed \"natural experiment\") NOT stemmed \"settler mortality\") in the title or abstract where type is ([article](article) or [preprint](preprint))", "oqo": {"get_rows": "works", "filter_rows": [{"column_id": "from_publication_date", "value": "2001-01-01"}, {"column_id": "title_and_abstract.search", "value": "\"settler mortality\"", "operator": "has", "is_negated": true}, {"column_id": "title_and_abstract.search", "value": "institutions", "operator": "has"}, {"column_id": "to_publication_date", "value": "2026-11-04"}, {"join": "or", "filters": [{"column_id": "title_and_abstract.search", "value": "\"economic development\"", "operator": "has"}, {"column_id": "title_and_abstract.search", "value": "\"income per capita\"", "operator": "has"}]}, {"join": "or", "filters": [{"column_id": "title_and_abstract.search", "value": "\"instrumental variable\"", "operator": "has"}, {"column_id": "title_and_abstract.search", "value": "\"instrumental variables\"", "operator": "has"}, {"column_id": "title_and_abstract.search", "value": "\"natural experiment\"", "operator": "has"}]}, {"join": "or", "filters": [{"column_id": "type", "value": "article"}, {"column_id": "type", "value": "preprint"}]}]}, "url": "/works?filter=from_publication_date:2001-01-01,title_and_abstract.search:%21%22settler mortality%22,title_and_abstract.search:institutions,to_publication_date:2026-11-04,title_and_abstract.search:%22economic development%22|%22income per capita%22,title_and_abstract.search:%22instrumental variable%22|%22instrumental variables%22|%22natural experiment%22,type:article|preprint&per_page=10&page=1", "order": "best matches first", "order_default": true}, "cost_usd": 0.001}, "results": [{"id": "https://openalex.org/W4407425804", "doi": "https://doi.org/10.48550/arxiv.2502.07641", "display_name": "Distributional Instrumental Variable Method", "publication_year": 2025, "type": "preprint", "cited_by_count": 1, "authorships": [{"author_position": "first", "author": {"id": "https://openalex.org/A5045156384", "display_name": "Anastasiia Holovchak", "orcid": "https://orcid.org/0009-0000-5687-2308", "observed_orcids": ["https://orcid.org/0009-0000-5687-2308"]}, "institutions": [{"id": "https://openalex.org/I35440088", "display_name": "ETH Zurich", "ror": "https://ror.org/05a28rw58", "country_code": "CH", "type": "education", "lineage": ["https://openalex.org/I2799323385", "https://openalex.org/I35440088"]}, {"id": "https://openalex.org/I4405257864", "display_name": "Seminar for Statistics", "ror": "https://ror.org/05rkrf147", "country_code": "CH", "type": "facility", "lineage": ["https://openalex.org/I2799323385", "https://openalex.org/I35440088", "https://openalex.org/I4405257864"]}], "countries": ["CH"], "is_corresponding": false, "raw_author_name": "Holovchak, Anastasiia", "raw_affiliation_strings": ["Seminar f\u00fcr Statistik , ETH Z\u00fcrich"], "raw_orcid": null, "affiliations": [{"raw_affiliation_string": "Seminar f\u00fcr Statistik , ETH Z\u00fcrich", "institution_ids": ["https://openalex.org/I35440088", "https://openalex.org/I4405257864"]}]}, {"author_position": "middle", "author": {"id": "https://openalex.org/A5052823119", "display_name": "Sorawit Saengkyongam", "orcid": "https://orcid.org/0000-0003-1581-259X", "observed_orcids": ["https://orcid.org/0000-0003-1581-259X"]}, "institutions": [{"id": "https://openalex.org/I35440088", "display_name": "ETH Zurich", "ror": "https://ror.org/05a28rw58", "country_code": "CH", "type": "education", "lineage": ["https://openalex.org/I2799323385", "https://openalex.org/I35440088"]}, {"id": "https://openalex.org/I4405257864", "display_name": "Seminar for Statistics", "ror": "https://ror.org/05rkrf147", "country_code": "CH", "type": "facility", "lineage": ["https://openalex.org/I2799323385", "https://openalex.org/I35440088", "https://openalex.org/I4405257864"]}], "countries": ["CH"], "is_corresponding": false, "raw_author_name": "Saengkyongam, Sorawit", "raw_affiliation_strings": ["Seminar f\u00fcr Statistik , ETH Z\u00fcrich"], "raw_orcid": null, "affiliations": [{"raw_affiliation_string": "Seminar f\u00fcr Statistik , ETH Z\u00fcrich", "institution_ids": ["https://openalex.org/I35440088", "https://openalex.org/I4405257864"]}]}, {"author_position": "middle", "author": {"id": "https://openalex.org/A5113173834", "display_name": "Nicolai Meinshausen", "orcid": null, "observed_orcids": []}, "institutions": [{"id": "https://openalex.org/I35440088", "display_name": "ETH Zurich", "ror": "https://ror.org/05a28rw58", "country_code": "CH", "type": "education", "lineage": ["https://openalex.org/I2799323385", "https://openalex.org/I35440088"]}, {"id": "https://openalex.org/I4405257864", "display_name": "Seminar for Statistics", "ror": "https://ror.org/05rkrf147", "country_code": "CH", "type": "facility", "lineage": ["https://openalex.org/I2799323385", "https://openalex.org/I35440088", "https://openalex.org/I4405257864"]}], "countries": ["CH"], "is_corresponding": false, "raw_author_name": "Meinshausen, Nicolai", "raw_affiliation_strings": ["Seminar f\u00fcr Statistik , Department of Mathematics , ETH Z\u00fcrich , R\u00e4mistrasse 101 , 8092 Z\u00fcrich , Switzerland", "Seminar f\u00fcr Statistik , ETH Z\u00fcrich"], "raw_orcid": null, "affiliations": [{"raw_affiliation_string": "Seminar f\u00fcr Statistik , Department of Mathematics , ETH Z\u00fcrich , R\u00e4mistrasse 101 , 8092 Z\u00fcrich , Switzerland", "institution_ids": ["https://openalex.org/I35440088", "https://openalex.org/I4405257864"]}, {"raw_affiliation_string": "Seminar f\u00fcr Statistik , ETH Z\u00fcrich", "institution_ids": ["https://openalex.org/I35440088", "https://openalex.org/I4405257864"]}]}, {"author_position": "last", "author": {"id": "https://openalex.org/A5072402741", "display_name": "Xinwei Shen", "orcid": "https://orcid.org/0000-0002-7801-4803", "observed_orcids": ["https://orcid.org/0000-0002-7801-4803"]}, "institutions": [{"id": "https://openalex.org/I35440088", "display_name": "ETH Zurich", "ror": "https://ror.org/05a28rw58", "country_code": "CH", "type": "education", "lineage": ["https://openalex.org/I2799323385", "https://openalex.org/I35440088"]}, {"id": "https://openalex.org/I4405257864", "display_name": "Seminar for Statistics", "ror": "https://ror.org/05rkrf147", "country_code": "CH", "type": "facility", "lineage": ["https://openalex.org/I2799323385", "https://openalex.org/I35440088", "https://openalex.org/I4405257864"]}], "countries": ["CH"], "is_corresponding": false, "raw_author_name": "Shen, Xinwei", "raw_affiliation_strings": ["Seminar f\u00fcr Statistik , ETH Z\u00fcrich"], "raw_orcid": null, "affiliations": [{"raw_affiliation_string": "Seminar f\u00fcr Statistik , ETH Z\u00fcrich", "institution_ids": ["https://openalex.org/I35440088", "https://openalex.org/I4405257864"]}]}], "primary_location": {"id": "pmh:oai:arXiv.org:2502.07641", "doi": null, "is_oa": true, "landing_page_url": "https://arxiv.org/abs/2502.07641", "pdf_url": "https://arxiv.org/pdf/2502.07641", "source": {"id": "https://openalex.org/S4306400194", "display_name": "arXiv (Cornell University)", "issn_l": "2331-8422", "issn": ["2331-8422"], "is_oa": true, "is_in_doaj": false, "is_core": false, "listed_in": [], "host_organization": "https://openalex.org/I205783295", "host_organization_name": "Cornell University", "host_organization_lineage": ["https://openalex.org/I205783295"], "host_organization_lineage_names": [], "type": "repository"}, "license": "cc-by", "license_id": "https://openalex.org/licenses/cc-by", "version": "submittedVersion", "is_accepted": false, "is_published": false, "raw_source_name": null, "raw_type": "text"}, "abstract_inverted_index": {"The": [0, 38, 186], "instrumental": [1], "variable": [2], "(IV)": [3], "approach": [4], "is": [5, 43], "commonly": [6], "used": [7], "to": [8, 22, 44, 138, 143, 167], "infer": [9], "causal": [10, 26, 88, 146], "effects": [11, 89], "in": [12, 63, 119, 179, 193], "the": [13, 24, 46, 72, 87, 101, 122, 128, 145, 160, 175], "presence": [14], "of": [15, 40, 71, 110, 121, 127, 189], "unmeasured": [16], "confounding.": [17], "Existing": [18], "methods": [19, 32], "typically": [20], "aim": [21, 39], "estimate": [23, 45], "mean": [25, 129], "effects,": [27], "whereas": [28], "a": [29, 52, 64, 107, 168], "few": [30], "other": [31], "focus": [33], "on": [34], "quantile": [35, 131], "treatment": [36, 132], "effects.": [37, 133], "this": [41], "work": [42], "entire": [47], "interventional": [48, 73], "distribution.": [49], "We": [50, 68, 163], "propose": [51], "method": [53, 103], "called": [54], "Distributional": [55], "Instrumental": [56], "Variable": [57], "(DIV),": [58], "which": [59], "uses": [60], "generative": [61], "modelling": [62], "nonlinear": [65], "IV": [66, 117], "setting.": [67], "establish": [69], "identifiability": [70, 123], "distribution": [74], "under": [75, 183], "general": [76], "assumptions": [77], "and": [78, 124, 151, 154, 177, 195], "demonstrate": [79], "an": [80, 139], "'under-identified'": [81], "case,": [82], "where": [83, 172], "DIV": [84, 102, 137, 166, 190], "can": [85], "identify": [86], "while": [90], "two-step": [91], "least": [92], "squares": [93], "fails": [94], "to.": [95], "Our": [96], "empirical": [97], "results": [98, 156], "show": [99], "that": [100], "performs": [104], "well": [105, 158], "for": [106], "broad": [108], "range": [109], "simulated": [111], "data,": [112], "exhibiting": [113], "advantages": [114], "over": [115], "existing": [116], "approaches": [118], "terms": [120], "estimation": [125], "error": [126], "or": [130], "Furthermore,": [134], "we": [135, 173], "apply": [136, 165], "economic": [140, 152], "data": [141, 170], "set": [142], "examine": [144], "relation": [147], "between": [148], "institutional": [149], "quality": [150], "development": [153], "our": [155], "align": [157], "with": [159], "original": [161], "study.": [162], "also": [164], "single-cell": [169], "set,": [171], "study": [174], "generalizability": [176], "stability": [178], "predicting": [180], "gene": [181], "expression": [182], "unseen": [184], "interventions.": [185], "software": [187], "implementations": [188], "are": [191], "available": [192], "R": [194], "Python.": [196]}, "referenced_works": [], "relevance_score": 41.428974}, {"id": "https://openalex.org/W3022286213", "doi": "https://doi.org/10.1111/jors.12490", "display_name": "Does graduate human capital production increase local economic development? An instrumental variable approach", "publication_year": 2020, "type": "article", "cited_by_count": 25, "authorships": [{"author_position": "first", "author": {"id": "https://openalex.org/A5014116166", "display_name": "Adalgiso Amendola", "orcid": "https://orcid.org/0000-0001-5641-1691", "observed_orcids": ["https://orcid.org/0000-0001-5641-1691"]}, "institutions": [{"id": "https://openalex.org/I131729948", "display_name": "University of Salerno", "ror": "https://ror.org/0192m2k53", "country_code": "IT", "type": "education", "lineage": ["https://openalex.org/I131729948"]}], "countries": ["IT"], "is_corresponding": false, "raw_author_name": "Adalgiso Amendola", "raw_affiliation_strings": ["Centre for Labour Economics and Economic Policy (CELPE), University of Salerno, Fisciano, Italy", "Department of Economics and Statistics, University of Salerno, Fisciano, Italy"], "raw_orcid": "https://orcid.org/0000-0001-5641-1691", "affiliations": [{"raw_affiliation_string": "Centre for Labour Economics and Economic Policy (CELPE), University of Salerno, Fisciano, Italy", "institution_ids": ["https://openalex.org/I131729948"]}, {"raw_affiliation_string": "Department of Economics and Statistics, University of Salerno, Fisciano, Italy", "institution_ids": ["https://openalex.org/I131729948"]}]}, {"author_position": "middle", "author": {"id": "https://openalex.org/A5091034011", "display_name": "Cristian Barra", "orcid": "https://orcid.org/0000-0001-8108-3888", "observed_orcids": ["https://orcid.org/0000-0001-8108-3888"]}, "institutions": [{"id": "https://openalex.org/I131729948", "display_name": "University of Salerno", "ror": "https://ror.org/0192m2k53", "country_code": "IT", "type": "education", "lineage": ["https://openalex.org/I131729948"]}], "countries": ["IT"], "is_corresponding": false, "raw_author_name": "Cristian Barra", "raw_affiliation_strings": ["Centre for Labour Economics and Economic Policy (CELPE), University of Salerno, Fisciano, Italy", "Department of Economics and Statistics, University of Salerno, Fisciano, Italy"], "raw_orcid": "https://orcid.org/0000-0001-8108-3888", "affiliations": [{"raw_affiliation_string": "Centre for Labour Economics and Economic Policy (CELPE), University of Salerno, Fisciano, Italy", "institution_ids": ["https://openalex.org/I131729948"]}, {"raw_affiliation_string": "Department of Economics and Statistics, University of Salerno, Fisciano, Italy", "institution_ids": ["https://openalex.org/I131729948"]}]}, {"author_position": "last", "author": {"id": "https://openalex.org/A5008303543", "display_name": "Roberto Zotti", "orcid": "https://orcid.org/0000-0002-9493-7659", "observed_orcids": ["https://orcid.org/0000-0002-9493-7659"]}, "institutions": [{"id": "https://openalex.org/I55143463", "display_name": "University of Turin", "ror": "https://ror.org/048tbm396", "country_code": "IT", "type": "education", "lineage": ["https://openalex.org/I55143463"]}], "countries": ["IT"], "is_corresponding": true, "raw_author_name": "Roberto Zotti", "raw_affiliation_strings": ["Department of Economics and Statistics \"Cognetti de Martiis\", University of Torino, Torino, Italy"], "raw_orcid": "https://orcid.org/0000-0002-9493-7659", "affiliations": [{"raw_affiliation_string": "Department of Economics and Statistics \"Cognetti de Martiis\", University of Torino, Torino, Italy", "institution_ids": ["https://openalex.org/I55143463"]}]}], "primary_location": {"id": "doi:10.1111/jors.12490", "doi": "https://doi.org/10.1111/jors.12490", "is_oa": false, "landing_page_url": "https://doi.org/10.1111/jors.12490", "pdf_url": null, "source": {"id": "https://openalex.org/S65528657", "display_name": "Journal of Regional Science", "issn_l": "0022-4146", "issn": ["0022-4146", "1467-9787"], "is_oa": false, "is_in_doaj": false, "is_core": true, "listed_in": ["abdc-a", "anvur-class-a", "anvur-scientific", "cwts-core", "jufo-2", "norway-1", "poland-100", "russia-white-list-1", "vabb-shw"], "host_organization": "https://openalex.org/P4310320595", "host_organization_name": "Wiley", "host_organization_lineage": ["https://openalex.org/P4310320595"], "host_organization_lineage_names": ["Wiley"], "type": "journal"}, "license": null, "license_id": null, "version": "publishedVersion", "is_accepted": true, "is_published": true, "raw_source_name": "Journal of Regional Science", "raw_type": "journal-article"}, "abstract_inverted_index": {"Abstract": [0], "Using": [1], "a": [2, 44], "survey": [3], "on": [4, 81], "Italian": [5], "graduates,": [6, 70], "we": [7, 37, 60], "investigate": [8], "whether": [9], "universities'": [10], "degree": [11], "production": [12], "affects": [13], "the": [14, 18, 63, 71, 74, 78, 86], "economic": [15, 35, 83], "development": [16, 33, 84], "of": [17, 66, 77], "regions": [19], "where": [20], "academic": [21], "institutions": [22], "are": [23], "located.": [24], "To": [25], "deal": [26], "with": [27], "suspected": [28], "endogeneity": [29], "between": [30], "human": [31, 56, 89], "capital": [32, 57], "and": [34, 69], "growth,": [36], "employ": [38], "an": [39, 53], "instrumental": [40], "variable": [41], "approach,": [42], "using": [43], "global": [45], "lump": [46], "sum": [47], "transferred": [48], "to": [49], "each": [50], "university": [51, 79], "as": [52], "instrument": [54], "for": [55, 62], "production.": [58], "Once": [59], "control": [61], "regional": [64], "flow": [65], "mobile": [67], "students": [68], "findings": [72], "reveal": [73], "beneficial": [75], "effect": [76], "system": [80], "local": [82], "through": [85], "gain": [87], "in": [88], "capital.": [90]}, "referenced_works": ["https://openalex.org/W77064602", "https://openalex.org/W96431497", "https://openalex.org/W188813872", "https://openalex.org/W1495309835", "https://openalex.org/W1505429321", "https://openalex.org/W1580993643", "https://openalex.org/W1582132356", "https://openalex.org/W1600914605", "https://openalex.org/W1603335952", "https://openalex.org/W1679759576", "https://openalex.org/W1749833815", "https://openalex.org/W1892688319", "https://openalex.org/W1964538498", "https://openalex.org/W1971633378", "https://openalex.org/W1978461618", "https://openalex.org/W1991274171", "https://openalex.org/W1995883104", "https://openalex.org/W1996426406", "https://openalex.org/W2000246740", "https://openalex.org/W2005477221", "https://openalex.org/W2005647427", "https://openalex.org/W2006782671", "https://openalex.org/W2007395741", "https://openalex.org/W2007553837", "https://openalex.org/W2009815689", "https://openalex.org/W2017500605", "https://openalex.org/W2017667975", "https://openalex.org/W2019555972", "https://openalex.org/W2023720499", "https://openalex.org/W2024157940", "https://openalex.org/W2028969078", "https://openalex.org/W2030836238", "https://openalex.org/W2031238093", "https://openalex.org/W2031564586", "https://openalex.org/W2032400608", "https://openalex.org/W2037007918", "https://openalex.org/W2040191798", "https://openalex.org/W2048287230", "https://openalex.org/W2078714009", "https://openalex.org/W2080330113", "https://openalex.org/W2082633986", "https://openalex.org/W2086147364", "https://openalex.org/W2086855051", "https://openalex.org/W2089182974", "https://openalex.org/W2095607645", "https://openalex.org/W2102840144", "https://openalex.org/W2103441334", "https://openalex.org/W2107408353", "https://openalex.org/W2108594344", "https://openalex.org/W2118811884", "https://openalex.org/W2123954937", "https://openalex.org/W2124465692", "https://openalex.org/W2129967092", "https://openalex.org/W2130051487", "https://openalex.org/W2131972564", "https://openalex.org/W2132100729", "https://openalex.org/W2136229154", "https://openalex.org/W2136708765", "https://openalex.org/W2139073173", "https://openalex.org/W2140617451", "https://openalex.org/W2147313299", "https://openalex.org/W2154234908", "https://openalex.org/W2156218521", "https://openalex.org/W2160536271", "https://openalex.org/W2162484441", "https://openalex.org/W2165144879", "https://openalex.org/W2165145543", "https://openalex.org/W2166689474", "https://openalex.org/W2167790643", "https://openalex.org/W2169653420", "https://openalex.org/W2268778290", "https://openalex.org/W2487651013", "https://openalex.org/W2509986695", "https://openalex.org/W2512545025", "https://openalex.org/W2537400035", "https://openalex.org/W2571513158", "https://openalex.org/W2748001986", "https://openalex.org/W2766563981", "https://openalex.org/W2792120450", "https://openalex.org/W2805205381", "https://openalex.org/W2891782533", "https://openalex.org/W2895260194", "https://openalex.org/W2900637885", "https://openalex.org/W2992651003", "https://openalex.org/W3022732902", "https://openalex.org/W3121227373", "https://openalex.org/W3122149918", "https://openalex.org/W3122630951", "https://openalex.org/W3122851880", "https://openalex.org/W3123382778", "https://openalex.org/W3123473602", "https://openalex.org/W4240030480", "https://openalex.org/W4300954726", "https://openalex.org/W4394909045"], "relevance_score": 41.134068}, {"id": "https://openalex.org/W7162082492", "doi": "https://doi.org/10.1002/jae.70070", "display_name": "Bayesian Model Averaging in Causal Instrumental Variable Models", "publication_year": 2026, "type": "article", "cited_by_count": 1, "authorships": [{"author_position": "first", "author": {"id": "https://openalex.org/A5052388988", "display_name": "Gregor Steiner", "orcid": "https://orcid.org/0009-0001-7996-6742", "observed_orcids": ["https://orcid.org/0009-0001-7996-6742"]}, "institutions": [{"id": "https://openalex.org/I39555362", "display_name": "University of Warwick", "ror": "https://ror.org/01a77tt86", "country_code": "GB", "type": "education", "lineage": ["https://openalex.org/I39555362"]}], "countries": ["GB"], "is_corresponding": true, "raw_author_name": "Gregor Steiner", "raw_affiliation_strings": ["Department of Statistics University of Warwick  Coventry UK"], "raw_orcid": null, "affiliations": [{"raw_affiliation_string": "Department of Statistics University of Warwick  Coventry UK", "institution_ids": ["https://openalex.org/I39555362"]}]}, {"author_position": "last", "author": {"id": "https://openalex.org/A5074617230", "display_name": "Mark Steel", "orcid": null, "observed_orcids": []}, "institutions": [{"id": "https://openalex.org/I39555362", "display_name": "University of Warwick", "ror": "https://ror.org/01a77tt86", "country_code": "GB", "type": "education", "lineage": ["https://openalex.org/I39555362"]}], "countries": ["GB"], "is_corresponding": false, "raw_author_name": "Mark Steel", "raw_affiliation_strings": ["Department of Statistics University of Warwick  Coventry UK"], "raw_orcid": null, "affiliations": [{"raw_affiliation_string": "Department of Statistics University of Warwick  Coventry UK", "institution_ids": ["https://openalex.org/I39555362"]}]}], "primary_location": {"id": "doi:10.1002/jae.70070", "doi": "https://doi.org/10.1002/jae.70070", "is_oa": true, "landing_page_url": "https://doi.org/10.1002/jae.70070", "pdf_url": null, "source": {"id": "https://openalex.org/S85739584", "display_name": "Journal of Applied Econometrics", "issn_l": "0883-7252", "issn": ["0883-7252", "1099-1255"], "is_oa": false, "is_in_doaj": false, "is_core": true, "listed_in": ["abdc-a-star", "anvur-class-a", "anvur-scientific", "cwts-core", "erih-plus", "jufo-2", "ki-jl-2", "norway-2", "poland-200", "russia-white-list-1", "vabb-shw"], "host_organization": "https://openalex.org/P4310320595", "host_organization_name": "Wiley", "host_organization_lineage": ["https://openalex.org/P4310320595"], "host_organization_lineage_names": ["Wiley"], "type": "journal"}, "license": "cc-by", "license_id": "https://openalex.org/licenses/cc-by", "version": "publishedVersion", "is_accepted": true, "is_published": true, "raw_source_name": "Journal of Applied Econometrics", "raw_type": "journal-article"}, "abstract_inverted_index": {"ABSTRACT": [0], "Instrumental": [1], "variables": [2, 41], "are": [3], "a": [4, 25, 45, 72], "popular": [5], "tool": [6], "to": [7, 95, 142], "infer": [8], "causal": [9], "effects": [10, 130], "under": [11], "unobserved": [12], "confounding,": [13], "but": [14], "choosing": [15], "suitable": [16], "instruments": [17, 58], "is": [18, 111, 149], "challenging": [19], "in": [20, 44, 125, 151], "practice.": [21], "We": [22, 104, 121], "propose": [23], "gIVBMA,": [24], "Bayesian": [26], "model": [27, 108], "averaging": [28, 35], "procedure": [29, 110], "that": [30, 106], "addresses": [31], "this": [32, 107], "challenge": [33], "by": [34], "across": [36], "different": [37], "sets": [38], "of": [39, 54, 131, 147], "instrumental": [40], "and": [42, 56, 59, 76, 80, 102, 133, 139], "covariates": [43], "structural": [46], "equation": [47], "model.": [48], "This": [49], "allows": [50], "for": [51, 99], "data\u2010driven": [52], "selection": [53, 109], "valid": [55], "relevant": [57], "provides": [60], "additional": [61], "robustness": [62], "against": [63], "invalid": [64], "instruments.": [65], "Our": [66], "approach": [67], "extends": [68], "previous": [69], "work": [70], "through": [71], "scale\u2010invariant": [73], "prior": [74], "structure": [75], "accommodates": [77], "non\u2010Gaussian": [78], "outcomes": [79], "treatments,": [81], "offering": [82], "greater": [83], "flexibility": [84], "than": [85], "existing": [86], "methods.": [87, 120], "The": [88], "computational": [89], "strategy": [90], "uses": [91], "conditional": [92], "Bayes": [93], "factors": [94], "update": [96], "models": [97], "separately": [98], "the": [100, 129, 140], "outcome": [101], "treatments.": [103], "prove": [105], "consistent.": [112], "In": [113], "simulation": [114], "experiments,": [115], "gIVBMA": [116, 148], "outperforms": [117], "current": [118], "state\u2010of\u2010the\u2010art": [119], "demonstrate": [122], "its": [123], "usefulness": [124], "two": [126], "empirical": [127], "applications:": [128], "malaria": [132], "institutions": [134], "on": [135], "income": [136], "per": [137], "capita": [138], "returns": [141], "schooling.": [143], "A": [144], "software": [145], "implementation": [146], "available": [150], "Julia.": [152]}, "referenced_works": ["https://openalex.org/W812860946", "https://openalex.org/W1482757981", "https://openalex.org/W1485526600", "https://openalex.org/W1521448748", "https://openalex.org/W1560220104", "https://openalex.org/W1814560945", "https://openalex.org/W1856341315", "https://openalex.org/W1978816856", "https://openalex.org/W1982471084", "https://openalex.org/W1982991166", "https://openalex.org/W1989535774", "https://openalex.org/W1991587639", "https://openalex.org/W1998643818", "https://openalex.org/W2000901237", "https://openalex.org/W2001123479", "https://openalex.org/W2020389170", "https://openalex.org/W2027620321", "https://openalex.org/W2047989136", "https://openalex.org/W2088932531", "https://openalex.org/W2091907614", "https://openalex.org/W2138545569", "https://openalex.org/W2152933101", "https://openalex.org/W2159347337", "https://openalex.org/W2162888823", "https://openalex.org/W2163162137", "https://openalex.org/W2314509558", "https://openalex.org/W2491861244", "https://openalex.org/W2577227262", "https://openalex.org/W2602449753", "https://openalex.org/W2775739081", "https://openalex.org/W2900183310", "https://openalex.org/W2981114831", "https://openalex.org/W3021144880", "https://openalex.org/W3084136375", "https://openalex.org/W3124377371", "https://openalex.org/W3133845186", "https://openalex.org/W3180038695"], "relevance_score": 36.678955}, {"id": "https://openalex.org/W7161015320", "doi": "https://doi.org/10.1057/s41599-026-07391-w", "display_name": "The security of property rights and subjective well-being: cultural contingencies in a global instrumental variable analysis", "publication_year": 2026, "type": "article", "cited_by_count": 0, "authorships": [{"author_position": "first", "author": {"id": "https://openalex.org/A5100725640", "display_name": "Yudi Zhang", "orcid": "https://orcid.org/0000-0002-7830-5133", "observed_orcids": ["https://orcid.org/0000-0002-7830-5133", "https://orcid.org/0009-0001-6084-5051"]}, "institutions": [{"id": "https://openalex.org/I211433327", "display_name": "Ministry of Natural Resources", "ror": "https://ror.org/02kxqx159", "country_code": "CN", "type": "government", "lineage": ["https://openalex.org/I211433327", "https://openalex.org/I4210127390"]}, {"id": "https://openalex.org/I99065089", "display_name": "Tsinghua University", "ror": "https://ror.org/03cve4549", "country_code": "CN", "type": "education", "lineage": ["https://openalex.org/I99065089"]}], "countries": ["CN"], "is_corresponding": false, "raw_author_name": "Yudi Zhang", "raw_affiliation_strings": ["Technology Innovation Center for Smart Human Settlements and Spatial Planning & Governance, Ministry of Natural Resources of the People\u2019s Republic of China, Beijing, China", "Tsinghua University, Beijing, China"], "raw_orcid": null, "affiliations": [{"raw_affiliation_string": "Technology Innovation Center for Smart Human Settlements and Spatial Planning & Governance, Ministry of Natural Resources of the People\u2019s Republic of China, Beijing, China", "institution_ids": ["https://openalex.org/I211433327"]}, {"raw_affiliation_string": "Tsinghua University, Beijing, China", "institution_ids": ["https://openalex.org/I99065089"]}]}, {"author_position": "middle", "author": {"id": null, "display_name": "Li Tian", "orcid": null, "observed_orcids": []}, "institutions": [{"id": "https://openalex.org/I211433327", "display_name": "Ministry of Natural Resources", "ror": "https://ror.org/02kxqx159", "country_code": "CN", "type": "government", "lineage": ["https://openalex.org/I211433327", "https://openalex.org/I4210127390"]}, {"id": "https://openalex.org/I99065089", "display_name": "Tsinghua University", "ror": "https://ror.org/03cve4549", "country_code": "CN", "type": "education", "lineage": ["https://openalex.org/I99065089"]}], "countries": ["CN"], "is_corresponding": true, "raw_author_name": "Li Tian", "raw_affiliation_strings": ["Technology Innovation Center for Smart Human Settlements and Spatial Planning & Governance, Ministry of Natural Resources of the People\u2019s Republic of China, Beijing, China", "Tsinghua University, Beijing, China"], "raw_orcid": null, "affiliations": [{"raw_affiliation_string": "Technology Innovation Center for Smart Human Settlements and Spatial Planning & Governance, Ministry of Natural Resources of the People\u2019s Republic of China, Beijing, China", "institution_ids": ["https://openalex.org/I211433327"]}, {"raw_affiliation_string": "Tsinghua University, Beijing, China", "institution_ids": ["https://openalex.org/I99065089"]}]}, {"author_position": "middle", "author": {"id": "https://openalex.org/A5136039296", "display_name": "Jingwei Li", "orcid": null, "observed_orcids": []}, "institutions": [{"id": "https://openalex.org/I21193070", "display_name": "Beijing Jiaotong University", "ror": "https://ror.org/01yj56c84", "country_code": "CN", "type": "education", "lineage": ["https://openalex.org/I21193070"]}], "countries": ["CN"], "is_corresponding": false, "raw_author_name": "Jingwei Li", "raw_affiliation_strings": ["Beijing Jiaotong University, Beijing, China"], "raw_orcid": null, "affiliations": [{"raw_affiliation_string": "Beijing Jiaotong University, Beijing, China", "institution_ids": ["https://openalex.org/I21193070"]}]}, {"author_position": "middle", "author": {"id": "https://openalex.org/A5135392036", "display_name": "Wei Ouyang", "orcid": null, "observed_orcids": []}, "institutions": [{"id": "https://openalex.org/I78988378", "display_name": "Renmin University of China", "ror": "https://ror.org/041pakw92", "country_code": "CN", "type": "education", "lineage": ["https://openalex.org/I78988378"]}], "countries": ["CN"], "is_corresponding": true, "raw_author_name": "Wei Ouyang", "raw_affiliation_strings": ["Renmin University of China, Beijing, China"], "raw_orcid": null, "affiliations": [{"raw_affiliation_string": "Renmin University of China, Beijing, China", "institution_ids": ["https://openalex.org/I78988378"]}]}, {"author_position": "last", "author": {"id": "https://openalex.org/A5136056314", "display_name": "Yihao Chen", "orcid": null, "observed_orcids": []}, "institutions": [{"id": "https://openalex.org/I21193070", "display_name": "Beijing Jiaotong University", "ror": "https://ror.org/01yj56c84", "country_code": "CN", "type": "education", "lineage": ["https://openalex.org/I21193070"]}], "countries": ["CN"], "is_corresponding": false, "raw_author_name": "Yihao Chen", "raw_affiliation_strings": ["Beijing Jiaotong University, Beijing, China"], "raw_orcid": null, "affiliations": [{"raw_affiliation_string": "Beijing Jiaotong University, Beijing, China", "institution_ids": ["https://openalex.org/I21193070"]}]}], "primary_location": {"id": "doi:10.1057/s41599-026-07391-w", "doi": "https://doi.org/10.1057/s41599-026-07391-w", "is_oa": true, "landing_page_url": "https://doi.org/10.1057/s41599-026-07391-w", "pdf_url": "https://www.nature.com/articles/s41599-026-07391-w_reference.pdf", "source": {"id": "https://openalex.org/S4210206302", "display_name": "Humanities and Social Sciences Communications", "issn_l": "2055-1045", "issn": ["2055-1045", "2662-9992"], "is_oa": true, "is_in_doaj": true, "is_core": true, "listed_in": ["anvur-class-a", "anvur-scientific", "cwts-core", "doaj", "jufo-1", "ki-jl-1", "norway-1", "poland-20", "russia-white-list-1", "vabb-shw"], "host_organization": "https://openalex.org/P4310319702", "host_organization_name": "Palgrave Macmillan", "host_organization_lineage": ["https://openalex.org/P4310319702", "https://openalex.org/P4310319964"], "host_organization_lineage_names": ["Palgrave Macmillan", "Macmillan Publishers"], "type": "journal"}, "license": "cc-by", "license_id": "https://openalex.org/licenses/cc-by", "version": "publishedVersion", "is_accepted": true, "is_published": true, "raw_source_name": "Humanities and Social Sciences Communications", "raw_type": "journal-article"}, "abstract_inverted_index": {"Abstract": [0], "The": [1, 146], "security": [2, 36, 91, 132, 151], "of": [3, 12, 37, 45, 72, 92, 123, 133, 152, 165], "property": [4, 38, 93, 134, 153], "rights": [5, 39, 94, 135, 154], "is": [6, 40, 188], "widely": [7], "recognized": [8], "as": [9, 79, 126], "a": [10, 58, 86], "cornerstone": [11], "economic": [13], "development,": [14], "while": [15], "its": [16], "psychological": [17, 113, 141], "implications": [18], "for": [19, 190, 197], "subjective": [20], "well-being": [21, 48, 56, 97, 104, 147], "remain": [22], "insufficiently": [23], "understood": [24], "and": [25, 54, 67, 102, 185], "potentially": [26], "contingent": [27], "on": [28], "cultural": [29, 186], "context.": [30], "Here,": [31], "we": [32, 83], "show": [33], "that": [34, 85, 179], "greater": [35], "associated": [41], "with": [42, 75], "higher": [43], "levels": [44], "both": [46], "affective": [47, 96, 137], "(i.e.,": [49, 57], "an": [50, 80], "emotional,": [51], "irrational": [52], "component)": [53, 61], "cognitive": [55, 103], "measured,": [59], "rational": [60], "across": [62], "164": [63], "countries": [64, 74], "between": [65, 182], "2009": [66], "2020.": [68], "Using": [69], "the": [70, 90, 127, 131, 150, 180, 195], "share": [71], "neighboring": [73], "common-law": [76], "legal": [77, 163, 183], "origin": [78], "instrumental": [81], "variable,": [82], "find": [84], "one\u2013standard-deviation": [87], "increase": [88], "in": [89, 158], "raises": [95], "by": [98, 105, 177], "0.11": [99], "standard": [100, 107], "deviations": [101], "0.05": [106], "deviations.": [108], "We": [109], "further": [110], "identify": [111], "distinct": [112], "pathways": [114], "underlying": [115], "these": [116, 140], "effects.": [117], "Beyond": [118], "income": [119], "channels,": [120], "perceived": [121], "freedom": [122], "choice": [124], "emerges": [125], "primary": [128], "channel": [129], "linking": [130], "to": [136, 149], "well-being.": [138], "Importantly,": [139], "benefits": [142], "are": [143, 155], "not": [144], "universal.": [145], "returns": [148], "significantly": [156], "larger": [157], "more": [159, 167], "individualistic": [160], "societies,": [161], "where": [162], "protection": [164], "ownership": [166], "strongly": [168], "reinforces": [169], "personal": [170], "autonomy.": [171], "These": [172], "findings": [173], "advance": [174], "institutional": [175], "economics": [176], "showing": [178], "alignment": [181], "institutions": [184], "values": [187], "critical": [189], "maximizing": [191], "societal": [192], "welfare,": [193], "highlighting": [194], "necessity": [196], "culturally": [198], "attuned": [199], "policy": [200], "frameworks.": [201]}, "referenced_works": ["https://openalex.org/W4205518857"], "relevance_score": 28.862768}, {"id": "https://openalex.org/W2069316799", "doi": "https://doi.org/10.1002/jid.1225", "display_name": "Institutions and geography as sources of economic development", "publication_year": 2005, "type": "article", "cited_by_count": 28, "authorships": [{"author_position": "first", "author": {"id": "https://openalex.org/A5008057397", "display_name": "Andrea Presbitero", "orcid": "https://orcid.org/0000-0003-4622-941X", "observed_orcids": ["https://orcid.org/0000-0003-4622-941X"]}, "institutions": [{"id": "https://openalex.org/I122534668", "display_name": "Marche Polytechnic University", "ror": "https://ror.org/00x69rs40", "country_code": "IT", "type": "education", "lineage": ["https://openalex.org/I122534668"]}], "countries": ["IT"], "is_corresponding": true, "raw_author_name": "Andrea F. Presbitero", "raw_affiliation_strings": ["Department of Economics, Universita\u0300 Politecnica delle Marche, Italy", "Department of Economics , Universit\u00e0 , Politecnica delle Marche, Italy"], "raw_orcid": null, "affiliations": [{"raw_affiliation_string": "Department of Economics, Universita\u0300 Politecnica delle Marche, Italy", "institution_ids": ["https://openalex.org/I122534668"]}, {"raw_affiliation_string": "Department of Economics , Universit\u00e0 , Politecnica delle Marche, Italy", "institution_ids": ["https://openalex.org/I122534668"]}]}], "primary_location": {"id": "doi:10.1002/jid.1225", "doi": "https://doi.org/10.1002/jid.1225", "is_oa": false, "landing_page_url": "https://doi.org/10.1002/jid.1225", "pdf_url": null, "source": {"id": "https://openalex.org/S96563387", "display_name": "Journal of International Development", "issn_l": "0954-1748", "issn": ["0954-1748", "1099-1328"], "is_oa": false, "is_in_doaj": false, "is_core": true, "listed_in": ["abdc-b", "anvur-scientific", "cwts-core", "jufo-1", "norway-1", "poland-70", "russia-white-list-1", "vabb-shw"], "host_organization": "https://openalex.org/P4310320595", "host_organization_name": "Wiley", "host_organization_lineage": ["https://openalex.org/P4310320595"], "host_organization_lineage_names": ["Wiley"], "type": "journal"}, "license": null, "license_id": null, "version": "publishedVersion", "is_accepted": true, "is_published": true, "raw_source_name": "Journal of International Development", "raw_type": "journal-article"}, "abstract_inverted_index": {"This": [0], "work": [1], "investigates": [2], "the": [3, 11, 28, 40, 50, 68, 77, 84, 87, 101, 113, 123, 129, 133], "roots": [4], "of": [5, 13, 43, 71, 89, 125, 143, 149, 156], "economic": [6, 45, 96], "development.": [7], "The": [8, 108], "debate": [9], "about": [10], "predominance": [12], "institutions": [14, 159], "over": [15], "geography": [16, 157], "is": [17, 53, 140], "far": [18], "from": [19], "reaching": [20], "a": [21, 90, 93, 141, 166], "firm": [22, 167], "conclusion,": [23], "and": [24, 63, 79, 82, 146, 154, 158], "this": [25], "analysis": [26], "highlights": [27], "main": [29], "difficulties": [30], "that": [31, 49, 98, 112], "should": [32, 116], "be": [33, 117], "addressed": [34], "in": [35, 95, 103, 132, 162], "order": [36, 163], "to": [37, 76, 83, 86, 119, 164], "find": [38], "out": [39], "real": [41], "determinants": [42], "long-run": [44], "growth.": [46], "I": [47], "argue": [48], "institutional": [51, 65], "view": [52], "not": [54, 121], "as": [55, 57], "strong": [56], "it": [58], "may": [59], "appear:": [60], "different": [61, 64], "specifications": [62], "indicators": [66, 145, 155], "undermine": [67], "exclusive": [69], "importance": [70], "institutions.": [72, 107], "Geographical": [73], "factors,": [74], "related": [75], "health": [78], "sanitary": [80, 130], "conditions": [81, 131], "accessibility": [85], "sea": [88], "country,": [91], "play": [92], "role": [94], "development,": [97], "goes": [99], "beyond": [100], "way": [102], "which": [104], "they": [105], "shape": [106], "empirical": [109], "evidence": [110], "implies": [111], "development": [114], "policies": [115], "directed": [118], "improving": [120], "only": [122], "quality": [124], "governance,": [126], "but": [127], "also": [128], "least": [134], "developed": [135], "countries.": [136], "However,": [137], "since": [138], "there": [139], "lack": [142], "accurate": [144], "difficult": [147], "problems": [148], "endogeneity,": [150], "more": [151], "reliable": [152], "instruments": [153], "are": [160], "needed": [161], "achieve": [165], "conclusion.": [168], "Copyright": [169], "\u00a9": [170], "2005": [171], "John": [172], "Wiley": [173], "&": [174], "Sons,": [175], "Ltd.": [176]}, "referenced_works": ["https://openalex.org/W93970146", "https://openalex.org/W96791486", "https://openalex.org/W1481579187", "https://openalex.org/W1483104454", "https://openalex.org/W1492598581", "https://openalex.org/W1496027686", "https://openalex.org/W1499817465", "https://openalex.org/W1506258086", "https://openalex.org/W1509589189", "https://openalex.org/W1510624767", "https://openalex.org/W1511225155", "https://openalex.org/W1525936387", "https://openalex.org/W1527343256", "https://openalex.org/W1529428759", "https://openalex.org/W1552144375", "https://openalex.org/W1552995848", "https://openalex.org/W1553329268", "https://openalex.org/W1553631189", "https://openalex.org/W1553840091", "https://openalex.org/W1558153909", "https://openalex.org/W1565858261", "https://openalex.org/W1568013478", "https://openalex.org/W1569258179", "https://openalex.org/W1575299154", "https://openalex.org/W1575954106", "https://openalex.org/W1606404335", "https://openalex.org/W1834528902", "https://openalex.org/W1840144356", "https://openalex.org/W1954131431", "https://openalex.org/W1974025513", "https://openalex.org/W1977433163", "https://openalex.org/W1980412904", "https://openalex.org/W1988501481", "https://openalex.org/W2003576851", "https://openalex.org/W2011474190", "https://openalex.org/W2012421811", "https://openalex.org/W2017102741", "https://openalex.org/W2020958936", "https://openalex.org/W2041692102", "https://openalex.org/W2042273599", "https://openalex.org/W2042578425", "https://openalex.org/W2057446362", "https://openalex.org/W2061560855", "https://openalex.org/W2091020207", "https://openalex.org/W2095701068", "https://openalex.org/W2105278501", "https://openalex.org/W2108614304", "https://openalex.org/W2111988782", "https://openalex.org/W2113224665", "https://openalex.org/W2129690173", "https://openalex.org/W2133369488", "https://openalex.org/W2133771254", "https://openalex.org/W2152414118", "https://openalex.org/W2165125692", "https://openalex.org/W2165144879", "https://openalex.org/W2170222801", "https://openalex.org/W2325530759", "https://openalex.org/W2740196562", "https://openalex.org/W2994756033", "https://openalex.org/W3021827133", "https://openalex.org/W3022550709", "https://openalex.org/W3121147769", "https://openalex.org/W3121762824", "https://openalex.org/W3122531453", "https://openalex.org/W3122667128", "https://openalex.org/W3122705141", "https://openalex.org/W3123059484", "https://openalex.org/W3123342021", "https://openalex.org/W3123472810", "https://openalex.org/W3124131699", "https://openalex.org/W3124166904", "https://openalex.org/W3124301332", "https://openalex.org/W3124561619", "https://openalex.org/W3124600175", "https://openalex.org/W3124831741", "https://openalex.org/W3125076828", "https://openalex.org/W4205577959", "https://openalex.org/W4241750010", "https://openalex.org/W4298413470", "https://openalex.org/W4300720718"], "relevance_score": 24.969336}, {"id": "https://openalex.org/W3127103038", "doi": "https://doi.org/10.2139/ssrn.3171982", "display_name": "Machine Learning Indices, Political Institutions, and Economic Development", "publication_year": 2018, "type": "preprint", "cited_by_count": 31, "authorships": [{"author_position": "first", "author": {"id": "https://openalex.org/A5066510703", "display_name": "Klaus Gr\u00fcndler", "orcid": "https://orcid.org/0000-0002-5303-973X", "observed_orcids": ["https://orcid.org/0000-0002-5303-973X"]}, "institutions": [{"id": "https://openalex.org/I25974101", "display_name": "University of W\u00fcrzburg", "ror": "https://ror.org/00fbnyb24", "country_code": "DE", "type": "education", "lineage": ["https://openalex.org/I25974101"]}], "countries": ["DE"], "is_corresponding": false, "raw_author_name": "Klaus Gr\u00fcndler", "raw_affiliation_strings": ["University of W\u00fcrzburg, Sanderring 2, W\u00fcrzburg, D-97070, Germany", "University of W\u00fcrzburg"], "raw_orcid": null, "affiliations": [{"raw_affiliation_string": "University of W\u00fcrzburg, Sanderring 2, W\u00fcrzburg, D-97070, Germany", "institution_ids": ["https://openalex.org/I25974101"]}, {"raw_affiliation_string": "University of W\u00fcrzburg", "institution_ids": ["https://openalex.org/I25974101"]}]}, {"author_position": "last", "author": {"id": "https://openalex.org/A5005028761", "display_name": "Tommy Krieger", "orcid": "https://orcid.org/0000-0003-3110-9714", "observed_orcids": ["https://orcid.org/0000-0003-3110-9714"]}, "institutions": [{"id": "https://openalex.org/I189712700", "display_name": "University of Konstanz", "ror": "https://ror.org/0546hnb39", "country_code": "DE", "type": "education", "lineage": ["https://openalex.org/I189712700"]}], "countries": ["DE"], "is_corresponding": true, "raw_author_name": "Tommy Krieger", "raw_affiliation_strings": ["University of Konstanz, Fach D-144, Universit\u00e4tsstra\u00dfe 10, Konstanz, D-78457, Germany", "University of Konstanz"], "raw_orcid": null, "affiliations": [{"raw_affiliation_string": "University of Konstanz, Fach D-144, Universit\u00e4tsstra\u00dfe 10, Konstanz, D-78457, Germany", "institution_ids": ["https://openalex.org/I189712700"]}, {"raw_affiliation_string": "University of Konstanz", "institution_ids": ["https://openalex.org/I189712700"]}]}], "primary_location": {"id": "doi:10.2139/ssrn.3171982", "doi": "https://doi.org/10.2139/ssrn.3171982", "is_oa": true, "landing_page_url": "https://doi.org/10.2139/ssrn.3171982", "pdf_url": null, "source": {"id": "https://openalex.org/S4210172589", "display_name": "SSRN Electronic Journal", "issn_l": "1556-5068", "issn": ["1556-5068"], "is_oa": true, "is_in_doaj": false, "is_core": false, "listed_in": [], "host_organization": "https://openalex.org/I1318003438", "host_organization_name": "RELX Group (Netherlands)", "host_organization_lineage": ["https://openalex.org/I1318003438"], "host_organization_lineage_names": [], "type": "repository"}, "license": null, "license_id": null, "version": "acceptedVersion", "is_accepted": true, "is_published": false, "raw_source_name": null, "raw_type": "posted-content"}, "abstract_inverted_index": null, "referenced_works": [], "relevance_score": 23.166784}, {"id": "https://openalex.org/W4323897988", "doi": "https://doi.org/10.1080/10611991.2022.2147343", "display_name": "The Effects of Institutions on Economic Development: Developed and Post-Communist Nations", "publication_year": 2022, "type": "article", "cited_by_count": 1, "authorships": [{"author_position": "first", "author": {"id": "https://openalex.org/A5076702369", "display_name": "Ismatilla T. Mardanov", "orcid": "https://orcid.org/0000-0002-9449-6822", "observed_orcids": ["https://orcid.org/0000-0002-9449-6822"]}, "institutions": [], "countries": [], "is_corresponding": true, "raw_author_name": "Ismatilla Mardanov", "raw_affiliation_strings": ["View further author information"], "raw_orcid": null, "affiliations": [{"raw_affiliation_string": "View further author information", "institution_ids": []}]}], "primary_location": {"id": "doi:10.1080/10611991.2022.2147343", "doi": "https://doi.org/10.1080/10611991.2022.2147343", "is_oa": false, "landing_page_url": "http://dx.doi.org/10.1080/10611991.2022.2147343", "pdf_url": null, "source": {"id": "https://openalex.org/S34307002", "display_name": "Problems of Economic Transition", "issn_l": "1061-1991", "issn": ["1061-1991", "1557-931X"], "is_oa": false, "is_in_doaj": false, "is_core": false, "listed_in": ["abdc-b", "anvur-scientific", "jufo-1"], "host_organization": "https://openalex.org/P4310320441", "host_organization_name": "M. E. Sharpe", "host_organization_lineage": ["https://openalex.org/P4310320441"], "host_organization_lineage_names": ["M. E. Sharpe"], "type": "journal"}, "license": null, "license_id": null, "version": "publishedVersion", "is_accepted": true, "is_published": true, "raw_source_name": "Problems of Economic Transition", "raw_type": "journal-article"}, "abstract_inverted_index": {"The": [0, 24, 39], "comparative": [1], "causal": [2], "effects": [3, 57], "of": [4, 20], "democracy": [5, 32], "and": [6, 13, 30], "democratization": [7, 29], "on": [8, 58], "economic": [9, 34, 37, 45, 59, 74, 91], "development": [10, 35], "in": [11, 61, 69, 90], "developed": [12, 70], "post-communist": [14], "nations": [15], "(PCN)": [16], "are": [17], "the": [18, 21], "subject": [19], "present": [22], "study.": [23], "research": [25], "question": [26], "is,": [27], "\u201cWould": [28], "established": [31, 83], "cause": [33], "through": [36], "institutions?\u201d": [38], "instrumental": [40, 67, 88], "variable": [41, 89], "estimation": [42], "indicates": [43, 78], "that": [44, 79], "institutions": [46, 64], "created": [47], "by": [48], "their": [49, 73], "political": [50], "systems": [51], "(instrumental": [52], "variables)": [53], "had": [54], "strong": [55], "negative": [56], "growth": [60], "PCN.": [62], "Political": [63], "were": [65], "not": [66, 82], "variables": [68], "countries": [71], "with": [72], "development.": [75, 92], "This": [76], "fact": [77], "only": [80], "democratization,": [81], "democracy,": [84], "serves": [85], "as": [86], "an": [87]}, "referenced_works": ["https://openalex.org/W607992575", "https://openalex.org/W1559924327", "https://openalex.org/W1564384902", "https://openalex.org/W1963710418", "https://openalex.org/W1966953672", "https://openalex.org/W1980848104", "https://openalex.org/W1988341295", "https://openalex.org/W2002694178", "https://openalex.org/W2016618256", "https://openalex.org/W2019281854", "https://openalex.org/W2022790056", "https://openalex.org/W2035900610", "https://openalex.org/W2043422186", "https://openalex.org/W2048312116", "https://openalex.org/W2058348533", "https://openalex.org/W2067236069", "https://openalex.org/W2070631858", "https://openalex.org/W2071240032", "https://openalex.org/W2073148912", "https://openalex.org/W2075711986", "https://openalex.org/W2083485815", "https://openalex.org/W2098589686", "https://openalex.org/W2102897370", "https://openalex.org/W2126015660", "https://openalex.org/W2130259765", "https://openalex.org/W2135256695", "https://openalex.org/W2139073314", "https://openalex.org/W2151852201", "https://openalex.org/W2155760494", "https://openalex.org/W2160251138", "https://openalex.org/W2160354002", "https://openalex.org/W2165144879", "https://openalex.org/W2166974667", "https://openalex.org/W2465452105", "https://openalex.org/W2524002291", "https://openalex.org/W2539139479", "https://openalex.org/W2927606987", "https://openalex.org/W2994756033", "https://openalex.org/W3122773656", "https://openalex.org/W3123757519", "https://openalex.org/W3125601827", "https://openalex.org/W3126004765", "https://openalex.org/W4200051735", "https://openalex.org/W4233789075", "https://openalex.org/W4285719527", "https://openalex.org/W4298005629", "https://openalex.org/W4298413470", "https://openalex.org/W4301752817"], "relevance_score": 21.385532}, {"id": "https://openalex.org/W2231632438", "doi": null, "display_name": "On the determinants of life insurance development in Sub-Saharan Africa: the role of the institutions quality in the effect of economic development", "publication_year": 2015, "type": "preprint", "cited_by_count": 38, "authorships": [{"author_position": "first", "author": {"id": "https://openalex.org/A5055566119", "display_name": "Samuel Gu\u00e9rineau", "orcid": null, "observed_orcids": []}, "institutions": [{"id": "https://openalex.org/I4387153954", "display_name": "Centre d'\u00c9tudes et de Recherches sur le D\u00e9veloppement International", "ror": "https://ror.org/01hg13988", "country_code": "FR", "type": "facility", "lineage": ["https://openalex.org/I1294671590", "https://openalex.org/I198244214", "https://openalex.org/I2802818602", "https://openalex.org/I4210090127", "https://openalex.org/I4210131494", "https://openalex.org/I4210166444", "https://openalex.org/I4387153954"]}], "countries": ["FR"], "is_corresponding": false, "raw_author_name": "Samuel Gu\u00e9rineau", "raw_affiliation_strings": ["Centre d'\u00c9tudes et de Recherches sur le D\u00e9veloppement International"], "raw_orcid": null, "affiliations": [{"raw_affiliation_string": "Centre d'\u00c9tudes et de Recherches sur le D\u00e9veloppement International", "institution_ids": ["https://openalex.org/I4387153954"]}]}, {"author_position": "last", "author": {"id": "https://openalex.org/A5025395206", "display_name": "Relwend\u00e9 Sawadogo", "orcid": "https://orcid.org/0000-0002-3389-2418", "observed_orcids": ["https://orcid.org/0000-0002-3389-2418", "https://orcid.org/0009-0002-7368-766X"]}, "institutions": [{"id": "https://openalex.org/I4387153954", "display_name": "Centre d'\u00c9tudes et de Recherches sur le D\u00e9veloppement International", "ror": "https://ror.org/01hg13988", "country_code": "FR", "type": "facility", "lineage": ["https://openalex.org/I1294671590", "https://openalex.org/I198244214", "https://openalex.org/I2802818602", "https://openalex.org/I4210090127", "https://openalex.org/I4210131494", "https://openalex.org/I4210166444", "https://openalex.org/I4387153954"]}], "countries": ["FR"], "is_corresponding": false, "raw_author_name": "Relwend\u00e9 Sawadogo", "raw_affiliation_strings": ["Centre d'\u00c9tudes et de Recherches sur le D\u00e9veloppement International"], "raw_orcid": null, "affiliations": [{"raw_affiliation_string": "Centre d'\u00c9tudes et de Recherches sur le D\u00e9veloppement International", "institution_ids": ["https://openalex.org/I4387153954"]}]}], "primary_location": {"id": "pmh:oai:RePEc:cdi:wpaper:1717", "doi": null, "is_oa": false, "landing_page_url": "http://publi.cerdi.org/ed/2015/2015.19.pdf", "pdf_url": "http://publi.cerdi.org/ed/2015/2015.19.pdf", "source": {"id": "https://openalex.org/S4306401271", "display_name": "RePEc: Research Papers in Economics", "issn_l": null, "issn": null, "is_oa": false, "is_in_doaj": false, "is_core": false, "listed_in": [], "host_organization": "https://openalex.org/I77793887", "host_organization_name": "Federal Reserve Bank of St. Louis", "host_organization_lineage": ["https://openalex.org/I77793887"], "host_organization_lineage_names": [], "type": "repository"}, "license": null, "license_id": null, "version": "submittedVersion", "is_accepted": false, "is_published": false, "raw_source_name": null, "raw_type": "preprint"}, "abstract_inverted_index": {"This": [0], "paper": [1], "analyzes": [2], "the": [3, 19, 25, 28, 32, 38, 43, 51, 75, 92, 98, 103, 115, 121, 135, 141, 145, 150, 156, 159, 165, 169], "determinants": [4], "of": [5, 12, 27, 34, 45, 60, 117, 137, 144, 158, 168], "life": [6, 39, 69, 76, 89, 99, 128, 151, 173], "insurance": [7, 70, 77, 100, 152, 174], "development": [8, 36, 101, 171], "on": [9, 31, 37, 149, 172], "a": [10, 46, 79, 108], "panel": [11], "20": [13], "countries": [14, 181], "in": [15, 68, 82], "sub-Saharan": [16], "Africa": [17], "over": [18], "period": [20], "1996-2011.": [21], "It": [22], "also": [23, 112], "highlights": [24], "role": [26], "institutions": [29], "quality": [30, 157], "effect": [33, 167], "economic": [35, 170], "insurance.": [40, 129], "Controlling": [41], "for": [42, 177], "presence": [44], "possible": [47], "endogeneity": [48], "bias": [49], "using": [50], "instrumental": [52], "variable": [53], "technique,": [54], "we": [55], "find": [56, 113], "evidence": [57], "that": [58, 74, 114], "increased": [59], "per": [61, 147], "capita": [62, 148], "income": [63, 146], "leads": [64], "to": [65, 127, 134, 155, 183], "an": [66], "increase": [67], "premiums.": [71], "We": [72, 111], "show": [73], "is": [78, 175], "luxury": [80], "good": [81], "SSA.": [83], "The": [84, 130], "demographic": [85], "variables": [86], "such": [87], "as": [88], "expectancy": [90], "and": [91, 120, 161], "young": [93], "dependency": [94, 105], "ratio": [95, 106], "influence": [96], "negatively": [97], "while": [102], "old": [104], "has": [107], "positive": [109], "effect.": [110], "protection": [116], "property": [118], "rights": [119], "government": [122], "stability": [123], "are": [124, 132], "positively": [125], "associated": [126], "results": [131], "robust": [133], "introduction": [136], "more": [138], "variables.": [139], "Furthermore,": [140], "marginal": [142, 166], "impact": [143], "varies": [153], "according": [154], "legal": [160, 179, 185], "political": [162], "environment.": [163], "Finally,": [164], "less": [176], "french": [178], "system": [180, 186], "compared": [182], "non-french": [184], "countries.": [187]}, "referenced_works": ["https://openalex.org/W1508942962", "https://openalex.org/W1547506455", "https://openalex.org/W1590087664", "https://openalex.org/W1640652527", "https://openalex.org/W1966041856", "https://openalex.org/W1969519191", "https://openalex.org/W1975535635", "https://openalex.org/W1989666695", "https://openalex.org/W2010235856", "https://openalex.org/W2012467296", "https://openalex.org/W2013762096", "https://openalex.org/W2020452381", "https://openalex.org/W2025019820", "https://openalex.org/W2027120132", "https://openalex.org/W2042915520", "https://openalex.org/W2048411773", "https://openalex.org/W2057621538", "https://openalex.org/W2077883749", "https://openalex.org/W2078707560", "https://openalex.org/W2091261904", "https://openalex.org/W2130172790", "https://openalex.org/W2166037496", "https://openalex.org/W2168311275", "https://openalex.org/W2187517444", "https://openalex.org/W2198018045", "https://openalex.org/W2252375763", "https://openalex.org/W2989377525", "https://openalex.org/W3121534672", "https://openalex.org/W3121759882", "https://openalex.org/W3122838538", "https://openalex.org/W3124259699", "https://openalex.org/W3176682987"], "relevance_score": 20.243393}, {"id": "https://openalex.org/W7168135264", "doi": "https://doi.org/10.1002/soej.70059", "display_name": "Why Does Individualism Affect Economic Development: Is It Values, Policies, or Institutions?", "publication_year": 2026, "type": "article", "cited_by_count": 0, "authorships": [{"author_position": "first", "author": {"id": "https://openalex.org/A5027442164", "display_name": "Lewis Davis", "orcid": "https://orcid.org/0000-0003-2084-3091", "observed_orcids": ["https://orcid.org/0000-0003-2084-3091"]}, "institutions": [{"id": "https://openalex.org/I177328695", "display_name": "Union College", "ror": "https://ror.org/058w5nk68", "country_code": "US", "type": "education", "lineage": ["https://openalex.org/I177328695"]}], "countries": ["US"], "is_corresponding": false, "raw_author_name": "Lewis S. Davis", "raw_affiliation_strings": ["Union College  Schenectady New York USA"], "raw_orcid": "https://orcid.org/0000-0003-2084-3091", "affiliations": [{"raw_affiliation_string": "Union College  Schenectady New York USA", "institution_ids": ["https://openalex.org/I177328695"]}]}, {"author_position": "last", "author": {"id": "https://openalex.org/A5063399810", "display_name": "Claudia R. Williamson", "orcid": "https://orcid.org/0000-0002-4443-7453", "observed_orcids": ["https://orcid.org/0000-0002-4443-7453"]}, "institutions": [{"id": "https://openalex.org/I177097968", "display_name": "University of Tennessee at Chattanooga", "ror": "https://ror.org/00nqb1v70", "country_code": "US", "type": "education", "lineage": ["https://openalex.org/I177097968"]}], "countries": ["US"], "is_corresponding": true, "raw_author_name": "Claudia Williamson Kramer", "raw_affiliation_strings": ["University of Tennessee at Chattanooga  Chattanooga Tennessee USA"], "raw_orcid": "https://orcid.org/0000-0002-4443-7453", "affiliations": [{"raw_affiliation_string": "University of Tennessee at Chattanooga  Chattanooga Tennessee USA", "institution_ids": ["https://openalex.org/I177097968"]}]}], "primary_location": {"id": "doi:10.1002/soej.70059", "doi": "https://doi.org/10.1002/soej.70059", "is_oa": true, "landing_page_url": "https://doi.org/10.1002/soej.70059", "pdf_url": null, "source": {"id": "https://openalex.org/S16296580", "display_name": "Southern Economic Journal", "issn_l": "0038-4038", "issn": ["0038-4038", "2325-8012"], "is_oa": false, "is_in_doaj": false, "is_core": true, "listed_in": ["abdc-a", "anvur-class-a", "anvur-scientific", "cwts-core", "jufo-1", "norway-1", "poland-70", "russia-white-list-2", "vabb-shw"], "host_organization": "https://openalex.org/P4310320595", "host_organization_name": "Wiley", "host_organization_lineage": ["https://openalex.org/P4310320595"], "host_organization_lineage_names": ["Wiley"], "type": "journal"}, "license": "cc-by-nc-nd", "license_id": "https://openalex.org/licenses/cc-by-nc-nd", "version": "publishedVersion", "is_accepted": true, "is_published": true, "raw_source_name": "Southern Economic Journal", "raw_type": "journal-article"}, "abstract_inverted_index": {"ABSTRACT": [0], "A": [1], "substantial": [2, 175], "body": [3], "of": [4, 10, 85, 111, 177], "literature": [5], "highlights": [6], "the": [7, 22, 98, 118, 140, 178], "positive": [8], "roles": [9], "individualism": [11, 67, 102, 138, 182], "and": [12, 18, 54, 107, 115, 130, 152, 189], "economic": [13, 30, 74, 77, 95, 143], "freedom": [14, 78, 96], "in": [15], "fostering": [16], "prosperity,": [17], "recent": [19], "work": [20], "links": [21], "two.": [23], "This": [24], "paper": [25], "disentangles": [26], "their": [27], "contributions": [28], "to": [29, 121, 142], "development.": [31], "In": [32], "cross\u2010country": [33], "data,": [34], "we": [35, 64], "show": [36], "that": [37, 66, 173], "both": [38], "are": [39, 156], "independently": [40], "associated": [41, 180], "with": [42, 61, 148, 181], "per": [43], "capita": [44], "income,": [45], "even": [46], "after": [47], "extensive": [48], "controls": [49], "for": [50, 73], "geography,": [51], "political": [52], "history,": [53], "alternative": [55], "cultural": [56, 71], "dimensions.": [57], "Using": [58], "mediation": [59], "analysis": [60], "instrumental": [62], "variables,": [63], "find": [65], "functions": [68], "as": [69, 79], "a": [70, 80, 108, 174], "foundation": [72], "freedom.": [75, 144], "Treating": [76], "single": [81], "mediator,": [82], "roughly": [83, 125], "half": [84], "individualism's": [86], "total": [87], "effect": [88], "on": [89], "income": [90], "operates": [91], "through": [92, 100, 127, 132, 186], "it.": [93], "Decomposing": [94], "into": [97], "channels": [99], "which": [101], "operates,": [103], "property": [104, 128, 153, 161], "rights": [105, 129, 154, 162], "institutions": [106, 155], "policy": [109, 190], "index": [110], "sound": [112], "money,": [113], "trade,": [114], "regulation,": [116], "raises": [117], "mediated": [119], "share": [120, 176], "about": [122], "two": [123], "thirds,": [124], "40%": [126], "27%": [131], "policy.": [133], "We": [134], "also": [135], "test": [136], "whether": [137], "moderates": [139], "returns": [141], "It": [145], "does": [146], "not,": [147], "one": [149], "exception.": [150], "Individualism": [151], "partial": [157], "substitutes,": [158], "so": [159], "formal": [160], "matter": [163], "most": [164], "where": [165], "individualistic": [166], "culture": [167], "is": [168], "weakest.": [169], "These": [170], "findings": [171], "suggest": [172], "gains": [179], "may": [183], "be": [184], "obtainable": [185], "liberal": [187], "institutional": [188], "reforms.": [191]}, "referenced_works": ["https://openalex.org/W158365607", "https://openalex.org/W1543029797", "https://openalex.org/W1549592000", "https://openalex.org/W1571164324", "https://openalex.org/W1594876895", "https://openalex.org/W1621619283", "https://openalex.org/W1973463395", "https://openalex.org/W1978239295", "https://openalex.org/W1986340080", "https://openalex.org/W1993843658", "https://openalex.org/W2008117952", "https://openalex.org/W2030518499", "https://openalex.org/W2030652557", "https://openalex.org/W2038458296", "https://openalex.org/W2039947727", "https://openalex.org/W2041692102", "https://openalex.org/W2042226937", "https://openalex.org/W2069735229", "https://openalex.org/W2071681042", "https://openalex.org/W2078875923", "https://openalex.org/W2090766907", "https://openalex.org/W2105944666", "https://openalex.org/W2113281787", "https://openalex.org/W2113419089", "https://openalex.org/W2116186490", "https://openalex.org/W2122757174", "https://openalex.org/W2123498560", "https://openalex.org/W2123501413", "https://openalex.org/W2124294045", "https://openalex.org/W2136823593", "https://openalex.org/W2140467948", "https://openalex.org/W2150231411", "https://openalex.org/W2160857363", "https://openalex.org/W2170712507", "https://openalex.org/W2196552246", "https://openalex.org/W2202236119", "https://openalex.org/W2298151667", "https://openalex.org/W2474291059", "https://openalex.org/W2496823001", "https://openalex.org/W2523163029", "https://openalex.org/W2559407904", "https://openalex.org/W2575395568", "https://openalex.org/W2612031273", "https://openalex.org/W2658667398", "https://openalex.org/W2772582128", "https://openalex.org/W2782953961", "https://openalex.org/W2789615973", "https://openalex.org/W2891779117", "https://openalex.org/W2895810887", "https://openalex.org/W2905513897", "https://openalex.org/W2922811975", "https://openalex.org/W2938884705", "https://openalex.org/W2940073206", "https://openalex.org/W2974605364", "https://openalex.org/W2975442821", "https://openalex.org/W2984844522", "https://openalex.org/W3011110364", "https://openalex.org/W3021830562", "https://openalex.org/W3036313588", "https://openalex.org/W3039264137", "https://openalex.org/W3084227888", "https://openalex.org/W3089336626", "https://openalex.org/W3092974768", "https://openalex.org/W3093838324", "https://openalex.org/W3121225833", "https://openalex.org/W3121686812", "https://openalex.org/W3122295862", "https://openalex.org/W3122705141", "https://openalex.org/W3122795505", "https://openalex.org/W3123542774", "https://openalex.org/W3123906437", "https://openalex.org/W3124166904", "https://openalex.org/W3124468088", "https://openalex.org/W3124859767", "https://openalex.org/W3125058975", "https://openalex.org/W3125710671", "https://openalex.org/W3125922376", "https://openalex.org/W3129993126", "https://openalex.org/W3203449339", "https://openalex.org/W4206397544", "https://openalex.org/W4229334212", "https://openalex.org/W4232505725", "https://openalex.org/W4232508652", "https://openalex.org/W4248554038", "https://openalex.org/W4255375616", "https://openalex.org/W4293740181", "https://openalex.org/W4298413470", "https://openalex.org/W4308908946", "https://openalex.org/W4310291164", "https://openalex.org/W4321194357", "https://openalex.org/W4383265855", "https://openalex.org/W4385491369", "https://openalex.org/W4389736765", "https://openalex.org/W4391359889", "https://openalex.org/W4401029839", "https://openalex.org/W4401331807", "https://openalex.org/W4405933672", "https://openalex.org/W4409593945", "https://openalex.org/W4409785129", "https://openalex.org/W4413251984", "https://openalex.org/W4414774095", "https://openalex.org/W4415242912", "https://openalex.org/W4415954574", "https://openalex.org/W4416156440", "https://openalex.org/W6942201533", "https://openalex.org/W7124180947", "https://openalex.org/W7128000089"], "relevance_score": 18.74214}, {"id": "https://openalex.org/W2001270353", "doi": "https://doi.org/10.1111/j.1467-9701.2007.01066.x", "display_name": "Technology Trade in Economic Development", "publication_year": 2007, "type": "article", "cited_by_count": 32, "authorships": [{"author_position": "first", "author": {"id": "https://openalex.org/A5089402862", "display_name": "Matthias Busse", "orcid": "https://orcid.org/0000-0002-0471-9472", "observed_orcids": ["https://orcid.org/0000-0002-0471-9472"]}, "institutions": [{"id": "https://openalex.org/I4210137163", "display_name": "Hamburg Institute of International Economics", "ror": "https://ror.org/037ydha73", "country_code": "DE", "type": "other", "lineage": ["https://openalex.org/I4210137163"]}], "countries": ["DE"], "is_corresponding": false, "raw_author_name": "Matthias Busse", "raw_affiliation_strings": ["Hamburg Institute of International Economics and"], "raw_orcid": null, "affiliations": [{"raw_affiliation_string": "Hamburg Institute of International Economics and", "institution_ids": ["https://openalex.org/I4210137163"]}]}, {"author_position": "last", "author": {"id": "https://openalex.org/A5058860466", "display_name": "Jos\u00e9 Luis Groizard", "orcid": "https://orcid.org/0000-0002-0772-1156", "observed_orcids": ["https://orcid.org/0000-0002-0772-1156"]}, "institutions": [{"id": "https://openalex.org/I50441567", "display_name": "Universitat de les Illes Balears", "ror": "https://ror.org/03e10x626", "country_code": "ES", "type": "education", "lineage": ["https://openalex.org/I50441567"]}], "countries": ["ES"], "is_corresponding": false, "raw_author_name": "Jos\u00e9 L. Groizard", "raw_affiliation_strings": ["Universitat de les Illes Balears, Palma de Mallorca"], "raw_orcid": null, "affiliations": [{"raw_affiliation_string": "Universitat de les Illes Balears, Palma de Mallorca", "institution_ids": ["https://openalex.org/I50441567"]}]}], "primary_location": {"id": "doi:10.1111/j.1467-9701.2007.01066.x", "doi": "https://doi.org/10.1111/j.1467-9701.2007.01066.x", "is_oa": false, "landing_page_url": "https://doi.org/10.1111/j.1467-9701.2007.01066.x", "pdf_url": null, "source": {"id": "https://openalex.org/S45372229", "display_name": "World Economy", "issn_l": "0378-5920", "issn": ["0378-5920", "1467-9701"], "is_oa": false, "is_in_doaj": false, "is_core": true, "listed_in": ["abdc-a", "anvur-class-a", "anvur-scientific", "cwts-core", "jufo-1", "norway-1", "poland-70", "russia-white-list-1", "vabb-shw"], "host_organization": "https://openalex.org/P4310320595", "host_organization_name": "Wiley", "host_organization_lineage": ["https://openalex.org/P4310320595"], "host_organization_lineage_names": ["Wiley"], "type": "journal"}, "license": null, "license_id": null, "version": "publishedVersion", "is_accepted": true, "is_published": true, "raw_source_name": "The World Economy", "raw_type": "journal-article"}, "abstract_inverted_index": {"Recent": [0], "evidence": [1], "on": [2, 56], "the": [3, 28, 39], "respective": [4], "contributions": [5], "of": [6, 30, 49, 58], "institutions": [7, 71], "and": [8, 52, 60, 74, 99, 105], "trade": [9, 36, 77], "to": [10, 54, 112], "income": [11, 84, 106], "levels": [12], "across": [13], "countries": [14], "has": [15], "demonstrated": [16], "that": [17, 34, 70, 75], "\u2013": [18, 23], "once": [19], "endogeneity": [20], "is": [21, 37, 78, 96, 110], "considered": [22], "institutional": [24], "quality": [25], "clearly": [26], "dominates": [27], "effect": [29], "trade.": [31], "We": [32], "argue": [33], "overall": [35, 76], "not": [38, 79, 89], "most": [40, 73], "appropriate": [41], "measure": [42], "for": [43, 91], "technology": [44, 92, 103], "diffusion": [45], "as": [46, 94], "a": [47, 97], "source": [48], "productivity": [50], "growth": [51], "propose": [53], "focus": [55], "imports": [57, 104], "research": [59], "development": [61], "(R&D)\u2010intensive": [62], "goods": [63], "instead.": [64], "Overall,": [65], "we": [66], "confirm": [67], "previous": [68], "findings": [69], "matter": [72], "positively": [80], "associated": [81], "with": [82], "per\u2010capita": [83], "levels.": [85, 107], "Yet": [86], "this": [87], "does": [88], "hold": [90], "trade,": [93], "there": [95], "positive": [98], "significant": [100], "linkage": [101], "between": [102], "This": [108], "outcome": [109], "robust": [111], "various": [113], "model": [114], "specifications,": [115], "including": [116], "an": [117], "instrumental": [118], "variables": [119], "approach.": [120]}, "referenced_works": ["https://openalex.org/W84303650", "https://openalex.org/W583086315", "https://openalex.org/W1479827809", "https://openalex.org/W1492566073", "https://openalex.org/W1520082828", "https://openalex.org/W1553631189", "https://openalex.org/W1567920712", "https://openalex.org/W1573990252", "https://openalex.org/W1574946700", "https://openalex.org/W1597801997", "https://openalex.org/W1600823763", "https://openalex.org/W1810045679", "https://openalex.org/W1981162738", "https://openalex.org/W1983065200", "https://openalex.org/W2002300292", "https://openalex.org/W2011474190", "https://openalex.org/W2013291981", "https://openalex.org/W2016824197", "https://openalex.org/W2021733723", "https://openalex.org/W2023522548", "https://openalex.org/W2032290065", "https://openalex.org/W2043539591", "https://openalex.org/W2050085180", "https://openalex.org/W2050966072", "https://openalex.org/W2057878029", "https://openalex.org/W2063134194", "https://openalex.org/W2095701068", "https://openalex.org/W2103271134", "https://openalex.org/W2110373102", "https://openalex.org/W2128806834", "https://openalex.org/W2131517300", "https://openalex.org/W2155237739", "https://openalex.org/W2165144879", "https://openalex.org/W2169030761", "https://openalex.org/W2248521890", "https://openalex.org/W2588728401", "https://openalex.org/W2798462310", "https://openalex.org/W2889809566", "https://openalex.org/W2890833508", "https://openalex.org/W2994756033", "https://openalex.org/W3093817887", "https://openalex.org/W3121147769", "https://openalex.org/W3121160036", "https://openalex.org/W3121762824", "https://openalex.org/W3121915608", "https://openalex.org/W3122370218", "https://openalex.org/W3122531453", "https://openalex.org/W3122705141", "https://openalex.org/W3122721387", "https://openalex.org/W3123379813", "https://openalex.org/W3123590692", "https://openalex.org/W3123884823", "https://openalex.org/W3124131699", "https://openalex.org/W3124166904", "https://openalex.org/W3124506938", "https://openalex.org/W3124739305", "https://openalex.org/W3125379269", "https://openalex.org/W3125692325", "https://openalex.org/W3125873718", "https://openalex.org/W4206653645", "https://openalex.org/W4241750010", "https://openalex.org/W4248142843", "https://openalex.org/W4298291749", "https://openalex.org/W4298413470"], "relevance_score": 18.157219}], "group_by": []}
+{
+  "meta": {
+    "notice": "No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address. The mailto parameter doesn't raise this limit. Get a free key with its own $1/day at https://openalex.org/settings/api and add api_key=YOUR_KEY to your requests. An AI agent can get one for its user in one call: POST https://api.openalex.org/api-keys with {\"email\": \"<your user's email>\"}; we email them a link, and the key works once they click it. Docs for agents: https://help.openalex.org/llms.txt",
+    "count": 276,
+    "db_response_time_ms": 86,
+    "page": 1,
+    "per_page": 10,
+    "groups_count": null,
+    "x_query": {
+      "oql": "get works from 2001-01-01 through 2026-11-04 with (institutions AND (stemmed \"economic development\" OR stemmed \"income per capita\") AND (stemmed \"instrumental variable\" OR stemmed \"instrumental variables\" OR stemmed \"natural experiment\") NOT stemmed \"settler mortality\") in the title or abstract where type is ([article](article) or [preprint](preprint))",
+      "x_new_oql": "get works from 2001-01-01 through 2026-11-04 with (institutions AND (stemmed \"economic development\" OR stemmed \"income per capita\") AND (stemmed \"instrumental variable\" OR stemmed \"instrumental variables\" OR stemmed \"natural experiment\") NOT stemmed \"settler mortality\") in the title or abstract where type is ([article](article) or [preprint](preprint))",
+      "oqo": {
+        "get_rows": "works",
+        "filter_rows": [
+          {
+            "column_id": "from_publication_date",
+            "value": "2001-01-01"
+          },
+          {
+            "column_id": "title_and_abstract.search",
+            "value": "\"settler mortality\"",
+            "operator": "has",
+            "is_negated": true
+          },
+          {
+            "column_id": "title_and_abstract.search",
+            "value": "institutions",
+            "operator": "has"
+          },
+          {
+            "column_id": "to_publication_date",
+            "value": "2026-11-04"
+          },
+          {
+            "join": "or",
+            "filters": [
+              {
+                "column_id": "title_and_abstract.search",
+                "value": "\"economic development\"",
+                "operator": "has"
+              },
+              {
+                "column_id": "title_and_abstract.search",
+                "value": "\"income per capita\"",
+                "operator": "has"
+              }
+            ]
+          },
+          {
+            "join": "or",
+            "filters": [
+              {
+                "column_id": "title_and_abstract.search",
+                "value": "\"instrumental variable\"",
+                "operator": "has"
+              },
+              {
+                "column_id": "title_and_abstract.search",
+                "value": "\"instrumental variables\"",
+                "operator": "has"
+              },
+              {
+                "column_id": "title_and_abstract.search",
+                "value": "\"natural experiment\"",
+                "operator": "has"
+              }
+            ]
+          },
+          {
+            "join": "or",
+            "filters": [
+              {
+                "column_id": "type",
+                "value": "article"
+              },
+              {
+                "column_id": "type",
+                "value": "preprint"
+              }
+            ]
+          }
+        ]
+      },
+      "url": "/works?filter=from_publication_date:2001-01-01,title_and_abstract.search:%21%22settler mortality%22,title_and_abstract.search:institutions,to_publication_date:2026-11-04,title_and_abstract.search:%22economic development%22|%22income per capita%22,title_and_abstract.search:%22instrumental variable%22|%22instrumental variables%22|%22natural experiment%22,type:article|preprint&per_page=10&page=1",
+      "order": "best matches first",
+      "order_default": true
+    },
+    "cost_usd": 0.001
+  },
+  "results": [
+    {
+      "id": "https://openalex.org/W4407425804",
+      "doi": "https://doi.org/10.48550/arxiv.2502.07641",
+      "display_name": "Distributional Instrumental Variable Method",
+      "publication_year": 2025,
+      "type": "preprint",
+      "cited_by_count": 1,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5045156384",
+            "display_name": "Anastasiia Holovchak",
+            "orcid": "https://orcid.org/0009-0000-5687-2308",
+            "observed_orcids": [
+              "https://orcid.org/0009-0000-5687-2308"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I35440088",
+              "display_name": "ETH Zurich",
+              "ror": "https://ror.org/05a28rw58",
+              "country_code": "CH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I2799323385",
+                "https://openalex.org/I35440088"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4405257864",
+              "display_name": "Seminar for Statistics",
+              "ror": "https://ror.org/05rkrf147",
+              "country_code": "CH",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I2799323385",
+                "https://openalex.org/I35440088",
+                "https://openalex.org/I4405257864"
+              ]
+            }
+          ],
+          "countries": [
+            "CH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Holovchak, Anastasiia",
+          "raw_affiliation_strings": [
+            "Seminar für Statistik , ETH Zürich"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Seminar für Statistik , ETH Zürich",
+              "institution_ids": [
+                "https://openalex.org/I35440088",
+                "https://openalex.org/I4405257864"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5052823119",
+            "display_name": "Sorawit Saengkyongam",
+            "orcid": "https://orcid.org/0000-0003-1581-259X",
+            "observed_orcids": [
+              "https://orcid.org/0000-0003-1581-259X"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I35440088",
+              "display_name": "ETH Zurich",
+              "ror": "https://ror.org/05a28rw58",
+              "country_code": "CH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I2799323385",
+                "https://openalex.org/I35440088"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4405257864",
+              "display_name": "Seminar for Statistics",
+              "ror": "https://ror.org/05rkrf147",
+              "country_code": "CH",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I2799323385",
+                "https://openalex.org/I35440088",
+                "https://openalex.org/I4405257864"
+              ]
+            }
+          ],
+          "countries": [
+            "CH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Saengkyongam, Sorawit",
+          "raw_affiliation_strings": [
+            "Seminar für Statistik , ETH Zürich"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Seminar für Statistik , ETH Zürich",
+              "institution_ids": [
+                "https://openalex.org/I35440088",
+                "https://openalex.org/I4405257864"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5113173834",
+            "display_name": "Nicolai Meinshausen",
+            "orcid": null,
+            "observed_orcids": []
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I35440088",
+              "display_name": "ETH Zurich",
+              "ror": "https://ror.org/05a28rw58",
+              "country_code": "CH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I2799323385",
+                "https://openalex.org/I35440088"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4405257864",
+              "display_name": "Seminar for Statistics",
+              "ror": "https://ror.org/05rkrf147",
+              "country_code": "CH",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I2799323385",
+                "https://openalex.org/I35440088",
+                "https://openalex.org/I4405257864"
+              ]
+            }
+          ],
+          "countries": [
+            "CH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Meinshausen, Nicolai",
+          "raw_affiliation_strings": [
+            "Seminar für Statistik , Department of Mathematics , ETH Zürich , Rämistrasse 101 , 8092 Zürich , Switzerland",
+            "Seminar für Statistik , ETH Zürich"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Seminar für Statistik , Department of Mathematics , ETH Zürich , Rämistrasse 101 , 8092 Zürich , Switzerland",
+              "institution_ids": [
+                "https://openalex.org/I35440088",
+                "https://openalex.org/I4405257864"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Seminar für Statistik , ETH Zürich",
+              "institution_ids": [
+                "https://openalex.org/I35440088",
+                "https://openalex.org/I4405257864"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5072402741",
+            "display_name": "Xinwei Shen",
+            "orcid": "https://orcid.org/0000-0002-7801-4803",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-7801-4803"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I35440088",
+              "display_name": "ETH Zurich",
+              "ror": "https://ror.org/05a28rw58",
+              "country_code": "CH",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I2799323385",
+                "https://openalex.org/I35440088"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4405257864",
+              "display_name": "Seminar for Statistics",
+              "ror": "https://ror.org/05rkrf147",
+              "country_code": "CH",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I2799323385",
+                "https://openalex.org/I35440088",
+                "https://openalex.org/I4405257864"
+              ]
+            }
+          ],
+          "countries": [
+            "CH"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Shen, Xinwei",
+          "raw_affiliation_strings": [
+            "Seminar für Statistik , ETH Zürich"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Seminar für Statistik , ETH Zürich",
+              "institution_ids": [
+                "https://openalex.org/I35440088",
+                "https://openalex.org/I4405257864"
+              ]
+            }
+          ]
+        }
+      ],
+      "primary_location": {
+        "id": "pmh:oai:arXiv.org:2502.07641",
+        "doi": null,
+        "is_oa": true,
+        "landing_page_url": "https://arxiv.org/abs/2502.07641",
+        "pdf_url": "https://arxiv.org/pdf/2502.07641",
+        "source": {
+          "id": "https://openalex.org/S4306400194",
+          "display_name": "arXiv (Cornell University)",
+          "issn_l": "2331-8422",
+          "issn": [
+            "2331-8422"
+          ],
+          "is_oa": true,
+          "is_in_doaj": false,
+          "is_core": false,
+          "listed_in": [],
+          "host_organization": "https://openalex.org/I205783295",
+          "host_organization_name": "Cornell University",
+          "host_organization_lineage": [
+            "https://openalex.org/I205783295"
+          ],
+          "host_organization_lineage_names": [],
+          "type": "repository"
+        },
+        "license": "cc-by",
+        "license_id": "https://openalex.org/licenses/cc-by",
+        "version": "submittedVersion",
+        "is_accepted": false,
+        "is_published": false,
+        "raw_source_name": null,
+        "raw_type": "text"
+      },
+      "abstract_inverted_index": null,
+      "referenced_works": [],
+      "relevance_score": 41.428974
+    },
+    {
+      "id": "https://openalex.org/W3022286213",
+      "doi": "https://doi.org/10.1111/jors.12490",
+      "display_name": "Does graduate human capital production increase local economic development? An instrumental variable approach",
+      "publication_year": 2020,
+      "type": "article",
+      "cited_by_count": 25,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5014116166",
+            "display_name": "Adalgiso Amendola",
+            "orcid": "https://orcid.org/0000-0001-5641-1691",
+            "observed_orcids": [
+              "https://orcid.org/0000-0001-5641-1691"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I131729948",
+              "display_name": "University of Salerno",
+              "ror": "https://ror.org/0192m2k53",
+              "country_code": "IT",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I131729948"
+              ]
+            }
+          ],
+          "countries": [
+            "IT"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Adalgiso Amendola",
+          "raw_affiliation_strings": [
+            "Centre for Labour Economics and Economic Policy (CELPE), University of Salerno, Fisciano, Italy",
+            "Department of Economics and Statistics, University of Salerno, Fisciano, Italy"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0001-5641-1691",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Centre for Labour Economics and Economic Policy (CELPE), University of Salerno, Fisciano, Italy",
+              "institution_ids": [
+                "https://openalex.org/I131729948"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Department of Economics and Statistics, University of Salerno, Fisciano, Italy",
+              "institution_ids": [
+                "https://openalex.org/I131729948"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5091034011",
+            "display_name": "Cristian Barra",
+            "orcid": "https://orcid.org/0000-0001-8108-3888",
+            "observed_orcids": [
+              "https://orcid.org/0000-0001-8108-3888"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I131729948",
+              "display_name": "University of Salerno",
+              "ror": "https://ror.org/0192m2k53",
+              "country_code": "IT",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I131729948"
+              ]
+            }
+          ],
+          "countries": [
+            "IT"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Cristian Barra",
+          "raw_affiliation_strings": [
+            "Centre for Labour Economics and Economic Policy (CELPE), University of Salerno, Fisciano, Italy",
+            "Department of Economics and Statistics, University of Salerno, Fisciano, Italy"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0001-8108-3888",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Centre for Labour Economics and Economic Policy (CELPE), University of Salerno, Fisciano, Italy",
+              "institution_ids": [
+                "https://openalex.org/I131729948"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Department of Economics and Statistics, University of Salerno, Fisciano, Italy",
+              "institution_ids": [
+                "https://openalex.org/I131729948"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5008303543",
+            "display_name": "Roberto Zotti",
+            "orcid": "https://orcid.org/0000-0002-9493-7659",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-9493-7659"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I55143463",
+              "display_name": "University of Turin",
+              "ror": "https://ror.org/048tbm396",
+              "country_code": "IT",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I55143463"
+              ]
+            }
+          ],
+          "countries": [
+            "IT"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Roberto Zotti",
+          "raw_affiliation_strings": [
+            "Department of Economics and Statistics \"Cognetti de Martiis\", University of Torino, Torino, Italy"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-9493-7659",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Economics and Statistics \"Cognetti de Martiis\", University of Torino, Torino, Italy",
+              "institution_ids": [
+                "https://openalex.org/I55143463"
+              ]
+            }
+          ]
+        }
+      ],
+      "primary_location": {
+        "id": "doi:10.1111/jors.12490",
+        "doi": "https://doi.org/10.1111/jors.12490",
+        "is_oa": false,
+        "landing_page_url": "https://doi.org/10.1111/jors.12490",
+        "pdf_url": null,
+        "source": {
+          "id": "https://openalex.org/S65528657",
+          "display_name": "Journal of Regional Science",
+          "issn_l": "0022-4146",
+          "issn": [
+            "0022-4146",
+            "1467-9787"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "listed_in": [
+            "abdc-a",
+            "anvur-class-a",
+            "anvur-scientific",
+            "cwts-core",
+            "jufo-2",
+            "norway-1",
+            "poland-100",
+            "russia-white-list-1",
+            "vabb-shw"
+          ],
+          "host_organization": "https://openalex.org/P4310320595",
+          "host_organization_name": "Wiley",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310320595"
+          ],
+          "host_organization_lineage_names": [
+            "Wiley"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Journal of Regional Science",
+        "raw_type": "journal-article"
+      },
+      "abstract_inverted_index": null,
+      "referenced_works": [
+        "https://openalex.org/W77064602",
+        "https://openalex.org/W96431497",
+        "https://openalex.org/W188813872",
+        "https://openalex.org/W1495309835",
+        "https://openalex.org/W1505429321",
+        "https://openalex.org/W1580993643",
+        "https://openalex.org/W1582132356",
+        "https://openalex.org/W1600914605",
+        "https://openalex.org/W1603335952",
+        "https://openalex.org/W1679759576",
+        "https://openalex.org/W1749833815",
+        "https://openalex.org/W1892688319",
+        "https://openalex.org/W1964538498",
+        "https://openalex.org/W1971633378",
+        "https://openalex.org/W1978461618",
+        "https://openalex.org/W1991274171",
+        "https://openalex.org/W1995883104",
+        "https://openalex.org/W1996426406",
+        "https://openalex.org/W2000246740",
+        "https://openalex.org/W2005477221",
+        "https://openalex.org/W2005647427",
+        "https://openalex.org/W2006782671",
+        "https://openalex.org/W2007395741",
+        "https://openalex.org/W2007553837",
+        "https://openalex.org/W2009815689",
+        "https://openalex.org/W2017500605",
+        "https://openalex.org/W2017667975",
+        "https://openalex.org/W2019555972",
+        "https://openalex.org/W2023720499",
+        "https://openalex.org/W2024157940",
+        "https://openalex.org/W2028969078",
+        "https://openalex.org/W2030836238",
+        "https://openalex.org/W2031238093",
+        "https://openalex.org/W2031564586",
+        "https://openalex.org/W2032400608",
+        "https://openalex.org/W2037007918",
+        "https://openalex.org/W2040191798",
+        "https://openalex.org/W2048287230",
+        "https://openalex.org/W2078714009",
+        "https://openalex.org/W2080330113",
+        "https://openalex.org/W2082633986",
+        "https://openalex.org/W2086147364",
+        "https://openalex.org/W2086855051",
+        "https://openalex.org/W2089182974",
+        "https://openalex.org/W2095607645",
+        "https://openalex.org/W2102840144",
+        "https://openalex.org/W2103441334",
+        "https://openalex.org/W2107408353",
+        "https://openalex.org/W2108594344",
+        "https://openalex.org/W2118811884",
+        "https://openalex.org/W2123954937",
+        "https://openalex.org/W2124465692",
+        "https://openalex.org/W2129967092",
+        "https://openalex.org/W2130051487",
+        "https://openalex.org/W2131972564",
+        "https://openalex.org/W2132100729",
+        "https://openalex.org/W2136229154",
+        "https://openalex.org/W2136708765",
+        "https://openalex.org/W2139073173",
+        "https://openalex.org/W2140617451",
+        "https://openalex.org/W2147313299",
+        "https://openalex.org/W2154234908",
+        "https://openalex.org/W2156218521",
+        "https://openalex.org/W2160536271",
+        "https://openalex.org/W2162484441",
+        "https://openalex.org/W2165144879",
+        "https://openalex.org/W2165145543",
+        "https://openalex.org/W2166689474",
+        "https://openalex.org/W2167790643",
+        "https://openalex.org/W2169653420",
+        "https://openalex.org/W2268778290",
+        "https://openalex.org/W2487651013",
+        "https://openalex.org/W2509986695",
+        "https://openalex.org/W2512545025",
+        "https://openalex.org/W2537400035",
+        "https://openalex.org/W2571513158",
+        "https://openalex.org/W2748001986",
+        "https://openalex.org/W2766563981",
+        "https://openalex.org/W2792120450",
+        "https://openalex.org/W2805205381",
+        "https://openalex.org/W2891782533",
+        "https://openalex.org/W2895260194",
+        "https://openalex.org/W2900637885",
+        "https://openalex.org/W2992651003",
+        "https://openalex.org/W3022732902",
+        "https://openalex.org/W3121227373",
+        "https://openalex.org/W3122149918",
+        "https://openalex.org/W3122630951",
+        "https://openalex.org/W3122851880",
+        "https://openalex.org/W3123382778",
+        "https://openalex.org/W3123473602",
+        "https://openalex.org/W4240030480",
+        "https://openalex.org/W4300954726",
+        "https://openalex.org/W4394909045"
+      ],
+      "relevance_score": 41.134068
+    },
+    {
+      "id": "https://openalex.org/W7162082492",
+      "doi": "https://doi.org/10.1002/jae.70070",
+      "display_name": "Bayesian Model Averaging in Causal Instrumental Variable Models",
+      "publication_year": 2026,
+      "type": "article",
+      "cited_by_count": 1,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5052388988",
+            "display_name": "Gregor Steiner",
+            "orcid": "https://orcid.org/0009-0001-7996-6742",
+            "observed_orcids": [
+              "https://orcid.org/0009-0001-7996-6742"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I39555362",
+              "display_name": "University of Warwick",
+              "ror": "https://ror.org/01a77tt86",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I39555362"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Gregor Steiner",
+          "raw_affiliation_strings": [
+            "Department of Statistics University of Warwick  Coventry UK"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Statistics University of Warwick  Coventry UK",
+              "institution_ids": [
+                "https://openalex.org/I39555362"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5074617230",
+            "display_name": "Mark Steel",
+            "orcid": null,
+            "observed_orcids": []
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I39555362",
+              "display_name": "University of Warwick",
+              "ror": "https://ror.org/01a77tt86",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I39555362"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Mark Steel",
+          "raw_affiliation_strings": [
+            "Department of Statistics University of Warwick  Coventry UK"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Statistics University of Warwick  Coventry UK",
+              "institution_ids": [
+                "https://openalex.org/I39555362"
+              ]
+            }
+          ]
+        }
+      ],
+      "primary_location": {
+        "id": "doi:10.1002/jae.70070",
+        "doi": "https://doi.org/10.1002/jae.70070",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.1002/jae.70070",
+        "pdf_url": null,
+        "source": {
+          "id": "https://openalex.org/S85739584",
+          "display_name": "Journal of Applied Econometrics",
+          "issn_l": "0883-7252",
+          "issn": [
+            "0883-7252",
+            "1099-1255"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "listed_in": [
+            "abdc-a-star",
+            "anvur-class-a",
+            "anvur-scientific",
+            "cwts-core",
+            "erih-plus",
+            "jufo-2",
+            "ki-jl-2",
+            "norway-2",
+            "poland-200",
+            "russia-white-list-1",
+            "vabb-shw"
+          ],
+          "host_organization": "https://openalex.org/P4310320595",
+          "host_organization_name": "Wiley",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310320595"
+          ],
+          "host_organization_lineage_names": [
+            "Wiley"
+          ],
+          "type": "journal"
+        },
+        "license": "cc-by",
+        "license_id": "https://openalex.org/licenses/cc-by",
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Journal of Applied Econometrics",
+        "raw_type": "journal-article"
+      },
+      "abstract_inverted_index": null,
+      "referenced_works": [
+        "https://openalex.org/W812860946",
+        "https://openalex.org/W1482757981",
+        "https://openalex.org/W1485526600",
+        "https://openalex.org/W1521448748",
+        "https://openalex.org/W1560220104",
+        "https://openalex.org/W1814560945",
+        "https://openalex.org/W1856341315",
+        "https://openalex.org/W1978816856",
+        "https://openalex.org/W1982471084",
+        "https://openalex.org/W1982991166",
+        "https://openalex.org/W1989535774",
+        "https://openalex.org/W1991587639",
+        "https://openalex.org/W1998643818",
+        "https://openalex.org/W2000901237",
+        "https://openalex.org/W2001123479",
+        "https://openalex.org/W2020389170",
+        "https://openalex.org/W2027620321",
+        "https://openalex.org/W2047989136",
+        "https://openalex.org/W2088932531",
+        "https://openalex.org/W2091907614",
+        "https://openalex.org/W2138545569",
+        "https://openalex.org/W2152933101",
+        "https://openalex.org/W2159347337",
+        "https://openalex.org/W2162888823",
+        "https://openalex.org/W2163162137",
+        "https://openalex.org/W2314509558",
+        "https://openalex.org/W2491861244",
+        "https://openalex.org/W2577227262",
+        "https://openalex.org/W2602449753",
+        "https://openalex.org/W2775739081",
+        "https://openalex.org/W2900183310",
+        "https://openalex.org/W2981114831",
+        "https://openalex.org/W3021144880",
+        "https://openalex.org/W3084136375",
+        "https://openalex.org/W3124377371",
+        "https://openalex.org/W3133845186",
+        "https://openalex.org/W3180038695"
+      ],
+      "relevance_score": 36.678955
+    },
+    {
+      "id": "https://openalex.org/W7161015320",
+      "doi": "https://doi.org/10.1057/s41599-026-07391-w",
+      "display_name": "The security of property rights and subjective well-being: cultural contingencies in a global instrumental variable analysis",
+      "publication_year": 2026,
+      "type": "article",
+      "cited_by_count": 0,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5100725640",
+            "display_name": "Yudi Zhang",
+            "orcid": "https://orcid.org/0000-0002-7830-5133",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-7830-5133",
+              "https://orcid.org/0009-0001-6084-5051"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I211433327",
+              "display_name": "Ministry of Natural Resources",
+              "ror": "https://ror.org/02kxqx159",
+              "country_code": "CN",
+              "type": "government",
+              "lineage": [
+                "https://openalex.org/I211433327",
+                "https://openalex.org/I4210127390"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I99065089",
+              "display_name": "Tsinghua University",
+              "ror": "https://ror.org/03cve4549",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I99065089"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Yudi Zhang",
+          "raw_affiliation_strings": [
+            "Technology Innovation Center for Smart Human Settlements and Spatial Planning & Governance, Ministry of Natural Resources of the People’s Republic of China, Beijing, China",
+            "Tsinghua University, Beijing, China"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Technology Innovation Center for Smart Human Settlements and Spatial Planning & Governance, Ministry of Natural Resources of the People’s Republic of China, Beijing, China",
+              "institution_ids": [
+                "https://openalex.org/I211433327"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Tsinghua University, Beijing, China",
+              "institution_ids": [
+                "https://openalex.org/I99065089"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Li Tian",
+            "orcid": null,
+            "observed_orcids": []
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I211433327",
+              "display_name": "Ministry of Natural Resources",
+              "ror": "https://ror.org/02kxqx159",
+              "country_code": "CN",
+              "type": "government",
+              "lineage": [
+                "https://openalex.org/I211433327",
+                "https://openalex.org/I4210127390"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I99065089",
+              "display_name": "Tsinghua University",
+              "ror": "https://ror.org/03cve4549",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I99065089"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Li Tian",
+          "raw_affiliation_strings": [
+            "Technology Innovation Center for Smart Human Settlements and Spatial Planning & Governance, Ministry of Natural Resources of the People’s Republic of China, Beijing, China",
+            "Tsinghua University, Beijing, China"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Technology Innovation Center for Smart Human Settlements and Spatial Planning & Governance, Ministry of Natural Resources of the People’s Republic of China, Beijing, China",
+              "institution_ids": [
+                "https://openalex.org/I211433327"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Tsinghua University, Beijing, China",
+              "institution_ids": [
+                "https://openalex.org/I99065089"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5136039296",
+            "display_name": "Jingwei Li",
+            "orcid": null,
+            "observed_orcids": []
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I21193070",
+              "display_name": "Beijing Jiaotong University",
+              "ror": "https://ror.org/01yj56c84",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I21193070"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Jingwei Li",
+          "raw_affiliation_strings": [
+            "Beijing Jiaotong University, Beijing, China"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Beijing Jiaotong University, Beijing, China",
+              "institution_ids": [
+                "https://openalex.org/I21193070"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5135392036",
+            "display_name": "Wei Ouyang",
+            "orcid": null,
+            "observed_orcids": []
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I78988378",
+              "display_name": "Renmin University of China",
+              "ror": "https://ror.org/041pakw92",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I78988378"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Wei Ouyang",
+          "raw_affiliation_strings": [
+            "Renmin University of China, Beijing, China"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Renmin University of China, Beijing, China",
+              "institution_ids": [
+                "https://openalex.org/I78988378"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5136056314",
+            "display_name": "Yihao Chen",
+            "orcid": null,
+            "observed_orcids": []
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I21193070",
+              "display_name": "Beijing Jiaotong University",
+              "ror": "https://ror.org/01yj56c84",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I21193070"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Yihao Chen",
+          "raw_affiliation_strings": [
+            "Beijing Jiaotong University, Beijing, China"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Beijing Jiaotong University, Beijing, China",
+              "institution_ids": [
+                "https://openalex.org/I21193070"
+              ]
+            }
+          ]
+        }
+      ],
+      "primary_location": {
+        "id": "doi:10.1057/s41599-026-07391-w",
+        "doi": "https://doi.org/10.1057/s41599-026-07391-w",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.1057/s41599-026-07391-w",
+        "pdf_url": "https://www.nature.com/articles/s41599-026-07391-w_reference.pdf",
+        "source": {
+          "id": "https://openalex.org/S4210206302",
+          "display_name": "Humanities and Social Sciences Communications",
+          "issn_l": "2055-1045",
+          "issn": [
+            "2055-1045",
+            "2662-9992"
+          ],
+          "is_oa": true,
+          "is_in_doaj": true,
+          "is_core": true,
+          "listed_in": [
+            "anvur-class-a",
+            "anvur-scientific",
+            "cwts-core",
+            "doaj",
+            "jufo-1",
+            "ki-jl-1",
+            "norway-1",
+            "poland-20",
+            "russia-white-list-1",
+            "vabb-shw"
+          ],
+          "host_organization": "https://openalex.org/P4310319702",
+          "host_organization_name": "Palgrave Macmillan",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310319702",
+            "https://openalex.org/P4310319964"
+          ],
+          "host_organization_lineage_names": [
+            "Palgrave Macmillan",
+            "Macmillan Publishers"
+          ],
+          "type": "journal"
+        },
+        "license": "cc-by",
+        "license_id": "https://openalex.org/licenses/cc-by",
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Humanities and Social Sciences Communications",
+        "raw_type": "journal-article"
+      },
+      "abstract_inverted_index": null,
+      "referenced_works": [
+        "https://openalex.org/W4205518857"
+      ],
+      "relevance_score": 28.862768
+    },
+    {
+      "id": "https://openalex.org/W2069316799",
+      "doi": "https://doi.org/10.1002/jid.1225",
+      "display_name": "Institutions and geography as sources of economic development",
+      "publication_year": 2005,
+      "type": "article",
+      "cited_by_count": 28,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5008057397",
+            "display_name": "Andrea Presbitero",
+            "orcid": "https://orcid.org/0000-0003-4622-941X",
+            "observed_orcids": [
+              "https://orcid.org/0000-0003-4622-941X"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I122534668",
+              "display_name": "Marche Polytechnic University",
+              "ror": "https://ror.org/00x69rs40",
+              "country_code": "IT",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I122534668"
+              ]
+            }
+          ],
+          "countries": [
+            "IT"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Andrea F. Presbitero",
+          "raw_affiliation_strings": [
+            "Department of Economics, Università Politecnica delle Marche, Italy",
+            "Department of Economics , Università , Politecnica delle Marche, Italy"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Economics, Università Politecnica delle Marche, Italy",
+              "institution_ids": [
+                "https://openalex.org/I122534668"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Department of Economics , Università , Politecnica delle Marche, Italy",
+              "institution_ids": [
+                "https://openalex.org/I122534668"
+              ]
+            }
+          ]
+        }
+      ],
+      "primary_location": {
+        "id": "doi:10.1002/jid.1225",
+        "doi": "https://doi.org/10.1002/jid.1225",
+        "is_oa": false,
+        "landing_page_url": "https://doi.org/10.1002/jid.1225",
+        "pdf_url": null,
+        "source": {
+          "id": "https://openalex.org/S96563387",
+          "display_name": "Journal of International Development",
+          "issn_l": "0954-1748",
+          "issn": [
+            "0954-1748",
+            "1099-1328"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "listed_in": [
+            "abdc-b",
+            "anvur-scientific",
+            "cwts-core",
+            "jufo-1",
+            "norway-1",
+            "poland-70",
+            "russia-white-list-1",
+            "vabb-shw"
+          ],
+          "host_organization": "https://openalex.org/P4310320595",
+          "host_organization_name": "Wiley",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310320595"
+          ],
+          "host_organization_lineage_names": [
+            "Wiley"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Journal of International Development",
+        "raw_type": "journal-article"
+      },
+      "abstract_inverted_index": null,
+      "referenced_works": [
+        "https://openalex.org/W93970146",
+        "https://openalex.org/W96791486",
+        "https://openalex.org/W1481579187",
+        "https://openalex.org/W1483104454",
+        "https://openalex.org/W1492598581",
+        "https://openalex.org/W1496027686",
+        "https://openalex.org/W1499817465",
+        "https://openalex.org/W1506258086",
+        "https://openalex.org/W1509589189",
+        "https://openalex.org/W1510624767",
+        "https://openalex.org/W1511225155",
+        "https://openalex.org/W1525936387",
+        "https://openalex.org/W1527343256",
+        "https://openalex.org/W1529428759",
+        "https://openalex.org/W1552144375",
+        "https://openalex.org/W1552995848",
+        "https://openalex.org/W1553329268",
+        "https://openalex.org/W1553631189",
+        "https://openalex.org/W1553840091",
+        "https://openalex.org/W1558153909",
+        "https://openalex.org/W1565858261",
+        "https://openalex.org/W1568013478",
+        "https://openalex.org/W1569258179",
+        "https://openalex.org/W1575299154",
+        "https://openalex.org/W1575954106",
+        "https://openalex.org/W1606404335",
+        "https://openalex.org/W1834528902",
+        "https://openalex.org/W1840144356",
+        "https://openalex.org/W1954131431",
+        "https://openalex.org/W1974025513",
+        "https://openalex.org/W1977433163",
+        "https://openalex.org/W1980412904",
+        "https://openalex.org/W1988501481",
+        "https://openalex.org/W2003576851",
+        "https://openalex.org/W2011474190",
+        "https://openalex.org/W2012421811",
+        "https://openalex.org/W2017102741",
+        "https://openalex.org/W2020958936",
+        "https://openalex.org/W2041692102",
+        "https://openalex.org/W2042273599",
+        "https://openalex.org/W2042578425",
+        "https://openalex.org/W2057446362",
+        "https://openalex.org/W2061560855",
+        "https://openalex.org/W2091020207",
+        "https://openalex.org/W2095701068",
+        "https://openalex.org/W2105278501",
+        "https://openalex.org/W2108614304",
+        "https://openalex.org/W2111988782",
+        "https://openalex.org/W2113224665",
+        "https://openalex.org/W2129690173",
+        "https://openalex.org/W2133369488",
+        "https://openalex.org/W2133771254",
+        "https://openalex.org/W2152414118",
+        "https://openalex.org/W2165125692",
+        "https://openalex.org/W2165144879",
+        "https://openalex.org/W2170222801",
+        "https://openalex.org/W2325530759",
+        "https://openalex.org/W2740196562",
+        "https://openalex.org/W2994756033",
+        "https://openalex.org/W3021827133",
+        "https://openalex.org/W3022550709",
+        "https://openalex.org/W3121147769",
+        "https://openalex.org/W3121762824",
+        "https://openalex.org/W3122531453",
+        "https://openalex.org/W3122667128",
+        "https://openalex.org/W3122705141",
+        "https://openalex.org/W3123059484",
+        "https://openalex.org/W3123342021",
+        "https://openalex.org/W3123472810",
+        "https://openalex.org/W3124131699",
+        "https://openalex.org/W3124166904",
+        "https://openalex.org/W3124301332",
+        "https://openalex.org/W3124561619",
+        "https://openalex.org/W3124600175",
+        "https://openalex.org/W3124831741",
+        "https://openalex.org/W3125076828",
+        "https://openalex.org/W4205577959",
+        "https://openalex.org/W4241750010",
+        "https://openalex.org/W4298413470",
+        "https://openalex.org/W4300720718"
+      ],
+      "relevance_score": 24.969336
+    },
+    {
+      "id": "https://openalex.org/W3127103038",
+      "doi": "https://doi.org/10.2139/ssrn.3171982",
+      "display_name": "Machine Learning Indices, Political Institutions, and Economic Development",
+      "publication_year": 2018,
+      "type": "preprint",
+      "cited_by_count": 31,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5066510703",
+            "display_name": "Klaus Gründler",
+            "orcid": "https://orcid.org/0000-0002-5303-973X",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-5303-973X"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I25974101",
+              "display_name": "University of Würzburg",
+              "ror": "https://ror.org/00fbnyb24",
+              "country_code": "DE",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I25974101"
+              ]
+            }
+          ],
+          "countries": [
+            "DE"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Klaus Gründler",
+          "raw_affiliation_strings": [
+            "University of Würzburg, Sanderring 2, Würzburg, D-97070, Germany",
+            "University of Würzburg"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "University of Würzburg, Sanderring 2, Würzburg, D-97070, Germany",
+              "institution_ids": [
+                "https://openalex.org/I25974101"
+              ]
+            },
+            {
+              "raw_affiliation_string": "University of Würzburg",
+              "institution_ids": [
+                "https://openalex.org/I25974101"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5005028761",
+            "display_name": "Tommy Krieger",
+            "orcid": "https://orcid.org/0000-0003-3110-9714",
+            "observed_orcids": [
+              "https://orcid.org/0000-0003-3110-9714"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I189712700",
+              "display_name": "University of Konstanz",
+              "ror": "https://ror.org/0546hnb39",
+              "country_code": "DE",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I189712700"
+              ]
+            }
+          ],
+          "countries": [
+            "DE"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Tommy Krieger",
+          "raw_affiliation_strings": [
+            "University of Konstanz, Fach D-144, Universitätsstraße 10, Konstanz, D-78457, Germany",
+            "University of Konstanz"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "University of Konstanz, Fach D-144, Universitätsstraße 10, Konstanz, D-78457, Germany",
+              "institution_ids": [
+                "https://openalex.org/I189712700"
+              ]
+            },
+            {
+              "raw_affiliation_string": "University of Konstanz",
+              "institution_ids": [
+                "https://openalex.org/I189712700"
+              ]
+            }
+          ]
+        }
+      ],
+      "primary_location": {
+        "id": "doi:10.2139/ssrn.3171982",
+        "doi": "https://doi.org/10.2139/ssrn.3171982",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.2139/ssrn.3171982",
+        "pdf_url": null,
+        "source": {
+          "id": "https://openalex.org/S4210172589",
+          "display_name": "SSRN Electronic Journal",
+          "issn_l": "1556-5068",
+          "issn": [
+            "1556-5068"
+          ],
+          "is_oa": true,
+          "is_in_doaj": false,
+          "is_core": false,
+          "listed_in": [],
+          "host_organization": "https://openalex.org/I1318003438",
+          "host_organization_name": "RELX Group (Netherlands)",
+          "host_organization_lineage": [
+            "https://openalex.org/I1318003438"
+          ],
+          "host_organization_lineage_names": [],
+          "type": "repository"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "acceptedVersion",
+        "is_accepted": true,
+        "is_published": false,
+        "raw_source_name": null,
+        "raw_type": "posted-content"
+      },
+      "abstract_inverted_index": null,
+      "referenced_works": [],
+      "relevance_score": 23.166784
+    },
+    {
+      "id": "https://openalex.org/W4323897988",
+      "doi": "https://doi.org/10.1080/10611991.2022.2147343",
+      "display_name": "The Effects of Institutions on Economic Development: Developed and Post-Communist Nations",
+      "publication_year": 2022,
+      "type": "article",
+      "cited_by_count": 1,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5076702369",
+            "display_name": "Ismatilla T. Mardanov",
+            "orcid": "https://orcid.org/0000-0002-9449-6822",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-9449-6822"
+            ]
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": true,
+          "raw_author_name": "Ismatilla Mardanov",
+          "raw_affiliation_strings": [
+            "View further author information"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "View further author information",
+              "institution_ids": []
+            }
+          ]
+        }
+      ],
+      "primary_location": {
+        "id": "doi:10.1080/10611991.2022.2147343",
+        "doi": "https://doi.org/10.1080/10611991.2022.2147343",
+        "is_oa": false,
+        "landing_page_url": "http://dx.doi.org/10.1080/10611991.2022.2147343",
+        "pdf_url": null,
+        "source": {
+          "id": "https://openalex.org/S34307002",
+          "display_name": "Problems of Economic Transition",
+          "issn_l": "1061-1991",
+          "issn": [
+            "1061-1991",
+            "1557-931X"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": false,
+          "listed_in": [
+            "abdc-b",
+            "anvur-scientific",
+            "jufo-1"
+          ],
+          "host_organization": "https://openalex.org/P4310320441",
+          "host_organization_name": "M. E. Sharpe",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310320441"
+          ],
+          "host_organization_lineage_names": [
+            "M. E. Sharpe"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Problems of Economic Transition",
+        "raw_type": "journal-article"
+      },
+      "abstract_inverted_index": null,
+      "referenced_works": [
+        "https://openalex.org/W607992575",
+        "https://openalex.org/W1559924327",
+        "https://openalex.org/W1564384902",
+        "https://openalex.org/W1963710418",
+        "https://openalex.org/W1966953672",
+        "https://openalex.org/W1980848104",
+        "https://openalex.org/W1988341295",
+        "https://openalex.org/W2002694178",
+        "https://openalex.org/W2016618256",
+        "https://openalex.org/W2019281854",
+        "https://openalex.org/W2022790056",
+        "https://openalex.org/W2035900610",
+        "https://openalex.org/W2043422186",
+        "https://openalex.org/W2048312116",
+        "https://openalex.org/W2058348533",
+        "https://openalex.org/W2067236069",
+        "https://openalex.org/W2070631858",
+        "https://openalex.org/W2071240032",
+        "https://openalex.org/W2073148912",
+        "https://openalex.org/W2075711986",
+        "https://openalex.org/W2083485815",
+        "https://openalex.org/W2098589686",
+        "https://openalex.org/W2102897370",
+        "https://openalex.org/W2126015660",
+        "https://openalex.org/W2130259765",
+        "https://openalex.org/W2135256695",
+        "https://openalex.org/W2139073314",
+        "https://openalex.org/W2151852201",
+        "https://openalex.org/W2155760494",
+        "https://openalex.org/W2160251138",
+        "https://openalex.org/W2160354002",
+        "https://openalex.org/W2165144879",
+        "https://openalex.org/W2166974667",
+        "https://openalex.org/W2465452105",
+        "https://openalex.org/W2524002291",
+        "https://openalex.org/W2539139479",
+        "https://openalex.org/W2927606987",
+        "https://openalex.org/W2994756033",
+        "https://openalex.org/W3122773656",
+        "https://openalex.org/W3123757519",
+        "https://openalex.org/W3125601827",
+        "https://openalex.org/W3126004765",
+        "https://openalex.org/W4200051735",
+        "https://openalex.org/W4233789075",
+        "https://openalex.org/W4285719527",
+        "https://openalex.org/W4298005629",
+        "https://openalex.org/W4298413470",
+        "https://openalex.org/W4301752817"
+      ],
+      "relevance_score": 21.385532
+    },
+    {
+      "id": "https://openalex.org/W2231632438",
+      "doi": null,
+      "display_name": "On the determinants of life insurance development in Sub-Saharan Africa: the role of the institutions quality in the effect of economic development",
+      "publication_year": 2015,
+      "type": "preprint",
+      "cited_by_count": 38,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5055566119",
+            "display_name": "Samuel Guérineau",
+            "orcid": null,
+            "observed_orcids": []
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4387153954",
+              "display_name": "Centre d'Études et de Recherches sur le Développement International",
+              "ror": "https://ror.org/01hg13988",
+              "country_code": "FR",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I1294671590",
+                "https://openalex.org/I198244214",
+                "https://openalex.org/I2802818602",
+                "https://openalex.org/I4210090127",
+                "https://openalex.org/I4210131494",
+                "https://openalex.org/I4210166444",
+                "https://openalex.org/I4387153954"
+              ]
+            }
+          ],
+          "countries": [
+            "FR"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Samuel Guérineau",
+          "raw_affiliation_strings": [
+            "Centre d'Études et de Recherches sur le Développement International"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Centre d'Études et de Recherches sur le Développement International",
+              "institution_ids": [
+                "https://openalex.org/I4387153954"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5025395206",
+            "display_name": "Relwendé Sawadogo",
+            "orcid": "https://orcid.org/0000-0002-3389-2418",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-3389-2418",
+              "https://orcid.org/0009-0002-7368-766X"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4387153954",
+              "display_name": "Centre d'Études et de Recherches sur le Développement International",
+              "ror": "https://ror.org/01hg13988",
+              "country_code": "FR",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I1294671590",
+                "https://openalex.org/I198244214",
+                "https://openalex.org/I2802818602",
+                "https://openalex.org/I4210090127",
+                "https://openalex.org/I4210131494",
+                "https://openalex.org/I4210166444",
+                "https://openalex.org/I4387153954"
+              ]
+            }
+          ],
+          "countries": [
+            "FR"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Relwendé Sawadogo",
+          "raw_affiliation_strings": [
+            "Centre d'Études et de Recherches sur le Développement International"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Centre d'Études et de Recherches sur le Développement International",
+              "institution_ids": [
+                "https://openalex.org/I4387153954"
+              ]
+            }
+          ]
+        }
+      ],
+      "primary_location": {
+        "id": "pmh:oai:RePEc:cdi:wpaper:1717",
+        "doi": null,
+        "is_oa": false,
+        "landing_page_url": "http://publi.cerdi.org/ed/2015/2015.19.pdf",
+        "pdf_url": "http://publi.cerdi.org/ed/2015/2015.19.pdf",
+        "source": {
+          "id": "https://openalex.org/S4306401271",
+          "display_name": "RePEc: Research Papers in Economics",
+          "issn_l": null,
+          "issn": null,
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": false,
+          "listed_in": [],
+          "host_organization": "https://openalex.org/I77793887",
+          "host_organization_name": "Federal Reserve Bank of St. Louis",
+          "host_organization_lineage": [
+            "https://openalex.org/I77793887"
+          ],
+          "host_organization_lineage_names": [],
+          "type": "repository"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "submittedVersion",
+        "is_accepted": false,
+        "is_published": false,
+        "raw_source_name": null,
+        "raw_type": "preprint"
+      },
+      "abstract_inverted_index": null,
+      "referenced_works": [
+        "https://openalex.org/W1508942962",
+        "https://openalex.org/W1547506455",
+        "https://openalex.org/W1590087664",
+        "https://openalex.org/W1640652527",
+        "https://openalex.org/W1966041856",
+        "https://openalex.org/W1969519191",
+        "https://openalex.org/W1975535635",
+        "https://openalex.org/W1989666695",
+        "https://openalex.org/W2010235856",
+        "https://openalex.org/W2012467296",
+        "https://openalex.org/W2013762096",
+        "https://openalex.org/W2020452381",
+        "https://openalex.org/W2025019820",
+        "https://openalex.org/W2027120132",
+        "https://openalex.org/W2042915520",
+        "https://openalex.org/W2048411773",
+        "https://openalex.org/W2057621538",
+        "https://openalex.org/W2077883749",
+        "https://openalex.org/W2078707560",
+        "https://openalex.org/W2091261904",
+        "https://openalex.org/W2130172790",
+        "https://openalex.org/W2166037496",
+        "https://openalex.org/W2168311275",
+        "https://openalex.org/W2187517444",
+        "https://openalex.org/W2198018045",
+        "https://openalex.org/W2252375763",
+        "https://openalex.org/W2989377525",
+        "https://openalex.org/W3121534672",
+        "https://openalex.org/W3121759882",
+        "https://openalex.org/W3122838538",
+        "https://openalex.org/W3124259699",
+        "https://openalex.org/W3176682987"
+      ],
+      "relevance_score": 20.243393
+    },
+    {
+      "id": "https://openalex.org/W7168135264",
+      "doi": "https://doi.org/10.1002/soej.70059",
+      "display_name": "Why Does Individualism Affect Economic Development: Is It Values, Policies, or Institutions?",
+      "publication_year": 2026,
+      "type": "article",
+      "cited_by_count": 0,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5027442164",
+            "display_name": "Lewis Davis",
+            "orcid": "https://orcid.org/0000-0003-2084-3091",
+            "observed_orcids": [
+              "https://orcid.org/0000-0003-2084-3091"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I177328695",
+              "display_name": "Union College",
+              "ror": "https://ror.org/058w5nk68",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I177328695"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Lewis S. Davis",
+          "raw_affiliation_strings": [
+            "Union College  Schenectady New York USA"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0003-2084-3091",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Union College  Schenectady New York USA",
+              "institution_ids": [
+                "https://openalex.org/I177328695"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5063399810",
+            "display_name": "Claudia R. Williamson",
+            "orcid": "https://orcid.org/0000-0002-4443-7453",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-4443-7453"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I177097968",
+              "display_name": "University of Tennessee at Chattanooga",
+              "ror": "https://ror.org/00nqb1v70",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I177097968"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Claudia Williamson Kramer",
+          "raw_affiliation_strings": [
+            "University of Tennessee at Chattanooga  Chattanooga Tennessee USA"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-4443-7453",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "University of Tennessee at Chattanooga  Chattanooga Tennessee USA",
+              "institution_ids": [
+                "https://openalex.org/I177097968"
+              ]
+            }
+          ]
+        }
+      ],
+      "primary_location": {
+        "id": "doi:10.1002/soej.70059",
+        "doi": "https://doi.org/10.1002/soej.70059",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.1002/soej.70059",
+        "pdf_url": null,
+        "source": {
+          "id": "https://openalex.org/S16296580",
+          "display_name": "Southern Economic Journal",
+          "issn_l": "0038-4038",
+          "issn": [
+            "0038-4038",
+            "2325-8012"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "listed_in": [
+            "abdc-a",
+            "anvur-class-a",
+            "anvur-scientific",
+            "cwts-core",
+            "jufo-1",
+            "norway-1",
+            "poland-70",
+            "russia-white-list-2",
+            "vabb-shw"
+          ],
+          "host_organization": "https://openalex.org/P4310320595",
+          "host_organization_name": "Wiley",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310320595"
+          ],
+          "host_organization_lineage_names": [
+            "Wiley"
+          ],
+          "type": "journal"
+        },
+        "license": "cc-by-nc-nd",
+        "license_id": "https://openalex.org/licenses/cc-by-nc-nd",
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Southern Economic Journal",
+        "raw_type": "journal-article"
+      },
+      "abstract_inverted_index": null,
+      "referenced_works": [
+        "https://openalex.org/W158365607",
+        "https://openalex.org/W1543029797",
+        "https://openalex.org/W1549592000",
+        "https://openalex.org/W1571164324",
+        "https://openalex.org/W1594876895",
+        "https://openalex.org/W1621619283",
+        "https://openalex.org/W1973463395",
+        "https://openalex.org/W1978239295",
+        "https://openalex.org/W1986340080",
+        "https://openalex.org/W1993843658",
+        "https://openalex.org/W2008117952",
+        "https://openalex.org/W2030518499",
+        "https://openalex.org/W2030652557",
+        "https://openalex.org/W2038458296",
+        "https://openalex.org/W2039947727",
+        "https://openalex.org/W2041692102",
+        "https://openalex.org/W2042226937",
+        "https://openalex.org/W2069735229",
+        "https://openalex.org/W2071681042",
+        "https://openalex.org/W2078875923",
+        "https://openalex.org/W2090766907",
+        "https://openalex.org/W2105944666",
+        "https://openalex.org/W2113281787",
+        "https://openalex.org/W2113419089",
+        "https://openalex.org/W2116186490",
+        "https://openalex.org/W2122757174",
+        "https://openalex.org/W2123498560",
+        "https://openalex.org/W2123501413",
+        "https://openalex.org/W2124294045",
+        "https://openalex.org/W2136823593",
+        "https://openalex.org/W2140467948",
+        "https://openalex.org/W2150231411",
+        "https://openalex.org/W2160857363",
+        "https://openalex.org/W2170712507",
+        "https://openalex.org/W2196552246",
+        "https://openalex.org/W2202236119",
+        "https://openalex.org/W2298151667",
+        "https://openalex.org/W2474291059",
+        "https://openalex.org/W2496823001",
+        "https://openalex.org/W2523163029",
+        "https://openalex.org/W2559407904",
+        "https://openalex.org/W2575395568",
+        "https://openalex.org/W2612031273",
+        "https://openalex.org/W2658667398",
+        "https://openalex.org/W2772582128",
+        "https://openalex.org/W2782953961",
+        "https://openalex.org/W2789615973",
+        "https://openalex.org/W2891779117",
+        "https://openalex.org/W2895810887",
+        "https://openalex.org/W2905513897",
+        "https://openalex.org/W2922811975",
+        "https://openalex.org/W2938884705",
+        "https://openalex.org/W2940073206",
+        "https://openalex.org/W2974605364",
+        "https://openalex.org/W2975442821",
+        "https://openalex.org/W2984844522",
+        "https://openalex.org/W3011110364",
+        "https://openalex.org/W3021830562",
+        "https://openalex.org/W3036313588",
+        "https://openalex.org/W3039264137",
+        "https://openalex.org/W3084227888",
+        "https://openalex.org/W3089336626",
+        "https://openalex.org/W3092974768",
+        "https://openalex.org/W3093838324",
+        "https://openalex.org/W3121225833",
+        "https://openalex.org/W3121686812",
+        "https://openalex.org/W3122295862",
+        "https://openalex.org/W3122705141",
+        "https://openalex.org/W3122795505",
+        "https://openalex.org/W3123542774",
+        "https://openalex.org/W3123906437",
+        "https://openalex.org/W3124166904",
+        "https://openalex.org/W3124468088",
+        "https://openalex.org/W3124859767",
+        "https://openalex.org/W3125058975",
+        "https://openalex.org/W3125710671",
+        "https://openalex.org/W3125922376",
+        "https://openalex.org/W3129993126",
+        "https://openalex.org/W3203449339",
+        "https://openalex.org/W4206397544",
+        "https://openalex.org/W4229334212",
+        "https://openalex.org/W4232505725",
+        "https://openalex.org/W4232508652",
+        "https://openalex.org/W4248554038",
+        "https://openalex.org/W4255375616",
+        "https://openalex.org/W4293740181",
+        "https://openalex.org/W4298413470",
+        "https://openalex.org/W4308908946",
+        "https://openalex.org/W4310291164",
+        "https://openalex.org/W4321194357",
+        "https://openalex.org/W4383265855",
+        "https://openalex.org/W4385491369",
+        "https://openalex.org/W4389736765",
+        "https://openalex.org/W4391359889",
+        "https://openalex.org/W4401029839",
+        "https://openalex.org/W4401331807",
+        "https://openalex.org/W4405933672",
+        "https://openalex.org/W4409593945",
+        "https://openalex.org/W4409785129",
+        "https://openalex.org/W4413251984",
+        "https://openalex.org/W4414774095",
+        "https://openalex.org/W4415242912",
+        "https://openalex.org/W4415954574",
+        "https://openalex.org/W4416156440",
+        "https://openalex.org/W6942201533",
+        "https://openalex.org/W7124180947",
+        "https://openalex.org/W7128000089"
+      ],
+      "relevance_score": 18.74214
+    },
+    {
+      "id": "https://openalex.org/W2001270353",
+      "doi": "https://doi.org/10.1111/j.1467-9701.2007.01066.x",
+      "display_name": "Technology Trade in Economic Development",
+      "publication_year": 2007,
+      "type": "article",
+      "cited_by_count": 32,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5089402862",
+            "display_name": "Matthias Busse",
+            "orcid": "https://orcid.org/0000-0002-0471-9472",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-0471-9472"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4210137163",
+              "display_name": "Hamburg Institute of International Economics",
+              "ror": "https://ror.org/037ydha73",
+              "country_code": "DE",
+              "type": "other",
+              "lineage": [
+                "https://openalex.org/I4210137163"
+              ]
+            }
+          ],
+          "countries": [
+            "DE"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Matthias Busse",
+          "raw_affiliation_strings": [
+            "Hamburg Institute of International Economics and"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Hamburg Institute of International Economics and",
+              "institution_ids": [
+                "https://openalex.org/I4210137163"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5058860466",
+            "display_name": "José Luis Groizard",
+            "orcid": "https://orcid.org/0000-0002-0772-1156",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-0772-1156"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I50441567",
+              "display_name": "Universitat de les Illes Balears",
+              "ror": "https://ror.org/03e10x626",
+              "country_code": "ES",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I50441567"
+              ]
+            }
+          ],
+          "countries": [
+            "ES"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "José L. Groizard",
+          "raw_affiliation_strings": [
+            "Universitat de les Illes Balears, Palma de Mallorca"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Universitat de les Illes Balears, Palma de Mallorca",
+              "institution_ids": [
+                "https://openalex.org/I50441567"
+              ]
+            }
+          ]
+        }
+      ],
+      "primary_location": {
+        "id": "doi:10.1111/j.1467-9701.2007.01066.x",
+        "doi": "https://doi.org/10.1111/j.1467-9701.2007.01066.x",
+        "is_oa": false,
+        "landing_page_url": "https://doi.org/10.1111/j.1467-9701.2007.01066.x",
+        "pdf_url": null,
+        "source": {
+          "id": "https://openalex.org/S45372229",
+          "display_name": "World Economy",
+          "issn_l": "0378-5920",
+          "issn": [
+            "0378-5920",
+            "1467-9701"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "listed_in": [
+            "abdc-a",
+            "anvur-class-a",
+            "anvur-scientific",
+            "cwts-core",
+            "jufo-1",
+            "norway-1",
+            "poland-70",
+            "russia-white-list-1",
+            "vabb-shw"
+          ],
+          "host_organization": "https://openalex.org/P4310320595",
+          "host_organization_name": "Wiley",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310320595"
+          ],
+          "host_organization_lineage_names": [
+            "Wiley"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "The World Economy",
+        "raw_type": "journal-article"
+      },
+      "abstract_inverted_index": null,
+      "referenced_works": [
+        "https://openalex.org/W84303650",
+        "https://openalex.org/W583086315",
+        "https://openalex.org/W1479827809",
+        "https://openalex.org/W1492566073",
+        "https://openalex.org/W1520082828",
+        "https://openalex.org/W1553631189",
+        "https://openalex.org/W1567920712",
+        "https://openalex.org/W1573990252",
+        "https://openalex.org/W1574946700",
+        "https://openalex.org/W1597801997",
+        "https://openalex.org/W1600823763",
+        "https://openalex.org/W1810045679",
+        "https://openalex.org/W1981162738",
+        "https://openalex.org/W1983065200",
+        "https://openalex.org/W2002300292",
+        "https://openalex.org/W2011474190",
+        "https://openalex.org/W2013291981",
+        "https://openalex.org/W2016824197",
+        "https://openalex.org/W2021733723",
+        "https://openalex.org/W2023522548",
+        "https://openalex.org/W2032290065",
+        "https://openalex.org/W2043539591",
+        "https://openalex.org/W2050085180",
+        "https://openalex.org/W2050966072",
+        "https://openalex.org/W2057878029",
+        "https://openalex.org/W2063134194",
+        "https://openalex.org/W2095701068",
+        "https://openalex.org/W2103271134",
+        "https://openalex.org/W2110373102",
+        "https://openalex.org/W2128806834",
+        "https://openalex.org/W2131517300",
+        "https://openalex.org/W2155237739",
+        "https://openalex.org/W2165144879",
+        "https://openalex.org/W2169030761",
+        "https://openalex.org/W2248521890",
+        "https://openalex.org/W2588728401",
+        "https://openalex.org/W2798462310",
+        "https://openalex.org/W2889809566",
+        "https://openalex.org/W2890833508",
+        "https://openalex.org/W2994756033",
+        "https://openalex.org/W3093817887",
+        "https://openalex.org/W3121147769",
+        "https://openalex.org/W3121160036",
+        "https://openalex.org/W3121762824",
+        "https://openalex.org/W3121915608",
+        "https://openalex.org/W3122370218",
+        "https://openalex.org/W3122531453",
+        "https://openalex.org/W3122705141",
+        "https://openalex.org/W3122721387",
+        "https://openalex.org/W3123379813",
+        "https://openalex.org/W3123590692",
+        "https://openalex.org/W3123884823",
+        "https://openalex.org/W3124131699",
+        "https://openalex.org/W3124166904",
+        "https://openalex.org/W3124506938",
+        "https://openalex.org/W3124739305",
+        "https://openalex.org/W3125379269",
+        "https://openalex.org/W3125692325",
+        "https://openalex.org/W3125873718",
+        "https://openalex.org/W4206653645",
+        "https://openalex.org/W4241750010",
+        "https://openalex.org/W4248142843",
+        "https://openalex.org/W4298291749",
+        "https://openalex.org/W4298413470"
+      ],
+      "relevance_score": 18.157219
+    }
+  ],
+  "group_by": []
+}

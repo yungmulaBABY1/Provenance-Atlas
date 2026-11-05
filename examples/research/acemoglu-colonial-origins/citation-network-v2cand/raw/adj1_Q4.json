@@ -1,1 +1,1791 @@
-{"meta": {"notice": "No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address. The mailto parameter doesn't raise this limit. Get a free key with its own $1/day at https://openalex.org/settings/api and add api_key=YOUR_KEY to your requests. An AI agent can get one for its user in one call: POST https://api.openalex.org/api-keys with {\"email\": \"<your user's email>\"}; we email them a link, and the key works once they click it. Docs for agents: https://help.openalex.org/llms.txt", "count": 305, "db_response_time_ms": 65, "page": 1, "per_page": 10, "groups_count": null, "x_query": {"oql": "get works from 2001-01-01 through 2026-11-04 with (geography AND institutions AND (stemmed \"deep determinants\" OR stemmed \"fundamental causes\" OR stemmed \"institutions rule\" OR primacy)) in the title or abstract where type is ([article](article) or [preprint](preprint))", "x_new_oql": "get works from 2001-01-01 through 2026-11-04 with (geography AND institutions AND (stemmed \"deep determinants\" OR stemmed \"fundamental causes\" OR stemmed \"institutions rule\" OR primacy)) in the title or abstract where type is ([article](article) or [preprint](preprint))", "oqo": {"get_rows": "works", "filter_rows": [{"column_id": "from_publication_date", "value": "2001-01-01"}, {"column_id": "title_and_abstract.search", "value": "geography", "operator": "has"}, {"column_id": "title_and_abstract.search", "value": "institutions", "operator": "has"}, {"column_id": "to_publication_date", "value": "2026-11-04"}, {"join": "or", "filters": [{"column_id": "title_and_abstract.search", "value": "\"deep determinants\"", "operator": "has"}, {"column_id": "title_and_abstract.search", "value": "\"fundamental causes\"", "operator": "has"}, {"column_id": "title_and_abstract.search", "value": "\"institutions rule\"", "operator": "has"}, {"column_id": "title_and_abstract.search", "value": "primacy", "operator": "has"}]}, {"join": "or", "filters": [{"column_id": "type", "value": "article"}, {"column_id": "type", "value": "preprint"}]}]}, "url": "/works?filter=from_publication_date:2001-01-01,title_and_abstract.search:geography,title_and_abstract.search:institutions,to_publication_date:2026-11-04,title_and_abstract.search:%22deep determinants%22|%22fundamental causes%22|%22institutions rule%22|primacy,type:article|preprint&per_page=10&page=1", "order": "best matches first", "order_default": true}, "cost_usd": 0.001}, "results": [{"id": "https://openalex.org/W2994756033", "doi": "https://doi.org/10.1023/b:joeg.0000031425.72248.85", "display_name": "Institutions Rule: The Primacy of Institutions Over Geography and Integration in Economic Development", "publication_year": 2002, "type": "article", "cited_by_count": 5577, "authorships": [{"author_position": "first", "author": {"id": "https://openalex.org/A5113832316", "display_name": "Dani Rodrik", "orcid": "https://orcid.org/0000-0003-2173-5762", "observed_orcids": ["https://orcid.org/0000-0003-2173-5762"]}, "institutions": [{"id": "https://openalex.org/I136199984", "display_name": "Harvard University", "ror": "https://ror.org/03vek6s52", "country_code": "US", "type": "education", "lineage": ["https://openalex.org/I136199984"]}], "countries": ["US"], "is_corresponding": false, "raw_author_name": "Dani Rodrik", "raw_affiliation_strings": ["Kennedy School of Government, Harvard University, Cambridge, MA, USA", "Kennedy School of Government, Harvard University, Cambridge, USA"], "raw_orcid": null, "affiliations": [{"raw_affiliation_string": "Kennedy School of Government, Harvard University, Cambridge, MA, USA", "institution_ids": ["https://openalex.org/I136199984"]}, {"raw_affiliation_string": "Kennedy School of Government, Harvard University, Cambridge, USA", "institution_ids": ["https://openalex.org/I136199984"]}]}, {"author_position": "middle", "author": {"id": "https://openalex.org/A5103012712", "display_name": "Arvind Subramanian", "orcid": "https://orcid.org/0000-0001-8795-9895", "observed_orcids": ["https://orcid.org/0000-0001-8795-9895"]}, "institutions": [{"id": "https://openalex.org/I1310145890", "display_name": "International Monetary Fund", "ror": "https://ror.org/05m4rmw09", "country_code": "US", "type": "other", "lineage": ["https://openalex.org/I1310145890"]}], "countries": ["US"], "is_corresponding": false, "raw_author_name": "Arvind Subramanian", "raw_affiliation_strings": ["International Monetary Fund (IMF), Washington DC, USA", "International Monetary Fund (IMF)  USA"], "raw_orcid": null, "affiliations": [{"raw_affiliation_string": "International Monetary Fund (IMF), Washington DC, USA", "institution_ids": ["https://openalex.org/I1310145890"]}, {"raw_affiliation_string": "International Monetary Fund (IMF)  USA", "institution_ids": ["https://openalex.org/I1310145890"]}]}, {"author_position": "last", "author": {"id": "https://openalex.org/A5088803982", "display_name": "Francesco Trebbi", "orcid": "https://orcid.org/0009-0003-5599-4778", "observed_orcids": ["https://orcid.org/0009-0003-5599-4778"]}, "institutions": [{"id": "https://openalex.org/I136199984", "display_name": "Harvard University", "ror": "https://ror.org/03vek6s52", "country_code": "US", "type": "education", "lineage": ["https://openalex.org/I136199984"]}], "countries": ["US"], "is_corresponding": false, "raw_author_name": "Francesco Trebbi", "raw_affiliation_strings": ["Department of Economics, Harvard University, Littauer center, Cambridge, MA, USA", "Department of Economics, Harvard University, Littauer Center, Cambridge, USA"], "raw_orcid": null, "affiliations": [{"raw_affiliation_string": "Department of Economics, Harvard University, Littauer center, Cambridge, MA, USA", "institution_ids": ["https://openalex.org/I136199984"]}, {"raw_affiliation_string": "Department of Economics, Harvard University, Littauer Center, Cambridge, USA", "institution_ids": ["https://openalex.org/I136199984"]}]}], "primary_location": {"id": "doi:10.1023/b:joeg.0000031425.72248.85", "doi": "https://doi.org/10.1023/b:joeg.0000031425.72248.85", "is_oa": false, "landing_page_url": "https://doi.org/10.1023/b:joeg.0000031425.72248.85", "pdf_url": null, "source": {"id": "https://openalex.org/S181171746", "display_name": "Journal of Economic Growth", "issn_l": "1381-4338", "issn": ["1381-4338", "1573-7020"], "is_oa": false, "is_in_doaj": false, "is_core": true, "listed_in": ["abdc-a-star", "anvur-class-a", "anvur-scientific", "cwts-core", "erih-plus", "jufo-2", "norway-2", "poland-200", "russia-white-list-1", "vabb-shw"], "host_organization": "https://openalex.org/P4310319900", "host_organization_name": "Springer Science+Business Media", "host_organization_lineage": ["https://openalex.org/P4310319900", "https://openalex.org/P4310319965"], "host_organization_lineage_names": ["Springer Science+Business Media", "Springer Nature"], "type": "journal"}, "license": null, "license_id": null, "version": "publishedVersion", "is_accepted": true, "is_published": true, "raw_source_name": "Journal of Economic Growth", "raw_type": "journal-article"}, "abstract_inverted_index": null, "referenced_works": ["https://openalex.org/W1507887863", "https://openalex.org/W1518529382", "https://openalex.org/W1598305156", "https://openalex.org/W1810045679", "https://openalex.org/W1989535774", "https://openalex.org/W1992109042", "https://openalex.org/W2011474190", "https://openalex.org/W2095701068", "https://openalex.org/W2105278501", "https://openalex.org/W2110373102", "https://openalex.org/W2113224665", "https://openalex.org/W2126009317", "https://openalex.org/W2133369488", "https://openalex.org/W2152414118", "https://openalex.org/W2165144879", "https://openalex.org/W2170105205", "https://openalex.org/W2325072161", "https://openalex.org/W2588728401", "https://openalex.org/W2798462310", "https://openalex.org/W2991813917", "https://openalex.org/W3021593216", "https://openalex.org/W3121147769", "https://openalex.org/W3121260165", "https://openalex.org/W3121280624", "https://openalex.org/W3121595223", "https://openalex.org/W3121762824", "https://openalex.org/W3122513675", "https://openalex.org/W3122531453", "https://openalex.org/W3122705141", "https://openalex.org/W3124131699", "https://openalex.org/W3124166904", "https://openalex.org/W3124259699", "https://openalex.org/W3124753968", "https://openalex.org/W3125412951", "https://openalex.org/W4206495155", "https://openalex.org/W4241750010", "https://openalex.org/W4298413470"], "relevance_score": 60.86478}, {"id": "https://openalex.org/W3124718896", "doi": null, "display_name": "Institutions Rule; The Primacy of Institutions over Integration and Geography in Economic Development", "publication_year": 2002, "type": "preprint", "cited_by_count": 79, "authorships": [{"author_position": "first", "author": {"id": "https://openalex.org/A5103012712", "display_name": "Arvind Subramanian", "orcid": "https://orcid.org/0000-0001-8795-9895", "observed_orcids": ["https://orcid.org/0000-0001-8795-9895"]}, "institutions": [], "countries": [], "is_corresponding": false, "raw_author_name": "Arvind Subramanian", "raw_affiliation_strings": [], "raw_orcid": "https://orcid.org/0000-0001-8795-9895", "affiliations": []}, {"author_position": "middle", "author": {"id": "https://openalex.org/A5088803982", "display_name": "Francesco Trebbi", "orcid": "https://orcid.org/0009-0003-5599-4778", "observed_orcids": ["https://orcid.org/0009-0003-5599-4778"]}, "institutions": [], "countries": [], "is_corresponding": false, "raw_author_name": "Francesco Trebbi", "raw_affiliation_strings": [], "raw_orcid": null, "affiliations": []}, {"author_position": "last", "author": {"id": "https://openalex.org/A5113832316", "display_name": "Dani Rodrik", "orcid": "https://orcid.org/0000-0003-2173-5762", "observed_orcids": ["https://orcid.org/0000-0003-2173-5762"]}, "institutions": [], "countries": [], "is_corresponding": false, "raw_author_name": "Dani Rodrik", "raw_affiliation_strings": [], "raw_orcid": null, "affiliations": []}], "primary_location": {"id": "mag:3124718896", "doi": null, "is_oa": false, "landing_page_url": "https://EconPapers.repec.org/RePEc:imf:imfwpa:02/189", "pdf_url": null, "source": {"id": "https://openalex.org/S4306401271", "display_name": "RePEc: Research Papers in Economics", "issn_l": null, "issn": null, "is_oa": false, "is_in_doaj": false, "is_core": false, "listed_in": [], "host_organization": "https://openalex.org/I77793887", "host_organization_name": "Federal Reserve Bank of St. Louis", "host_organization_lineage": ["https://openalex.org/I77793887"], "host_organization_lineage_names": [], "type": "repository"}, "license": null, "license_id": null, "version": "submittedVersion", "is_accepted": false, "is_published": false, "raw_source_name": "RePEc: Research Papers in Economics", "raw_type": null}, "abstract_inverted_index": {"We": [0, 79], "estimate": [1], "the": [2, 27], "respective": [3], "contributions": [4], "of": [5, 29], "institutions,": [6, 36, 58], "geography,": [7], "and": [8, 21, 86, 98], "trade": [9, 59, 70], "in": [10], "determining": [11], "cross-country": [12], "income": [13], "levels": [14], "using": [15], "recently": [16], "developed": [17], "instruments": [18], "for": [19, 35, 57], "institutions": [20, 30], "trade.": [22], "Our": [23], "results": [24, 82], "indicate": [25], "that": [26], "quality": [28], "\"\"trumps\"\"": [31], "everything": [32], "else.": [33], "Controlling": [34], "geography": [37], "have": [38], "at": [39], "best": [40], "weak": [41], "direct": [42, 65], "effects": [43], "on": [44, 67, 76, 95], "incomes,": [45], "although": [46, 69], "it": [47], "has": [48, 60, 72], "a": [49, 61, 73], "strong": [50], "indirect": [51], "effect": [52, 66, 75], "through": [53], "institutions.": [54], "Similarly,": [55], "controlling": [56], "negative,": [62], "albeit,": [63], "insignificant": [64], "income,": [68], "too": [71], "positive": [74], "institutional": [77], "quality.": [78], "relate": [80], "our": [81], "to": [83, 93], "recent": [84], "literature,": [85], "where": [87], "differences": [88], "exist,": [89], "trace": [90], "their": [91], "origins": [92], "choices": [94], "samples,": [96], "specification,": [97], "instrumentation": [99]}, "referenced_works": [], "relevance_score": 50.4038}, {"id": "https://openalex.org/W3123032229", "doi": "https://doi.org/10.5089/9781451859621.001", "display_name": "Institutions Rule", "publication_year": 2002, "type": "article", "cited_by_count": 64, "authorships": [{"author_position": "first", "author": {"id": "https://openalex.org/A5103012712", "display_name": "Arvind Subramanian", "orcid": "https://orcid.org/0000-0001-8795-9895", "observed_orcids": ["https://orcid.org/0000-0001-8795-9895"]}, "institutions": [{"id": "https://openalex.org/I1310145890", "display_name": "International Monetary Fund", "ror": "https://ror.org/05m4rmw09", "country_code": "US", "type": "other", "lineage": ["https://openalex.org/I1310145890"]}], "countries": ["US"], "is_corresponding": false, "raw_author_name": "Arvind Subramanian", "raw_affiliation_strings": ["INTERNATIONAL MONETARY"], "raw_orcid": null, "affiliations": [{"raw_affiliation_string": "INTERNATIONAL MONETARY", "institution_ids": ["https://openalex.org/I1310145890"]}]}, {"author_position": "middle", "author": {"id": "https://openalex.org/A5088803982", "display_name": "Francesco Trebbi", "orcid": "https://orcid.org/0009-0003-5599-4778", "observed_orcids": ["https://orcid.org/0009-0003-5599-4778"]}, "institutions": [{"id": "https://openalex.org/I1310145890", "display_name": "International Monetary Fund", "ror": "https://ror.org/05m4rmw09", "country_code": "US", "type": "other", "lineage": ["https://openalex.org/I1310145890"]}], "countries": ["US"], "is_corresponding": false, "raw_author_name": "Francesco Trebbi", "raw_affiliation_strings": ["INTERNATIONAL MONETARY"], "raw_orcid": null, "affiliations": [{"raw_affiliation_string": "INTERNATIONAL MONETARY", "institution_ids": ["https://openalex.org/I1310145890"]}]}, {"author_position": "last", "author": {"id": "https://openalex.org/A5113832316", "display_name": "Dani Rodrik", "orcid": "https://orcid.org/0000-0003-2173-5762", "observed_orcids": ["https://orcid.org/0000-0003-2173-5762"]}, "institutions": [{"id": "https://openalex.org/I1310145890", "display_name": "International Monetary Fund", "ror": "https://ror.org/05m4rmw09", "country_code": "US", "type": "other", "lineage": ["https://openalex.org/I1310145890"]}], "countries": ["US"], "is_corresponding": false, "raw_author_name": "Dani Rodrik", "raw_affiliation_strings": ["INTERNATIONAL MONETARY"], "raw_orcid": null, "affiliations": [{"raw_affiliation_string": "INTERNATIONAL MONETARY", "institution_ids": ["https://openalex.org/I1310145890"]}]}], "primary_location": {"id": "doi:10.5089/9781451859621.001", "doi": "https://doi.org/10.5089/9781451859621.001", "is_oa": true, "landing_page_url": "https://doi.org/10.5089/9781451859621.001", "pdf_url": "https://www.elibrary.imf.org/downloadpdf/journals/001/2002/189/001.2002.issue-189-en.xml", "source": {"id": "https://openalex.org/S4210171147", "display_name": "IMF Working Paper", "issn_l": "1018-5941", "issn": ["1018-5941", "2227-8885"], "is_oa": false, "is_in_doaj": false, "is_core": true, "listed_in": ["cwts-core"], "host_organization": "https://openalex.org/P4310316166", "host_organization_name": "International Monetary Fund", "host_organization_lineage": ["https://openalex.org/P4310316166", "https://openalex.org/P4310321776"], "host_organization_lineage_names": ["International Monetary Fund", "United Nations"], "type": "journal"}, "license": null, "license_id": null, "version": "publishedVersion", "is_accepted": true, "is_published": true, "raw_source_name": "IMF Working Papers", "raw_type": "journal-article"}, "abstract_inverted_index": {"We": [0, 79], "estimate": [1], "the": [2, 27], "respective": [3], "contributions": [4], "of": [5, 29], "institutions,": [6, 36, 58], "geography,": [7], "and": [8, 21, 86, 98], "trade": [9, 59, 70], "in": [10], "determining": [11], "cross-country": [12], "income": [13], "levels": [14], "using": [15], "recently": [16], "developed": [17], "instruments": [18], "for": [19, 35, 57], "institutions": [20, 30], "trade.": [22], "Our": [23], "results": [24, 82], "indicate": [25], "that": [26], "quality": [28], "\"trumps\"": [31], "everything": [32], "else.": [33], "Controlling": [34], "geography": [37], "have": [38], "at": [39], "best": [40], "weak": [41], "direct": [42, 65], "effects": [43], "on": [44, 67, 76, 95], "incomes,": [45], "although": [46, 69], "it": [47], "has": [48, 60, 72], "a": [49, 61, 73], "strong": [50], "indirect": [51], "effect": [52, 66, 75], "through": [53], "institutions.": [54], "Similarly,": [55], "controlling": [56], "negative,": [62], "albeit,": [63], "insignificant": [64], "income,": [68], "too": [71], "positive": [74], "institutional": [77], "quality.": [78], "relate": [80], "our": [81], "to": [83, 93], "recent": [84], "literature,": [85], "where": [87], "differences": [88], "exist,": [89], "trace": [90], "their": [91], "origins": [92], "choices": [94], "samples,": [96], "specification,": [97], "instrumentation.": [99]}, "referenced_works": ["https://openalex.org/W1507887863", "https://openalex.org/W1598305156", "https://openalex.org/W1810045679", "https://openalex.org/W1989535774", "https://openalex.org/W1992109042", "https://openalex.org/W2011474190", "https://openalex.org/W2095701068", "https://openalex.org/W2097197933", "https://openalex.org/W2126009317", "https://openalex.org/W2153635177", "https://openalex.org/W2165144879", "https://openalex.org/W2169030761", "https://openalex.org/W2170105205", "https://openalex.org/W2991813917", "https://openalex.org/W3121762824", "https://openalex.org/W3122295862", "https://openalex.org/W3122531453", "https://openalex.org/W3122705141", "https://openalex.org/W3123531977", "https://openalex.org/W3124131699", "https://openalex.org/W3124166904", "https://openalex.org/W4206495155", "https://openalex.org/W4213029298", "https://openalex.org/W4241750010", "https://openalex.org/W4298413470", "https://openalex.org/W6789213037"], "relevance_score": 35.724243}, {"id": "https://openalex.org/W1988424882", "doi": "https://doi.org/10.1191/1464993404ps088pr", "display_name": "Deep determinants of economic growth: institutions, geography and openness to trade", "publication_year": 2004, "type": "article", "cited_by_count": 39, "authorships": [{"author_position": "first", "author": {"id": "https://openalex.org/A5045368563", "display_name": "Harry Bloch", "orcid": "https://orcid.org/0000-0002-4288-6925", "observed_orcids": ["https://orcid.org/0000-0002-4288-6925"]}, "institutions": [{"id": "https://openalex.org/I205640436", "display_name": "Curtin University", "ror": "https://ror.org/02n415q13", "country_code": "AU", "type": "education", "lineage": ["https://openalex.org/I205640436"]}], "countries": ["AU"], "is_corresponding": true, "raw_author_name": "Harry Bloch", "raw_affiliation_strings": ["School of Economics and Finance, Curtin University of Technology,\r                        Australia,", "School of Economics and Finance, Curtin University of Technology, Australia#TAB#"], "raw_orcid": null, "affiliations": [{"raw_affiliation_string": "School of Economics and Finance, Curtin University of Technology,\r                        Australia,", "institution_ids": ["https://openalex.org/I205640436"]}, {"raw_affiliation_string": "School of Economics and Finance, Curtin University of Technology, Australia#TAB#", "institution_ids": ["https://openalex.org/I205640436"]}]}, {"author_position": "last", "author": {"id": "https://openalex.org/A5083549223", "display_name": "Sam Hak Kan Tang", "orcid": "https://orcid.org/0000-0001-7547-4268", "observed_orcids": ["https://orcid.org/0000-0001-7547-4268"]}, "institutions": [{"id": "https://openalex.org/I177725633", "display_name": "Chinese University of Hong Kong", "ror": "https://ror.org/00t33hh48", "country_code": "HK", "type": "education", "lineage": ["https://openalex.org/I177725633"]}, {"id": "https://openalex.org/I177877127", "display_name": "The University of Western Australia", "ror": "https://ror.org/047272k79", "country_code": "AU", "type": "education", "lineage": ["https://openalex.org/I177877127"]}], "countries": ["AU", "HK"], "is_corresponding": false, "raw_author_name": "Sam Hak Kan Tang", "raw_affiliation_strings": ["Department of Economics, Chinese University of Hong Kong, Hong Kong", "UWA Business School"], "raw_orcid": null, "affiliations": [{"raw_affiliation_string": "Department of Economics, Chinese University of Hong Kong, Hong Kong", "institution_ids": ["https://openalex.org/I177725633"]}, {"raw_affiliation_string": "UWA Business School", "institution_ids": ["https://openalex.org/I177877127"]}]}], "primary_location": {"id": "doi:10.1191/1464993404ps088pr", "doi": "https://doi.org/10.1191/1464993404ps088pr", "is_oa": false, "landing_page_url": "https://doi.org/10.1191/1464993404ps088pr", "pdf_url": null, "source": {"id": "https://openalex.org/S35779826", "display_name": "Progress in Development Studies", "issn_l": "1464-9934", "issn": ["1464-9934", "1477-027X"], "is_oa": false, "is_in_doaj": false, "is_core": true, "listed_in": ["abdc-c", "anvur-scientific", "cwts-core", "jufo-1", "norway-1", "poland-70", "russia-white-list-2", "vabb-shw"], "host_organization": "https://openalex.org/P4310320017", "host_organization_name": "SAGE Publishing", "host_organization_lineage": ["https://openalex.org/P4310320017"], "host_organization_lineage_names": ["SAGE Publishing"], "type": "journal"}, "license": null, "license_id": null, "version": "publishedVersion", "is_accepted": true, "is_published": true, "raw_source_name": "Progress in Development Studies", "raw_type": "journal-article"}, "abstract_inverted_index": {"In": [0, 94, 212], "our": [1, 95], "first": [2], "progress": [3], "report,": [4, 97], "Bloch": [5, 98], "and": [6, 99, 110, 116, 165, 193, 202, 234, 282, 294], "Tang": [7, 100], "(2001),": [8], "we": [9, 102, 180], "examined": [10], "the": [11, 14, 24, 31, 34, 57, 69, 79, 105, 131, 141, 187, 197, 208, 221, 229, 243, 246, 262, 267, 275, 288, 300], "importance": [12], "of": [13, 26, 33, 71, 73, 81, 92, 107, 130, 143, 186, 196, 199, 224, 242, 245, 270], "\u2018Solow": [15], "residual\u2019,": [16], "or": [17], "total": [18], "factor": [19], "productivity": [20], "growth": [21, 38, 51, 132, 192, 201, 225, 271, 277], "(TFPG),": [22], "in": [23, 30, 49, 52, 56, 68, 140, 228, 274], "process": [25, 198], "economic": [27, 37, 117, 154, 171, 191, 200, 255], "growth,": [28, 146, 172], "particularly": [29, 78, 139, 231, 279], "context": [32, 142], "East": [35, 53, 144], "Asian": [36, 145], "\u2018miracle\u2019.": [39], "We": [40, 119, 156, 284], "demonstrated": [41], "that": [42, 121, 147, 162, 174, 220, 226, 261, 272], "while": [43, 122], "TFPG": [44, 164, 293], "has": [45, 63, 135, 204], "been": [46, 137], "less": [47], "important": [48, 66, 169], "explaining": [50], "Asia": [54], "than": [55], "advanced": [58], "industrial": [59], "economies,": [60], "it": [61, 134], "still": [62], "played": [64], "an": [65, 127, 184, 240], "role": [67, 106], "susceptibility": [70], "some": [72], "these": [74], "economies": [75], "to": [76, 88, 113, 170, 296], "shocks,": [77], "crisis": [80], "1997": [82], "(see": [83], "Tang,": [84], "2002,": [85], "for": [86, 153, 253], "application": [87], "a": [89, 151, 160, 217], "broader": [90], "set": [91], "countries).": [93], "second": [96], "(2003),": [101], "focused": [103], "on": [104, 266], "financial": [108, 123, 166], "development": [109, 124, 149, 167, 203], "its": [111], "link": [112], "capital": [114, 280], "accumulation": [115, 281], "growth.": [118, 155], "concluded": [120], "is": [125, 150, 176, 215, 260], "clearly": [126], "essential": [128], "part": [129], "process,": [133], "not": [136], "demonstrated,": [138], "such": [148], "precondition": [152], "are": [157, 168, 181], "left": [158, 182], "with": [159], "view": [161, 219], "both": [163], "but": [173], "neither": [175, 239], "necessary.": [177], "More": [178], "importantly,": [179], "without": [183], "explanation": [185, 241], "underlying": [188], "forces": [189], "behind": [190], "development.": [194, 256], "Knowledge": [195], "evolved": [205], "substantially": [206], "over": [207], "past": [209], "five": [210], "decades.": [211], "particular,": [213], "there": [214], "now": [216], "general": [218], "neoclassical": [222, 263, 276], "model": [223, 264, 289], "emerged": [227], "1950s,": [230], "Solow\u2019s": [232], "(1956": [233], "1957)": [235], "path-breaking": [236], "contributions,": [237], "offers": [238], "experience": [244], "Third": [247], "World": [248], "countries": [249], "nor": [250], "practical": [251], "guidance": [252], "sustained": [254], "The": [257], "main": [258], "problem": [259], "focuses": [265], "\u2018proximate": [268], "determinants\u2019": [269], "appear": [273], "equation,": [278], "TFPG.": [283], "learn": [285], "little": [286], "from": [287], "about": [290], "what": [291], "drives": [292], "how": [295], "improve": [297], "it.": [298], "Moreover,": [299], "same": [301], "problems": [302]}, "referenced_works": ["https://openalex.org/W1482178678", "https://openalex.org/W1513281941", "https://openalex.org/W1519324514", "https://openalex.org/W1519926580", "https://openalex.org/W1530248219", "https://openalex.org/W1553631189", "https://openalex.org/W1582384516", "https://openalex.org/W1584360514", "https://openalex.org/W1606377008", "https://openalex.org/W1975830170", "https://openalex.org/W1977433163", "https://openalex.org/W1982108682", "https://openalex.org/W1983620572", "https://openalex.org/W1988577590", "https://openalex.org/W1989864366", "https://openalex.org/W1991128340", "https://openalex.org/W1992109042", "https://openalex.org/W1998484819", "https://openalex.org/W1998993092", "https://openalex.org/W2001274843", "https://openalex.org/W2010235856", "https://openalex.org/W2011474190", "https://openalex.org/W2013473661", "https://openalex.org/W2017755093", "https://openalex.org/W2036903590", "https://openalex.org/W2038979042", "https://openalex.org/W2042226937", "https://openalex.org/W2052412641", "https://openalex.org/W2062561513", "https://openalex.org/W2063914592", "https://openalex.org/W2066979365", "https://openalex.org/W2070631858", "https://openalex.org/W2080577950", "https://openalex.org/W2095701068", "https://openalex.org/W2097197933", "https://openalex.org/W2098708459", "https://openalex.org/W2100949627", "https://openalex.org/W2110373102", "https://openalex.org/W2148398893", "https://openalex.org/W2170105205", "https://openalex.org/W2312441521", "https://openalex.org/W2500887424", "https://openalex.org/W2588728401", "https://openalex.org/W2618788771", "https://openalex.org/W2810816287", "https://openalex.org/W2994756033", "https://openalex.org/W3003206378", "https://openalex.org/W3024582746", "https://openalex.org/W3094521286", "https://openalex.org/W3121762824", "https://openalex.org/W3122705141", "https://openalex.org/W3123876308", "https://openalex.org/W3124131699", "https://openalex.org/W3124166904", "https://openalex.org/W3124753968", "https://openalex.org/W3125317676", "https://openalex.org/W3125412951", "https://openalex.org/W3125701855", "https://openalex.org/W3142221335", "https://openalex.org/W4238773385"], "relevance_score": 31.925793}, {"id": "https://openalex.org/W1529198445", "doi": null, "display_name": "Do Institutions Rule? The Role of Heterogeneity In The Institutions Vs. Geography Debate", "publication_year": 2009, "type": "preprint", "cited_by_count": 8, "authorships": [{"author_position": "first", "author": {"id": "https://openalex.org/A5068423530", "display_name": "Andros Kourtellos", "orcid": "https://orcid.org/0000-0001-9662-0420", "observed_orcids": ["https://orcid.org/0000-0001-9662-0420"]}, "institutions": [{"id": "https://openalex.org/I34771391", "display_name": "University of Cyprus", "ror": "https://ror.org/02qjrjx09", "country_code": "CY", "type": "education", "lineage": ["https://openalex.org/I34771391"]}, {"id": "https://openalex.org/I9360294", "display_name": "University of Bologna", "ror": "https://ror.org/01111rn36", "country_code": "IT", "type": "education", "lineage": ["https://openalex.org/I9360294"]}], "countries": ["CY", "IT"], "is_corresponding": false, "raw_author_name": "Andros Kourtellos", "raw_affiliation_strings": ["University of Bologna - Rimini Center for Economic Analysis (RCEA)", "University of Cyprus - Department of Economics"], "raw_orcid": "https://orcid.org/0000-0001-9662-0420", "affiliations": [{"raw_affiliation_string": "University of Bologna - Rimini Center for Economic Analysis (RCEA)", "institution_ids": ["https://openalex.org/I9360294"]}, {"raw_affiliation_string": "University of Cyprus - Department of Economics", "institution_ids": ["https://openalex.org/I34771391"]}]}, {"author_position": "middle", "author": {"id": "https://openalex.org/A5072489508", "display_name": "Thanasis Stengos", "orcid": "https://orcid.org/0000-0002-7771-1121", "observed_orcids": ["https://orcid.org/0000-0002-7771-1121"]}, "institutions": [{"id": "https://openalex.org/I79817857", "display_name": "University of Guelph", "ror": "https://ror.org/01r7awg59", "country_code": "CA", "type": "education", "lineage": ["https://openalex.org/I79817857"]}], "countries": ["CA"], "is_corresponding": false, "raw_author_name": "Thanasis Stengos", "raw_affiliation_strings": ["University of Guelph Department of Economics"], "raw_orcid": "https://orcid.org/0000-0002-7771-1121", "affiliations": [{"raw_affiliation_string": "University of Guelph Department of Economics", "institution_ids": ["https://openalex.org/I79817857"]}]}, {"author_position": "last", "author": {"id": "https://openalex.org/A5054645491", "display_name": "Chih Ming Tan", "orcid": null, "observed_orcids": []}, "institutions": [{"id": "https://openalex.org/I24571045", "display_name": "University of North Dakota", "ror": "https://ror.org/04a5szx83", "country_code": "US", "type": "education", "lineage": ["https://openalex.org/I24571045"]}], "countries": ["US"], "is_corresponding": false, "raw_author_name": "Chih Ming Tan", "raw_affiliation_strings": ["University of North Dakota - College of Business & Public Administration - Department of Economics"], "raw_orcid": null, "affiliations": [{"raw_affiliation_string": "University of North Dakota - College of Business & Public Administration - Department of Economics", "institution_ids": ["https://openalex.org/I24571045"]}]}], "primary_location": {"id": "pmh:oai:RePEc:tuf:tuftec:0735", "doi": null, "is_oa": false, "landing_page_url": "http://ase.tufts.edu/econ/research/documents/2009/tanDoInstitutionsRule.pdf", "pdf_url": "http://ase.tufts.edu/econ/research/documents/2009/tanDoInstitutionsRule.pdf", "source": {"id": "https://openalex.org/S4306401271", "display_name": "RePEc: Research Papers in Economics", "issn_l": null, "issn": null, "is_oa": false, "is_in_doaj": false, "is_core": false, "listed_in": [], "host_organization": "https://openalex.org/I77793887", "host_organization_name": "Federal Reserve Bank of St. Louis", "host_organization_lineage": ["https://openalex.org/I77793887"], "host_organization_lineage_names": [], "type": "repository"}, "license": null, "license_id": null, "version": "submittedVersion", "is_accepted": false, "is_published": false, "raw_source_name": null, "raw_type": "preprint"}, "abstract_inverted_index": {"We": [0], "uncover": [1], "evidence": [2], "of": [3, 10], "substantial": [4], "heterogeneity": [5], "in": [6, 29, 35], "the": [7, 30], "growth": [8, 36], "experience": [9], "countries": [11], "using": [12], "a": [13], "structural": [14], "threshold": [15], "regression": [16], "methodology.": [17], "Our": [18], "findings": [19], "suggest": [20], "that": [21, 23], "studies": [22], "seek": [24], "to": [25], "promote": [26], "mono-causal": [27], "explanations": [28], "institutions": [31], "versus": [32], "geography": [33], "debate": [34], "are": [37], "potentially": [38], "misleading": [39]}, "referenced_works": ["https://openalex.org/W1491711721", "https://openalex.org/W1493587706", "https://openalex.org/W1665228730", "https://openalex.org/W1980648684", "https://openalex.org/W1981549413", "https://openalex.org/W1998409249", "https://openalex.org/W2082080397", "https://openalex.org/W2096734231", "https://openalex.org/W2127882594", "https://openalex.org/W2134448449", "https://openalex.org/W2166177063", "https://openalex.org/W2994756033", "https://openalex.org/W3123762355", "https://openalex.org/W3124131699", "https://openalex.org/W3125802730"], "relevance_score": 30.802979}, {"id": "https://openalex.org/W4296052492", "doi": "https://doi.org/10.3390/su141811594", "display_name": "Institutions Rule in Export Diversity", "publication_year": 2022, "type": "article", "cited_by_count": 5, "authorships": [{"author_position": "first", "author": {"id": "https://openalex.org/A5072618336", "display_name": "Wenni Lei", "orcid": null, "observed_orcids": []}, "institutions": [{"id": "https://openalex.org/I145897649", "display_name": "Minzu University of China", "ror": "https://ror.org/0044e2g62", "country_code": "CN", "type": "education", "lineage": ["https://openalex.org/I145897649"]}], "countries": ["CN"], "is_corresponding": true, "raw_author_name": "Wenni Lei", "raw_affiliation_strings": ["School of Economics, Minzu University of China, 27 Zhongguancun South Avenue, Haidian District, Beijing 100081, China"], "raw_orcid": null, "affiliations": [{"raw_affiliation_string": "School of Economics, Minzu University of China, 27 Zhongguancun South Avenue, Haidian District, Beijing 100081, China", "institution_ids": ["https://openalex.org/I145897649"]}]}, {"author_position": "last", "author": {"id": "https://openalex.org/A5101185212", "display_name": "Yuwei Luo", "orcid": null, "observed_orcids": []}, "institutions": [{"id": "https://openalex.org/I137867983", "display_name": "Central University of Finance and Economics", "ror": "https://ror.org/008e3hf02", "country_code": "CN", "type": "education", "lineage": ["https://openalex.org/I137867983"]}], "countries": ["CN"], "is_corresponding": false, "raw_author_name": "Yuwei Luo", "raw_affiliation_strings": ["China Economics and Management Academy, Central University of Finance and Economics, 39 South College Road, Haidian District, Beijing 100081, China"], "raw_orcid": null, "affiliations": [{"raw_affiliation_string": "China Economics and Management Academy, Central University of Finance and Economics, 39 South College Road, Haidian District, Beijing 100081, China", "institution_ids": ["https://openalex.org/I137867983"]}]}], "primary_location": {"id": "doi:10.3390/su141811594", "doi": "https://doi.org/10.3390/su141811594", "is_oa": true, "landing_page_url": "https://doi.org/10.3390/su141811594", "pdf_url": "https://www.mdpi.com/2071-1050/14/18/11594/pdf?version=1663255428", "source": {"id": "https://openalex.org/S10134376", "display_name": "Sustainability", "issn_l": "2071-1050", "issn": ["2071-1050"], "is_oa": true, "is_in_doaj": false, "is_core": true, "listed_in": ["anvur-class-a", "anvur-scientific", "cwts-core", "poland-100", "russia-white-list-1", "vabb-shw"], "host_organization": "https://openalex.org/P4310310987", "host_organization_name": "Multidisciplinary Digital Publishing Institute", "host_organization_lineage": ["https://openalex.org/P4310310987"], "host_organization_lineage_names": ["Multidisciplinary Digital Publishing Institute"], "type": "journal"}, "license": "cc-by", "license_id": "https://openalex.org/licenses/cc-by", "version": "publishedVersion", "is_accepted": true, "is_published": true, "raw_source_name": "Sustainability", "raw_type": "journal-article"}, "abstract_inverted_index": {"We": [0], "used": [1], "the": [2, 9, 86, 109, 121, 133, 146], "data": [3], "of": [4, 11, 102, 123, 145], "133": [5], "countries": [6], "to": [7, 130], "explore": [8], "determinants": [10], "export": [12, 47, 59, 83, 115], "diversity": [13, 84, 116], "among": [14], "candidate": [15], "variables": [16, 73], "that": [17, 40, 108], "are": [18, 89, 95], "clearly": [19], "exogenous": [20], "or": [21], "endogenous": [22], "but": [23, 141], "with": [24, 52, 69], "a": [25, 50, 56, 139], "well-established": [26], "instrument.": [27], "These": [28], "candidates": [29], "include": [30], "geography,": [31], "resource": [32, 78, 125, 135], "abundance,": [33, 79], "and": [34, 49, 67, 77, 127], "institutional": [35, 41, 62, 103], "quality.": [36, 104], "Our": [37], "results": [38, 94], "suggest": [39], "quality": [42, 63], "is": [43, 64, 137], "important": [44], "in": [45, 85], "determining": [46], "diversity,": [48], "country": [51], "better": [53], "institutions": [54, 112], "has": [55, 117], "more": [57], "diversified": [58], "structure.": [60], "Once": [61], "controlled": [65], "for": [66], "instrumented": [68], "European": [70], "settler": [71], "mortality,": [72], "such": [74], "as": [75], "geography": [76], "which": [80], "significantly": [81], "determine": [82, 114], "baseline": [87], "regression,": [88], "no": [90], "longer": [91], "significant.": [92], "The": [93], "still": [96], "robust": [97], "even": [98], "using": [99], "alternative": [100], "measures": [101], "They": [105], "also": [106], "indicate": [107], "mechanism": [110], "whereby": [111], "largely": [113], "been": [118], "presented": [119], "under": [120], "guise": [122], "natural": [124], "abundance": [126], "geography.": [128], "Therefore,": [129], "some": [131], "extent,": [132], "\u201cnatural": [134], "curse\u201d": [136], "not": [138], "curse,": [140], "simply": [142], "two": [143], "sides": [144], "same": [147], "coin.": [148]}, "referenced_works": ["https://openalex.org/W1499373846", "https://openalex.org/W1528104378", "https://openalex.org/W1570506943", "https://openalex.org/W1580230162", "https://openalex.org/W1712007514", "https://openalex.org/W1961445169", "https://openalex.org/W1985526691", "https://openalex.org/W2017239593", "https://openalex.org/W2017349910", "https://openalex.org/W2020682330", "https://openalex.org/W2023540975", "https://openalex.org/W2024934901", "https://openalex.org/W2029339127", "https://openalex.org/W2030589968", "https://openalex.org/W2038747636", "https://openalex.org/W2042226937", "https://openalex.org/W2044295958", "https://openalex.org/W2045936914", "https://openalex.org/W2051017241", "https://openalex.org/W2067904349", "https://openalex.org/W2072485764", "https://openalex.org/W2075505546", "https://openalex.org/W2083729655", "https://openalex.org/W2096611253", "https://openalex.org/W2098778215", "https://openalex.org/W2099184394", "https://openalex.org/W2099268311", "https://openalex.org/W2099516335", "https://openalex.org/W2102635964", "https://openalex.org/W2104829051", "https://openalex.org/W2113337769", "https://openalex.org/W2115575331", "https://openalex.org/W2119291693", "https://openalex.org/W2130888234", "https://openalex.org/W2144786831", "https://openalex.org/W2170268745", "https://openalex.org/W2252801942", "https://openalex.org/W2283145705", "https://openalex.org/W2284876217", "https://openalex.org/W2323732434", "https://openalex.org/W2563218153", "https://openalex.org/W2594177097", "https://openalex.org/W2765565416", "https://openalex.org/W2767682255", "https://openalex.org/W2903206621", "https://openalex.org/W2910481459", "https://openalex.org/W2994756033", "https://openalex.org/W3021566129", "https://openalex.org/W3023107764", "https://openalex.org/W3121957089", "https://openalex.org/W3122307378", "https://openalex.org/W3123773675", "https://openalex.org/W3124053790", "https://openalex.org/W3124166904", "https://openalex.org/W3124203648", "https://openalex.org/W3124300170", "https://openalex.org/W3124381445", "https://openalex.org/W3125701855", "https://openalex.org/W3125837459", "https://openalex.org/W3169004441", "https://openalex.org/W4250538525", "https://openalex.org/W4388807629"], "relevance_score": 27.159266}, {"id": "https://openalex.org/W144118490", "doi": null, "display_name": "The Primacy of Institutions (and what this does and does not mean)", "publication_year": 2013, "type": "article", "cited_by_count": 100, "authorships": [{"author_position": "first", "author": {"id": null, "display_name": "Dani Rodrik", "orcid": null, "observed_orcids": []}, "institutions": [], "countries": [], "is_corresponding": true, "raw_author_name": "Dani Rodrik", "raw_affiliation_strings": [], "raw_orcid": null, "affiliations": []}, {"author_position": "last", "author": {"id": null, "display_name": "Arvind Subramanian", "orcid": null, "observed_orcids": []}, "institutions": [], "countries": [], "is_corresponding": false, "raw_author_name": "Arvind Subramanian", "raw_affiliation_strings": [], "raw_orcid": null, "affiliations": []}], "primary_location": {"id": "pmh:oai:CiteSeerX.psu:10.1.1.259.5276", "doi": null, "is_oa": false, "landing_page_url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.259.5276", "pdf_url": null, "source": null, "license": null, "license_id": null, "version": "submittedVersion", "is_accepted": false, "is_published": false, "raw_source_name": "http://www.imf.org/external/pubs/ft/fandd/2003/06/pdf/rodrik.pdf", "raw_type": "text"}, "abstract_inverted_index": {"the": [0, 7, 16, 69, 88, 116], "huge": [1], "difference": [2], "in": [3, 20, 87], "average": [4], "incomes": [5], "between": [6], "world\u2019s": [8], "richest": [9], "and": [10, 29, 55, 74, 79, 93, 115, 126], "poorest": [11], "nations": [12], "is": [13, 52, 68], "one": [14], "of": [15, 48, 58, 72, 75, 95, 97, 118], "most": [17], "fundamental": [18, 85], "issues": [19], "development": [21], "economics.": [22], "How": [23], "did": [24], "this": [25], "vast": [26], "gulf": [27], "emerge,": [28], "can": [30, 42, 81], "anything": [31], "be": [32], "done": [33], "to": [34, 65], "reduce": [35], "it?": [36], "To": [37], "answer": [38], "these": [39], "questions,": [40], "we": [41], "seek": [43], "guidance": [44], "from": [45, 99], "three": [46], "strands": [47], "thought.": [49], "First,": [50], "there": [51], "a": [53, 62, 84, 109], "long": [54], "distinguished": [56], "line": [57], "theorizing": [59], "that": [60, 103], "assigns": [61], "preeminent": [63], "role": [64, 86], "geography.": [66], "Geography": [67], "key": [70], "determinant": [71], "climate": [73], "natural": [76], "resource": [77], "endowments,": [78], "it": [80], "also": [82], "play": [83], "disease": [89], "burden,": [90], "transport": [91], "costs,": [92], "extent": [94], "diffusion": [96], "technology": [98], "more": [100], "advanced": [101], "areas": [102], "societies": [104], "experience.": [105], "It": [106], "therefore": [107], "exerts": [108], "strong": [110], "influence": [111], "on": [112], "agricultural": [113], "productivity": [114], "quality": [117], "human": [119], "resources.": [120], "Recent": [121], "writings": [122], "by": [123], "Jared": [124], "Diamond": [125], "Jeffrey": [127]}, "referenced_works": ["https://openalex.org/W1519324514", "https://openalex.org/W2011474190", "https://openalex.org/W2798462310", "https://openalex.org/W3121147769", "https://openalex.org/W3122513675", "https://openalex.org/W3124131699"], "relevance_score": 26.46606}, {"id": "https://openalex.org/W2566351377", "doi": null, "display_name": "The Primacy of Institutions Reconsidered", "publication_year": 2012, "type": "article", "cited_by_count": 0, "authorships": [{"author_position": "first", "author": {"id": "https://openalex.org/A5079970655", "display_name": "Kai Carstensen", "orcid": "https://orcid.org/0000-0002-8820-9997", "observed_orcids": ["https://orcid.org/0000-0002-8820-9997"]}, "institutions": [], "countries": [], "is_corresponding": false, "raw_author_name": "Kai Carstensen", "raw_affiliation_strings": [], "raw_orcid": "https://orcid.org/0000-0002-8820-9997", "affiliations": []}, {"author_position": "last", "author": {"id": "https://openalex.org/A5079247338", "display_name": "Erich Gundlach", "orcid": "https://orcid.org/0000-0003-2519-9266", "observed_orcids": ["https://orcid.org/0000-0003-2519-9266"]}, "institutions": [], "countries": [], "is_corresponding": false, "raw_author_name": "Erich Gundlach", "raw_affiliation_strings": [], "raw_orcid": "https://orcid.org/0000-0003-2519-9266", "affiliations": []}], "primary_location": {"id": "mag:2566351377", "doi": null, "is_oa": false, "landing_page_url": "https://elibrary.worldbank.org/doi/abs/10.1093/wber/lhl001", "pdf_url": null, "source": {"id": "https://openalex.org/S2735890421", "display_name": "The World Bank Economic Review", "issn_l": "0258-6770", "issn": ["0258-6770", "1564-698X"], "is_oa": false, "is_in_doaj": false, "is_core": true, "listed_in": ["abdc-a", "anvur-class-a", "anvur-scientific", "cwts-core", "erih-plus", "fnege-3", "jufo-1", "norway-1", "poland-100", "russia-white-list-1", "vabb-shw"], "host_organization": "https://openalex.org/P4310311648", "host_organization_name": "Oxford University Press", "host_organization_lineage": ["https://openalex.org/P4310311648", "https://openalex.org/P4310311647"], "host_organization_lineage_names": ["Oxford University Press", "University of Oxford"], "type": "journal"}, "license": null, "license_id": null, "version": null, "is_accepted": false, "is_published": false, "raw_source_name": "The World Bank Economic Review", "raw_type": null}, "abstract_inverted_index": {"Some": [0], "recent": [1], "empirical": [2], "studies": [3], "deny": [4], "any": [5], "direct": [6], "effect": [7], "of": [8, 21], "geography": [9], "on": [10], "development": [11], "and": [12], "conclude": [13], "that": [14], "institutions": [15], "dominate": [16], "all": [17], "other": [18], "potential": [19], "determinants": [20], "development.": [22], "An": [23], "alternative": [24], "view": [25], "emphasi...": [26]}, "referenced_works": [], "relevance_score": 24.804703}, {"id": "https://openalex.org/W2052626067", "doi": "https://doi.org/10.1093/jeg/lbn047", "display_name": "Economic development and the geography of institutions", "publication_year": 2006, "type": "article", "cited_by_count": 146, "authorships": [{"author_position": "first", "author": {"id": "https://openalex.org/A5039902347", "display_name": "Maarten Bosker", "orcid": "https://orcid.org/0000-0003-1941-2120", "observed_orcids": ["https://orcid.org/0000-0003-1941-2120"]}, "institutions": [{"id": "https://openalex.org/I169381384", "display_name": "University of Groningen", "ror": "https://ror.org/012p63287", "country_code": "NL", "type": "education", "lineage": ["https://openalex.org/I169381384"]}], "countries": ["NL"], "is_corresponding": false, "raw_author_name": "M. Bosker", "raw_affiliation_strings": ["Department of International Economics & Business, Faculty of Economics and Business, University of Groningen, The Netherlands"], "raw_orcid": null, "affiliations": [{"raw_affiliation_string": "Department of International Economics & Business, Faculty of Economics and Business, University of Groningen, The Netherlands", "institution_ids": ["https://openalex.org/I169381384"]}]}, {"author_position": "last", "author": {"id": "https://openalex.org/A5075448909", "display_name": "Harry Garretsen", "orcid": "https://orcid.org/0000-0002-9024-4222", "observed_orcids": ["https://orcid.org/0000-0002-9024-4222"]}, "institutions": [{"id": "https://openalex.org/I169381384", "display_name": "University of Groningen", "ror": "https://ror.org/012p63287", "country_code": "NL", "type": "education", "lineage": ["https://openalex.org/I169381384"]}], "countries": ["NL"], "is_corresponding": false, "raw_author_name": "H. Garretsen", "raw_affiliation_strings": ["Department of International Economics & Business, Faculty of Economics and Business, University of Groningen, The Netherlands"], "raw_orcid": null, "affiliations": [{"raw_affiliation_string": "Department of International Economics & Business, Faculty of Economics and Business, University of Groningen, The Netherlands", "institution_ids": ["https://openalex.org/I169381384"]}]}], "primary_location": {"id": "doi:10.1093/jeg/lbn047", "doi": "https://doi.org/10.1093/jeg/lbn047", "is_oa": false, "landing_page_url": "https://doi.org/10.1093/jeg/lbn047", "pdf_url": null, "source": {"id": "https://openalex.org/S46039370", "display_name": "Journal of Economic Geography", "issn_l": "1468-2702", "issn": ["1468-2702", "1468-2710"], "is_oa": false, "is_in_doaj": false, "is_core": true, "listed_in": ["abdc-a", "anvur-class-a", "anvur-scientific", "cwts-core", "dongbi-d", "erih-plus", "fnege-2", "jufo-3", "norway-2", "poland-140", "russia-white-list-1", "vabb-shw"], "host_organization": "https://openalex.org/P4310311648", "host_organization_name": "Oxford University Press", "host_organization_lineage": ["https://openalex.org/P4310311648", "https://openalex.org/P4310311647"], "host_organization_lineage_names": ["Oxford University Press", "University of Oxford"], "type": "journal"}, "license": null, "license_id": null, "version": "publishedVersion", "is_accepted": true, "is_published": true, "raw_source_name": "Journal of Economic Geography", "raw_type": "journal-article"}, "abstract_inverted_index": null, "referenced_works": ["https://openalex.org/W1553631189", "https://openalex.org/W1558123533", "https://openalex.org/W1934649023", "https://openalex.org/W1969679372", "https://openalex.org/W1980337419", "https://openalex.org/W2001123479", "https://openalex.org/W2011474190", "https://openalex.org/W2028226037", "https://openalex.org/W2071240032", "https://openalex.org/W2079354884", "https://openalex.org/W2100130392", "https://openalex.org/W2105278501", "https://openalex.org/W2110373102", "https://openalex.org/W2110401495", "https://openalex.org/W2113042691", "https://openalex.org/W2123972665", "https://openalex.org/W2131830082", "https://openalex.org/W2136399506", "https://openalex.org/W2145488574", "https://openalex.org/W2147542743", "https://openalex.org/W2150851272", "https://openalex.org/W2156455942", "https://openalex.org/W2568767495", "https://openalex.org/W2889260602", "https://openalex.org/W2889827801", "https://openalex.org/W2890314743", "https://openalex.org/W2890698629", "https://openalex.org/W2994756033", "https://openalex.org/W3121437526", "https://openalex.org/W3122217688", "https://openalex.org/W3122513675", "https://openalex.org/W3122705141", "https://openalex.org/W3124131699", "https://openalex.org/W3124166904", "https://openalex.org/W3124439481", "https://openalex.org/W3124584122", "https://openalex.org/W3124966538", "https://openalex.org/W3125747705", "https://openalex.org/W4240669445"], "relevance_score": 24.283}, {"id": "https://openalex.org/W2001123479", "doi": "https://doi.org/10.1093/wber/lhl001", "display_name": "The Primacy of Institutions Reconsidered: Direct Income Effects of Malaria Prevalence", "publication_year": 2006, "type": "article", "cited_by_count": 95, "authorships": [{"author_position": "first", "author": {"id": "https://openalex.org/A5079970655", "display_name": "Kai Carstensen", "orcid": "https://orcid.org/0000-0002-8820-9997", "observed_orcids": ["https://orcid.org/0000-0002-8820-9997"]}, "institutions": [{"id": "https://openalex.org/I1308524038", "display_name": "Kiel Institute for the World Economy", "ror": "https://ror.org/032yym934", "country_code": "DE", "type": "facility", "lineage": ["https://openalex.org/I1308524038", "https://openalex.org/I315704651"]}], "countries": ["DE"], "is_corresponding": true, "raw_author_name": "Kai Carstensen", "raw_affiliation_strings": ["Kai Carstensen and Erich Gundlach are research fellows at the Kiel Institute for the World Economy; their email addresses are and", "Kai Carstensen and Erich Gundlach are research fellows at the Kiel Institute for the World Economy", "their email addresses are  and "], "raw_orcid": null, "affiliations": [{"raw_affiliation_string": "Kai Carstensen and Erich Gundlach are research fellows at the Kiel Institute for the World Economy; their email addresses are and", "institution_ids": ["https://openalex.org/I1308524038"]}, {"raw_affiliation_string": "Kai Carstensen and Erich Gundlach are research fellows at the Kiel Institute for the World Economy", "institution_ids": ["https://openalex.org/I1308524038"]}, {"raw_affiliation_string": "their email addresses are  and ", "institution_ids": []}]}, {"author_position": "last", "author": {"id": null, "display_name": "Erich Gundlach", "orcid": null, "observed_orcids": []}, "institutions": [{"id": "https://openalex.org/I1308524038", "display_name": "Kiel Institute for the World Economy", "ror": "https://ror.org/032yym934", "country_code": "DE", "type": "facility", "lineage": ["https://openalex.org/I1308524038", "https://openalex.org/I315704651"]}], "countries": ["DE"], "is_corresponding": true, "raw_author_name": "Erich Gundlach", "raw_affiliation_strings": ["Kai Carstensen and Erich Gundlach are research fellows at the Kiel Institute for the World Economy; their email addresses are and", "Kai Carstensen and Erich Gundlach are research fellows at the Kiel Institute for the World Economy", "their email addresses are  and "], "raw_orcid": null, "affiliations": [{"raw_affiliation_string": "Kai Carstensen and Erich Gundlach are research fellows at the Kiel Institute for the World Economy; their email addresses are and", "institution_ids": ["https://openalex.org/I1308524038"]}, {"raw_affiliation_string": "Kai Carstensen and Erich Gundlach are research fellows at the Kiel Institute for the World Economy", "institution_ids": ["https://openalex.org/I1308524038"]}, {"raw_affiliation_string": "their email addresses are  and ", "institution_ids": []}]}], "primary_location": {"id": "doi:10.1093/wber/lhl001", "doi": "https://doi.org/10.1093/wber/lhl001", "is_oa": true, "landing_page_url": "https://doi.org/10.1093/wber/lhl001", "pdf_url": "https://academic.oup.com/wber/article-pdf/20/3/309/23942195/lhl001.pdf", "source": {"id": "https://openalex.org/S2735890421", "display_name": "The World Bank Economic Review", "issn_l": "0258-6770", "issn": ["0258-6770", "1564-698X"], "is_oa": false, "is_in_doaj": false, "is_core": true, "listed_in": ["abdc-a", "anvur-class-a", "anvur-scientific", "cwts-core", "erih-plus", "fnege-3", "jufo-1", "norway-1", "poland-100", "russia-white-list-1", "vabb-shw"], "host_organization": "https://openalex.org/P4310311648", "host_organization_name": "Oxford University Press", "host_organization_lineage": ["https://openalex.org/P4310311648", "https://openalex.org/P4310311647"], "host_organization_lineage_names": ["Oxford University Press", "University of Oxford"], "type": "journal"}, "license": null, "license_id": null, "version": "publishedVersion", "is_accepted": true, "is_published": true, "raw_source_name": "The World Bank Economic Review", "raw_type": "journal-article"}, "abstract_inverted_index": {"Some": [0], "recent": [1], "empirical": [2], "studies": [3], "deny": [4], "any": [5], "direct": [6], "effect": [7, 46], "of": [8, 21, 39, 50, 53, 105, 116, 121, 124, 134, 169], "geography": [9], "on": [10, 47, 101], "development": [11], "and": [12, 70, 77, 84, 119, 128, 149], "conclude": [13], "that": [14, 27, 155], "institutions": [15, 157], "dominate": [16], "all": [17], "other": [18], "potential": [19], "determinants": [20], "development.": [22, 172], "An": [23], "alternative": [24, 112, 146], "view": [25], "emphasizes": [26], "geographic": [28], "factors": [29], "such": [30, 78], "as": [31, 34, 81], "disease": [32], "ecology,": [33], "proxied": [35], "by": [36, 73, 110], "the": [37, 51, 122, 125, 132], "prevalence": [38, 92], "malaria,": [40], "may": [41, 61, 158], "have": [42], "a": [43, 54, 63, 166], "large": [44, 64], "negative": [45, 99], "income,": [48], "independent": [49], "quality": [52], "country\u2019s": [55], "institutions.": [56], "For": [57], "instance,": [58], "pandemic": [59], "malaria": [60, 91], "create": [62], "economic": [65, 171], "burden": [66], "beyond": [67], "medical": [68], "costs": [69], "forgone": [71], "earnings": [72], "affecting": [74], "household": [75], "behavior": [76], "macroeconomic": [79], "variables": [80], "international": [82], "investment": [83], "trade.": [85], "After": [86], "controlling": [87], "for": [88, 164], "institutional": [89], "quality,": [90], "is": [93, 108], "found": [94], "to": [95, 141, 144], "cause": [96], "quantitatively": [97], "important": [98], "effects": [100], "income.": [102], "The": [103, 137, 151], "robustness": [104], "this": [106], "finding": [107], "checked": [109], "employing": [111], "instrumental": [113], "variables,": [114], "tests": [115, 120], "overidentification": [117], "restrictions,": [118], "validity": [123], "point": [126], "estimates": [127, 153], "standard": [129], "errors": [130], "in": [131], "presence": [133], "weak": [135], "instruments.": [136], "baseline": [138], "findings": [139], "appear": [140], "be": [142, 159], "robust": [143], "using": [145], "specifications,": [147], "instrumentations,": [148], "samples.": [150], "reported": [152], "suggest": [154], "good": [156], "necessary": [160], "but": [161], "not": [162], "sufficient": [163], "generating": [165], "persistent": [167], "process": [168], "successful": [170]}, "referenced_works": ["https://openalex.org/W96791486", "https://openalex.org/W1529428759", "https://openalex.org/W1553631189", "https://openalex.org/W1970656144", "https://openalex.org/W2000901237", "https://openalex.org/W2005382467", "https://openalex.org/W2011474190", "https://openalex.org/W2023522548", "https://openalex.org/W2071364336", "https://openalex.org/W2074850605", "https://openalex.org/W2082154278", "https://openalex.org/W2088321962", "https://openalex.org/W2105278501", "https://openalex.org/W2110153620", "https://openalex.org/W2111678864", "https://openalex.org/W2112941164", "https://openalex.org/W2113224665", "https://openalex.org/W2122480349", "https://openalex.org/W2123750251", "https://openalex.org/W2136087370", "https://openalex.org/W2137466112", "https://openalex.org/W2152414118", "https://openalex.org/W2165144879", "https://openalex.org/W2170105205", "https://openalex.org/W2177899364", "https://openalex.org/W2618788771", "https://openalex.org/W2994756033", "https://openalex.org/W3021593216", "https://openalex.org/W3121390169", "https://openalex.org/W3122295862", "https://openalex.org/W3122513675", "https://openalex.org/W3122705141", "https://openalex.org/W3122721387", "https://openalex.org/W3124131699", "https://openalex.org/W3124166904", "https://openalex.org/W3125412951", "https://openalex.org/W4241750010", "https://openalex.org/W4300848461"], "relevance_score": 23.910566}], "group_by": []}
+{
+  "meta": {
+    "notice": "No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address. The mailto parameter doesn't raise this limit. Get a free key with its own $1/day at https://openalex.org/settings/api and add api_key=YOUR_KEY to your requests. An AI agent can get one for its user in one call: POST https://api.openalex.org/api-keys with {\"email\": \"<your user's email>\"}; we email them a link, and the key works once they click it. Docs for agents: https://help.openalex.org/llms.txt",
+    "count": 305,
+    "db_response_time_ms": 65,
+    "page": 1,
+    "per_page": 10,
+    "groups_count": null,
+    "x_query": {
+      "oql": "get works from 2001-01-01 through 2026-11-04 with (geography AND institutions AND (stemmed \"deep determinants\" OR stemmed \"fundamental causes\" OR stemmed \"institutions rule\" OR primacy)) in the title or abstract where type is ([article](article) or [preprint](preprint))",
+      "x_new_oql": "get works from 2001-01-01 through 2026-11-04 with (geography AND institutions AND (stemmed \"deep determinants\" OR stemmed \"fundamental causes\" OR stemmed \"institutions rule\" OR primacy)) in the title or abstract where type is ([article](article) or [preprint](preprint))",
+      "oqo": {
+        "get_rows": "works",
+        "filter_rows": [
+          {
+            "column_id": "from_publication_date",
+            "value": "2001-01-01"
+          },
+          {
+            "column_id": "title_and_abstract.search",
+            "value": "geography",
+            "operator": "has"
+          },
+          {
+            "column_id": "title_and_abstract.search",
+            "value": "institutions",
+            "operator": "has"
+          },
+          {
+            "column_id": "to_publication_date",
+            "value": "2026-11-04"
+          },
+          {
+            "join": "or",
+            "filters": [
+              {
+                "column_id": "title_and_abstract.search",
+                "value": "\"deep determinants\"",
+                "operator": "has"
+              },
+              {
+                "column_id": "title_and_abstract.search",
+                "value": "\"fundamental causes\"",
+                "operator": "has"
+              },
+              {
+                "column_id": "title_and_abstract.search",
+                "value": "\"institutions rule\"",
+                "operator": "has"
+              },
+              {
+                "column_id": "title_and_abstract.search",
+                "value": "primacy",
+                "operator": "has"
+              }
+            ]
+          },
+          {
+            "join": "or",
+            "filters": [
+              {
+                "column_id": "type",
+                "value": "article"
+              },
+              {
+                "column_id": "type",
+                "value": "preprint"
+              }
+            ]
+          }
+        ]
+      },
+      "url": "/works?filter=from_publication_date:2001-01-01,title_and_abstract.search:geography,title_and_abstract.search:institutions,to_publication_date:2026-11-04,title_and_abstract.search:%22deep determinants%22|%22fundamental causes%22|%22institutions rule%22|primacy,type:article|preprint&per_page=10&page=1",
+      "order": "best matches first",
+      "order_default": true
+    },
+    "cost_usd": 0.001
+  },
+  "results": [
+    {
+      "id": "https://openalex.org/W2994756033",
+      "doi": "https://doi.org/10.1023/b:joeg.0000031425.72248.85",
+      "display_name": "Institutions Rule: The Primacy of Institutions Over Geography and Integration in Economic Development",
+      "publication_year": 2002,
+      "type": "article",
+      "cited_by_count": 5577,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5113832316",
+            "display_name": "Dani Rodrik",
+            "orcid": "https://orcid.org/0000-0003-2173-5762",
+            "observed_orcids": [
+              "https://orcid.org/0000-0003-2173-5762"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I136199984",
+              "display_name": "Harvard University",
+              "ror": "https://ror.org/03vek6s52",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I136199984"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Dani Rodrik",
+          "raw_affiliation_strings": [
+            "Kennedy School of Government, Harvard University, Cambridge, MA, USA",
+            "Kennedy School of Government, Harvard University, Cambridge, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Kennedy School of Government, Harvard University, Cambridge, MA, USA",
+              "institution_ids": [
+                "https://openalex.org/I136199984"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Kennedy School of Government, Harvard University, Cambridge, USA",
+              "institution_ids": [
+                "https://openalex.org/I136199984"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5103012712",
+            "display_name": "Arvind Subramanian",
+            "orcid": "https://orcid.org/0000-0001-8795-9895",
+            "observed_orcids": [
+              "https://orcid.org/0000-0001-8795-9895"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1310145890",
+              "display_name": "International Monetary Fund",
+              "ror": "https://ror.org/05m4rmw09",
+              "country_code": "US",
+              "type": "other",
+              "lineage": [
+                "https://openalex.org/I1310145890"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Arvind Subramanian",
+          "raw_affiliation_strings": [
+            "International Monetary Fund (IMF), Washington DC, USA",
+            "International Monetary Fund (IMF)  USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "International Monetary Fund (IMF), Washington DC, USA",
+              "institution_ids": [
+                "https://openalex.org/I1310145890"
+              ]
+            },
+            {
+              "raw_affiliation_string": "International Monetary Fund (IMF)  USA",
+              "institution_ids": [
+                "https://openalex.org/I1310145890"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5088803982",
+            "display_name": "Francesco Trebbi",
+            "orcid": "https://orcid.org/0009-0003-5599-4778",
+            "observed_orcids": [
+              "https://orcid.org/0009-0003-5599-4778"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I136199984",
+              "display_name": "Harvard University",
+              "ror": "https://ror.org/03vek6s52",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I136199984"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Francesco Trebbi",
+          "raw_affiliation_strings": [
+            "Department of Economics, Harvard University, Littauer center, Cambridge, MA, USA",
+            "Department of Economics, Harvard University, Littauer Center, Cambridge, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Economics, Harvard University, Littauer center, Cambridge, MA, USA",
+              "institution_ids": [
+                "https://openalex.org/I136199984"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Department of Economics, Harvard University, Littauer Center, Cambridge, USA",
+              "institution_ids": [
+                "https://openalex.org/I136199984"
+              ]
+            }
+          ]
+        }
+      ],
+      "primary_location": {
+        "id": "doi:10.1023/b:joeg.0000031425.72248.85",
+        "doi": "https://doi.org/10.1023/b:joeg.0000031425.72248.85",
+        "is_oa": false,
+        "landing_page_url": "https://doi.org/10.1023/b:joeg.0000031425.72248.85",
+        "pdf_url": null,
+        "source": {
+          "id": "https://openalex.org/S181171746",
+          "display_name": "Journal of Economic Growth",
+          "issn_l": "1381-4338",
+          "issn": [
+            "1381-4338",
+            "1573-7020"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "listed_in": [
+            "abdc-a-star",
+            "anvur-class-a",
+            "anvur-scientific",
+            "cwts-core",
+            "erih-plus",
+            "jufo-2",
+            "norway-2",
+            "poland-200",
+            "russia-white-list-1",
+            "vabb-shw"
+          ],
+          "host_organization": "https://openalex.org/P4310319900",
+          "host_organization_name": "Springer Science+Business Media",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310319900",
+            "https://openalex.org/P4310319965"
+          ],
+          "host_organization_lineage_names": [
+            "Springer Science+Business Media",
+            "Springer Nature"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Journal of Economic Growth",
+        "raw_type": "journal-article"
+      },
+      "abstract_inverted_index": null,
+      "referenced_works": [
+        "https://openalex.org/W1507887863",
+        "https://openalex.org/W1518529382",
+        "https://openalex.org/W1598305156",
+        "https://openalex.org/W1810045679",
+        "https://openalex.org/W1989535774",
+        "https://openalex.org/W1992109042",
+        "https://openalex.org/W2011474190",
+        "https://openalex.org/W2095701068",
+        "https://openalex.org/W2105278501",
+        "https://openalex.org/W2110373102",
+        "https://openalex.org/W2113224665",
+        "https://openalex.org/W2126009317",
+        "https://openalex.org/W2133369488",
+        "https://openalex.org/W2152414118",
+        "https://openalex.org/W2165144879",
+        "https://openalex.org/W2170105205",
+        "https://openalex.org/W2325072161",
+        "https://openalex.org/W2588728401",
+        "https://openalex.org/W2798462310",
+        "https://openalex.org/W2991813917",
+        "https://openalex.org/W3021593216",
+        "https://openalex.org/W3121147769",
+        "https://openalex.org/W3121260165",
+        "https://openalex.org/W3121280624",
+        "https://openalex.org/W3121595223",
+        "https://openalex.org/W3121762824",
+        "https://openalex.org/W3122513675",
+        "https://openalex.org/W3122531453",
+        "https://openalex.org/W3122705141",
+        "https://openalex.org/W3124131699",
+        "https://openalex.org/W3124166904",
+        "https://openalex.org/W3124259699",
+        "https://openalex.org/W3124753968",
+        "https://openalex.org/W3125412951",
+        "https://openalex.org/W4206495155",
+        "https://openalex.org/W4241750010",
+        "https://openalex.org/W4298413470"
+      ],
+      "relevance_score": 60.86478
+    },
+    {
+      "id": "https://openalex.org/W3124718896",
+      "doi": null,
+      "display_name": "Institutions Rule; The Primacy of Institutions over Integration and Geography in Economic Development",
+      "publication_year": 2002,
+      "type": "preprint",
+      "cited_by_count": 79,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5103012712",
+            "display_name": "Arvind Subramanian",
+            "orcid": "https://orcid.org/0000-0001-8795-9895",
+            "observed_orcids": [
+              "https://orcid.org/0000-0001-8795-9895"
+            ]
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Arvind Subramanian",
+          "raw_affiliation_strings": [],
+          "raw_orcid": "https://orcid.org/0000-0001-8795-9895",
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5088803982",
+            "display_name": "Francesco Trebbi",
+            "orcid": "https://orcid.org/0009-0003-5599-4778",
+            "observed_orcids": [
+              "https://orcid.org/0009-0003-5599-4778"
+            ]
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Francesco Trebbi",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5113832316",
+            "display_name": "Dani Rodrik",
+            "orcid": "https://orcid.org/0000-0003-2173-5762",
+            "observed_orcids": [
+              "https://orcid.org/0000-0003-2173-5762"
+            ]
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Dani Rodrik",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        }
+      ],
+      "primary_location": {
+        "id": "mag:3124718896",
+        "doi": null,
+        "is_oa": false,
+        "landing_page_url": "https://EconPapers.repec.org/RePEc:imf:imfwpa:02/189",
+        "pdf_url": null,
+        "source": {
+          "id": "https://openalex.org/S4306401271",
+          "display_name": "RePEc: Research Papers in Economics",
+          "issn_l": null,
+          "issn": null,
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": false,
+          "listed_in": [],
+          "host_organization": "https://openalex.org/I77793887",
+          "host_organization_name": "Federal Reserve Bank of St. Louis",
+          "host_organization_lineage": [
+            "https://openalex.org/I77793887"
+          ],
+          "host_organization_lineage_names": [],
+          "type": "repository"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "submittedVersion",
+        "is_accepted": false,
+        "is_published": false,
+        "raw_source_name": "RePEc: Research Papers in Economics",
+        "raw_type": null
+      },
+      "abstract_inverted_index": null,
+      "referenced_works": [],
+      "relevance_score": 50.4038
+    },
+    {
+      "id": "https://openalex.org/W3123032229",
+      "doi": "https://doi.org/10.5089/9781451859621.001",
+      "display_name": "Institutions Rule",
+      "publication_year": 2002,
+      "type": "article",
+      "cited_by_count": 64,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5103012712",
+            "display_name": "Arvind Subramanian",
+            "orcid": "https://orcid.org/0000-0001-8795-9895",
+            "observed_orcids": [
+              "https://orcid.org/0000-0001-8795-9895"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1310145890",
+              "display_name": "International Monetary Fund",
+              "ror": "https://ror.org/05m4rmw09",
+              "country_code": "US",
+              "type": "other",
+              "lineage": [
+                "https://openalex.org/I1310145890"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Arvind Subramanian",
+          "raw_affiliation_strings": [
+            "INTERNATIONAL MONETARY"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "INTERNATIONAL MONETARY",
+              "institution_ids": [
+                "https://openalex.org/I1310145890"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5088803982",
+            "display_name": "Francesco Trebbi",
+            "orcid": "https://orcid.org/0009-0003-5599-4778",
+            "observed_orcids": [
+              "https://orcid.org/0009-0003-5599-4778"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1310145890",
+              "display_name": "International Monetary Fund",
+              "ror": "https://ror.org/05m4rmw09",
+              "country_code": "US",
+              "type": "other",
+              "lineage": [
+                "https://openalex.org/I1310145890"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Francesco Trebbi",
+          "raw_affiliation_strings": [
+            "INTERNATIONAL MONETARY"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "INTERNATIONAL MONETARY",
+              "institution_ids": [
+                "https://openalex.org/I1310145890"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5113832316",
+            "display_name": "Dani Rodrik",
+            "orcid": "https://orcid.org/0000-0003-2173-5762",
+            "observed_orcids": [
+              "https://orcid.org/0000-0003-2173-5762"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1310145890",
+              "display_name": "International Monetary Fund",
+              "ror": "https://ror.org/05m4rmw09",
+              "country_code": "US",
+              "type": "other",
+              "lineage": [
+                "https://openalex.org/I1310145890"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Dani Rodrik",
+          "raw_affiliation_strings": [
+            "INTERNATIONAL MONETARY"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "INTERNATIONAL MONETARY",
+              "institution_ids": [
+                "https://openalex.org/I1310145890"
+              ]
+            }
+          ]
+        }
+      ],
+      "primary_location": {
+        "id": "doi:10.5089/9781451859621.001",
+        "doi": "https://doi.org/10.5089/9781451859621.001",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.5089/9781451859621.001",
+        "pdf_url": "https://www.elibrary.imf.org/downloadpdf/journals/001/2002/189/001.2002.issue-189-en.xml",
+        "source": {
+          "id": "https://openalex.org/S4210171147",
+          "display_name": "IMF Working Paper",
+          "issn_l": "1018-5941",
+          "issn": [
+            "1018-5941",
+            "2227-8885"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "listed_in": [
+            "cwts-core"
+          ],
+          "host_organization": "https://openalex.org/P4310316166",
+          "host_organization_name": "International Monetary Fund",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310316166",
+            "https://openalex.org/P4310321776"
+          ],
+          "host_organization_lineage_names": [
+            "International Monetary Fund",
+            "United Nations"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "IMF Working Papers",
+        "raw_type": "journal-article"
+      },
+      "abstract_inverted_index": null,
+      "referenced_works": [
+        "https://openalex.org/W1507887863",
+        "https://openalex.org/W1598305156",
+        "https://openalex.org/W1810045679",
+        "https://openalex.org/W1989535774",
+        "https://openalex.org/W1992109042",
+        "https://openalex.org/W2011474190",
+        "https://openalex.org/W2095701068",
+        "https://openalex.org/W2097197933",
+        "https://openalex.org/W2126009317",
+        "https://openalex.org/W2153635177",
+        "https://openalex.org/W2165144879",
+        "https://openalex.org/W2169030761",
+        "https://openalex.org/W2170105205",
+        "https://openalex.org/W2991813917",
+        "https://openalex.org/W3121762824",
+        "https://openalex.org/W3122295862",
+        "https://openalex.org/W3122531453",
+        "https://openalex.org/W3122705141",
+        "https://openalex.org/W3123531977",
+        "https://openalex.org/W3124131699",
+        "https://openalex.org/W3124166904",
+        "https://openalex.org/W4206495155",
+        "https://openalex.org/W4213029298",
+        "https://openalex.org/W4241750010",
+        "https://openalex.org/W4298413470",
+        "https://openalex.org/W6789213037"
+      ],
+      "relevance_score": 35.724243
+    },
+    {
+      "id": "https://openalex.org/W1988424882",
+      "doi": "https://doi.org/10.1191/1464993404ps088pr",
+      "display_name": "Deep determinants of economic growth: institutions, geography and openness to trade",
+      "publication_year": 2004,
+      "type": "article",
+      "cited_by_count": 39,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5045368563",
+            "display_name": "Harry Bloch",
+            "orcid": "https://orcid.org/0000-0002-4288-6925",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-4288-6925"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I205640436",
+              "display_name": "Curtin University",
+              "ror": "https://ror.org/02n415q13",
+              "country_code": "AU",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I205640436"
+              ]
+            }
+          ],
+          "countries": [
+            "AU"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Harry Bloch",
+          "raw_affiliation_strings": [
+            "School of Economics and Finance, Curtin University of Technology,\r                        Australia,",
+            "School of Economics and Finance, Curtin University of Technology, Australia#TAB#"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Economics and Finance, Curtin University of Technology,\r                        Australia,",
+              "institution_ids": [
+                "https://openalex.org/I205640436"
+              ]
+            },
+            {
+              "raw_affiliation_string": "School of Economics and Finance, Curtin University of Technology, Australia#TAB#",
+              "institution_ids": [
+                "https://openalex.org/I205640436"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5083549223",
+            "display_name": "Sam Hak Kan Tang",
+            "orcid": "https://orcid.org/0000-0001-7547-4268",
+            "observed_orcids": [
+              "https://orcid.org/0000-0001-7547-4268"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I177725633",
+              "display_name": "Chinese University of Hong Kong",
+              "ror": "https://ror.org/00t33hh48",
+              "country_code": "HK",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I177725633"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I177877127",
+              "display_name": "The University of Western Australia",
+              "ror": "https://ror.org/047272k79",
+              "country_code": "AU",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I177877127"
+              ]
+            }
+          ],
+          "countries": [
+            "AU",
+            "HK"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Sam Hak Kan Tang",
+          "raw_affiliation_strings": [
+            "Department of Economics, Chinese University of Hong Kong, Hong Kong",
+            "UWA Business School"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Economics, Chinese University of Hong Kong, Hong Kong",
+              "institution_ids": [
+                "https://openalex.org/I177725633"
+              ]
+            },
+            {
+              "raw_affiliation_string": "UWA Business School",
+              "institution_ids": [
+                "https://openalex.org/I177877127"
+              ]
+            }
+          ]
+        }
+      ],
+      "primary_location": {
+        "id": "doi:10.1191/1464993404ps088pr",
+        "doi": "https://doi.org/10.1191/1464993404ps088pr",
+        "is_oa": false,
+        "landing_page_url": "https://doi.org/10.1191/1464993404ps088pr",
+        "pdf_url": null,
+        "source": {
+          "id": "https://openalex.org/S35779826",
+          "display_name": "Progress in Development Studies",
+          "issn_l": "1464-9934",
+          "issn": [
+            "1464-9934",
+            "1477-027X"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "listed_in": [
+            "abdc-c",
+            "anvur-scientific",
+            "cwts-core",
+            "jufo-1",
+            "norway-1",
+            "poland-70",
+            "russia-white-list-2",
+            "vabb-shw"
+          ],
+          "host_organization": "https://openalex.org/P4310320017",
+          "host_organization_name": "SAGE Publishing",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310320017"
+          ],
+          "host_organization_lineage_names": [
+            "SAGE Publishing"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Progress in Development Studies",
+        "raw_type": "journal-article"
+      },
+      "abstract_inverted_index": null,
+      "referenced_works": [
+        "https://openalex.org/W1482178678",
+        "https://openalex.org/W1513281941",
+        "https://openalex.org/W1519324514",
+        "https://openalex.org/W1519926580",
+        "https://openalex.org/W1530248219",
+        "https://openalex.org/W1553631189",
+        "https://openalex.org/W1582384516",
+        "https://openalex.org/W1584360514",
+        "https://openalex.org/W1606377008",
+        "https://openalex.org/W1975830170",
+        "https://openalex.org/W1977433163",
+        "https://openalex.org/W1982108682",
+        "https://openalex.org/W1983620572",
+        "https://openalex.org/W1988577590",
+        "https://openalex.org/W1989864366",
+        "https://openalex.org/W1991128340",
+        "https://openalex.org/W1992109042",
+        "https://openalex.org/W1998484819",
+        "https://openalex.org/W1998993092",
+        "https://openalex.org/W2001274843",
+        "https://openalex.org/W2010235856",
+        "https://openalex.org/W2011474190",
+        "https://openalex.org/W2013473661",
+        "https://openalex.org/W2017755093",
+        "https://openalex.org/W2036903590",
+        "https://openalex.org/W2038979042",
+        "https://openalex.org/W2042226937",
+        "https://openalex.org/W2052412641",
+        "https://openalex.org/W2062561513",
+        "https://openalex.org/W2063914592",
+        "https://openalex.org/W2066979365",
+        "https://openalex.org/W2070631858",
+        "https://openalex.org/W2080577950",
+        "https://openalex.org/W2095701068",
+        "https://openalex.org/W2097197933",
+        "https://openalex.org/W2098708459",
+        "https://openalex.org/W2100949627",
+        "https://openalex.org/W2110373102",
+        "https://openalex.org/W2148398893",
+        "https://openalex.org/W2170105205",
+        "https://openalex.org/W2312441521",
+        "https://openalex.org/W2500887424",
+        "https://openalex.org/W2588728401",
+        "https://openalex.org/W2618788771",
+        "https://openalex.org/W2810816287",
+        "https://openalex.org/W2994756033",
+        "https://openalex.org/W3003206378",
+        "https://openalex.org/W3024582746",
+        "https://openalex.org/W3094521286",
+        "https://openalex.org/W3121762824",
+        "https://openalex.org/W3122705141",
+        "https://openalex.org/W3123876308",
+        "https://openalex.org/W3124131699",
+        "https://openalex.org/W3124166904",
+        "https://openalex.org/W3124753968",
+        "https://openalex.org/W3125317676",
+        "https://openalex.org/W3125412951",
+        "https://openalex.org/W3125701855",
+        "https://openalex.org/W3142221335",
+        "https://openalex.org/W4238773385"
+      ],
+      "relevance_score": 31.925793
+    },
+    {
+      "id": "https://openalex.org/W1529198445",
+      "doi": null,
+      "display_name": "Do Institutions Rule? The Role of Heterogeneity In The Institutions Vs. Geography Debate",
+      "publication_year": 2009,
+      "type": "preprint",
+      "cited_by_count": 8,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5068423530",
+            "display_name": "Andros Kourtellos",
+            "orcid": "https://orcid.org/0000-0001-9662-0420",
+            "observed_orcids": [
+              "https://orcid.org/0000-0001-9662-0420"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I34771391",
+              "display_name": "University of Cyprus",
+              "ror": "https://ror.org/02qjrjx09",
+              "country_code": "CY",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I34771391"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I9360294",
+              "display_name": "University of Bologna",
+              "ror": "https://ror.org/01111rn36",
+              "country_code": "IT",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I9360294"
+              ]
+            }
+          ],
+          "countries": [
+            "CY",
+            "IT"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Andros Kourtellos",
+          "raw_affiliation_strings": [
+            "University of Bologna - Rimini Center for Economic Analysis (RCEA)",
+            "University of Cyprus - Department of Economics"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0001-9662-0420",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "University of Bologna - Rimini Center for Economic Analysis (RCEA)",
+              "institution_ids": [
+                "https://openalex.org/I9360294"
+              ]
+            },
+            {
+              "raw_affiliation_string": "University of Cyprus - Department of Economics",
+              "institution_ids": [
+                "https://openalex.org/I34771391"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5072489508",
+            "display_name": "Thanasis Stengos",
+            "orcid": "https://orcid.org/0000-0002-7771-1121",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-7771-1121"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I79817857",
+              "display_name": "University of Guelph",
+              "ror": "https://ror.org/01r7awg59",
+              "country_code": "CA",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I79817857"
+              ]
+            }
+          ],
+          "countries": [
+            "CA"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Thanasis Stengos",
+          "raw_affiliation_strings": [
+            "University of Guelph Department of Economics"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-7771-1121",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "University of Guelph Department of Economics",
+              "institution_ids": [
+                "https://openalex.org/I79817857"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5054645491",
+            "display_name": "Chih Ming Tan",
+            "orcid": null,
+            "observed_orcids": []
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I24571045",
+              "display_name": "University of North Dakota",
+              "ror": "https://ror.org/04a5szx83",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I24571045"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Chih Ming Tan",
+          "raw_affiliation_strings": [
+            "University of North Dakota - College of Business & Public Administration - Department of Economics"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "University of North Dakota - College of Business & Public Administration - Department of Economics",
+              "institution_ids": [
+                "https://openalex.org/I24571045"
+              ]
+            }
+          ]
+        }
+      ],
+      "primary_location": {
+        "id": "pmh:oai:RePEc:tuf:tuftec:0735",
+        "doi": null,
+        "is_oa": false,
+        "landing_page_url": "http://ase.tufts.edu/econ/research/documents/2009/tanDoInstitutionsRule.pdf",
+        "pdf_url": "http://ase.tufts.edu/econ/research/documents/2009/tanDoInstitutionsRule.pdf",
+        "source": {
+          "id": "https://openalex.org/S4306401271",
+          "display_name": "RePEc: Research Papers in Economics",
+          "issn_l": null,
+          "issn": null,
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": false,
+          "listed_in": [],
+          "host_organization": "https://openalex.org/I77793887",
+          "host_organization_name": "Federal Reserve Bank of St. Louis",
+          "host_organization_lineage": [
+            "https://openalex.org/I77793887"
+          ],
+          "host_organization_lineage_names": [],
+          "type": "repository"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "submittedVersion",
+        "is_accepted": false,
+        "is_published": false,
+        "raw_source_name": null,
+        "raw_type": "preprint"
+      },
+      "abstract_inverted_index": null,
+      "referenced_works": [
+        "https://openalex.org/W1491711721",
+        "https://openalex.org/W1493587706",
+        "https://openalex.org/W1665228730",
+        "https://openalex.org/W1980648684",
+        "https://openalex.org/W1981549413",
+        "https://openalex.org/W1998409249",
+        "https://openalex.org/W2082080397",
+        "https://openalex.org/W2096734231",
+        "https://openalex.org/W2127882594",
+        "https://openalex.org/W2134448449",
+        "https://openalex.org/W2166177063",
+        "https://openalex.org/W2994756033",
+        "https://openalex.org/W3123762355",
+        "https://openalex.org/W3124131699",
+        "https://openalex.org/W3125802730"
+      ],
+      "relevance_score": 30.802979
+    },
+    {
+      "id": "https://openalex.org/W4296052492",
+      "doi": "https://doi.org/10.3390/su141811594",
+      "display_name": "Institutions Rule in Export Diversity",
+      "publication_year": 2022,
+      "type": "article",
+      "cited_by_count": 5,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5072618336",
+            "display_name": "Wenni Lei",
+            "orcid": null,
+            "observed_orcids": []
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I145897649",
+              "display_name": "Minzu University of China",
+              "ror": "https://ror.org/0044e2g62",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I145897649"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Wenni Lei",
+          "raw_affiliation_strings": [
+            "School of Economics, Minzu University of China, 27 Zhongguancun South Avenue, Haidian District, Beijing 100081, China"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Economics, Minzu University of China, 27 Zhongguancun South Avenue, Haidian District, Beijing 100081, China",
+              "institution_ids": [
+                "https://openalex.org/I145897649"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5101185212",
+            "display_name": "Yuwei Luo",
+            "orcid": null,
+            "observed_orcids": []
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I137867983",
+              "display_name": "Central University of Finance and Economics",
+              "ror": "https://ror.org/008e3hf02",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I137867983"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Yuwei Luo",
+          "raw_affiliation_strings": [
+            "China Economics and Management Academy, Central University of Finance and Economics, 39 South College Road, Haidian District, Beijing 100081, China"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "China Economics and Management Academy, Central University of Finance and Economics, 39 South College Road, Haidian District, Beijing 100081, China",
+              "institution_ids": [
+                "https://openalex.org/I137867983"
+              ]
+            }
+          ]
+        }
+      ],
+      "primary_location": {
+        "id": "doi:10.3390/su141811594",
+        "doi": "https://doi.org/10.3390/su141811594",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.3390/su141811594",
+        "pdf_url": "https://www.mdpi.com/2071-1050/14/18/11594/pdf?version=1663255428",
+        "source": {
+          "id": "https://openalex.org/S10134376",
+          "display_name": "Sustainability",
+          "issn_l": "2071-1050",
+          "issn": [
+            "2071-1050"
+          ],
+          "is_oa": true,
+          "is_in_doaj": false,
+          "is_core": true,
+          "listed_in": [
+            "anvur-class-a",
+            "anvur-scientific",
+            "cwts-core",
+            "poland-100",
+            "russia-white-list-1",
+            "vabb-shw"
+          ],
+          "host_organization": "https://openalex.org/P4310310987",
+          "host_organization_name": "Multidisciplinary Digital Publishing Institute",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310310987"
+          ],
+          "host_organization_lineage_names": [
+            "Multidisciplinary Digital Publishing Institute"
+          ],
+          "type": "journal"
+        },
+        "license": "cc-by",
+        "license_id": "https://openalex.org/licenses/cc-by",
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Sustainability",
+        "raw_type": "journal-article"
+      },
+      "abstract_inverted_index": null,
+      "referenced_works": [
+        "https://openalex.org/W1499373846",
+        "https://openalex.org/W1528104378",
+        "https://openalex.org/W1570506943",
+        "https://openalex.org/W1580230162",
+        "https://openalex.org/W1712007514",
+        "https://openalex.org/W1961445169",
+        "https://openalex.org/W1985526691",
+        "https://openalex.org/W2017239593",
+        "https://openalex.org/W2017349910",
+        "https://openalex.org/W2020682330",
+        "https://openalex.org/W2023540975",
+        "https://openalex.org/W2024934901",
+        "https://openalex.org/W2029339127",
+        "https://openalex.org/W2030589968",
+        "https://openalex.org/W2038747636",
+        "https://openalex.org/W2042226937",
+        "https://openalex.org/W2044295958",
+        "https://openalex.org/W2045936914",
+        "https://openalex.org/W2051017241",
+        "https://openalex.org/W2067904349",
+        "https://openalex.org/W2072485764",
+        "https://openalex.org/W2075505546",
+        "https://openalex.org/W2083729655",
+        "https://openalex.org/W2096611253",
+        "https://openalex.org/W2098778215",
+        "https://openalex.org/W2099184394",
+        "https://openalex.org/W2099268311",
+        "https://openalex.org/W2099516335",
+        "https://openalex.org/W2102635964",
+        "https://openalex.org/W2104829051",
+        "https://openalex.org/W2113337769",
+        "https://openalex.org/W2115575331",
+        "https://openalex.org/W2119291693",
+        "https://openalex.org/W2130888234",
+        "https://openalex.org/W2144786831",
+        "https://openalex.org/W2170268745",
+        "https://openalex.org/W2252801942",
+        "https://openalex.org/W2283145705",
+        "https://openalex.org/W2284876217",
+        "https://openalex.org/W2323732434",
+        "https://openalex.org/W2563218153",
+        "https://openalex.org/W2594177097",
+        "https://openalex.org/W2765565416",
+        "https://openalex.org/W2767682255",
+        "https://openalex.org/W2903206621",
+        "https://openalex.org/W2910481459",
+        "https://openalex.org/W2994756033",
+        "https://openalex.org/W3021566129",
+        "https://openalex.org/W3023107764",
+        "https://openalex.org/W3121957089",
+        "https://openalex.org/W3122307378",
+        "https://openalex.org/W3123773675",
+        "https://openalex.org/W3124053790",
+        "https://openalex.org/W3124166904",
+        "https://openalex.org/W3124203648",
+        "https://openalex.org/W3124300170",
+        "https://openalex.org/W3124381445",
+        "https://openalex.org/W3125701855",
+        "https://openalex.org/W3125837459",
+        "https://openalex.org/W3169004441",
+        "https://openalex.org/W4250538525",
+        "https://openalex.org/W4388807629"
+      ],
+      "relevance_score": 27.159266
+    },
+    {
+      "id": "https://openalex.org/W144118490",
+      "doi": null,
+      "display_name": "The Primacy of Institutions (and what this does and does not mean)",
+      "publication_year": 2013,
+      "type": "article",
+      "cited_by_count": 100,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": null,
+            "display_name": "Dani Rodrik",
+            "orcid": null,
+            "observed_orcids": []
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": true,
+          "raw_author_name": "Dani Rodrik",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": null,
+            "display_name": "Arvind Subramanian",
+            "orcid": null,
+            "observed_orcids": []
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Arvind Subramanian",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        }
+      ],
+      "primary_location": {
+        "id": "pmh:oai:CiteSeerX.psu:10.1.1.259.5276",
+        "doi": null,
+        "is_oa": false,
+        "landing_page_url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.259.5276",
+        "pdf_url": null,
+        "source": null,
+        "license": null,
+        "license_id": null,
+        "version": "submittedVersion",
+        "is_accepted": false,
+        "is_published": false,
+        "raw_source_name": "http://www.imf.org/external/pubs/ft/fandd/2003/06/pdf/rodrik.pdf",
+        "raw_type": "text"
+      },
+      "abstract_inverted_index": null,
+      "referenced_works": [
+        "https://openalex.org/W1519324514",
+        "https://openalex.org/W2011474190",
+        "https://openalex.org/W2798462310",
+        "https://openalex.org/W3121147769",
+        "https://openalex.org/W3122513675",
+        "https://openalex.org/W3124131699"
+      ],
+      "relevance_score": 26.46606
+    },
+    {
+      "id": "https://openalex.org/W2566351377",
+      "doi": null,
+      "display_name": "The Primacy of Institutions Reconsidered",
+      "publication_year": 2012,
+      "type": "article",
+      "cited_by_count": 0,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5079970655",
+            "display_name": "Kai Carstensen",
+            "orcid": "https://orcid.org/0000-0002-8820-9997",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-8820-9997"
+            ]
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Kai Carstensen",
+          "raw_affiliation_strings": [],
+          "raw_orcid": "https://orcid.org/0000-0002-8820-9997",
+          "affiliations": []
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5079247338",
+            "display_name": "Erich Gundlach",
+            "orcid": "https://orcid.org/0000-0003-2519-9266",
+            "observed_orcids": [
+              "https://orcid.org/0000-0003-2519-9266"
+            ]
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Erich Gundlach",
+          "raw_affiliation_strings": [],
+          "raw_orcid": "https://orcid.org/0000-0003-2519-9266",
+          "affiliations": []
+        }
+      ],
+      "primary_location": {
+        "id": "mag:2566351377",
+        "doi": null,
+        "is_oa": false,
+        "landing_page_url": "https://elibrary.worldbank.org/doi/abs/10.1093/wber/lhl001",
+        "pdf_url": null,
+        "source": {
+          "id": "https://openalex.org/S2735890421",
+          "display_name": "The World Bank Economic Review",
+          "issn_l": "0258-6770",
+          "issn": [
+            "0258-6770",
+            "1564-698X"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "listed_in": [
+            "abdc-a",
+            "anvur-class-a",
+            "anvur-scientific",
+            "cwts-core",
+            "erih-plus",
+            "fnege-3",
+            "jufo-1",
+            "norway-1",
+            "poland-100",
+            "russia-white-list-1",
+            "vabb-shw"
+          ],
+          "host_organization": "https://openalex.org/P4310311648",
+          "host_organization_name": "Oxford University Press",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310311648",
+            "https://openalex.org/P4310311647"
+          ],
+          "host_organization_lineage_names": [
+            "Oxford University Press",
+            "University of Oxford"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": null,
+        "is_accepted": false,
+        "is_published": false,
+        "raw_source_name": "The World Bank Economic Review",
+        "raw_type": null
+      },
+      "abstract_inverted_index": null,
+      "referenced_works": [],
+      "relevance_score": 24.804703
+    },
+    {
+      "id": "https://openalex.org/W2052626067",
+      "doi": "https://doi.org/10.1093/jeg/lbn047",
+      "display_name": "Economic development and the geography of institutions",
+      "publication_year": 2006,
+      "type": "article",
+      "cited_by_count": 146,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5039902347",
+            "display_name": "Maarten Bosker",
+            "orcid": "https://orcid.org/0000-0003-1941-2120",
+            "observed_orcids": [
+              "https://orcid.org/0000-0003-1941-2120"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I169381384",
+              "display_name": "University of Groningen",
+              "ror": "https://ror.org/012p63287",
+              "country_code": "NL",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I169381384"
+              ]
+            }
+          ],
+          "countries": [
+            "NL"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "M. Bosker",
+          "raw_affiliation_strings": [
+            "Department of International Economics & Business, Faculty of Economics and Business, University of Groningen, The Netherlands"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of International Economics & Business, Faculty of Economics and Business, University of Groningen, The Netherlands",
+              "institution_ids": [
+                "https://openalex.org/I169381384"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5075448909",
+            "display_name": "Harry Garretsen",
+            "orcid": "https://orcid.org/0000-0002-9024-4222",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-9024-4222"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I169381384",
+              "display_name": "University of Groningen",
+              "ror": "https://ror.org/012p63287",
+              "country_code": "NL",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I169381384"
+              ]
+            }
+          ],
+          "countries": [
+            "NL"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "H. Garretsen",
+          "raw_affiliation_strings": [
+            "Department of International Economics & Business, Faculty of Economics and Business, University of Groningen, The Netherlands"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of International Economics & Business, Faculty of Economics and Business, University of Groningen, The Netherlands",
+              "institution_ids": [
+                "https://openalex.org/I169381384"
+              ]
+            }
+          ]
+        }
+      ],
+      "primary_location": {
+        "id": "doi:10.1093/jeg/lbn047",
+        "doi": "https://doi.org/10.1093/jeg/lbn047",
+        "is_oa": false,
+        "landing_page_url": "https://doi.org/10.1093/jeg/lbn047",
+        "pdf_url": null,
+        "source": {
+          "id": "https://openalex.org/S46039370",
+          "display_name": "Journal of Economic Geography",
+          "issn_l": "1468-2702",
+          "issn": [
+            "1468-2702",
+            "1468-2710"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "listed_in": [
+            "abdc-a",
+            "anvur-class-a",
+            "anvur-scientific",
+            "cwts-core",
+            "dongbi-d",
+            "erih-plus",
+            "fnege-2",
+            "jufo-3",
+            "norway-2",
+            "poland-140",
+            "russia-white-list-1",
+            "vabb-shw"
+          ],
+          "host_organization": "https://openalex.org/P4310311648",
+          "host_organization_name": "Oxford University Press",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310311648",
+            "https://openalex.org/P4310311647"
+          ],
+          "host_organization_lineage_names": [
+            "Oxford University Press",
+            "University of Oxford"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "Journal of Economic Geography",
+        "raw_type": "journal-article"
+      },
+      "abstract_inverted_index": null,
+      "referenced_works": [
+        "https://openalex.org/W1553631189",
+        "https://openalex.org/W1558123533",
+        "https://openalex.org/W1934649023",
+        "https://openalex.org/W1969679372",
+        "https://openalex.org/W1980337419",
+        "https://openalex.org/W2001123479",
+        "https://openalex.org/W2011474190",
+        "https://openalex.org/W2028226037",
+        "https://openalex.org/W2071240032",
+        "https://openalex.org/W2079354884",
+        "https://openalex.org/W2100130392",
+        "https://openalex.org/W2105278501",
+        "https://openalex.org/W2110373102",
+        "https://openalex.org/W2110401495",
+        "https://openalex.org/W2113042691",
+        "https://openalex.org/W2123972665",
+        "https://openalex.org/W2131830082",
+        "https://openalex.org/W2136399506",
+        "https://openalex.org/W2145488574",
+        "https://openalex.org/W2147542743",
+        "https://openalex.org/W2150851272",
+        "https://openalex.org/W2156455942",
+        "https://openalex.org/W2568767495",
+        "https://openalex.org/W2889260602",
+        "https://openalex.org/W2889827801",
+        "https://openalex.org/W2890314743",
+        "https://openalex.org/W2890698629",
+        "https://openalex.org/W2994756033",
+        "https://openalex.org/W3121437526",
+        "https://openalex.org/W3122217688",
+        "https://openalex.org/W3122513675",
+        "https://openalex.org/W3122705141",
+        "https://openalex.org/W3124131699",
+        "https://openalex.org/W3124166904",
+        "https://openalex.org/W3124439481",
+        "https://openalex.org/W3124584122",
+        "https://openalex.org/W3124966538",
+        "https://openalex.org/W3125747705",
+        "https://openalex.org/W4240669445"
+      ],
+      "relevance_score": 24.283
+    },
+    {
+      "id": "https://openalex.org/W2001123479",
+      "doi": "https://doi.org/10.1093/wber/lhl001",
+      "display_name": "The Primacy of Institutions Reconsidered: Direct Income Effects of Malaria Prevalence",
+      "publication_year": 2006,
+      "type": "article",
+      "cited_by_count": 95,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5079970655",
+            "display_name": "Kai Carstensen",
+            "orcid": "https://orcid.org/0000-0002-8820-9997",
+            "observed_orcids": [
+              "https://orcid.org/0000-0002-8820-9997"
+            ]
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1308524038",
+              "display_name": "Kiel Institute for the World Economy",
+              "ror": "https://ror.org/032yym934",
+              "country_code": "DE",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I1308524038",
+                "https://openalex.org/I315704651"
+              ]
+            }
+          ],
+          "countries": [
+            "DE"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Kai Carstensen",
+          "raw_affiliation_strings": [
+            "Kai Carstensen and Erich Gundlach are research fellows at the Kiel Institute for the World Economy; their email addresses are and",
+            "Kai Carstensen and Erich Gundlach are research fellows at the Kiel Institute for the World Economy",
+            "their email addresses are  and "
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Kai Carstensen and Erich Gundlach are research fellows at the Kiel Institute for the World Economy; their email addresses are and",
+              "institution_ids": [
+                "https://openalex.org/I1308524038"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Kai Carstensen and Erich Gundlach are research fellows at the Kiel Institute for the World Economy",
+              "institution_ids": [
+                "https://openalex.org/I1308524038"
+              ]
+            },
+            {
+              "raw_affiliation_string": "their email addresses are  and ",
+              "institution_ids": []
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": null,
+            "display_name": "Erich Gundlach",
+            "orcid": null,
+            "observed_orcids": []
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1308524038",
+              "display_name": "Kiel Institute for the World Economy",
+              "ror": "https://ror.org/032yym934",
+              "country_code": "DE",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I1308524038",
+                "https://openalex.org/I315704651"
+              ]
+            }
+          ],
+          "countries": [
+            "DE"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Erich Gundlach",
+          "raw_affiliation_strings": [
+            "Kai Carstensen and Erich Gundlach are research fellows at the Kiel Institute for the World Economy; their email addresses are and",
+            "Kai Carstensen and Erich Gundlach are research fellows at the Kiel Institute for the World Economy",
+            "their email addresses are  and "
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Kai Carstensen and Erich Gundlach are research fellows at the Kiel Institute for the World Economy; their email addresses are and",
+              "institution_ids": [
+                "https://openalex.org/I1308524038"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Kai Carstensen and Erich Gundlach are research fellows at the Kiel Institute for the World Economy",
+              "institution_ids": [
+                "https://openalex.org/I1308524038"
+              ]
+            },
+            {
+              "raw_affiliation_string": "their email addresses are  and ",
+              "institution_ids": []
+            }
+          ]
+        }
+      ],
+      "primary_location": {
+        "id": "doi:10.1093/wber/lhl001",
+        "doi": "https://doi.org/10.1093/wber/lhl001",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.1093/wber/lhl001",
+        "pdf_url": "https://academic.oup.com/wber/article-pdf/20/3/309/23942195/lhl001.pdf",
+        "source": {
+          "id": "https://openalex.org/S2735890421",
+          "display_name": "The World Bank Economic Review",
+          "issn_l": "0258-6770",
+          "issn": [
+            "0258-6770",
+            "1564-698X"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "listed_in": [
+            "abdc-a",
+            "anvur-class-a",
+            "anvur-scientific",
+            "cwts-core",
+            "erih-plus",
+            "fnege-3",
+            "jufo-1",
+            "norway-1",
+            "poland-100",
+            "russia-white-list-1",
+            "vabb-shw"
+          ],
+          "host_organization": "https://openalex.org/P4310311648",
+          "host_organization_name": "Oxford University Press",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310311648",
+            "https://openalex.org/P4310311647"
+          ],
+          "host_organization_lineage_names": [
+            "Oxford University Press",
+            "University of Oxford"
+          ],
+          "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "The World Bank Economic Review",
+        "raw_type": "journal-article"
+      },
+      "abstract_inverted_index": null,
+      "referenced_works": [
+        "https://openalex.org/W96791486",
+        "https://openalex.org/W1529428759",
+        "https://openalex.org/W1553631189",
+        "https://openalex.org/W1970656144",
+        "https://openalex.org/W2000901237",
+        "https://openalex.org/W2005382467",
+        "https://openalex.org/W2011474190",
+        "https://openalex.org/W2023522548",
+        "https://openalex.org/W2071364336",
+        "https://openalex.org/W2074850605",
+        "https://openalex.org/W2082154278",
+        "https://openalex.org/W2088321962",
+        "https://openalex.org/W2105278501",
+        "https://openalex.org/W2110153620",
+        "https://openalex.org/W2111678864",
+        "https://openalex.org/W2112941164",
+        "https://openalex.org/W2113224665",
+        "https://openalex.org/W2122480349",
+        "https://openalex.org/W2123750251",
+        "https://openalex.org/W2136087370",
+        "https://openalex.org/W2137466112",
+        "https://openalex.org/W2152414118",
+        "https://openalex.org/W2165144879",
+        "https://openalex.org/W2170105205",
+        "https://openalex.org/W2177899364",
+        "https://openalex.org/W2618788771",
+        "https://openalex.org/W2994756033",
+        "https://openalex.org/W3021593216",
+        "https://openalex.org/W3121390169",
+        "https://openalex.org/W3122295862",
+        "https://openalex.org/W3122513675",
+        "https://openalex.org/W3122705141",
+        "https://openalex.org/W3122721387",
+        "https://openalex.org/W3124131699",
+        "https://openalex.org/W3124166904",
+        "https://openalex.org/W3125412951",
+        "https://openalex.org/W4241750010",
+        "https://openalex.org/W4300848461"
+      ],
+      "relevance_score": 23.910566
+    }
+  ],
+  "group_by": []
+}
