@@ -1,0 +1,37 @@
+{"t":"2026-11-05T11:10:43Z","stage":"identity","event":"start","note":"start"}
+{"t":"2026-11-05T11:10:44Z","stage":"identity","tool_call":1,"note":"fetched 7 pinned files at a58d165 and hashed"}
+{"t":"2026-11-05T11:10:53Z","stage":"identity","tool_call":1,"note":"tree cross-check; worktree created"}
+{"t":"2026-11-05T11:10:54Z","stage":"identity","event":"end","note":"end"}
+{"t":"2026-11-05T11:11:44Z","stage":"prereg","event":"start","note":"start"}
+{"t":"2026-11-05T11:11:44Z","stage":"prereg","tool_call":1,"note":"wrote and hashed 00a; made read-only"}
+{"t":"2026-11-05T11:11:44Z","stage":"prereg","event":"end","note":"end"}
+{"t":"2026-11-05T11:11:53Z","stage":"target-retrieval","event":"start","note":"start"}
+{"t":"2026-11-05T11:13:38Z","stage":"target-retrieval","event":"end","note":"end"}
+{"t":"2026-11-05T11:13:38Z","stage":"stage1","event":"start","note":"start"}
+{"t":"2026-11-05T11:13:39Z","stage":"stage1","tool_call":1,"note":"fetched RRR (Maastricht CRIS), Vohs 2021 (eScholarship), Baumeister et al 2018 (Carlson)"}
+{"t":"2026-11-05T11:14:35Z","stage":"stage1","tool_call":1,"note":"WebFetch Schimmack RR1; LSE slides; searches x5"}
+{"t":"2026-11-05T11:18:56Z","stage":"stage1","event":"end","note":"wrote 01_claim_extraction.md"}
+{"t":"2026-11-05T11:19:21Z","stage":"replication","event":"start","note":"start"}
+{"t":"2026-11-05T11:20:50Z","stage":"replication","event":"end","note":"NOT_ASSESSABLE written"}
+{"t":"2026-11-05T11:23:50Z","stage":"stage2a","event":"start","note":"start"}
+{"t":"2026-11-05T11:23:50Z","stage":"stage2a","event":"end","note":"wrote 02a"}
+{"t":"2026-11-05T11:24:22Z","stage":"stage2b","event":"start","note":"start"}
+{"t":"2026-11-05T11:26:55Z","stage":"stage2b","event":"end","note":"wrote 02b"}
+{"t":"2026-11-05T11:28:23Z","stage":"stage2c","event":"lock","note":"ADJUDICATION-1 search record locked d1e398eacd9045935a0a110659281f7c44970e6d9d4e46ff44d1b5fef938d7f7"}
+{"t":"2026-11-05T11:28:40Z","stage":"stage2c","event":"lock","note":"section E prereg locked 791e03ac0bbe7ff3abe4e806ce0d17b57c1bc3e55d7816afe5d5c86ea6bed737"}
+{"t":"2026-11-05T11:45:09Z","stage":"stage2c","event":"lock","note":"samples drawn and locked"}
+{"t":"2026-11-05T11:51:09Z","stage":"recovery","event":"event","note":"DEVIATION: out/ dirs (01, 02a, 02b, replication/NOT_ASSESSABLE, cn/out) lost in box restore ~11:32Z; transcript copies truncated mid-file; NOT_ASSESSABLE recovered verbatim from transcript; 01/02a/02b to be regenerated"}
+{"t":"2026-11-05T11:53:18Z","stage":"stage1-regen","event":"start","note":"start (regeneration after loss; same pinned instrument, same sources already retrieved 11:13-11:18Z)"}
+{"t":"2026-11-05T11:53:18Z","stage":"stage1-regen","event":"end","note":"wrote stages/01_claim_extraction.md"}
+{"t":"2026-11-05T11:55:18Z","stage":"stage2a-regen","event":"start","note":"start (regeneration)"}
+{"t":"2026-11-05T11:55:18Z","stage":"stage2a-regen","event":"end","note":"wrote stages/02a"}
+{"t":"2026-11-05T11:55:37Z","stage":"stage2a-regen","tool_call":1,"note":"locator fix: RRR d=0.04 Results text is on p.554 (page-header mapping)"}
+{"t":"2026-11-05T11:57:14Z","stage":"stage2b-regen","event":"start","note":"start (regeneration)"}
+{"t":"2026-11-05T11:57:14Z","stage":"stage2b-regen","event":"end","note":"wrote stages/02b"}
+{"t":"2026-11-05T12:02:13Z","stage":"stage2c","event":"start","note":"ledger build and 02c generation (resume after interrupt)"}
+{"t":"2026-11-05T12:05:02Z","stage":"stage2c","tool_call":1,"note":"fetch titles of target's 58 OpenAlex referenced_works (metadata only) for Section E engagement check"}
+{"t":"2026-11-05T12:23:24Z","stage":"stage2c","event":"end","note":"2c complete: checkers try1-try3(final); v1 PASS-WITH-REVIEW 2; gates PASS-WITH-REVIEW 13; band >20-40% PROVISIONAL"}
+{"t":"2026-11-05T12:26:35Z","stage":"stage3","event":"start","note":"Stage 3 start: pinned 3-counter-audit.txt read in full (915 lines); inputs 01, 02a, 02b, 02c; ft texts re-checked (Carter Table 1 rows, Vohs abstract/Table 4, Dang abstract, Englert & Bertrams, B&V 2016 refs, S2). 00a opened during preparation (disclosed in J2)."}
+{"t":"2026-11-05T12:32:12Z","stage":"stage3","event":"end","note":"Stage 3 written (03_counter_audit.md): E0 residual D0/N3/R2/U16; IV-2 re-aimed DEFEATS->NARROWS for field 6; category F"}
+{"t":"2026-11-05T12:33:24Z","stage":"stage05","event":"start","note":"05 final assessment start: 00a unblinded (hash re-verified a76bf588\u2026)"}
+{"t":"2026-11-05T12:33:24Z","stage":"stage05","event":"end","note":"05 written"}

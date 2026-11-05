@@ -1,0 +1,48 @@
+Checked: v2cand3/02c_citation_network_v2cand3.md
+VERIFICATION_VOCAB_PASS	canonical_confirmed_tokens=125
+Required headings: 25
+Present: 25
+Missing: 0
+Placeholder-screen threshold: 12 words
+NOTICE	A body-length pass means only that the section is not empty or an obvious placeholder. It does not establish analytical adequacy.
+DERIVATION_SEPARATION_PASS	Derivation mode is separate from verification state.
+ORDER_PASS	ARTIFACT 9: NETWORK MAP precedes COMPLETION LEDGER
+ORDER_PASS	COMPLETION LEDGER precedes ARTIFACT 10: FINAL VERDICT
+ORDER_PASS	ARTIFACT 10: FINAL VERDICT precedes FINAL SECTION: STANDARDIZED FINDING TABLE
+PLACEHOLDER_SCREEN_PASS	PRE-AUDIT CLAIM CONFIRMATION	7174 words	status=PROVISIONAL
+PLACEHOLDER_SCREEN_PASS	SECTION A: CITATION NETWORK STRUCTURE AND CARTEL DETECTION	882 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION B: EVIDENCE TYPE CODING	249 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION C: CITATION POLARITY AND CLAIM USE	248 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION D: CLAIM MUTATION TRACKING	212 words	status=PROVISIONAL
+PLACEHOLDER_SCREEN_PASS	SECTION E: ADJACENT FIELD ENGAGEMENT / NEGLECT	1811 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION F: HUB DEPENDENCY AND REVIEW-PAPER LAUNDERING	280 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION G: PATTERN RECOGNITION AND RATCHET BEHAVIOR	263 words	status=N/A
+PLACEHOLDER_SCREEN_PASS	SECTION H: IGNORED CRITIQUE AND NON-UPTAKE	488 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION I: AUTHOR, INSTITUTION, JOURNAL, AND FUNDING CLUSTERING	150 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION J: FALSE-POSITIVE AND BASELINE CHECK	151 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION J2: THE CONCEDE TEST	1571 words	status=N/A,PROVISIONAL
+PLACEHOLDER_SCREEN_PASS	SECTION K: CARTEL-RISK SCORING	409 words	status=N/A,PROVISIONAL
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 1: TOP 15 CITATION SPINE TABLE	485 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 2: FOUNDING CLUSTER TABLE	162 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 3: RECENT 5-YEAR CITATION BEHAVIOR TABLE	895 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 4: CITATION POLARITY TABLE	1916 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 5: CLAIM MUTATION TABLE	113 words	status=PROVISIONAL
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 6: ADJACENT-LITERATURE NEGLECT TABLE	1035 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 7: CRITIQUE-UPTAKE TABLE	200 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 8: CARTEL-RISK SCORECARD	448 words	status=N/A
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 9: NETWORK MAP	273 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	COMPLETION LEDGER	271 words	status=N/A
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 10: FINAL VERDICT	563 words	status=N/A,PROVISIONAL
+PLACEHOLDER_SCREEN_PASS	FINAL SECTION: STANDARDIZED FINDING TABLE	1105 words	status=N/A,PROVISIONAL
+RISK_BAND_FORM_PASS	Explicit disposition is present.
+SOURCE_LOCK_METHOD_PASS	LOCKED QUERY
+SOURCE_LOCK_FORM_PASS	method and seven-field lock record present.
+SOURCE_CLASS_FORM_PASS	classified_sources=33	directly_adjudicating=9
+AGGREGATION_FORM_PASS	independent=7	nested=0	denominator=21
+GRAPH_RECEIPTS_PASS	All scored-density receipts are present.
+STATUS_SUMMARY	N/A=7	PROVISIONAL=7	INCOMPLETE=0	COMPLETED_INFERRED=15	UNMARKED_THIN=0
+STRUCTURAL_RESULT	PASS
+CONTENT_RESULT	PASS-WITH-REVIEW	items=2
+REVIEW_ITEM_1	SOURCE_LOCK_TRUTH — verify the lock predates citation inspection and the query/source list deterministically fixes the exemplars: SOURCE-LOCK DATABASE: OpenAlex works API (select omits abstract_inverted_index) | SOURCE-LOCK QUERY OR SOURCE LIST: filter=title.search:<terms>,to_publication_date:1998-04-30,type:article, sort=cited_by_count:desc, per-page=3; terms F1 "mental fatigue", F2 "learned helplessness", F3 "mood persistence", F4 "experimenter expectancy", F5 "mental effort" | SOURCE-LOCK DATE CUTOFF: 1998-04-30 (before the JPSP May 1998 issue) | SOURCE-LOCK RANKING RULE: OpenAlex cited_by_count descending at query time | SOURCE-LOCK N: 15 (top 3 per field × 5 fields) | SOURCE-LOCK DEDUPLICATION RULE: by OpenAlex work ID; off-topic items retained and flagged, never replaced | SOURCE-LOCK TIMESTAMP OR HASH: 2026-11-05T11:28:40Z (3:28:40 AM PST); preregistration sha256 791e03ac0bbe7ff3abe4e806ce0d17b57c1bc3e55d7816afe5d5c86ea6bed737; queries executed after the lock (F1–F5 11:45:13Z–11:46:48Z; F2 retrieved twice, the retained response sha256 a0bba566a2f0a91c2500… is the one on disk)
+REVIEW_ITEM_2	DIRECT_ADJUDICATION_SUBSTANCE — 9 source(s) classified DIRECTLY-ADJUDICATING; verify each classification and its actual result, favored explanation, weakened explanation, and required revision: line 335: | L1 | F2 learned helplessness | X04 W2029487046 Learned helplessness in humans: Critique and reformulation.  | LOCATED | DIRECTLY-ADJUDICATING | title only; results not read | not determined: results not read (METADATA only) | not determined: results not read (METADATA only) | not determined: results not read (METADATA only) | LOCKED (Section E query) | no (not in the target reference list) | none visible in the reference list; text UNASSESSED | rival not addressed at reference-list level | || line 336: | L1 | F2 learned helplessness | X05 W2022987442 Learned helplessness: Theory and evidence. (1976) | LOCATED | DIRECTLY-ADJUDICATING | title only; results not read | not determined: results not read (METADATA only) | not determined: results not read (METADATA only) | not determined: results not read (METADATA only) | LOCKED (Section E query) | no (not in the target reference list) | none visible in the reference list; text UNASSESSED | rival not addressed at reference-list level | || line 337: | L1 | F2 learned helplessness | X06 W2139986071 The role of expectations and attributions in the alleviation | LOCATED | DIRECTLY-ADJUDICATING | title only; results not read | not determined: results not read (METADATA only) | not determined: results not read (METADATA only) | not determined: results not read (METADATA only) | LOCKED (Section E query) | no (not in the target reference list) | none visible in the reference list; text UNASSESSED | rival not addressed at reference-list level | || line 347: | L2 | R1 test | N45 W2499154041 Hagger et al. 2016 RRR | FULL-TEXT-CONFIRMED | DIRECTLY-ADJUDICATING | pooled d = 0.04 across 23 labs (RRR-E2) | R1 | L2 | L2 effect near zero for the RRR paradigm | LOCKED (ADJUDICATION-1 search) | founding authors replied (X17) | disputed by founding authors (BV-E1) | not omitted | || line 348: | L2 | R1 test | A03 W3119325546 Vohs et al. 2021 | FULL-TEXT-CONFIRMED | DIRECTLY-ADJUDICATING | d = 0.06, 95% CI [−0.02, 0.14] (VO-E2) | R1 | L2 | depletion "not as reliable or robust as previously assumed" (VO-E3) | LOCKED (ADJUDICATION-1 search) | founding-cluster co-authored (Muraven) | the update itself | not omitted | || line 349: | L2 | R1 test | X16 Carter et al. 2015 | FULL-TEXT-CONFIRMED | DIRECTLY-ADJUDICATING | PET and PEESE estimates indistinguishable from zero (CA-E2) | R1 | L2 | bias-corrected effect not distinguishable from zero | POST HOC (known item K3, not returned by the locked search) | not determined | — | not omitted | || line 690: | L1 | F2 learned helplessness | X04 W2029487046 Learned helplessness in humans: Critique and reformulation.  | LOCATED | DIRECTLY-ADJUDICATING | title only; results not read | not determined: results not read (METADATA only) | not determined: results not read (METADATA only) | not determined: results not read (METADATA only) | LOCKED (Section E query) | no (not in the target reference list) | none visible in the reference list; text UNASSESSED | rival not addressed at reference-list level | || line 691: | L1 | F2 learned helplessness | X05 W2022987442 Learned helplessness: Theory and evidence. (1976) | LOCATED | DIRECTLY-ADJUDICATING | title only; results not read | not determined: results not read (METADATA only) | not determined: results not read (METADATA only) | not determined: results not read (METADATA only) | LOCKED (Section E query) | no (not in the target reference list) | none visible in the reference list; text UNASSESSED | rival not addressed at reference-list level | || line 692: | L1 | F2 learned helplessness | X06 W2139986071 The role of expectations and attributions in the alleviation | LOCATED | DIRECTLY-ADJUDICATING | title only; results not read | not determined: results not read (METADATA only) | not determined: results not read (METADATA only) | not determined: results not read (METADATA only) | LOCKED (Section E query) | no (not in the target reference list) | none visible in the reference list; text UNASSESSED | rival not addressed at reference-list level |
+PASS-WITH-REVIEW: 2 items	All deterministic checks passed; the listed substantive judgments remain for human review.

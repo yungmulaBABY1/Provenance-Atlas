@@ -1,0 +1,56 @@
+INFO	inference I01	GRAPH-STRUCTURE	CORPUS	declared SUPPORTED	recomputed SUPPORTED
+INFO	inference I02	GRAPH-STRUCTURE	CORPUS	declared SUPPORTED	recomputed SUPPORTED
+INFO	inference I03	DATABASE-RECORD	CORPUS	declared SUPPORTED	recomputed SUPPORTED
+INFO	inference I04	GRAPH-STRUCTURE	CORPUS	declared SUPPORTED	recomputed SUPPORTED
+INFO	inference I05	CITATION-USE	CORPUS	declared INSUFFICIENT	recomputed INSUFFICIENT
+INFO	inference I06	CITATION-USE	WITHIN-SAMPLE	declared SUPPORTED-WITHIN-SAMPLE	recomputed SUPPORTED-WITHIN-SAMPLE
+INFO	inference I07	CITATION-USE	WITHIN-SAMPLE	declared SUPPORTED-WITHIN-SAMPLE	recomputed SUPPORTED-WITHIN-SAMPLE
+INFO	inference I08	CITATION-USE	CORPUS	declared INSUFFICIENT	recomputed INSUFFICIENT
+INFO	inference I09	CITATION-USE	WITHIN-SAMPLE	declared SUPPORTED-WITHIN-SAMPLE	recomputed SUPPORTED-WITHIN-SAMPLE
+INFO	inference I10	CITATION-USE	NAMED	declared SUPPORTED	recomputed SUPPORTED
+INFO	inference I11	SOURCE-RESULT	NAMED	declared SUPPORTED	recomputed SUPPORTED
+INFO	inference I12	RESTATEMENT	NAMED	declared INSUFFICIENT	recomputed INSUFFICIENT
+INFO	inference I13	SOURCE-RESULT	NAMED	declared SUPPORTED	recomputed SUPPORTED
+INFO	inference I14	DATA-ORIGIN	NAMED	declared SUPPORTED	recomputed SUPPORTED
+INFO	inference I15	COMPOSITION	CORPUS	declared SUPPORTED	recomputed SUPPORTED
+INFO	inference I16	COMPOSITION	CORPUS	declared SUPPORTED	recomputed SUPPORTED
+INFO	inference I17	COMPOSITION	CORPUS	declared SUPPORTED	recomputed SUPPORTED
+INFO	inference I18	ABSENCE	CORPUS	declared SUPPORTED	recomputed INSUFFICIENT
+INFO	inference I19	ENGAGEMENT	NAMED	declared SUPPORTED	recomputed SUPPORTED
+INFO	inference I20	ENGAGEMENT	NAMED	declared SUPPORTED	recomputed SUPPORTED
+INFO	inference I21	GRAPH-STRUCTURE	NAMED	declared SUPPORTED	recomputed INSUFFICIENT
+INFO	inference I22	ENGAGEMENT	NAMED	declared NOT-ASSESSED	recomputed INSUFFICIENT
+INFO	inference I23	CO-CITATION	CORPUS	declared SUPPORTED	recomputed SUPPORTED
+INFO	inference I24	ENGAGEMENT	NAMED	declared NOT-ASSESSED	recomputed INSUFFICIENT
+INFO	inference I25	DATABASE-RECORD	NAMED	declared SUPPORTED	recomputed SUPPORTED
+INFO	inference I26	RESTATEMENT	NAMED	declared NOT-ASSESSED	recomputed INSUFFICIENT
+INFO	dimension class map	cn7-map-3
+INFO	corpus RECEPTION-1	RECEPTION	members 50	contexts inspected 22	discovery SEARCHED
+INFO	corpus RECENT-1	RECEPTION	members 25	contexts inspected 12	discovery SEARCHED
+INFO	corpus ADJUDICATION-1	ADJUDICATION	members 59	contexts inspected 21	discovery SEARCHED
+COVERAGE_DECLARED	7/10 applicable SCORED (70%)
+COVERAGE_AFTER_GATES	5/10 (50%)	failed: adjacent-field neglect, lack of decisive tests
+COVERAGE_IF_REVIEW_ITEMS_WITHDRAWN	2/10 (20%)	withdrawn: poor critique uptake, proxy mismatch, recent-paper dependence
+PROVISIONAL_70_GATE	NOT MET	(engineering threshold, not validated)
+GATE_FAIL	LOCATOR_MISSING	X18 line 227: INSPECTED without a passage locator (evidence ID, page, section, or reference list) in Supported inference
+GATE_FAIL	LOCATOR_MISSING	X19 line 228: INSPECTED without a passage locator (evidence ID, page, section, or reference list) in Supported inference
+GATE_FAIL	LOCATOR_MISSING	X20 line 229: INSPECTED without a passage locator (evidence ID, page, section, or reference list) in Supported inference
+GATE_FAIL	INFERENCE_OVERCLAIMED	I18 (ABSENCE, CORPUS) declared SUPPORTED: ABSENCE is LITERATURE-scope (all results screened) or WITHIN-SAMPLE (screened results only)
+GATE_FAIL	INFERENCE_OVERCLAIMED	I21 (GRAPH-STRUCTURE, NAMED) declared SUPPORTED: member X01–X15 is not in the eligibility ledger
+GATE_FAIL	SCORED_ON_INSUFFICIENT	Adjacent-field neglect is SCORED 1 but relies on I21; mark it UNASSESSED or list only passing inferences
+GATE_FAIL	SCORED_ON_INSUFFICIENT	Lack of decisive tests is SCORED 1 but relies on I18; mark it UNASSESSED or list only passing inferences
+GATE_FAIL	FINDING_ON_INSUFFICIENT	Finding 1 is confirmed but relies on I18
+GATE_FAIL	FINDING_ON_INSUFFICIENT	Finding 7 is confirmed but relies on I05, I08
+GATE_FAIL	BAND_ISSUED_BELOW_GATE	line 542: a band is issued but coverage after Gate B is below the PROVISIONAL 70% gate; RISK BAND must read WITHHELD
+REVIEW_ITEM_1	CODED_FROM_METADATA — 87 rows carry a relevance or contribution code, or NOT-CITING, from METADATA-only access; confirm each record shows it: N01, N02, N04, N07, N09, N10, N11, N15, N17, N19, N20, N21, N24, N28, N30, N32, N34, N35, N37, N38, N39, N46, N47, N48, N50, R03, R04, R05, R09, R10, R11, R12, R14, R15, R20, R22, R23, A02, A04, A05, A07, A09, A10, A11, A12, A14, A16, A17, A19, A20, A21, A23, A24, A25, A26, A28, A29, A30, A31, A33, A35, A36, A38, A39, A40, A41, A42, A44, A46, A48, A50, A53, X01, X02, X03, X04, X05, X06, X07, X08, X09, X10, X11, X12, X13, X14, X15
+REVIEW_ITEM_2	SEARCH_RECALL — ADJUDICATION-1: the locked search returned 8/12 known items; statements about the literature beyond the search are insufficient, and absences within it may be incomplete
+REVIEW_ITEM_3	POSSIBLE_DUPLICATE_WORK — 3 pairs of rows look like one work under two records (title match only); where they are one work, merge them into one row and count it once: N09/A48 (ADJUDICATION-1), N09/A50 (ADJUDICATION-1), A48/A50 (ADJUDICATION-1)
+REVIEW_ITEM_4	SAMPLE_DECLARED_RANDOM — I05: confirm the inspected sample was drawn at random before inspection and that the statement is an estimate with its uncertainty
+REVIEW_ITEM_5	PARTIAL_BASIS — Recent-paper dependence is SCORED 2 while I08, which bears on it, did not pass Gate B; confirm the score is stated for what was assessed
+REVIEW_ITEM_6	BY_CONSTRUCTION_RISK — Recent-paper dependence uses I04 on a set selected on target citation; confirm it measures citation beyond the target
+REVIEW_ITEM_7	PARTIAL_BASIS — Proxy mismatch is SCORED 1 while I12, which bears on it, did not pass Gate B; confirm the score is stated for what was assessed
+REVIEW_ITEM_8	PARTIAL_BASIS — Adjacent-field neglect is SCORED 1 while I22, which bears on it, did not pass Gate B; confirm the score is stated for what was assessed
+REVIEW_ITEM_9	NAMED_ONLY_BASIS — Adjacent-field neglect is SCORED 1 on named works only (I21); confirm they are the population the dimension covers and that every located critique or rival test was traced
+REVIEW_ITEM_10	PARTIAL_BASIS — Poor critique uptake is SCORED 1 while I24, which bears on it, did not pass Gate B; confirm the score is stated for what was assessed
+REVIEW_ITEM_11	NAMED_ONLY_BASIS — Poor critique uptake is SCORED 1 on named works only (I19); confirm they are the population the dimension covers and that every located critique or rival test was traced
+V2_GATES_RESULT	FAIL	failures=10

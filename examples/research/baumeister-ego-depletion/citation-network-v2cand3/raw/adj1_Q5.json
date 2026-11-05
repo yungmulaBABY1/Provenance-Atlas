@@ -1,0 +1,2395 @@
+{
+ "meta": {
+  "notice": "No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address. The mailto parameter doesn't raise this limit. Get a free key with its own $1/day at https://openalex.org/settings/api and add api_key=YOUR_KEY to your requests. An AI agent can get one for its user in one call: POST https://api.openalex.org/api-keys with {\"email\": \"<your user's email>\"}; we email them a link, and the key works once they click it. Docs for agents: https://help.openalex.org/llms.txt",
+  "count": 418,
+  "db_response_time_ms": 41,
+  "page": 1,
+  "per_page": 10,
+  "groups_count": null,
+  "x_query": {
+   "oql": "get works from 1998-01-01 through 2026-11-05 with ((stemmed \"ego depletion\" OR willpower) AND (stemmed \"implicit theories\" OR stemmed \"lay theories\" OR beliefs)) in the title or abstract where type is ([article](article) or [book-chapter](book-chapter) or [preprint](preprint) or [review](review))",
+   "x_new_oql": "get works from 1998-01-01 through 2026-11-05 with ((stemmed \"ego depletion\" OR willpower) AND (stemmed \"implicit theories\" OR stemmed \"lay theories\" OR beliefs)) in the title or abstract where type is ([article](article) or [book-chapter](book-chapter) or [preprint](preprint) or [review](review))",
+   "oqo": {
+    "get_rows": "works",
+    "filter_rows": [
+     {
+      "column_id": "from_publication_date",
+      "value": "1998-01-01"
+     },
+     {
+      "column_id": "to_publication_date",
+      "value": "2026-11-05"
+     },
+     {
+      "join": "or",
+      "filters": [
+       {
+        "column_id": "title_and_abstract.search",
+        "value": "\"ego depletion\"",
+        "operator": "has"
+       },
+       {
+        "column_id": "title_and_abstract.search",
+        "value": "willpower",
+        "operator": "has"
+       }
+      ]
+     },
+     {
+      "join": "or",
+      "filters": [
+       {
+        "column_id": "title_and_abstract.search",
+        "value": "\"implicit theories\"",
+        "operator": "has"
+       },
+       {
+        "column_id": "title_and_abstract.search",
+        "value": "\"lay theories\"",
+        "operator": "has"
+       },
+       {
+        "column_id": "title_and_abstract.search",
+        "value": "beliefs",
+        "operator": "has"
+       }
+      ]
+     },
+     {
+      "join": "or",
+      "filters": [
+       {
+        "column_id": "type",
+        "value": "article"
+       },
+       {
+        "column_id": "type",
+        "value": "book-chapter"
+       },
+       {
+        "column_id": "type",
+        "value": "preprint"
+       },
+       {
+        "column_id": "type",
+        "value": "review"
+       }
+      ]
+     }
+    ]
+   },
+   "url": "/works?filter=from_publication_date:1998-01-01,to_publication_date:2026-11-05,title_and_abstract.search:%22ego depletion%22|willpower,title_and_abstract.search:%22implicit theories%22|%22lay theories%22|beliefs,type:article|book-chapter|preprint|review&per_page=10",
+   "order": "best matches first",
+   "order_default": true
+  },
+  "cost_usd": 0.001
+ },
+ "results": [
+  {
+   "id": "https://openalex.org/W2893842868",
+   "doi": "https://doi.org/10.1111/spc3.12381",
+   "display_name": "Lay theories of willpower",
+   "publication_year": 2018,
+   "type": "article",
+   "cited_by_count": 42,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5007791481",
+      "display_name": "Zoë Lynn Francis",
+      "orcid": "https://orcid.org/0000-0002-9488-9132",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-9488-9132"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I185261750",
+       "display_name": "University of Toronto",
+       "ror": "https://ror.org/03dbr7087",
+       "country_code": "CA",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I185261750"
+       ]
+      }
+     ],
+     "countries": [
+      "CA"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Zoë Francis",
+     "raw_affiliation_strings": [
+      "University of Toronto"
+     ],
+     "raw_orcid": "https://orcid.org/0000-0002-9488-9132",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "University of Toronto",
+       "institution_ids": [
+        "https://openalex.org/I185261750"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5040768864",
+      "display_name": "Veronika Job",
+      "orcid": "https://orcid.org/0000-0002-4983-1644",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-4983-1644"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I78650965",
+       "display_name": "Technische Universität Dresden",
+       "ror": "https://ror.org/042aqky30",
+       "country_code": "DE",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I78650965"
+       ]
+      }
+     ],
+     "countries": [
+      "DE"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Veronika Job",
+     "raw_affiliation_strings": [
+      "Technische Universität Dresden"
+     ],
+     "raw_orcid": "https://orcid.org/0000-0002-4983-1644",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Technische Universität Dresden",
+       "institution_ids": [
+        "https://openalex.org/I78650965"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1111/spc3.12381",
+    "doi": "https://doi.org/10.1111/spc3.12381",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1111/spc3.12381",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S146984626",
+     "display_name": "Social and Personality Psychology Compass",
+     "issn_l": "1751-9004",
+     "issn": [
+      "1751-9004"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "cwts-core",
+      "dongbi-d",
+      "erih-plus",
+      "jufo-1",
+      "ki-jl-1",
+      "norway-1",
+      "poland-70",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320595",
+     "host_organization_name": "Wiley",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320595"
+     ],
+     "host_organization_lineage_names": [
+      "Wiley"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Social and Personality Psychology Compass",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W1792116546",
+    "https://openalex.org/W1806422357",
+    "https://openalex.org/W1881089116",
+    "https://openalex.org/W1918210014",
+    "https://openalex.org/W1976771764",
+    "https://openalex.org/W1980393047",
+    "https://openalex.org/W1981598657",
+    "https://openalex.org/W1998476352",
+    "https://openalex.org/W2000141755",
+    "https://openalex.org/W2005014832",
+    "https://openalex.org/W2024063229",
+    "https://openalex.org/W2024368456",
+    "https://openalex.org/W2026173079",
+    "https://openalex.org/W2034840689",
+    "https://openalex.org/W2060763381",
+    "https://openalex.org/W2067325584",
+    "https://openalex.org/W2076300620",
+    "https://openalex.org/W2077057247",
+    "https://openalex.org/W2086053590",
+    "https://openalex.org/W2092284648",
+    "https://openalex.org/W2108897328",
+    "https://openalex.org/W2111611263",
+    "https://openalex.org/W2113113059",
+    "https://openalex.org/W2114659848",
+    "https://openalex.org/W2118108696",
+    "https://openalex.org/W2123817056",
+    "https://openalex.org/W2131517946",
+    "https://openalex.org/W2131573860",
+    "https://openalex.org/W2134077691",
+    "https://openalex.org/W2137000896",
+    "https://openalex.org/W2137942792",
+    "https://openalex.org/W2146569853",
+    "https://openalex.org/W2146572468",
+    "https://openalex.org/W2148882419",
+    "https://openalex.org/W2159460363",
+    "https://openalex.org/W2164682760",
+    "https://openalex.org/W2168630322",
+    "https://openalex.org/W2192263693",
+    "https://openalex.org/W2270668874",
+    "https://openalex.org/W2274591123",
+    "https://openalex.org/W2330631625",
+    "https://openalex.org/W2499154041",
+    "https://openalex.org/W2508466548",
+    "https://openalex.org/W2512087985",
+    "https://openalex.org/W2513408855",
+    "https://openalex.org/W2516659712",
+    "https://openalex.org/W2520893606",
+    "https://openalex.org/W2529112977",
+    "https://openalex.org/W2622390736",
+    "https://openalex.org/W2732201916",
+    "https://openalex.org/W2735396618",
+    "https://openalex.org/W2739641472",
+    "https://openalex.org/W2809683251",
+    "https://openalex.org/W2890836643",
+    "https://openalex.org/W2910129484",
+    "https://openalex.org/W2965776725",
+    "https://openalex.org/W3121900038",
+    "https://openalex.org/W3187771857",
+    "https://openalex.org/W4235464748",
+    "https://openalex.org/W4245647375",
+    "https://openalex.org/W4247658282"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W2522685630",
+   "doi": "https://doi.org/10.1016/b978-0-12-801850-7.00011-1",
+   "display_name": "Implicit Theories About Willpower",
+   "publication_year": 2016,
+   "type": "book-chapter",
+   "cited_by_count": 11,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5040768864",
+      "display_name": "Veronika Job",
+      "orcid": "https://orcid.org/0000-0002-4983-1644",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-4983-1644"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I202697423",
+       "display_name": "University of Zurich",
+       "ror": "https://ror.org/02crff812",
+       "country_code": "CH",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I202697423"
+       ]
+      }
+     ],
+     "countries": [
+      "CH"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "V. Job",
+     "raw_affiliation_strings": [
+      "University of Zurich, Zurich, Switzerland"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "University of Zurich, Zurich, Switzerland",
+       "institution_ids": [
+        "https://openalex.org/I202697423"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1016/b978-0-12-801850-7.00011-1",
+    "doi": "https://doi.org/10.1016/b978-0-12-801850-7.00011-1",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1016/b978-0-12-801850-7.00011-1",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S4306463230",
+     "display_name": "Elsevier eBooks",
+     "issn_l": null,
+     "issn": null,
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": false,
+     "listed_in": [],
+     "host_organization": "https://openalex.org/P4310320990",
+     "host_organization_name": "Elsevier BV",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320990"
+     ],
+     "host_organization_lineage_names": [
+      "Elsevier BV"
+     ],
+     "type": "ebook platform"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Self-Regulation and Ego Control",
+    "raw_type": "book-chapter"
+   },
+   "referenced_works": [
+    "https://openalex.org/W15225132",
+    "https://openalex.org/W199743680",
+    "https://openalex.org/W1509804477",
+    "https://openalex.org/W1535340835",
+    "https://openalex.org/W1599363926",
+    "https://openalex.org/W1792116546",
+    "https://openalex.org/W1881089116",
+    "https://openalex.org/W1918210014",
+    "https://openalex.org/W1947433845",
+    "https://openalex.org/W1952062595",
+    "https://openalex.org/W1966401421",
+    "https://openalex.org/W1969184080",
+    "https://openalex.org/W1973019568",
+    "https://openalex.org/W1975984648",
+    "https://openalex.org/W1976771764",
+    "https://openalex.org/W1982210139",
+    "https://openalex.org/W1984247294",
+    "https://openalex.org/W1990948551",
+    "https://openalex.org/W1996652948",
+    "https://openalex.org/W2000141755",
+    "https://openalex.org/W2000445967",
+    "https://openalex.org/W2005014832",
+    "https://openalex.org/W2006335946",
+    "https://openalex.org/W2006674698",
+    "https://openalex.org/W2014194180",
+    "https://openalex.org/W2026173079",
+    "https://openalex.org/W2027372481",
+    "https://openalex.org/W2039539601",
+    "https://openalex.org/W2044619930",
+    "https://openalex.org/W2060005915",
+    "https://openalex.org/W2064517867",
+    "https://openalex.org/W2066320299",
+    "https://openalex.org/W2067325584",
+    "https://openalex.org/W2071175864",
+    "https://openalex.org/W2076300620",
+    "https://openalex.org/W2078701201",
+    "https://openalex.org/W2099649526",
+    "https://openalex.org/W2101924640",
+    "https://openalex.org/W2104498985",
+    "https://openalex.org/W2108897328",
+    "https://openalex.org/W2109861317",
+    "https://openalex.org/W2111756682",
+    "https://openalex.org/W2112798436",
+    "https://openalex.org/W2113101808",
+    "https://openalex.org/W2113113059",
+    "https://openalex.org/W2118108696",
+    "https://openalex.org/W2118617601",
+    "https://openalex.org/W2123817056",
+    "https://openalex.org/W2131517946",
+    "https://openalex.org/W2133690561",
+    "https://openalex.org/W2134077691",
+    "https://openalex.org/W2134469114",
+    "https://openalex.org/W2134537068",
+    "https://openalex.org/W2137942792",
+    "https://openalex.org/W2138069637",
+    "https://openalex.org/W2140644903",
+    "https://openalex.org/W2140857363",
+    "https://openalex.org/W2146569853",
+    "https://openalex.org/W2146572468",
+    "https://openalex.org/W2147126411",
+    "https://openalex.org/W2150253463",
+    "https://openalex.org/W2150495553",
+    "https://openalex.org/W2165993970",
+    "https://openalex.org/W2167884222",
+    "https://openalex.org/W2168453303",
+    "https://openalex.org/W2192263693",
+    "https://openalex.org/W2208406147",
+    "https://openalex.org/W2270668874",
+    "https://openalex.org/W2520432709",
+    "https://openalex.org/W2974476688",
+    "https://openalex.org/W3126140319",
+    "https://openalex.org/W3138414856",
+    "https://openalex.org/W4213018424",
+    "https://openalex.org/W4213235949",
+    "https://openalex.org/W4255535853"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W2118108696",
+   "doi": "https://doi.org/10.1177/0956797610384745",
+   "display_name": "Ego Depletion—Is It All in Your Head?",
+   "publication_year": 2010,
+   "type": "article",
+   "cited_by_count": 920,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5040768864",
+      "display_name": "Veronika Job",
+      "orcid": "https://orcid.org/0000-0002-4983-1644",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-4983-1644"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I97018004",
+       "display_name": "Stanford University",
+       "ror": "https://ror.org/00f54p054",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I97018004"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Veronika Job",
+     "raw_affiliation_strings": [
+      "Stanford University",
+      "[Stanford University, Stanford, CA, US]"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Stanford University",
+       "institution_ids": [
+        "https://openalex.org/I97018004"
+       ]
+      },
+      {
+       "raw_affiliation_string": "[Stanford University, Stanford, CA, US]",
+       "institution_ids": [
+        "https://openalex.org/I97018004"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5046821941",
+      "display_name": "Carol Sorich Dweck",
+      "orcid": "https://orcid.org/0000-0001-7741-0073",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-7741-0073"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I97018004",
+       "display_name": "Stanford University",
+       "ror": "https://ror.org/00f54p054",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I97018004"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Carol S. Dweck",
+     "raw_affiliation_strings": [
+      "Stanford University",
+      "[Stanford University, Stanford, CA, US]"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Stanford University",
+       "institution_ids": [
+        "https://openalex.org/I97018004"
+       ]
+      },
+      {
+       "raw_affiliation_string": "[Stanford University, Stanford, CA, US]",
+       "institution_ids": [
+        "https://openalex.org/I97018004"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5078983867",
+      "display_name": "Gregory M. Walton",
+      "orcid": "https://orcid.org/0000-0002-6194-0472",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-6194-0472"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I97018004",
+       "display_name": "Stanford University",
+       "ror": "https://ror.org/00f54p054",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I97018004"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Gregory M. Walton",
+     "raw_affiliation_strings": [
+      "Stanford University",
+      "[Stanford University, Stanford, CA, US]"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Stanford University",
+       "institution_ids": [
+        "https://openalex.org/I97018004"
+       ]
+      },
+      {
+       "raw_affiliation_string": "[Stanford University, Stanford, CA, US]",
+       "institution_ids": [
+        "https://openalex.org/I97018004"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1177/0956797610384745",
+    "doi": "https://doi.org/10.1177/0956797610384745",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1177/0956797610384745",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S58854535",
+     "display_name": "Psychological Science",
+     "issn_l": "0956-7976",
+     "issn": [
+      "0956-7976",
+      "1467-9280"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "abdc-a-star",
+      "anvur-scientific",
+      "cwts-core",
+      "dongbi-a",
+      "erih-plus",
+      "fnege-2",
+      "ft50",
+      "jufo-3",
+      "ki-jl-3",
+      "medline",
+      "norway-2",
+      "poland-200",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320017",
+     "host_organization_name": "SAGE Publishing",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320017"
+     ],
+     "host_organization_lineage_names": [
+      "SAGE Publishing"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Psychological Science",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W1950299194",
+    "https://openalex.org/W1966401421",
+    "https://openalex.org/W1969184080",
+    "https://openalex.org/W1988113868",
+    "https://openalex.org/W1997548126",
+    "https://openalex.org/W2020191227",
+    "https://openalex.org/W2037338622",
+    "https://openalex.org/W2040378670",
+    "https://openalex.org/W2064517867",
+    "https://openalex.org/W2071175864",
+    "https://openalex.org/W2108897328",
+    "https://openalex.org/W2109223890",
+    "https://openalex.org/W2109861317",
+    "https://openalex.org/W2113101808",
+    "https://openalex.org/W2113113059",
+    "https://openalex.org/W2118617601",
+    "https://openalex.org/W2123817056",
+    "https://openalex.org/W2125068113",
+    "https://openalex.org/W2134537068",
+    "https://openalex.org/W2146569853",
+    "https://openalex.org/W2150495553",
+    "https://openalex.org/W2151091572",
+    "https://openalex.org/W2168453303",
+    "https://openalex.org/W2967072287",
+    "https://openalex.org/W4235389325",
+    "https://openalex.org/W4254285380",
+    "https://openalex.org/W4254504261"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W1792116546",
+   "doi": "https://doi.org/10.1111/jopy.12225",
+   "display_name": "Implicit Theories About Willpower Predict Subjective Well‐Being",
+   "publication_year": 2015,
+   "type": "article",
+   "cited_by_count": 50,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5056929438",
+      "display_name": "Katharina Bernecker",
+      "orcid": "https://orcid.org/0000-0003-1432-9133",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-1432-9133"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I202697423",
+       "display_name": "University of Zurich",
+       "ror": "https://ror.org/02crff812",
+       "country_code": "CH",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I202697423"
+       ]
+      }
+     ],
+     "countries": [
+      "CH"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Katharina Bernecker",
+     "raw_affiliation_strings": [
+      "University of Zurich"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "University of Zurich",
+       "institution_ids": [
+        "https://openalex.org/I202697423"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5041610501",
+      "display_name": "Marcel Herrmann",
+      "orcid": "https://orcid.org/0000-0002-4854-6833",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-4854-6833"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I202697423",
+       "display_name": "University of Zurich",
+       "ror": "https://ror.org/02crff812",
+       "country_code": "CH",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I202697423"
+       ]
+      }
+     ],
+     "countries": [
+      "CH"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Marcel Herrmann",
+     "raw_affiliation_strings": [
+      "University of Zurich"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "University of Zurich",
+       "institution_ids": [
+        "https://openalex.org/I202697423"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5015576929",
+      "display_name": "Veronika Brandstätter",
+      "orcid": "https://orcid.org/0000-0002-6824-1754",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-6824-1754"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I202697423",
+       "display_name": "University of Zurich",
+       "ror": "https://ror.org/02crff812",
+       "country_code": "CH",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I202697423"
+       ]
+      }
+     ],
+     "countries": [
+      "CH"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Veronika Brandstätter",
+     "raw_affiliation_strings": [
+      "University of Zurich"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "University of Zurich",
+       "institution_ids": [
+        "https://openalex.org/I202697423"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5040768864",
+      "display_name": "Veronika Job",
+      "orcid": "https://orcid.org/0000-0002-4983-1644",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-4983-1644"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I202697423",
+       "display_name": "University of Zurich",
+       "ror": "https://ror.org/02crff812",
+       "country_code": "CH",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I202697423"
+       ]
+      }
+     ],
+     "countries": [
+      "CH"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Veronika Job",
+     "raw_affiliation_strings": [
+      "University of Zurich"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "University of Zurich",
+       "institution_ids": [
+        "https://openalex.org/I202697423"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1111/jopy.12225",
+    "doi": "https://doi.org/10.1111/jopy.12225",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.1111/jopy.12225",
+    "pdf_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/jopy.12225",
+    "source": {
+     "id": "https://openalex.org/S73786128",
+     "display_name": "Journal of Personality",
+     "issn_l": "0022-3506",
+     "issn": [
+      "0022-3506",
+      "1467-6494"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "abdc-a",
+      "cwts-core",
+      "dongbi-a",
+      "erih-plus",
+      "jufo-3",
+      "ki-jl-1",
+      "medline",
+      "norway-2",
+      "poland-140",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320595",
+     "host_organization_name": "Wiley",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320595"
+     ],
+     "host_organization_lineage_names": [
+      "Wiley"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Journal of Personality",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W1535340835",
+    "https://openalex.org/W1849190772",
+    "https://openalex.org/W1881089116",
+    "https://openalex.org/W1917490384",
+    "https://openalex.org/W1941201721",
+    "https://openalex.org/W1947431395",
+    "https://openalex.org/W1950299194",
+    "https://openalex.org/W1964152500",
+    "https://openalex.org/W1969184080",
+    "https://openalex.org/W1976771764",
+    "https://openalex.org/W1989768409",
+    "https://openalex.org/W2007135085",
+    "https://openalex.org/W2008091944",
+    "https://openalex.org/W2014682768",
+    "https://openalex.org/W2019928110",
+    "https://openalex.org/W2020359603",
+    "https://openalex.org/W2029687232",
+    "https://openalex.org/W2031725313",
+    "https://openalex.org/W2037993836",
+    "https://openalex.org/W2044619930",
+    "https://openalex.org/W2055477920",
+    "https://openalex.org/W2060763381",
+    "https://openalex.org/W2066320299",
+    "https://openalex.org/W2072856658",
+    "https://openalex.org/W2074955170",
+    "https://openalex.org/W2076300620",
+    "https://openalex.org/W2077057247",
+    "https://openalex.org/W2078143933",
+    "https://openalex.org/W2078701201",
+    "https://openalex.org/W2079759361",
+    "https://openalex.org/W2092284648",
+    "https://openalex.org/W2109403519",
+    "https://openalex.org/W2109638824",
+    "https://openalex.org/W2113101808",
+    "https://openalex.org/W2113445734",
+    "https://openalex.org/W2115656821",
+    "https://openalex.org/W2118108696",
+    "https://openalex.org/W2119867710",
+    "https://openalex.org/W2129558137",
+    "https://openalex.org/W2131517946",
+    "https://openalex.org/W2134077691",
+    "https://openalex.org/W2134650014",
+    "https://openalex.org/W2135175034",
+    "https://openalex.org/W2140644903",
+    "https://openalex.org/W2141125801",
+    "https://openalex.org/W2154029491",
+    "https://openalex.org/W2162595126",
+    "https://openalex.org/W2167884222",
+    "https://openalex.org/W2192263693",
+    "https://openalex.org/W2949392115",
+    "https://openalex.org/W3126140319",
+    "https://openalex.org/W4205588474",
+    "https://openalex.org/W4233458394",
+    "https://openalex.org/W4249122663",
+    "https://openalex.org/W4254504261"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W1976771764",
+   "doi": "https://doi.org/10.1037/pspp0000014",
+   "display_name": "Implicit theories about willpower predict self-regulation and grades in everyday life.",
+   "publication_year": 2015,
+   "type": "article",
+   "cited_by_count": 194,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5040768864",
+      "display_name": "Veronika Job",
+      "orcid": "https://orcid.org/0000-0002-4983-1644",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-4983-1644"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I202697423",
+       "display_name": "University of Zurich",
+       "ror": "https://ror.org/02crff812",
+       "country_code": "CH",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I202697423"
+       ]
+      }
+     ],
+     "countries": [
+      "CH"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Veronika Job",
+     "raw_affiliation_strings": [
+      "Department of Psychology",
+      "Department of Psychology; University of Zürich; Zürich Switzerland"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Psychology",
+       "institution_ids": []
+      },
+      {
+       "raw_affiliation_string": "Department of Psychology; University of Zürich; Zürich Switzerland",
+       "institution_ids": [
+        "https://openalex.org/I202697423"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5078983867",
+      "display_name": "Gregory M. Walton",
+      "orcid": "https://orcid.org/0000-0002-6194-0472",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-6194-0472"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I97018004",
+       "display_name": "Stanford University",
+       "ror": "https://ror.org/00f54p054",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I97018004"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Gregory M. Walton",
+     "raw_affiliation_strings": [
+      "Department of Psychology, Stanford University",
+      "Department of Psychology, Stanford University, CA, US"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Psychology, Stanford University",
+       "institution_ids": [
+        "https://openalex.org/I97018004"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Department of Psychology, Stanford University, CA, US",
+       "institution_ids": [
+        "https://openalex.org/I97018004"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5056929438",
+      "display_name": "Katharina Bernecker",
+      "orcid": "https://orcid.org/0000-0003-1432-9133",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-1432-9133"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I202697423",
+       "display_name": "University of Zurich",
+       "ror": "https://ror.org/02crff812",
+       "country_code": "CH",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I202697423"
+       ]
+      }
+     ],
+     "countries": [
+      "CH"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Katharina Bernecker",
+     "raw_affiliation_strings": [
+      "Department of Psychology",
+      "Department of Psychology; University of Zürich; Zürich Switzerland"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Psychology",
+       "institution_ids": []
+      },
+      {
+       "raw_affiliation_string": "Department of Psychology; University of Zürich; Zürich Switzerland",
+       "institution_ids": [
+        "https://openalex.org/I202697423"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5046821941",
+      "display_name": "Carol Sorich Dweck",
+      "orcid": "https://orcid.org/0000-0001-7741-0073",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-7741-0073"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I97018004",
+       "display_name": "Stanford University",
+       "ror": "https://ror.org/00f54p054",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I97018004"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Carol S. Dweck",
+     "raw_affiliation_strings": [
+      "Department of Psychology, Stanford University",
+      "Department of Psychology, Stanford University, CA, US"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Psychology, Stanford University",
+       "institution_ids": [
+        "https://openalex.org/I97018004"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Department of Psychology, Stanford University, CA, US",
+       "institution_ids": [
+        "https://openalex.org/I97018004"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1037/pspp0000014",
+    "doi": "https://doi.org/10.1037/pspp0000014",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1037/pspp0000014",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S29984966",
+     "display_name": "Journal of Personality and Social Psychology",
+     "issn_l": "0022-3514",
+     "issn": [
+      "0022-3514",
+      "1939-1315"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "abdc-a-star",
+      "anvur-class-a",
+      "anvur-scientific",
+      "cwts-core",
+      "dongbi-a",
+      "erih-plus",
+      "fnege-2",
+      "jufo-3",
+      "ki-jl-2",
+      "medline",
+      "norway-2",
+      "poland-200",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320262",
+     "host_organization_name": "American Psychological Association",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320262"
+     ],
+     "host_organization_lineage_names": [
+      "American Psychological Association"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Journal of Personality and Social Psychology",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W1952062595",
+    "https://openalex.org/W1973019568",
+    "https://openalex.org/W1988656153",
+    "https://openalex.org/W1997836286",
+    "https://openalex.org/W2000141755",
+    "https://openalex.org/W2005014832",
+    "https://openalex.org/W2016387928",
+    "https://openalex.org/W2026173079",
+    "https://openalex.org/W2028871521",
+    "https://openalex.org/W2035706424",
+    "https://openalex.org/W2038702827",
+    "https://openalex.org/W2053137160",
+    "https://openalex.org/W2056104166",
+    "https://openalex.org/W2056849392",
+    "https://openalex.org/W2059841346",
+    "https://openalex.org/W2060763381",
+    "https://openalex.org/W2064517867",
+    "https://openalex.org/W2071175864",
+    "https://openalex.org/W2078701201",
+    "https://openalex.org/W2082636296",
+    "https://openalex.org/W2092284648",
+    "https://openalex.org/W2098745652",
+    "https://openalex.org/W2101245043",
+    "https://openalex.org/W2108897328",
+    "https://openalex.org/W2109861317",
+    "https://openalex.org/W2113101808",
+    "https://openalex.org/W2113113059",
+    "https://openalex.org/W2118108696",
+    "https://openalex.org/W2119867710",
+    "https://openalex.org/W2121196365",
+    "https://openalex.org/W2123817056",
+    "https://openalex.org/W2134077691",
+    "https://openalex.org/W2135175034",
+    "https://openalex.org/W2140644903",
+    "https://openalex.org/W2146572468",
+    "https://openalex.org/W2148406533",
+    "https://openalex.org/W2150495553",
+    "https://openalex.org/W2152253477",
+    "https://openalex.org/W2152831629",
+    "https://openalex.org/W2164030952",
+    "https://openalex.org/W2165993970",
+    "https://openalex.org/W2167884222",
+    "https://openalex.org/W2324392187",
+    "https://openalex.org/W2624262714",
+    "https://openalex.org/W3003526664",
+    "https://openalex.org/W3042520070",
+    "https://openalex.org/W3108610876",
+    "https://openalex.org/W4248007026"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W2905871268",
+   "doi": "https://doi.org/10.1080/1359432x.2018.1560269",
+   "display_name": "Can faith move mountains? How implicit theories about willpower moderate the adverse effect of daily emotional dissonance on ego-depletion at work and its spillover to the home-domain",
+   "publication_year": 2018,
+   "type": "article",
+   "cited_by_count": 27,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5053615051",
+      "display_name": "Anne-Kathrin Konze",
+      "orcid": "https://orcid.org/0000-0003-4892-4037",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-4892-4037"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I200332995",
+       "display_name": "TU Dortmund University",
+       "ror": "https://ror.org/01k97gp34",
+       "country_code": "DE",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I200332995"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I4210166399",
+       "display_name": "Leibniz Research Centre for Working Environment and Human Factors",
+       "ror": "https://ror.org/05cj29x94",
+       "country_code": "DE",
+       "type": "facility",
+       "lineage": [
+        "https://openalex.org/I315704651",
+        "https://openalex.org/I4210166399"
+       ]
+      }
+     ],
+     "countries": [
+      "DE"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Anne-Kathrin Konze",
+     "raw_affiliation_strings": [
+      ",",
+      "Leibniz Research Centre for Working Environment and Human Factors, Technical University of Dortmund, Dortmund, Germany"
+     ],
+     "raw_orcid": "https://orcid.org/0000-0003-4892-4037",
+     "affiliations": [
+      {
+       "raw_affiliation_string": ",",
+       "institution_ids": []
+      },
+      {
+       "raw_affiliation_string": "Leibniz Research Centre for Working Environment and Human Factors, Technical University of Dortmund, Dortmund, Germany",
+       "institution_ids": [
+        "https://openalex.org/I200332995",
+        "https://openalex.org/I4210166399"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5057584057",
+      "display_name": "Wladislaw Rivkin",
+      "orcid": "https://orcid.org/0000-0003-3360-4962",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-3360-4962"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I169199633",
+       "display_name": "Aston University",
+       "ror": "https://ror.org/05j0ve876",
+       "country_code": "GB",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I169199633"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I200332995",
+       "display_name": "TU Dortmund University",
+       "ror": "https://ror.org/01k97gp34",
+       "country_code": "DE",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I200332995"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I4210166399",
+       "display_name": "Leibniz Research Centre for Working Environment and Human Factors",
+       "ror": "https://ror.org/05cj29x94",
+       "country_code": "DE",
+       "type": "facility",
+       "lineage": [
+        "https://openalex.org/I315704651",
+        "https://openalex.org/I4210166399"
+       ]
+      }
+     ],
+     "countries": [
+      "DE",
+      "GB"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Wladislaw Rivkin",
+     "raw_affiliation_strings": [
+      ",",
+      "Leibniz Research Centre for Working Environment and Human Factors, Technical University of Dortmund, Dortmund, Germany",
+      "Work and Organizational Psychology Department, Aston University, Birmingham, UK"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": ",",
+       "institution_ids": []
+      },
+      {
+       "raw_affiliation_string": "Leibniz Research Centre for Working Environment and Human Factors, Technical University of Dortmund, Dortmund, Germany",
+       "institution_ids": [
+        "https://openalex.org/I200332995",
+        "https://openalex.org/I4210166399"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Work and Organizational Psychology Department, Aston University, Birmingham, UK",
+       "institution_ids": [
+        "https://openalex.org/I169199633"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5103512398",
+      "display_name": "Klaus‐Helmut Schmidt",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I200332995",
+       "display_name": "TU Dortmund University",
+       "ror": "https://ror.org/01k97gp34",
+       "country_code": "DE",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I200332995"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I4210166399",
+       "display_name": "Leibniz Research Centre for Working Environment and Human Factors",
+       "ror": "https://ror.org/05cj29x94",
+       "country_code": "DE",
+       "type": "facility",
+       "lineage": [
+        "https://openalex.org/I315704651",
+        "https://openalex.org/I4210166399"
+       ]
+      }
+     ],
+     "countries": [
+      "DE"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Klaus-Helmut Schmidt",
+     "raw_affiliation_strings": [
+      ",",
+      "Leibniz Research Centre for Working Environment and Human Factors, Technical University of Dortmund, Dortmund, Germany"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": ",",
+       "institution_ids": []
+      },
+      {
+       "raw_affiliation_string": "Leibniz Research Centre for Working Environment and Human Factors, Technical University of Dortmund, Dortmund, Germany",
+       "institution_ids": [
+        "https://openalex.org/I200332995",
+        "https://openalex.org/I4210166399"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1080/1359432x.2018.1560269",
+    "doi": "https://doi.org/10.1080/1359432x.2018.1560269",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1080/1359432x.2018.1560269",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S187270080",
+     "display_name": "European Journal of Work and Organizational Psychology",
+     "issn_l": "1359-432X",
+     "issn": [
+      "1359-432X",
+      "1464-0643"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "abdc-a",
+      "anvur-class-a",
+      "anvur-scientific",
+      "cwts-core",
+      "dongbi-d",
+      "erih-plus",
+      "fnege-3",
+      "jufo-2",
+      "ki-jl-1",
+      "norway-1",
+      "poland-100",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320547",
+     "host_organization_name": "Taylor & Francis",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320547",
+      "https://openalex.org/P4310320449"
+     ],
+     "host_organization_lineage_names": [
+      "Taylor & Francis",
+      "Informa"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "European Journal of Work and Organizational Psychology",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W11710114",
+    "https://openalex.org/W110181434",
+    "https://openalex.org/W1509804477",
+    "https://openalex.org/W1522024619",
+    "https://openalex.org/W1564755880",
+    "https://openalex.org/W1792116546",
+    "https://openalex.org/W1881262987",
+    "https://openalex.org/W1966401421",
+    "https://openalex.org/W1969446762",
+    "https://openalex.org/W1973430933",
+    "https://openalex.org/W1974411145",
+    "https://openalex.org/W1976771764",
+    "https://openalex.org/W1978360644",
+    "https://openalex.org/W1984355279",
+    "https://openalex.org/W1992744669",
+    "https://openalex.org/W1996652948",
+    "https://openalex.org/W2000617794",
+    "https://openalex.org/W2001810891",
+    "https://openalex.org/W2002300730",
+    "https://openalex.org/W2002662768",
+    "https://openalex.org/W2005014832",
+    "https://openalex.org/W2011071566",
+    "https://openalex.org/W2013185034",
+    "https://openalex.org/W2022472850",
+    "https://openalex.org/W2025603971",
+    "https://openalex.org/W2028871521",
+    "https://openalex.org/W2035187852",
+    "https://openalex.org/W2050955261",
+    "https://openalex.org/W2059490104",
+    "https://openalex.org/W2059904076",
+    "https://openalex.org/W2060763381",
+    "https://openalex.org/W2063229930",
+    "https://openalex.org/W2066000480",
+    "https://openalex.org/W2081122606",
+    "https://openalex.org/W2086705726",
+    "https://openalex.org/W2090549016",
+    "https://openalex.org/W2092284648",
+    "https://openalex.org/W2095267132",
+    "https://openalex.org/W2096438426",
+    "https://openalex.org/W2099964613",
+    "https://openalex.org/W2101280530",
+    "https://openalex.org/W2102309966",
+    "https://openalex.org/W2104411852",
+    "https://openalex.org/W2105985103",
+    "https://openalex.org/W2111297405",
+    "https://openalex.org/W2113113059",
+    "https://openalex.org/W2113390049",
+    "https://openalex.org/W2118108696",
+    "https://openalex.org/W2120727803",
+    "https://openalex.org/W2123817056",
+    "https://openalex.org/W2124596021",
+    "https://openalex.org/W2133376809",
+    "https://openalex.org/W2134077691",
+    "https://openalex.org/W2141125801",
+    "https://openalex.org/W2144676897",
+    "https://openalex.org/W2151091572",
+    "https://openalex.org/W2154182974",
+    "https://openalex.org/W2162558476",
+    "https://openalex.org/W2162908627",
+    "https://openalex.org/W2166469128",
+    "https://openalex.org/W2167884222",
+    "https://openalex.org/W2186516452",
+    "https://openalex.org/W2192263693",
+    "https://openalex.org/W2270668874",
+    "https://openalex.org/W2337193626",
+    "https://openalex.org/W2341407005",
+    "https://openalex.org/W2497171922",
+    "https://openalex.org/W2513408855",
+    "https://openalex.org/W2585648288",
+    "https://openalex.org/W2593087621",
+    "https://openalex.org/W2604293295",
+    "https://openalex.org/W2739641472",
+    "https://openalex.org/W2768098113",
+    "https://openalex.org/W2775908128",
+    "https://openalex.org/W2779535083",
+    "https://openalex.org/W2799042264",
+    "https://openalex.org/W2995103492",
+    "https://openalex.org/W4230902751",
+    "https://openalex.org/W4235464748",
+    "https://openalex.org/W4243211108"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W2270668874",
+   "doi": "https://doi.org/10.1037/pspp0000042",
+   "display_name": "Implicit theories about willpower predict the activation of a rest goal following self-control exertion.",
+   "publication_year": 2015,
+   "type": "article",
+   "cited_by_count": 90,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5040768864",
+      "display_name": "Veronika Job",
+      "orcid": "https://orcid.org/0000-0002-4983-1644",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-4983-1644"
+      ]
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Veronika Job",
+     "raw_affiliation_strings": [
+      "Department of Psychology"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Psychology",
+       "institution_ids": []
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5056929438",
+      "display_name": "Katharina Bernecker",
+      "orcid": "https://orcid.org/0000-0003-1432-9133",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-1432-9133"
+      ]
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Katharina Bernecker",
+     "raw_affiliation_strings": [
+      "Department of Psychology"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Psychology",
+       "institution_ids": []
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5055555269",
+      "display_name": "Stefanie Miketta",
+      "orcid": "https://orcid.org/0000-0003-2135-0133",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-2135-0133"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I91712215",
+       "display_name": "Saarland University",
+       "ror": "https://ror.org/01jdpyv68",
+       "country_code": "DE",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I91712215"
+       ]
+      }
+     ],
+     "countries": [
+      "DE"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Stefanie Miketta",
+     "raw_affiliation_strings": [
+      "Department of Psychology, Saarland University"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Psychology, Saarland University",
+       "institution_ids": [
+        "https://openalex.org/I91712215"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5061600161",
+      "display_name": "Malte Friese",
+      "orcid": "https://orcid.org/0000-0003-0055-513X",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-0055-513X"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I91712215",
+       "display_name": "Saarland University",
+       "ror": "https://ror.org/01jdpyv68",
+       "country_code": "DE",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I91712215"
+       ]
+      }
+     ],
+     "countries": [
+      "DE"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Malte Friese",
+     "raw_affiliation_strings": [
+      "Department of Psychology, Saarland University"
+     ],
+     "raw_orcid": "https://orcid.org/0000-0003-0055-513X",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Psychology, Saarland University",
+       "institution_ids": [
+        "https://openalex.org/I91712215"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1037/pspp0000042",
+    "doi": "https://doi.org/10.1037/pspp0000042",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1037/pspp0000042",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S29984966",
+     "display_name": "Journal of Personality and Social Psychology",
+     "issn_l": "0022-3514",
+     "issn": [
+      "0022-3514",
+      "1939-1315"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "abdc-a-star",
+      "anvur-class-a",
+      "anvur-scientific",
+      "cwts-core",
+      "dongbi-a",
+      "erih-plus",
+      "fnege-2",
+      "jufo-3",
+      "ki-jl-2",
+      "medline",
+      "norway-2",
+      "poland-200",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320262",
+     "host_organization_name": "American Psychological Association",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320262"
+     ],
+     "host_organization_lineage_names": [
+      "American Psychological Association"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Journal of Personality and Social Psychology",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W15225132",
+    "https://openalex.org/W144151758",
+    "https://openalex.org/W1603542031",
+    "https://openalex.org/W1950299194",
+    "https://openalex.org/W1975984648",
+    "https://openalex.org/W1976771764",
+    "https://openalex.org/W1981171998",
+    "https://openalex.org/W1983448837",
+    "https://openalex.org/W1990948551",
+    "https://openalex.org/W1992433314",
+    "https://openalex.org/W1992744669",
+    "https://openalex.org/W1994269859",
+    "https://openalex.org/W2000141755",
+    "https://openalex.org/W2003483232",
+    "https://openalex.org/W2005014832",
+    "https://openalex.org/W2012281587",
+    "https://openalex.org/W2017812131",
+    "https://openalex.org/W2020191227",
+    "https://openalex.org/W2026173079",
+    "https://openalex.org/W2038702827",
+    "https://openalex.org/W2039003275",
+    "https://openalex.org/W2047493051",
+    "https://openalex.org/W2047672958",
+    "https://openalex.org/W2060763381",
+    "https://openalex.org/W2071175864",
+    "https://openalex.org/W2074932610",
+    "https://openalex.org/W2092284648",
+    "https://openalex.org/W2099649526",
+    "https://openalex.org/W2101924640",
+    "https://openalex.org/W2103616231",
+    "https://openalex.org/W2104281515",
+    "https://openalex.org/W2106240548",
+    "https://openalex.org/W2108897328",
+    "https://openalex.org/W2109861317",
+    "https://openalex.org/W2112798436",
+    "https://openalex.org/W2118108696",
+    "https://openalex.org/W2131517946",
+    "https://openalex.org/W2134077691",
+    "https://openalex.org/W2134469114",
+    "https://openalex.org/W2138407399",
+    "https://openalex.org/W2140857363",
+    "https://openalex.org/W2146572468",
+    "https://openalex.org/W2147126411",
+    "https://openalex.org/W2149113129",
+    "https://openalex.org/W2150495553",
+    "https://openalex.org/W2152738247",
+    "https://openalex.org/W2155326083",
+    "https://openalex.org/W2160326831",
+    "https://openalex.org/W2172292046",
+    "https://openalex.org/W2576278461"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W2739641472",
+   "doi": "https://doi.org/10.1027/2151-2604/a000292",
+   "display_name": "Implicit Theories About Willpower in Resisting Temptations and Emotion Control",
+   "publication_year": 2017,
+   "type": "article",
+   "cited_by_count": 21,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5056929438",
+      "display_name": "Katharina Bernecker",
+      "orcid": "https://orcid.org/0000-0003-1432-9133",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-1432-9133"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I202697423",
+       "display_name": "University of Zurich",
+       "ror": "https://ror.org/02crff812",
+       "country_code": "CH",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I202697423"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I4210136238",
+       "display_name": "Leibniz-Institut für Wissensmedien",
+       "ror": "https://ror.org/03hv28176",
+       "country_code": "DE",
+       "type": "facility",
+       "lineage": [
+        "https://openalex.org/I315704651",
+        "https://openalex.org/I4210136238"
+       ]
+      }
+     ],
+     "countries": [
+      "CH",
+      "DE"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Katharina Bernecker",
+     "raw_affiliation_strings": [
+      "Department of Psychology, University of Zurich, \t\t\t\t\t\tSwitzerland",
+      "Leibniz-Institut für Wissensmedien, \t\t\t\t\t\tTübingen, Germany"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Psychology, University of Zurich, \t\t\t\t\t\tSwitzerland",
+       "institution_ids": [
+        "https://openalex.org/I202697423"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Leibniz-Institut für Wissensmedien, \t\t\t\t\t\tTübingen, Germany",
+       "institution_ids": [
+        "https://openalex.org/I4210136238"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5040768864",
+      "display_name": "Veronika Job",
+      "orcid": "https://orcid.org/0000-0002-4983-1644",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-4983-1644"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I202697423",
+       "display_name": "University of Zurich",
+       "ror": "https://ror.org/02crff812",
+       "country_code": "CH",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I202697423"
+       ]
+      }
+     ],
+     "countries": [
+      "CH"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Veronika Job",
+     "raw_affiliation_strings": [
+      "Department of Psychology, University of Zurich, \t\t\t\t\t\tSwitzerland"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Psychology, University of Zurich, \t\t\t\t\t\tSwitzerland",
+       "institution_ids": [
+        "https://openalex.org/I202697423"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1027/2151-2604/a000292",
+    "doi": "https://doi.org/10.1027/2151-2604/a000292",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1027/2151-2604/a000292",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S108832698",
+     "display_name": "Zeitschrift für Psychologie",
+     "issn_l": "0044-3409",
+     "issn": [
+      "0044-3409",
+      "1438-9789",
+      "2151-2604",
+      "2190-8370"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "cwts-core",
+      "dongbi-c",
+      "erih-plus",
+      "jufo-1",
+      "norway-1",
+      "poland-100",
+      "russia-white-list-2",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320676",
+     "host_organization_name": "Johann Ambrosius Barth Verlag",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320676"
+     ],
+     "host_organization_lineage_names": [
+      "Johann Ambrosius Barth Verlag"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Zeitschrift für Psychologie",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W3124686",
+    "https://openalex.org/W1881089116",
+    "https://openalex.org/W1950299194",
+    "https://openalex.org/W1969184080",
+    "https://openalex.org/W1989768409",
+    "https://openalex.org/W2000141755",
+    "https://openalex.org/W2004704125",
+    "https://openalex.org/W2005014832",
+    "https://openalex.org/W2010802751",
+    "https://openalex.org/W2020191227",
+    "https://openalex.org/W2060763381",
+    "https://openalex.org/W2078701201",
+    "https://openalex.org/W2087910364",
+    "https://openalex.org/W2103616231",
+    "https://openalex.org/W2108897328",
+    "https://openalex.org/W2109223890",
+    "https://openalex.org/W2113390049",
+    "https://openalex.org/W2118108696",
+    "https://openalex.org/W2121585577",
+    "https://openalex.org/W2123817056",
+    "https://openalex.org/W2134077691",
+    "https://openalex.org/W2134469114",
+    "https://openalex.org/W2165993970",
+    "https://openalex.org/W2270668874",
+    "https://openalex.org/W2338225686"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W2900405707",
+   "doi": "https://doi.org/10.1177/0033294118809936",
+   "display_name": "Who Believes in Nonlimited Willpower? In Search of Correlates of Implicit Theories of Self-Control",
+   "publication_year": 2018,
+   "type": "article",
+   "cited_by_count": 23,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5035754308",
+      "display_name": "Jan Jędrzejczyk",
+      "orcid": "https://orcid.org/0000-0002-3217-0851",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-3217-0851"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4654613",
+       "display_name": "University of Warsaw",
+       "ror": "https://ror.org/039bjqg32",
+       "country_code": "PL",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I4654613"
+       ]
+      }
+     ],
+     "countries": [
+      "PL"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Jan Jędrzejczyk",
+     "raw_affiliation_strings": [
+      "Faculty of Psychology, University of Warsaw, Poland"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Faculty of Psychology, University of Warsaw, Poland",
+       "institution_ids": [
+        "https://openalex.org/I4654613"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5071964816",
+      "display_name": "Marcin Zajenkowski",
+      "orcid": "https://orcid.org/0000-0001-8669-4231",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-8669-4231"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4654613",
+       "display_name": "University of Warsaw",
+       "ror": "https://ror.org/039bjqg32",
+       "country_code": "PL",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I4654613"
+       ]
+      }
+     ],
+     "countries": [
+      "PL"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Marcin Zajenkowski",
+     "raw_affiliation_strings": [
+      "Faculty of Psychology, University of Warsaw, Poland"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Faculty of Psychology, University of Warsaw, Poland",
+       "institution_ids": [
+        "https://openalex.org/I4654613"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1177/0033294118809936",
+    "doi": "https://doi.org/10.1177/0033294118809936",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1177/0033294118809936",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S147670119",
+     "display_name": "Psychological Reports",
+     "issn_l": "0033-2941",
+     "issn": [
+      "0033-2941",
+      "1558-691X"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "anvur-scientific",
+      "cwts-core",
+      "dongbi-d",
+      "jufo-1",
+      "ki-jl-1",
+      "medline",
+      "norway-1",
+      "poland-40",
+      "russia-white-list-2",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320017",
+     "host_organization_name": "SAGE Publishing",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320017"
+     ],
+     "host_organization_lineage_names": [
+      "SAGE Publishing"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Psychological Reports",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W227844008",
+    "https://openalex.org/W1512992708",
+    "https://openalex.org/W1710437801",
+    "https://openalex.org/W1792116546",
+    "https://openalex.org/W1976771764",
+    "https://openalex.org/W1991626742",
+    "https://openalex.org/W1993610774",
+    "https://openalex.org/W2005014832",
+    "https://openalex.org/W2007393966",
+    "https://openalex.org/W2009784910",
+    "https://openalex.org/W2012281587",
+    "https://openalex.org/W2022961064",
+    "https://openalex.org/W2026173079",
+    "https://openalex.org/W2042962409",
+    "https://openalex.org/W2048504820",
+    "https://openalex.org/W2052484482",
+    "https://openalex.org/W2056849392",
+    "https://openalex.org/W2058818389",
+    "https://openalex.org/W2060763381",
+    "https://openalex.org/W2079035629",
+    "https://openalex.org/W2086053590",
+    "https://openalex.org/W2090750324",
+    "https://openalex.org/W2097694521",
+    "https://openalex.org/W2100773499",
+    "https://openalex.org/W2103583865",
+    "https://openalex.org/W2109861317",
+    "https://openalex.org/W2110181077",
+    "https://openalex.org/W2118108696",
+    "https://openalex.org/W2123817056",
+    "https://openalex.org/W2126953093",
+    "https://openalex.org/W2133211659",
+    "https://openalex.org/W2133365282",
+    "https://openalex.org/W2134077691",
+    "https://openalex.org/W2134537068",
+    "https://openalex.org/W2144504709",
+    "https://openalex.org/W2145167064",
+    "https://openalex.org/W2150672384",
+    "https://openalex.org/W2158359335",
+    "https://openalex.org/W2163396955",
+    "https://openalex.org/W2164030952",
+    "https://openalex.org/W2164682760",
+    "https://openalex.org/W2165993970",
+    "https://openalex.org/W2170935471",
+    "https://openalex.org/W2186516452",
+    "https://openalex.org/W2192263693",
+    "https://openalex.org/W2270668874",
+    "https://openalex.org/W2274591123",
+    "https://openalex.org/W2399633751",
+    "https://openalex.org/W2460180706",
+    "https://openalex.org/W2494547248",
+    "https://openalex.org/W2499154041",
+    "https://openalex.org/W2502185949",
+    "https://openalex.org/W2530248243",
+    "https://openalex.org/W2588433828",
+    "https://openalex.org/W2622390736",
+    "https://openalex.org/W2732201916",
+    "https://openalex.org/W2739641472",
+    "https://openalex.org/W2747864263",
+    "https://openalex.org/W2754671536",
+    "https://openalex.org/W3121900038",
+    "https://openalex.org/W4213205356",
+    "https://openalex.org/W4236040776",
+    "https://openalex.org/W4239834750"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W2922399599",
+   "doi": "https://doi.org/10.1111/bjop.12382",
+   "display_name": "Too exhausted to go to bed: Implicit theories about willpower and stress predict bedtime procrastination",
+   "publication_year": 2019,
+   "type": "article",
+   "cited_by_count": 62,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5056929438",
+      "display_name": "Katharina Bernecker",
+      "orcid": "https://orcid.org/0000-0003-1432-9133",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-1432-9133"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4210136238",
+       "display_name": "Leibniz-Institut für Wissensmedien",
+       "ror": "https://ror.org/03hv28176",
+       "country_code": "DE",
+       "type": "facility",
+       "lineage": [
+        "https://openalex.org/I315704651",
+        "https://openalex.org/I4210136238"
+       ]
+      }
+     ],
+     "countries": [
+      "DE"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Katharina Bernecker",
+     "raw_affiliation_strings": [
+      "Leibniz‐Institut für Wissensmedien Tübingen Germany"
+     ],
+     "raw_orcid": "https://orcid.org/0000-0003-1432-9133",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Leibniz‐Institut für Wissensmedien Tübingen Germany",
+       "institution_ids": [
+        "https://openalex.org/I4210136238"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5040768864",
+      "display_name": "Veronika Job",
+      "orcid": "https://orcid.org/0000-0002-4983-1644",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-4983-1644"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I78650965",
+       "display_name": "Technische Universität Dresden",
+       "ror": "https://ror.org/042aqky30",
+       "country_code": "DE",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I78650965"
+       ]
+      }
+     ],
+     "countries": [
+      "DE"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Veronika Job",
+     "raw_affiliation_strings": [
+      "Technische Universität Dresden Germany"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Technische Universität Dresden Germany",
+       "institution_ids": [
+        "https://openalex.org/I78650965"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1111/bjop.12382",
+    "doi": "https://doi.org/10.1111/bjop.12382",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1111/bjop.12382",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S179213746",
+     "display_name": "British Journal of Psychology",
+     "issn_l": "0007-1269",
+     "issn": [
+      "0007-1269",
+      "2044-8295"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "cwts-core",
+      "dongbi-d",
+      "erih-plus",
+      "jufo-1",
+      "ki-jl-1",
+      "medline",
+      "norway-1",
+      "poland-100",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320595",
+     "host_organization_name": "Wiley",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320595"
+     ],
+     "host_organization_lineage_names": [
+      "Wiley"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "British Journal of Psychology",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W1522950033",
+    "https://openalex.org/W1681684997",
+    "https://openalex.org/W1792116546",
+    "https://openalex.org/W1941201721",
+    "https://openalex.org/W1951724000",
+    "https://openalex.org/W1968106759",
+    "https://openalex.org/W1970073498",
+    "https://openalex.org/W1972371185",
+    "https://openalex.org/W1976771764",
+    "https://openalex.org/W1996422210",
+    "https://openalex.org/W2004166661",
+    "https://openalex.org/W2004872135",
+    "https://openalex.org/W2008718965",
+    "https://openalex.org/W2024132711",
+    "https://openalex.org/W2024897052",
+    "https://openalex.org/W2025179943",
+    "https://openalex.org/W2046572262",
+    "https://openalex.org/W2075327763",
+    "https://openalex.org/W2092284648",
+    "https://openalex.org/W2095267132",
+    "https://openalex.org/W2098836262",
+    "https://openalex.org/W2115519714",
+    "https://openalex.org/W2118108696",
+    "https://openalex.org/W2123817056",
+    "https://openalex.org/W2123821623",
+    "https://openalex.org/W2134077691",
+    "https://openalex.org/W2134293068",
+    "https://openalex.org/W2136268538",
+    "https://openalex.org/W2141125801",
+    "https://openalex.org/W2142936302",
+    "https://openalex.org/W2153474070",
+    "https://openalex.org/W2153535564",
+    "https://openalex.org/W2155943705",
+    "https://openalex.org/W2157422098",
+    "https://openalex.org/W2169694427",
+    "https://openalex.org/W2170814242",
+    "https://openalex.org/W2192263693",
+    "https://openalex.org/W2270668874",
+    "https://openalex.org/W2324392187",
+    "https://openalex.org/W2345410249",
+    "https://openalex.org/W2418128782",
+    "https://openalex.org/W2582743722",
+    "https://openalex.org/W2776195649",
+    "https://openalex.org/W3188875553",
+    "https://openalex.org/W4233458394",
+    "https://openalex.org/W4297900657",
+    "https://openalex.org/W6800096921"
+   ]
+  }
+ ],
+ "group_by": []
+}

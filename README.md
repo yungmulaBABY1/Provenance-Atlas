@@ -45,6 +45,11 @@ Implemented, with mechanical test coverage:
 - Challenges (`atlas.challenge`): attributed decisions on the items an audit's checker
   leaves for review, each item with a stated challenge state; this code decides none
   ([docs/atlas/challenge.md](docs/atlas/challenge.md)).
+- Locked queries (`atlas.retrieval`): an audit's declared literature searches,
+  recorded by code. Saved responses are checked against their declaration and
+  the executor's log. An optional live replay is recorded attempt by attempt,
+  with drift against the saved results. No credential is ever recorded
+  ([docs/atlas/retrieval.md](docs/atlas/retrieval.md)).
 
 Not implemented: running a model from this code, an interactive or hosted
 interface, decisions by a person on record (the format exists; none is recorded), public release controls. Import is not a model
@@ -56,7 +61,8 @@ audit, and passage matching is not evidentiary support. See
 Python 3.11 or later. Standard library only; no network access. (The
 power-posing packet's optional external re-verification script,
 `tests/atlas/sources/power-posing/source_packet.py`, additionally needs
-network access and Poppler. CI does not run it.)
+network access and Poppler. CI does not run it. So does the optional live
+replay `python -m atlas.retrieval run-live`.)
 
 ```sh
 python tests/test-citation-network-checker.py
@@ -80,11 +86,13 @@ for dir in examples/research/*/citation-network/claims-receipt/; do
 done
 python -m atlas.maplink replay tests/atlas/maplink/ajr2001/receipt/manifest.json tests/atlas/maplink/ajr2001/receipt/records.jsonl --level content
 python -m atlas.challenge replay tests/atlas/challenge/ajr2001/receipt/manifest.json tests/atlas/challenge/ajr2001/receipt/records.jsonl --level content
+python -m atlas.retrieval check tests/atlas/retrieval/*/set.json
 python -m atlas.view check-all
 ```
 
-Expected: checker regression `PASS`, 316 tests `OK` (one skipped: it needs
-the private source PDF), every content replay passes, and the view is current. `historical-*` receipts were produced by earlier code and are not
+Expected: checker regression `PASS`, 345 tests `OK` (one skipped: it needs
+the private source PDF), every content replay passes, the locked-query records are
+current, and the view is current. `historical-*` receipts were produced by earlier code and are not
 replayable. CI runs the same steps (`.github/workflows/atlas-adapter.yml`).
 
 ## Layout

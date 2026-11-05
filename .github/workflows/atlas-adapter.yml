@@ -108,6 +108,11 @@ jobs:
             count=$((count + 1))
           done
           test "$count" -gt 0
+      # Locked-query records (atlas.retrieval) rebuild offline from committed responses, specs,
+      # declarations and executor logs. No network: live replay is the manual workflow
+      # retrieval-live-replay.yml.
+      - name: Locked-query records are current
+        run: python -m atlas.retrieval check tests/atlas/retrieval/*/set.json
       # Every committed page (docs/atlas/views/views.json) must be a fresh render of verified records.
       - name: Reader views are current
         run: python -m atlas.view check-all

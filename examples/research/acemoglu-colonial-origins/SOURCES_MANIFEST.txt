@@ -82,6 +82,8 @@ R3  downstream: 2024 Economics Prize press release
     file: reception/nobel2024_press.html  (185989 bytes)
     sha256: ebb969c747c8f34db982702202e6bdb88116cfa25b51a00bfca8464dcdeba84e
     url: https://www.nobelprize.org/prizes/economic-sciences/2024/press-release/
+    removed from the repository 2026-11-05 (rights cleanup); the url and sha256 above identify
+    the page. The bounded NOBELPOP and NOBELSCI excerpts stay.
 
 ACCESS FAILURES / NOT RETRIEVED
 - NBER w10354: retrieved but wrong paper; deleted, not used

@@ -1,0 +1,256 @@
+{
+ "schema": "baumeister-audit-sources/1",
+ "run_date": "2026-11-05 (America/Los_Angeles)",
+ "target": {
+  "cite": "Baumeister, Bratslavsky, Muraven & Tice (1998), Ego depletion: Is the active self a limited resource?, JPSP 74(5):1252-1265",
+  "doi": "10.1037/0022-3514.74.5.1252",
+  "openalex": "W2123817056",
+  "pubmed": "9599441",
+  "access": "RESTRICTED: abstract only; body not obtained"
+ },
+ "sources": [
+  {
+   "id": "S0",
+   "role": "target abstract",
+   "cite": "Baumeister, Bratslavsky, Muraven & Tice (1998) JPSP 74(5):1252-1265, DOI 10.1037/0022-3514.74.5.1252",
+   "file": "pubmed_abstract.txt",
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=9599441&rettype=abstract&retmode=text",
+   "sha256": "a7ad8620292189aed40e0658358d1ecefb08cc811cc46731a9dd5fcb8dedfbf1",
+   "bytes": 1249,
+   "committed": false,
+   "retrieved": "2026-11-05T11:16:26Z (03:16 PST)",
+   "note": "ABSTRACT only; target body not obtained (publisher HTTP 403; closed access). Abstract NOT committed."
+  },
+  {
+   "id": "S1",
+   "role": "first author's public lecture slides (PR/MEDIA layer; secondhand Exp 1 means)",
+   "cite": "Baumeister (2012) LSE public lecture 'Willpower' slides",
+   "file": "baumeister2012_lse_slides.pdf",
+   "url": "https://www.lse.ac.uk/assets/richmedia/channels/publicLecturesAndEvents/slides/20120124_1830_willpower_sl.pdf",
+   "sha256": "234088e903eeb9627b10a123b599fbb6533cbefe38783d75429b259148b6af20",
+   "bytes": 666077,
+   "committed": false,
+   "retrieved": "2026-11-05T11:14:11Z",
+   "note": "institutional host (lse.ac.uk); text layer baumeister2012_lse_slides.txt"
+  },
+  {
+   "id": "S2",
+   "role": "replicability analysis (secondhand procedure and statistics)",
+   "cite": "Schimmack (2016) Replicability Report No. 1: Is ego-depletion a replicable effect?",
+   "file": "schimmack2016_rr1.html",
+   "url": "https://replicationindex.com/2016/04/18/rr1egodepletion/",
+   "sha256": "549c30040f987f4461ab7c5cc65ba98812ba26b44a7667eed242ddcb221d49ea",
+   "bytes": 208235,
+   "committed": false,
+   "retrieved": "2026-11-05T11:14:35Z",
+   "note": "author's blog; text layer schimmack2016_rr1.txt"
+  },
+  {
+   "id": "S3",
+   "role": "professional-association lay page (PR/MEDIA layer)",
+   "cite": "APA, 'Is willpower a limited resource?'",
+   "file": "apa_willpower_limited.pdf",
+   "url": "https://www.apa.org/topics/willpower-limited.pdf",
+   "sha256": "3de0eade3188adb5c703fdcd1c1febc349944c57f7e24d023f23bd3e18e86b4a",
+   "bytes": 107609,
+   "committed": false,
+   "retrieved": "2026-11-05T11:16:50Z",
+   "note": "publisher of the target's journal; public page"
+  },
+  {
+   "id": "S4",
+   "role": "registered replication report",
+   "cite": "Hagger, Chatzisarantis et al. (2016) PPS 11(4):546-573",
+   "file": "hagger2016_rrr.pdf",
+   "url": "https://cris.maastrichtuniversity.nl/ws/portalfiles/portal/74376653/Martijn_2016_A_multilab_preregistered_replication_of.pdf",
+   "sha256": "c068209c08947e960930f9e779203008de69b824cecc6b1f47da7cabd98d0bd3",
+   "bytes": 2590153,
+   "committed": false,
+   "retrieved": "2026-11-05T11:13:38Z",
+   "note": "FULL-TEXT; Maastricht University institutional repository"
+  },
+  {
+   "id": "S5",
+   "role": "multisite preregistered test",
+   "cite": "Vohs, Schmeichel et al. (2021) Psychological Science 32(10):1566-1581",
+   "file": "vohs2021.pdf",
+   "url": "https://escholarship.org/content/qt82w5b9w1/qt82w5b9w1.pdf",
+   "sha256": "aa14bdb312f3afc74a53e46b9b95b6733113581c11206085f9daea43baa140b3",
+   "bytes": 551385,
+   "committed": false,
+   "retrieved": "2026-11-05T11:13:50Z",
+   "note": "FULL-TEXT; eScholarship (University of California), CC BY; first attempt HTTP 403, retry 200"
+  },
+  {
+   "id": "S6",
+   "role": "multilab replication",
+   "cite": "Dang et al. (2021) SPPS 12(1):14-24",
+   "file": "dang2021.html",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8186735/",
+   "sha256": "c12789df8171665e6ede55e5394e61a32de76b300eeec904b99b1e58c792c9df",
+   "bytes": 217050,
+   "committed": false,
+   "retrieved": "2026-11-05T11:16:05Z",
+   "note": "FULL-TEXT; PMC author manuscript (VERSION-SUBSTITUTE); Europe PMC fullTextXML HTTP 500 x4"
+  },
+  {
+   "id": "S7",
+   "role": "meta-analysis (bias-corrected); Table 1 codes the target's Exp 1 and Exp 3",
+   "cite": "Carter, Kofler, Forster & McCullough (2015) JEP:General 144(4):796-815",
+   "file": "carter2015_authorcopy.pdf",
+   "url": "https://pages.ucsd.edu/~memccullough/Papers/EgoDepletionMetaAnalysis_Text_Revision_for_circulation.pdf",
+   "sha256": "ea8937d36c9d82909d9ca8afc7769805ba1beb31ad271aa4fbfedb0d442499ee",
+   "bytes": 651968,
+   "committed": false,
+   "retrieved": "2026-11-05T11:14:46Z",
+   "note": "FULL-TEXT; author's faculty page (circulated revision; VERSION-SUBSTITUTE for pagination)"
+  },
+  {
+   "id": "S8",
+   "role": "founding authors' response to the RRR",
+   "cite": "Baumeister & Vohs (2016) PPS 11(4) comment 'Misguided effort with elusive implications'",
+   "file": "baumeister_vohs2016_aps.pdf",
+   "url": "https://psychologicalscience.org/redesign/wp-content/uploads/2016/03/RRR-comment-BaumeisterVohs-revised-March17-002.pdf",
+   "sha256": "44de64b010137bb86b913017fc39d67f01ee5cad800cfaacbfc20c38f69c8880",
+   "bytes": 114870,
+   "committed": false,
+   "retrieved": "2026-11-05T11:14:47Z",
+   "note": "FULL-TEXT; manuscript hosted by the publisher-society (APS); Carlson School copy HTTP 403"
+  },
+  {
+   "id": "S9",
+   "role": "opinion on Vohs et al. 2021 (reception check)",
+   "cite": "Englert & Bertrams (2021) Frontiers in Human Neuroscience, doi 10.3389/fnhum.2021.658890",
+   "file": "frontiers2021_opinion.html",
+   "url": "https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2021.658890/full",
+   "sha256": "4c99ea73a96d1366019ebfbd4bf8a551079e0486accaba15c6107bf6826456c3",
+   "bytes": 571995,
+   "committed": false,
+   "retrieved": "2026-11-05T11:15:51Z",
+   "note": "FULL-TEXT; publisher OA"
+  }
+ ],
+ "semantic_scholar_citation_contexts": {
+  "endpoint": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1037/0022-3514.74.5.1252/citations?fields=title,year,externalIds,contexts,intents&limit=1000&offset={0..5000}",
+  "access": "EXCERPT",
+  "files": [
+   {
+    "file": "s2/cit_0.json",
+    "sha256": "fa01fc13afde2ebebd3b45e3adb9a7521fbfbb17e35340a854d277b49b31d192",
+    "bytes": 591606,
+    "committed": false
+   },
+   {
+    "file": "s2/cit_1000.json",
+    "sha256": "506bd23ad97ffc0e7439bae18a21c320abb921e73d7107764fa11c72e852b869",
+    "bytes": 586943,
+    "committed": false
+   },
+   {
+    "file": "s2/cit_2000.json",
+    "sha256": "aee93a2e38b7c45e1fe950f012e9afe5c9c79f79cac164780a4206fc0ba7757e",
+    "bytes": 700318,
+    "committed": false
+   },
+   {
+    "file": "s2/cit_3000.json",
+    "sha256": "bbd0daa7fe61ec10d0bb2d0b8e5567eeb013dcf6f810b7f6c8c9554a192ca7ff",
+    "bytes": 789529,
+    "committed": false
+   },
+   {
+    "file": "s2/cit_4000.json",
+    "sha256": "3e809623a90a42bed3b51020696f6b85915255a0764aed3070f39373c7c52e15",
+    "bytes": 649860,
+    "committed": false
+   },
+   {
+    "file": "s2/cit_5000.json",
+    "sha256": "735212ae1898091100c1f9df74e5bc11e6eb827c181ebc436ccfb81c5c539929",
+    "bytes": 300332,
+    "committed": false
+   },
+   {
+    "file": "s2/match.json",
+    "sha256": "7e26d4cc10d44a2911d6eb6686d6ad031d7eac3f02fd507dad8406c9e4b20161",
+    "bytes": 94415,
+    "committed": false
+   }
+  ],
+  "note": "responses contain citation-context excerpts and are NOT committed; hashes only. match.json is a local derived index, not committed."
+ },
+ "metadata_sources": [
+  {
+   "item": "Crossref work and updates",
+   "url": "https://api.crossref.org/works/10.1037/0022-3514.74.5.1252",
+   "file": "raw/crossref_target.json",
+   "committed": true
+  },
+  {
+   "item": "OpenAlex target, reception, recent, adjudication and Section E corpora",
+   "url": "https://api.openalex.org/works (select= lists omit abstract_inverted_index)",
+   "file": "citation-network-v2cand3/raw/*.json",
+   "committed": true
+  },
+  {
+   "item": "Unpaywall OA status",
+   "url": "https://api.unpaywall.org/v2/10.1037/0022-3514.74.5.1252",
+   "file": null,
+   "committed": false
+  },
+  {
+   "item": "SUNY institutional repository record (metadata only, no file)",
+   "url": "https://researchconnect.suny.edu/en/publications/ego-depletion-is-the-active-self-a-limited-resource-2/",
+   "file": null,
+   "committed": false
+  }
+ ],
+ "access_failures": [
+  {
+   "item": "target, APA PsycNET landing",
+   "url": "https://psycnet.apa.org/doi/10.1037/0022-3514.74.5.1252",
+   "outcome": "HTTP 403"
+  },
+  {
+   "item": "target, APA PsycNET full text",
+   "url": "https://psycnet.apa.org/fulltext/1998-01923-009.pdf",
+   "outcome": "HTTP 403"
+  },
+  {
+   "item": "target, author's site publication page",
+   "url": "https://roybaumeister.com/1998/03/16/ego-depletion-is-the-active-self-a-limited-resource/",
+   "outcome": "HTTP 403"
+  },
+  {
+   "item": "target, unauthorized copies (course pages / third-party hosts) seen in search results",
+   "url": null,
+   "outcome": "NOT USED (rights rule)"
+  },
+  {
+   "item": "Baumeister et al. 2018 (Carlson School)",
+   "url": "https://carlsonschool.umn.edu/sites/carlsonschool.umn.edu/files/2026-01/vohs-et-al-2018-perspectives-depletion",
+   "outcome": "HTTP 403 x2; not used"
+  },
+  {
+   "item": "Baumeister & Vohs 2016 (Carlson School copy)",
+   "url": "https://carlsonschool.umn.edu/sites/carlsonschool.umn.edu/files/2019-04/baumeister_vohs_2016_perspectives_comm",
+   "outcome": "HTTP 403; APS-hosted copy used"
+  },
+  {
+   "item": "Dang 2021 Europe PMC XML",
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8186735/fullTextXML",
+   "outcome": "HTTP 500 x4; PMC HTML used"
+  },
+  {
+   "item": "OSF search API (replication)",
+   "url": "https://api.osf.io/v2/search/",
+   "outcome": "HTTP 404"
+  },
+  {
+   "item": "Inzlicht, Gervais & Berkman comment on Carter et al. 2015",
+   "url": null,
+   "outcome": "LOCATED in reference lists only; not retrieved"
+  }
+ ],
+ "note": "PDFs, HTML, full-text layers, the target abstract and Semantic Scholar context responses are NOT committed (rights). Re-fetch from URLs and verify sha256. No abstracts are committed."
+}

@@ -1,0 +1,7 @@
+SAMPLE draw record (written before any member's citation context was inspected)
+Drawn: 2026-11-05T11:45:09Z
+RNG: Python random.seed(20261105); random.sample(range(1,51),12) over RECEPTION-1 rank positions (same rule as Batch 1)
+RECEPTION-1 inspection sample (rank positions): [7, 9, 10, 11, 20, 27, 28, 39, 40, 41, 42, 44]
+RECEPTION-1 sample IDs: ['W1968689002', 'W2108897328', 'W2022472850', 'W2093761921', 'W2058490785', 'W1976788357', 'W2100482303', 'W3122622199', 'W2105985103', 'W2146569853', 'W2122634808', 'W2081900501']
+RECENT-1: corpus is the top 25 by cited_by_count (population 1530); census of all 25 members, no random draw: ['W4385606438', 'W4214866453', 'W4291001390', 'W3217148206', 'W4402300076', 'W4283313664', 'W4291535426', 'W4323652556', 'W4310804025', 'W4220818821', 'W4402676278', 'W4409103534', 'W4281731168', 'W4390011768', 'W4311667985', 'W4311640673', 'W3211993193', 'W4205581247', 'W4321368994', 'W4200151748', 'W4308964018', 'W4302307858', 'W4285800368', 'W4280566821', 'W4366496226']
+Purposive additions (not random, labelled PURPOSIVE): known-item and DIRECT members of RECEPTION-1 (N06, N09, N16, N19, N33, N37, N41, N45, N47) selected for claim relevance.

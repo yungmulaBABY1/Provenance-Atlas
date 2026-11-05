@@ -1,0 +1,425 @@
+{
+ "meta": {
+  "notice": "No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address. The mailto parameter doesn't raise this limit. Get a free key with its own $1/day at https://openalex.org/settings/api and add api_key=YOUR_KEY to your requests. An AI agent can get one for its user in one call: POST https://api.openalex.org/api-keys with {\"email\": \"<your user's email>\"}; we email them a link, and the key works once they click it. Docs for agents: https://help.openalex.org/llms.txt",
+  "count": 68,
+  "db_response_time_ms": 24,
+  "page": 1,
+  "per_page": 3,
+  "groups_count": null,
+  "x_query": {
+   "oql": "get articles through 1998-04-30 with (experimenter expectancy) in the title, most cited first",
+   "x_new_oql": "get articles through 1998-04-30 with (experimenter expectancy) in the title, most cited first",
+   "oqo": {
+    "get_rows": "works",
+    "filter_rows": [
+     {
+      "column_id": "display_name.search",
+      "value": "experimenter expectancy",
+      "operator": "has"
+     },
+     {
+      "column_id": "to_publication_date",
+      "value": "1998-04-30"
+     },
+     {
+      "column_id": "type",
+      "value": "article"
+     }
+    ],
+    "sort_by": [
+     {
+      "column_id": "cited_by_count",
+      "direction": "desc"
+     }
+    ]
+   },
+   "url": "/works?filter=display_name.search:experimenter expectancy,to_publication_date:1998-04-30,type:article&sort=cited_by_count:desc&per_page=3",
+   "order": "most cited first",
+   "order_default": false
+  },
+  "cost_usd": 0.001
+ },
+ "results": [
+  {
+   "id": "https://openalex.org/W1981707533",
+   "doi": "https://doi.org/10.1037//0022-0663.76.1.85",
+   "display_name": "Magnitude of teacher expectancy effects on pupil IQ as a function of the credibility of expectancy induction: A synthesis of findings from 18 experiments.",
+   "publication_year": 1984,
+   "type": "article",
+   "cited_by_count": 299,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5112799992",
+      "display_name": "Stephen W. Raudenbush",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I136199984",
+       "display_name": "Harvard University",
+       "ror": "https://ror.org/03vek6s52",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I136199984"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Stephen W. Raudenbush",
+     "raw_affiliation_strings": [
+      "Harvard U., Graduate School of Education"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Harvard U., Graduate School of Education",
+       "institution_ids": [
+        "https://openalex.org/I136199984"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1037//0022-0663.76.1.85",
+    "doi": "https://doi.org/10.1037//0022-0663.76.1.85",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1037//0022-0663.76.1.85",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S61703936",
+     "display_name": "Journal of Educational Psychology",
+     "issn_l": "0022-0663",
+     "issn": [
+      "0022-0663",
+      "1939-2176"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "cwts-core",
+      "dongbi-b",
+      "erih-plus",
+      "jufo-3",
+      "ki-jl-1",
+      "norway-2",
+      "poland-140",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320262",
+     "host_organization_name": "American Psychological Association",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320262"
+     ],
+     "host_organization_lineage_names": [
+      "American Psychological Association"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Journal of Educational Psychology",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W66961331",
+    "https://openalex.org/W159989561",
+    "https://openalex.org/W324942005",
+    "https://openalex.org/W329477345",
+    "https://openalex.org/W644502463",
+    "https://openalex.org/W1533179050",
+    "https://openalex.org/W1560647893",
+    "https://openalex.org/W1646506517",
+    "https://openalex.org/W1966114254",
+    "https://openalex.org/W1967655688",
+    "https://openalex.org/W1977810728",
+    "https://openalex.org/W1990250638",
+    "https://openalex.org/W1999049524",
+    "https://openalex.org/W2009034184",
+    "https://openalex.org/W2018297803",
+    "https://openalex.org/W2022294576",
+    "https://openalex.org/W2032206429",
+    "https://openalex.org/W2035538429",
+    "https://openalex.org/W2042816357",
+    "https://openalex.org/W2043417433",
+    "https://openalex.org/W2049436788",
+    "https://openalex.org/W2057769766",
+    "https://openalex.org/W2065122769",
+    "https://openalex.org/W2069791626",
+    "https://openalex.org/W2074752556",
+    "https://openalex.org/W2075798794",
+    "https://openalex.org/W2079607153",
+    "https://openalex.org/W2086242051",
+    "https://openalex.org/W2090464375",
+    "https://openalex.org/W2112354481",
+    "https://openalex.org/W2115855896",
+    "https://openalex.org/W2147611572",
+    "https://openalex.org/W2322288693",
+    "https://openalex.org/W2580191417",
+    "https://openalex.org/W3173249186",
+    "https://openalex.org/W4254129346"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W2068172336",
+   "doi": "https://doi.org/10.1037/h0026727",
+   "display_name": "Experimenter expectancy and the reassuring nature of the null hypothesis decision procedure.",
+   "publication_year": 1968,
+   "type": "article",
+   "cited_by_count": 81,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5110407899",
+      "display_name": "Robert Rosenthal",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": true,
+     "raw_author_name": "Robert Rosenthal",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1037/h0026727",
+    "doi": "https://doi.org/10.1037/h0026727",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1037/h0026727",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S75627607",
+     "display_name": "Psychological Bulletin",
+     "issn_l": "0033-2909",
+     "issn": [
+      "0033-2909",
+      "1939-1455"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "abdc-a-star",
+      "anvur-scientific",
+      "cwts-core",
+      "dongbi-a",
+      "erih-plus",
+      "jufo-3",
+      "ki-jl-2",
+      "medline",
+      "norway-2",
+      "poland-200",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320262",
+     "host_organization_name": "American Psychological Association",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320262"
+     ],
+     "host_organization_lineage_names": [
+      "American Psychological Association"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Psychological Bulletin",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W52459444",
+    "https://openalex.org/W100592892",
+    "https://openalex.org/W437195329",
+    "https://openalex.org/W1969585229",
+    "https://openalex.org/W1975726663",
+    "https://openalex.org/W1989314580",
+    "https://openalex.org/W2003402428",
+    "https://openalex.org/W2004213157",
+    "https://openalex.org/W2009957037",
+    "https://openalex.org/W2010723570",
+    "https://openalex.org/W2016570727",
+    "https://openalex.org/W2030437179",
+    "https://openalex.org/W2032704236",
+    "https://openalex.org/W2038733313",
+    "https://openalex.org/W2049415721",
+    "https://openalex.org/W2066877758",
+    "https://openalex.org/W2079297380",
+    "https://openalex.org/W2086704681",
+    "https://openalex.org/W2089768087",
+    "https://openalex.org/W2122487768",
+    "https://openalex.org/W2128508267",
+    "https://openalex.org/W2138132560",
+    "https://openalex.org/W2152995015",
+    "https://openalex.org/W2170132692",
+    "https://openalex.org/W2328475536",
+    "https://openalex.org/W2409065505",
+    "https://openalex.org/W2411424006",
+    "https://openalex.org/W2945020143",
+    "https://openalex.org/W4235042605"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W2059803871",
+   "doi": "https://doi.org/10.1037//0021-843x.95.4.335",
+   "display_name": "Alcohol and the balanced-placebo design: The role of experimenter demands in expectancy.",
+   "publication_year": 1986,
+   "type": "article",
+   "cited_by_count": 80,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5035199612",
+      "display_name": "L. J. Knight",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I204722609",
+       "display_name": "Queen's University",
+       "ror": "https://ror.org/02y72wh86",
+       "country_code": "CA",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I204722609"
+       ]
+      }
+     ],
+     "countries": [
+      "CA"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "L. J. Knight",
+     "raw_affiliation_strings": [
+      "Queen's U Kingston, Canada"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Queen's U Kingston, Canada",
+       "institution_ids": [
+        "https://openalex.org/I204722609"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5103965243",
+      "display_name": "Howard E. Barbaree",
+      "orcid": "https://orcid.org/0000-0002-9843-9577",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-9843-9577"
+      ]
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "H. E. Barbaree",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5110240214",
+      "display_name": "Frederick J. Boland",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "F. J. Boland",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1037//0021-843x.95.4.335",
+    "doi": "https://doi.org/10.1037//0021-843x.95.4.335",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1037//0021-843x.95.4.335",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S121947241",
+     "display_name": "Journal of Abnormal Psychology",
+     "issn_l": "0021-843X",
+     "issn": [
+      "0021-843X",
+      "1939-1846"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "cwts-core",
+      "erih-plus",
+      "ki-jl-2",
+      "norway-2",
+      "poland-20",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320262",
+     "host_organization_name": "American Psychological Association",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320262"
+     ],
+     "host_organization_lineage_names": [
+      "American Psychological Association"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Journal of Abnormal Psychology",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W1529972356",
+    "https://openalex.org/W1967992372",
+    "https://openalex.org/W1999912466",
+    "https://openalex.org/W2002664886",
+    "https://openalex.org/W2052565641",
+    "https://openalex.org/W2056868017",
+    "https://openalex.org/W2057298344",
+    "https://openalex.org/W2116823147",
+    "https://openalex.org/W2118535640",
+    "https://openalex.org/W2119953646",
+    "https://openalex.org/W2121709862",
+    "https://openalex.org/W2158483354",
+    "https://openalex.org/W2327955185",
+    "https://openalex.org/W2978850894",
+    "https://openalex.org/W4250677583"
+   ]
+  }
+ ],
+ "group_by": []
+}
