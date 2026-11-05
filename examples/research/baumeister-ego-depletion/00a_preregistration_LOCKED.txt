@@ -1,0 +1,116 @@
+PRE-REGISTERED EXPECTATIONS — WRITTEN BEFORE READING THE TARGET'S BODY TEXT OR STAGE 1
+Target: Roy F. Baumeister, Ellen Bratslavsky, Mark Muraven and Dianne M. Tice (1998), "Ego
+depletion: Is the active self a limited resource?", Journal of Personality and Social
+Psychology 74(5): 1252-1265. DOI 10.1037/0022-3514.74.5.1252.
+Written: 2026-11-05, 11:11 PST (11:11Z), by the runner (Grok Bot executor), before Stage 1, before
+any retrieval of the target, and before any web search about the target in this batch.
+
+EXPOSURE (disclosed, not hidden)
+- No file, abstract, search snippet or web page about the target, its critiques or replies has
+  been retrieved in this batch. Earlier in this session the runner audited a different paper
+  (Oster 2005, hepatitis B); nothing in that run concerns ego depletion. The pinned instruments
+  were read only for identity (hashes, marker lines).
+- The runner has substantial prior (training-data) exposure to the paper and its fate: four
+  experiments (radish vs chocolate then unsolvable puzzles; choice to give a counter-attitudinal
+  speech; emotion suppression during a film then anagrams; a crossing-out-letters habit-breaking
+  task then passivity); the "limited resource / strength" model; the Hagger et al. (2010)
+  meta-analysis reporting a medium-to-large effect; bias-corrected meta-analyses (Carter &
+  McCullough 2014; Carter et al. 2015) finding little or no effect; the Hagger et al. (2016)
+  Registered Replication Report (sequential-task paradigm, about two dozen labs) finding an
+  effect near zero; the authors' objections to that RRR's manipulation; and later multi-site
+  tests (Vohs et al. 2021; Dang et al. 2021) also near zero. Exact numbers, venues and years are
+  recalled with uncertainty and may be wrong.
+- Independence from prior knowledge is NOT established. The expectations below are shaped by
+  knowing the replication-crisis history of this effect.
+
+EXPECTATIONS
+E1 Field 6 (quantified central claim) will be Experiment 1's persistence result: participants
+   who resisted chocolate and ate radishes quit the unsolvable puzzles much sooner (about 8
+   minutes) than chocolate eaters or no-food controls (about 19-21 minutes); roughly 20-25 per
+   cell (total about 65-70). The general claim (field 2 level) will be that acts of volition draw
+   on a limited resource, so one act of self-control impairs the next.
+E2 Internal validity: small cells, one-lab studies, analytic flexibility across four experiments
+   with different manipulations and outcomes, possible demand and experimenter effects (an
+   experimenter who knows the condition), no manipulation-independent measure of the resource,
+   and an implausibly large effect for n of about 20 per cell. With the 2016 RRR and later
+   multi-site nulls, I expect 2a to find the central effect DEFEATED by external evidence (grade
+   E or D, INVALID or near it), while the paper-alone threats are serious but not fatal.
+E3 Construct validity: the "resource" (ego strength) is never measured; it is inferred from the
+   persistence pattern, so the mechanism construct is the dominant concern (proxy/FORM: quitting
+   time standing in for depleted self-control capacity). Secondary: persistence on unsolvable
+   puzzles conflates self-control with motivation, frustration, mood or fatigue; the four
+   manipulations may not share one construct.
+E4 Replication: no authors' posted data for a 1998 JPSP paper; replication/NOT_ASSESSABLE.txt is
+   the most likely outcome. Data from later replications (e.g. the RRR on OSF) may be public but
+   do not reproduce field 6.
+E5 Citation network (cn7-map-3), expected dispositions:
+     Internal citation density            SCORED 1 (a dense self-control literature) or UNASSESSED
+     Founding-cluster dominance           SCORED 1 (Baumeister/Vohs/Muraven/Tice and students
+                                          prominent among citers) or SCORED 0
+     Recent-paper dependence              SCORED 1 or UNASSESSED
+     Review-hub laundering                SCORED 1 (reviews/meta-analyses as hubs) or UNASSESSED
+     Proxy mismatch                       UNASSESSED or SCORED 1
+     Claim mutation                       SCORED 1 (restatements as established fact)
+     Adjacent-field neglect               SCORED 0 or 1
+     Lack of decisive tests               SCORED 0 (the RRR and multi-site tests exist)
+     Poor critique uptake                 SCORED 1 (the original authors contest the nulls)
+     Intervention-evidence ratchet        N/A or UNASSESSED (self-control training claims are
+                                          adjacent, not the target's claim)
+     Model non-updating                   SCORED 1 (resource model defended after nulls) or 0
+   Expected RISK BAND: moderate (20%-40%) or WITHHELD for coverage; NOT the healthy band.
+E6 Counter-audit (Stage 3): I expect most 2a/2b findings to survive; the authors' objections to
+   the RRR (weak manipulation, wrong paradigm) to narrow "defeated by replication" to
+   "contested, with the weight of large tests against"; and at least one prosecution finding to
+   be downgraded as hindsight-driven (judging 1998 practice by post-2011 norms, e.g. no
+   preregistration or small cells).
+
+TELLS (the result that would show each expectation wrong)
+T1 Field 6 is not the Experiment 1 persistence contrast, or its numbers differ materially from
+   about 8 vs about 20 minutes.
+T2 2a finds no serious threat, or finds the central effect supported by external evidence.
+T3 2b finds the resource construct adequately measured, or a different construct problem
+   dominant.
+T4 Authors' data for the 1998 paper are found and reproduce field 6.
+T5 Any of: all of density, founding-cluster dominance and poor critique uptake SCORED 0; lack of
+   decisive tests SCORED 1+; RISK BAND issued in the healthy band (0%-20%).
+T6 Stage 3 overturns (REJECTS) a majority of the prosecution findings, or finds no
+   hindsight-driven finding.
+
+KNOWN CLAIM-TESTING WORKS (Stage 2c measures KNOWN-ITEM RECALL against this list only)
+All recalled from training data; none has been read in this batch (read status: NOT READ for
+every item). Venue/year recalled with uncertainty.
+K1 Martin S. Hagger, Chantelle Wood, Chris Stiff and Nikos L. D. Chatzisarantis (2010), "Ego
+   depletion and the strength model of self-control: A meta-analysis", Psychological Bulletin
+   136(4). Meta-analysis (supportive). NOT READ.
+K2 Evan C. Carter and Michael E. McCullough (2014), "Publication bias and the limited strength
+   model of self-control: has the evidence for ego depletion been overestimated?", Frontiers in
+   Psychology. Bias re-analysis. NOT READ.
+K3 Evan C. Carter, Lilly M. Kofler, Daniel E. Forster and Michael E. McCullough (2015), "A series
+   of meta-analytic tests of the depletion effect: Self-control does not seem to rely on a
+   limited resource", Journal of Experimental Psychology: General 144(4). NOT READ.
+K4 Martin S. Hagger, Nikos L. D. Chatzisarantis and many co-authors (2016), "A multilab
+   preregistered replication of the ego-depletion effect", Perspectives on Psychological
+   Science 11(4). Registered Replication Report. NOT READ.
+K5 Kathleen D. Vohs, Brandon J. Schmeichel and many co-authors (2021), "A multisite
+   preregistered paradigmatic test of the ego-depletion effect", Psychological Science 32(10).
+   NOT READ.
+K6 Junhua Dang and co-authors (2021), "A multilab replication of the ego depletion effect",
+   Social Psychological and Personality Science 12(1). NOT READ.
+K7 Junhua Dang (2018), "An updated meta-analysis of the ego depletion effect", Psychological
+   Research 82. NOT READ.
+K8 Matthew T. Gailliot, Roy F. Baumeister and co-authors (2007), "Self-control relies on glucose
+   as a limited energy source: willpower is more than a metaphor", JPSP 92(2). Mechanism test by
+   the authors' group. NOT READ.
+K9 Veronika Job, Carol S. Dweck and Gregory M. Walton (2010), "Ego depletion—is it all in your
+   head? Implicit theories about willpower affect self-regulation", Psychological Science
+   21(11). Moderator / rival (beliefs). NOT READ.
+K10 Michael Inzlicht and Brandon J. Schmeichel (2012), "What is ego depletion? Toward a
+   mechanistic revision of the resource model of self-control", Perspectives on Psychological
+   Science 7(5). Rival process model (motivation/attention). NOT READ.
+K11 Roy F. Baumeister and Kathleen D. Vohs (2016), "Misguided effort with elusive implications",
+   Perspectives on Psychological Science 11(4). Authors' response to the RRR. NOT READ.
+K12 Robert Kurzban (2010), "Does the brain consume additional glucose during self-control
+   tasks?", Evolutionary Psychology 8(2). Critique of the glucose mechanism. NOT READ.
+
+LOCK: These expectations are not to be revised after Stage 1. Departures will be reported in
+the final assessment as observed outcomes, not edited here.

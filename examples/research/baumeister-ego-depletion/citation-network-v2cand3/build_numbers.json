@@ -1,0 +1,170 @@
+{
+ "E": 113,
+ "dens": "4.61%",
+ "FC": [
+  "N06",
+  "N09",
+  "N19",
+  "N26",
+  "N28",
+  "N29",
+  "N33",
+  "N36",
+  "N38",
+  "N41"
+ ],
+ "fc_in": 62,
+ "nonfc_to_fc": 46,
+ "indeg": [
+  [
+   "N19",
+   22
+  ],
+  [
+   "N06",
+   15
+  ],
+  [
+   "N41",
+   10
+  ],
+  [
+   "N01",
+   9
+  ],
+  [
+   "N16",
+   6
+  ],
+  [
+   "N31",
+   5
+  ],
+  [
+   "N49",
+   4
+  ],
+  [
+   "N09",
+   4
+  ],
+  [
+   "N33",
+   4
+  ],
+  [
+   "N08",
+   3
+  ],
+  [
+   "N34",
+   3
+  ],
+  [
+   "N23",
+   3
+  ]
+ ],
+ "cov": {
+  "RECEPTION-1": [
+   22,
+   50
+  ],
+  "RECENT-1": [
+   12,
+   25
+  ],
+  "ADJUDICATION-1": [
+   21,
+   59
+  ]
+ },
+ "relc": {
+  "MENTIONS": 10,
+  "SUPPORTS": 5,
+  "PREMISE": 5,
+  "QUALIFIES": 1,
+  "CHALLENGES": 1
+ },
+ "relr": {
+  "MENTIONS": 5,
+  "PREMISE": 6,
+  "QUALIFIES": 1
+ },
+ "COMP": {
+  "I15": [
+   "ADJACENT=32; BACKGROUND=3; DIRECT=24",
+   59
+  ],
+  "I16": [
+   "COMMENTARY=3; INDEPENDENT-DATA=28; REANALYSIS=4; REVIEW=19; THEORY=5",
+   59
+  ],
+  "I17": [
+   "ADJACENT=20; BACKGROUND=27; DIRECT=3",
+   50
+  ]
+ },
+ "kept": [
+  "N27",
+  "N41",
+  "N42",
+  "N44"
+ ],
+ "rc_fc": 13,
+ "rc_crit": 8,
+ "rc_riv": 6,
+ "rc_fc_nocrit": [
+  "R04",
+  "R06",
+  "R09",
+  "R13",
+  "R21",
+  "R24"
+ ],
+ "rc_hub": {
+  "N06": 6,
+  "N09": 7,
+  "N19": 3,
+  "N16": 5
+ },
+ "post": 3,
+ "post_crit": 1,
+ "rec_N19": 22,
+ "rec_N06": 15,
+ "sec_cited": 0,
+ "dirs": {
+  "DIRECT (L2)": 9,
+  "DIRECT (R1)": 5,
+  "DIRECT (L3)": 4,
+  "DIRECT (R2)": 2,
+  "DIRECT (R3)": 2,
+  "DIRECT (R4)": 2
+ },
+ "venue": [
+  [
+   "Journal of Personality and Social Psychology",
+   7
+  ],
+  [
+   "Psychological Bulletin",
+   6
+  ],
+  [
+   "Perspectives on Psychological Science",
+   4
+  ],
+  [
+   "Journal of Applied Psychology",
+   3
+  ],
+  [
+   "Review of General Psychology",
+   2
+  ],
+  [
+   "Journal of Occupational Health Psychology",
+   2
+  ]
+ ]
+}

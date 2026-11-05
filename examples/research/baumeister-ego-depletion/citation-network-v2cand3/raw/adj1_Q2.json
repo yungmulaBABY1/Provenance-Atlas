@@ -1,0 +1,5528 @@
+{
+ "meta": {
+  "notice": "No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address. The mailto parameter doesn't raise this limit. Get a free key with its own $1/day at https://openalex.org/settings/api and add api_key=YOUR_KEY to your requests. An AI agent can get one for its user in one call: POST https://api.openalex.org/api-keys with {\"email\": \"<your user's email>\"}; we email them a link, and the key works once they click it. Docs for agents: https://help.openalex.org/llms.txt",
+  "count": 39,
+  "db_response_time_ms": 70,
+  "page": 1,
+  "per_page": 10,
+  "groups_count": null,
+  "x_query": {
+   "oql": "get works from 1998-01-01 through 2026-11-05 with (stemmed \"ego depletion\" AND (stemmed \"meta-analysis\" OR stemmed \"publication bias\" OR stemmed \"small-study\")) in the title or abstract where type is ([article](article) or [book-chapter](book-chapter) or [preprint](preprint) or [review](review))",
+   "x_new_oql": "get works from 1998-01-01 through 2026-11-05 with (stemmed \"ego depletion\" AND (stemmed \"meta-analysis\" OR stemmed \"publication bias\" OR stemmed \"small-study\")) in the title or abstract where type is ([article](article) or [book-chapter](book-chapter) or [preprint](preprint) or [review](review))",
+   "oqo": {
+    "get_rows": "works",
+    "filter_rows": [
+     {
+      "column_id": "from_publication_date",
+      "value": "1998-01-01"
+     },
+     {
+      "column_id": "title_and_abstract.search",
+      "value": "\"ego depletion\"",
+      "operator": "has"
+     },
+     {
+      "column_id": "to_publication_date",
+      "value": "2026-11-05"
+     },
+     {
+      "join": "or",
+      "filters": [
+       {
+        "column_id": "title_and_abstract.search",
+        "value": "\"meta-analysis\"",
+        "operator": "has"
+       },
+       {
+        "column_id": "title_and_abstract.search",
+        "value": "\"publication bias\"",
+        "operator": "has"
+       },
+       {
+        "column_id": "title_and_abstract.search",
+        "value": "\"small-study\"",
+        "operator": "has"
+       }
+      ]
+     },
+     {
+      "join": "or",
+      "filters": [
+       {
+        "column_id": "type",
+        "value": "article"
+       },
+       {
+        "column_id": "type",
+        "value": "book-chapter"
+       },
+       {
+        "column_id": "type",
+        "value": "preprint"
+       },
+       {
+        "column_id": "type",
+        "value": "review"
+       }
+      ]
+     }
+    ]
+   },
+   "url": "/works?filter=from_publication_date:1998-01-01,title_and_abstract.search:%22ego depletion%22,to_publication_date:2026-11-05,title_and_abstract.search:%22meta-analysis%22|%22publication bias%22|%22small-study%22,type:article|book-chapter|preprint|review&per_page=10",
+   "order": "best matches first",
+   "order_default": true
+  },
+  "cost_usd": 0.001
+ },
+ "results": [
+  {
+   "id": "https://openalex.org/W2604293295",
+   "doi": "https://doi.org/10.1007/s00426-017-0862-x",
+   "display_name": "An updated meta-analysis of the ego depletion effect",
+   "publication_year": 2017,
+   "type": "review",
+   "cited_by_count": 185,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5006604117",
+      "display_name": "Junhua Dang",
+      "orcid": "https://orcid.org/0000-0002-0194-8608",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-0194-8608"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I187531555",
+       "display_name": "Lund University",
+       "ror": "https://ror.org/012a77v79",
+       "country_code": "SE",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I187531555"
+       ]
+      }
+     ],
+     "countries": [
+      "SE"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Junhua Dang",
+     "raw_affiliation_strings": [
+      "Department of Psychology, Lund University, Paradisgatan 5 P, Lund, 22100, Sweden. Junhua.Dang@psy.lu.se",
+      "Department of Psychology, Lund University, Paradisgatan 5 P, Lund, 22100, Sweden"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Psychology, Lund University, Paradisgatan 5 P, Lund, 22100, Sweden. Junhua.Dang@psy.lu.se",
+       "institution_ids": [
+        "https://openalex.org/I187531555"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Department of Psychology, Lund University, Paradisgatan 5 P, Lund, 22100, Sweden",
+       "institution_ids": [
+        "https://openalex.org/I187531555"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1007/s00426-017-0862-x",
+    "doi": "https://doi.org/10.1007/s00426-017-0862-x",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.1007/s00426-017-0862-x",
+    "pdf_url": "https://link.springer.com/content/pdf/10.1007/s00426-017-0862-x.pdf",
+    "source": {
+     "id": "https://openalex.org/S35819839",
+     "display_name": "Psychological Research",
+     "issn_l": "0033-3026",
+     "issn": [
+      "0033-3026",
+      "0340-0727",
+      "1430-2772"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "abdc-a",
+      "anvur-scientific",
+      "cwts-core",
+      "dongbi-b",
+      "erih-plus",
+      "jufo-1",
+      "ki-jl-1",
+      "medline",
+      "norway-1",
+      "poland-70",
+      "russia-white-list-2",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310319900",
+     "host_organization_name": "Springer Science+Business Media",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310319900",
+      "https://openalex.org/P4310319965"
+     ],
+     "host_organization_lineage_names": [
+      "Springer Science+Business Media",
+      "Springer Nature"
+     ],
+     "type": "journal"
+    },
+    "license": "cc-by",
+    "license_id": "https://openalex.org/licenses/cc-by",
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Psychological Research",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W71228264",
+    "https://openalex.org/W1992433314",
+    "https://openalex.org/W2031555777",
+    "https://openalex.org/W2060763381",
+    "https://openalex.org/W2090750870",
+    "https://openalex.org/W2103834847",
+    "https://openalex.org/W2108897328",
+    "https://openalex.org/W2113390049",
+    "https://openalex.org/W2123817056",
+    "https://openalex.org/W2134469114",
+    "https://openalex.org/W2136015137",
+    "https://openalex.org/W2186516452",
+    "https://openalex.org/W2289100683",
+    "https://openalex.org/W2484225033",
+    "https://openalex.org/W2494547248",
+    "https://openalex.org/W2499154041",
+    "https://openalex.org/W2751243320",
+    "https://openalex.org/W4297918764"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W2060763381",
+   "doi": "https://doi.org/10.1037/a0019486",
+   "display_name": "Ego depletion and the strength model of self-control: A meta-analysis.",
+   "publication_year": 2010,
+   "type": "article",
+   "cited_by_count": 2298,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5057291202",
+      "display_name": "Martin S. Hagger",
+      "orcid": "https://orcid.org/0000-0002-2685-1546",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-2685-1546"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I142263535",
+       "display_name": "University of Nottingham",
+       "ror": "https://ror.org/01ee9ar58",
+       "country_code": "GB",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I142263535"
+       ]
+      }
+     ],
+     "countries": [
+      "GB"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Martin S. Hagger",
+     "raw_affiliation_strings": [
+      "School of Psychology, University of Nottingham, Nottingham, Nottinghamshire, United Kingdom. martin.hagger@nottingham.ac.uk",
+      "School of Psychology, University of Nottingham, Nottingham, NTT, United Kingdom"
+     ],
+     "raw_orcid": "https://orcid.org/0000-0002-2685-1546",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "School of Psychology, University of Nottingham, Nottingham, Nottinghamshire, United Kingdom. martin.hagger@nottingham.ac.uk",
+       "institution_ids": [
+        "https://openalex.org/I142263535"
+       ]
+      },
+      {
+       "raw_affiliation_string": "School of Psychology, University of Nottingham, Nottingham, NTT, United Kingdom",
+       "institution_ids": [
+        "https://openalex.org/I142263535"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5000415054",
+      "display_name": "Chantelle Wood",
+      "orcid": "https://orcid.org/0000-0001-6451-7859",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-6451-7859"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I142263535",
+       "display_name": "University of Nottingham",
+       "ror": "https://ror.org/01ee9ar58",
+       "country_code": "GB",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I142263535"
+       ]
+      }
+     ],
+     "countries": [
+      "GB"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Chantelle Wood",
+     "raw_affiliation_strings": [
+      "School of Psychology, University of Nottingham, Nottingham, NTT, United Kingdom"
+     ],
+     "raw_orcid": "https://orcid.org/0000-0001-6451-7859",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "School of Psychology, University of Nottingham, Nottingham, NTT, United Kingdom",
+       "institution_ids": [
+        "https://openalex.org/I142263535"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5085947902",
+      "display_name": "Chris Stiff",
+      "orcid": "https://orcid.org/0000-0002-5342-0274",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-5342-0274"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I142263535",
+       "display_name": "University of Nottingham",
+       "ror": "https://ror.org/01ee9ar58",
+       "country_code": "GB",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I142263535"
+       ]
+      }
+     ],
+     "countries": [
+      "GB"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Chris Stiff",
+     "raw_affiliation_strings": [
+      "School of Psychology, University of Nottingham, Nottingham, NTT, United Kingdom"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "School of Psychology, University of Nottingham, Nottingham, NTT, United Kingdom",
+       "institution_ids": [
+        "https://openalex.org/I142263535"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5038009996",
+      "display_name": "Nikos L. D. Chatzisarantis",
+      "orcid": "https://orcid.org/0000-0001-7059-6805",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-7059-6805"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I172675005",
+       "display_name": "Nanyang Technological University",
+       "ror": "https://ror.org/02e7b5302",
+       "country_code": "SG",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I172675005"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I194744927",
+       "display_name": "National Institute of Education",
+       "ror": "https://ror.org/02fhgbp51",
+       "country_code": "SG",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I172675005",
+        "https://openalex.org/I194744927"
+       ]
+      }
+     ],
+     "countries": [
+      "SG"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Nikos L. D. Chatzisarantis",
+     "raw_affiliation_strings": [
+      "National Institute of Education, Nanyang Technical University, Singapore"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "National Institute of Education, Nanyang Technical University, Singapore",
+       "institution_ids": [
+        "https://openalex.org/I172675005",
+        "https://openalex.org/I194744927"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1037/a0019486",
+    "doi": "https://doi.org/10.1037/a0019486",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1037/a0019486",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S75627607",
+     "display_name": "Psychological Bulletin",
+     "issn_l": "0033-2909",
+     "issn": [
+      "0033-2909",
+      "1939-1455"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "abdc-a-star",
+      "anvur-scientific",
+      "cwts-core",
+      "dongbi-a",
+      "erih-plus",
+      "jufo-3",
+      "ki-jl-2",
+      "medline",
+      "norway-2",
+      "poland-200",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320262",
+     "host_organization_name": "American Psychological Association",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320262"
+     ],
+     "host_organization_lineage_names": [
+      "American Psychological Association"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Psychological Bulletin",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W3124686",
+    "https://openalex.org/W16723540",
+    "https://openalex.org/W171375216",
+    "https://openalex.org/W173217656",
+    "https://openalex.org/W206314563",
+    "https://openalex.org/W1504946553",
+    "https://openalex.org/W1511920456",
+    "https://openalex.org/W1517229207",
+    "https://openalex.org/W1600000079",
+    "https://openalex.org/W1688595998",
+    "https://openalex.org/W1723155957",
+    "https://openalex.org/W1854040280",
+    "https://openalex.org/W1857029958",
+    "https://openalex.org/W1966401421",
+    "https://openalex.org/W1966891611",
+    "https://openalex.org/W1967023094",
+    "https://openalex.org/W1967859970",
+    "https://openalex.org/W1967979063",
+    "https://openalex.org/W1969233283",
+    "https://openalex.org/W1970655212",
+    "https://openalex.org/W1970671664",
+    "https://openalex.org/W1971287708",
+    "https://openalex.org/W1974108058",
+    "https://openalex.org/W1975989187",
+    "https://openalex.org/W1977835193",
+    "https://openalex.org/W1979583539",
+    "https://openalex.org/W1983786736",
+    "https://openalex.org/W1984355279",
+    "https://openalex.org/W1986452344",
+    "https://openalex.org/W1988113868",
+    "https://openalex.org/W1990980558",
+    "https://openalex.org/W1992322615",
+    "https://openalex.org/W1992433314",
+    "https://openalex.org/W1992744669",
+    "https://openalex.org/W1994338024",
+    "https://openalex.org/W1995721365",
+    "https://openalex.org/W1996328891",
+    "https://openalex.org/W1996714358",
+    "https://openalex.org/W1997337411",
+    "https://openalex.org/W1997548126",
+    "https://openalex.org/W1999649023",
+    "https://openalex.org/W2002314058",
+    "https://openalex.org/W2003483232",
+    "https://openalex.org/W2004576346",
+    "https://openalex.org/W2004704125",
+    "https://openalex.org/W2005477454",
+    "https://openalex.org/W2006619603",
+    "https://openalex.org/W2007739397",
+    "https://openalex.org/W2008157835",
+    "https://openalex.org/W2009113178",
+    "https://openalex.org/W2009770437",
+    "https://openalex.org/W2011620338",
+    "https://openalex.org/W2012281587",
+    "https://openalex.org/W2012371206",
+    "https://openalex.org/W2014944622",
+    "https://openalex.org/W2015076196",
+    "https://openalex.org/W2015555517",
+    "https://openalex.org/W2016187149",
+    "https://openalex.org/W2017656020",
+    "https://openalex.org/W2018488045",
+    "https://openalex.org/W2018913979",
+    "https://openalex.org/W2020191227",
+    "https://openalex.org/W2022490769",
+    "https://openalex.org/W2023829956",
+    "https://openalex.org/W2024351077",
+    "https://openalex.org/W2024368456",
+    "https://openalex.org/W2025617882",
+    "https://openalex.org/W2027313579",
+    "https://openalex.org/W2031227788",
+    "https://openalex.org/W2031540326",
+    "https://openalex.org/W2033837921",
+    "https://openalex.org/W2036652101",
+    "https://openalex.org/W2036738818",
+    "https://openalex.org/W2037124948",
+    "https://openalex.org/W2037338622",
+    "https://openalex.org/W2039629033",
+    "https://openalex.org/W2040518779",
+    "https://openalex.org/W2042279182",
+    "https://openalex.org/W2043326387",
+    "https://openalex.org/W2044537605",
+    "https://openalex.org/W2044754442",
+    "https://openalex.org/W2044928313",
+    "https://openalex.org/W2045345523",
+    "https://openalex.org/W2046633367",
+    "https://openalex.org/W2047672958",
+    "https://openalex.org/W2050517694",
+    "https://openalex.org/W2056972503",
+    "https://openalex.org/W2057244545",
+    "https://openalex.org/W2058738343",
+    "https://openalex.org/W2061583500",
+    "https://openalex.org/W2061600289",
+    "https://openalex.org/W2062046273",
+    "https://openalex.org/W2062189119",
+    "https://openalex.org/W2064517867",
+    "https://openalex.org/W2065082257",
+    "https://openalex.org/W2067651430",
+    "https://openalex.org/W2069556893",
+    "https://openalex.org/W2069799520",
+    "https://openalex.org/W2071226957",
+    "https://openalex.org/W2073528135",
+    "https://openalex.org/W2076774753",
+    "https://openalex.org/W2088276883",
+    "https://openalex.org/W2088614104",
+    "https://openalex.org/W2088982663",
+    "https://openalex.org/W2090623954",
+    "https://openalex.org/W2094832470",
+    "https://openalex.org/W2096446536",
+    "https://openalex.org/W2096782516",
+    "https://openalex.org/W2101888660",
+    "https://openalex.org/W2103443185",
+    "https://openalex.org/W2103902275",
+    "https://openalex.org/W2106816187",
+    "https://openalex.org/W2106858590",
+    "https://openalex.org/W2107031757",
+    "https://openalex.org/W2108897328",
+    "https://openalex.org/W2109861317",
+    "https://openalex.org/W2112868206",
+    "https://openalex.org/W2113390049",
+    "https://openalex.org/W2114862369",
+    "https://openalex.org/W2117200377",
+    "https://openalex.org/W2118796101",
+    "https://openalex.org/W2119061952",
+    "https://openalex.org/W2120357670",
+    "https://openalex.org/W2120700180",
+    "https://openalex.org/W2123358705",
+    "https://openalex.org/W2123376091",
+    "https://openalex.org/W2123523473",
+    "https://openalex.org/W2123817056",
+    "https://openalex.org/W2124524195",
+    "https://openalex.org/W2124831657",
+    "https://openalex.org/W2125068113",
+    "https://openalex.org/W2125435699",
+    "https://openalex.org/W2125460170",
+    "https://openalex.org/W2126784370",
+    "https://openalex.org/W2126831721",
+    "https://openalex.org/W2126930838",
+    "https://openalex.org/W2129656608",
+    "https://openalex.org/W2129844115",
+    "https://openalex.org/W2131346371",
+    "https://openalex.org/W2131376805",
+    "https://openalex.org/W2131584527",
+    "https://openalex.org/W2132175441",
+    "https://openalex.org/W2133683614",
+    "https://openalex.org/W2134077691",
+    "https://openalex.org/W2134469114",
+    "https://openalex.org/W2134537068",
+    "https://openalex.org/W2134882159",
+    "https://openalex.org/W2136453049",
+    "https://openalex.org/W2138715619",
+    "https://openalex.org/W2140401578",
+    "https://openalex.org/W2141076134",
+    "https://openalex.org/W2141874699",
+    "https://openalex.org/W2143505359",
+    "https://openalex.org/W2146569853",
+    "https://openalex.org/W2148905283",
+    "https://openalex.org/W2150495553",
+    "https://openalex.org/W2152831629",
+    "https://openalex.org/W2153525033",
+    "https://openalex.org/W2153873230",
+    "https://openalex.org/W2153950939",
+    "https://openalex.org/W2154720372",
+    "https://openalex.org/W2157858098",
+    "https://openalex.org/W2159537095",
+    "https://openalex.org/W2159680570",
+    "https://openalex.org/W2160506388",
+    "https://openalex.org/W2161078751",
+    "https://openalex.org/W2162571494",
+    "https://openalex.org/W2162717534",
+    "https://openalex.org/W2162932673",
+    "https://openalex.org/W2163179304",
+    "https://openalex.org/W2164030952",
+    "https://openalex.org/W2166254025",
+    "https://openalex.org/W2168592337",
+    "https://openalex.org/W2172195574",
+    "https://openalex.org/W2172292046",
+    "https://openalex.org/W2313304565",
+    "https://openalex.org/W2323132578",
+    "https://openalex.org/W2904580421",
+    "https://openalex.org/W2920897010",
+    "https://openalex.org/W2954450010",
+    "https://openalex.org/W3172175068",
+    "https://openalex.org/W4231054364",
+    "https://openalex.org/W4246490679",
+    "https://openalex.org/W4321429508"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W2007393966",
+   "doi": "https://doi.org/10.3389/fpsyg.2014.00823",
+   "display_name": "Publication bias and the limited strength model of self-control: has the evidence for ego depletion been overestimated?",
+   "publication_year": 2014,
+   "type": "article",
+   "cited_by_count": 394,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5042053889",
+      "display_name": "Evan C. Carter",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I130238516",
+       "display_name": "University of Minnesota",
+       "ror": "https://ror.org/017zqws13",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I130238516"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I145608581",
+       "display_name": "University of Miami",
+       "ror": "https://ror.org/02dgjyy92",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I145608581"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Evan C. Carter",
+     "raw_affiliation_strings": [
+      "Department of Psychology, University of Miami Coral Gables, FL, USA ; Department of Ecology, Evolution and Behavior, University of Minnesota St. Paul, MN, USA",
+      "Department of Ecology, Evolution and Behavior, University of Minnesota, St. Paul, MN, USA",
+      "Department of Psychology, University of Miami, Coral Gables, FL, USA"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Psychology, University of Miami Coral Gables, FL, USA ; Department of Ecology, Evolution and Behavior, University of Minnesota St. Paul, MN, USA",
+       "institution_ids": [
+        "https://openalex.org/I130238516",
+        "https://openalex.org/I145608581"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Department of Ecology, Evolution and Behavior, University of Minnesota, St. Paul, MN, USA",
+       "institution_ids": [
+        "https://openalex.org/I130238516"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Department of Psychology, University of Miami, Coral Gables, FL, USA",
+       "institution_ids": [
+        "https://openalex.org/I145608581"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5060868512",
+      "display_name": "Michael E. McCullough",
+      "orcid": "https://orcid.org/0000-0001-9833-2713",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-9833-2713"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I145608581",
+       "display_name": "University of Miami",
+       "ror": "https://ror.org/02dgjyy92",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I145608581"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Michael E. McCullough",
+     "raw_affiliation_strings": [
+      "Department of Psychology, University of Miami Coral Gables, FL, USA"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Psychology, University of Miami Coral Gables, FL, USA",
+       "institution_ids": [
+        "https://openalex.org/I145608581"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.3389/fpsyg.2014.00823",
+    "doi": "https://doi.org/10.3389/fpsyg.2014.00823",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.3389/fpsyg.2014.00823",
+    "pdf_url": "https://www.frontiersin.org/articles/10.3389/fpsyg.2014.00823/pdf",
+    "source": {
+     "id": "https://openalex.org/S9692511",
+     "display_name": "Frontiers in Psychology",
+     "issn_l": "1664-1078",
+     "issn": [
+      "1664-1078"
+     ],
+     "is_oa": true,
+     "is_in_doaj": true,
+     "is_core": true,
+     "listed_in": [
+      "anvur-class-a",
+      "anvur-scientific",
+      "cwts-core",
+      "doaj",
+      "erih-plus",
+      "jufo-1",
+      "ki-jl-1",
+      "norway-1",
+      "poland-70",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320527",
+     "host_organization_name": "Frontiers Media",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320527"
+     ],
+     "host_organization_lineage_names": [
+      "Frontiers Media"
+     ],
+     "type": "journal"
+    },
+    "license": "cc-by",
+    "license_id": "https://openalex.org/licenses/cc-by",
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Frontiers in Psychology",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W1562382750",
+    "https://openalex.org/W1581410893",
+    "https://openalex.org/W1864180066",
+    "https://openalex.org/W1882613797",
+    "https://openalex.org/W1927062906",
+    "https://openalex.org/W1970128129",
+    "https://openalex.org/W1989768409",
+    "https://openalex.org/W2000141755",
+    "https://openalex.org/W2012612036",
+    "https://openalex.org/W2019912048",
+    "https://openalex.org/W2028299022",
+    "https://openalex.org/W2032148629",
+    "https://openalex.org/W2033585778",
+    "https://openalex.org/W2035540416",
+    "https://openalex.org/W2036652101",
+    "https://openalex.org/W2038886783",
+    "https://openalex.org/W2040708445",
+    "https://openalex.org/W2040766195",
+    "https://openalex.org/W2043565183",
+    "https://openalex.org/W2050416144",
+    "https://openalex.org/W2057905708",
+    "https://openalex.org/W2060763381",
+    "https://openalex.org/W2063738853",
+    "https://openalex.org/W2067141886",
+    "https://openalex.org/W2069224123",
+    "https://openalex.org/W2073677120",
+    "https://openalex.org/W2089403045",
+    "https://openalex.org/W2097579911",
+    "https://openalex.org/W2098907700",
+    "https://openalex.org/W2100267603",
+    "https://openalex.org/W2102532945",
+    "https://openalex.org/W2108897328",
+    "https://openalex.org/W2110476643",
+    "https://openalex.org/W2116153150",
+    "https://openalex.org/W2116574052",
+    "https://openalex.org/W2116618538",
+    "https://openalex.org/W2118617601",
+    "https://openalex.org/W2119605658",
+    "https://openalex.org/W2120819732",
+    "https://openalex.org/W2123353886",
+    "https://openalex.org/W2123817056",
+    "https://openalex.org/W2124519965",
+    "https://openalex.org/W2126930838",
+    "https://openalex.org/W2131584527",
+    "https://openalex.org/W2134469114",
+    "https://openalex.org/W2136015137",
+    "https://openalex.org/W2144112749",
+    "https://openalex.org/W2148608679",
+    "https://openalex.org/W2157668596",
+    "https://openalex.org/W2157823046",
+    "https://openalex.org/W2158647686",
+    "https://openalex.org/W2161498332",
+    "https://openalex.org/W2164093802",
+    "https://openalex.org/W2164150544",
+    "https://openalex.org/W2164682760",
+    "https://openalex.org/W2165879934",
+    "https://openalex.org/W2168718800",
+    "https://openalex.org/W2169629898",
+    "https://openalex.org/W2582743722",
+    "https://openalex.org/W3124690569",
+    "https://openalex.org/W3125384312",
+    "https://openalex.org/W3147014656",
+    "https://openalex.org/W3172175068",
+    "https://openalex.org/W4213456951",
+    "https://openalex.org/W4235924712"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W2984573913",
+   "doi": "https://doi.org/10.1016/j.peh.2019.100150",
+   "display_name": "The effect of ego depletion or mental fatigue on subsequent physical endurance performance: A meta-analysis",
+   "publication_year": 2019,
+   "type": "review",
+   "cited_by_count": 154,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5012007640",
+      "display_name": "Louis‐Solal Giboin",
+      "orcid": "https://orcid.org/0000-0003-4396-8225",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-4396-8225"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I189712700",
+       "display_name": "University of Konstanz",
+       "ror": "https://ror.org/0546hnb39",
+       "country_code": "DE",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I189712700"
+       ]
+      }
+     ],
+     "countries": [
+      "DE"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Louis-Solal Giboin",
+     "raw_affiliation_strings": [
+      "Sensorimotor Performance Lab, Human Performance Research Centre, University of Konstanz, Germany"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Sensorimotor Performance Lab, Human Performance Research Centre, University of Konstanz, Germany",
+       "institution_ids": [
+        "https://openalex.org/I189712700"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5017569540",
+      "display_name": "Wanja Wolff",
+      "orcid": "https://orcid.org/0000-0001-8130-0272",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-8130-0272"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I118564535",
+       "display_name": "University of Bern",
+       "ror": "https://ror.org/02k7v4d05",
+       "country_code": "CH",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I118564535"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I189712700",
+       "display_name": "University of Konstanz",
+       "ror": "https://ror.org/0546hnb39",
+       "country_code": "DE",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I189712700"
+       ]
+      }
+     ],
+     "countries": [
+      "CH",
+      "DE"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Wanja Wolff",
+     "raw_affiliation_strings": [
+      "University of Bern, Department of Educational Psychology, Bern, Switzerland",
+      "University of Konstanz, Department of Sport Science, Sport Psychology, Germany"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "University of Bern, Department of Educational Psychology, Bern, Switzerland",
+       "institution_ids": [
+        "https://openalex.org/I118564535"
+       ]
+      },
+      {
+       "raw_affiliation_string": "University of Konstanz, Department of Sport Science, Sport Psychology, Germany",
+       "institution_ids": [
+        "https://openalex.org/I189712700"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1016/j.peh.2019.100150",
+    "doi": "https://doi.org/10.1016/j.peh.2019.100150",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1016/j.peh.2019.100150",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S2764777161",
+     "display_name": "Performance Enhancement & Health",
+     "issn_l": "2211-2669",
+     "issn": [
+      "2211-2669"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "cwts-core",
+      "dongbi-d",
+      "jufo-1",
+      "norway-1",
+      "poland-40",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320990",
+     "host_organization_name": "Elsevier BV",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320990"
+     ],
+     "host_organization_lineage_names": [
+      "Elsevier BV"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Performance Enhancement &amp; Health",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W13437719",
+    "https://openalex.org/W1137407773",
+    "https://openalex.org/W1491721220",
+    "https://openalex.org/W1532906348",
+    "https://openalex.org/W1598602811",
+    "https://openalex.org/W1720333833",
+    "https://openalex.org/W1838223761",
+    "https://openalex.org/W1964647816",
+    "https://openalex.org/W1982434152",
+    "https://openalex.org/W1988287306",
+    "https://openalex.org/W1992322615",
+    "https://openalex.org/W1995190455",
+    "https://openalex.org/W1996248830",
+    "https://openalex.org/W1997267053",
+    "https://openalex.org/W2005323615",
+    "https://openalex.org/W2006366990",
+    "https://openalex.org/W2013068849",
+    "https://openalex.org/W2014453502",
+    "https://openalex.org/W2018488045",
+    "https://openalex.org/W2026173079",
+    "https://openalex.org/W2031474948",
+    "https://openalex.org/W2041967587",
+    "https://openalex.org/W2046566443",
+    "https://openalex.org/W2050384607",
+    "https://openalex.org/W2052297276",
+    "https://openalex.org/W2060763381",
+    "https://openalex.org/W2061005379",
+    "https://openalex.org/W2076029586",
+    "https://openalex.org/W2083725346",
+    "https://openalex.org/W2105687755",
+    "https://openalex.org/W2105824687",
+    "https://openalex.org/W2109887283",
+    "https://openalex.org/W2114494142",
+    "https://openalex.org/W2117553976",
+    "https://openalex.org/W2118108696",
+    "https://openalex.org/W2125068113",
+    "https://openalex.org/W2125435699",
+    "https://openalex.org/W2126718722",
+    "https://openalex.org/W2126930838",
+    "https://openalex.org/W2130594379",
+    "https://openalex.org/W2134077691",
+    "https://openalex.org/W2134469114",
+    "https://openalex.org/W2135272506",
+    "https://openalex.org/W2141076134",
+    "https://openalex.org/W2143594200",
+    "https://openalex.org/W2144980029",
+    "https://openalex.org/W2145155297",
+    "https://openalex.org/W2151315308",
+    "https://openalex.org/W2156098321",
+    "https://openalex.org/W2167382627",
+    "https://openalex.org/W2217129899",
+    "https://openalex.org/W2220131028",
+    "https://openalex.org/W2274591123",
+    "https://openalex.org/W2297195260",
+    "https://openalex.org/W2301647011",
+    "https://openalex.org/W2464442807",
+    "https://openalex.org/W2499154041",
+    "https://openalex.org/W2500474003",
+    "https://openalex.org/W2515839452",
+    "https://openalex.org/W2525718045",
+    "https://openalex.org/W2527448328",
+    "https://openalex.org/W2527604003",
+    "https://openalex.org/W2538029607",
+    "https://openalex.org/W2563742216",
+    "https://openalex.org/W2593153671",
+    "https://openalex.org/W2593685149",
+    "https://openalex.org/W2600886565",
+    "https://openalex.org/W2620631745",
+    "https://openalex.org/W2727895845",
+    "https://openalex.org/W2735498619",
+    "https://openalex.org/W2757965623",
+    "https://openalex.org/W2767454217",
+    "https://openalex.org/W2777924741",
+    "https://openalex.org/W2786277287",
+    "https://openalex.org/W2787001020",
+    "https://openalex.org/W2787887681",
+    "https://openalex.org/W2792752952",
+    "https://openalex.org/W2792966579",
+    "https://openalex.org/W2801424895",
+    "https://openalex.org/W2810018031",
+    "https://openalex.org/W2810843790",
+    "https://openalex.org/W2836146784",
+    "https://openalex.org/W2885415258",
+    "https://openalex.org/W2889297542",
+    "https://openalex.org/W2890001938",
+    "https://openalex.org/W2893842868",
+    "https://openalex.org/W2897216035",
+    "https://openalex.org/W2898552719",
+    "https://openalex.org/W2901072692",
+    "https://openalex.org/W2902097346",
+    "https://openalex.org/W2922454775",
+    "https://openalex.org/W2931164202",
+    "https://openalex.org/W2941343729",
+    "https://openalex.org/W2964053224",
+    "https://openalex.org/W2987127991",
+    "https://openalex.org/W2991792334",
+    "https://openalex.org/W3121900038",
+    "https://openalex.org/W3122967980",
+    "https://openalex.org/W4244406062",
+    "https://openalex.org/W4249127163",
+    "https://openalex.org/W4254504261",
+    "https://openalex.org/W4294215472",
+    "https://openalex.org/W4320164613",
+    "https://openalex.org/W4362504902"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W2794580436",
+   "doi": "https://doi.org/10.1177/1088868318762183",
+   "display_name": "Is Ego Depletion Real? An Analysis of Arguments",
+   "publication_year": 2018,
+   "type": "article",
+   "cited_by_count": 404,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5061600161",
+      "display_name": "Malte Friese",
+      "orcid": "https://orcid.org/0000-0003-0055-513X",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-0055-513X"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I91712215",
+       "display_name": "Saarland University",
+       "ror": "https://ror.org/01jdpyv68",
+       "country_code": "DE",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I91712215"
+       ]
+      }
+     ],
+     "countries": [
+      "DE"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Malte Friese",
+     "raw_affiliation_strings": [
+      "Saarland University, Saarbrücken, Germany"
+     ],
+     "raw_orcid": "https://orcid.org/0000-0003-0055-513X",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Saarland University, Saarbrücken, Germany",
+       "institution_ids": [
+        "https://openalex.org/I91712215"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5030659617",
+      "display_name": "David D. Loschelder",
+      "orcid": "https://orcid.org/0000-0001-5818-0559",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-5818-0559"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I113456305",
+       "display_name": "Leuphana University of Lüneburg",
+       "ror": "https://ror.org/02w2y2t16",
+       "country_code": "DE",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I113456305"
+       ]
+      }
+     ],
+     "countries": [
+      "DE"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "David D. Loschelder",
+     "raw_affiliation_strings": [
+      "Leuphana University of Lüneburg, Germany"
+     ],
+     "raw_orcid": "https://orcid.org/0000-0001-5818-0559",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Leuphana University of Lüneburg, Germany",
+       "institution_ids": [
+        "https://openalex.org/I113456305"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5083562723",
+      "display_name": "Karolin Gieseler",
+      "orcid": "https://orcid.org/0000-0002-6225-401X",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-6225-401X"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I91712215",
+       "display_name": "Saarland University",
+       "ror": "https://ror.org/01jdpyv68",
+       "country_code": "DE",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I91712215"
+       ]
+      }
+     ],
+     "countries": [
+      "DE"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Karolin Gieseler",
+     "raw_affiliation_strings": [
+      "Saarland University, Saarbrücken, Germany"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Saarland University, Saarbrücken, Germany",
+       "institution_ids": [
+        "https://openalex.org/I91712215"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5043782008",
+      "display_name": "Julius Frankenbach",
+      "orcid": "https://orcid.org/0000-0002-1627-8803",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-1627-8803"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I91712215",
+       "display_name": "Saarland University",
+       "ror": "https://ror.org/01jdpyv68",
+       "country_code": "DE",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I91712215"
+       ]
+      }
+     ],
+     "countries": [
+      "DE"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Julius Frankenbach",
+     "raw_affiliation_strings": [
+      "Saarland University, Saarbrücken, Germany"
+     ],
+     "raw_orcid": "https://orcid.org/0000-0002-1627-8803",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Saarland University, Saarbrücken, Germany",
+       "institution_ids": [
+        "https://openalex.org/I91712215"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5012701585",
+      "display_name": "Michael Inzlicht",
+      "orcid": "https://orcid.org/0000-0001-9297-6497",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-9297-6497"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I185261750",
+       "display_name": "University of Toronto",
+       "ror": "https://ror.org/03dbr7087",
+       "country_code": "CA",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I185261750"
+       ]
+      }
+     ],
+     "countries": [
+      "CA"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Michael Inzlicht",
+     "raw_affiliation_strings": [
+      "University of Toronto, Ontario, Canada"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "University of Toronto, Ontario, Canada",
+       "institution_ids": [
+        "https://openalex.org/I185261750"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1177/1088868318762183",
+    "doi": "https://doi.org/10.1177/1088868318762183",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1177/1088868318762183",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S37739784",
+     "display_name": "Personality and Social Psychology Review",
+     "issn_l": "1088-8683",
+     "issn": [
+      "1088-8683",
+      "1532-7957"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "cwts-core",
+      "dongbi-b",
+      "erih-plus",
+      "jufo-3",
+      "medline",
+      "norway-1",
+      "poland-200",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320017",
+     "host_organization_name": "SAGE Publishing",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320017"
+     ],
+     "host_organization_lineage_names": [
+      "SAGE Publishing"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Personality and Social Psychology Review",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W2036740",
+    "https://openalex.org/W92380343",
+    "https://openalex.org/W313647156",
+    "https://openalex.org/W1494712094",
+    "https://openalex.org/W1546584494",
+    "https://openalex.org/W1602136620",
+    "https://openalex.org/W1650809201",
+    "https://openalex.org/W1658221384",
+    "https://openalex.org/W1796053155",
+    "https://openalex.org/W1809807251",
+    "https://openalex.org/W1854040280",
+    "https://openalex.org/W1861361322",
+    "https://openalex.org/W1918210014",
+    "https://openalex.org/W1924588124",
+    "https://openalex.org/W1963526469",
+    "https://openalex.org/W1967859970",
+    "https://openalex.org/W1970128129",
+    "https://openalex.org/W1971440513",
+    "https://openalex.org/W1971819500",
+    "https://openalex.org/W1975984648",
+    "https://openalex.org/W1977717792",
+    "https://openalex.org/W1980393047",
+    "https://openalex.org/W1997809363",
+    "https://openalex.org/W1999752882",
+    "https://openalex.org/W2000141755",
+    "https://openalex.org/W2000625275",
+    "https://openalex.org/W2002314058",
+    "https://openalex.org/W2003483232",
+    "https://openalex.org/W2005477454",
+    "https://openalex.org/W2006546769",
+    "https://openalex.org/W2007393966",
+    "https://openalex.org/W2007739397",
+    "https://openalex.org/W2012120824",
+    "https://openalex.org/W2012281587",
+    "https://openalex.org/W2018415434",
+    "https://openalex.org/W2018443796",
+    "https://openalex.org/W2025996975",
+    "https://openalex.org/W2031474948",
+    "https://openalex.org/W2033585778",
+    "https://openalex.org/W2033837921",
+    "https://openalex.org/W2035578930",
+    "https://openalex.org/W2036039421",
+    "https://openalex.org/W2037470347",
+    "https://openalex.org/W2040766195",
+    "https://openalex.org/W2043852927",
+    "https://openalex.org/W2045565916",
+    "https://openalex.org/W2047672958",
+    "https://openalex.org/W2048799165",
+    "https://openalex.org/W2050316645",
+    "https://openalex.org/W2054305681",
+    "https://openalex.org/W2055799459",
+    "https://openalex.org/W2056606926",
+    "https://openalex.org/W2060763381",
+    "https://openalex.org/W2064517867",
+    "https://openalex.org/W2065082257",
+    "https://openalex.org/W2067346281",
+    "https://openalex.org/W2073528135",
+    "https://openalex.org/W2076428300",
+    "https://openalex.org/W2078057515",
+    "https://openalex.org/W2084546532",
+    "https://openalex.org/W2093193983",
+    "https://openalex.org/W2097579911",
+    "https://openalex.org/W2097662751",
+    "https://openalex.org/W2100267603",
+    "https://openalex.org/W2101888660",
+    "https://openalex.org/W2103834847",
+    "https://openalex.org/W2104505290",
+    "https://openalex.org/W2107354492",
+    "https://openalex.org/W2108897328",
+    "https://openalex.org/W2109223890",
+    "https://openalex.org/W2109861317",
+    "https://openalex.org/W2113390049",
+    "https://openalex.org/W2114385529",
+    "https://openalex.org/W2118108696",
+    "https://openalex.org/W2119392159",
+    "https://openalex.org/W2120357670",
+    "https://openalex.org/W2123232906",
+    "https://openalex.org/W2123817056",
+    "https://openalex.org/W2124524195",
+    "https://openalex.org/W2126831721",
+    "https://openalex.org/W2131376805",
+    "https://openalex.org/W2133683614",
+    "https://openalex.org/W2134469114",
+    "https://openalex.org/W2134537068",
+    "https://openalex.org/W2136015137",
+    "https://openalex.org/W2138715619",
+    "https://openalex.org/W2140857363",
+    "https://openalex.org/W2141076134",
+    "https://openalex.org/W2146954997",
+    "https://openalex.org/W2153950939",
+    "https://openalex.org/W2155478468",
+    "https://openalex.org/W2156001402",
+    "https://openalex.org/W2157668596",
+    "https://openalex.org/W2160509113",
+    "https://openalex.org/W2161498332",
+    "https://openalex.org/W2164682760",
+    "https://openalex.org/W2172132895",
+    "https://openalex.org/W2172973674",
+    "https://openalex.org/W2182796495",
+    "https://openalex.org/W2186516452",
+    "https://openalex.org/W2201659447",
+    "https://openalex.org/W2243197105",
+    "https://openalex.org/W2274591123",
+    "https://openalex.org/W2281024698",
+    "https://openalex.org/W2281113764",
+    "https://openalex.org/W2289744309",
+    "https://openalex.org/W2301876078",
+    "https://openalex.org/W2306563412",
+    "https://openalex.org/W2309662189",
+    "https://openalex.org/W2313304565",
+    "https://openalex.org/W2317541861",
+    "https://openalex.org/W2398435125",
+    "https://openalex.org/W2464442807",
+    "https://openalex.org/W2484225033",
+    "https://openalex.org/W2499154041",
+    "https://openalex.org/W2506924923",
+    "https://openalex.org/W2510735903",
+    "https://openalex.org/W2513408855",
+    "https://openalex.org/W2513456674",
+    "https://openalex.org/W2519024764",
+    "https://openalex.org/W2524737933",
+    "https://openalex.org/W2529112977",
+    "https://openalex.org/W2530800089",
+    "https://openalex.org/W2549263340",
+    "https://openalex.org/W2551431387",
+    "https://openalex.org/W2553200972",
+    "https://openalex.org/W2570760970",
+    "https://openalex.org/W2573586636",
+    "https://openalex.org/W2588069705",
+    "https://openalex.org/W2589877395",
+    "https://openalex.org/W2592574207",
+    "https://openalex.org/W2604293295",
+    "https://openalex.org/W2604804505",
+    "https://openalex.org/W2610312145",
+    "https://openalex.org/W2611463052",
+    "https://openalex.org/W2613682186",
+    "https://openalex.org/W2622390736",
+    "https://openalex.org/W2683809327",
+    "https://openalex.org/W2695681217",
+    "https://openalex.org/W2732201916",
+    "https://openalex.org/W2742357790",
+    "https://openalex.org/W2748856070",
+    "https://openalex.org/W2751243320",
+    "https://openalex.org/W2752573719",
+    "https://openalex.org/W2754671536",
+    "https://openalex.org/W2760799729",
+    "https://openalex.org/W2761837102",
+    "https://openalex.org/W2763001748",
+    "https://openalex.org/W2781957993",
+    "https://openalex.org/W2789109311",
+    "https://openalex.org/W2791944851",
+    "https://openalex.org/W2910700383",
+    "https://openalex.org/W2948136049",
+    "https://openalex.org/W3124505198",
+    "https://openalex.org/W3125052208",
+    "https://openalex.org/W3125384312",
+    "https://openalex.org/W3187771857",
+    "https://openalex.org/W4213129685",
+    "https://openalex.org/W4213329890",
+    "https://openalex.org/W4232022427",
+    "https://openalex.org/W4239513977",
+    "https://openalex.org/W4245663805",
+    "https://openalex.org/W4248007026",
+    "https://openalex.org/W4297918764"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W2499154041",
+   "doi": "https://doi.org/10.1177/1745691616652873",
+   "display_name": "A Multilab Preregistered Replication of the Ego-Depletion Effect",
+   "publication_year": 2016,
+   "type": "article",
+   "cited_by_count": 1097,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5057291202",
+      "display_name": "Martin S. Hagger",
+      "orcid": "https://orcid.org/0000-0002-2685-1546",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-2685-1546"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "M. S. Hagger",
+     "raw_affiliation_strings": [
+      "Curtin University, Australia martin.hagger@curtin.edu.au"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Curtin University, Australia martin.hagger@curtin.edu.au",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5038009996",
+      "display_name": "Nikos L. D. Chatzisarantis",
+      "orcid": "https://orcid.org/0000-0001-7059-6805",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-7059-6805"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "N. L. D. Chatzisarantis",
+     "raw_affiliation_strings": [
+      "Curtin University, Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Curtin University, Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5069375753",
+      "display_name": "Hugo J. E. M. Alberts",
+      "orcid": "https://orcid.org/0000-0001-9161-8807",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-9161-8807"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I34352273",
+       "display_name": "Maastricht University",
+       "ror": "https://ror.org/02jz4aj89",
+       "country_code": "NL",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I34352273"
+       ]
+      }
+     ],
+     "countries": [
+      "NL"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "H. Alberts",
+     "raw_affiliation_strings": [
+      "Maastricht University, the Netherlands"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Maastricht University, the Netherlands",
+       "institution_ids": [
+        "https://openalex.org/I34352273"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5069680508",
+      "display_name": "Calvin Octavianus Anggono",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I177055848",
+       "display_name": "University of Brawijaya",
+       "ror": "https://ror.org/01wk3d929",
+       "country_code": "ID",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I177055848"
+       ]
+      }
+     ],
+     "countries": [
+      "ID"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "C. O. Anggono",
+     "raw_affiliation_strings": [
+      "Brawijaya University, Indonesia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Brawijaya University, Indonesia",
+       "institution_ids": [
+        "https://openalex.org/I177055848"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5076771941",
+      "display_name": "Cédric Batailler",
+      "orcid": "https://orcid.org/0000-0003-0553-6827",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-0553-6827"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4387156268",
+       "display_name": "Laboratoire Inter-universitaire de Psychologie: Personnalité, Cognition, Changement Social",
+       "ror": "https://ror.org/03jrb0276",
+       "country_code": "FR",
+       "type": "facility",
+       "lineage": [
+        "https://openalex.org/I4387156268",
+        "https://openalex.org/I70900168",
+        "https://openalex.org/I899635006"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I70900168",
+       "display_name": "Université Savoie Mont Blanc",
+       "ror": "https://ror.org/04gqg1a07",
+       "country_code": "FR",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I70900168"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I899635006",
+       "display_name": "Université Grenoble Alpes",
+       "ror": "https://ror.org/02rx3b187",
+       "country_code": "FR",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I899635006"
+       ]
+      }
+     ],
+     "countries": [
+      "FR"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "C. Batailler",
+     "raw_affiliation_strings": [
+      "Université Grenoble-Alpes, France",
+      "LIP-PC2S  - Laboratoire Inter-universitaire de Psychologie : Personnalité, Cognition, Changement Social (Université Grenoble Alpes BP 47 – 38040 GRENOBLE Cedex 9 - FRANCE / Université Savoie Mont Blanc BP 1104 - 73011 CHAMBERY - France)"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Université Grenoble-Alpes, France",
+       "institution_ids": [
+        "https://openalex.org/I899635006"
+       ]
+      },
+      {
+       "raw_affiliation_string": "LIP-PC2S  - Laboratoire Inter-universitaire de Psychologie : Personnalité, Cognition, Changement Social (Université Grenoble Alpes BP 47 – 38040 GRENOBLE Cedex 9 - FRANCE / Université Savoie Mont Blanc BP 1104 - 73011 CHAMBERY - France)",
+       "institution_ids": [
+        "https://openalex.org/I4387156268",
+        "https://openalex.org/I70900168",
+        "https://openalex.org/I899635006"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5053852602",
+      "display_name": "Angela R. Birt",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I179301192",
+       "display_name": "Mount Saint Vincent University",
+       "ror": "https://ror.org/03g3p3b82",
+       "country_code": "CA",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I179301192"
+       ]
+      }
+     ],
+     "countries": [
+      "CA"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "A. R. Birt",
+     "raw_affiliation_strings": [
+      "Mount Saint Vincent University, Canada"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Mount Saint Vincent University, Canada",
+       "institution_ids": [
+        "https://openalex.org/I179301192"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5056991156",
+      "display_name": "Ralf Brand",
+      "orcid": "https://orcid.org/0000-0003-3143-4816",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-3143-4816"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I176453806",
+       "display_name": "University of Potsdam",
+       "ror": "https://ror.org/03bnmw459",
+       "country_code": "DE",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I176453806"
+       ]
+      }
+     ],
+     "countries": [
+      "DE"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "R. Brand",
+     "raw_affiliation_strings": [
+      "Potsdam University, Germany"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Potsdam University, Germany",
+       "institution_ids": [
+        "https://openalex.org/I176453806"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5051747676",
+      "display_name": "Muriele Brand",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I177064439",
+       "display_name": "Université de Bourgogne",
+       "ror": "https://ror.org/03k1bsr36",
+       "country_code": "FR",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I177064439",
+        "https://openalex.org/I4405253280"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I193700539",
+       "display_name": "Tilburg University",
+       "ror": "https://ror.org/04b8v1s79",
+       "country_code": "NL",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I193700539"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I4210150053",
+       "display_name": "Laboratoire d'étude de l'apprentissage et du développement",
+       "ror": "https://ror.org/04mp4zc06",
+       "country_code": "FR",
+       "type": "facility",
+       "lineage": [
+        "https://openalex.org/I1294671590",
+        "https://openalex.org/I4210096427",
+        "https://openalex.org/I4210150053",
+        "https://openalex.org/I4405253280"
+       ]
+      }
+     ],
+     "countries": [
+      "FR",
+      "NL"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "M. J. Brandt",
+     "raw_affiliation_strings": [
+      "Tilburg University, the Netherlands",
+      "LEAD - Laboratoire d'Etude de l'Apprentissage et du Développement [Dijon] (Université de Bourgogne - Pôle AAFE - Esplanade Erasme - BP 26513 - 21065 DIJON CEDEX - France)"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Tilburg University, the Netherlands",
+       "institution_ids": [
+        "https://openalex.org/I193700539"
+       ]
+      },
+      {
+       "raw_affiliation_string": "LEAD - Laboratoire d'Etude de l'Apprentissage et du Développement [Dijon] (Université de Bourgogne - Pôle AAFE - Esplanade Erasme - BP 26513 - 21065 DIJON CEDEX - France)",
+       "institution_ids": [
+        "https://openalex.org/I177064439",
+        "https://openalex.org/I4210150053"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": null,
+      "display_name": "G. Brewer",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "G. Brewer",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5075995121",
+      "display_name": "Sabrina D. Bruyneel",
+      "orcid": "https://orcid.org/0000-0002-3990-7975",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-3990-7975"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I99464096",
+       "display_name": "KU Leuven",
+       "ror": "https://ror.org/05f950310",
+       "country_code": "BE",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I99464096"
+       ]
+      }
+     ],
+     "countries": [
+      "BE"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "S. Bruyneel",
+     "raw_affiliation_strings": [
+      "KU Leuven, Belgium"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "KU Leuven, Belgium",
+       "institution_ids": [
+        "https://openalex.org/I99464096"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5035419679",
+      "display_name": "Dustin P. Calvillo",
+      "orcid": "https://orcid.org/0000-0002-6747-9605",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-6747-9605"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "D. P. Calvillo",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": null,
+      "display_name": "W. K. Campbell",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "W. K. Campbell",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5004437964",
+      "display_name": "Peter Robert Cannon",
+      "orcid": "https://orcid.org/0000-0001-9462-4292",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-9462-4292"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "P. R. Cannon",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5110502542",
+      "display_name": "Maria Concetta Carlucci",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "M. Carlucci",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5072751012",
+      "display_name": "Nicholas P. Carruth",
+      "orcid": "https://orcid.org/0000-0001-6277-2215",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-6277-2215"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "N. P. Carruth",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5051858223",
+      "display_name": "Tracy T. L. Cheung",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "T. Cheung",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5038483820",
+      "display_name": "Adrienne L. Crowell",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "A. Crowell",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5046422882",
+      "display_name": "Denise T. D. de Ridder",
+      "orcid": "https://orcid.org/0000-0002-8237-9506",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-8237-9506"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "D. T. D. De Ridder",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5087059008",
+      "display_name": "Siegfried Dewitte",
+      "orcid": "https://orcid.org/0000-0001-6010-4782",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-6010-4782"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I108839631",
+       "display_name": "Royal Meteorological Institute of Belgium",
+       "ror": "https://ror.org/058qm9p63",
+       "country_code": "BE",
+       "type": "facility",
+       "lineage": [
+        "https://openalex.org/I108839631"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I99464096",
+       "display_name": "KU Leuven",
+       "ror": "https://ror.org/05f950310",
+       "country_code": "BE",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I99464096"
+       ]
+      }
+     ],
+     "countries": [
+      "BE"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "S. Dewitte",
+     "raw_affiliation_strings": [
+      "KU Leuven, Belgium",
+      "IRM - Institut Royal Météorologique de Belgique [Bruxelles] - Royal Meteorological Institute of Belgium (Avenue Circulaire 3, B-1180 Bruxelles - Belgium)"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "KU Leuven, Belgium",
+       "institution_ids": [
+        "https://openalex.org/I99464096"
+       ]
+      },
+      {
+       "raw_affiliation_string": "IRM - Institut Royal Météorologique de Belgique [Bruxelles] - Royal Meteorological Institute of Belgium (Avenue Circulaire 3, B-1180 Bruxelles - Belgium)",
+       "institution_ids": [
+        "https://openalex.org/I108839631"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5076659092",
+      "display_name": "Malte Elson",
+      "orcid": "https://orcid.org/0000-0001-7806-9583",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-7806-9583"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "M. Elson",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5029170927",
+      "display_name": "Jacqueline Renee Evans",
+      "orcid": "https://orcid.org/0000-0002-2044-1853",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-2044-1853"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "J. R. Evans",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": null,
+      "display_name": "B. A. Fay",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "B. A. Fay",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5052480262",
+      "display_name": "Bob M. Fennis",
+      "orcid": "https://orcid.org/0000-0003-4738-7524",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-4738-7524"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "B. M. Fennis",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5010735466",
+      "display_name": "Anna J Finley",
+      "orcid": "https://orcid.org/0000-0002-0881-9147",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-0881-9147"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "A. Finley",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5007791481",
+      "display_name": "Zoë Lynn Francis",
+      "orcid": "https://orcid.org/0000-0002-9488-9132",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-9488-9132"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Z. Francis",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5050190746",
+      "display_name": "Elke Heise",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "E. Heise",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": null,
+      "display_name": "H. Hoemann",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "H. Hoemann",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5012701585",
+      "display_name": "Michael Inzlicht",
+      "orcid": "https://orcid.org/0000-0001-9297-6497",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-9297-6497"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "M. Inzlicht",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5066740344",
+      "display_name": "Sander Leon Koole",
+      "orcid": "https://orcid.org/0000-0002-3422-223X",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-3422-223X"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "S. L. Koole",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5015982835",
+      "display_name": "Lina Koppel",
+      "orcid": "https://orcid.org/0000-0002-6302-0047",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-6302-0047"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "L. Koppel",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5077034710",
+      "display_name": "Floor M. Kroese",
+      "orcid": "https://orcid.org/0000-0002-6626-483X",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-6626-483X"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "F. Kroese",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5015005998",
+      "display_name": "Florian Lange",
+      "orcid": "https://orcid.org/0000-0002-8336-5608",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-8336-5608",
+       "https://orcid.org/0000-0001-8497-7780"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "F. Lange",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+      "RMN et optique : De la mesure au biomarqueur (France)"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      },
+      {
+       "raw_affiliation_string": "RMN et optique : De la mesure au biomarqueur (France)",
+       "institution_ids": []
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5057481154",
+      "display_name": "Karen M. Lau",
+      "orcid": "https://orcid.org/0000-0002-7486-3250",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-7486-3250"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "K. Lau",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5056438138",
+      "display_name": "Patricia A. Lynch",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "B. P. Lynch",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5053479856",
+      "display_name": "Carolien Martijn",
+      "orcid": "https://orcid.org/0000-0002-1480-5980",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-1480-5980"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I34352273",
+       "display_name": "Maastricht University",
+       "ror": "https://ror.org/02jz4aj89",
+       "country_code": "NL",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I34352273"
+       ]
+      }
+     ],
+     "countries": [
+      "NL"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "C. Martijn",
+     "raw_affiliation_strings": [
+      "Maastricht University, the Netherlands"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Maastricht University, the Netherlands",
+       "institution_ids": [
+        "https://openalex.org/I34352273"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5031330031",
+      "display_name": "Harald L. G. J. Merckelbach",
+      "orcid": "https://orcid.org/0000-0002-5116-7826",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-5116-7826"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I34352273",
+       "display_name": "Maastricht University",
+       "ror": "https://ror.org/02jz4aj89",
+       "country_code": "NL",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I34352273"
+       ]
+      }
+     ],
+     "countries": [
+      "NL"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "H. Merckelbach",
+     "raw_affiliation_strings": [
+      "Maastricht University, the Netherlands"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Maastricht University, the Netherlands",
+       "institution_ids": [
+        "https://openalex.org/I34352273"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": null,
+      "display_name": "N. V. Mills",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "N. V. Mills",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5060063867",
+      "display_name": "Alexej Michirev",
+      "orcid": "https://orcid.org/0000-0002-0468-4636",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-0468-4636"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I34352273",
+       "display_name": "Maastricht University",
+       "ror": "https://ror.org/02jz4aj89",
+       "country_code": "NL",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I34352273"
+       ]
+      }
+     ],
+     "countries": [
+      "NL"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "A. Michirev",
+     "raw_affiliation_strings": [
+      "Maastricht University, the Netherlands"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Maastricht University, the Netherlands",
+       "institution_ids": [
+        "https://openalex.org/I34352273"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5070383831",
+      "display_name": "Akira Miyake",
+      "orcid": "https://orcid.org/0000-0003-4671-7843",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-4671-7843"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "A. Miyake",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": null,
+      "display_name": "A. E. Mosser",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I4210123402",
+       "display_name": "Institut de Physique et Chimie des Matériaux de Strasbourg",
+       "ror": "https://ror.org/02za18p66",
+       "country_code": "FR",
+       "type": "facility",
+       "lineage": [
+        "https://openalex.org/I1294671590",
+        "https://openalex.org/I4210098836",
+        "https://openalex.org/I4210123402",
+        "https://openalex.org/I68947357"
+       ]
+      }
+     ],
+     "countries": [
+      "AU",
+      "FR"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "A. E. Mosser",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+      "IPCMS - Institut de Physique et Chimie des Matériaux de Strasbourg (23 rue du Loess - BP 43 - 67034 Strasbourg Cedex 2 - France - France)"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      },
+      {
+       "raw_affiliation_string": "IPCMS - Institut de Physique et Chimie des Matériaux de Strasbourg (23 rue du Loess - BP 43 - 67034 Strasbourg Cedex 2 - France - France)",
+       "institution_ids": [
+        "https://openalex.org/I4210123402"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5005497306",
+      "display_name": "Megan D. Muise",
+      "orcid": "https://orcid.org/0000-0002-9739-5939",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-9739-5939"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I179301192",
+       "display_name": "Mount Saint Vincent University",
+       "ror": "https://ror.org/03g3p3b82",
+       "country_code": "CA",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I179301192"
+       ]
+      }
+     ],
+     "countries": [
+      "CA"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "M. Muise",
+     "raw_affiliation_strings": [
+      "Mount Saint Vincent University, Canada"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Mount Saint Vincent University, Canada",
+       "institution_ids": [
+        "https://openalex.org/I179301192"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5079561004",
+      "display_name": "Dominique Muller B",
+      "orcid": "https://orcid.org/0000-0001-9544-5317",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-9544-5317"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4387156268",
+       "display_name": "Laboratoire Inter-universitaire de Psychologie: Personnalité, Cognition, Changement Social",
+       "ror": "https://ror.org/03jrb0276",
+       "country_code": "FR",
+       "type": "facility",
+       "lineage": [
+        "https://openalex.org/I4387156268",
+        "https://openalex.org/I70900168",
+        "https://openalex.org/I899635006"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I70900168",
+       "display_name": "Université Savoie Mont Blanc",
+       "ror": "https://ror.org/04gqg1a07",
+       "country_code": "FR",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I70900168"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I899635006",
+       "display_name": "Université Grenoble Alpes",
+       "ror": "https://ror.org/02rx3b187",
+       "country_code": "FR",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I899635006"
+       ]
+      }
+     ],
+     "countries": [
+      "FR"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "D. Muller",
+     "raw_affiliation_strings": [
+      "Université Grenoble-Alpes, France",
+      "LIP-PC2S  - Laboratoire Inter-universitaire de Psychologie : Personnalité, Cognition, Changement Social (Université Grenoble Alpes BP 47 – 38040 GRENOBLE Cedex 9 - FRANCE / Université Savoie Mont Blanc BP 1104 - 73011 CHAMBERY - France)"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Université Grenoble-Alpes, France",
+       "institution_ids": [
+        "https://openalex.org/I899635006"
+       ]
+      },
+      {
+       "raw_affiliation_string": "LIP-PC2S  - Laboratoire Inter-universitaire de Psychologie : Personnalité, Cognition, Changement Social (Université Grenoble Alpes BP 47 – 38040 GRENOBLE Cedex 9 - FRANCE / Université Savoie Mont Blanc BP 1104 - 73011 CHAMBERY - France)",
+       "institution_ids": [
+        "https://openalex.org/I4387156268",
+        "https://openalex.org/I70900168",
+        "https://openalex.org/I899635006"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": null,
+      "display_name": "M. Muzi",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I176453806",
+       "display_name": "University of Potsdam",
+       "ror": "https://ror.org/03bnmw459",
+       "country_code": "DE",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I176453806"
+       ]
+      }
+     ],
+     "countries": [
+      "DE"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "M. Muzi",
+     "raw_affiliation_strings": [
+      "Potsdam University, Germany"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Potsdam University, Germany",
+       "institution_ids": [
+        "https://openalex.org/I176453806"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5005404991",
+      "display_name": "Dario Nalis",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "D. Nalis",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5009859849",
+      "display_name": "Ratri Nurwanti",
+      "orcid": "https://orcid.org/0000-0003-2793-9870",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-2793-9870"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I177055848",
+       "display_name": "University of Brawijaya",
+       "ror": "https://ror.org/01wk3d929",
+       "country_code": "ID",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I177055848"
+       ]
+      }
+     ],
+     "countries": [
+      "ID"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "R. Nurwanti",
+     "raw_affiliation_strings": [
+      "Brawijaya University, Indonesia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Brawijaya University, Indonesia",
+       "institution_ids": [
+        "https://openalex.org/I177055848"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5042607660",
+      "display_name": "Henry Otgaar",
+      "orcid": "https://orcid.org/0000-0002-2782-2181",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-2782-2181"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I34352273",
+       "display_name": "Maastricht University",
+       "ror": "https://ror.org/02jz4aj89",
+       "country_code": "NL",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I34352273"
+       ]
+      }
+     ],
+     "countries": [
+      "NL"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "H. Otgaar",
+     "raw_affiliation_strings": [
+      "Maastricht University, the Netherlands"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Maastricht University, the Netherlands",
+       "institution_ids": [
+        "https://openalex.org/I34352273"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5086617080",
+      "display_name": "Michael Carl Philipp",
+      "orcid": "https://orcid.org/0000-0001-8203-8018",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-8203-8018"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "M. C. Philipp",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5005143453",
+      "display_name": "Pierpaolo Primoceri",
+      "orcid": "https://orcid.org/0000-0002-2014-607X",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-2014-607X"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I202697423",
+       "display_name": "University of Zurich",
+       "ror": "https://ror.org/02crff812",
+       "country_code": "CH",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I202697423"
+       ]
+      }
+     ],
+     "countries": [
+      "CH"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "P. Primoceri",
+     "raw_affiliation_strings": [
+      "University of Zurich, Switzerland"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "University of Zurich, Switzerland",
+       "institution_ids": [
+        "https://openalex.org/I202697423"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5027817658",
+      "display_name": "Katrin Rentzsch",
+      "orcid": "https://orcid.org/0000-0001-8632-6842",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-8632-6842"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "K. Rentzsch",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5059889672",
+      "display_name": "Lara Jade Ringos",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "L. Ringos",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5086495082",
+      "display_name": "Caroline Schlinkert",
+      "orcid": "https://orcid.org/0000-0001-7038-903X",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-7038-903X",
+       "https://orcid.org/0000-0002-7379-9381"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "C. Schlinkert",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5005082745",
+      "display_name": "Brandon J. Schmeichel",
+      "orcid": "https://orcid.org/0000-0003-3527-5365",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-3527-5365"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "B. J. Schmeichel",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5039857251",
+      "display_name": "Sarah Fiona Schoch",
+      "orcid": "https://orcid.org/0000-0002-3962-5804",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-3962-5804"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I202697423",
+       "display_name": "University of Zurich",
+       "ror": "https://ror.org/02crff812",
+       "country_code": "CH",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I202697423"
+       ]
+      }
+     ],
+     "countries": [
+      "CH"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "S. F. Schoch",
+     "raw_affiliation_strings": [
+      "University of Zurich, Switzerland"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "University of Zurich, Switzerland",
+       "institution_ids": [
+        "https://openalex.org/I202697423"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": null,
+      "display_name": "M. Schrama",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "M. Schrama",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5110743847",
+      "display_name": "Astrid Schütz",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "A. Schütz",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5014490996",
+      "display_name": "Angelos Stamos",
+      "orcid": "https://orcid.org/0000-0002-4648-1474",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-4648-1474"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I99464096",
+       "display_name": "KU Leuven",
+       "ror": "https://ror.org/05f950310",
+       "country_code": "BE",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I99464096"
+       ]
+      }
+     ],
+     "countries": [
+      "BE"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "A. Stamos",
+     "raw_affiliation_strings": [
+      "KU Leuven, Belgium"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "KU Leuven, Belgium",
+       "institution_ids": [
+        "https://openalex.org/I99464096"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5037013109",
+      "display_name": "Gustav Tinghög",
+      "orcid": "https://orcid.org/0000-0002-8159-1249",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-8159-1249"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "G. Tinghög",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5017986911",
+      "display_name": "Johannes Ullrich",
+      "orcid": "https://orcid.org/0000-0002-0471-7004",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-0471-7004"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I202697423",
+       "display_name": "University of Zurich",
+       "ror": "https://ror.org/02crff812",
+       "country_code": "CH",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I202697423"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I4210156266",
+       "display_name": "Max Planck Institute for Nuclear Physics",
+       "ror": "https://ror.org/052d0h423",
+       "country_code": "DE",
+       "type": "nonprofit",
+       "lineage": [
+        "https://openalex.org/I149899117",
+        "https://openalex.org/I4210156266"
+       ]
+      }
+     ],
+     "countries": [
+      "CH",
+      "DE"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "J. Ullrich",
+     "raw_affiliation_strings": [
+      "University of Zurich, Switzerland",
+      "MPIK - Max-Planck-Institut für Kernphysik (Saupfercheckweg 1,  69117 Heidelberg - Germany)"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "University of Zurich, Switzerland",
+       "institution_ids": [
+        "https://openalex.org/I202697423"
+       ]
+      },
+      {
+       "raw_affiliation_string": "MPIK - Max-Planck-Institut für Kernphysik (Saupfercheckweg 1,  69117 Heidelberg - Germany)",
+       "institution_ids": [
+        "https://openalex.org/I4210156266"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5014320695",
+      "display_name": "Michelle R. vanDellen",
+      "orcid": "https://orcid.org/0000-0002-3457-194X",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-3457-194X"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "M. vanDellen",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5059469689",
+      "display_name": "Supra Wimbarti",
+      "orcid": "https://orcid.org/0000-0003-2821-2403",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-2821-2403"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I165230279",
+       "display_name": "Universitas Gadjah Mada",
+       "ror": "https://ror.org/03ke6d638",
+       "country_code": "ID",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I165230279"
+       ]
+      }
+     ],
+     "countries": [
+      "ID"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "S. Wimbarti",
+     "raw_affiliation_strings": [
+      "Gadjah Mada University, Indonesia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Gadjah Mada University, Indonesia",
+       "institution_ids": [
+        "https://openalex.org/I165230279"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5017569540",
+      "display_name": "Wanja Wolff",
+      "orcid": "https://orcid.org/0000-0001-8130-0272",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-8130-0272"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I176453806",
+       "display_name": "University of Potsdam",
+       "ror": "https://ror.org/03bnmw459",
+       "country_code": "DE",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I176453806"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I4210133023",
+       "display_name": "Institute for the Dynamics of Environmental Processes",
+       "ror": "https://ror.org/03z58xd74",
+       "country_code": "IT",
+       "type": "facility",
+       "lineage": [
+        "https://openalex.org/I4210133023",
+        "https://openalex.org/I4210155236"
+       ]
+      }
+     ],
+     "countries": [
+      "DE",
+      "IT"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "W. Wolff",
+     "raw_affiliation_strings": [
+      "Potsdam University, Germany",
+      "Institute for the Dynamics of Environmental Processes-CNR (Ca? Foscari, 30123 Venice, Italy - Italy)"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Potsdam University, Germany",
+       "institution_ids": [
+        "https://openalex.org/I176453806"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Institute for the Dynamics of Environmental Processes-CNR (Ca? Foscari, 30123 Venice, Italy - Italy)",
+       "institution_ids": [
+        "https://openalex.org/I4210133023"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5039060226",
+      "display_name": "Cleoputri Yusainy",
+      "orcid": "https://orcid.org/0000-0002-6295-1050",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-6295-1050"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I177055848",
+       "display_name": "University of Brawijaya",
+       "ror": "https://ror.org/01wk3d929",
+       "country_code": "ID",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I177055848"
+       ]
+      }
+     ],
+     "countries": [
+      "ID"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "C. Yusainy",
+     "raw_affiliation_strings": [
+      "Brawijaya University, Indonesia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Brawijaya University, Indonesia",
+       "institution_ids": [
+        "https://openalex.org/I177055848"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5059408912",
+      "display_name": "Oulmann Zerhouni",
+      "orcid": "https://orcid.org/0000-0002-4026-1921",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-4026-1921"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4387156268",
+       "display_name": "Laboratoire Inter-universitaire de Psychologie: Personnalité, Cognition, Changement Social",
+       "ror": "https://ror.org/03jrb0276",
+       "country_code": "FR",
+       "type": "facility",
+       "lineage": [
+        "https://openalex.org/I4387156268",
+        "https://openalex.org/I70900168",
+        "https://openalex.org/I899635006"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I70900168",
+       "display_name": "Université Savoie Mont Blanc",
+       "ror": "https://ror.org/04gqg1a07",
+       "country_code": "FR",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I70900168"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I899635006",
+       "display_name": "Université Grenoble Alpes",
+       "ror": "https://ror.org/02rx3b187",
+       "country_code": "FR",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I899635006"
+       ]
+      }
+     ],
+     "countries": [
+      "FR"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "O. Zerhouni",
+     "raw_affiliation_strings": [
+      "Université Grenoble-Alpes, France",
+      "LIP-PC2S  - Laboratoire Inter-universitaire de Psychologie : Personnalité, Cognition, Changement Social (Université Grenoble Alpes BP 47 – 38040 GRENOBLE Cedex 9 - FRANCE / Université Savoie Mont Blanc BP 1104 - 73011 CHAMBERY - France)"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Université Grenoble-Alpes, France",
+       "institution_ids": [
+        "https://openalex.org/I899635006"
+       ]
+      },
+      {
+       "raw_affiliation_string": "LIP-PC2S  - Laboratoire Inter-universitaire de Psychologie : Personnalité, Cognition, Changement Social (Université Grenoble Alpes BP 47 – 38040 GRENOBLE Cedex 9 - FRANCE / Université Savoie Mont Blanc BP 1104 - 73011 CHAMBERY - France)",
+       "institution_ids": [
+        "https://openalex.org/I4387156268",
+        "https://openalex.org/I70900168",
+        "https://openalex.org/I899635006"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5099901148",
+      "display_name": "M. Zwienenberg",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I205640436",
+       "display_name": "Curtin University",
+       "ror": "https://ror.org/02n415q13",
+       "country_code": "AU",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ],
+     "countries": [
+      "AU"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "M. Zwienenberg",
+     "raw_affiliation_strings": [
+      "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Health Psychology and Behavioural Medicine Research Group and Laboratory of Self-Regulation (LaSeR) , School of Psychology and Speech Pathology , Faculty of Health Sciences , Curtin University , GPO Box U1987 , Perth , WA6845 , Australia",
+       "institution_ids": [
+        "https://openalex.org/I205640436"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1177/1745691616652873",
+    "doi": "https://doi.org/10.1177/1745691616652873",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.1177/1745691616652873",
+    "pdf_url": "https://journals.sagepub.com/doi/pdf/10.1177/1745691616652873",
+    "source": {
+     "id": "https://openalex.org/S27228949",
+     "display_name": "Perspectives on Psychological Science",
+     "issn_l": "1745-6916",
+     "issn": [
+      "1745-6916",
+      "1745-6924"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "cwts-core",
+      "dongbi-a",
+      "erih-plus",
+      "jufo-3",
+      "ki-jl-2",
+      "medline",
+      "norway-2",
+      "poland-200",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320017",
+     "host_organization_name": "SAGE Publishing",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320017"
+     ],
+     "host_organization_lineage_names": [
+      "SAGE Publishing"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Perspectives on Psychological Science",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W1488544311",
+    "https://openalex.org/W1546584494",
+    "https://openalex.org/W1575893985",
+    "https://openalex.org/W1824379121",
+    "https://openalex.org/W1854040280",
+    "https://openalex.org/W1897139626",
+    "https://openalex.org/W1941783251",
+    "https://openalex.org/W1967859970",
+    "https://openalex.org/W1973297629",
+    "https://openalex.org/W1977717792",
+    "https://openalex.org/W1980393047",
+    "https://openalex.org/W1982900613",
+    "https://openalex.org/W1989768409",
+    "https://openalex.org/W2000141755",
+    "https://openalex.org/W2000625275",
+    "https://openalex.org/W2002146926",
+    "https://openalex.org/W2002314058",
+    "https://openalex.org/W2007393966",
+    "https://openalex.org/W2025996975",
+    "https://openalex.org/W2026173079",
+    "https://openalex.org/W2029386843",
+    "https://openalex.org/W2029828955",
+    "https://openalex.org/W2031856094",
+    "https://openalex.org/W2041361372",
+    "https://openalex.org/W2050316645",
+    "https://openalex.org/W2051810492",
+    "https://openalex.org/W2055799459",
+    "https://openalex.org/W2060763381",
+    "https://openalex.org/W2060922530",
+    "https://openalex.org/W2069114739",
+    "https://openalex.org/W2077057247",
+    "https://openalex.org/W2077421021",
+    "https://openalex.org/W2079027996",
+    "https://openalex.org/W2093980919",
+    "https://openalex.org/W2108897328",
+    "https://openalex.org/W2109223890",
+    "https://openalex.org/W2110647342",
+    "https://openalex.org/W2116574052",
+    "https://openalex.org/W2123817056",
+    "https://openalex.org/W2126930838",
+    "https://openalex.org/W2134077691",
+    "https://openalex.org/W2134469114",
+    "https://openalex.org/W2147745634",
+    "https://openalex.org/W2152858830",
+    "https://openalex.org/W2154720372",
+    "https://openalex.org/W2165879934",
+    "https://openalex.org/W2167083402",
+    "https://openalex.org/W2186516452",
+    "https://openalex.org/W2281024698",
+    "https://openalex.org/W2289744309",
+    "https://openalex.org/W2338225686",
+    "https://openalex.org/W2582743722",
+    "https://openalex.org/W2779567337",
+    "https://openalex.org/W4254428834",
+    "https://openalex.org/W4297918764"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W2612478318",
+   "doi": "https://doi.org/10.3724/sp.j.1042.2017.00570",
+   "display_name": "The influence of ego depletion on sporting performance: A meta-analysis",
+   "publication_year": 2017,
+   "type": "article",
+   "cited_by_count": 4,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5102333068",
+      "display_name": "Ming-Qiang Xiang",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I3130633384",
+       "display_name": "Guangzhou Sport University",
+       "ror": "https://ror.org/046r6pk12",
+       "country_code": "CN",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I3130633384"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I87710204",
+       "display_name": "Beijing Sport University",
+       "ror": "https://ror.org/03w0k0x36",
+       "country_code": "CN",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I87710204"
+       ]
+      }
+     ],
+     "countries": [
+      "CN"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Mingqiang XIANG",
+     "raw_affiliation_strings": [
+      "(1 Sport Psychology Section, Dept. of Sports Kinetics, Beijing Sport University, Beijing 100084, China) (2 Dept. of Sport and Health, Guangzhou Sport University, Guangzhou 510500, China) (3 Library of Beijing Sport University, Beijing 10084, China)"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "(1 Sport Psychology Section, Dept. of Sports Kinetics, Beijing Sport University, Beijing 100084, China) (2 Dept. of Sport and Health, Guangzhou Sport University, Guangzhou 510500, China) (3 Library of Beijing Sport University, Beijing 10084, China)",
+       "institution_ids": [
+        "https://openalex.org/I3130633384",
+        "https://openalex.org/I87710204"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5100370802",
+      "display_name": "Liwei Zhang",
+      "orcid": "https://orcid.org/0000-0002-2299-8268",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-2299-8268"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I3130633384",
+       "display_name": "Guangzhou Sport University",
+       "ror": "https://ror.org/046r6pk12",
+       "country_code": "CN",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I3130633384"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I87710204",
+       "display_name": "Beijing Sport University",
+       "ror": "https://ror.org/03w0k0x36",
+       "country_code": "CN",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I87710204"
+       ]
+      }
+     ],
+     "countries": [
+      "CN"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Liwei ZHANG",
+     "raw_affiliation_strings": [
+      "(1 Sport Psychology Section, Dept. of Sports Kinetics, Beijing Sport University, Beijing 100084, China) (2 Dept. of Sport and Health, Guangzhou Sport University, Guangzhou 510500, China) (3 Library of Beijing Sport University, Beijing 10084, China)"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "(1 Sport Psychology Section, Dept. of Sports Kinetics, Beijing Sport University, Beijing 100084, China) (2 Dept. of Sport and Health, Guangzhou Sport University, Guangzhou 510500, China) (3 Library of Beijing Sport University, Beijing 10084, China)",
+       "institution_ids": [
+        "https://openalex.org/I3130633384",
+        "https://openalex.org/I87710204"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5112276563",
+      "display_name": "Apei ZHANG",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I3130633384",
+       "display_name": "Guangzhou Sport University",
+       "ror": "https://ror.org/046r6pk12",
+       "country_code": "CN",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I3130633384"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I87710204",
+       "display_name": "Beijing Sport University",
+       "ror": "https://ror.org/03w0k0x36",
+       "country_code": "CN",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I87710204"
+       ]
+      }
+     ],
+     "countries": [
+      "CN"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Apei ZHANG",
+     "raw_affiliation_strings": [
+      "(1 Sport Psychology Section, Dept. of Sports Kinetics, Beijing Sport University, Beijing 100084, China) (2 Dept. of Sport and Health, Guangzhou Sport University, Guangzhou 510500, China) (3 Library of Beijing Sport University, Beijing 10084, China)"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "(1 Sport Psychology Section, Dept. of Sports Kinetics, Beijing Sport University, Beijing 100084, China) (2 Dept. of Sport and Health, Guangzhou Sport University, Guangzhou 510500, China) (3 Library of Beijing Sport University, Beijing 10084, China)",
+       "institution_ids": [
+        "https://openalex.org/I3130633384",
+        "https://openalex.org/I87710204"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": null,
+      "display_name": "Hongying YANG",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I3130633384",
+       "display_name": "Guangzhou Sport University",
+       "ror": "https://ror.org/046r6pk12",
+       "country_code": "CN",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I3130633384"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I87710204",
+       "display_name": "Beijing Sport University",
+       "ror": "https://ror.org/03w0k0x36",
+       "country_code": "CN",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I87710204"
+       ]
+      }
+     ],
+     "countries": [
+      "CN"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Hongying YANG",
+     "raw_affiliation_strings": [
+      "(1 Sport Psychology Section, Dept. of Sports Kinetics, Beijing Sport University, Beijing 100084, China) (2 Dept. of Sport and Health, Guangzhou Sport University, Guangzhou 510500, China) (3 Library of Beijing Sport University, Beijing 10084, China)"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "(1 Sport Psychology Section, Dept. of Sports Kinetics, Beijing Sport University, Beijing 100084, China) (2 Dept. of Sport and Health, Guangzhou Sport University, Guangzhou 510500, China) (3 Library of Beijing Sport University, Beijing 10084, China)",
+       "institution_ids": [
+        "https://openalex.org/I3130633384",
+        "https://openalex.org/I87710204"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.3724/sp.j.1042.2017.00570",
+    "doi": "https://doi.org/10.3724/sp.j.1042.2017.00570",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.3724/sp.j.1042.2017.00570",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S4210189644",
+     "display_name": "Advances in Psychological Science",
+     "issn_l": "1671-3710",
+     "issn": [
+      "1671-3710"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "cwts-core"
+     ],
+     "host_organization": "https://openalex.org/P4310319982",
+     "host_organization_name": "Science Press",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310319982"
+     ],
+     "host_organization_lineage_names": [
+      "Science Press"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Advances in Psychological Science",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": []
+  },
+  {
+   "id": "https://openalex.org/W2588069705",
+   "doi": "https://doi.org/10.3389/fpsyg.2017.00197",
+   "display_name": "The Debate on the Ego-Depletion Effect: Evidence from Meta-Analysis with the p-Uniform Method",
+   "publication_year": 2017,
+   "type": "article",
+   "cited_by_count": 41,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5062459860",
+      "display_name": "Desirée Blázquez-Rincón",
+      "orcid": "https://orcid.org/0000-0003-2664-9038",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-2664-9038"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I63634437",
+       "display_name": "Universidad Autónoma de Madrid",
+       "ror": "https://ror.org/01cby8j38",
+       "country_code": "ES",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I63634437"
+       ]
+      }
+     ],
+     "countries": [
+      "ES"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Desirée Blázquez",
+     "raw_affiliation_strings": [
+      "Methodology and Social Psychology, Universidad Autónoma de Madrid, Madrid, Spain"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Methodology and Social Psychology, Universidad Autónoma de Madrid, Madrid, Spain",
+       "institution_ids": [
+        "https://openalex.org/I63634437"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5026452298",
+      "display_name": "Juan Botella",
+      "orcid": "https://orcid.org/0000-0001-8633-4981",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-8633-4981"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I63634437",
+       "display_name": "Universidad Autónoma de Madrid",
+       "ror": "https://ror.org/01cby8j38",
+       "country_code": "ES",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I63634437"
+       ]
+      }
+     ],
+     "countries": [
+      "ES"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Juan Botella",
+     "raw_affiliation_strings": [
+      "Methodology and Social Psychology, Universidad Autónoma de Madrid, Madrid, Spain"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Methodology and Social Psychology, Universidad Autónoma de Madrid, Madrid, Spain",
+       "institution_ids": [
+        "https://openalex.org/I63634437"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5107269486",
+      "display_name": "Manuel Suero",
+      "orcid": "https://orcid.org/0000-0001-7049-8770",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-7049-8770"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I63634437",
+       "display_name": "Universidad Autónoma de Madrid",
+       "ror": "https://ror.org/01cby8j38",
+       "country_code": "ES",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I63634437"
+       ]
+      }
+     ],
+     "countries": [
+      "ES"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Manuel Suero",
+     "raw_affiliation_strings": [
+      "Methodology and Social Psychology, Universidad Autónoma de Madrid, Madrid, Spain"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Methodology and Social Psychology, Universidad Autónoma de Madrid, Madrid, Spain",
+       "institution_ids": [
+        "https://openalex.org/I63634437"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.3389/fpsyg.2017.00197",
+    "doi": "https://doi.org/10.3389/fpsyg.2017.00197",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.3389/fpsyg.2017.00197",
+    "pdf_url": "https://www.frontiersin.org/articles/10.3389/fpsyg.2017.00197/pdf",
+    "source": {
+     "id": "https://openalex.org/S9692511",
+     "display_name": "Frontiers in Psychology",
+     "issn_l": "1664-1078",
+     "issn": [
+      "1664-1078"
+     ],
+     "is_oa": true,
+     "is_in_doaj": true,
+     "is_core": true,
+     "listed_in": [
+      "anvur-class-a",
+      "anvur-scientific",
+      "cwts-core",
+      "doaj",
+      "erih-plus",
+      "jufo-1",
+      "ki-jl-1",
+      "norway-1",
+      "poland-70",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320527",
+     "host_organization_name": "Frontiers Media",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320527"
+     ],
+     "host_organization_lineage_names": [
+      "Frontiers Media"
+     ],
+     "type": "journal"
+    },
+    "license": "cc-by",
+    "license_id": "https://openalex.org/licenses/cc-by",
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Frontiers in Psychology",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W1970128129",
+    "https://openalex.org/W1993266153",
+    "https://openalex.org/W2007393966",
+    "https://openalex.org/W2043565183",
+    "https://openalex.org/W2060763381",
+    "https://openalex.org/W2123817056",
+    "https://openalex.org/W2136015137",
+    "https://openalex.org/W2157823046",
+    "https://openalex.org/W2164682760",
+    "https://openalex.org/W2165879934",
+    "https://openalex.org/W2186516452",
+    "https://openalex.org/W2317541861",
+    "https://openalex.org/W2499154041",
+    "https://openalex.org/W2526603989",
+    "https://openalex.org/W2529112977",
+    "https://openalex.org/W3125384312",
+    "https://openalex.org/W4213456951"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W4411356972",
+   "doi": "https://doi.org/10.3389/fpsyg.2025.1528263",
+   "display_name": "How does ego depletion reduce sports performance in athletes? A systematic meta-analysis",
+   "publication_year": 2025,
+   "type": "review",
+   "cited_by_count": 3,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": null,
+      "display_name": "Xu Yan",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I32399674",
+       "display_name": "Shenyang Normal University",
+       "ror": "https://ror.org/05cdfgm80",
+       "country_code": "CN",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I32399674"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I4210135985",
+       "display_name": "Shanghai University of Medicine and Health Sciences",
+       "ror": "https://ror.org/03ns6aq57",
+       "country_code": "CN",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I4210135985"
+       ]
+      }
+     ],
+     "countries": [
+      "CN"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Xu Yan",
+     "raw_affiliation_strings": [
+      "Department of Physical Education, Shanghai University of Medicine and Health Sciences, Shanghai, China",
+      "School of Physical Education Science, Shenyang Normal University, Shenyang, China"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Physical Education, Shanghai University of Medicine and Health Sciences, Shanghai, China",
+       "institution_ids": [
+        "https://openalex.org/I4210135985"
+       ]
+      },
+      {
+       "raw_affiliation_string": "School of Physical Education Science, Shenyang Normal University, Shenyang, China",
+       "institution_ids": [
+        "https://openalex.org/I32399674"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": null,
+      "display_name": "Jingyi Zhong",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4210135985",
+       "display_name": "Shanghai University of Medicine and Health Sciences",
+       "ror": "https://ror.org/03ns6aq57",
+       "country_code": "CN",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I4210135985"
+       ]
+      }
+     ],
+     "countries": [
+      "CN"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Jingyi Zhong",
+     "raw_affiliation_strings": [
+      "Department of Physical Education, Shanghai University of Medicine and Health Sciences, Shanghai, China"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Physical Education, Shanghai University of Medicine and Health Sciences, Shanghai, China",
+       "institution_ids": [
+        "https://openalex.org/I4210135985"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5044551484",
+      "display_name": "Yezheng Wang",
+      "orcid": "https://orcid.org/0009-0007-3083-0020",
+      "observed_orcids": [
+       "https://orcid.org/0009-0007-3083-0020"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4210135985",
+       "display_name": "Shanghai University of Medicine and Health Sciences",
+       "ror": "https://ror.org/03ns6aq57",
+       "country_code": "CN",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I4210135985"
+       ]
+      }
+     ],
+     "countries": [
+      "CN"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Yezheng Wang",
+     "raw_affiliation_strings": [
+      "Department of Physical Education, Shanghai University of Medicine and Health Sciences, Shanghai, China"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Physical Education, Shanghai University of Medicine and Health Sciences, Shanghai, China",
+       "institution_ids": [
+        "https://openalex.org/I4210135985"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5100692637",
+      "display_name": "Ying Tian",
+      "orcid": "https://orcid.org/0000-0002-8596-8891",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-8596-8891",
+       "https://orcid.org/0009-0009-3112-8625"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I32399674",
+       "display_name": "Shenyang Normal University",
+       "ror": "https://ror.org/05cdfgm80",
+       "country_code": "CN",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I32399674"
+       ]
+      }
+     ],
+     "countries": [
+      "CN"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Ying Tian",
+     "raw_affiliation_strings": [
+      "School of Physical Education Science, Shenyang Normal University, Shenyang, China"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "School of Physical Education Science, Shenyang Normal University, Shenyang, China",
+       "institution_ids": [
+        "https://openalex.org/I32399674"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5101964524",
+      "display_name": "Lijuan Wang",
+      "orcid": "https://orcid.org/0000-0002-7786-4582",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-7786-4582"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I32399674",
+       "display_name": "Shenyang Normal University",
+       "ror": "https://ror.org/05cdfgm80",
+       "country_code": "CN",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I32399674"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I4210135985",
+       "display_name": "Shanghai University of Medicine and Health Sciences",
+       "ror": "https://ror.org/03ns6aq57",
+       "country_code": "CN",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I4210135985"
+       ]
+      }
+     ],
+     "countries": [
+      "CN"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Lijuan Wang",
+     "raw_affiliation_strings": [
+      "College of Rehabilitation Sciences, Shanghai University of Medicine and Health Sciences, Shanghai, China",
+      "School of Physical Education Science, Shenyang Normal University, Shenyang, China"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "College of Rehabilitation Sciences, Shanghai University of Medicine and Health Sciences, Shanghai, China",
+       "institution_ids": [
+        "https://openalex.org/I4210135985"
+       ]
+      },
+      {
+       "raw_affiliation_string": "School of Physical Education Science, Shenyang Normal University, Shenyang, China",
+       "institution_ids": [
+        "https://openalex.org/I32399674"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5100332239",
+      "display_name": "Congcong Li",
+      "orcid": "https://orcid.org/0000-0002-4459-5224",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-4459-5224"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4210135985",
+       "display_name": "Shanghai University of Medicine and Health Sciences",
+       "ror": "https://ror.org/03ns6aq57",
+       "country_code": "CN",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I4210135985"
+       ]
+      }
+     ],
+     "countries": [
+      "CN"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Congcong Li",
+     "raw_affiliation_strings": [
+      "Department of Physical Education, Shanghai University of Medicine and Health Sciences, Shanghai, China"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Physical Education, Shanghai University of Medicine and Health Sciences, Shanghai, China",
+       "institution_ids": [
+        "https://openalex.org/I4210135985"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": null,
+      "display_name": "Kaihang Liu",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4210135985",
+       "display_name": "Shanghai University of Medicine and Health Sciences",
+       "ror": "https://ror.org/03ns6aq57",
+       "country_code": "CN",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I4210135985"
+       ]
+      }
+     ],
+     "countries": [
+      "CN"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Kaihang Liu",
+     "raw_affiliation_strings": [
+      "Department of Physical Education, Shanghai University of Medicine and Health Sciences, Shanghai, China"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Physical Education, Shanghai University of Medicine and Health Sciences, Shanghai, China",
+       "institution_ids": [
+        "https://openalex.org/I4210135985"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5101555049",
+      "display_name": "Wei Dong Zhao",
+      "orcid": "https://orcid.org/0000-0002-1098-3229",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-1098-3229"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4210135985",
+       "display_name": "Shanghai University of Medicine and Health Sciences",
+       "ror": "https://ror.org/03ns6aq57",
+       "country_code": "CN",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I4210135985"
+       ]
+      }
+     ],
+     "countries": [
+      "CN"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Wei Zhao",
+     "raw_affiliation_strings": [
+      "Department of Physical Education, Shanghai University of Medicine and Health Sciences, Shanghai, China"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Physical Education, Shanghai University of Medicine and Health Sciences, Shanghai, China",
+       "institution_ids": [
+        "https://openalex.org/I4210135985"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5100416800",
+      "display_name": "Liyan Wang",
+      "orcid": "https://orcid.org/0000-0003-1294-8766",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-1294-8766"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I32399674",
+       "display_name": "Shenyang Normal University",
+       "ror": "https://ror.org/05cdfgm80",
+       "country_code": "CN",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I32399674"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I4210135985",
+       "display_name": "Shanghai University of Medicine and Health Sciences",
+       "ror": "https://ror.org/03ns6aq57",
+       "country_code": "CN",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I4210135985"
+       ]
+      }
+     ],
+     "countries": [
+      "CN"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Liyan Wang",
+     "raw_affiliation_strings": [
+      "College of Rehabilitation Sciences, Shanghai University of Medicine and Health Sciences, Shanghai, China",
+      "School of Physical Education Science, Shenyang Normal University, Shenyang, China"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "College of Rehabilitation Sciences, Shanghai University of Medicine and Health Sciences, Shanghai, China",
+       "institution_ids": [
+        "https://openalex.org/I4210135985"
+       ]
+      },
+      {
+       "raw_affiliation_string": "School of Physical Education Science, Shenyang Normal University, Shenyang, China",
+       "institution_ids": [
+        "https://openalex.org/I32399674"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5107958592",
+      "display_name": "Hongbiao Wang",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4210135985",
+       "display_name": "Shanghai University of Medicine and Health Sciences",
+       "ror": "https://ror.org/03ns6aq57",
+       "country_code": "CN",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I4210135985"
+       ]
+      }
+     ],
+     "countries": [
+      "CN"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Hongbiao Wang",
+     "raw_affiliation_strings": [
+      "Department of Physical Education, Shanghai University of Medicine and Health Sciences, Shanghai, China"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Physical Education, Shanghai University of Medicine and Health Sciences, Shanghai, China",
+       "institution_ids": [
+        "https://openalex.org/I4210135985"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.3389/fpsyg.2025.1528263",
+    "doi": "https://doi.org/10.3389/fpsyg.2025.1528263",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.3389/fpsyg.2025.1528263",
+    "pdf_url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1528263/pdf",
+    "source": {
+     "id": "https://openalex.org/S9692511",
+     "display_name": "Frontiers in Psychology",
+     "issn_l": "1664-1078",
+     "issn": [
+      "1664-1078"
+     ],
+     "is_oa": true,
+     "is_in_doaj": true,
+     "is_core": true,
+     "listed_in": [
+      "anvur-class-a",
+      "anvur-scientific",
+      "cwts-core",
+      "doaj",
+      "erih-plus",
+      "jufo-1",
+      "ki-jl-1",
+      "norway-1",
+      "poland-70",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320527",
+     "host_organization_name": "Frontiers Media",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320527"
+     ],
+     "host_organization_lineage_names": [
+      "Frontiers Media"
+     ],
+     "type": "journal"
+    },
+    "license": "cc-by",
+    "license_id": "https://openalex.org/licenses/cc-by",
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Frontiers in Psychology",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W1720333833",
+    "https://openalex.org/W1988287306",
+    "https://openalex.org/W2005323615",
+    "https://openalex.org/W2015379922",
+    "https://openalex.org/W2031120306",
+    "https://openalex.org/W2060763381",
+    "https://openalex.org/W2083277815",
+    "https://openalex.org/W2102059321",
+    "https://openalex.org/W2105687755",
+    "https://openalex.org/W2109100786",
+    "https://openalex.org/W2112101339",
+    "https://openalex.org/W2119051697",
+    "https://openalex.org/W2123817056",
+    "https://openalex.org/W2125435699",
+    "https://openalex.org/W2135272506",
+    "https://openalex.org/W2220131028",
+    "https://openalex.org/W2273142628",
+    "https://openalex.org/W2756402373",
+    "https://openalex.org/W2802800477",
+    "https://openalex.org/W2900003704",
+    "https://openalex.org/W2942883300",
+    "https://openalex.org/W2953215036",
+    "https://openalex.org/W2969815616",
+    "https://openalex.org/W2984573913",
+    "https://openalex.org/W2999035248",
+    "https://openalex.org/W3083877423",
+    "https://openalex.org/W3171909889",
+    "https://openalex.org/W3188469914",
+    "https://openalex.org/W4299627282",
+    "https://openalex.org/W4377292348",
+    "https://openalex.org/W4378195270",
+    "https://openalex.org/W4401109037"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W1989768409",
+   "doi": "https://doi.org/10.1017/s0140525x13000952",
+   "display_name": "Is ego depletion too incredible? Evidence for the overestimation of the depletion effect",
+   "publication_year": 2013,
+   "type": "article",
+   "cited_by_count": 109,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5042053889",
+      "display_name": "Evan C. Carter",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I145608581",
+       "display_name": "University of Miami",
+       "ror": "https://ror.org/02dgjyy92",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I145608581"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Evan C. Carter",
+     "raw_affiliation_strings": [
+      "Department of Psychology, University of Miami, Coral Gables, FL 33124-0751. mikem@miami.edu evan.c.carter@gmail.com",
+      "University of Miami,"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Psychology, University of Miami, Coral Gables, FL 33124-0751. mikem@miami.edu evan.c.carter@gmail.com",
+       "institution_ids": [
+        "https://openalex.org/I145608581"
+       ]
+      },
+      {
+       "raw_affiliation_string": "University of Miami,",
+       "institution_ids": [
+        "https://openalex.org/I145608581"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5060868512",
+      "display_name": "Michael E. McCullough",
+      "orcid": "https://orcid.org/0000-0001-9833-2713",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-9833-2713"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I145608581",
+       "display_name": "University of Miami",
+       "ror": "https://ror.org/02dgjyy92",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I145608581"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Michael E. McCullough",
+     "raw_affiliation_strings": [
+      "Department of Psychology, University of Miami, Coral Gables, FL 33124-0751",
+      "University of Miami,"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Psychology, University of Miami, Coral Gables, FL 33124-0751",
+       "institution_ids": [
+        "https://openalex.org/I145608581"
+       ]
+      },
+      {
+       "raw_affiliation_string": "University of Miami,",
+       "institution_ids": [
+        "https://openalex.org/I145608581"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1017/s0140525x13000952",
+    "doi": "https://doi.org/10.1017/s0140525x13000952",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1017/s0140525x13000952",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S59628311",
+     "display_name": "Behavioral and Brain Sciences",
+     "issn_l": "0140-525X",
+     "issn": [
+      "0140-525X",
+      "1469-1825"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "anvur-class-a",
+      "anvur-scientific",
+      "cwts-core",
+      "dongbi-b",
+      "doyens",
+      "erih-plus",
+      "jufo-2",
+      "ki-jl-2",
+      "medline",
+      "norway-2",
+      "poland-200",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310311721",
+     "host_organization_name": "Cambridge University Press",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310311721",
+      "https://openalex.org/P4310311702"
+     ],
+     "host_organization_lineage_names": [
+      "Cambridge University Press",
+      "University of Cambridge"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Behavioral and Brain Sciences",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W1528251861",
+    "https://openalex.org/W1970128129",
+    "https://openalex.org/W2007393966",
+    "https://openalex.org/W2040708445",
+    "https://openalex.org/W2043184482",
+    "https://openalex.org/W2060763381",
+    "https://openalex.org/W2067141886",
+    "https://openalex.org/W2073677120",
+    "https://openalex.org/W2123817056",
+    "https://openalex.org/W2131584527",
+    "https://openalex.org/W2135402582",
+    "https://openalex.org/W2157823046",
+    "https://openalex.org/W2164150544"
+   ]
+  }
+ ],
+ "group_by": []
+}

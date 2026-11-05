@@ -1,0 +1,178 @@
+RUN_REPORT — Batch 2: Baumeister, Bratslavsky, Muraven & Tice (1998) "Ego depletion: Is the active self a limited resource?", JPSP 74(5):1252-1265, DOI 10.1037/0022-3514.74.5.1252
+=====================================================================================================
+
+Branch: audit/baumeister-ego-depletion
+- Base: 6c651d7593abfb5c4b6d2eb9f6846a5212fe001c, as the brief requires.
+- origin/main is at ce6ced3. The branch was neither rebased nor merged onto it.
+- Folder: examples/research/baumeister-ego-depletion/ is the only path changed.
+- The commit SHA is reported in the hand-off message, because a file cannot contain the hash of the commit that contains it.
+
+Run date: 2026-11-05, America/Los_Angeles (PST = UTC-8). Times below are UTC (Z) and are taken from logs/worklog.jsonl.
+- Executor: Grok Bot, single agent, all stages.
+- Instruments: Provenance @ a58d165d9a986edca220f8143fc0c0d9316c8a13. All 5 preflights plus both checker identities were confirmed and re-hashed at packaging; see 00_run_metadata_and_preregistration.txt.
+- Access: RESTRICTED-ACCESS RUN. The target was read at abstract level only; publisher HTTP 403, closed access, no authorized full text.
+
+STAGE COMPLETION
+----------------
+| Stage | Window (UTC) | Logged tool calls (coarse) | Status | Output |
+|---|---|---|---|---|
+| identity + setup | 11:10:43–11:10:54Z | 2 | DONE | 00 |
+| pre-registration | 11:11:44Z | 1 | LOCKED, sha256 a76bf588154ce8d7214ee6de4b8d66ae0f5aece8197e0813235961e037cc3d28 | 00a |
+| target retrieval | 11:11:53–11:13:38Z | — | ABSTRACT ONLY (publisher 403; closed) | SOURCES_MANIFEST.json |
+| 1 claim extraction | 11:13:38–11:18:56Z; lost ~11:32Z; REGENERATED 11:53:18Z | 2 | COMPLETE (map confidence low) | 01_claim_extraction.md |
+| replication | 11:19:21–11:20:50Z | — | NOT_ASSESSABLE (no public data) | replication/NOT_ASSESSABLE.txt (recovered verbatim) |
+| 2a internal validity | 11:23:50Z; lost; REGENERATED 11:55:18Z (+ locator fix 11:55:37Z) | 1 | COMPLETE: INVALID, grade E (DEFEATS IV-2) | 02a_internal_validity.md |
+| 2b construct validity | 11:24:22–11:26:55Z; lost; REGENERATED 11:57:14Z | — | COMPLETE: USEFUL-FOR-NARROWER (provisional), grade G | 02b_construct_validity.md |
+| 2c citation network v2-candidate.3 | locks 11:28:23Z / 11:28:40Z / 11:45:09Z; build 12:02:13–12:23:24Z | 1 (coarse; many more calls in practice) | COMPLETE; band >20%–40% PROVISIONAL | citation-network-v2cand3/ |
+| 3 counter-audit | 12:26:35–12:32:12Z | — | COMPLETE; IV SUPPLIED AND CONSUMED | 03_counter_audit.md |
+| final + packaging | from 12:33:24Z | — | DONE | 05, manifest, this report |
+
+Field 6 (secondhand, PROVISIONAL): Exp 1 persistence on unsolvable puzzles, radish 8.35 vs chocolate 18.90 vs no-food 20.86 min; N ≈ 67; t(44) = 6.03, d ≈ 1.8. Carter et al. 2015 code it g = 1.31 (n 25 vs 44).
+
+Headline (exploratory; not established):
+- Field 6's magnitude is not credible as a reproducible effect. Three preregistered multi-lab tests of the general effect found d = 0.04 (RRR), 0.10 (Dang) and 0.06 (Vohs, proponent-led; its persistence outcome was d = 0.15 [0.02, 0.29]).
+- Field 6 itself is narrowed, not refuted: no large test re-ran the food-temptation protocol.
+- Stage 3 re-aims 2a's IV-2 from DEFEATS to major NARROWS for field 6 (it remains fatal for the general-effect inference). This 02a/03 disagreement is flagged for human adjudication.
+- Counter-audit E0, 21 rows: DEFEATED 0, NARROWED 3 (CV-3, CV-4, 2c F6), RECHARACTERIZED 2 (CV-1, CV-2), UNAFFECTED 16. The target body was not searchable.
+- Stage 3 category: F (Mixed).
+- No composite score.
+
+REPLICATION
+-----------
+NOT_ASSESSABLE in this run.
+- No dataset, supplement or data-availability statement exists for the 1998 experiments. APA PsycNET returned 403. Crossref lists no supplement.
+- OSF search API returned 404. Dataverse and OpenAlex dataset searches found nothing for the target.
+- No data were reconstructed from reported means or test statistics, and no mirrors were used.
+- Later replications have public OSF data, but they test other paradigms and do not reproduce field 6. They were not analysed.
+
+2c — CITATION NETWORK (candidate rev. 3; NOT canonical)
+---------------------------------------------------------
+INSTRUMENT VERSION: 2-citation-network v2-candidate.3
+DIMENSION CLASS MAP: cn7-map-3
+
+Corpora:
+| Corpus | Size | Contexts inspected | Selection |
+|---|---|---|---|
+| RECEPTION-1 | 50 | 22/50 | top 50 citers by cited_by_count (OpenAlex cites:W2123817056, executed 11:31:57Z) |
+| RECENT-1 | 25 | 12/25 | top 25 citers since 2021-11-05 |
+| ADJUDICATION-1 | 59 | 21/59 | 7 locked title/abstract queries (Q1–Q7, top 10 each); screened on titles only, abstracts not used |
+
+- Known-item recall for ADJUDICATION-1 is 8/12. Not returned: K3 Carter 2015, K8 Gailliot 2007, K11 Baumeister & Vohs 2016, K12 Kurzban 2010.
+- 21 rows lie OUTSIDE all corpora (T01 target; X01–X20 Section E locked sources and named POST HOC sources).
+- UNKNOWN codes: relation-to-target 5 (ADJUDICATION-1 rows A05, A07, A12, A17, A50).
+
+Network measures:
+- Density: 113/2450 = 4.61% at work level (50/50 reference lists).
+- Founding-cluster works: 10/50, receiving 62/113 internal edges.
+- I05 sample attrition: 4/12.
+
+Inference ledger: I01–I26.
+- SUPPORTED or SUPPORTED-WITHIN-SAMPLE: 20.
+- INSUFFICIENT: 3 (I05, I08, I12).
+- NOT-ASSESSED: 3 (I22, I24, I26).
+
+Composition:
+- I15 ADJ-1 relevance: ADJACENT=32; BACKGROUND=3; DIRECT=24 (TOTAL=59)
+- I16 ADJ-1 contribution: COMMENTARY=3; INDEPENDENT-DATA=28; REANALYSIS=4; REVIEW=19; THEORY=5 (TOTAL=59)
+- I17 REC-1 relevance: ADJACENT=20; BACKGROUND=27; DIRECT=3 (TOTAL=50)
+
+Dimensions:
+| Dimension | Disposition |
+|---|---|
+| Founding-cluster dominance | SCORED 2 |
+| Internal citation density | SCORED 0 |
+| Recent-paper dependence | SCORED 2 |
+| Proxy mismatch | SCORED 1 |
+| Adjacent-field neglect | SCORED 1 |
+| Lack of decisive tests | SCORED 1 |
+| Poor critique uptake | SCORED 1 |
+| Review-hub laundering | UNASSESSED |
+| Claim mutation | UNASSESSED |
+| Model non-updating | UNASSESSED |
+| Intervention-evidence ratchet | N/A |
+
+Score: verified risk 8/21 = 38.1% over 7 independent scored dimensions. Coverage 7/10 (70%).
+ARITHMETIC BAND POSITION: >20%–40% (normal field clustering with some weaknesses)
+RISK BAND: >20%–40% normal field clustering with some weaknesses — PROVISIONAL. Coverage meets the 70% gate exactly, and only if the review items resolve (20% without them). No closure or laundering label is supported.
+
+Checker runs (python3 -I, pinned, unedited; every try kept in citation-network-v2cand3/checker/):
+| Run | v1 checker | Gates checker | Change before the run |
+|---|---|---|---|
+| try1 | STRUCTURAL PASS; CONTENT FAIL (18 DIRECT_ADJUDICATION_FORM_FAIL on Section E F2 rows X04–X06) | FAIL failures=10 (LOCATOR_MISSING X18–X20; I18 CORPUS scope; I21 member range not parsed; consequent SCORED_ON_INSUFFICIENT; Findings 1 and 7 on INSUFFICIENT; BAND_ISSUED_BELOW_GATE) | first generation |
+| try2 | PASS-WITH-REVIEW items=2 | FAIL failures=1 (I18 DISPOSITION_MISMATCH) | (a) F2 rows read "not determined: results not read (METADATA only)"; (b) locators SC-E1, LS-E1, AP-E1 for X18–X20; (c) I18 rescoped to WITHIN-SAMPLE / SCREENED; (d) I21 members listed; (e) Finding 7 basis I25; (f) RECORD QUALITY note on N09/A48/A50 |
+| try3 = final | PASS-WITH-REVIEW items=2 | PASS-WITH-REVIEW items=13 | I18 disposition set to SUPPORTED-WITHIN-SAMPLE |
+
+No ledger row was removed or recoded to clear a checker item.
+
+Final checker lines (verbatim):
+--- v1 checker (checker/v1_final.txt) ---
+STRUCTURAL_RESULT	PASS
+CONTENT_RESULT	PASS-WITH-REVIEW	items=2
+REVIEW_ITEM_1	SOURCE_LOCK_TRUTH — verify the lock predates citation inspection and the query/source list deterministically fixes the exemplars: SOURCE-LOCK DATABASE: OpenAlex works API (select omits abstract_inverted_index) | SOURCE-LOCK QUERY OR SOURCE LIST: filter=title.search:<terms>,to_publication_date:1998-04-30,type:article, sort=cited_by_count:desc, per-page=3; terms F1 "mental fatigue", F2 "learned helplessness", F3 "mood persistence", F4 "experimenter expectancy", F5 "mental effort" | SOURCE-LOCK DATE CUTOFF: 1998-04-30 (before the JPSP May 1998 issue) | SOURCE-LOCK RANKING RULE: Open
+REVIEW_ITEM_2	DIRECT_ADJUDICATION_SUBSTANCE — 9 source(s) classified DIRECTLY-ADJUDICATING; verify each classification and its actual result, favored explanation, weakened explanation, and required revision: line 335: | L1 | F2 learned helplessness | X04 W2029487046 Learned helplessness in humans: Critique and reformulation.  | LOCATED | DIRECTLY-ADJUDICATING | title only; results not read | not determined: results not read (METADATA only) | not determined: results not read (METADATA only) | not determined: results not read (METADATA only) | LOCKED (Section E query) | no (not in the target ref
+PASS-WITH-REVIEW: 2 items	All deterministic checks passed; the listed substantive judgments remain for human review.
+  [REVIEW_ITEM lines truncated here at 600 chars; full text in checker/v1_final.txt and checker/gates_final.txt]
+--- gates checker (checker/gates_final.txt) ---
+COVERAGE_DECLARED	7/10 applicable SCORED (70%)
+COVERAGE_AFTER_GATES	7/10 (70%)
+COVERAGE_IF_REVIEW_ITEMS_WITHDRAWN	2/10 (20%)	withdrawn: adjacent-field neglect, lack of decisive tests, poor critique uptake, proxy mismatch, recent-paper dependence
+PROVISIONAL_70_GATE	MET ONLY IF REVIEW ITEMS RESOLVE FOR THE SCORE	(engineering threshold, not validated)
+REVIEW_ITEM_1	CODED_FROM_METADATA — 87 rows carry a relevance or contribution code, or NOT-CITING, from METADATA-only access; confirm each record shows it: N01, N02, N04, N07, N09, N10, N11, N15, N17, N19, N20, N21, N24, N28, N30, N32, N34, N35, N37, N38, N39, N46, N47, N48, N50, R03, R04, R05, R09, R10, R11, R12, R14, R15, R20, R22, R23, A02, A04, A05, A07, A09, A10, A11, A12, A14, A16, A17, A19, A20, A21, A23, A24, A25, A26, A28, A29, A30, A31, A33, A35, A36, A38, A39, A40, A41, A42, A44, A46, A48, A50, A53, X01, X02, X03, X04, X05, X06, X07, X08, X09, X10, X11, X12, X13, X14, X15
+REVIEW_ITEM_2	SEARCH_RECALL — ADJUDICATION-1: the locked search returned 8/12 known items; statements about the literature beyond the search are insufficient, and absences within it may be incomplete
+REVIEW_ITEM_3	POSSIBLE_DUPLICATE_WORK — 3 pairs of rows look like one work under two records (title match only); where they are one work, merge them into one row and count it once: N09/A48 (ADJUDICATION-1), N09/A50 (ADJUDICATION-1), A48/A50 (ADJUDICATION-1)
+REVIEW_ITEM_4	SAMPLE_DECLARED_RANDOM — I05: confirm the inspected sample was drawn at random before inspection and that the statement is an estimate with its uncertainty
+REVIEW_ITEM_5	PARTIAL_BASIS — Recent-paper dependence is SCORED 2 while I08, which bears on it, did not pass Gate B; confirm the score is stated for what was assessed
+REVIEW_ITEM_6	BY_CONSTRUCTION_RISK — Recent-paper dependence uses I04 on a set selected on target citation; confirm it measures citation beyond the target
+REVIEW_ITEM_7	PARTIAL_BASIS — Proxy mismatch is SCORED 1 while I12, which bears on it, did not pass Gate B; confirm the score is stated for what was assessed
+REVIEW_ITEM_8	PARTIAL_BASIS — Adjacent-field neglect is SCORED 1 while I22, which bears on it, did not pass Gate B; confirm the score is stated for what was assessed
+REVIEW_ITEM_9	NAMED_ONLY_BASIS — Adjacent-field neglect is SCORED 1 on named works only (I21); confirm they are the population the dimension covers and that every located critique or rival test was traced
+REVIEW_ITEM_10	BOUNDED_ABSENCE — Lack of decisive tests uses I18, an absence over screened results only; confirm the score is stated within the search bound
+REVIEW_ITEM_11	PARTIAL_BASIS — Poor critique uptake is SCORED 1 while I24, which bears on it, did not pass Gate B; confirm the score is stated for what was assessed
+REVIEW_ITEM_12	NAMED_ONLY_BASIS — Poor critique uptake is SCORED 1 on named works only (I19); confirm they are the population the dimension covers and that every located critique or rival test was traced
+REVIEW_ITEM_13	BAND_CONDITIONAL — line 542: the band meets the 70% gate only while dimensions with open review items are counted; the formal-label gate status must say so
+V2_GATES_RESULT	PASS-WITH-REVIEW	items=13
+
+The checkers report where human review is needed. They do not decide whether a row is correct.
+
+INSTRUMENT PROBLEMS (recorded only; the instruments were not edited)
+------------------------------------------------------------------------
+1. POSSIBLE_DUPLICATE_WORK matches on titles alone. It flagged N09/A48/A50, which are three distinct works (different years, authors and OpenAlex records) that share the title "The Strength Model of Self-Control". They were not merged; the RECORD QUALITY note gives the reason.
+2. The v1 checker requires favored/weakened/required-revision content on every DIRECTLY-ADJUDICATING row. The instrument has no form for a direct test whose result was not read (METADATA only). Rows X04–X06 are now worded "not determined: results not read (METADATA only)", which passes, but the instrument should provide a dedicated form.
+3. The gates checker recomputes NOT-ASSESSED inferences (I22, I24, I26) as if they were INSUFFICIENT, which raises PARTIAL_BASIS items. The instrument distinguishes the two; the checker does not.
+4. BAND_CONDITIONAL at exactly 70% coverage behaves as designed. Every dimension that counts toward the gate carries an open review item, so the band is PROVISIONAL.
+5. BY_CONSTRUCTION_RISK (I04): the instrument has no rule for measuring dependence beyond the target in a corpus that is selected because it cites the target.
+6. The RECENT window is anchored to the run date (since 2021-11-05), so it shifts from run to run. Comparisons across runs need the date.
+
+DEVIATIONS
+----------
+1. FILE LOSS AND REGENERATION. A box restore at about 11:32Z (03:32 PST) deleted the out/ directories, which held 01, 02a, 02b, replication/NOT_ASSESSABLE and the 2c working output.
+   - 01, 02a and 02b were REGENERATED at 11:53–11:57Z from the same pinned prompts and the same retrieved sources. By then the 2c corpora (RECEPTION-1, RECENT-1, ADJUDICATION-1) had already been retrieved and locked.
+   - The regenerated stage files therefore were not written blind to 2c retrieval. Their content follows the original drafts, but they are not byte-identical to them, and the originals cannot be compared.
+   - NOT_ASSESSABLE.txt was recovered verbatim.
+   - No lock or screen was redone: 2c was finished from the existing raw/ and lock/ data.
+2. The 00a header labels the lock time "11:11 PST". The correct time is 11:11:44Z = 03:11 PST. 00a was not edited (it is hashed). Its file mtime (~11:32Z) comes from the restore. The lock-time hash could not be re-verified independently because no transcript record of it exists; the 00a.sha256 file matches.
+3. 00a was opened at about 12:26Z (04:26 PST), just before Stage 3. This is disclosed in 03 J2. Stage 3 used no 00a expectation; unblinding took place in 05.
+4. raw/reception_exec_time.txt reads 11:46:38Z. The retrieval log puts the RECEPTION-1 query at 11:31:57Z; the file was rewritten during recovery. The log time is authoritative.
+5. Semantic Scholar: three requests were logged with status None (no response), and the s2/ directory was missing at first. Contexts were then fetched in 6 pages (cit_0 to cit_5000). The pages are not committed; their sha256 values are in SOURCES_MANIFEST.json.
+6. Known item K7: 00a gives Dang (2018); the OpenAlex record (A08) is dated 2017. It was matched on title and author.
+7. Post-lock exposure was limited to the stage retrievals logged in logs/retrieval_log.jsonl. No 00a expectation, locked query or known item was changed.
+8. Q7 returned strength-model and sleep/self-control works (e.g. A48, A50, A53) and no decision-fatigue works. It is recorded as run.
+9. The ADJUDICATION-1 search record cites its Stage 1 inputs as out/01_claim_extraction.md, a path lost in the restore. The text it copied is in the lock file.
+10. The Section E F2 query was logged 5 times between 11:45:16Z and 11:45:51Z: 429, 429, 200, 429, 200. The second 200 response (11:45:51Z) overwrote the first and is the committed raw/secE_F2.json.
+11. Target reference-list titles (raw/target_reflist_titles.json) were fetched after the lock, at 12:05Z, for the adjacent-field check. They were used only for I21/F6 and not for any corpus.
+12. Europe PMC full-text XML returned HTTP 500 four times, so Dang 2021 was read from the PMC HTML author manuscript (VERSION-SUBSTITUTE).
+13. Carter et al. 2015 was read from the authors' circulated revision (VERSION-SUBSTITUTE). Figures were verified in that text, and an A3 PEESE cell was corrected during Stage 3 before the file was finalised.
+14. Tooling: rsync and scipy were unavailable. Backups used tar/cp, and no statistic needed scipy.
+15. OpenAlex returned HTTP 429 on some queries (Q6, Q7); these were retried with identical parameters.
+16. The worklog's tool-call counts are coarse and undercount.
+17. origin/main has moved to ce6ced3. The branch is kept on 6c651d7 as briefed, with no rebase or merge.
+
+RIGHTS CONFIRMATION
+-------------------
+- Sources were authorized only: publisher OA, PMC, institutional repositories, authors' pages, and publisher/society-hosted manuscripts. No shadow libraries, third-party mirrors or course copies were used; copies found in search results were excluded.
+- Not committed: PDFs, HTML, full-text layers, the target abstract, Semantic Scholar context responses, or datasets. Those files are listed in SOURCES_MANIFEST.json with committed:false and their sha256.
+- OpenAlex requests used select= lists that omit abstract_inverted_index.
+- Before commit, a recursive JSON walk found no abstract or abstract_inverted_index key with a non-null value anywhere in the folder.
+- Quoted source text stays under 25 words.
+- Atlas import/maplink/challenge were not run. No prompt, checker or Atlas baseline was edited.
+- No file outside examples/research/baumeister-ego-depletion/ was changed.
