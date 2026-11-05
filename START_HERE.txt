@@ -59,6 +59,10 @@ A readable local report is enough. A model-generated conclusion remains provisio
   disagree on item 1 (CANNOT_DETERMINE vs CONDITION_MET_WITH_QUALIFICATION) and
   agree on item 2 (CONDITION_MET_WITH_QUALIFICATION) and item 3
   (CONDITION_NOT_MET). No decision by a person yet. See docs/atlas/challenge.md.
+  Audit page prepared on branch m1g-ajr-page (stacked on m1f-challenge-records):
+  docs/atlas/views/ajr2001/, a paper page rendered from the verified map-link
+  and challenge bundles. No question record exists for AJR 2001 yet, because
+  extending atlas.question would rebuild the merged power-posing receipt.
 
 YOU DO NOT NEED TO DECIDE NOW: cloud host, graph database, framework, agent fleet,
 bot interface, provider catalog, pricing, public launch or every future method.
