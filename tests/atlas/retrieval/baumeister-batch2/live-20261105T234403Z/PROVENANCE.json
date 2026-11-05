@@ -1,0 +1,33 @@
+{
+ "schema": "atlas-retrieval-replay-provenance/0.1",
+ "set": "baumeister-1998-batch2",
+ "executor": "atlas.retrieval 0.1.0 on a GitHub-hosted runner (workflow .github/workflows/retrieval-live-replay.yml)",
+ "workflow_run": {
+  "id": 42131614466,
+  "url": "https://github.com/yungmulaBABY1/Provenance-Atlas/actions/runs/42131614466",
+  "head_sha": "e5956101f4940ced12066be0aa9d54e91405d0e7",
+  "trigger": "workflow_dispatch by the owner, 2026-11-05"
+ },
+ "artifact": {
+  "id": 13462749273,
+  "name": "locked-query-live-replay",
+  "digest": "sha256:e967daa24edc393e1ca59a9c5bb3db25ab84812b85aa2bb35c145bda4b3d0927",
+  "created_at": "2026-11-05T23:44:09Z"
+ },
+ "transfer": "The owner downloaded the artifact zip from the run page and attached it to a Claude session. Its sha256 equals the digest GitHub reports for the artifact. The three files are committed unchanged.",
+ "files_sha256": {
+  "live-records.jsonl": "dd99f8cf45d97864350c69ea19d82c417526c710058bd8b5da36677ab8d6f058",
+  "drift.json": "51a2ecd32e681b90f4dccb6b9b3838b1ea9e69cc290a39b038a563f164fd3e01",
+  "DRIFT.txt": "28a28634283aa3629b1b10e1c2501039da0e6133de89db11cdc43b6bfccd1c1a"
+ },
+ "credentials": "none: no OPENALEX_API_KEY secret was set; every record says credentials none",
+ "other_runs": {
+  "note": "Four more dispatches ran within a minute, from the same commit. Their job logs print the same DRIFT.txt apart from timestamps; compared by Claude from the job logs. Their artifacts are not committed.",
+  "ids": [
+   42131622808,
+   42131664689,
+   42131715745,
+   42131733489
+  ]
+ }
+}

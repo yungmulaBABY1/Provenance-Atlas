@@ -63,11 +63,13 @@ A readable local report is enough. A model-generated conclusion remains provisio
   docs/atlas/views/ajr2001/, a paper page rendered from the verified map-link
   and challenge bundles. No question record exists for AJR 2001 yet, because
   extending atlas.question would rebuild the merged power-posing receipt.
-  X1 prepared on branch x1-locked-query-retrieval, draft PR, not merged:
-  atlas.retrieval records locked literature searches by code, starting with
-  Batch 2's fourteen saved OpenAlex queries checked against their locks and
-  the executor's log. The live replay has not been run. See
-  docs/atlas/retrieval.md.
+  X1 merged (#17): atlas.retrieval records locked literature searches by
+  code, starting with Batch 2's fourteen saved OpenAlex queries checked
+  against their locks and the executor's log. First live replay (GitHub
+  Actions run 42131614466) prepared on branch x1-live-replay-2026-11-05:
+  - membership is identical for all 14 queries;
+  - 3 rank swaps, cause unknown.
+  See docs/atlas/retrieval.md.
 
 YOU DO NOT NEED TO DECIDE NOW: cloud host, graph database, framework, agent fleet,
 bot interface, provider catalog, pricing, public launch or every future method.

@@ -90,7 +90,7 @@ python -m atlas.retrieval check tests/atlas/retrieval/*/set.json
 python -m atlas.view check-all
 ```
 
-Expected: checker regression `PASS`, 345 tests `OK` (one skipped: it needs
+Expected: checker regression `PASS`, 352 tests `OK` (one skipped: it needs
 the private source PDF), every content replay passes, the locked-query records are
 current, and the view is current. `historical-*` receipts were produced by earlier code and are not
 replayable. CI runs the same steps (`.github/workflows/atlas-adapter.yml`).

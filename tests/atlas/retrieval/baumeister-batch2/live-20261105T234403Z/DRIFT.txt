@@ -1,0 +1,38 @@
+DRIFT REPORT: saved executor responses vs a code-run replay
+Rank and membership only. A change is an observation about the index or its
+ranking over time. It says nothing about whether the audit was right.
+
+baumeister-1998-batch2/adj1-Q1: UNCHANGED  (saved-response 2026-11-05T11:28:49Z -> live 2026-11-05T23:44:03Z)
+  count 143 -> 143; top 10 vs 10; overlap 10
+baumeister-1998-batch2/adj1-Q2: UNCHANGED  (saved-response 2026-11-05T11:28:53Z -> live 2026-11-05T23:44:04Z)
+  count 39 -> 39; top 10 vs 10; overlap 10
+baumeister-1998-batch2/adj1-Q3: UNCHANGED  (saved-response 2026-11-05T11:28:56Z -> live 2026-11-05T23:44:04Z)
+  count 521 -> 521; top 10 vs 10; overlap 10
+baumeister-1998-batch2/adj1-Q4: REORDERED  (saved-response 2026-11-05T11:28:59Z -> live 2026-11-05T23:44:05Z)
+  count 177 -> 177; top 10 vs 10; overlap 10
+  ~ W2538010233 rank 7 -> 8
+  ~ W2000141755 rank 8 -> 7
+baumeister-1998-batch2/adj1-Q5: REORDERED  (saved-response 2026-11-05T11:29:03Z -> live 2026-11-05T23:44:05Z)
+  count 418 -> 418; top 10 vs 10; overlap 10
+  ~ W2270668874 rank 7 -> 8
+  ~ W2739641472 rank 8 -> 7
+baumeister-1998-batch2/adj1-Q6: REORDERED  (saved-response 2026-11-05T11:29:16Z -> live 2026-11-05T23:44:05Z)
+  count 182 -> 182; top 10 vs 10; overlap 10
+  ~ W3159013860 rank 7 -> 8
+  ~ W1992322615 rank 8 -> 7
+baumeister-1998-batch2/adj1-Q7: UNCHANGED  (saved-response 2026-11-05T11:31:39Z -> live 2026-11-05T23:44:06Z)
+  count 1205 -> 1205; top 10 vs 10; overlap 10
+baumeister-1998-batch2/secE-F1: UNCHANGED  (saved-response 2026-11-05T11:45:13Z -> live 2026-11-05T23:44:06Z)
+  count 169 -> 169; top 3 vs 3; overlap 3
+baumeister-1998-batch2/secE-F2: UNCHANGED  (saved-response 2026-11-05T11:45:51Z -> live 2026-11-05T23:44:06Z)
+  count 672 -> 672; top 3 vs 3; overlap 3
+baumeister-1998-batch2/secE-F3: UNCHANGED  (saved-response 2026-11-05T11:46:10Z -> live 2026-11-05T23:44:07Z)
+  count 5 -> 5; top 3 vs 3; overlap 3
+baumeister-1998-batch2/secE-F4: UNCHANGED  (saved-response 2026-11-05T11:46:28Z -> live 2026-11-05T23:44:07Z)
+  count 68 -> 68; top 3 vs 3; overlap 3
+baumeister-1998-batch2/secE-F5: UNCHANGED  (saved-response 2026-11-05T11:46:48Z -> live 2026-11-05T23:44:07Z)
+  count 139 -> 139; top 3 vs 3; overlap 3
+baumeister-1998-batch2/reception1-top50: UNCHANGED  (saved-response 2026-11-05T11:31:57Z -> live 2026-11-05T23:44:07Z)
+  count 5359 -> 5359; top 50 vs 50; overlap 50
+baumeister-1998-batch2/recent1-top25: UNCHANGED  (saved-response 2026-11-05T11:32:05Z -> live 2026-11-05T23:44:08Z)
+  count 1530 -> 1530; top 25 vs 25; overlap 25

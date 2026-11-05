@@ -1,5 +1,22 @@
 # Atlas adapter changelog
 
+## Unreleased — first live replay committed (`atlas.retrieval`)
+
+- `tests/atlas/retrieval/baumeister-batch2/live-20261105T234403Z/`: the
+  artifact of GitHub Actions run 42131614466, committed unchanged, with
+  `PROVENANCE.json`. The artifact zip's sha256 equals GitHub's digest.
+- Result against Grok's saved responses:
+  - all 14 queries returned the same works and counts;
+  - 11 unchanged;
+  - 3 swapped ranks 7 and 8 (Q4, Q5, Q6; cause unknown);
+  - no 429s.
+- `check` now also verifies committed replays:
+  - provenance hashes;
+  - records are of the current specs;
+  - allowed credential field;
+  - drift recomputed offline.
+- 7 new tests.
+
 ## Unreleased — locked queries 0.1.0 (`atlas.retrieval`, X1)
 
 - New package `atlas/retrieval/` (schemas `atlas-retrieval-spec/0.1`,
