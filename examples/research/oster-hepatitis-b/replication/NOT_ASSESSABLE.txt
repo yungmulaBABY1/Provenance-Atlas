@@ -1,0 +1,40 @@
+REPLICATION — NOT_ASSESSABLE IN THIS RUN
+(The data appear to exist publicly but could not be retrieved by this executor.)
+
+Target: Oster (2005), JPE 113(6), DOI 10.1086/498588.
+
+Status: NOT_ASSESSABLE (renamed from the working file NOT_RUN.txt at packaging; content unchanged in substance).
+- Field 6 was not reproduced or tested against data.
+- Caveat: a public author or publisher dataset appears to exist. This status therefore reflects retrieval failure, not the absence of data. A human with authorized access may be able to run it (see below).
+
+What was found
+- The JPE article page (journals.uchicago.edu/doi/10.1086/498588) lists a "Supplementary Material" file, "31452.dataset.zip" (ZIP, 11.99 MB). This was seen in a web-search result snippet of the publisher page; the page itself was not opened.
+- Expected URL: https://www.journals.uchicago.edu/doi/suppl/10.1086/498588/suppl_file/31452.dataset.zip
+  - curl with a generic UA: HTTP 403, a Cloudflare/HTML challenge page, no data.
+  - curl with browser headers and a referer: HTTP 403.
+  - Publisher landing page via curl: HTTP 403. Via WebFetch: timed out.
+- The paper says its HBV prevalence study list is "available on the author's Web page" (p.1189).
+  - emilyoster.net/research/ returned HTTP 403 to curl.
+  - The list was not obtained.
+
+What was searched (for the record; none yields the target's own data)
+- Harvard Dataverse API search "Oster hepatitis": HTTP 200, no Oster 2005 dataset.
+- OpenAlex works, type:dataset, title "hepatitis missing women": no target dataset.
+- openICPSR project 113279: HTTP 403; WebFetch timed out. This is the Lin & Luoh 2008 AER replication data, a different paper, and not target data.
+- AEA article page for Lin & Luoh 2008: HTTP 200, used only to identify that package.
+All requests are in retrieval_log.jsonl (stage "replication").
+
+What was not done
+- No data were reconstructed from published tables (the brief prohibits this).
+- No third-party mirror or archive copy was used (the brief prohibits this).
+- No central estimate was reproduced.
+
+What would make this assessable
+1. A human, or a browser session on an authorized account, downloads 31452.dataset.zip from the JPE page.
+2. They record its sha256 and licence terms.
+3. They rerun the pooled child-level estimate (SR_HBV 1.54, CI 1.29–1.87; Table 9) and the Table 11 Panel A share (47.24%), if the package contains them.
+4. Only scripts, logs and results are committed.
+
+Data URL: as above.
+sha256: not available (not retrieved).
+Licence: not determined (publisher supplementary material; terms not readable).

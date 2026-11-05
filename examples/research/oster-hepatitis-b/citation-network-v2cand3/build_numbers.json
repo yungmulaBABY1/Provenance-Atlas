@@ -1,0 +1,124 @@
+{
+ "D": {
+  "n": 49,
+  "den": 2352,
+  "ne": 134,
+  "dens": "5.70%",
+  "nrec": 135,
+  "drec": "5.51%",
+  "recip": 7,
+  "citing": 40,
+  "ost_in": 16,
+  "refs_total": 3641
+ },
+ "lead": "N08 23, N31 18, N01 15, N45 10, N11 9, N02 7, N47 6, N04 5",
+ "cov": {
+  "RECEPTION-1": [
+   24,
+   49
+  ],
+  "RECENT-1": [
+   2,
+   6
+  ],
+  "ADJUDICATION-1": [
+   2,
+   46
+  ]
+ },
+ "relc": {
+  "MENTIONS": 14,
+  "QUALIFIES": 4,
+  "SUPPORTS": 2,
+  "CHALLENGES": 4
+ },
+ "COMP": {
+  "I15": [
+   "ADJACENT=18; BACKGROUND=4; DIRECT=17; UNRELATED=7",
+   46
+  ],
+  "I16": [
+   "COMMENTARY=1; INDEPENDENT-DATA=31; METHOD=1; NONE=8; REVIEW=4; THEORY=1",
+   46
+  ],
+  "I17": [
+   "ADJACENT=16; BACKGROUND=17; DIRECT=14; UNRELATED=2",
+   49
+  ]
+ },
+ "kept": [
+  "N07",
+  "N11",
+  "N27"
+ ],
+ "cc_all": [
+  18,
+  10,
+  23,
+  5,
+  21
+ ],
+ "cc_post": [
+  35,
+  16,
+  9,
+  18,
+  18
+ ],
+ "recent": [
+  1,
+  1,
+  1,
+  2
+ ],
+ "indeg": [
+  [
+   "N08",
+   23
+  ],
+  [
+   "N31",
+   18
+  ],
+  [
+   "N01",
+   15
+  ],
+  [
+   "N45",
+   10
+  ],
+  [
+   "N11",
+   9
+  ],
+  [
+   "N02",
+   7
+  ],
+  [
+   "N47",
+   6
+  ],
+  [
+   "N04",
+   5
+  ],
+  [
+   "N24",
+   5
+  ],
+  [
+   "N46",
+   5
+  ],
+  [
+   "N15",
+   4
+  ],
+  [
+   "N14",
+   3
+  ]
+ ]
+}

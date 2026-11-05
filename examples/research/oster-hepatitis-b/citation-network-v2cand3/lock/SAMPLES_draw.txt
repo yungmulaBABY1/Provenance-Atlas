@@ -1,0 +1,7 @@
+SAMPLE ATTRITION draw record (written before any member was inspected)
+Drawn: 2026-11-05T10:26:38Z
+RNG: Python random.seed(20261105); random.sample(range(1,51),12) over RECEPTION-1 rank positions
+RECEPTION-1 inspection sample (rank positions): [7, 9, 10, 11, 20, 27, 28, 39, 40, 41, 42, 44]
+RECEPTION-1 sample IDs: ['W2057390815', 'W2125485011', 'W2123699796', 'W3122231766', 'W2128916858', 'W1806205041', 'W2400620947', 'W2115401314', 'W2066547533', 'W2182501184', 'W2016329099', 'W1964267580']
+RECENT-1: corpus size 6 < 25 cap; census of all 6 members, no random draw: ['W4210337642', 'W4403727727', 'W4397030871', 'W4409543403', 'W4385446270', 'W4399729713']
+Purposive additions (not random, labelled PURPOSIVE): known-item and DIRECT members of RECEPTION-1 (N04, N08, N24, N31, N45, N46) selected for claim relevance.

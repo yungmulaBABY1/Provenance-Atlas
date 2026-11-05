@@ -1,0 +1,1 @@
+section_E_preregistration.md locked 2026-11-05T10:29:05Z (2:29:05 AM PST Nov 5) sha256 5e43e7a48d3a4271fd842e65b14fcc7e06b9ae94a3f705a618cca3a3120f9451 [PST label corrected 10:31Z: first write printed UTC clock as PST; hash unchanged]

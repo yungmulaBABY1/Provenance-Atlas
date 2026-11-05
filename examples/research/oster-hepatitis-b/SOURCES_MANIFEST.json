@@ -1,0 +1,171 @@
+{
+ "schema": "oster-audit-sources/1",
+ "run_date": "2026-11-05 (America/Los_Angeles)",
+ "sources": [
+  {
+   "id": "S1",
+   "role": "target, published version",
+   "cite": "Oster (2005) JPE 113(6):1163-1216, DOI 10.1086/498588",
+   "file": "oster2005_jpe_belfer.pdf",
+   "url": "https://www.belfercenter.org/sites/default/files/pantheon_files/files/publication/498588.pdf",
+   "sha256": "2007b15d7461fd1b5288594b20a65136e690e68adfa6bac98c5ac95d89e84853",
+   "bytes": 486480,
+   "committed": false,
+   "retrieved": "2026-11-05, approx. 02:12-02:28 PST",
+   "note": "FULL-TEXT; University of Chicago Press-stamped copy hosted by Belfer Center; text layer jpe.txt / jpe_flow.txt"
+  },
+  {
+   "id": "S2",
+   "role": "target, author working paper (23 Aug 2005)",
+   "cite": "Oster, Hepatitis B and the Case of the Missing Women (WP)",
+   "file": "oster2005_wp_author.pdf",
+   "url": "https://emilyoster.net/wp-content/uploads/HepatitisBandtheCaseoftheMissingWomen.pdf",
+   "sha256": "e205cd224ccaa75ef778961499c8ae0a4d40c6e25f711827aff65662d767b57c",
+   "bytes": 302066,
+   "committed": false,
+   "retrieved": "2026-11-05, approx. 02:12-02:28 PST",
+   "note": "version comparison only; text layer wp.txt"
+  },
+  {
+   "id": "S3",
+   "role": "rival test (Stage 1/2a/2c N31)",
+   "cite": "Lin & Luoh (2008) AER 98(5):2259-73 — read as authors' working paper",
+   "file": "linluoh2008_wp.pdf",
+   "url": "https://homepage.ntu.edu.tw/~mjlin/HBV%20and%20Missing%20Women-2008.pdf",
+   "sha256": "b62ed5f975916de6ff6f4e21451433a75477c09cdb07cf347a37910ab7b5f549",
+   "bytes": 198741,
+   "committed": false,
+   "retrieved": "2026-11-05, approx. 02:12-02:28 PST",
+   "note": "VERSION-SUBSTITUTE; text layer linluoh.txt"
+  },
+  {
+   "id": "S4",
+   "role": "author's successor test (2a IV-3, 2c N45)",
+   "cite": "Oster, Chen, Yu & Lin (2010) Economics Letters — read as NBER w13971 (2008)",
+   "file": "oster2008_nber_w13971.pdf",
+   "url": "https://www.nber.org/system/files/working_papers/w13971/w13971.pdf",
+   "sha256": "431cd16ebcf5c07df9ded7a40796ccb999944aac355817a9c01a772ff999a234",
+   "bytes": 144492,
+   "committed": false,
+   "retrieved": "2026-11-05, approx. 02:12-02:28 PST",
+   "note": "VERSION-SUBSTITUTE; text layer oster2008.txt"
+  },
+  {
+   "id": "S5",
+   "role": "comment",
+   "cite": "Klasen (2005) comments on Oster",
+   "file": "klasen2005_comments.pdf",
+   "url": "https://www.uni-goettingen.de/de/document/download/7acf89e1b71e1a787f65e89cb6775c8d.pdf/CommentsOster.pdf",
+   "sha256": "9b4d53697c183d696954ae5b3ce9286eb2a9ff1299dd4644f8a6139b979243fd",
+   "bytes": 37551,
+   "committed": false,
+   "retrieved": "2026-11-05, approx. 02:12-02:28 PST",
+   "note": "text layer klasen.txt"
+  },
+  {
+   "id": "S6",
+   "role": "downstream media (Stage 1 5B)",
+   "cite": "Slate (2005) 'Where did 100 million missing women go?'",
+   "file": "slate2005.html",
+   "url": "https://slate.com/business/2005/05/where-did-100-million-missing-women-go.html",
+   "sha256": "e8b4736b4678e6e30179f9653c57bc88731468b48d081bd5b0a396d5d9b6c836",
+   "bytes": 399420,
+   "committed": false,
+   "retrieved": "2026-11-05, approx. 02:12-02:28 PST",
+   "note": "text layer slate2005.txt"
+  },
+  {
+   "id": "S7",
+   "role": "recent test (2c R03)",
+   "cite": "Banyeh et al. (2024) PMC11137505",
+   "file": "banyeh2024.xml",
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11137505/fullTextXML",
+   "sha256": "e29736fecd92e48d2f77ca5c5ee09d4ac0c383361871afb77506e3f211ef391d",
+   "bytes": 77223,
+   "committed": false,
+   "retrieved": "2026-11-05, approx. 02:12-02:28 PST",
+   "note": "Europe PMC full-text XML; text layer banyeh2024.txt"
+  },
+  {
+   "id": "S8",
+   "role": "review column (Stage 1/3)",
+   "cite": "Klasen, VoxEU column 'Hepatitis B and missing women: rise and decline of a finding'",
+   "url": "https://cepr.org/voxeu/columns/hepatitis-b-and-missing-women-rise-and-decline-finding",
+   "committed": false,
+   "note": "curl HTTP 403 (local file voxeu_klasen.html is a block page, sha256 d223a04ad8c9e4ffcdc79556166937455bc6ba398b6aac2e7508f2836043ade4, not used); read via WebFetch HTTP 200 in Stage 3, no local copy"
+  },
+  {
+   "id": "S9",
+   "role": "citation contexts (2c)",
+   "cite": "Semantic Scholar Graph API citations of DOI 10.1086/498588 (contexts)",
+   "url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1086/498588/citations",
+   "file": "s2/s2_citations.json",
+   "sha256": "c570ae9f4fa617d1b873a455054a752b97ab0077f77d1ce11ed3e83576d1c3c4",
+   "bytes": 116654,
+   "committed": false,
+   "note": "EXCERPT access; not committed; short context quotes only in 02c"
+  },
+  {
+   "id": "S10",
+   "role": "bibliographic metadata",
+   "cite": "Crossref works record and updates query",
+   "files": [
+    "raw/crossref_target.json",
+    "raw/crossref_updates.json"
+   ],
+   "committed": true,
+   "note": "abstract fields nulled"
+  },
+  {
+   "id": "S11",
+   "role": "reception and adjudication corpora (2c)",
+   "cite": "OpenAlex works API",
+   "files": [
+    "citation-network-v2cand3/raw/*.json"
+   ],
+   "committed": true,
+   "note": "select= lists omit abstract_inverted_index; verified absent at packaging; request/time/hash in 02c corpus register and lock/"
+  }
+ ],
+ "access_failures": [
+  {
+   "item": "JPE supplementary dataset 31452.dataset.zip",
+   "url": "https://www.journals.uchicago.edu/doi/suppl/10.1086/498588/suppl_file/31452.dataset.zip",
+   "outcome": "HTTP 403 x2 (curl generic UA; curl browser headers+referer); replication NOT_ASSESSABLE"
+  },
+  {
+   "item": "JPE landing page",
+   "url": "https://www.journals.uchicago.edu/doi/10.1086/498588",
+   "outcome": "HTTP 403 (curl); WebFetch timed out"
+  },
+  {
+   "item": "author research page (prevalence study list)",
+   "url": "https://emilyoster.net/research/",
+   "outcome": "HTTP 403"
+  },
+  {
+   "item": "openICPSR 113279 (Lin & Luoh replication data; not target data)",
+   "url": "https://www.openicpsr.org/openicpsr/project/113279/version/V1/view",
+   "outcome": "HTTP 403"
+  },
+  {
+   "item": "author copy of 2008/2010 successor paper",
+   "url": "https://emilyoster.net/wp-content/uploads/HepatitisBDoesNotExplainMale-BiasedSexRatiosinChina.pdf",
+   "outcome": "no response (logged status 000); NBER w13971 used instead"
+  },
+  {
+   "item": "VoxEU column via curl",
+   "url": "https://cepr.org/voxeu/columns/hepatitis-b-and-missing-women-rise-and-decline-finding",
+   "outcome": "HTTP 403 block page; later WebFetch 200"
+  },
+  {
+   "item": "OpenAlex rate limiting",
+   "outcome": "HTTP 429 x19 across 2c queries; each query retried to HTTP 200; see logs/retrieval_log.jsonl"
+  },
+  {
+   "item": "OpenAlex target lookup",
+   "outcome": "first request used a mistyped DOI (10.1086/497505); corrected request to 10.1086/498588 logged"
+  }
+ ],
+ "note": "PDFs, HTML, XML, full-text layers and Semantic Scholar context responses are NOT committed (rights). Re-fetch from URLs and verify sha256. No abstracts are committed."
+}

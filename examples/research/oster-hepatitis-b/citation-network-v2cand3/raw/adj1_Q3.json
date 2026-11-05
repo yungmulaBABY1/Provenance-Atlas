@@ -1,0 +1,1828 @@
+{
+ "meta": {
+  "notice": "No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address. Get a free key with its own $1/day at https://openalex.org/settings/api and add api_key=YOUR_KEY to your requests. An AI agent can get one for its user in one call: POST https://api.openalex.org/api-keys with {\"email\": \"<your user's email>\"}; we email them a link, and the key works once they click it. Docs for agents: https://help.openalex.org/llms.txt",
+  "count": 147,
+  "db_response_time_ms": 324,
+  "page": 1,
+  "per_page": 10,
+  "groups_count": null,
+  "x_query": {
+   "oql": "get works from 1980-01-01 through 2026-11-05 with ((China OR India) AND (stemmed \"birth order\" OR parity) AND (stemmed \"sex ratio at birth\" OR stemmed \"son preference\")) in the title or abstract where type is ([article](article) or [book-chapter](book-chapter) or [preprint](preprint))",
+   "x_new_oql": "get works from 1980-01-01 through 2026-11-05 with ((China OR India) AND (stemmed \"birth order\" OR parity) AND (stemmed \"sex ratio at birth\" OR stemmed \"son preference\")) in the title or abstract where type is ([article](article) or [book-chapter](book-chapter) or [preprint](preprint))",
+   "oqo": {
+    "get_rows": "works",
+    "filter_rows": [
+     {
+      "column_id": "from_publication_date",
+      "value": "1980-01-01"
+     },
+     {
+      "column_id": "to_publication_date",
+      "value": "2026-11-05"
+     },
+     {
+      "join": "or",
+      "filters": [
+       {
+        "column_id": "title_and_abstract.search",
+        "value": "China",
+        "operator": "has"
+       },
+       {
+        "column_id": "title_and_abstract.search",
+        "value": "India",
+        "operator": "has"
+       }
+      ]
+     },
+     {
+      "join": "or",
+      "filters": [
+       {
+        "column_id": "title_and_abstract.search",
+        "value": "\"birth order\"",
+        "operator": "has"
+       },
+       {
+        "column_id": "title_and_abstract.search",
+        "value": "parity",
+        "operator": "has"
+       }
+      ]
+     },
+     {
+      "join": "or",
+      "filters": [
+       {
+        "column_id": "title_and_abstract.search",
+        "value": "\"sex ratio at birth\"",
+        "operator": "has"
+       },
+       {
+        "column_id": "title_and_abstract.search",
+        "value": "\"son preference\"",
+        "operator": "has"
+       }
+      ]
+     },
+     {
+      "join": "or",
+      "filters": [
+       {
+        "column_id": "type",
+        "value": "article"
+       },
+       {
+        "column_id": "type",
+        "value": "book-chapter"
+       },
+       {
+        "column_id": "type",
+        "value": "preprint"
+       }
+      ]
+     }
+    ]
+   },
+   "url": "/works?filter=from_publication_date:1980-01-01,to_publication_date:2026-11-05,title_and_abstract.search:China|India,title_and_abstract.search:%22birth order%22|parity,title_and_abstract.search:%22sex ratio at birth%22|%22son preference%22,type:article|book-chapter|preprint&per_page=10",
+   "order": "best matches first",
+   "order_default": true
+  },
+  "cost_usd": 0.001
+ },
+ "results": [
+  {
+   "id": "https://openalex.org/W2147178406",
+   "doi": "https://doi.org/10.1080/19485565.1997.9988934",
+   "display_name": "Son preference and the sex ratio at birth in China: A provincial level analysis",
+   "publication_year": 1997,
+   "type": "article",
+   "cited_by_count": 78,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5060437286",
+      "display_name": "Dudley L. Poston",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I91045830",
+       "display_name": "Texas A&M University",
+       "ror": "https://ror.org/01f5ytq51",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I91045830"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Dudley L. Poston",
+     "raw_affiliation_strings": [
+      "Department of Sociology, Texas A & M University, College Station 77843, USA",
+      "Department of Sociology , Texas A & M University , College Station , Texas , 77843"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Sociology, Texas A & M University, College Station 77843, USA",
+       "institution_ids": [
+        "https://openalex.org/I91045830"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Department of Sociology , Texas A & M University , College Station , Texas , 77843",
+       "institution_ids": [
+        "https://openalex.org/I91045830"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5032308544",
+      "display_name": "Baochang Gu",
+      "orcid": "https://orcid.org/0000-0001-8770-1376",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-8770-1376"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4210149613",
+       "display_name": "China Population and Development Research Center",
+       "ror": "https://ror.org/04gj4ky87",
+       "country_code": "CN",
+       "type": "facility",
+       "lineage": [
+        "https://openalex.org/I4210149613"
+       ]
+      }
+     ],
+     "countries": [
+      "CN"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Baochang Gu",
+     "raw_affiliation_strings": [
+      "China Population Information and Research Center, Beijing, People's Republic of China"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "China Population Information and Research Center, Beijing, People's Republic of China",
+       "institution_ids": [
+        "https://openalex.org/I4210149613"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5109240298",
+      "display_name": "Peihang Peggy Liu",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I91045830",
+       "display_name": "Texas A&M University",
+       "ror": "https://ror.org/01f5ytq51",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I91045830"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Peihang Peggy Liu",
+     "raw_affiliation_strings": [
+      "Department of Sociology, Texas A & M University, College Station, Texas, 77843"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Sociology, Texas A & M University, College Station, Texas, 77843",
+       "institution_ids": [
+        "https://openalex.org/I91045830"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5088538047",
+      "display_name": "Terra McDaniel",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I91045830",
+       "display_name": "Texas A&M University",
+       "ror": "https://ror.org/01f5ytq51",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I91045830"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Terra McDaniel",
+     "raw_affiliation_strings": [
+      "Department of Sociology, Texas A & M University, College Station, Texas, 77843"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Sociology, Texas A & M University, College Station, Texas, 77843",
+       "institution_ids": [
+        "https://openalex.org/I91045830"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1080/19485565.1997.9988934",
+    "doi": "https://doi.org/10.1080/19485565.1997.9988934",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1080/19485565.1997.9988934",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S4210206601",
+     "display_name": "Biodemography and Social Biology",
+     "issn_l": "1948-5565",
+     "issn": [
+      "1948-5565",
+      "1948-5573"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "anvur-class-a",
+      "anvur-scientific",
+      "cwts-core",
+      "jufo-1",
+      "ki-jl-1",
+      "medline",
+      "norway-1",
+      "poland-70",
+      "russia-white-list-2",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320547",
+     "host_organization_name": "Taylor & Francis",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320547",
+      "https://openalex.org/P4310320449"
+     ],
+     "host_organization_lineage_names": [
+      "Taylor & Francis",
+      "Informa"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Biodemography and Social Biology",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W55861029",
+    "https://openalex.org/W194664596",
+    "https://openalex.org/W418740306",
+    "https://openalex.org/W1518352691",
+    "https://openalex.org/W1599480271",
+    "https://openalex.org/W1601040468",
+    "https://openalex.org/W1601973935",
+    "https://openalex.org/W1956968598",
+    "https://openalex.org/W1967286984",
+    "https://openalex.org/W1969699349",
+    "https://openalex.org/W1977888550",
+    "https://openalex.org/W1987601081",
+    "https://openalex.org/W2000433043",
+    "https://openalex.org/W2004092908",
+    "https://openalex.org/W2006695775",
+    "https://openalex.org/W2014097204",
+    "https://openalex.org/W2014202908",
+    "https://openalex.org/W2020048540",
+    "https://openalex.org/W2027268276",
+    "https://openalex.org/W2028592183",
+    "https://openalex.org/W2038445667",
+    "https://openalex.org/W2062234072",
+    "https://openalex.org/W2065550776",
+    "https://openalex.org/W2069643300",
+    "https://openalex.org/W2072874130",
+    "https://openalex.org/W2078595709",
+    "https://openalex.org/W2094247605",
+    "https://openalex.org/W2148877116",
+    "https://openalex.org/W2165231830",
+    "https://openalex.org/W2213029219",
+    "https://openalex.org/W2249723975",
+    "https://openalex.org/W2276813087",
+    "https://openalex.org/W2320720455",
+    "https://openalex.org/W2324598077",
+    "https://openalex.org/W4230753077",
+    "https://openalex.org/W4250591405",
+    "https://openalex.org/W4302563819"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W2552766914",
+   "doi": "https://doi.org/10.1017/s0021932016000547",
+   "display_name": "CHANGES IN SEX RATIO AT BIRTH IN CHINA: A DECOMPOSITION BY BIRTH ORDER",
+   "publication_year": 2016,
+   "type": "article",
+   "cited_by_count": 78,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5014490774",
+      "display_name": "Quanbao Jiang",
+      "orcid": "https://orcid.org/0000-0002-1696-7393",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-1696-7393"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I87445476",
+       "display_name": "Xi'an Jiaotong University",
+       "ror": "https://ror.org/017zhmm22",
+       "country_code": "CN",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I87445476"
+       ]
+      }
+     ],
+     "countries": [
+      "CN"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Quanbao Jiang",
+     "raw_affiliation_strings": [
+      "Institute for Population and Development Studies, Xi'an Jiaotong University, China"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Institute for Population and Development Studies, Xi'an Jiaotong University, China",
+       "institution_ids": [
+        "https://openalex.org/I87445476"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5100962188",
+      "display_name": "Qun Yu",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I87445476",
+       "display_name": "Xi'an Jiaotong University",
+       "ror": "https://ror.org/017zhmm22",
+       "country_code": "CN",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I87445476"
+       ]
+      }
+     ],
+     "countries": [
+      "CN"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Qun Yu",
+     "raw_affiliation_strings": [
+      "Institute for Population and Development Studies, Xi'an Jiaotong University, China"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Institute for Population and Development Studies, Xi'an Jiaotong University, China",
+       "institution_ids": [
+        "https://openalex.org/I87445476"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5103703059",
+      "display_name": "Shucai Yang",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I87445476",
+       "display_name": "Xi'an Jiaotong University",
+       "ror": "https://ror.org/017zhmm22",
+       "country_code": "CN",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I87445476"
+       ]
+      }
+     ],
+     "countries": [
+      "CN"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Shucai Yang",
+     "raw_affiliation_strings": [
+      "Institute for Population and Development Studies, Xi'an Jiaotong University, China"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Institute for Population and Development Studies, Xi'an Jiaotong University, China",
+       "institution_ids": [
+        "https://openalex.org/I87445476"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5082737499",
+      "display_name": "Jesús J. Sánchez‐Barricarte",
+      "orcid": "https://orcid.org/0000-0001-8015-1842",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-8015-1842"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I50357001",
+       "display_name": "Universidad Carlos III de Madrid",
+       "ror": "https://ror.org/03ths8210",
+       "country_code": "ES",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I50357001"
+       ]
+      }
+     ],
+     "countries": [
+      "ES"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Jesús J. Sánchez-Barricarte",
+     "raw_affiliation_strings": [
+      "Carlos III University of Madrid, Spain"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Carlos III University of Madrid, Spain",
+       "institution_ids": [
+        "https://openalex.org/I50357001"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1017/s0021932016000547",
+    "doi": "https://doi.org/10.1017/s0021932016000547",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.1017/s0021932016000547",
+    "pdf_url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/51D48C611E5176A042FF28684041D997/S0021932016000547a.pdf/div-class-title-changes-in-sex-ratio-at-birth-in-china-a-decomposition-by-birth-order-div.pdf",
+    "source": {
+     "id": "https://openalex.org/S167809449",
+     "display_name": "Journal of Biosocial Science",
+     "issn_l": "0021-9320",
+     "issn": [
+      "0021-9320",
+      "1469-7599"
+     ],
+     "is_oa": false,
+     "is_in_doaj": true,
+     "is_core": true,
+     "listed_in": [
+      "anvur-scientific",
+      "cwts-core",
+      "doaj",
+      "jufo-1",
+      "ki-jl-1",
+      "medline",
+      "norway-1",
+      "poland-40",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310311721",
+     "host_organization_name": "Cambridge University Press",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310311721",
+      "https://openalex.org/P4310311702"
+     ],
+     "host_organization_lineage_names": [
+      "Cambridge University Press",
+      "University of Cambridge"
+     ],
+     "type": "journal"
+    },
+    "license": "cc-by",
+    "license_id": "https://openalex.org/licenses/cc-by",
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Journal of Biosocial Science",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W406570931",
+    "https://openalex.org/W961876696",
+    "https://openalex.org/W1965283229",
+    "https://openalex.org/W1993059324",
+    "https://openalex.org/W1993130654",
+    "https://openalex.org/W2004499445",
+    "https://openalex.org/W2007926592",
+    "https://openalex.org/W2014311021",
+    "https://openalex.org/W2024617259",
+    "https://openalex.org/W2054588602",
+    "https://openalex.org/W2057995781",
+    "https://openalex.org/W2071362772",
+    "https://openalex.org/W2078703033",
+    "https://openalex.org/W2158433944",
+    "https://openalex.org/W2169277442",
+    "https://openalex.org/W2249723975",
+    "https://openalex.org/W2309440561",
+    "https://openalex.org/W2381743675",
+    "https://openalex.org/W2585704511",
+    "https://openalex.org/W4285719527"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W3162357794",
+   "doi": "https://doi.org/10.1136/bmjgh-2021-005438",
+   "display_name": "Recent sex ratio at birth in China",
+   "publication_year": 2021,
+   "type": "article",
+   "cited_by_count": 70,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5014490774",
+      "display_name": "Quanbao Jiang",
+      "orcid": "https://orcid.org/0000-0002-1696-7393",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-1696-7393"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I87445476",
+       "display_name": "Xi'an Jiaotong University",
+       "ror": "https://ror.org/017zhmm22",
+       "country_code": "CN",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I87445476"
+       ]
+      }
+     ],
+     "countries": [
+      "CN"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Quanbao Jiang",
+     "raw_affiliation_strings": [
+      "Institute for Population and Development Studies, Xi’an Jiaotong University, Xi'an, China"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Institute for Population and Development Studies, Xi’an Jiaotong University, Xi'an, China",
+       "institution_ids": [
+        "https://openalex.org/I87445476"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5114406825",
+      "display_name": "Cuiling Zhang",
+      "orcid": "https://orcid.org/0000-0002-2133-5366",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-2133-5366"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4210149613",
+       "display_name": "China Population and Development Research Center",
+       "ror": "https://ror.org/04gj4ky87",
+       "country_code": "CN",
+       "type": "facility",
+       "lineage": [
+        "https://openalex.org/I4210149613"
+       ]
+      }
+     ],
+     "countries": [
+      "CN"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Cuiling Zhang",
+     "raw_affiliation_strings": [
+      "China Population and Development Research Centre, Beijing, China"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "China Population and Development Research Centre, Beijing, China",
+       "institution_ids": [
+        "https://openalex.org/I4210149613"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1136/bmjgh-2021-005438",
+    "doi": "https://doi.org/10.1136/bmjgh-2021-005438",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.1136/bmjgh-2021-005438",
+    "pdf_url": "https://gh.bmj.com/content/bmjgh/6/5/e005438.full.pdf",
+    "source": {
+     "id": "https://openalex.org/S2764928273",
+     "display_name": "BMJ Global Health",
+     "issn_l": "2059-7908",
+     "issn": [
+      "2059-7908"
+     ],
+     "is_oa": true,
+     "is_in_doaj": true,
+     "is_core": true,
+     "listed_in": [
+      "anvur-scientific",
+      "cwts-core",
+      "doaj",
+      "dongbi-b",
+      "doyens",
+      "jufo-1",
+      "ki-jl-2",
+      "medline",
+      "norway-1",
+      "poland-70",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310319945",
+     "host_organization_name": "BMJ",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310319945"
+     ],
+     "host_organization_lineage_names": [
+      "BMJ"
+     ],
+     "type": "journal"
+    },
+    "license": "cc-by-nc",
+    "license_id": "https://openalex.org/licenses/cc-by-nc",
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "BMJ Global Health",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W746430344",
+    "https://openalex.org/W1965283229",
+    "https://openalex.org/W1997734086",
+    "https://openalex.org/W2004499445",
+    "https://openalex.org/W2006695775",
+    "https://openalex.org/W2014311021",
+    "https://openalex.org/W2024617259",
+    "https://openalex.org/W2046295020",
+    "https://openalex.org/W2048099240",
+    "https://openalex.org/W2054588602",
+    "https://openalex.org/W2057390815",
+    "https://openalex.org/W2069320206",
+    "https://openalex.org/W2076900006",
+    "https://openalex.org/W2078703033",
+    "https://openalex.org/W2079414367",
+    "https://openalex.org/W2088444434",
+    "https://openalex.org/W2107625305",
+    "https://openalex.org/W2111814589",
+    "https://openalex.org/W2115273893",
+    "https://openalex.org/W2122110451",
+    "https://openalex.org/W2131777726",
+    "https://openalex.org/W2156861904",
+    "https://openalex.org/W2161799647",
+    "https://openalex.org/W2174443727",
+    "https://openalex.org/W2249723975",
+    "https://openalex.org/W2309440561",
+    "https://openalex.org/W2322292069",
+    "https://openalex.org/W2384287818",
+    "https://openalex.org/W2530848521",
+    "https://openalex.org/W2552766914",
+    "https://openalex.org/W2764844077",
+    "https://openalex.org/W2790022687",
+    "https://openalex.org/W2900030434",
+    "https://openalex.org/W2911698178",
+    "https://openalex.org/W2934582090",
+    "https://openalex.org/W2940124361",
+    "https://openalex.org/W2994771927",
+    "https://openalex.org/W3029290228",
+    "https://openalex.org/W3094234085",
+    "https://openalex.org/W4206961935"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W2355836375",
+   "doi": null,
+   "display_name": "Parity-Intensification Effect:Birth Planning Policy and Sex Ratio at Birth in China",
+   "publication_year": 2009,
+   "type": "article",
+   "cited_by_count": 3,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5112109500",
+      "display_name": "Yang Ju-hua",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I78988378",
+       "display_name": "Renmin University of China",
+       "ror": "https://ror.org/041pakw92",
+       "country_code": "CN",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I78988378"
+       ]
+      }
+     ],
+     "countries": [
+      "CN"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Yang Ju-hua",
+     "raw_affiliation_strings": [
+      "Center for Population and Development Studies,Renmin University of China, Beijing 100872,China)"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Center for Population and Development Studies,Renmin University of China, Beijing 100872,China)",
+       "institution_ids": [
+        "https://openalex.org/I78988378"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "mag:2355836375",
+    "doi": null,
+    "is_oa": false,
+    "landing_page_url": "http://en.cnki.com.cn/Article_en/CJFDTOTAL-SCRK200904005.htm",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S2764657679",
+     "display_name": "Renkou yu fazhan",
+     "issn_l": "1674-1668",
+     "issn": [
+      "1674-1668"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": false,
+     "listed_in": [],
+     "host_organization": null,
+     "host_organization_name": null,
+     "host_organization_lineage": [],
+     "host_organization_lineage_names": [],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": null,
+    "is_accepted": false,
+    "is_published": false,
+    "raw_source_name": "Renkou yu fazhan",
+    "raw_type": null
+   },
+   "referenced_works": []
+  },
+  {
+   "id": "https://openalex.org/W3009429537",
+   "doi": "https://doi.org/10.36106/ijar/1418829",
+   "display_name": "IS THERE SON PREFERENCE IN INDIA? - AN ANALYSIS BASED ON SEX RATIO AT BIRTH AND ORDER OF BIRTH",
+   "publication_year": 2020,
+   "type": "article",
+   "cited_by_count": 0,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5050064180",
+      "display_name": "Zabeena Hameed P",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I114176345",
+       "display_name": "University of Calicut",
+       "ror": "https://ror.org/05yeh3g67",
+       "country_code": "IN",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I114176345"
+       ]
+      }
+     ],
+     "countries": [
+      "IN"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Zabeena Hameed. P",
+     "raw_affiliation_strings": [
+      "Assistant Professor Department of Economics University of Calicut Dr John Matthai Centre Aranattukara, Thrissur - 680618"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Assistant Professor Department of Economics University of Calicut Dr John Matthai Centre Aranattukara, Thrissur - 680618",
+       "institution_ids": [
+        "https://openalex.org/I114176345"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.36106/ijar/1418829",
+    "doi": "https://doi.org/10.36106/ijar/1418829",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.36106/ijar/1418829",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S2764357075",
+     "display_name": "Indian Journal Of Applied Research",
+     "issn_l": "2249-555X",
+     "issn": [
+      "2249-555X"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": false,
+     "listed_in": [],
+     "host_organization": "https://openalex.org/P4310320570",
+     "host_organization_name": "World Wide Journals",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320570"
+     ],
+     "host_organization_lineage_names": [
+      "World Wide Journals"
+     ],
+     "type": "journal"
+    },
+    "license": "cc-by",
+    "license_id": "https://openalex.org/licenses/cc-by",
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "INDIAN JOURNAL OF APPLIED RESEARCH",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": []
+  },
+  {
+   "id": "https://openalex.org/W2912981086",
+   "doi": "https://doi.org/10.1111/joes.12309",
+   "display_name": "IMBALANCE IN CHINA'S SEX RATIO AT BIRTH: A REVIEW",
+   "publication_year": 2019,
+   "type": "article",
+   "cited_by_count": 38,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5100704059",
+      "display_name": "Ruoyu Chen",
+      "orcid": "https://orcid.org/0000-0002-0691-9056",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-0691-9056"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I125839683",
+       "display_name": "Beijing Institute of Technology",
+       "ror": "https://ror.org/01skt4w74",
+       "country_code": "CN",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I125839683",
+        "https://openalex.org/I890469752"
+       ]
+      }
+     ],
+     "countries": [
+      "CN"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Ruoyu Chen",
+     "raw_affiliation_strings": [
+      "Beijing Institute of Technology, School of Management and Economics"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Beijing Institute of Technology, School of Management and Economics",
+       "institution_ids": [
+        "https://openalex.org/I125839683"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5001051217",
+      "display_name": "Lingxiang Zhang",
+      "orcid": "https://orcid.org/0000-0003-0529-2252",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-0529-2252",
+       "https://orcid.org/0009-0003-7171-2339",
+       "https://orcid.org/0000-0001-7802-5767"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I125839683",
+       "display_name": "Beijing Institute of Technology",
+       "ror": "https://ror.org/01skt4w74",
+       "country_code": "CN",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I125839683",
+        "https://openalex.org/I890469752"
+       ]
+      }
+     ],
+     "countries": [
+      "CN"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Lingxiang Zhang",
+     "raw_affiliation_strings": [
+      "Beijing Institute of Technology, School of Management and Economics"
+     ],
+     "raw_orcid": "https://orcid.org/0000-0003-0529-2252",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Beijing Institute of Technology, School of Management and Economics",
+       "institution_ids": [
+        "https://openalex.org/I125839683"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1111/joes.12309",
+    "doi": "https://doi.org/10.1111/joes.12309",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1111/joes.12309",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S124549413",
+     "display_name": "Journal of Economic Surveys",
+     "issn_l": "0950-0804",
+     "issn": [
+      "0950-0804",
+      "1467-6419"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "abdc-a",
+      "anvur-class-a",
+      "anvur-scientific",
+      "cwts-core",
+      "erih-plus",
+      "jufo-1",
+      "norway-1",
+      "poland-140",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320595",
+     "host_organization_name": "Wiley",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320595"
+     ],
+     "host_organization_lineage_names": [
+      "Wiley"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Journal of Economic Surveys",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W22024172",
+    "https://openalex.org/W209664832",
+    "https://openalex.org/W961025560",
+    "https://openalex.org/W1507819205",
+    "https://openalex.org/W1513912377",
+    "https://openalex.org/W1518352691",
+    "https://openalex.org/W1965283229",
+    "https://openalex.org/W1969403843",
+    "https://openalex.org/W1975366301",
+    "https://openalex.org/W1982250044",
+    "https://openalex.org/W1991807621",
+    "https://openalex.org/W1993059324",
+    "https://openalex.org/W1997734086",
+    "https://openalex.org/W2000516858",
+    "https://openalex.org/W2001895654",
+    "https://openalex.org/W2006695775",
+    "https://openalex.org/W2043438983",
+    "https://openalex.org/W2046413963",
+    "https://openalex.org/W2054588602",
+    "https://openalex.org/W2056687536",
+    "https://openalex.org/W2057390815",
+    "https://openalex.org/W2085293969",
+    "https://openalex.org/W2085638750",
+    "https://openalex.org/W2088444434",
+    "https://openalex.org/W2101699422",
+    "https://openalex.org/W2106478630",
+    "https://openalex.org/W2114545192",
+    "https://openalex.org/W2114978546",
+    "https://openalex.org/W2123003545",
+    "https://openalex.org/W2124148838",
+    "https://openalex.org/W2128916858",
+    "https://openalex.org/W2130073964",
+    "https://openalex.org/W2144374254",
+    "https://openalex.org/W2175005822",
+    "https://openalex.org/W2190102154",
+    "https://openalex.org/W2217780926",
+    "https://openalex.org/W2219063430",
+    "https://openalex.org/W2300005358",
+    "https://openalex.org/W2347091111",
+    "https://openalex.org/W2407827170",
+    "https://openalex.org/W2481657621",
+    "https://openalex.org/W2491503643",
+    "https://openalex.org/W2581079769",
+    "https://openalex.org/W2964335781",
+    "https://openalex.org/W3094234085",
+    "https://openalex.org/W3121548657",
+    "https://openalex.org/W3145289980"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W2020683083",
+   "doi": "https://doi.org/10.1371/journal.pone.0020097",
+   "display_name": "Sex Ratio at Birth in India, Its Relation to Birth Order, Sex of Previous Children and Use of Indigenous Medicine",
+   "publication_year": 2011,
+   "type": "article",
+   "cited_by_count": 30,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5038475429",
+      "display_name": "Samiksha Manchanda",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4210147366",
+       "display_name": "St. Stephen’s Hospital",
+       "ror": "https://ror.org/03fan2n27",
+       "country_code": "IN",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I4210147366"
+       ]
+      }
+     ],
+     "countries": [
+      "IN"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Samiksha Manchanda",
+     "raw_affiliation_strings": [
+      "Department of Neonatology and Pediatrics, St Stephen Hospital, Delhi, India. manchandasami@yahoo.com",
+      "Department of Neonatology and Pediatrics, St Stephen Hospital, Delhi, India"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Neonatology and Pediatrics, St Stephen Hospital, Delhi, India. manchandasami@yahoo.com",
+       "institution_ids": [
+        "https://openalex.org/I4210147366"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Department of Neonatology and Pediatrics, St Stephen Hospital, Delhi, India",
+       "institution_ids": [
+        "https://openalex.org/I4210147366"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5113588205",
+      "display_name": "Bedangshu Saikia",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4210147366",
+       "display_name": "St. Stephen’s Hospital",
+       "ror": "https://ror.org/03fan2n27",
+       "country_code": "IN",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I4210147366"
+       ]
+      }
+     ],
+     "countries": [
+      "IN"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Bedangshu Saikia",
+     "raw_affiliation_strings": [
+      "Department of Neonatology and Pediatrics, St Stephen Hospital, Delhi, India"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Neonatology and Pediatrics, St Stephen Hospital, Delhi, India",
+       "institution_ids": [
+        "https://openalex.org/I4210147366"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": null,
+      "display_name": "Neeraj Gupta",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4210147366",
+       "display_name": "St. Stephen’s Hospital",
+       "ror": "https://ror.org/03fan2n27",
+       "country_code": "IN",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I4210147366"
+       ]
+      }
+     ],
+     "countries": [
+      "IN"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Neeraj Gupta",
+     "raw_affiliation_strings": [
+      "Department of Neonatology and Pediatrics, St Stephen Hospital, Delhi, India"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Neonatology and Pediatrics, St Stephen Hospital, Delhi, India",
+       "institution_ids": [
+        "https://openalex.org/I4210147366"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5032654098",
+      "display_name": "Sona Chowdhary",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4210147366",
+       "display_name": "St. Stephen’s Hospital",
+       "ror": "https://ror.org/03fan2n27",
+       "country_code": "IN",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I4210147366"
+       ]
+      }
+     ],
+     "countries": [
+      "IN"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Sona Chowdhary",
+     "raw_affiliation_strings": [
+      "Department of Neonatology and Pediatrics, St Stephen Hospital, Delhi, India"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Neonatology and Pediatrics, St Stephen Hospital, Delhi, India",
+       "institution_ids": [
+        "https://openalex.org/I4210147366"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5027589000",
+      "display_name": "Jacob Mammen Puliyel",
+      "orcid": "https://orcid.org/0000-0002-6303-000X",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-6303-000X"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4210147366",
+       "display_name": "St. Stephen’s Hospital",
+       "ror": "https://ror.org/03fan2n27",
+       "country_code": "IN",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I4210147366"
+       ]
+      }
+     ],
+     "countries": [
+      "IN"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Jacob M. Puliyel",
+     "raw_affiliation_strings": [
+      "Department of Neonatology and Pediatrics, St Stephen Hospital, Delhi, India"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Neonatology and Pediatrics, St Stephen Hospital, Delhi, India",
+       "institution_ids": [
+        "https://openalex.org/I4210147366"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1371/journal.pone.0020097",
+    "doi": "https://doi.org/10.1371/journal.pone.0020097",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.1371/journal.pone.0020097",
+    "pdf_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0020097&type=printable",
+    "source": {
+     "id": "https://openalex.org/S202381698",
+     "display_name": "PLoS ONE",
+     "issn_l": "1932-6203",
+     "issn": [
+      "1932-6203"
+     ],
+     "is_oa": true,
+     "is_in_doaj": true,
+     "is_core": true,
+     "listed_in": [
+      "anvur-class-a",
+      "anvur-scientific",
+      "cwts-core",
+      "doaj",
+      "dongbi-c",
+      "doyens",
+      "erih-plus",
+      "jufo-1",
+      "ki-jl-1",
+      "medline",
+      "norway-1",
+      "poland-100",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310315706",
+     "host_organization_name": "Public Library of Science",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310315706"
+     ],
+     "host_organization_lineage_names": [
+      "Public Library of Science"
+     ],
+     "type": "journal"
+    },
+    "license": "cc-by",
+    "license_id": "https://openalex.org/licenses/cc-by",
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "PLoS ONE",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W97886985",
+    "https://openalex.org/W1607388525",
+    "https://openalex.org/W1967651727",
+    "https://openalex.org/W1970962112",
+    "https://openalex.org/W1975785177",
+    "https://openalex.org/W1989078137",
+    "https://openalex.org/W1999700305",
+    "https://openalex.org/W2023373624",
+    "https://openalex.org/W2088343103",
+    "https://openalex.org/W2119448111",
+    "https://openalex.org/W2130568251",
+    "https://openalex.org/W2145334003",
+    "https://openalex.org/W2249723975",
+    "https://openalex.org/W2413793398"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W2753884747",
+   "doi": "https://doi.org/10.1257/aer.20151282",
+   "display_name": "Why Are Indian Children So Short? The Role of Birth Order and Son Preference",
+   "publication_year": 2017,
+   "type": "article",
+   "cited_by_count": 401,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5072815876",
+      "display_name": "Seema Jayachandran",
+      "orcid": "https://orcid.org/0000-0002-6015-2300",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-6015-2300"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I111979921",
+       "display_name": "Northwestern University",
+       "ror": "https://ror.org/000e0be47",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I111979921"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Seema Jayachandran",
+     "raw_affiliation_strings": [
+      "Department of Economics, Northwestern University, 2211 Campus Drive, Evanston, IL 60208 (email: )"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Economics, Northwestern University, 2211 Campus Drive, Evanston, IL 60208 (email: )",
+       "institution_ids": [
+        "https://openalex.org/I111979921"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5091212187",
+      "display_name": "Rohini Pande",
+      "orcid": "https://orcid.org/0000-0002-0090-0987",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-0090-0987"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I136199984",
+       "display_name": "Harvard University",
+       "ror": "https://ror.org/03vek6s52",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I136199984"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Rohini Pande",
+     "raw_affiliation_strings": [
+      "Harvard Kennedy School, Harvard University, Mailbox 46, 79 JFK Street, Cambridge, MA 02138 (email: )"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Harvard Kennedy School, Harvard University, Mailbox 46, 79 JFK Street, Cambridge, MA 02138 (email: )",
+       "institution_ids": [
+        "https://openalex.org/I136199984"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1257/aer.20151282",
+    "doi": "https://doi.org/10.1257/aer.20151282",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1257/aer.20151282",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S23254222",
+     "display_name": "American Economic Review",
+     "issn_l": "0002-8282",
+     "issn": [
+      "0002-8282",
+      "1944-7981"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "abdc-a-star",
+      "anvur-class-a",
+      "anvur-scientific",
+      "cwts-core",
+      "fnege-1-star",
+      "ft50",
+      "jufo-3",
+      "norway-2",
+      "poland-200",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310315912",
+     "host_organization_name": "American Economic Association",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310315912"
+     ],
+     "host_organization_lineage_names": [
+      "American Economic Association"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "American Economic Review",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W120213392",
+    "https://openalex.org/W238250188",
+    "https://openalex.org/W280364003",
+    "https://openalex.org/W409743298",
+    "https://openalex.org/W566586761",
+    "https://openalex.org/W1482473989",
+    "https://openalex.org/W1497625654",
+    "https://openalex.org/W1525114242",
+    "https://openalex.org/W1548368641",
+    "https://openalex.org/W1553548925",
+    "https://openalex.org/W1590809399",
+    "https://openalex.org/W1597715081",
+    "https://openalex.org/W1603078347",
+    "https://openalex.org/W1604659058",
+    "https://openalex.org/W1681876360",
+    "https://openalex.org/W1846876570",
+    "https://openalex.org/W1967640975",
+    "https://openalex.org/W1969235931",
+    "https://openalex.org/W1979084220",
+    "https://openalex.org/W1979253016",
+    "https://openalex.org/W1985419169",
+    "https://openalex.org/W2002310902",
+    "https://openalex.org/W2018348800",
+    "https://openalex.org/W2019264015",
+    "https://openalex.org/W2028503631",
+    "https://openalex.org/W2049612772",
+    "https://openalex.org/W2053402311",
+    "https://openalex.org/W2054494979",
+    "https://openalex.org/W2063322257",
+    "https://openalex.org/W2064287678",
+    "https://openalex.org/W2074459108",
+    "https://openalex.org/W2074655452",
+    "https://openalex.org/W2074911769",
+    "https://openalex.org/W2079274151",
+    "https://openalex.org/W2081239273",
+    "https://openalex.org/W2090514228",
+    "https://openalex.org/W2096320699",
+    "https://openalex.org/W2096601431",
+    "https://openalex.org/W2101535662",
+    "https://openalex.org/W2122707249",
+    "https://openalex.org/W2123292394",
+    "https://openalex.org/W2124834953",
+    "https://openalex.org/W2127311969",
+    "https://openalex.org/W2128139705",
+    "https://openalex.org/W2128465288",
+    "https://openalex.org/W2130136629",
+    "https://openalex.org/W2137840053",
+    "https://openalex.org/W2161041152",
+    "https://openalex.org/W2162002397",
+    "https://openalex.org/W2165187947",
+    "https://openalex.org/W2182523120",
+    "https://openalex.org/W2335581950",
+    "https://openalex.org/W2617170708",
+    "https://openalex.org/W2891495529",
+    "https://openalex.org/W3124434340",
+    "https://openalex.org/W3124658967",
+    "https://openalex.org/W3124794263",
+    "https://openalex.org/W3125404006",
+    "https://openalex.org/W3125745457",
+    "https://openalex.org/W3134297495",
+    "https://openalex.org/W3136389637",
+    "https://openalex.org/W4285719527",
+    "https://openalex.org/W4286779346",
+    "https://openalex.org/W4400948341"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W2043906799",
+   "doi": "https://doi.org/10.1080/17441730.2012.714669",
+   "display_name": "DAUGHTER DISCRIMINATION AND FUTURE SEX RATIO AT BIRTH IN INDIA",
+   "publication_year": 2012,
+   "type": "article",
+   "cited_by_count": 22,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5008150251",
+      "display_name": "Tarun Kumar Roy",
+      "orcid": "https://orcid.org/0000-0003-3181-7067",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-3181-7067"
+      ]
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": true,
+     "raw_author_name": "Tarun K. Roy",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5055536094",
+      "display_name": "Aparajita Chattopadhyay",
+      "orcid": "https://orcid.org/0000-0002-1722-4268",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-1722-4268"
+      ]
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Aparajita Chattopadhyay",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1080/17441730.2012.714669",
+    "doi": "https://doi.org/10.1080/17441730.2012.714669",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1080/17441730.2012.714669",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S55641825",
+     "display_name": "Asian Population Studies",
+     "issn_l": "1744-1730",
+     "issn": [
+      "1744-1730",
+      "1744-1749"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "abdc-b",
+      "anvur-scientific",
+      "cwts-core",
+      "jufo-1",
+      "norway-1",
+      "poland-100",
+      "russia-white-list-1"
+     ],
+     "host_organization": "https://openalex.org/P4310320547",
+     "host_organization_name": "Taylor & Francis",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320547",
+      "https://openalex.org/P4310320449"
+     ],
+     "host_organization_lineage_names": [
+      "Taylor & Francis",
+      "Informa"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Asian Population Studies",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W48548614",
+    "https://openalex.org/W328649935",
+    "https://openalex.org/W617637856",
+    "https://openalex.org/W1218547151",
+    "https://openalex.org/W1513947731",
+    "https://openalex.org/W1571377318",
+    "https://openalex.org/W1579203633",
+    "https://openalex.org/W1628670601",
+    "https://openalex.org/W1965283229",
+    "https://openalex.org/W1967651727",
+    "https://openalex.org/W1968462380",
+    "https://openalex.org/W1979501013",
+    "https://openalex.org/W1984978132",
+    "https://openalex.org/W2004499445",
+    "https://openalex.org/W2008569034",
+    "https://openalex.org/W2074655452",
+    "https://openalex.org/W2078703033",
+    "https://openalex.org/W2091756807",
+    "https://openalex.org/W2123292394",
+    "https://openalex.org/W2138380677",
+    "https://openalex.org/W2183437807",
+    "https://openalex.org/W2253448574",
+    "https://openalex.org/W2335581950",
+    "https://openalex.org/W4248871729",
+    "https://openalex.org/W4251634021"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W961876696",
+   "doi": null,
+   "display_name": "Study on the Relationship between Parity Structure and Imbalance of Sex Ratio at Birth in China",
+   "publication_year": 2014,
+   "type": "article",
+   "cited_by_count": 2,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5110502749",
+      "display_name": "Wang",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Wang",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5109834351",
+      "display_name": "Jun Jun",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Jun Jun",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5111391809",
+      "display_name": "Guo",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Guo",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": null,
+      "display_name": "Zhigang",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Zhigang",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    }
+   ],
+   "primary_location": {
+    "id": "mag:961876696",
+    "doi": null,
+    "is_oa": false,
+    "landing_page_url": "http://www.cqvip.com/QK/86785X/201405/663161781.html",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S4306548746",
+     "display_name": "当代中国人口：英文版",
+     "issn_l": null,
+     "issn": null,
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": false,
+     "listed_in": [],
+     "host_organization": null,
+     "host_organization_name": null,
+     "host_organization_lineage": [],
+     "host_organization_lineage_names": [],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": null,
+    "is_accepted": false,
+    "is_published": false,
+    "raw_source_name": "当代中国人口：英文版",
+    "raw_type": null
+   },
+   "referenced_works": []
+  }
+ ],
+ "group_by": []
+}
