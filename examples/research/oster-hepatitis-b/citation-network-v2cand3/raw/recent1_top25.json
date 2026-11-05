@@ -1,0 +1,1508 @@
+{
+ "meta": {
+  "notice": "No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address. Get a free key with its own $1/day at https://openalex.org/settings/api and add api_key=YOUR_KEY to your requests. An AI agent can get one for its user in one call: POST https://api.openalex.org/api-keys with {\"email\": \"<your user's email>\"}; we email them a link, and the key works once they click it. Docs for agents: https://help.openalex.org/llms.txt",
+  "count": 6,
+  "db_response_time_ms": 1244,
+  "page": 1,
+  "per_page": 25,
+  "groups_count": null,
+  "x_query": {
+   "oql": "get works since 2021-11-05 citing (W3123222584), most cited first",
+   "x_new_oql": "get works since 2021-11-05 citing (W3123222584), most cited first",
+   "oqo": {
+    "get_rows": "works",
+    "filter_rows": [
+     {
+      "column_id": "from_publication_date",
+      "value": "2021-11-05"
+     },
+     {
+      "column_id": "referenced_works",
+      "value": "W3123222584"
+     }
+    ],
+    "sort_by": [
+     {
+      "column_id": "cited_by_count",
+      "direction": "desc"
+     }
+    ]
+   },
+   "url": "/works?filter=from_publication_date:2021-11-05,referenced_works:W3123222584&sort=cited_by_count:desc&per_page=25",
+   "order": "most cited first",
+   "order_default": false
+  },
+  "cost_usd": 0.0001
+ },
+ "results": [
+  {
+   "id": "https://openalex.org/W4210337642",
+   "doi": "https://doi.org/10.1016/j.ecolecon.2022.107360",
+   "display_name": "The income inequality-CO2 emissions nexus: Transmission mechanisms",
+   "publication_year": 2022,
+   "type": "article",
+   "cited_by_count": 109,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5102750960",
+      "display_name": "Guanghua Wan",
+      "orcid": "https://orcid.org/0000-0003-3669-369X",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-3669-369X"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I24943067",
+       "display_name": "Fudan University",
+       "ror": "https://ror.org/013q1eq08",
+       "country_code": "CN",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I24943067"
+       ]
+      }
+     ],
+     "countries": [
+      "CN"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Guanghua Wan",
+     "raw_affiliation_strings": [
+      "Institute of World Economy, Fudan University, 200433, Shanghai, China"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Institute of World Economy, Fudan University, 200433, Shanghai, China",
+       "institution_ids": [
+        "https://openalex.org/I24943067"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5100337592",
+      "display_name": "Chen Wang",
+      "orcid": "https://orcid.org/0000-0002-5400-5750",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-5400-5750"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I181679659",
+       "display_name": "Shanghai University of Finance and Economics",
+       "ror": "https://ror.org/00wtvfq62",
+       "country_code": "CN",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I181679659"
+       ]
+      }
+     ],
+     "countries": [
+      "CN"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Chen Wang",
+     "raw_affiliation_strings": [
+      "School of Urban and Regional Science, Shanghai University of Finance and Economics, 200433 Shanghai, China"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "School of Urban and Regional Science, Shanghai University of Finance and Economics, 200433 Shanghai, China",
+       "institution_ids": [
+        "https://openalex.org/I181679659"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5101969768",
+      "display_name": "Jinxian Wang",
+      "orcid": "https://orcid.org/0000-0002-5411-0980",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-5411-0980"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I139660479",
+       "display_name": "Central South University",
+       "ror": "https://ror.org/00f1zfq44",
+       "country_code": "CN",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I139660479"
+       ]
+      }
+     ],
+     "countries": [
+      "CN"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Jinxian Wang",
+     "raw_affiliation_strings": [
+      "Business School, Central South University, 410083 Changsha, China"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Business School, Central South University, 410083 Changsha, China",
+       "institution_ids": [
+        "https://openalex.org/I139660479"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5054424038",
+      "display_name": "Xun Zhang",
+      "orcid": "https://orcid.org/0000-0003-0762-8645",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-0762-8645",
+       "https://orcid.org/0000-0002-9058-7903"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I25254941",
+       "display_name": "Beijing Normal University",
+       "ror": "https://ror.org/022k4wk35",
+       "country_code": "CN",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I25254941"
+       ]
+      }
+     ],
+     "countries": [
+      "CN"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Xun Zhang",
+     "raw_affiliation_strings": [
+      "School of Statistics, Beijing Normal University, 100875 Beijing, China"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "School of Statistics, Beijing Normal University, 100875 Beijing, China",
+       "institution_ids": [
+        "https://openalex.org/I25254941"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1016/j.ecolecon.2022.107360",
+    "doi": "https://doi.org/10.1016/j.ecolecon.2022.107360",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1016/j.ecolecon.2022.107360",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S136211407",
+     "display_name": "Ecological Economics",
+     "issn_l": "0921-8009",
+     "issn": [
+      "0921-8009",
+      "1873-6106"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "abdc-a",
+      "anvur-class-a",
+      "anvur-scientific",
+      "cwts-core",
+      "dongbi-b",
+      "fnege-2",
+      "jufo-2",
+      "ki-jl-1",
+      "norway-1",
+      "poland-140",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320990",
+     "host_organization_name": "Elsevier BV",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320990"
+     ],
+     "host_organization_lineage_names": [
+      "Elsevier BV"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Ecological Economics",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W349283406",
+    "https://openalex.org/W570240777",
+    "https://openalex.org/W1514683506",
+    "https://openalex.org/W1595131711",
+    "https://openalex.org/W1606964474",
+    "https://openalex.org/W1618947727",
+    "https://openalex.org/W1715038780",
+    "https://openalex.org/W1760886414",
+    "https://openalex.org/W1970348873",
+    "https://openalex.org/W1976411034",
+    "https://openalex.org/W1980533847",
+    "https://openalex.org/W1987242121",
+    "https://openalex.org/W1989773174",
+    "https://openalex.org/W1999458751",
+    "https://openalex.org/W2027590033",
+    "https://openalex.org/W2031793485",
+    "https://openalex.org/W2033635503",
+    "https://openalex.org/W2041136930",
+    "https://openalex.org/W2045918722",
+    "https://openalex.org/W2056498036",
+    "https://openalex.org/W2064909130",
+    "https://openalex.org/W2086266518",
+    "https://openalex.org/W2087796980",
+    "https://openalex.org/W2087904099",
+    "https://openalex.org/W2096037123",
+    "https://openalex.org/W2106435408",
+    "https://openalex.org/W2108419099",
+    "https://openalex.org/W2116992982",
+    "https://openalex.org/W2129255733",
+    "https://openalex.org/W2146884257",
+    "https://openalex.org/W2147039585",
+    "https://openalex.org/W2151228785",
+    "https://openalex.org/W2154645422",
+    "https://openalex.org/W2161041152",
+    "https://openalex.org/W2161215497",
+    "https://openalex.org/W2164451921",
+    "https://openalex.org/W2164710344",
+    "https://openalex.org/W2166801223",
+    "https://openalex.org/W2343508189",
+    "https://openalex.org/W2536695706",
+    "https://openalex.org/W2549356270",
+    "https://openalex.org/W2579732001",
+    "https://openalex.org/W2580881123",
+    "https://openalex.org/W2607629229",
+    "https://openalex.org/W2725726030",
+    "https://openalex.org/W2763582690",
+    "https://openalex.org/W2772718514",
+    "https://openalex.org/W2789355587",
+    "https://openalex.org/W2796805375",
+    "https://openalex.org/W2796942724",
+    "https://openalex.org/W2806902403",
+    "https://openalex.org/W2886958756",
+    "https://openalex.org/W2889275613",
+    "https://openalex.org/W2907213570",
+    "https://openalex.org/W2921382256",
+    "https://openalex.org/W2936368213",
+    "https://openalex.org/W2948468622",
+    "https://openalex.org/W3008353079",
+    "https://openalex.org/W3011746200",
+    "https://openalex.org/W3015119567",
+    "https://openalex.org/W3024235545",
+    "https://openalex.org/W3033668293",
+    "https://openalex.org/W3036723551",
+    "https://openalex.org/W3037248612",
+    "https://openalex.org/W3097089073",
+    "https://openalex.org/W3118886186",
+    "https://openalex.org/W3122949860",
+    "https://openalex.org/W3123222584",
+    "https://openalex.org/W3124103250",
+    "https://openalex.org/W4256357039",
+    "https://openalex.org/W4400789899",
+    "https://openalex.org/W6607229087",
+    "https://openalex.org/W6637534095"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W4403727727",
+   "doi": "https://doi.org/10.1016/j.jdeveco.2024.103390",
+   "display_name": "Public pensions and family dynamics: Eldercare, child investment, and son preference in rural China",
+   "publication_year": 2024,
+   "type": "article",
+   "cited_by_count": 24,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5053014078",
+      "display_name": "Naijia Guo",
+      "orcid": "https://orcid.org/0000-0003-2580-1026",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-2580-1026"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I889458895",
+       "display_name": "University of Hong Kong",
+       "ror": "https://ror.org/02zhqgq86",
+       "country_code": "HK",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I889458895"
+       ]
+      }
+     ],
+     "countries": [
+      "HK"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Naijia Guo",
+     "raw_affiliation_strings": [
+      "The University of Hong Kong, Hong Kong"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "The University of Hong Kong, Hong Kong",
+       "institution_ids": [
+        "https://openalex.org/I889458895"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5101866469",
+      "display_name": "Wei Huang",
+      "orcid": "https://orcid.org/0000-0003-4454-1485",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-4454-1485",
+       "https://orcid.org/0000-0002-5095-3972"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I20231570",
+       "display_name": "Peking University",
+       "ror": "https://ror.org/02v51f717",
+       "country_code": "CN",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I20231570"
+       ]
+      }
+     ],
+     "countries": [
+      "CN"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Wei Huang",
+     "raw_affiliation_strings": [
+      "China Center for Economic Research (CCER), National School of Development (NSD), Peking University, China"
+     ],
+     "raw_orcid": "https://orcid.org/0000-0003-4454-1485",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "China Center for Economic Research (CCER), National School of Development (NSD), Peking University, China",
+       "institution_ids": [
+        "https://openalex.org/I20231570"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5101886282",
+      "display_name": "Ruixin Wang",
+      "orcid": "https://orcid.org/0000-0003-1238-9933",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-1238-9933"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I204983213",
+       "display_name": "Harbin Institute of Technology",
+       "ror": "https://ror.org/01yqg2h08",
+       "country_code": "CN",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I204983213"
+       ]
+      }
+     ],
+     "countries": [
+      "CN"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Ruixin Wang",
+     "raw_affiliation_strings": [
+      "Harbin Institute of Technology, Shenzhen, China"
+     ],
+     "raw_orcid": "https://orcid.org/0000-0003-1238-9933",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Harbin Institute of Technology, Shenzhen, China",
+       "institution_ids": [
+        "https://openalex.org/I204983213"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1016/j.jdeveco.2024.103390",
+    "doi": "https://doi.org/10.1016/j.jdeveco.2024.103390",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1016/j.jdeveco.2024.103390",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S101209419",
+     "display_name": "Journal of Development Economics",
+     "issn_l": "0304-3878",
+     "issn": [
+      "0304-3878",
+      "1872-6089"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "abdc-a-star",
+      "anvur-class-a",
+      "anvur-scientific",
+      "cwts-core",
+      "erih-plus",
+      "jufo-3",
+      "norway-2",
+      "poland-140",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320990",
+     "host_organization_name": "Elsevier BV",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320990"
+     ],
+     "host_organization_lineage_names": [
+      "Elsevier BV"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Journal of Development Economics",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W1482473989",
+    "https://openalex.org/W1497625654",
+    "https://openalex.org/W1582582017",
+    "https://openalex.org/W1975378408",
+    "https://openalex.org/W1982754848",
+    "https://openalex.org/W1984539215",
+    "https://openalex.org/W1994312041",
+    "https://openalex.org/W2028144863",
+    "https://openalex.org/W2035084713",
+    "https://openalex.org/W2035098861",
+    "https://openalex.org/W2044078177",
+    "https://openalex.org/W2051031123",
+    "https://openalex.org/W2052449808",
+    "https://openalex.org/W2054062734",
+    "https://openalex.org/W2057390815",
+    "https://openalex.org/W2077661913",
+    "https://openalex.org/W2080037483",
+    "https://openalex.org/W2081667239",
+    "https://openalex.org/W2082586144",
+    "https://openalex.org/W2085638750",
+    "https://openalex.org/W2107869916",
+    "https://openalex.org/W2114978546",
+    "https://openalex.org/W2122552470",
+    "https://openalex.org/W2130141572",
+    "https://openalex.org/W2131124455",
+    "https://openalex.org/W2155510889",
+    "https://openalex.org/W2159592558",
+    "https://openalex.org/W2165423382",
+    "https://openalex.org/W2166703880",
+    "https://openalex.org/W2167585085",
+    "https://openalex.org/W2183944164",
+    "https://openalex.org/W2190102154",
+    "https://openalex.org/W2239330161",
+    "https://openalex.org/W2412862172",
+    "https://openalex.org/W2413634626",
+    "https://openalex.org/W2551110744",
+    "https://openalex.org/W2677890987",
+    "https://openalex.org/W2736506551",
+    "https://openalex.org/W2770250470",
+    "https://openalex.org/W2771587177",
+    "https://openalex.org/W2791859701",
+    "https://openalex.org/W2888797381",
+    "https://openalex.org/W2890410767",
+    "https://openalex.org/W2929932278",
+    "https://openalex.org/W2939493992",
+    "https://openalex.org/W2979586175",
+    "https://openalex.org/W2982812523",
+    "https://openalex.org/W2999202357",
+    "https://openalex.org/W3013628590",
+    "https://openalex.org/W3023628588",
+    "https://openalex.org/W3025557729",
+    "https://openalex.org/W3094234085",
+    "https://openalex.org/W3112066496",
+    "https://openalex.org/W3113269512",
+    "https://openalex.org/W3123222584",
+    "https://openalex.org/W3124366560",
+    "https://openalex.org/W3124431521",
+    "https://openalex.org/W3124550172",
+    "https://openalex.org/W3125254073",
+    "https://openalex.org/W3125316579",
+    "https://openalex.org/W3125910961",
+    "https://openalex.org/W3132272901",
+    "https://openalex.org/W3147447510",
+    "https://openalex.org/W4220658192",
+    "https://openalex.org/W4234238734",
+    "https://openalex.org/W4240694798",
+    "https://openalex.org/W4289524414",
+    "https://openalex.org/W4385749519"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W4397030871",
+   "doi": "https://doi.org/10.1016/j.heliyon.2024.e31566",
+   "display_name": "Maternal hepatitis B status and Sex at birth: A cross-sectional study in a Ghanaian population",
+   "publication_year": 2024,
+   "type": "article",
+   "cited_by_count": 1,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5074695551",
+      "display_name": "Moses Banyeh",
+      "orcid": "https://orcid.org/0000-0003-3594-6077",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-3594-6077"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I83291730",
+       "display_name": "University for Development Studies",
+       "ror": "https://ror.org/052nhnq73",
+       "country_code": "GH",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I83291730"
+       ]
+      }
+     ],
+     "countries": [
+      "GH"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Moses Banyeh",
+     "raw_affiliation_strings": [
+      "Department of Biomedical Laboratory Science, University for Development Studies, Tamale, Ghana"
+     ],
+     "raw_orcid": "https://orcid.org/0000-0003-3594-6077",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Biomedical Laboratory Science, University for Development Studies, Tamale, Ghana",
+       "institution_ids": [
+        "https://openalex.org/I83291730"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5083906372",
+      "display_name": "Moses Kofi Woli",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4405281306",
+       "display_name": "College of Health and Well-Being, Kintampo",
+       "ror": "https://ror.org/045xeeh69",
+       "country_code": "GH",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I111406484",
+        "https://openalex.org/I4405281306"
+       ]
+      }
+     ],
+     "countries": [
+      "GH"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Moses Kofi Woli",
+     "raw_affiliation_strings": [
+      "Department of Medical Diagnostics, College of Health and Well-Being, Kintampo, Ghana"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Medical Diagnostics, College of Health and Well-Being, Kintampo, Ghana",
+       "institution_ids": [
+        "https://openalex.org/I4405281306"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5094082911",
+      "display_name": "Benjamin N. Mayeem",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4210159584",
+       "display_name": "Ghana Health Service",
+       "ror": "https://ror.org/052ss8w32",
+       "country_code": "GH",
+       "type": "government",
+       "lineage": [
+        "https://openalex.org/I111406484",
+        "https://openalex.org/I4210159584"
+       ]
+      }
+     ],
+     "countries": [
+      "GH"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Benjamin N. Mayeem",
+     "raw_affiliation_strings": [
+      "Department of Medical Laboratory, Living Waters Hospital, P. O. Box 17, Ejisu-krapa, Kumasi, Ghana"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Medical Laboratory, Living Waters Hospital, P. O. Box 17, Ejisu-krapa, Kumasi, Ghana",
+       "institution_ids": [
+        "https://openalex.org/I4210159584"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5018067812",
+      "display_name": "Augusta Soninour Kolekang",
+      "orcid": "https://orcid.org/0000-0002-3600-3217",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-3600-3217"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I83291730",
+       "display_name": "University for Development Studies",
+       "ror": "https://ror.org/052nhnq73",
+       "country_code": "GH",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I83291730"
+       ]
+      }
+     ],
+     "countries": [
+      "GH"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Augusta S. Kolekang",
+     "raw_affiliation_strings": [
+      "Department of Epidemiology, Biostatistics and Disease Control, University for Development Studies, Tamale, Ghana"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Epidemiology, Biostatistics and Disease Control, University for Development Studies, Tamale, Ghana",
+       "institution_ids": [
+        "https://openalex.org/I83291730"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5028426970",
+      "display_name": "Ruth Nimota Nukpezah",
+      "orcid": "https://orcid.org/0000-0002-4560-3329",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-4560-3329"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I83291730",
+       "display_name": "University for Development Studies",
+       "ror": "https://ror.org/052nhnq73",
+       "country_code": "GH",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I83291730"
+       ]
+      }
+     ],
+     "countries": [
+      "GH"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Ruth Nimota Nukpezah",
+     "raw_affiliation_strings": [
+      "Department of Preventive Health Nursing, University for Development Studies, Tamale, Ghana"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Preventive Health Nursing, University for Development Studies, Tamale, Ghana",
+       "institution_ids": [
+        "https://openalex.org/I83291730"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5114162274",
+      "display_name": "Nadia Habib",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I83291730",
+       "display_name": "University for Development Studies",
+       "ror": "https://ror.org/052nhnq73",
+       "country_code": "GH",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I83291730"
+       ]
+      }
+     ],
+     "countries": [
+      "GH"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Nadia Habib",
+     "raw_affiliation_strings": [
+      "Department of Biomedical Laboratory Science, University for Development Studies, Tamale, Ghana"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Biomedical Laboratory Science, University for Development Studies, Tamale, Ghana",
+       "institution_ids": [
+        "https://openalex.org/I83291730"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5113211928",
+      "display_name": "Emmanuel Ansah Owusu",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I83291730",
+       "display_name": "University for Development Studies",
+       "ror": "https://ror.org/052nhnq73",
+       "country_code": "GH",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I83291730"
+       ]
+      }
+     ],
+     "countries": [
+      "GH"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Emmanuel Ansah Owusu",
+     "raw_affiliation_strings": [
+      "Department of Biomedical Laboratory Science, University for Development Studies, Tamale, Ghana"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Biomedical Laboratory Science, University for Development Studies, Tamale, Ghana",
+       "institution_ids": [
+        "https://openalex.org/I83291730"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5090976903",
+      "display_name": "Muniru Mohammed Tanko",
+      "orcid": "https://orcid.org/0000-0002-0487-8465",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-0487-8465"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I83291730",
+       "display_name": "University for Development Studies",
+       "ror": "https://ror.org/052nhnq73",
+       "country_code": "GH",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I83291730"
+       ]
+      }
+     ],
+     "countries": [
+      "GH"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Muniru Mohammed Tanko",
+     "raw_affiliation_strings": [
+      "Department of Biomedical Laboratory Science, University for Development Studies, Tamale, Ghana"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Biomedical Laboratory Science, University for Development Studies, Tamale, Ghana",
+       "institution_ids": [
+        "https://openalex.org/I83291730"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5017386451",
+      "display_name": "Clement Binwatin Dagungong",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I83291730",
+       "display_name": "University for Development Studies",
+       "ror": "https://ror.org/052nhnq73",
+       "country_code": "GH",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I83291730"
+       ]
+      }
+     ],
+     "countries": [
+      "GH"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Clement Binwatin Dagungong",
+     "raw_affiliation_strings": [
+      "Department of Biomedical Laboratory Science, University for Development Studies, Tamale, Ghana"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Biomedical Laboratory Science, University for Development Studies, Tamale, Ghana",
+       "institution_ids": [
+        "https://openalex.org/I83291730"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1016/j.heliyon.2024.e31566",
+    "doi": "https://doi.org/10.1016/j.heliyon.2024.e31566",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.1016/j.heliyon.2024.e31566",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S2898612692",
+     "display_name": "Heliyon",
+     "issn_l": "2405-8440",
+     "issn": [
+      "2405-8440"
+     ],
+     "is_oa": true,
+     "is_in_doaj": true,
+     "is_core": true,
+     "listed_in": [
+      "anvur-class-a",
+      "anvur-scientific",
+      "cwts-core",
+      "doaj",
+      "dongbi-c",
+      "ki-jl-1",
+      "norway-1",
+      "poland-40",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320990",
+     "host_organization_name": "Elsevier BV",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320990"
+     ],
+     "host_organization_lineage_names": [
+      "Elsevier BV"
+     ],
+     "type": "journal"
+    },
+    "license": "cc-by-nc",
+    "license_id": "https://openalex.org/licenses/cc-by-nc",
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Heliyon",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W1543745119",
+    "https://openalex.org/W1580084700",
+    "https://openalex.org/W1977866175",
+    "https://openalex.org/W1986061976",
+    "https://openalex.org/W1997938647",
+    "https://openalex.org/W2002748253",
+    "https://openalex.org/W2026289855",
+    "https://openalex.org/W2033559533",
+    "https://openalex.org/W2042478072",
+    "https://openalex.org/W2045395065",
+    "https://openalex.org/W2062822445",
+    "https://openalex.org/W2064250856",
+    "https://openalex.org/W2089286174",
+    "https://openalex.org/W2103628168",
+    "https://openalex.org/W2106862020",
+    "https://openalex.org/W2114947228",
+    "https://openalex.org/W2116608844",
+    "https://openalex.org/W2167160063",
+    "https://openalex.org/W2182095480",
+    "https://openalex.org/W2326494260",
+    "https://openalex.org/W2481374159",
+    "https://openalex.org/W2598762084",
+    "https://openalex.org/W2624160355",
+    "https://openalex.org/W2786286108",
+    "https://openalex.org/W2897614453",
+    "https://openalex.org/W3007847150",
+    "https://openalex.org/W3117591680",
+    "https://openalex.org/W3123222584"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W4409543403",
+   "doi": "https://doi.org/10.1002/ajhb.70046",
+   "display_name": "The Estimation of the Number of Aborted Girls in South Korea",
+   "publication_year": 2025,
+   "type": "article",
+   "cited_by_count": 0,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5062165444",
+      "display_name": "Hyunkuk Cho",
+      "orcid": "https://orcid.org/0000-0003-0800-982X",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-0800-982X"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I55240360",
+       "display_name": "Yeungnam University",
+       "ror": "https://ror.org/05yc6p159",
+       "country_code": "KR",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I55240360"
+       ]
+      }
+     ],
+     "countries": [
+      "KR"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Hyunkuk Cho",
+     "raw_affiliation_strings": [
+      "School of Economics and Finance Yeungnam University  Gyeongsangbuk‐do South Korea"
+     ],
+     "raw_orcid": "https://orcid.org/0000-0003-0800-982X",
+     "affiliations": [
+      {
+       "raw_affiliation_string": "School of Economics and Finance Yeungnam University  Gyeongsangbuk‐do South Korea",
+       "institution_ids": [
+        "https://openalex.org/I55240360"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1002/ajhb.70046",
+    "doi": "https://doi.org/10.1002/ajhb.70046",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.1002/ajhb.70046",
+    "pdf_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/ajhb.70046",
+    "source": {
+     "id": "https://openalex.org/S179381287",
+     "display_name": "American Journal of Human Biology",
+     "issn_l": "1042-0533",
+     "issn": [
+      "1042-0533",
+      "1520-6300"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "anvur-scientific",
+      "cwts-core",
+      "dongbi-b",
+      "erih-plus",
+      "jufo-1",
+      "ki-jl-1",
+      "medline",
+      "norway-1",
+      "poland-70",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320595",
+     "host_organization_name": "Wiley",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320595"
+     ],
+     "host_organization_lineage_names": [
+      "Wiley"
+     ],
+     "type": "journal"
+    },
+    "license": "cc-by",
+    "license_id": "https://openalex.org/licenses/cc-by",
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "American Journal of Human Biology",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W1491508567",
+    "https://openalex.org/W1977866175",
+    "https://openalex.org/W1982754848",
+    "https://openalex.org/W1994568240",
+    "https://openalex.org/W1997938647",
+    "https://openalex.org/W2078703033",
+    "https://openalex.org/W2080037483",
+    "https://openalex.org/W2117562099",
+    "https://openalex.org/W2164410434",
+    "https://openalex.org/W2892036049",
+    "https://openalex.org/W2940124361",
+    "https://openalex.org/W3122231766",
+    "https://openalex.org/W3123222584",
+    "https://openalex.org/W3128824375",
+    "https://openalex.org/W3217051713",
+    "https://openalex.org/W4240694798",
+    "https://openalex.org/W4281635458",
+    "https://openalex.org/W4394012363",
+    "https://openalex.org/W4405949632",
+    "https://openalex.org/W6635978080"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W4385446270",
+   "doi": "https://doi.org/10.32657/10356/169647",
+   "display_name": "Essays on culture, institutions and comparative development",
+   "publication_year": 2023,
+   "type": "dissertation",
+   "cited_by_count": 0,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5096066206",
+      "display_name": "Jun Wang",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": true,
+     "raw_author_name": "Wang, Jun",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.32657/10356/169647",
+    "doi": "https://doi.org/10.32657/10356/169647",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.32657/10356/169647",
+    "pdf_url": "https://dr.ntu.edu.sg/bitstream/10356/169647/2/Thesis%20%28amended%29-Wang%20Jun.pdf",
+    "source": null,
+    "license": "cc-by-nc",
+    "license_id": "https://openalex.org/licenses/cc-by-nc",
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Nanyang Technological University",
+    "raw_type": "dissertation"
+   },
+   "referenced_works": [
+    "https://openalex.org/W63227048",
+    "https://openalex.org/W115279416",
+    "https://openalex.org/W190649398",
+    "https://openalex.org/W200245535",
+    "https://openalex.org/W425691568",
+    "https://openalex.org/W809012833",
+    "https://openalex.org/W978832518",
+    "https://openalex.org/W1481224739",
+    "https://openalex.org/W1482473989",
+    "https://openalex.org/W1510857895",
+    "https://openalex.org/W1526589366",
+    "https://openalex.org/W1570093321",
+    "https://openalex.org/W1904113786",
+    "https://openalex.org/W1930122666",
+    "https://openalex.org/W1956609530",
+    "https://openalex.org/W1964597368",
+    "https://openalex.org/W1965887331",
+    "https://openalex.org/W1967450864",
+    "https://openalex.org/W1970120816",
+    "https://openalex.org/W1970448118",
+    "https://openalex.org/W1973216329",
+    "https://openalex.org/W1973882727",
+    "https://openalex.org/W1975457751",
+    "https://openalex.org/W1975556599",
+    "https://openalex.org/W1981691527",
+    "https://openalex.org/W1982463108",
+    "https://openalex.org/W1982668513",
+    "https://openalex.org/W1985991037",
+    "https://openalex.org/W1992115463",
+    "https://openalex.org/W1994681887",
+    "https://openalex.org/W1994783220",
+    "https://openalex.org/W1995392314",
+    "https://openalex.org/W1995978398",
+    "https://openalex.org/W1999697761",
+    "https://openalex.org/W2001581888",
+    "https://openalex.org/W2010529830",
+    "https://openalex.org/W2011234373",
+    "https://openalex.org/W2021119776",
+    "https://openalex.org/W2021202145",
+    "https://openalex.org/W2022640694",
+    "https://openalex.org/W2024617259",
+    "https://openalex.org/W2026772829",
+    "https://openalex.org/W2031660749",
+    "https://openalex.org/W2032552835",
+    "https://openalex.org/W2033040379",
+    "https://openalex.org/W2040775214",
+    "https://openalex.org/W2044177256",
+    "https://openalex.org/W2044867961",
+    "https://openalex.org/W2045421386",
+    "https://openalex.org/W2047662493",
+    "https://openalex.org/W2050913606",
+    "https://openalex.org/W2057390815",
+    "https://openalex.org/W2059762595",
+    "https://openalex.org/W2060010505",
+    "https://openalex.org/W2065136543",
+    "https://openalex.org/W2070440183",
+    "https://openalex.org/W2071669297",
+    "https://openalex.org/W2073908722",
+    "https://openalex.org/W2074028907",
+    "https://openalex.org/W2074973699",
+    "https://openalex.org/W2075194072",
+    "https://openalex.org/W2080037483",
+    "https://openalex.org/W2081024747",
+    "https://openalex.org/W2083703265",
+    "https://openalex.org/W2083908410",
+    "https://openalex.org/W2084031275",
+    "https://openalex.org/W2093265491",
+    "https://openalex.org/W2094267012",
+    "https://openalex.org/W2098100422",
+    "https://openalex.org/W2098981358",
+    "https://openalex.org/W2099051375",
+    "https://openalex.org/W2104972618",
+    "https://openalex.org/W2108897328",
+    "https://openalex.org/W2109078373",
+    "https://openalex.org/W2109712927",
+    "https://openalex.org/W2113281787",
+    "https://openalex.org/W2115584148",
+    "https://openalex.org/W2120291463",
+    "https://openalex.org/W2120334263",
+    "https://openalex.org/W2124019627",
+    "https://openalex.org/W2124200491",
+    "https://openalex.org/W2128175737",
+    "https://openalex.org/W2128852049",
+    "https://openalex.org/W2128916858",
+    "https://openalex.org/W2130351447",
+    "https://openalex.org/W2131091523",
+    "https://openalex.org/W2135824785",
+    "https://openalex.org/W2140001940",
+    "https://openalex.org/W2140545444",
+    "https://openalex.org/W2140918013",
+    "https://openalex.org/W2141472632",
+    "https://openalex.org/W2143022143",
+    "https://openalex.org/W2146985262",
+    "https://openalex.org/W2147631427",
+    "https://openalex.org/W2150231411",
+    "https://openalex.org/W2150383437",
+    "https://openalex.org/W2150427162",
+    "https://openalex.org/W2154786559",
+    "https://openalex.org/W2158693214",
+    "https://openalex.org/W2159400622",
+    "https://openalex.org/W2161041152",
+    "https://openalex.org/W2169078981",
+    "https://openalex.org/W2180749920",
+    "https://openalex.org/W2190128549",
+    "https://openalex.org/W2212401464",
+    "https://openalex.org/W2268502588",
+    "https://openalex.org/W2279288508",
+    "https://openalex.org/W2303389690",
+    "https://openalex.org/W2320720455",
+    "https://openalex.org/W2330386887",
+    "https://openalex.org/W2347470746",
+    "https://openalex.org/W2362963818",
+    "https://openalex.org/W2364686942",
+    "https://openalex.org/W2364894977",
+    "https://openalex.org/W2429581566",
+    "https://openalex.org/W2460278899",
+    "https://openalex.org/W2462459633",
+    "https://openalex.org/W2496931036",
+    "https://openalex.org/W2508555133",
+    "https://openalex.org/W2518571406",
+    "https://openalex.org/W2549957146",
+    "https://openalex.org/W2551026038",
+    "https://openalex.org/W2560200117",
+    "https://openalex.org/W2581079769",
+    "https://openalex.org/W2590588535",
+    "https://openalex.org/W2596420178",
+    "https://openalex.org/W2610161526",
+    "https://openalex.org/W2612768765",
+    "https://openalex.org/W2614464134",
+    "https://openalex.org/W2738960030",
+    "https://openalex.org/W2750507980",
+    "https://openalex.org/W2764909773",
+    "https://openalex.org/W2766564136",
+    "https://openalex.org/W2768026118",
+    "https://openalex.org/W2889730347",
+    "https://openalex.org/W2897169885",
+    "https://openalex.org/W2902090127",
+    "https://openalex.org/W2905093899",
+    "https://openalex.org/W2909558465",
+    "https://openalex.org/W2944833265",
+    "https://openalex.org/W2945239489",
+    "https://openalex.org/W2966382071",
+    "https://openalex.org/W2967005566",
+    "https://openalex.org/W2973044704",
+    "https://openalex.org/W2977229241",
+    "https://openalex.org/W2982553530",
+    "https://openalex.org/W3014661183",
+    "https://openalex.org/W3018167073",
+    "https://openalex.org/W3021914541",
+    "https://openalex.org/W3033729604",
+    "https://openalex.org/W3043410651",
+    "https://openalex.org/W3083756774",
+    "https://openalex.org/W3093055903",
+    "https://openalex.org/W3096403668",
+    "https://openalex.org/W3112074703",
+    "https://openalex.org/W3120316640",
+    "https://openalex.org/W3121309661",
+    "https://openalex.org/W3121423574",
+    "https://openalex.org/W3121684371",
+    "https://openalex.org/W3121795415",
+    "https://openalex.org/W3121831283",
+    "https://openalex.org/W3122317888",
+    "https://openalex.org/W3122576606",
+    "https://openalex.org/W3122609859",
+    "https://openalex.org/W3122751253",
+    "https://openalex.org/W3122795505",
+    "https://openalex.org/W3123222584",
+    "https://openalex.org/W3123568484",
+    "https://openalex.org/W3123629788",
+    "https://openalex.org/W3123665919",
+    "https://openalex.org/W3123988088",
+    "https://openalex.org/W3124967263",
+    "https://openalex.org/W3125317676",
+    "https://openalex.org/W3125412951",
+    "https://openalex.org/W3125740133",
+    "https://openalex.org/W3126003078",
+    "https://openalex.org/W3136981331",
+    "https://openalex.org/W3137482917",
+    "https://openalex.org/W3162616422",
+    "https://openalex.org/W3164433146",
+    "https://openalex.org/W3165064679",
+    "https://openalex.org/W3176285212",
+    "https://openalex.org/W3183169243",
+    "https://openalex.org/W3191976859",
+    "https://openalex.org/W4212809567",
+    "https://openalex.org/W4213147710",
+    "https://openalex.org/W4214951212",
+    "https://openalex.org/W4220793223",
+    "https://openalex.org/W4220827237",
+    "https://openalex.org/W4225140169",
+    "https://openalex.org/W4233369777",
+    "https://openalex.org/W4234238734",
+    "https://openalex.org/W4240694798",
+    "https://openalex.org/W4243910041",
+    "https://openalex.org/W4246204910",
+    "https://openalex.org/W4247039501",
+    "https://openalex.org/W4256405607",
+    "https://openalex.org/W4281962672",
+    "https://openalex.org/W4292229879",
+    "https://openalex.org/W4298309723",
+    "https://openalex.org/W4388260183",
+    "https://openalex.org/W4398519518",
+    "https://openalex.org/W4398815719",
+    "https://openalex.org/W4398986662",
+    "https://openalex.org/W4400789899",
+    "https://openalex.org/W6902982061",
+    "https://openalex.org/W6910634903"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W4399729713",
+   "doi": "https://doi.org/10.31274/td-20240617-244",
+   "display_name": "Dynamic general equilibrium models of the family, fertility, and health",
+   "publication_year": 2023,
+   "type": "dissertation",
+   "cited_by_count": 0,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5114178267",
+      "display_name": "Huanping Fan",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I173911158",
+       "display_name": "Iowa State University",
+       "ror": "https://ror.org/04rswrd78",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I173911158"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Huanping Fan",
+     "raw_affiliation_strings": [
+      "Iowa State University Huanping Fan , Iowa State University"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Iowa State University Huanping Fan , Iowa State University",
+       "institution_ids": [
+        "https://openalex.org/I173911158"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.31274/td-20240617-244",
+    "doi": "https://doi.org/10.31274/td-20240617-244",
+    "is_oa": true,
+    "landing_page_url": "http://dx.doi.org/10.31274/td-20240617-244",
+    "pdf_url": "https://dr.lib.iastate.edu/bitstreams/509b6f1a-f2d3-4fae-9ded-8a300ec7126c/download",
+    "source": null,
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Iowa State University",
+    "raw_type": "dissertation"
+   },
+   "referenced_works": [
+    "https://openalex.org/W610793502",
+    "https://openalex.org/W1498426071",
+    "https://openalex.org/W1499074112",
+    "https://openalex.org/W1520668645",
+    "https://openalex.org/W1537245944",
+    "https://openalex.org/W1574786337",
+    "https://openalex.org/W1585665042",
+    "https://openalex.org/W1781347434",
+    "https://openalex.org/W1964391199",
+    "https://openalex.org/W1980186076",
+    "https://openalex.org/W1992403182",
+    "https://openalex.org/W2003615532",
+    "https://openalex.org/W2013551832",
+    "https://openalex.org/W2019265923",
+    "https://openalex.org/W2026583129",
+    "https://openalex.org/W2026772829",
+    "https://openalex.org/W2028144863",
+    "https://openalex.org/W2042422001",
+    "https://openalex.org/W2061678607",
+    "https://openalex.org/W2061757965",
+    "https://openalex.org/W2065818919",
+    "https://openalex.org/W2087229412",
+    "https://openalex.org/W2087816130",
+    "https://openalex.org/W2105717288",
+    "https://openalex.org/W2115686778",
+    "https://openalex.org/W2116002050",
+    "https://openalex.org/W2123699796",
+    "https://openalex.org/W2135497181",
+    "https://openalex.org/W2138498914",
+    "https://openalex.org/W2142039787",
+    "https://openalex.org/W2149434740",
+    "https://openalex.org/W2152239497",
+    "https://openalex.org/W2161438007",
+    "https://openalex.org/W2218933715",
+    "https://openalex.org/W2537801947",
+    "https://openalex.org/W2614961442",
+    "https://openalex.org/W2617828422",
+    "https://openalex.org/W2753884747",
+    "https://openalex.org/W2766148655",
+    "https://openalex.org/W2771587177",
+    "https://openalex.org/W2890197167",
+    "https://openalex.org/W3016080224",
+    "https://openalex.org/W3094234085",
+    "https://openalex.org/W3094536807",
+    "https://openalex.org/W3122317888",
+    "https://openalex.org/W3123222584",
+    "https://openalex.org/W3142916893",
+    "https://openalex.org/W4205133809",
+    "https://openalex.org/W4401730284",
+    "https://openalex.org/W4410226117",
+    "https://openalex.org/W4410226144",
+    "https://openalex.org/W6631244911",
+    "https://openalex.org/W6672527840"
+   ]
+  }
+ ],
+ "group_by": []
+}

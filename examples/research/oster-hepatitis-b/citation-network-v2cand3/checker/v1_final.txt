@@ -1,0 +1,49 @@
+Checked: out/citation-network-v2cand3/02c_citation_network_v2cand3.md
+VERIFICATION_VOCAB_PASS	canonical_confirmed_tokens=70
+Required headings: 25
+Present: 25
+Missing: 0
+Placeholder-screen threshold: 12 words
+NOTICE	A body-length pass means only that the section is not empty or an obvious placeholder. It does not establish analytical adequacy.
+DERIVATION_SEPARATION_PASS	Derivation mode is separate from verification state.
+ORDER_PASS	ARTIFACT 9: NETWORK MAP precedes COMPLETION LEDGER
+ORDER_PASS	COMPLETION LEDGER precedes ARTIFACT 10: FINAL VERDICT
+ORDER_PASS	ARTIFACT 10: FINAL VERDICT precedes FINAL SECTION: STANDARDIZED FINDING TABLE
+PLACEHOLDER_SCREEN_PASS	PRE-AUDIT CLAIM CONFIRMATION	5310 words	status=N/A
+PLACEHOLDER_SCREEN_PASS	SECTION A: CITATION NETWORK STRUCTURE AND CARTEL DETECTION	911 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION B: EVIDENCE TYPE CODING	255 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION C: CITATION POLARITY AND CLAIM USE	152 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION D: CLAIM MUTATION TRACKING	247 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION E: ADJACENT FIELD ENGAGEMENT / NEGLECT	1100 words	status=N/A
+PLACEHOLDER_SCREEN_PASS	SECTION F: HUB DEPENDENCY AND REVIEW-PAPER LAUNDERING	230 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION G: PATTERN RECOGNITION AND RATCHET BEHAVIOR	186 words	status=N/A
+PLACEHOLDER_SCREEN_PASS	SECTION H: IGNORED CRITIQUE AND NON-UPTAKE	368 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION I: AUTHOR, INSTITUTION, JOURNAL, AND FUNDING CLUSTERING	80 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION J: FALSE-POSITIVE AND BASELINE CHECK	107 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	SECTION J2: THE CONCEDE TEST	1349 words	status=N/A,PROVISIONAL
+PLACEHOLDER_SCREEN_PASS	SECTION K: CARTEL-RISK SCORING	327 words	status=N/A,PROVISIONAL
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 1: TOP 15 CITATION SPINE TABLE	504 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 2: FOUNDING CLUSTER TABLE	102 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 3: RECENT 5-YEAR CITATION BEHAVIOR TABLE	236 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 4: CITATION POLARITY TABLE	985 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 5: CLAIM MUTATION TABLE	82 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 6: ADJACENT-LITERATURE NEGLECT TABLE	481 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 7: CRITIQUE-UPTAKE TABLE	157 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 8: CARTEL-RISK SCORECARD	401 words	status=N/A
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 9: NETWORK MAP	303 words	status=COMPLETED_INFERRED
+PLACEHOLDER_SCREEN_PASS	COMPLETION LEDGER	271 words	status=N/A
+PLACEHOLDER_SCREEN_PASS	ARTIFACT 10: FINAL VERDICT	485 words	status=N/A,PROVISIONAL
+PLACEHOLDER_SCREEN_PASS	FINAL SECTION: STANDARDIZED FINDING TABLE	863 words	status=N/A,PROVISIONAL
+RISK_BAND_FORM_PASS	Explicit disposition is present.
+SOURCE_LOCK_METHOD_PASS	LOCKED QUERY
+SOURCE_LOCK_FORM_PASS	method and seven-field lock record present.
+SOURCE_CLASS_FORM_PASS	classified_sources=27	directly_adjudicating=9
+AGGREGATION_FORM_PASS	independent=8	nested=0	denominator=24
+GRAPH_RECEIPTS_PASS	All scored-density receipts are present.
+STATUS_SUMMARY	N/A=9	PROVISIONAL=4	INCOMPLETE=0	COMPLETED_INFERRED=16	UNMARKED_THIN=0
+STRUCTURAL_RESULT	PASS
+CONTENT_RESULT	PASS-WITH-REVIEW	items=2
+REVIEW_ITEM_1	SOURCE_LOCK_TRUTH — verify the lock predates citation inspection and the query/source list deterministically fixes the exemplars: SOURCE-LOCK DATABASE: OpenAlex works API (select omits abstract_inverted_index) | SOURCE-LOCK QUERY OR SOURCE LIST: filter=title.search:<terms>,to_publication_date:2005-06-30,type:article, sort=cited_by_count:desc, per-page=3; terms F1 "son preference", F2 "hepatitis B sex ratio", F3 "sex ratio at birth", F4 "missing women" | SOURCE-LOCK DATE CUTOFF: 2005-06-30 (publication on or before; JPE issue December 2005) | SOURCE-LOCK RANKING RULE: OpenAlex cited_by_count descending at query time | SOURCE-LOCK N: 12 (top 3 per field × 4 fields) | SOURCE-LOCK DEDUPLICATION RULE: by OpenAlex work ID; off-topic items retained and flagged, never replaced | SOURCE-LOCK TIMESTAMP OR HASH: 2026-11-05T10:29:05Z (2:29:05 AM PST); preregistration sha256 5e43e7a48d3a4271fd842e65b14fcc7e06b9ae94a3f705a618cca3a3120f9451; queries executed after the lock (F1 after about nine HTTP 429 retries, success 10:35:51Z)
+REVIEW_ITEM_2	DIRECT_ADJUDICATION_SUBSTANCE — 9 source(s) classified DIRECTLY-ADJUDICATING; verify each classification and its actual result, favored explanation, weakened explanation, and required revision: line 290: | L1 | F2 HBV and offspring sex | X01 W2023743440 | LOCATED | DIRECTLY-ADJUDICATING | carrier families have more sons: carriers' offspring male-biased, as tabulated in the target (JP-E2; source text not read) | L1 | R2 (at small-sample level) | none for L1 from this source alone; superseded by larger tests (I13) | LOCKED (Section E query) | yes (target) | substantively engaged (JP-E2) | none | || line 291: | L1 | F2 HBV and offspring sex | A06 W2129626017 | LOCATED | DIRECTLY-ADJUDICATING | four-population comparison: carriers' offspring male-biased, as tabulated in the target (JP-E2; source text not read) | L1 | R2 (at small-sample level) | none for L1 from this source alone; superseded by larger tests (I13) | LOCKED (Section E query) | yes (target) | substantively engaged (JP-E2) | none | || line 292: | L1 | F2 HBV and offspring sex | A03 W195581690 | LOCATED | DIRECTLY-ADJUDICATING | Greenland family study: carriers' offspring male-biased, as tabulated in the target (JP-E2; source text not read) | L1 | R2 (at small-sample level) | none for L1 from this source alone; superseded by larger tests (I13) | LOCKED (Section E query) | yes (target) | substantively engaged (JP-E2) | none | || line 299: | L1 | R2 test | N31 W1994568240 Lin & Luoh 2008 | FULL-TEXT-CONFIRMED | DIRECTLY-ADJUDICATING | carrier mothers' effect 0.0010–0.0025 (LL-E1) | R2 | L1, L3 | L1: carrier effect near zero; L3 not supported | LOCKED (ADJUDICATION-1 search) | yes (N45 cites it) | substantively engaged by the author (OC-E2) | not omitted | || line 300: | L1 | R2 test | N45 W2042478072 Oster, Chen, Yu & Lin 2010 | FULL-TEXT-CONFIRMED | DIRECTLY-ADJUDICATING | 51.06% vs 51.56% male (OC-E1) | R2 | L1, L2, L3 | L3 withdrawn for China by the author (OC-E2) | POST HOC (known item K3, not returned by the locked search) | author's own work | the update itself | not omitted | || line 301: | L1 | R2 test | R03 W4397030871 Banyeh et al. 2024 | FULL-TEXT-CONFIRMED | DIRECTLY-ADJUDICATING | no association of maternal carrier status with infant sex (BA-E2) | R2 | L1 | as above | POST HOC (RECENT-1 member, not ADJUDICATION-1) | n/a (2024) | — | not omitted | || line 586: | L1 | F2 HBV and offspring sex | X01 W2023743440 | LOCATED | DIRECTLY-ADJUDICATING | carrier families have more sons: carriers' offspring male-biased, as tabulated in the target (JP-E2; source text not read) | L1 | R2 (at small-sample level) | none for L1 from this source alone; superseded by larger tests (I13) | LOCKED (Section E query) | yes (target) | substantively engaged (JP-E2) | none | || line 587: | L1 | F2 HBV and offspring sex | A06 W2129626017 | LOCATED | DIRECTLY-ADJUDICATING | four-population comparison: carriers' offspring male-biased, as tabulated in the target (JP-E2; source text not read) | L1 | R2 (at small-sample level) | none for L1 from this source alone; superseded by larger tests (I13) | LOCKED (Section E query) | yes (target) | substantively engaged (JP-E2) | none | || line 588: | L1 | F2 HBV and offspring sex | A03 W195581690 | LOCATED | DIRECTLY-ADJUDICATING | Greenland family study: carriers' offspring male-biased, as tabulated in the target (JP-E2; source text not read) | L1 | R2 (at small-sample level) | none for L1 from this source alone; superseded by larger tests (I13) | LOCKED (Section E query) | yes (target) | substantively engaged (JP-E2) | none |
+PASS-WITH-REVIEW: 2 items	All deterministic checks passed; the listed substantive judgments remain for human review.
+exit 0

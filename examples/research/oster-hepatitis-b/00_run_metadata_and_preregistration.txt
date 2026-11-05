@@ -1,0 +1,74 @@
+OSTER (JPE 2005) FULL-CHAIN RUN — BATCH 1 OF THE HELD-OUT LIVE-RUN BRIEF
+RUN METADATA, INSTRUMENT PREFLIGHTS, AND LOCKED PRE-REGISTRATION
+============================================================
+
+RUN DATE
+--------
+2026-11-05, America/Los_Angeles (PST, UTC-8).
+- Work ran from 02:10 PST (10:10Z) through packaging at about 03:30 PST.
+- Log timestamps (worklog.jsonl, retrieval_log.jsonl) are UTC, marked "Z".
+- An interrupt occurred after Stage 3 began. Work resumed without restarting any completed stage.
+
+TARGET
+------
+Emily Oster (2005), "Hepatitis B and the Case of the Missing Women," Journal of Political
+Economy 113(6): 1163-1216. DOI: 10.1086/498588.
+
+Version obtained and access state:
+- Published JPE version: 54 pp., pp. 1163-1216, with a University of Chicago Press download stamp. Retrieved from the Belfer Center (Harvard Kennedy School) institutional publication page, HTTP 200. Read in full. NOT committed.
+- Author's working paper dated 23 Aug 2005 (emilyoster.net), HTTP 200. Used for version comparison only. NOT committed.
+- Publisher landing page journals.uchicago.edu: HTTP 403 to scripted access (closed to this executor).
+- Publisher supplementary dataset (31452.dataset.zip): HTTP 403. See replication/NOT_ASSESSABLE.txt.
+- Corrections: Crossref shows no update or relation records (Stage 1).
+
+REPOSITORY AND BRANCH
+---------------------
+- Repository: yungmulaBABY1/Provenance-Atlas.
+- Branch: audit/oster-hepatitis-b, created from main at 6c651d7593abfb5c4b6d2eb9f6846a5212fe001c, as the brief requires.
+- origin/main moved to ce6ced3 during the run. The branch was NOT rebased or merged onto it.
+- Only examples/research/oster-hepatitis-b/ was written. No PR, no merge, no push to main.
+
+IMMUTABLE INSTRUMENT IDENTITY (TOOL-004)
+============================================================
+All instruments were fetched from yungmulaBABY1/Provenance at commit a58d165d9a986edca220f8143fc0c0d9316c8a13 via raw.githubusercontent.com at that immutable commit (HTTP 200 each; see retrieval_log.jsonl). For each fetched file, `git hash-object` and sha256 matched the blob and sha256 pinned in the brief, and the blobs were checked against the commit tree. No VERSION COLLISION occurred. The pinned copies were re-hashed at packaging time and were unchanged.
+
+INSTRUMENT PREFLIGHT: prompts/1-claim-extraction.txt @ commit a58d165d9a986edca220f8143fc0c0d9316c8a13 | blob 894579a79e67508bdc4026b77c0a104681f903ad | sha256 656b11c301931726a5435b231774f40797a10fd0cab950224616fc18951c035f | 1038 lines | 44072 bytes | markers PRESENT | IDENTITY CONFIRMED
+INSTRUMENT PREFLIGHT: prompts/research-analysis/2-internal-validity.txt @ commit a58d165d9a986edca220f8143fc0c0d9316c8a13 | blob ff54b2a6e88d25cfef37c4626aee256d2d2442e8 | sha256 55e8aa1635c33088f91178c275d2776cbb378a95abd0fd9196efec08fbdb5007 | 970 lines | 46009 bytes | markers PRESENT | IDENTITY CONFIRMED
+INSTRUMENT PREFLIGHT: prompts/research-analysis/2-construct-validity.txt @ commit a58d165d9a986edca220f8143fc0c0d9316c8a13 | blob 7f3db5ed66db3cb4c5ca84f9e71760d134ced9c8 | sha256 8f87676ae76ecf745748a58a7e68b285255c324da25a92a22f3d1a797f6feadb | 1255 lines | 44222 bytes | markers PRESENT | IDENTITY CONFIRMED
+INSTRUMENT PREFLIGHT: candidates/research-analysis/2-citation-network.v2-candidate.txt @ commit a58d165d9a986edca220f8143fc0c0d9316c8a13 | blob fcbf4e80cfbaf1558784d052d3b8933b594310c7 | sha256 efc1a9fc336c30a67645ac9257701aa2ebe07dcc0be59f8e28523b0800d53064 | 2001 lines | 89337 bytes | markers PRESENT | IDENTITY CONFIRMED (CANDIDATE, not canonical; INSTRUMENT VERSION: 2-citation-network v2-candidate.3; DIMENSION CLASS MAP: cn7-map-3)
+INSTRUMENT PREFLIGHT: prompts/research-analysis/3-counter-audit.txt @ commit a58d165d9a986edca220f8143fc0c0d9316c8a13 | blob 74357f08562a47fa8fdbbde4325657ad3c9cd871 | sha256 291f2339992eeaca83c60281263975d3b5643d64ec6e5d118fa39c44b6c9ede9 | 915 lines | 42287 bytes | markers PRESENT | IDENTITY CONFIRMED
+
+Checkers (run with python3 -I; not edited):
+CHECKER IDENTITY: prompts/research-analysis/check-citation-network-output.py @ a58d165 | blob a3da0827067a2f8b47b9039db15d56f74fabd751 | sha256 f66650fe086455fa5dd80afadf1ec78685ee212825923d670d25b24e62d79f27 | 920 lines | 34112 bytes | CONFIRMED
+CHECKER IDENTITY: candidates/research-analysis/check-citation-network-v2-gates.py @ a58d165 | blob b75a27e7bf18139b4b13be00be84589f5cdfa3fb | sha256 ce6661a5e683aebcc842cafec2cd715b8cbf8aa1d64842bcb4023387d70d9e24 | 1027 lines | 51344 bytes | CONFIRMED
+
+LOCKED PRE-REGISTERED EXPECTATIONS
+============================================================
+File: 00a_preregistration_LOCKED.txt
+sha256 6108cb513b798ac666e8136589625f888030372a70e9753d8fb3382788dbda88
+
+When written:
+- Written and hashed at 02:12:13 PST (10:12:13Z), before any retrieval of the target (target retrieval began at 10:12:21Z) and before Stage 1.
+- The file's own header says "about 02:20 PST". The actual write time from the file mtime and worklog is 02:12 PST. This discrepancy is recorded as a deviation; the file was not edited.
+
+Contents:
+- It discloses substantial training-data exposure to the paper and the debate.
+- It lists 8 known claim-testing works (K1–K8), all marked NOT READ.
+
+Post-lock exposure:
+- Only the stage retrievals logged in retrieval_log.jsonl.
+- No expectation was revised.
+- Unblinding is in 05_final_assessment.md.
+
+SOURCE RETRIEVAL DEPTH
+============================================================
+- Target: FULL-TEXT-CONFIRMED (published version).
+- Lin & Luoh 2008 (AER): authors' NTU homepage working paper, VERSION-SUBSTITUTE.
+- Oster, Chen, Yu & Lin 2010 (Econ. Letters): NBER w13971 (2008), VERSION-SUBSTITUTE.
+- Klasen 2005 comments: Göttingen institutional page.
+- Banyeh et al. 2024: PMC11137505.
+- Slate 2005: slate.com.
+- Klasen VoxEU column: WebFetch only (curl HTTP 403).
+- Citation contexts: Semantic Scholar, EXCERPT access. Request and response hash recorded; s2/ is not committed.
+- Reception corpora: OpenAlex, using select= lists that omit abstract_inverted_index.
+- Hashes, URLs and access failures are in SOURCES_MANIFEST.json.

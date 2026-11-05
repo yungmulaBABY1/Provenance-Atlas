@@ -1,0 +1,3662 @@
+{
+ "meta": {
+  "notice": "No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address. Get a free key with its own $1/day at https://openalex.org/settings/api and add api_key=YOUR_KEY to your requests. An AI agent can get one for its user in one call: POST https://api.openalex.org/api-keys with {\"email\": \"<your user's email>\"}; we email them a link, and the key works once they click it. Docs for agents: https://help.openalex.org/llms.txt",
+  "count": 89,
+  "db_response_time_ms": 185,
+  "page": 1,
+  "per_page": 10,
+  "groups_count": null,
+  "x_query": {
+   "oql": "get works from 1980-01-01 through 2026-11-05 with (stemmed \"hepatitis B\" AND (stemmed \"male births\" OR stemmed \"proportion male\" OR stemmed \"sex ratio\") AND (immunization OR vaccination OR vaccine)) in the title or abstract where type is ([article](article) or [book-chapter](book-chapter) or [preprint](preprint))",
+   "x_new_oql": "get works from 1980-01-01 through 2026-11-05 with (stemmed \"hepatitis B\" AND (stemmed \"male births\" OR stemmed \"proportion male\" OR stemmed \"sex ratio\") AND (immunization OR vaccination OR vaccine)) in the title or abstract where type is ([article](article) or [book-chapter](book-chapter) or [preprint](preprint))",
+   "oqo": {
+    "get_rows": "works",
+    "filter_rows": [
+     {
+      "column_id": "from_publication_date",
+      "value": "1980-01-01"
+     },
+     {
+      "column_id": "title_and_abstract.search",
+      "value": "\"hepatitis B\"",
+      "operator": "has"
+     },
+     {
+      "column_id": "to_publication_date",
+      "value": "2026-11-05"
+     },
+     {
+      "join": "or",
+      "filters": [
+       {
+        "column_id": "title_and_abstract.search",
+        "value": "\"male births\"",
+        "operator": "has"
+       },
+       {
+        "column_id": "title_and_abstract.search",
+        "value": "\"proportion male\"",
+        "operator": "has"
+       },
+       {
+        "column_id": "title_and_abstract.search",
+        "value": "\"sex ratio\"",
+        "operator": "has"
+       }
+      ]
+     },
+     {
+      "join": "or",
+      "filters": [
+       {
+        "column_id": "title_and_abstract.search",
+        "value": "immunization",
+        "operator": "has"
+       },
+       {
+        "column_id": "title_and_abstract.search",
+        "value": "vaccination",
+        "operator": "has"
+       },
+       {
+        "column_id": "title_and_abstract.search",
+        "value": "vaccine",
+        "operator": "has"
+       }
+      ]
+     },
+     {
+      "join": "or",
+      "filters": [
+       {
+        "column_id": "type",
+        "value": "article"
+       },
+       {
+        "column_id": "type",
+        "value": "book-chapter"
+       },
+       {
+        "column_id": "type",
+        "value": "preprint"
+       }
+      ]
+     }
+    ]
+   },
+   "url": "/works?filter=from_publication_date:1980-01-01,title_and_abstract.search:%22hepatitis B%22,to_publication_date:2026-11-05,title_and_abstract.search:%22male births%22|%22proportion male%22|%22sex ratio%22,title_and_abstract.search:immunization|vaccination|vaccine,type:article|book-chapter|preprint&per_page=10",
+   "order": "best matches first",
+   "order_default": true
+  },
+  "cost_usd": 0.001
+ },
+ "results": [
+  {
+   "id": "https://openalex.org/W2129626017",
+   "doi": "https://doi.org/10.1017/s0021932000006696",
+   "display_name": "Hepatitis B and the Sex Ratio at Birth: A Comparative Analysis of Four Populations",
+   "publication_year": 1988,
+   "type": "article",
+   "cited_by_count": 47,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5017312152",
+      "display_name": "Anouch Chahnazarian",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I145311948",
+       "display_name": "Johns Hopkins University",
+       "ror": "https://ror.org/00za53h95",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I145311948"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Anouch Chahnazarian",
+     "raw_affiliation_strings": [
+      "Department of Population Dynamics, Johns Hopkins University, Baltimore"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Population Dynamics, Johns Hopkins University, Baltimore",
+       "institution_ids": [
+        "https://openalex.org/I145311948"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5030590633",
+      "display_name": "Baruch S. Blumberg",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Baruch S. Blumberg",
+     "raw_affiliation_strings": [
+      "Institute for Cancer Research, Philadelphia, USA"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Institute for Cancer Research, Philadelphia, USA",
+       "institution_ids": []
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5011917178",
+      "display_name": "W. Thomas London",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "W. Thomas London",
+     "raw_affiliation_strings": [
+      "Institute for Cancer Research, Philadelphia, USA"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Institute for Cancer Research, Philadelphia, USA",
+       "institution_ids": []
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1017/s0021932000006696",
+    "doi": "https://doi.org/10.1017/s0021932000006696",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1017/s0021932000006696",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S167809449",
+     "display_name": "Journal of Biosocial Science",
+     "issn_l": "0021-9320",
+     "issn": [
+      "0021-9320",
+      "1469-7599"
+     ],
+     "is_oa": false,
+     "is_in_doaj": true,
+     "is_core": true,
+     "listed_in": [
+      "anvur-scientific",
+      "cwts-core",
+      "doaj",
+      "jufo-1",
+      "ki-jl-1",
+      "medline",
+      "norway-1",
+      "poland-40",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310311721",
+     "host_organization_name": "Cambridge University Press",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310311721",
+      "https://openalex.org/P4310311702"
+     ],
+     "host_organization_lineage_names": [
+      "Cambridge University Press",
+      "University of Cambridge"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Journal of Biosocial Science",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W12515088",
+    "https://openalex.org/W63810618",
+    "https://openalex.org/W87524130",
+    "https://openalex.org/W181433931",
+    "https://openalex.org/W195581690",
+    "https://openalex.org/W1977462183",
+    "https://openalex.org/W2010100585",
+    "https://openalex.org/W2023743440",
+    "https://openalex.org/W2025964531",
+    "https://openalex.org/W2116816314",
+    "https://openalex.org/W2148063148",
+    "https://openalex.org/W2150201581",
+    "https://openalex.org/W2158470369",
+    "https://openalex.org/W2169298537",
+    "https://openalex.org/W2170350252",
+    "https://openalex.org/W2257495958",
+    "https://openalex.org/W2290573803",
+    "https://openalex.org/W2312621870",
+    "https://openalex.org/W2317341219",
+    "https://openalex.org/W2324098227",
+    "https://openalex.org/W2329472700",
+    "https://openalex.org/W2344688587",
+    "https://openalex.org/W2410748653",
+    "https://openalex.org/W2411940034",
+    "https://openalex.org/W2427300310",
+    "https://openalex.org/W2798643531",
+    "https://openalex.org/W6600501616",
+    "https://openalex.org/W6602632944",
+    "https://openalex.org/W6817463349"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W2875903878",
+   "doi": "https://doi.org/10.1016/j.respe.2018.05.196",
+   "display_name": "Prophylactic hepatitis B immunization in chronic kidney disease patients, Oran, Algeria",
+   "publication_year": 2018,
+   "type": "article",
+   "cited_by_count": 0,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5048712985",
+      "display_name": "Naouel Fatima Zohra Boumansour",
+      "orcid": "https://orcid.org/0000-0002-7049-8188",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-7049-8188"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4210163666",
+       "display_name": "University Hospital of Oran",
+       "ror": "https://ror.org/023d4z626",
+       "country_code": "DZ",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I4210163666"
+       ]
+      }
+     ],
+     "countries": [
+      "DZ"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "N.F.Z. Boumansour",
+     "raw_affiliation_strings": [
+      "Service d’épidémiologie, Établissement Hospitalier et Universitaire d’Oran, Oran, Algeria"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Service d’épidémiologie, Établissement Hospitalier et Universitaire d’Oran, Oran, Algeria",
+       "institution_ids": [
+        "https://openalex.org/I4210163666"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5045228874",
+      "display_name": "R. Hassene Daouadji",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4210163666",
+       "display_name": "University Hospital of Oran",
+       "ror": "https://ror.org/023d4z626",
+       "country_code": "DZ",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I4210163666"
+       ]
+      }
+     ],
+     "countries": [
+      "DZ"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "R. Hassene Daouadji",
+     "raw_affiliation_strings": [
+      "Service de néphrologie, Établissement Hospitalier et Universitaire d’Oran, Oran, Algeria"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Service de néphrologie, Établissement Hospitalier et Universitaire d’Oran, Oran, Algeria",
+       "institution_ids": [
+        "https://openalex.org/I4210163666"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5110439998",
+      "display_name": "N. Midoun",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4210163666",
+       "display_name": "University Hospital of Oran",
+       "ror": "https://ror.org/023d4z626",
+       "country_code": "DZ",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I4210163666"
+       ]
+      }
+     ],
+     "countries": [
+      "DZ"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "N. Midoun",
+     "raw_affiliation_strings": [
+      "Service d’épidémiologie, Établissement Hospitalier et Universitaire d’Oran, Oran, Algeria"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Service d’épidémiologie, Établissement Hospitalier et Universitaire d’Oran, Oran, Algeria",
+       "institution_ids": [
+        "https://openalex.org/I4210163666"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1016/j.respe.2018.05.196",
+    "doi": "https://doi.org/10.1016/j.respe.2018.05.196",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1016/j.respe.2018.05.196",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S92747870",
+     "display_name": "Revue d Épidémiologie et de Santé Publique",
+     "issn_l": "0398-7620",
+     "issn": [
+      "0398-7620",
+      "1773-0627"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "anvur-scientific",
+      "cwts-core",
+      "jufo-1",
+      "norway-1",
+      "poland-40"
+     ],
+     "host_organization": "https://openalex.org/P4310320990",
+     "host_organization_name": "Elsevier BV",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320990"
+     ],
+     "host_organization_lineage_names": [
+      "Elsevier BV"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Revue d'Épidémiologie et de Santé Publique",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": []
+  },
+  {
+   "id": "https://openalex.org/W3123222584",
+   "doi": "https://doi.org/10.1086/498588",
+   "display_name": "Hepatitis B and the Case of the Missing Women",
+   "publication_year": 2005,
+   "type": "article",
+   "cited_by_count": 173,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5112603000",
+      "display_name": "Emily F. Oster",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I136199984",
+       "display_name": "Harvard University",
+       "ror": "https://ror.org/03vek6s52",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I136199984"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Emily Oster",
+     "raw_affiliation_strings": [
+      "Harvard University"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Harvard University",
+       "institution_ids": [
+        "https://openalex.org/I136199984"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1086/498588",
+    "doi": "https://doi.org/10.1086/498588",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1086/498588",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S95323914",
+     "display_name": "Journal of Political Economy",
+     "issn_l": "0022-3808",
+     "issn": [
+      "0022-3808",
+      "1537-534X"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "abdc-a-star",
+      "anvur-class-a",
+      "anvur-scientific",
+      "cwts-core",
+      "fnege-1-star",
+      "ft50",
+      "jufo-3",
+      "ki-jl-2",
+      "norway-2",
+      "poland-200",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310315672",
+     "host_organization_name": "University of Chicago Press",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310315672",
+      "https://openalex.org/P4310315690"
+     ],
+     "host_organization_lineage_names": [
+      "University of Chicago Press",
+      "University of Chicago"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Journal of Political Economy",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W15910444",
+    "https://openalex.org/W19265839",
+    "https://openalex.org/W20580768",
+    "https://openalex.org/W33499567",
+    "https://openalex.org/W41678721",
+    "https://openalex.org/W42542220",
+    "https://openalex.org/W44363183",
+    "https://openalex.org/W46308941",
+    "https://openalex.org/W63810618",
+    "https://openalex.org/W64625686",
+    "https://openalex.org/W75232334",
+    "https://openalex.org/W86317173",
+    "https://openalex.org/W103227326",
+    "https://openalex.org/W108333395",
+    "https://openalex.org/W108963921",
+    "https://openalex.org/W126565737",
+    "https://openalex.org/W133805194",
+    "https://openalex.org/W143749375",
+    "https://openalex.org/W154921815",
+    "https://openalex.org/W160474190",
+    "https://openalex.org/W160775209",
+    "https://openalex.org/W166096827",
+    "https://openalex.org/W195581690",
+    "https://openalex.org/W199171120",
+    "https://openalex.org/W199496498",
+    "https://openalex.org/W245509987",
+    "https://openalex.org/W260542959",
+    "https://openalex.org/W282039410",
+    "https://openalex.org/W327005759",
+    "https://openalex.org/W1474329554",
+    "https://openalex.org/W1482473989",
+    "https://openalex.org/W1491508567",
+    "https://openalex.org/W1495848756",
+    "https://openalex.org/W1497903193",
+    "https://openalex.org/W1506122393",
+    "https://openalex.org/W1511093884",
+    "https://openalex.org/W1521368871",
+    "https://openalex.org/W1523891290",
+    "https://openalex.org/W1540818807",
+    "https://openalex.org/W1545455434",
+    "https://openalex.org/W1549678458",
+    "https://openalex.org/W1584085713",
+    "https://openalex.org/W1586607062",
+    "https://openalex.org/W1593000796",
+    "https://openalex.org/W1603078347",
+    "https://openalex.org/W1644137284",
+    "https://openalex.org/W1832630481",
+    "https://openalex.org/W1837765241",
+    "https://openalex.org/W1843168409",
+    "https://openalex.org/W1878458539",
+    "https://openalex.org/W1885051608",
+    "https://openalex.org/W1893709872",
+    "https://openalex.org/W1909640474",
+    "https://openalex.org/W1932107288",
+    "https://openalex.org/W1934397175",
+    "https://openalex.org/W1945139459",
+    "https://openalex.org/W1965386866",
+    "https://openalex.org/W1966797581",
+    "https://openalex.org/W1968982866",
+    "https://openalex.org/W1969699349",
+    "https://openalex.org/W1969778642",
+    "https://openalex.org/W1970297794",
+    "https://openalex.org/W1972064394",
+    "https://openalex.org/W1973144315",
+    "https://openalex.org/W1973588033",
+    "https://openalex.org/W1973707041",
+    "https://openalex.org/W1974349562",
+    "https://openalex.org/W1974565389",
+    "https://openalex.org/W1975592934",
+    "https://openalex.org/W1976232287",
+    "https://openalex.org/W1977425347",
+    "https://openalex.org/W1980146503",
+    "https://openalex.org/W1980641464",
+    "https://openalex.org/W1982463108",
+    "https://openalex.org/W1984477083",
+    "https://openalex.org/W1984681223",
+    "https://openalex.org/W1985580027",
+    "https://openalex.org/W1988570524",
+    "https://openalex.org/W1988714899",
+    "https://openalex.org/W1989457822",
+    "https://openalex.org/W1991352280",
+    "https://openalex.org/W1991408763",
+    "https://openalex.org/W1993169320",
+    "https://openalex.org/W1994618965",
+    "https://openalex.org/W1997734086",
+    "https://openalex.org/W1997938647",
+    "https://openalex.org/W1998666106",
+    "https://openalex.org/W1999558179",
+    "https://openalex.org/W2001772766",
+    "https://openalex.org/W2006467297",
+    "https://openalex.org/W2006695775",
+    "https://openalex.org/W2007692116",
+    "https://openalex.org/W2008153222",
+    "https://openalex.org/W2009472168",
+    "https://openalex.org/W2009729418",
+    "https://openalex.org/W2009783786",
+    "https://openalex.org/W2010100585",
+    "https://openalex.org/W2011352194",
+    "https://openalex.org/W2015904317",
+    "https://openalex.org/W2016079529",
+    "https://openalex.org/W2016449641",
+    "https://openalex.org/W2017097360",
+    "https://openalex.org/W2017347615",
+    "https://openalex.org/W2018235350",
+    "https://openalex.org/W2020704407",
+    "https://openalex.org/W2023338783",
+    "https://openalex.org/W2023743440",
+    "https://openalex.org/W2023803754",
+    "https://openalex.org/W2024420759",
+    "https://openalex.org/W2024631419",
+    "https://openalex.org/W2025688007",
+    "https://openalex.org/W2025964531",
+    "https://openalex.org/W2028144863",
+    "https://openalex.org/W2030711125",
+    "https://openalex.org/W2031028425",
+    "https://openalex.org/W2031460682",
+    "https://openalex.org/W2031660749",
+    "https://openalex.org/W2031837603",
+    "https://openalex.org/W2032010244",
+    "https://openalex.org/W2032041079",
+    "https://openalex.org/W2032745146",
+    "https://openalex.org/W2033495226",
+    "https://openalex.org/W2033664360",
+    "https://openalex.org/W2033778683",
+    "https://openalex.org/W2034463053",
+    "https://openalex.org/W2036446366",
+    "https://openalex.org/W2037422977",
+    "https://openalex.org/W2038001772",
+    "https://openalex.org/W2039734252",
+    "https://openalex.org/W2040038007",
+    "https://openalex.org/W2041102453",
+    "https://openalex.org/W2042851298",
+    "https://openalex.org/W2045233416",
+    "https://openalex.org/W2047234286",
+    "https://openalex.org/W2049807718",
+    "https://openalex.org/W2051147843",
+    "https://openalex.org/W2051259478",
+    "https://openalex.org/W2051317332",
+    "https://openalex.org/W2051320592",
+    "https://openalex.org/W2051586219",
+    "https://openalex.org/W2053259740",
+    "https://openalex.org/W2053462442",
+    "https://openalex.org/W2054252678",
+    "https://openalex.org/W2054758337",
+    "https://openalex.org/W2055427012",
+    "https://openalex.org/W2056340479",
+    "https://openalex.org/W2057653652",
+    "https://openalex.org/W2057868094",
+    "https://openalex.org/W2058846919",
+    "https://openalex.org/W2060826031",
+    "https://openalex.org/W2061301989",
+    "https://openalex.org/W2062478840",
+    "https://openalex.org/W2064383132",
+    "https://openalex.org/W2067228496",
+    "https://openalex.org/W2068128745",
+    "https://openalex.org/W2068590347",
+    "https://openalex.org/W2069914609",
+    "https://openalex.org/W2070415764",
+    "https://openalex.org/W2070769419",
+    "https://openalex.org/W2076054023",
+    "https://openalex.org/W2078263976",
+    "https://openalex.org/W2079607428",
+    "https://openalex.org/W2080806791",
+    "https://openalex.org/W2082170236",
+    "https://openalex.org/W2084748780",
+    "https://openalex.org/W2086990267",
+    "https://openalex.org/W2088424462",
+    "https://openalex.org/W2092568950",
+    "https://openalex.org/W2092693068",
+    "https://openalex.org/W2093873190",
+    "https://openalex.org/W2095359908",
+    "https://openalex.org/W2095559326",
+    "https://openalex.org/W2097827597",
+    "https://openalex.org/W2099746867",
+    "https://openalex.org/W2099795003",
+    "https://openalex.org/W2103618456",
+    "https://openalex.org/W2103970908",
+    "https://openalex.org/W2104064128",
+    "https://openalex.org/W2104637665",
+    "https://openalex.org/W2106715476",
+    "https://openalex.org/W2107597237",
+    "https://openalex.org/W2111167332",
+    "https://openalex.org/W2111833104",
+    "https://openalex.org/W2113255610",
+    "https://openalex.org/W2113670843",
+    "https://openalex.org/W2114978546",
+    "https://openalex.org/W2115951264",
+    "https://openalex.org/W2119702588",
+    "https://openalex.org/W2119970004",
+    "https://openalex.org/W2120128540",
+    "https://openalex.org/W2123770677",
+    "https://openalex.org/W2129626017",
+    "https://openalex.org/W2131787899",
+    "https://openalex.org/W2133197126",
+    "https://openalex.org/W2138381962",
+    "https://openalex.org/W2139058582",
+    "https://openalex.org/W2139588767",
+    "https://openalex.org/W2144115556",
+    "https://openalex.org/W2145733537",
+    "https://openalex.org/W2148488258",
+    "https://openalex.org/W2149950795",
+    "https://openalex.org/W2152457710",
+    "https://openalex.org/W2153876972",
+    "https://openalex.org/W2159078547",
+    "https://openalex.org/W2163535953",
+    "https://openalex.org/W2166272695",
+    "https://openalex.org/W2166668554",
+    "https://openalex.org/W2169078777",
+    "https://openalex.org/W2183837762",
+    "https://openalex.org/W2184967338",
+    "https://openalex.org/W2185320490",
+    "https://openalex.org/W2187108820",
+    "https://openalex.org/W2227595632",
+    "https://openalex.org/W2236822433",
+    "https://openalex.org/W2240225525",
+    "https://openalex.org/W2240253538",
+    "https://openalex.org/W2241922650",
+    "https://openalex.org/W2248179811",
+    "https://openalex.org/W2249723975",
+    "https://openalex.org/W2262553628",
+    "https://openalex.org/W2263013487",
+    "https://openalex.org/W2267045783",
+    "https://openalex.org/W2275623191",
+    "https://openalex.org/W2277478840",
+    "https://openalex.org/W2279871407",
+    "https://openalex.org/W2280233913",
+    "https://openalex.org/W2283886095",
+    "https://openalex.org/W2284623676",
+    "https://openalex.org/W2287794631",
+    "https://openalex.org/W2297364672",
+    "https://openalex.org/W2297804289",
+    "https://openalex.org/W2313035045",
+    "https://openalex.org/W2324170741",
+    "https://openalex.org/W2326843102",
+    "https://openalex.org/W2332439875",
+    "https://openalex.org/W2333318251",
+    "https://openalex.org/W2337700830",
+    "https://openalex.org/W2339240664",
+    "https://openalex.org/W2340547510",
+    "https://openalex.org/W2340968614",
+    "https://openalex.org/W2344688587",
+    "https://openalex.org/W2346557298",
+    "https://openalex.org/W2380194457",
+    "https://openalex.org/W2394691070",
+    "https://openalex.org/W2396731641",
+    "https://openalex.org/W2398413162",
+    "https://openalex.org/W2400205460",
+    "https://openalex.org/W2400336745",
+    "https://openalex.org/W2400951940",
+    "https://openalex.org/W2403926825",
+    "https://openalex.org/W2404490602",
+    "https://openalex.org/W2404819758",
+    "https://openalex.org/W2405973516",
+    "https://openalex.org/W2406899507",
+    "https://openalex.org/W2407194782",
+    "https://openalex.org/W2407223825",
+    "https://openalex.org/W2407423199",
+    "https://openalex.org/W2407680129",
+    "https://openalex.org/W2408007629",
+    "https://openalex.org/W2408132554",
+    "https://openalex.org/W2410206135",
+    "https://openalex.org/W2410247806",
+    "https://openalex.org/W2410445315",
+    "https://openalex.org/W2410668870",
+    "https://openalex.org/W2410737244",
+    "https://openalex.org/W2410806649",
+    "https://openalex.org/W2410839442",
+    "https://openalex.org/W2410971108",
+    "https://openalex.org/W2411261833",
+    "https://openalex.org/W2412553387",
+    "https://openalex.org/W2412719317",
+    "https://openalex.org/W2412930943",
+    "https://openalex.org/W2413459694",
+    "https://openalex.org/W2414081252",
+    "https://openalex.org/W2414452977",
+    "https://openalex.org/W2415044553",
+    "https://openalex.org/W2415599422",
+    "https://openalex.org/W2415920839",
+    "https://openalex.org/W2416413623",
+    "https://openalex.org/W2416478646",
+    "https://openalex.org/W2417290950",
+    "https://openalex.org/W2417541194",
+    "https://openalex.org/W2417605366",
+    "https://openalex.org/W2418131600",
+    "https://openalex.org/W2418187441",
+    "https://openalex.org/W2422782317",
+    "https://openalex.org/W2425285571",
+    "https://openalex.org/W2428142175",
+    "https://openalex.org/W2430916650",
+    "https://openalex.org/W2431321173",
+    "https://openalex.org/W2436340838",
+    "https://openalex.org/W2436989182",
+    "https://openalex.org/W2439643896",
+    "https://openalex.org/W2461361811",
+    "https://openalex.org/W2462432841",
+    "https://openalex.org/W2466293757",
+    "https://openalex.org/W2467308324",
+    "https://openalex.org/W2467331646",
+    "https://openalex.org/W2468337934",
+    "https://openalex.org/W2471452596",
+    "https://openalex.org/W2471965227",
+    "https://openalex.org/W2472208470",
+    "https://openalex.org/W2473087690",
+    "https://openalex.org/W2473504482",
+    "https://openalex.org/W2473991293",
+    "https://openalex.org/W2477167624",
+    "https://openalex.org/W2494618058",
+    "https://openalex.org/W3021931428",
+    "https://openalex.org/W3023357242",
+    "https://openalex.org/W3123724540",
+    "https://openalex.org/W3124113130",
+    "https://openalex.org/W4213234695",
+    "https://openalex.org/W4232967329",
+    "https://openalex.org/W4242085156",
+    "https://openalex.org/W4248442578",
+    "https://openalex.org/W4250876398",
+    "https://openalex.org/W4301797121",
+    "https://openalex.org/W4312991264"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W2890595746",
+   "doi": "https://doi.org/10.15226/2374-815x/6/1/001120",
+   "display_name": "Post-Vaccine Immunity against Hepatitis B in Burkina Faso children",
+   "publication_year": 2018,
+   "type": "article",
+   "cited_by_count": 2,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5049863713",
+      "display_name": "SA Kissou",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I3131918342",
+       "display_name": "Nazi Boni University",
+       "ror": "https://ror.org/04cq90n15",
+       "country_code": "BF",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I3131918342"
+       ]
+      }
+     ],
+     "countries": [
+      "BF"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "SA Kissou",
+     "raw_affiliation_strings": [
+      "Department of Pediatrics, Souro Sanou University Hospital Center (CHUSS) of Bobo-Dioulasso, Burkina Faso",
+      "Higher Institute of Health Sciences (INSSA); Nazi Boni University (UNB) of Bobo-Dioulasso, Burkina Faso"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Pediatrics, Souro Sanou University Hospital Center (CHUSS) of Bobo-Dioulasso, Burkina Faso",
+       "institution_ids": []
+      },
+      {
+       "raw_affiliation_string": "Higher Institute of Health Sciences (INSSA); Nazi Boni University (UNB) of Bobo-Dioulasso, Burkina Faso",
+       "institution_ids": [
+        "https://openalex.org/I3131918342"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5007092135",
+      "display_name": "Kassim Sidibé",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "K Sidibé",
+     "raw_affiliation_strings": [
+      "Department of Pediatrics, Souro Sanou University Hospital Center (CHUSS) of Bobo-Dioulasso, Burkina Faso"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Pediatrics, Souro Sanou University Hospital Center (CHUSS) of Bobo-Dioulasso, Burkina Faso",
+       "institution_ids": []
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5086538774",
+      "display_name": "Y Sourabié",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I3131918342",
+       "display_name": "Nazi Boni University",
+       "ror": "https://ror.org/04cq90n15",
+       "country_code": "BF",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I3131918342"
+       ]
+      }
+     ],
+     "countries": [
+      "BF"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Y Sourabié",
+     "raw_affiliation_strings": [
+      "Higher Institute of Health Sciences (INSSA); Nazi Boni University (UNB) of Bobo-Dioulasso, Burkina Faso",
+      "Immunology Laboratory, CHUSS, Burkina Faso"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Higher Institute of Health Sciences (INSSA); Nazi Boni University (UNB) of Bobo-Dioulasso, Burkina Faso",
+       "institution_ids": [
+        "https://openalex.org/I3131918342"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Immunology Laboratory, CHUSS, Burkina Faso",
+       "institution_ids": []
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5071630699",
+      "display_name": "R. Cessouma",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I3131918342",
+       "display_name": "Nazi Boni University",
+       "ror": "https://ror.org/04cq90n15",
+       "country_code": "BF",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I3131918342"
+       ]
+      }
+     ],
+     "countries": [
+      "BF"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "KR Cessouma",
+     "raw_affiliation_strings": [
+      "Department of Pediatrics, Souro Sanou University Hospital Center (CHUSS) of Bobo-Dioulasso, Burkina Faso",
+      "Higher Institute of Health Sciences (INSSA); Nazi Boni University (UNB) of Bobo-Dioulasso, Burkina Faso"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Pediatrics, Souro Sanou University Hospital Center (CHUSS) of Bobo-Dioulasso, Burkina Faso",
+       "institution_ids": []
+      },
+      {
+       "raw_affiliation_string": "Higher Institute of Health Sciences (INSSA); Nazi Boni University (UNB) of Bobo-Dioulasso, Burkina Faso",
+       "institution_ids": [
+        "https://openalex.org/I3131918342"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5103701331",
+      "display_name": "AS Ouédraogo",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I3131918342",
+       "display_name": "Nazi Boni University",
+       "ror": "https://ror.org/04cq90n15",
+       "country_code": "BF",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I3131918342"
+       ]
+      }
+     ],
+     "countries": [
+      "BF"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "AS Ouedraogo",
+     "raw_affiliation_strings": [
+      "Higher Institute of Health Sciences (INSSA); Nazi Boni University (UNB) of Bobo-Dioulasso, Burkina Faso",
+      "Laboratory of bacteriology-virology, CHUSS, Burkina Faso"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Higher Institute of Health Sciences (INSSA); Nazi Boni University (UNB) of Bobo-Dioulasso, Burkina Faso",
+       "institution_ids": [
+        "https://openalex.org/I3131918342"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Laboratory of bacteriology-virology, CHUSS, Burkina Faso",
+       "institution_ids": []
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5030407157",
+      "display_name": "Adama Sawadogo",
+      "orcid": "https://orcid.org/0000-0003-1600-6004",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-1600-6004"
+      ]
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "A Sawadogo",
+     "raw_affiliation_strings": [
+      "Department of gastroenterology and hepatology, CHUSS, Burkina Faso"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of gastroenterology and hepatology, CHUSS, Burkina Faso",
+       "institution_ids": []
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5112333226",
+      "display_name": "Boubacar Nacro",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "B Nacro",
+     "raw_affiliation_strings": [
+      "Department of Pediatrics, Souro Sanou University Hospital Center (CHUSS) of Bobo-Dioulasso, Burkina Faso"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Pediatrics, Souro Sanou University Hospital Center (CHUSS) of Bobo-Dioulasso, Burkina Faso",
+       "institution_ids": []
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5079864745",
+      "display_name": "Wilfried Wenceslas Bazié",
+      "orcid": "https://orcid.org/0000-0002-7660-9280",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-7660-9280"
+      ]
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "W Bazie",
+     "raw_affiliation_strings": [
+      "Immunology Laboratory, CHUSS, Burkina Faso"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Immunology Laboratory, CHUSS, Burkina Faso",
+       "institution_ids": []
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.15226/2374-815x/6/1/001120",
+    "doi": "https://doi.org/10.15226/2374-815x/6/1/001120",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.15226/2374-815x/6/1/001120",
+    "pdf_url": "https://symbiosisonlinepublishing.com/gastroenterology-pancreatology-liverdisorders/gastroenterology-pancreatology-liverdisorders120.pdf",
+    "source": {
+     "id": "https://openalex.org/S4210181152",
+     "display_name": "Journal of Gastroenterology Pancreatology & Liver Disorders",
+     "issn_l": "2374-815X",
+     "issn": [
+      "2374-815X"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "cwts-core"
+     ],
+     "host_organization": "https://openalex.org/P4310315899",
+     "host_organization_name": "Symbiosis Group",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310315899"
+     ],
+     "host_organization_lineage_names": [
+      "Symbiosis Group"
+     ],
+     "type": "journal"
+    },
+    "license": "cc-by",
+    "license_id": "https://openalex.org/licenses/cc-by",
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Journal of Gastroenterology, Pancreatology &amp; Liver Disorders",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W1966929670",
+    "https://openalex.org/W2000261920",
+    "https://openalex.org/W2092563148",
+    "https://openalex.org/W2112195292",
+    "https://openalex.org/W2153060595",
+    "https://openalex.org/W2176322681",
+    "https://openalex.org/W2218321525",
+    "https://openalex.org/W2945792041"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W4405823174",
+   "doi": "https://doi.org/10.1016/j.jgar.2024.10.069",
+   "display_name": "Profile of the Immune Response to Hepatitis B Vaccine in Dialysis Patients",
+   "publication_year": 2024,
+   "type": "article",
+   "cited_by_count": 0,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5115666438",
+      "display_name": "Nader Sebai",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Nader Sebai",
+     "raw_affiliation_strings": [
+      "Microbiology Laboratory, Taher Sfar Mahdia University Hospital"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Microbiology Laboratory, Taher Sfar Mahdia University Hospital",
+       "institution_ids": []
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5115666439",
+      "display_name": "Aida Majdoub",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Aida Majdoub",
+     "raw_affiliation_strings": [
+      "Hemodialysis clinic “Les FATIMIDES” MAHDIA"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Hemodialysis clinic “Les FATIMIDES” MAHDIA",
+       "institution_ids": []
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1016/j.jgar.2024.10.069",
+    "doi": "https://doi.org/10.1016/j.jgar.2024.10.069",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.1016/j.jgar.2024.10.069",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S2764745279",
+     "display_name": "Journal of Global Antimicrobial Resistance",
+     "issn_l": "2213-7165",
+     "issn": [
+      "2213-7165",
+      "2213-7173"
+     ],
+     "is_oa": true,
+     "is_in_doaj": true,
+     "is_core": true,
+     "listed_in": [
+      "cwts-core",
+      "doaj",
+      "dongbi-b",
+      "doyens",
+      "jufo-1",
+      "ki-jl-1",
+      "medline",
+      "norway-1",
+      "oarl",
+      "poland-40",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320990",
+     "host_organization_name": "Elsevier BV",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320990"
+     ],
+     "host_organization_lineage_names": [
+      "Elsevier BV"
+     ],
+     "type": "journal"
+    },
+    "license": "cc-by-nc-nd",
+    "license_id": "https://openalex.org/licenses/cc-by-nc-nd",
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Journal of Global Antimicrobial Resistance",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": []
+  },
+  {
+   "id": "https://openalex.org/W7117136974",
+   "doi": "https://doi.org/10.4236/jbm.2025.1312027",
+   "display_name": "Prevalence and Vaccination Status of Hepatitis B among HIV-Infected Patients in N’Djamena, Chad",
+   "publication_year": 2025,
+   "type": "article",
+   "cited_by_count": 2,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5121234310",
+      "display_name": "Hidir Tidjani Abakar",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I117723502",
+       "display_name": "University of N'Djamena",
+       "ror": "https://ror.org/013gpqv08",
+       "country_code": "TD",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I117723502"
+       ]
+      }
+     ],
+     "countries": [
+      "TD"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Hidir Tidjani Abakar",
+     "raw_affiliation_strings": [
+      "Faculty of Human Health Sciences , University of N'Djamena , N'Djamena , Chad",
+      "Laboratory for Research , Diagnostics, and Scientific Expertise (Labo-REDES) , N'Djamena , Chad"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Faculty of Human Health Sciences , University of N'Djamena , N'Djamena , Chad",
+       "institution_ids": [
+        "https://openalex.org/I117723502"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Laboratory for Research , Diagnostics, and Scientific Expertise (Labo-REDES) , N'Djamena , Chad",
+       "institution_ids": []
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5121167300",
+      "display_name": "Abakar Oumar Mahamat",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Abakar Oumar Mahamat",
+     "raw_affiliation_strings": [
+      "Laboratory for Research , Diagnostics, and Scientific Expertise (Labo-REDES) , N'Djamena , Chad"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Laboratory for Research , Diagnostics, and Scientific Expertise (Labo-REDES) , N'Djamena , Chad",
+       "institution_ids": []
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5121207127",
+      "display_name": "Djelassem Ferdinand",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Djelassem Ferdinand",
+     "raw_affiliation_strings": [
+      "Laboratory for Research , Diagnostics, and Scientific Expertise (Labo-REDES) , N'Djamena , Chad"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Laboratory for Research , Diagnostics, and Scientific Expertise (Labo-REDES) , N'Djamena , Chad",
+       "institution_ids": []
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5121179346",
+      "display_name": "Youssouf Abdessalam Ireboy",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Youssouf Abdessalam Ireboy",
+     "raw_affiliation_strings": [
+      "Laboratory for Research , Diagnostics, and Scientific Expertise (Labo-REDES) , N'Djamena , Chad"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Laboratory for Research , Diagnostics, and Scientific Expertise (Labo-REDES) , N'Djamena , Chad",
+       "institution_ids": []
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5121151800",
+      "display_name": "Lina Djonkreo",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Lina Djonkreo",
+     "raw_affiliation_strings": [
+      "Laboratory for Research , Diagnostics, and Scientific Expertise (Labo-REDES) , N'Djamena , Chad"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Laboratory for Research , Diagnostics, and Scientific Expertise (Labo-REDES) , N'Djamena , Chad",
+       "institution_ids": []
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5121171807",
+      "display_name": "Moussa Adoum Aoudjali",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Moussa Adoum Aoudjali",
+     "raw_affiliation_strings": [
+      "Laboratory for Research , Diagnostics, and Scientific Expertise (Labo-REDES) , N'Djamena , Chad"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Laboratory for Research , Diagnostics, and Scientific Expertise (Labo-REDES) , N'Djamena , Chad",
+       "institution_ids": []
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5080985115",
+      "display_name": "Zita Aleyo Nodjikouambaye",
+      "orcid": "https://orcid.org/0000-0002-0477-2652",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-0477-2652"
+      ]
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Zita Aleyo Nodjikouambaye",
+     "raw_affiliation_strings": [
+      "National Reference Laboratory for HIV and Hepatitis Control , N'Djamena , Chad"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "National Reference Laboratory for HIV and Hepatitis Control , N'Djamena , Chad",
+       "institution_ids": []
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5053988920",
+      "display_name": "Ahmat Mahamat Ahmat",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Ahmat Mahamat Ahmat",
+     "raw_affiliation_strings": [
+      "National Reference Laboratory for HIV and Hepatitis Control , N'Djamena , Chad"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "National Reference Laboratory for HIV and Hepatitis Control , N'Djamena , Chad",
+       "institution_ids": []
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5121187583",
+      "display_name": "Adji Boukar Tormalta",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Adji Boukar Tormalta",
+     "raw_affiliation_strings": [
+      "Laboratory for Research , Diagnostics, and Scientific Expertise (Labo-REDES) , N'Djamena , Chad"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Laboratory for Research , Diagnostics, and Scientific Expertise (Labo-REDES) , N'Djamena , Chad",
+       "institution_ids": []
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5024336838",
+      "display_name": "Hassoumi Manah",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Hassoumi Manah",
+     "raw_affiliation_strings": [
+      "Chad-China Friendship University Hospital Center (CHU-ATC) , N'Djamena , Chad"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Chad-China Friendship University Hospital Center (CHU-ATC) , N'Djamena , Chad",
+       "institution_ids": []
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5102573920",
+      "display_name": "Mahamat Tahir N’garé Hassan",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Mahamat Tahir Ngare Hassan",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5121007584",
+      "display_name": "Agnes Tariam Djibangar",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Agnes Tariam Djibangar",
+     "raw_affiliation_strings": [
+      "National Reference University Hospital Center (CHU-RN) , N'Djamena , Chad"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "National Reference University Hospital Center (CHU-RN) , N'Djamena , Chad",
+       "institution_ids": []
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5103960653",
+      "display_name": "Ali Mahamat Moussa",
+      "orcid": "https://orcid.org/0009-0005-3002-0648",
+      "observed_orcids": [
+       "https://orcid.org/0009-0005-3002-0648"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I117723502",
+       "display_name": "University of N'Djamena",
+       "ror": "https://ror.org/013gpqv08",
+       "country_code": "TD",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I117723502"
+       ]
+      }
+     ],
+     "countries": [
+      "TD"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Ali Mahamat Moussa",
+     "raw_affiliation_strings": [
+      "Faculty of Human Health Sciences , University of N'Djamena , N'Djamena , Chad",
+      "National Reference University Hospital Center (CHU-RN) , N'Djamena , Chad"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Faculty of Human Health Sciences , University of N'Djamena , N'Djamena , Chad",
+       "institution_ids": [
+        "https://openalex.org/I117723502"
+       ]
+      },
+      {
+       "raw_affiliation_string": "National Reference University Hospital Center (CHU-RN) , N'Djamena , Chad",
+       "institution_ids": []
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5064164464",
+      "display_name": "Adoum Fouda Abderrazzack",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I117723502",
+       "display_name": "University of N'Djamena",
+       "ror": "https://ror.org/013gpqv08",
+       "country_code": "TD",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I117723502"
+       ]
+      }
+     ],
+     "countries": [
+      "TD"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Abderrazzack Adoum Fouda",
+     "raw_affiliation_strings": [
+      "Faculty of Human Health Sciences , University of N'Djamena , N'Djamena , Chad",
+      "Laboratory for Research , Diagnostics, and Scientific Expertise (Labo-REDES) , N'Djamena , Chad"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Faculty of Human Health Sciences , University of N'Djamena , N'Djamena , Chad",
+       "institution_ids": [
+        "https://openalex.org/I117723502"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Laboratory for Research , Diagnostics, and Scientific Expertise (Labo-REDES) , N'Djamena , Chad",
+       "institution_ids": []
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5121153780",
+      "display_name": "Adawaye Chatté",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I117723502",
+       "display_name": "University of N'Djamena",
+       "ror": "https://ror.org/013gpqv08",
+       "country_code": "TD",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I117723502"
+       ]
+      }
+     ],
+     "countries": [
+      "TD"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Adawaye Chatté",
+     "raw_affiliation_strings": [
+      "Faculty of Human Health Sciences , University of N'Djamena , N'Djamena , Chad",
+      "Laboratory for Research , Diagnostics, and Scientific Expertise (Labo-REDES) , N'Djamena , Chad"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Faculty of Human Health Sciences , University of N'Djamena , N'Djamena , Chad",
+       "institution_ids": [
+        "https://openalex.org/I117723502"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Laboratory for Research , Diagnostics, and Scientific Expertise (Labo-REDES) , N'Djamena , Chad",
+       "institution_ids": []
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.4236/jbm.2025.1312027",
+    "doi": "https://doi.org/10.4236/jbm.2025.1312027",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.4236/jbm.2025.1312027",
+    "pdf_url": "https://www.scirp.org/pdf/jbm_2153608.pdf",
+    "source": {
+     "id": "https://openalex.org/S2764372278",
+     "display_name": "Journal of Biosciences and Medicines",
+     "issn_l": "2327-5081",
+     "issn": [
+      "2327-5081",
+      "2327-509X"
+     ],
+     "is_oa": true,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "cwts-core"
+     ],
+     "host_organization": null,
+     "host_organization_name": null,
+     "host_organization_lineage": [],
+     "host_organization_lineage_names": [],
+     "type": "journal"
+    },
+    "license": "cc-by",
+    "license_id": "https://openalex.org/licenses/cc-by",
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Journal of Biosciences and Medicines",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W125362874",
+    "https://openalex.org/W2053828766",
+    "https://openalex.org/W2156505922",
+    "https://openalex.org/W2160726326",
+    "https://openalex.org/W2937474526",
+    "https://openalex.org/W4400402064",
+    "https://openalex.org/W4407086656",
+    "https://openalex.org/W4407106530",
+    "https://openalex.org/W4407583772"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W2185955083",
+   "doi": "https://doi.org/10.1142/9789812813688_0029",
+   "display_name": "The Relation of Infection With the Hepatitis B Agent to Primary Hepatic Carcinoma",
+   "publication_year": 2000,
+   "type": "book-chapter",
+   "cited_by_count": 191,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5030590633",
+      "display_name": "Baruch S. Blumberg",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I1289437631",
+       "display_name": "Fox Chase Cancer Center",
+       "ror": "https://ror.org/0567t7073",
+       "country_code": "US",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I1289437631",
+        "https://openalex.org/I4210122924"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I4210112346",
+       "display_name": "Institut de Médecine et d'Epidémiologie Africaines",
+       "ror": "https://ror.org/0228cyp78",
+       "country_code": "FR",
+       "type": "facility",
+       "lineage": [
+        "https://openalex.org/I4210112346"
+       ]
+      }
+     ],
+     "countries": [
+      "FR",
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Baruch S. Blumberg",
+     "raw_affiliation_strings": [
+      "Institut de Medécine et d'Épidémiologie Africaines, Hospital Clande Bernard, Paris, France",
+      "Institute for Cancer Research, Fox Chase Cancer Center, Philadelphia, USA"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Institut de Medécine et d'Épidémiologie Africaines, Hospital Clande Bernard, Paris, France",
+       "institution_ids": [
+        "https://openalex.org/I4210112346"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Institute for Cancer Research, Fox Chase Cancer Center, Philadelphia, USA",
+       "institution_ids": [
+        "https://openalex.org/I1289437631"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5045072739",
+      "display_name": "Bernard Larouzé",
+      "orcid": "https://orcid.org/0000-0001-9906-6293",
+      "observed_orcids": [
+       "https://orcid.org/0000-0001-9906-6293"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I1289437631",
+       "display_name": "Fox Chase Cancer Center",
+       "ror": "https://ror.org/0567t7073",
+       "country_code": "US",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I1289437631",
+        "https://openalex.org/I4210122924"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I4210112346",
+       "display_name": "Institut de Médecine et d'Epidémiologie Africaines",
+       "ror": "https://ror.org/0228cyp78",
+       "country_code": "FR",
+       "type": "facility",
+       "lineage": [
+        "https://openalex.org/I4210112346"
+       ]
+      }
+     ],
+     "countries": [
+      "FR",
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Bernard Larouzé",
+     "raw_affiliation_strings": [
+      "Institut de Medécine et d'Épidémiologie Africaines, Hospital Clande Bernard, Paris, France",
+      "Institute for Cancer Research, Fox Chase Cancer Center, Philadelphia, USA"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Institut de Medécine et d'Épidémiologie Africaines, Hospital Clande Bernard, Paris, France",
+       "institution_ids": [
+        "https://openalex.org/I4210112346"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Institute for Cancer Research, Fox Chase Cancer Center, Philadelphia, USA",
+       "institution_ids": [
+        "https://openalex.org/I1289437631"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5035001752",
+      "display_name": "William T. London",
+      "orcid": "https://orcid.org/0000-0003-3936-682X",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-3936-682X"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I1289437631",
+       "display_name": "Fox Chase Cancer Center",
+       "ror": "https://ror.org/0567t7073",
+       "country_code": "US",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I1289437631",
+        "https://openalex.org/I4210122924"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I4210112346",
+       "display_name": "Institut de Médecine et d'Epidémiologie Africaines",
+       "ror": "https://ror.org/0228cyp78",
+       "country_code": "FR",
+       "type": "facility",
+       "lineage": [
+        "https://openalex.org/I4210112346"
+       ]
+      }
+     ],
+     "countries": [
+      "FR",
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "W. Thomas London",
+     "raw_affiliation_strings": [
+      "Institut de Medécine et d'Épidémiologie Africaines, Hospital Clande Bernard, Paris, France",
+      "Institute for Cancer Research, Fox Chase Cancer Center, Philadelphia, USA"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Institut de Medécine et d'Épidémiologie Africaines, Hospital Clande Bernard, Paris, France",
+       "institution_ids": [
+        "https://openalex.org/I4210112346"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Institute for Cancer Research, Fox Chase Cancer Center, Philadelphia, USA",
+       "institution_ids": [
+        "https://openalex.org/I1289437631"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5103558324",
+      "display_name": "Barbara G. Werner",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I1289437631",
+       "display_name": "Fox Chase Cancer Center",
+       "ror": "https://ror.org/0567t7073",
+       "country_code": "US",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I1289437631",
+        "https://openalex.org/I4210122924"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I4210112346",
+       "display_name": "Institut de Médecine et d'Epidémiologie Africaines",
+       "ror": "https://ror.org/0228cyp78",
+       "country_code": "FR",
+       "type": "facility",
+       "lineage": [
+        "https://openalex.org/I4210112346"
+       ]
+      }
+     ],
+     "countries": [
+      "FR",
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Barbara Werner",
+     "raw_affiliation_strings": [
+      "Institut de Medécine et d'Épidémiologie Africaines, Hospital Clande Bernard, Paris, France",
+      "Institute for Cancer Research, Fox Chase Cancer Center, Philadelphia, USA"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Institut de Medécine et d'Épidémiologie Africaines, Hospital Clande Bernard, Paris, France",
+       "institution_ids": [
+        "https://openalex.org/I4210112346"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Institute for Cancer Research, Fox Chase Cancer Center, Philadelphia, USA",
+       "institution_ids": [
+        "https://openalex.org/I1289437631"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5109344679",
+      "display_name": "Jana Earl Hesser",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I1289437631",
+       "display_name": "Fox Chase Cancer Center",
+       "ror": "https://ror.org/0567t7073",
+       "country_code": "US",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I1289437631",
+        "https://openalex.org/I4210122924"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I4210112346",
+       "display_name": "Institut de Médecine et d'Epidémiologie Africaines",
+       "ror": "https://ror.org/0228cyp78",
+       "country_code": "FR",
+       "type": "facility",
+       "lineage": [
+        "https://openalex.org/I4210112346"
+       ]
+      }
+     ],
+     "countries": [
+      "FR",
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Jana E. Hesser",
+     "raw_affiliation_strings": [
+      "Institut de Medécine et d'Épidémiologie Africaines, Hospital Clande Bernard, Paris, France",
+      "Institute for Cancer Research, Fox Chase Cancer Center, Philadelphia, USA"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Institut de Medécine et d'Épidémiologie Africaines, Hospital Clande Bernard, Paris, France",
+       "institution_ids": [
+        "https://openalex.org/I4210112346"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Institute for Cancer Research, Fox Chase Cancer Center, Philadelphia, USA",
+       "institution_ids": [
+        "https://openalex.org/I1289437631"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5036137296",
+      "display_name": "Irving Millman",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I1289437631",
+       "display_name": "Fox Chase Cancer Center",
+       "ror": "https://ror.org/0567t7073",
+       "country_code": "US",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I1289437631",
+        "https://openalex.org/I4210122924"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I4210112346",
+       "display_name": "Institut de Médecine et d'Epidémiologie Africaines",
+       "ror": "https://ror.org/0228cyp78",
+       "country_code": "FR",
+       "type": "facility",
+       "lineage": [
+        "https://openalex.org/I4210112346"
+       ]
+      }
+     ],
+     "countries": [
+      "FR",
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Irving Millman",
+     "raw_affiliation_strings": [
+      "Institut de Medécine et d'Épidémiologie Africaines, Hospital Clande Bernard, Paris, France",
+      "Institute for Cancer Research, Fox Chase Cancer Center, Philadelphia, USA"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Institut de Medécine et d'Épidémiologie Africaines, Hospital Clande Bernard, Paris, France",
+       "institution_ids": [
+        "https://openalex.org/I4210112346"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Institute for Cancer Research, Fox Chase Cancer Center, Philadelphia, USA",
+       "institution_ids": [
+        "https://openalex.org/I1289437631"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5114002044",
+      "display_name": "Gerard Saimot",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I1289437631",
+       "display_name": "Fox Chase Cancer Center",
+       "ror": "https://ror.org/0567t7073",
+       "country_code": "US",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I1289437631",
+        "https://openalex.org/I4210122924"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I4210112346",
+       "display_name": "Institut de Médecine et d'Epidémiologie Africaines",
+       "ror": "https://ror.org/0228cyp78",
+       "country_code": "FR",
+       "type": "facility",
+       "lineage": [
+        "https://openalex.org/I4210112346"
+       ]
+      }
+     ],
+     "countries": [
+      "FR",
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Gerard Saimot",
+     "raw_affiliation_strings": [
+      "Institut de Medécine et d'Épidémiologie Africaines, Hospital Clande Bernard, Paris, France",
+      "Institute for Cancer Research, Fox Chase Cancer Center, Philadelphia, USA"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Institut de Medécine et d'Épidémiologie Africaines, Hospital Clande Bernard, Paris, France",
+       "institution_ids": [
+        "https://openalex.org/I4210112346"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Institute for Cancer Research, Fox Chase Cancer Center, Philadelphia, USA",
+       "institution_ids": [
+        "https://openalex.org/I1289437631"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5109054143",
+      "display_name": "Maurice Payet",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I1289437631",
+       "display_name": "Fox Chase Cancer Center",
+       "ror": "https://ror.org/0567t7073",
+       "country_code": "US",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I1289437631",
+        "https://openalex.org/I4210122924"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I4210112346",
+       "display_name": "Institut de Médecine et d'Epidémiologie Africaines",
+       "ror": "https://ror.org/0228cyp78",
+       "country_code": "FR",
+       "type": "facility",
+       "lineage": [
+        "https://openalex.org/I4210112346"
+       ]
+      }
+     ],
+     "countries": [
+      "FR",
+      "US"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Maurice Payet",
+     "raw_affiliation_strings": [
+      "Institut de Medécine et d'Épidémiologie Africaines, Hospital Clande Bernard, Paris, France",
+      "Institute for Cancer Research, Fox Chase Cancer Center, Philadelphia, USA"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Institut de Medécine et d'Épidémiologie Africaines, Hospital Clande Bernard, Paris, France",
+       "institution_ids": [
+        "https://openalex.org/I4210112346"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Institute for Cancer Research, Fox Chase Cancer Center, Philadelphia, USA",
+       "institution_ids": [
+        "https://openalex.org/I1289437631"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1142/9789812813688_0029",
+    "doi": "https://doi.org/10.1142/9789812813688_0029",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1142/9789812813688_0029",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S4210192706",
+     "display_name": "World Scientific series in 20th century biology",
+     "issn_l": "1793-0898",
+     "issn": [
+      "1793-0898"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": false,
+     "listed_in": [],
+     "host_organization": "https://openalex.org/P4310319815",
+     "host_organization_name": "World Scientific",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310319815"
+     ],
+     "host_organization_lineage_names": [
+      "World Scientific"
+     ],
+     "type": "book series"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "World Scientific Series in 20th Century Biology",
+    "raw_type": "book-chapter"
+   },
+   "referenced_works": [
+    "https://openalex.org/W1554122457",
+    "https://openalex.org/W1964298351",
+    "https://openalex.org/W1970378074",
+    "https://openalex.org/W1973278362",
+    "https://openalex.org/W1985386527",
+    "https://openalex.org/W1998061512",
+    "https://openalex.org/W2011592321",
+    "https://openalex.org/W2037050831",
+    "https://openalex.org/W2064036239",
+    "https://openalex.org/W2091280141",
+    "https://openalex.org/W2132047921",
+    "https://openalex.org/W2254387874",
+    "https://openalex.org/W2257495958",
+    "https://openalex.org/W2273970534",
+    "https://openalex.org/W2344688587",
+    "https://openalex.org/W2405676862",
+    "https://openalex.org/W2417614400",
+    "https://openalex.org/W2419416793",
+    "https://openalex.org/W2467222260"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W4226002143",
+   "doi": "https://doi.org/10.4236/ojped.2022.121022",
+   "display_name": "Completeness and Timeliness of Hepatitis B Vaccination in Preschool Children: Determinants for Good and Timely Uptake in Libreville, Gabon",
+   "publication_year": 2022,
+   "type": "article",
+   "cited_by_count": 1,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5025465000",
+      "display_name": "Steeve Minto’o",
+      "orcid": "https://orcid.org/0000-0002-9529-4915",
+      "observed_orcids": [
+       "https://orcid.org/0000-0002-9529-4915"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I2800102325",
+       "display_name": "Libreville Hospital",
+       "ror": "https://ror.org/03w418j08",
+       "country_code": "GA",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I2800102325"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I4210106126",
+       "display_name": "Université des Sciences de la Santé",
+       "ror": "https://ror.org/00yk3tm64",
+       "country_code": "GA",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I4210106126"
+       ]
+      }
+     ],
+     "countries": [
+      "GA"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Steeve Minto’o",
+     "raw_affiliation_strings": [
+      "Département de Pédatrie, Centre Hospitalier Universitaire de Libreville, Libreville, Gabon",
+      "Département de Pédiatrie, Faculté de Medecine, Université des Sciences de la Santé, Libreviile, Gabon"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Département de Pédatrie, Centre Hospitalier Universitaire de Libreville, Libreville, Gabon",
+       "institution_ids": [
+        "https://openalex.org/I2800102325"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Département de Pédiatrie, Faculté de Medecine, Université des Sciences de la Santé, Libreviile, Gabon",
+       "institution_ids": [
+        "https://openalex.org/I4210106126"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5003032752",
+      "display_name": "Emery Itoudi Bignoumba",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I2800102325",
+       "display_name": "Libreville Hospital",
+       "ror": "https://ror.org/03w418j08",
+       "country_code": "GA",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I2800102325"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I4210106126",
+       "display_name": "Université des Sciences de la Santé",
+       "ror": "https://ror.org/00yk3tm64",
+       "country_code": "GA",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I4210106126"
+       ]
+      }
+     ],
+     "countries": [
+      "GA"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Emery Itoudi Bignoumba",
+     "raw_affiliation_strings": [
+      "Département d'Hépato-gastroentérologie, Centre Hospitalier Universitaire de Libreville, Libreville, Gabon",
+      "Département d'Hépato-gastroentérologie, Faculté de Médecine, Université des Sciences de la Santé, Libreville, Gabon"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Département d'Hépato-gastroentérologie, Centre Hospitalier Universitaire de Libreville, Libreville, Gabon",
+       "institution_ids": [
+        "https://openalex.org/I2800102325"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Département d'Hépato-gastroentérologie, Faculté de Médecine, Université des Sciences de la Santé, Libreville, Gabon",
+       "institution_ids": [
+        "https://openalex.org/I4210106126"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5000227685",
+      "display_name": "Fifi Claire Loembe",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I2800102325",
+       "display_name": "Libreville Hospital",
+       "ror": "https://ror.org/03w418j08",
+       "country_code": "GA",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I2800102325"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I4210106126",
+       "display_name": "Université des Sciences de la Santé",
+       "ror": "https://ror.org/00yk3tm64",
+       "country_code": "GA",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I4210106126"
+       ]
+      }
+     ],
+     "countries": [
+      "GA"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Fifi Loembe",
+     "raw_affiliation_strings": [
+      "Département de Pédatrie, Centre Hospitalier Universitaire de Libreville, Libreville, Gabon",
+      "Département de Pédiatrie, Faculté de Medecine, Université des Sciences de la Santé, Libreviile, Gabon"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Département de Pédatrie, Centre Hospitalier Universitaire de Libreville, Libreville, Gabon",
+       "institution_ids": [
+        "https://openalex.org/I2800102325"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Département de Pédiatrie, Faculté de Medecine, Université des Sciences de la Santé, Libreviile, Gabon",
+       "institution_ids": [
+        "https://openalex.org/I4210106126"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5004579607",
+      "display_name": "Angéla Mekame",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I2800102325",
+       "display_name": "Libreville Hospital",
+       "ror": "https://ror.org/03w418j08",
+       "country_code": "GA",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I2800102325"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I4210106126",
+       "display_name": "Université des Sciences de la Santé",
+       "ror": "https://ror.org/00yk3tm64",
+       "country_code": "GA",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I4210106126"
+       ]
+      }
+     ],
+     "countries": [
+      "GA"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Angela Mekame",
+     "raw_affiliation_strings": [
+      "Département de Pédatrie, Centre Hospitalier Universitaire de Libreville, Libreville, Gabon",
+      "Département de Pédiatrie, Faculté de Medecine, Université des Sciences de la Santé, Libreviile, Gabon"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Département de Pédatrie, Centre Hospitalier Universitaire de Libreville, Libreville, Gabon",
+       "institution_ids": [
+        "https://openalex.org/I2800102325"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Département de Pédiatrie, Faculté de Medecine, Université des Sciences de la Santé, Libreviile, Gabon",
+       "institution_ids": [
+        "https://openalex.org/I4210106126"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5077580161",
+      "display_name": "Leatitia Abang Ekouaghe",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I2800102325",
+       "display_name": "Libreville Hospital",
+       "ror": "https://ror.org/03w418j08",
+       "country_code": "GA",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I2800102325"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I4210106126",
+       "display_name": "Université des Sciences de la Santé",
+       "ror": "https://ror.org/00yk3tm64",
+       "country_code": "GA",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I4210106126"
+       ]
+      }
+     ],
+     "countries": [
+      "GA"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Leatitia Abang",
+     "raw_affiliation_strings": [
+      "Département de Pédatrie, Centre Hospitalier Universitaire de Libreville, Libreville, Gabon",
+      "Département de Pédiatrie, Faculté de Medecine, Université des Sciences de la Santé, Libreviile, Gabon"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Département de Pédatrie, Centre Hospitalier Universitaire de Libreville, Libreville, Gabon",
+       "institution_ids": [
+        "https://openalex.org/I2800102325"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Département de Pédiatrie, Faculté de Medecine, Université des Sciences de la Santé, Libreviile, Gabon",
+       "institution_ids": [
+        "https://openalex.org/I4210106126"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5001234362",
+      "display_name": "Diane Zoua",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I2800102325",
+       "display_name": "Libreville Hospital",
+       "ror": "https://ror.org/03w418j08",
+       "country_code": "GA",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I2800102325"
+       ]
+      }
+     ],
+     "countries": [
+      "GA"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Diane Zoua",
+     "raw_affiliation_strings": [
+      "Département de Pédatrie, Centre Hospitalier Universitaire de Libreville, Libreville, Gabon"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Département de Pédatrie, Centre Hospitalier Universitaire de Libreville, Libreville, Gabon",
+       "institution_ids": [
+        "https://openalex.org/I2800102325"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5110024951",
+      "display_name": "S. Ategbo",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4210106126",
+       "display_name": "Université des Sciences de la Santé",
+       "ror": "https://ror.org/00yk3tm64",
+       "country_code": "GA",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I4210106126"
+       ]
+      }
+     ],
+     "countries": [
+      "GA"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Simon Ategbo",
+     "raw_affiliation_strings": [
+      "Département de Pédiatrie, Faculté de Medecine, Université des Sciences de la Santé, Libreviile, Gabon"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Département de Pédiatrie, Faculté de Medecine, Université des Sciences de la Santé, Libreviile, Gabon",
+       "institution_ids": [
+        "https://openalex.org/I4210106126"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.4236/ojped.2022.121022",
+    "doi": "https://doi.org/10.4236/ojped.2022.121022",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.4236/ojped.2022.121022",
+    "pdf_url": "https://content.scirp.org/pdf/ojped_2022031814591185.pdf",
+    "source": {
+     "id": "https://openalex.org/S2765016557",
+     "display_name": "Open Journal of Pediatrics",
+     "issn_l": "2160-8741",
+     "issn": [
+      "2160-8741",
+      "2160-8776"
+     ],
+     "is_oa": true,
+     "is_in_doaj": false,
+     "is_core": false,
+     "listed_in": [
+      "anvur-scientific"
+     ],
+     "host_organization": "https://openalex.org/P4310320480",
+     "host_organization_name": "Scientific Research Publishing",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320480"
+     ],
+     "host_organization_lineage_names": [
+      "Scientific Research Publishing"
+     ],
+     "type": "journal"
+    },
+    "license": "cc-by",
+    "license_id": "https://openalex.org/licenses/cc-by",
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Open Journal of Pediatrics",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W1971172942",
+    "https://openalex.org/W2592090433",
+    "https://openalex.org/W2723485583",
+    "https://openalex.org/W2768469124",
+    "https://openalex.org/W2809130219",
+    "https://openalex.org/W2886506620",
+    "https://openalex.org/W2888080089",
+    "https://openalex.org/W2944779193",
+    "https://openalex.org/W2989806355"
+   ]
+  },
+  {
+   "id": "https://openalex.org/W7163756956",
+   "doi": "https://doi.org/10.30574/gscbps.2026.35.3.0204",
+   "display_name": "Evaluation of vaccination status and immune response against Hepatitis B Virus in chronic hemodialysis patients in Marrakech",
+   "publication_year": 2026,
+   "type": "article",
+   "cited_by_count": 0,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5138056410",
+      "display_name": "Bentabet J.",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I119856527",
+       "display_name": "Cadi Ayyad University",
+       "ror": "https://ror.org/04xf6nm78",
+       "country_code": "MA",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I119856527"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I4210091090",
+       "display_name": "Centre Hospitalier Universitaire Mohammed VI",
+       "ror": "https://ror.org/009nscf91",
+       "country_code": "MA",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I4210091090"
+       ]
+      }
+     ],
+     "countries": [
+      "MA"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Bentabet J.",
+     "raw_affiliation_strings": [
+      "Department of Nephrology, Hemodialysis, and Renal Transplantation , Mohamed VI University Hospital , Faculty of Medicine and Pharmacy of Marrakech , Cadi Ayyad University , Marrakech , Morocco"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Nephrology, Hemodialysis, and Renal Transplantation , Mohamed VI University Hospital , Faculty of Medicine and Pharmacy of Marrakech , Cadi Ayyad University , Marrakech , Morocco",
+       "institution_ids": [
+        "https://openalex.org/I119856527",
+        "https://openalex.org/I4210091090"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5133235074",
+      "display_name": "C. Congera",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I119856527",
+       "display_name": "Cadi Ayyad University",
+       "ror": "https://ror.org/04xf6nm78",
+       "country_code": "MA",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I119856527"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I4210091090",
+       "display_name": "Centre Hospitalier Universitaire Mohammed VI",
+       "ror": "https://ror.org/009nscf91",
+       "country_code": "MA",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I4210091090"
+       ]
+      }
+     ],
+     "countries": [
+      "MA"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Congera C.",
+     "raw_affiliation_strings": [
+      "Department of Nephrology, Hemodialysis, and Renal Transplantation , Mohamed VI University Hospital , Faculty of Medicine and Pharmacy of Marrakech , Cadi Ayyad University , Marrakech , Morocco"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Nephrology, Hemodialysis, and Renal Transplantation , Mohamed VI University Hospital , Faculty of Medicine and Pharmacy of Marrakech , Cadi Ayyad University , Marrakech , Morocco",
+       "institution_ids": [
+        "https://openalex.org/I119856527",
+        "https://openalex.org/I4210091090"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5138033121",
+      "display_name": "Hamouche N.",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I119856527",
+       "display_name": "Cadi Ayyad University",
+       "ror": "https://ror.org/04xf6nm78",
+       "country_code": "MA",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I119856527"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I4210091090",
+       "display_name": "Centre Hospitalier Universitaire Mohammed VI",
+       "ror": "https://ror.org/009nscf91",
+       "country_code": "MA",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I4210091090"
+       ]
+      }
+     ],
+     "countries": [
+      "MA"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Hamouche N.",
+     "raw_affiliation_strings": [
+      "Department of Nephrology, Hemodialysis, and Renal Transplantation , Mohamed VI University Hospital , Faculty of Medicine and Pharmacy of Marrakech , Cadi Ayyad University , Marrakech , Morocco"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Nephrology, Hemodialysis, and Renal Transplantation , Mohamed VI University Hospital , Faculty of Medicine and Pharmacy of Marrakech , Cadi Ayyad University , Marrakech , Morocco",
+       "institution_ids": [
+        "https://openalex.org/I119856527",
+        "https://openalex.org/I4210091090"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5138038499",
+      "display_name": "Chattati M.",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I119856527",
+       "display_name": "Cadi Ayyad University",
+       "ror": "https://ror.org/04xf6nm78",
+       "country_code": "MA",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I119856527"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I4210091090",
+       "display_name": "Centre Hospitalier Universitaire Mohammed VI",
+       "ror": "https://ror.org/009nscf91",
+       "country_code": "MA",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I4210091090"
+       ]
+      }
+     ],
+     "countries": [
+      "MA"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Chattati M.",
+     "raw_affiliation_strings": [
+      "Department of Nephrology, Hemodialysis, and Renal Transplantation , Mohamed VI University Hospital , Faculty of Medicine and Pharmacy of Marrakech , Cadi Ayyad University , Marrakech , Morocco"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Nephrology, Hemodialysis, and Renal Transplantation , Mohamed VI University Hospital , Faculty of Medicine and Pharmacy of Marrakech , Cadi Ayyad University , Marrakech , Morocco",
+       "institution_ids": [
+        "https://openalex.org/I119856527",
+        "https://openalex.org/I4210091090"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": "https://openalex.org/A5138044801",
+      "display_name": "Fadili W.",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I119856527",
+       "display_name": "Cadi Ayyad University",
+       "ror": "https://ror.org/04xf6nm78",
+       "country_code": "MA",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I119856527"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I4210091090",
+       "display_name": "Centre Hospitalier Universitaire Mohammed VI",
+       "ror": "https://ror.org/009nscf91",
+       "country_code": "MA",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I4210091090"
+       ]
+      }
+     ],
+     "countries": [
+      "MA"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Fadili W.",
+     "raw_affiliation_strings": [
+      "Department of Nephrology, Hemodialysis, and Renal Transplantation , Mohamed VI University Hospital , Faculty of Medicine and Pharmacy of Marrakech , Cadi Ayyad University , Marrakech , Morocco"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Nephrology, Hemodialysis, and Renal Transplantation , Mohamed VI University Hospital , Faculty of Medicine and Pharmacy of Marrakech , Cadi Ayyad University , Marrakech , Morocco",
+       "institution_ids": [
+        "https://openalex.org/I119856527",
+        "https://openalex.org/I4210091090"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5091872250",
+      "display_name": "I. Laouad",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I119856527",
+       "display_name": "Cadi Ayyad University",
+       "ror": "https://ror.org/04xf6nm78",
+       "country_code": "MA",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I119856527"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I4210091090",
+       "display_name": "Centre Hospitalier Universitaire Mohammed VI",
+       "ror": "https://ror.org/009nscf91",
+       "country_code": "MA",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I4210091090"
+       ]
+      }
+     ],
+     "countries": [
+      "MA"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Laouad I.",
+     "raw_affiliation_strings": [
+      "Department of Nephrology, Hemodialysis, and Renal Transplantation , Mohamed VI University Hospital , Faculty of Medicine and Pharmacy of Marrakech , Cadi Ayyad University , Marrakech , Morocco"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Nephrology, Hemodialysis, and Renal Transplantation , Mohamed VI University Hospital , Faculty of Medicine and Pharmacy of Marrakech , Cadi Ayyad University , Marrakech , Morocco",
+       "institution_ids": [
+        "https://openalex.org/I119856527",
+        "https://openalex.org/I4210091090"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.30574/gscbps.2026.35.3.0204",
+    "doi": "https://doi.org/10.30574/gscbps.2026.35.3.0204",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.30574/gscbps.2026.35.3.0204",
+    "pdf_url": "https://gscbps.gsconlinepress.com/sites/default/files/fulltext_pdf/GSCBPS-2026-0204.pdf",
+    "source": {
+     "id": "https://openalex.org/S4210211081",
+     "display_name": "GSC Biological and Pharmaceutical Sciences",
+     "issn_l": "2581-3250",
+     "issn": [
+      "2581-3250"
+     ],
+     "is_oa": true,
+     "is_in_doaj": false,
+     "is_core": false,
+     "listed_in": [],
+     "host_organization": "https://openalex.org/P4383735917",
+     "host_organization_name": "GSC Online Press",
+     "host_organization_lineage": [
+      "https://openalex.org/P4383735917"
+     ],
+     "host_organization_lineage_names": [
+      "GSC Online Press"
+     ],
+     "type": "journal"
+    },
+    "license": "cc-by",
+    "license_id": "https://openalex.org/licenses/cc-by",
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "GSC Biological and Pharmaceutical Sciences",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": []
+  },
+  {
+   "id": "https://openalex.org/W7114766517",
+   "doi": "https://doi.org/10.4236/ojgas.2025.1512069",
+   "display_name": "Vaccine Response against Hepatitis B Virus in Patients with Chronic Kidney Failure Not on Dialysis and Factors Associated with Poor Response",
+   "publication_year": 2025,
+   "type": "article",
+   "cited_by_count": 0,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": null,
+      "display_name": "Mauria Gilga Ibobi",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4210114857",
+       "display_name": "Centre Hospitalier et Universitaire de Brazzaville",
+       "ror": "https://ror.org/025sdjb25",
+       "country_code": "CG",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I4210114857"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I7435137",
+       "display_name": "Marien Ngouabi University",
+       "ror": "https://ror.org/00tt5kf04",
+       "country_code": "CG",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I7435137"
+       ]
+      }
+     ],
+     "countries": [
+      "CG"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Mauria Gilga Ibobi",
+     "raw_affiliation_strings": [
+      "Brazzaville University Hospital Center , Brazzaville , Republic of the Congo",
+      "Faculty of Health Sciences , Marien Ngouabi University , Brazzaville , Republic of the Congo"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Brazzaville University Hospital Center , Brazzaville , Republic of the Congo",
+       "institution_ids": [
+        "https://openalex.org/I4210114857"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Faculty of Health Sciences , Marien Ngouabi University , Brazzaville , Republic of the Congo",
+       "institution_ids": [
+        "https://openalex.org/I7435137"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": null,
+      "display_name": "Jile Florient Mimiesse",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4210114857",
+       "display_name": "Centre Hospitalier et Universitaire de Brazzaville",
+       "ror": "https://ror.org/025sdjb25",
+       "country_code": "CG",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I4210114857"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I7435137",
+       "display_name": "Marien Ngouabi University",
+       "ror": "https://ror.org/00tt5kf04",
+       "country_code": "CG",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I7435137"
+       ]
+      }
+     ],
+     "countries": [
+      "CG"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Jile Florient Mimiesse",
+     "raw_affiliation_strings": [
+      "Brazzaville University Hospital Center , Brazzaville , Republic of the Congo",
+      "Faculty of Health Sciences , Marien Ngouabi University , Brazzaville , Republic of the Congo"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Brazzaville University Hospital Center , Brazzaville , Republic of the Congo",
+       "institution_ids": [
+        "https://openalex.org/I4210114857"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Faculty of Health Sciences , Marien Ngouabi University , Brazzaville , Republic of the Congo",
+       "institution_ids": [
+        "https://openalex.org/I7435137"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": null,
+      "display_name": "Gaël Honal Mahoungou",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4210114857",
+       "display_name": "Centre Hospitalier et Universitaire de Brazzaville",
+       "ror": "https://ror.org/025sdjb25",
+       "country_code": "CG",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I4210114857"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I7435137",
+       "display_name": "Marien Ngouabi University",
+       "ror": "https://ror.org/00tt5kf04",
+       "country_code": "CG",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I7435137"
+       ]
+      }
+     ],
+     "countries": [
+      "CG"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Gaël Honal Mahoungou",
+     "raw_affiliation_strings": [
+      "Brazzaville University Hospital Center , Brazzaville , Republic of the Congo",
+      "Faculty of Health Sciences , Marien Ngouabi University , Brazzaville , Republic of the Congo"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Brazzaville University Hospital Center , Brazzaville , Republic of the Congo",
+       "institution_ids": [
+        "https://openalex.org/I4210114857"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Faculty of Health Sciences , Marien Ngouabi University , Brazzaville , Republic of the Congo",
+       "institution_ids": [
+        "https://openalex.org/I7435137"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": null,
+      "display_name": "Jhonsial Joseph Molami Bovane",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4210114857",
+       "display_name": "Centre Hospitalier et Universitaire de Brazzaville",
+       "ror": "https://ror.org/025sdjb25",
+       "country_code": "CG",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I4210114857"
+       ]
+      }
+     ],
+     "countries": [
+      "CG"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Jhonsial Joseph Molami Bovane",
+     "raw_affiliation_strings": [
+      "Brazzaville University Hospital Center , Brazzaville , Republic of the Congo"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Brazzaville University Hospital Center , Brazzaville , Republic of the Congo",
+       "institution_ids": [
+        "https://openalex.org/I4210114857"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": null,
+      "display_name": "Bénedicte Niotsebe Ahombo",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4210114857",
+       "display_name": "Centre Hospitalier et Universitaire de Brazzaville",
+       "ror": "https://ror.org/025sdjb25",
+       "country_code": "CG",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I4210114857"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I7435137",
+       "display_name": "Marien Ngouabi University",
+       "ror": "https://ror.org/00tt5kf04",
+       "country_code": "CG",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I7435137"
+       ]
+      }
+     ],
+     "countries": [
+      "CG"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Bénedicte Niotsebe Ahombo",
+     "raw_affiliation_strings": [
+      "Brazzaville University Hospital Center , Brazzaville , Republic of the Congo",
+      "Faculty of Health Sciences , Marien Ngouabi University , Brazzaville , Republic of the Congo"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Brazzaville University Hospital Center , Brazzaville , Republic of the Congo",
+       "institution_ids": [
+        "https://openalex.org/I4210114857"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Faculty of Health Sciences , Marien Ngouabi University , Brazzaville , Republic of the Congo",
+       "institution_ids": [
+        "https://openalex.org/I7435137"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": null,
+      "display_name": "Bienvenu Hostaud Atipo Ibara",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Bienvenu Hostaud Atipo Ibara",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": null,
+      "display_name": "Mardoché Pérès Motoula",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4210114857",
+       "display_name": "Centre Hospitalier et Universitaire de Brazzaville",
+       "ror": "https://ror.org/025sdjb25",
+       "country_code": "CG",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I4210114857"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I7435137",
+       "display_name": "Marien Ngouabi University",
+       "ror": "https://ror.org/00tt5kf04",
+       "country_code": "CG",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I7435137"
+       ]
+      }
+     ],
+     "countries": [
+      "CG"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Mardoché Pérès Motoula",
+     "raw_affiliation_strings": [
+      "Brazzaville University Hospital Center , Brazzaville , Republic of the Congo",
+      "Faculty of Health Sciences , Marien Ngouabi University , Brazzaville , Republic of the Congo"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Brazzaville University Hospital Center , Brazzaville , Republic of the Congo",
+       "institution_ids": [
+        "https://openalex.org/I4210114857"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Faculty of Health Sciences , Marien Ngouabi University , Brazzaville , Republic of the Congo",
+       "institution_ids": [
+        "https://openalex.org/I7435137"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": null,
+      "display_name": "Marlyse Ngalessami Mouakosso",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4210114857",
+       "display_name": "Centre Hospitalier et Universitaire de Brazzaville",
+       "ror": "https://ror.org/025sdjb25",
+       "country_code": "CG",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I4210114857"
+       ]
+      }
+     ],
+     "countries": [
+      "CG"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Marlyse Ngalessami Mouakosso",
+     "raw_affiliation_strings": [
+      "Brazzaville University Hospital Center , Brazzaville , Republic of the Congo"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Brazzaville University Hospital Center , Brazzaville , Republic of the Congo",
+       "institution_ids": [
+        "https://openalex.org/I4210114857"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": null,
+      "display_name": "Arnaud Mongo-Onkouo",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4210114857",
+       "display_name": "Centre Hospitalier et Universitaire de Brazzaville",
+       "ror": "https://ror.org/025sdjb25",
+       "country_code": "CG",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I4210114857"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I7435137",
+       "display_name": "Marien Ngouabi University",
+       "ror": "https://ror.org/00tt5kf04",
+       "country_code": "CG",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I7435137"
+       ]
+      }
+     ],
+     "countries": [
+      "CG"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Arnaud Mongo-Onkouo",
+     "raw_affiliation_strings": [
+      "Brazzaville University Hospital Center , Brazzaville , Republic of the Congo",
+      "Faculty of Health Sciences , Marien Ngouabi University , Brazzaville , Republic of the Congo"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Brazzaville University Hospital Center , Brazzaville , Republic of the Congo",
+       "institution_ids": [
+        "https://openalex.org/I4210114857"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Faculty of Health Sciences , Marien Ngouabi University , Brazzaville , Republic of the Congo",
+       "institution_ids": [
+        "https://openalex.org/I7435137"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": null,
+      "display_name": "Ngala Itoua Ngaporo",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4210114857",
+       "display_name": "Centre Hospitalier et Universitaire de Brazzaville",
+       "ror": "https://ror.org/025sdjb25",
+       "country_code": "CG",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I4210114857"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I7435137",
+       "display_name": "Marien Ngouabi University",
+       "ror": "https://ror.org/00tt5kf04",
+       "country_code": "CG",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I7435137"
+       ]
+      }
+     ],
+     "countries": [
+      "CG"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Ngala Itoua Ngaporo",
+     "raw_affiliation_strings": [
+      "Brazzaville University Hospital Center , Brazzaville , Republic of the Congo",
+      "Faculty of Health Sciences , Marien Ngouabi University , Brazzaville , Republic of the Congo"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Brazzaville University Hospital Center , Brazzaville , Republic of the Congo",
+       "institution_ids": [
+        "https://openalex.org/I4210114857"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Faculty of Health Sciences , Marien Ngouabi University , Brazzaville , Republic of the Congo",
+       "institution_ids": [
+        "https://openalex.org/I7435137"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": null,
+      "display_name": "Rody Stéphane Ngami",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I4210114857",
+       "display_name": "Centre Hospitalier et Universitaire de Brazzaville",
+       "ror": "https://ror.org/025sdjb25",
+       "country_code": "CG",
+       "type": "healthcare",
+       "lineage": [
+        "https://openalex.org/I4210114857"
+       ]
+      },
+      {
+       "id": "https://openalex.org/I7435137",
+       "display_name": "Marien Ngouabi University",
+       "ror": "https://ror.org/00tt5kf04",
+       "country_code": "CG",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I7435137"
+       ]
+      }
+     ],
+     "countries": [
+      "CG"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Rody Stéphane Ngami",
+     "raw_affiliation_strings": [
+      "Brazzaville University Hospital Center , Brazzaville , Republic of the Congo",
+      "Faculty of Health Sciences , Marien Ngouabi University , Brazzaville , Republic of the Congo"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Brazzaville University Hospital Center , Brazzaville , Republic of the Congo",
+       "institution_ids": [
+        "https://openalex.org/I4210114857"
+       ]
+      },
+      {
+       "raw_affiliation_string": "Faculty of Health Sciences , Marien Ngouabi University , Brazzaville , Republic of the Congo",
+       "institution_ids": [
+        "https://openalex.org/I7435137"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "middle",
+     "author": {
+      "id": null,
+      "display_name": "Clausina Mikolélé Ahoui Apendi",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Clausina Mikolélé Ahoui Apendi",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": null,
+      "display_name": "Blaise Irénée Atipo Ibara",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Blaise Irénée Atipo Ibara",
+     "raw_affiliation_strings": [],
+     "raw_orcid": null,
+     "affiliations": []
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.4236/ojgas.2025.1512069",
+    "doi": "https://doi.org/10.4236/ojgas.2025.1512069",
+    "is_oa": true,
+    "landing_page_url": "https://doi.org/10.4236/ojgas.2025.1512069",
+    "pdf_url": "https://www.scirp.org/pdf/ojgas_1901051.pdf",
+    "source": {
+     "id": "https://openalex.org/S2764965309",
+     "display_name": "Open Journal of Gastroenterology",
+     "issn_l": "2163-9450",
+     "issn": [
+      "2163-9450",
+      "2163-9469"
+     ],
+     "is_oa": true,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "cwts-core"
+     ],
+     "host_organization": "https://openalex.org/P4310320480",
+     "host_organization_name": "Scientific Research Publishing",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320480"
+     ],
+     "host_organization_lineage_names": [
+      "Scientific Research Publishing"
+     ],
+     "type": "journal"
+    },
+    "license": "cc-by",
+    "license_id": "https://openalex.org/licenses/cc-by",
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Open Journal of Gastroenterology",
+    "raw_type": "journal-article"
+   },
+   "referenced_works": [
+    "https://openalex.org/W1974588115",
+    "https://openalex.org/W1977163003",
+    "https://openalex.org/W2021144037",
+    "https://openalex.org/W2134870535",
+    "https://openalex.org/W2741610933"
+   ]
+  }
+ ],
+ "group_by": []
+}

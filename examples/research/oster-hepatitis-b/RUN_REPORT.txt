@@ -1,0 +1,177 @@
+RUN_REPORT — Batch 1: Oster (2005) "Hepatitis B and the Case of the Missing Women", JPE 113(6):1163-1216, DOI 10.1086/498588
+=====================================================================================================
+
+Branch: audit/oster-hepatitis-b
+- Base: 6c651d7593abfb5c4b6d2eb9f6846a5212fe001c, as the brief requires.
+- origin/main moved to ce6ced3 during the run. The branch was neither rebased nor merged onto it.
+- Folder: examples/research/oster-hepatitis-b/ is the only path changed.
+- The commit SHA is reported in the hand-off message, because a file cannot contain the hash of the commit that contains it.
+
+Run date: 2026-11-05, America/Los_Angeles (PST = UTC-8). Times below are UTC (Z) and are taken from logs/worklog.jsonl.
+- Executor: Grok Bot, single agent, all stages.
+- Instruments: Provenance @ a58d165d9a986edca220f8143fc0c0d9316c8a13. All 5 preflights plus both checker identities were confirmed; see 00_run_metadata_and_preregistration.txt.
+
+STAGE COMPLETION
+----------------
+| Stage | Window (UTC) | Logged tool calls (coarse) | Status | Output |
+|---|---|---|---|---|
+| identity + setup | 10:10:56–10:12:13Z | 3 | DONE | 00 |
+| pre-registration | 10:12:13Z | 1 | LOCKED, sha256 6108cb513b798ac666e8136589625f888030372a70e9753d8fb3382788dbda88 | 00a |
+| target retrieval | 10:12:21–10:12:37Z | 2 | FULL-TEXT (published JPE) | SOURCES_MANIFEST.json |
+| 1 claim extraction | 10:12:37–10:17:29Z | 5 | COMPLETE | 01_claim_extraction.md |
+| replication | 10:14:07–10:17:49Z | 1 | NOT_ASSESSABLE (dataset HTTP 403) | replication/NOT_ASSESSABLE.txt |
+| 2a internal validity | 10:17:57–10:20:31Z | 2 | COMPLETE: grade E, INVALID (via external tests) | 02a_internal_validity.md |
+| 2b construct validity | 10:20:35–10:22:34Z | 2 | COMPLETE: field 6 DEFEATED on FORM (CV-1) | 02b_construct_validity.md |
+| 2c citation network v2-candidate.3 | 10:22:55–10:56:28Z | 3 (coarse; many more calls in practice) | COMPLETE; band WITHHELD | citation-network-v2cand3/ |
+| 3 counter-audit | 10:56:28–11:04:19Z, interrupted and resumed | 5 | COMPLETE; IV SUPPLIED AND CONSUMED | 03_counter_audit.md |
+| final + packaging | from 11:05:36Z | — | DONE | 05, manifest, this report |
+
+Field 6: HBV accounts for 47.24% (CI 13.5–71.5%) of Coale's 60.26M missing women (Table 11A). It rests on SR_HBV 1.54 (Table 9).
+
+Headline (exploratory; not established):
+- Field 6 is not supported. Its 1.54 input is contradicted by two large individual-level tests: Lin & Luoh 2008 (Taiwan) and Oster et al. 2008/2010 (China). The author withdrew the China conclusion.
+- Counter-audit E0, 22 rows: DEFEATED 1 (CV-3), NARROWED 2, RECHARACTERIZED 5, UNAFFECTED 13, NESTED 1.
+- Stage 3 category: F (Mixed).
+- No composite score.
+
+REPLICATION
+-----------
+NOT_ASSESSABLE in this run.
+- The JPE supplementary file 31452.dataset.zip is listed on the publisher page but returned HTTP 403 twice. The landing page and emilyoster.net/research also returned 403.
+- Dataverse and OpenAlex dataset searches found nothing for the target.
+- openICPSR 113279 is the Lin & Luoh data, not the target data, and returned 403.
+- No tables were reconstructed and no mirrors were used.
+- The data appear to exist; a human with authorized access could run it.
+
+2c — CITATION NETWORK (candidate rev. 3; NOT canonical)
+---------------------------------------------------------
+INSTRUMENT VERSION: 2-citation-network v2-candidate.3
+DIMENSION CLASS MAP: cn7-map-3
+
+Corpora:
+| Corpus | Size | Contexts inspected | Selection |
+|---|---|---|---|
+| RECEPTION-1 | 49 | 24/49 | top 50 citers by cited_by_count, 1 merged duplicate |
+| RECENT-1 | 6 (census) | 2/6 | citers since 2021-11-05 |
+| ADJUDICATION-1 | 46 | 2/46 | 5 locked title/abstract queries; screened on titles only, abstracts not used |
+
+- Known-item recall for ADJUDICATION-1 is 3/8.
+- 11 rows lie OUTSIDE all corpora.
+- UNKNOWN codes: relation-to-target 27 (ADJUDICATION-1 rows whose reference lists did not show the target); 0 in the other coded columns.
+
+Network measures:
+- Density: 134/2352 = 5.70% at work level (record level 135/2450).
+- I05 sample attrition: 3/12.
+
+Inference ledger: I01–I25.
+- SUPPORTED or SUPPORTED-WITHIN-SAMPLE: 20.
+- INSUFFICIENT: 2 (I05, I08).
+- NOT-ASSESSED: 3 (I21, I22, I23).
+
+Composition:
+- I15 ADJ-1 relevance: ADJACENT=18; BACKGROUND=4; DIRECT=17; UNRELATED=7 (TOTAL=46)
+- I16 ADJ-1 contribution: COMMENTARY=1; INDEPENDENT-DATA=31; METHOD=1; NONE=8; REVIEW=4; THEORY=1 (TOTAL=46)
+- I17 REC-1 relevance: ADJACENT=16; BACKGROUND=17; DIRECT=14; UNRELATED=2 (TOTAL=49)
+
+Dimensions:
+| Dimension | Disposition |
+|---|---|
+| Founding-cluster dominance | SCORED 0 |
+| Internal citation density | SCORED 0 |
+| Recent-paper dependence | SCORED 0 |
+| Claim mutation | SCORED 1 |
+| Adjacent-field neglect | SCORED 0 |
+| Lack of decisive tests | SCORED 0 |
+| Poor critique uptake | SCORED 0 |
+| Model non-updating | SCORED 0 |
+| Review-hub laundering | UNASSESSED |
+| Proxy mismatch | UNASSESSED |
+| Intervention-evidence ratchet | N/A |
+
+Score: verified risk 1/24 = 4.2% over 8 independent scored dimensions. Coverage 8/10.
+ARITHMETIC BAND POSITION: 0%–20% (healthy or low-risk network)
+RISK BAND: WITHHELD — coverage meets the provisional 70% gate only if four review items resolve (40% without them), and the healthy band is label-essential on review-hub laundering (UNASSESSED) and on density beyond a target-selected corpus.
+
+Checker runs (python3 -I, pinned, unedited):
+| Run | v1 checker | Gates checker | Change before the run |
+|---|---|---|---|
+| try1 | STRUCTURAL PASS; CONTENT FAIL (18 DIRECT_ADJUDICATION_FORM_FAIL) | PASS-WITH-REVIEW items=10 | first generation |
+| try2 | PASS-WITH-REVIEW items=2 | items=10 | the 3 Section E F2 rows filled with favored/weakened/revision, secondhand from JP-E2 and labelled "source text not read" |
+| try3 | PASS-WITH-REVIEW items=2 | items=10 | A10→A09 corrected as the DIRECT (L1) member |
+| try4 = final | PASS-WITH-REVIEW items=2 | items=10 | POST HOC labels added for N04, N45, N46, R03 |
+
+No ledger row was removed or recoded to clear a checker item.
+
+Final checker lines (verbatim):
+--- v1 checker (checker/v1_final.txt) ---
+STRUCTURAL_RESULT	PASS
+CONTENT_RESULT	PASS-WITH-REVIEW	items=2
+REVIEW_ITEM_1	SOURCE_LOCK_TRUTH — verify the lock predates citation inspection and the query/source list deterministically fixes the exemplars: SOURCE-LOCK DATABASE: OpenAlex works API (select omits abstract_inverted_index) | SOURCE-LOCK QUERY OR SOURCE LIST: filter=title.search:<terms>,to_publication_date:2005-06-30,type:article, sort=cited_by_count:desc, per-page=3; terms F1 "son preference", F2 "hepatitis B sex ratio", F3 "sex ratio at birth", F4 "missing women" | SOURCE-LOCK DATE CUTOFF: 2005-06-30 (publication on or before; JPE issue December 2005) | SOURCE-LOCK RANKING RULE: OpenAlex c
+REVIEW_ITEM_2	DIRECT_ADJUDICATION_SUBSTANCE — 9 source(s) classified DIRECTLY-ADJUDICATING; verify each classification and its actual result, favored explanation, weakened explanation, and required revision: line 290: | L1 | F2 HBV and offspring sex | X01 W2023743440 | LOCATED | DIRECTLY-ADJUDICATING | carrier families have more sons: carriers' offspring male-biased, as tabulated in the target (JP-E2; source text not read) | L1 | R2 (at small-sample level) | none for L1 from this source alone; superseded by larger tests (I13) | LOCKED (Section E query) | yes (target) | substantively engaged 
+PASS-WITH-REVIEW: 2 items	All deterministic checks passed; the listed substantive judgments remain for human review.
+  [REVIEW_ITEM lines truncated here at 600 chars; full text in checker/v1_final.txt]
+--- gates checker (checker/gates_final.txt) ---
+COVERAGE_DECLARED	8/10 applicable SCORED (80%)
+COVERAGE_AFTER_GATES	8/10 (80%)
+COVERAGE_IF_REVIEW_ITEMS_WITHDRAWN	4/10 (40%)	withdrawn: adjacent-field neglect, lack of decisive tests, poor critique uptake, recent-paper dependence
+PROVISIONAL_70_GATE	MET ONLY IF REVIEW ITEMS RESOLVE FOR THE SCORE	(engineering threshold, not validated)
+REVIEW_ITEM_1	CODED_FROM_METADATA — 77 rows carry a relevance or contribution code, or NOT-CITING, from METADATA-only access; confirm each record shows it: N01, N02, N06, N08, N09, N10, N14, N18, N19, N20, N21, N22, N23, N24, N26, N28, N30, N32, N39, N41, N42, N43, N44, N47, R02, R05, R06, A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11, A12, A13, A14, A15, A16, A17, A18, A19, A20, A21, A22, A23, A24, A25, A26, A27, A28, A29, A30, A31, A32, A33, A34, A35, A36, A37, A38, A39, A40, X01, X04, X05, X06, X07, X08, X09, X10, X11, X12
+REVIEW_ITEM_2	SEARCH_RECALL — ADJUDICATION-1: the locked search returned 3/8 known items; statements about the literature beyond the search are insufficient, and absences within it may be incomplete
+REVIEW_ITEM_3	SAMPLE_DECLARED_RANDOM — I05: confirm the inspected sample was drawn at random before inspection and that the statement is an estimate with its uncertainty
+REVIEW_ITEM_4	PARTIAL_BASIS — Recent-paper dependence is SCORED 0 while I08, which bears on it, did not pass Gate B; confirm the score is stated for what was assessed
+REVIEW_ITEM_5	BY_CONSTRUCTION_RISK — Recent-paper dependence uses I04 on a set selected on target citation; confirm it measures citation beyond the target
+REVIEW_ITEM_6	NAMED_ONLY_BASIS — Adjacent-field neglect is SCORED 0 on named works only (I19); confirm they are the population the dimension covers and that every located critique or rival test was traced
+REVIEW_ITEM_7	PARTIAL_BASIS — Lack of decisive tests is SCORED 0 while I23, which bears on it, did not pass Gate B; confirm the score is stated for what was assessed
+REVIEW_ITEM_8	DECISIVE_TEST_CLAIMED — Lack of decisive tests is SCORED 0 on I13, I14; confirm the named test is decisive, not one of several whose results conflict
+REVIEW_ITEM_9	PARTIAL_BASIS — Poor critique uptake is SCORED 0 while I21, which bears on it, did not pass Gate B; confirm the score is stated for what was assessed
+REVIEW_ITEM_10	NAMED_ONLY_BASIS — Poor critique uptake is SCORED 0 on named works only (I18); confirm they are the population the dimension covers and that every located critique or rival test was traced
+V2_GATES_RESULT	PASS-WITH-REVIEW	items=10
+
+INSTRUMENT PROBLEMS (for the instrument owner; nothing was edited)
+------------------------------------------------------------------
+1. Gates checker vs instrument on NOT-ASSESSED.
+   - The gates checker recomputes the NOT-ASSESSED inferences I21–I23 as INSUFFICIENT (INFO level).
+   - Instrument lines about 1432–1441 permit NOT-ASSESSED for NAMED inferences that were not attempted.
+   - The declared values were kept. The checker and instrument vocabularies disagree.
+2. v1 checker vs unread sources.
+   - The v1 checker requires explanation favored / weakened / revision for every DIRECTLY-ADJUDICATING row (instrument table near line 1016), including rows whose source text was not read.
+   - This forced secondhand entries, which are labelled. The instrument has no "result not read" form for that table.
+3. POST HOC anchoring.
+   - Instrument lines 585/594 and 936–937 say a POST HOC source "may not independently anchor".
+   - I13, the basis of "Lack of decisive tests" SCORED 0, includes POST HOC N45 and R03.
+   - Reading taken: the inference is anchored by N31 (locked) and the POST HOC members corroborate it.
+   - The checker has no rule for this; it needs a human ruling.
+4. v1 placeholder screen.
+   - The screen attributes about 5,310 words to the PRE-AUDIT section, counting across sections. Cosmetic.
+5. RECENT window wording.
+   - The instrument does not say whether the 5-year RECENT window is measured from the run date or from the latest citer.
+   - The run date was used (from 2021-11-05).
+6. Recent-paper dependence.
+   - The gates checker flags I04 as BY_CONSTRUCTION_RISK, because the set is selected on target citation.
+   - The instrument has no recent-corpus rule that avoids this.
+
+DEVIATIONS
+----------
+- Pre-registration time: the 00a header says "about 02:20 PST", but the actual write/hash time was 02:12:13 PST (10:12:13Z), before target retrieval at 10:12:21Z. The file was not edited.
+- OpenAlex: about 19 HTTP 429 responses, about 9 of them on Section E query F1. All queries were retried to 200 after the source lock (10:29:05Z). F1 succeeded at 10:35:51Z.
+- OpenAlex target lookup: the first request used a mistyped DOI (10.1086/497505). The correction is logged.
+- Section E: one PST time label was corrected during 2c drafting, before the checker runs.
+- Replication file: the working file replication/NOT_RUN.txt was renamed at packaging to NOT_ASSESSABLE.txt on the parent's instruction. 02a still refers to "NOT_RUN" and was not rewritten, by instruction.
+- Worklog tool-call counts are coarse. They undercount actual calls, especially in 2c.
+- retrieval_log.jsonl has one malformed line: stage2a, status 000 (a no-response fetch of the author's successor paper). It was left as written.
+- I05 random sample: only 3/12 passages were inspectable, so I05 is INSUFFICIENT.
+- Interrupt: the executor was interrupted during Stage 3 and resumed. No completed stage was restarted.
+- origin/main moved from 6c651d7 to ce6ced3 during the run. The branch is kept on 6c651d7, per instruction.
+- VoxEU: the local curl copy was a 403 block page. Stage 3 re-fetched the column with WebFetch (HTTP 200, logged).
+- Stage 3 restates 2c Finding 1 ("three large individual-level tests") as two large tests plus one small consistent study (R03, n=380 with 40 carriers). 02c was not edited after its final checker run.
+- Version substitutes: Lin & Luoh 2008 and Oster et al. 2010 were read as working papers (VERSION-SUBSTITUTE).
+
+RIGHTS CONFIRMATION (checked on the folder before commit)
+---------------------------------------------------------
+- No PDF, HTML, XML, ZIP, full-text layer, excerpt file or dataset is in the folder. /workspace/oster/ft/ and the 2c s2/ responses are not committed.
+- No committed OpenAlex response or other data file (raw/*.json, ledger, logs) contains the key "abstract_inverted_index". The string appears only in prose, checker output and fetch scripts that describe select= lists omitting it.
+- All JSON was walked recursively: no key containing "abstract" has a non-null value.
+- Quotes from sources are under 25 words. Long quote-mark spans flagged by the scan are table cells or restatements, not source quotations.
+- No zip was created or uploaded. /workspace/acemoglu-v2cand-artifacts.zip was not touched.
+- No prompt, checker or baseline was edited. Atlas import, maplink and challenge were not run.
+- git status showed changes only under examples/research/oster-hepatitis-b/.

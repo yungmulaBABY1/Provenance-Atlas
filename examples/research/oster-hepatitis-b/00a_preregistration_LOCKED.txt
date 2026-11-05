@@ -1,0 +1,105 @@
+PRE-REGISTERED EXPECTATIONS — WRITTEN BEFORE READING THE TARGET'S BODY TEXT OR STAGE 1
+Target: Emily Oster (2005), "Hepatitis B and the Case of the Missing Women", Journal of
+Political Economy 113(6): 1163-1216. DOI 10.1086/498588.
+Written: 2026-11-05, about 02:20 PST (10:20 UTC), by the runner (Grok Bot executor), before
+Stage 1, before any retrieval of the target, and before any web search about the target.
+
+EXPOSURE (disclosed, not hidden)
+- No file, abstract, search snippet or web page about the target, its critiques or replies has
+  been retrieved or seen in this session or in earlier sessions of this runner. The pinned
+  instruments were read for their structure (TOOL-004 preflight text; the cn7-map-3 dimension
+  list), which says nothing about the target.
+- The runner has substantial prior (training-data) exposure to the paper and the debate: the
+  headline "hepatitis B accounts for about 45% of missing women; about 75% in China, less in
+  India"; the use of studies of HBV-carrier parents and offspring sex ratios; the vaccination
+  "natural experiments" (Alaska, Taiwan, China); Monica Das Gupta's critique (parity / birth-order
+  pattern); Lin & Luoh's Taiwan birth-registry test; and Oster's later co-authored paper with
+  Chinese data concluding hepatitis B does NOT explain the male-biased sex ratios. Details
+  (exact numbers, tables, venues) are recalled with uncertainty and may be wrong.
+- Independence from prior knowledge is NOT established. The expectations below are shaped by
+  knowing how the debate ended.
+
+EXPECTATIONS
+E1 Field 6 (quantified central claim) will be the share of "missing women" explained by
+   hepatitis B carriage: about 45% overall, about 75% in China, and a much smaller share
+   (roughly 20% or less) in India; built from an offspring sex ratio near 1.5 boys per girl
+   for HBV-carrier parents applied to country carrier prevalence.
+E2 Internal validity: the central link (carrier status -> offspring sex ratio) rests on a few
+   small, old, non-representative samples, with possible confounding by parental
+   characteristics; the vaccination natural experiments are vulnerable to concurrent trends
+   (fertility decline, sex-selection technology) and small populations. I expect the 2a
+   prosecution to find the causal attribution at the population scale weakly identified and to
+   flag the calibration step (applying an effect size from small studies to whole
+   populations) as the main threat. Expected overall: SERIOUS / major concerns, not "fatal" from
+   the paper alone.
+E3 Construct validity: "missing women" (an excess-male sex ratio relative to a benchmark) is
+   being re-attributed from discrimination to biology; I expect the benchmark sex ratio
+   construct and the "carrier" measurement (HBsAg prevalence from heterogeneous surveys) to be
+   the main construct concerns, with mother vs father carrier status a key ambiguity.
+E4 Replication: I expect NO authors' posted data for the 2005 JPE paper to be found (it predates
+   routine JPE data posting); replication/NOT_ASSESSABLE.txt is the most likely outcome. A
+   public data package for a later critique may exist but not reproduce field 6.
+E5 Citation network (cn7-map-3), expected dispositions:
+     Internal citation density            SCORED 0
+     Founding-cluster dominance           SCORED 0
+     Recent-paper dependence              SCORED 0 or UNASSESSED
+     Review-hub laundering                UNASSESSED
+     Proxy mismatch                       SCORED 0 or UNASSESSED
+     Claim mutation                       SCORED 1 (popular/secondary restatements dropping the
+                                          later refutation) or UNASSESSED
+     Adjacent-field neglect               SCORED 0 (demographers' critiques engaged)
+     Lack of decisive tests               SCORED 0 (Lin & Luoh and the later Oster et al. test
+                                          read as decisive)
+     Poor critique uptake                 SCORED 0 (the author herself accepted the refutation)
+     Intervention-evidence ratchet        N/A
+     Model non-updating                   SCORED 0 or N/A
+   Expected RISK BAND: low (0%-20%, healthy/low-risk network), or WITHHELD if the zero scores
+   lack the searched/population basis the candidate requires. This is the case where "low
+   concern" may be the right network answer: the field updated.
+E6 Counter-audit (Stage 3): I expect most 2a/2b findings to survive, the "author later
+   conceded" fact to be used to sustain rather than overturn the prosecution, and at least one
+   prosecution finding to be downgraded as hindsight-driven (judged with knowledge of the later
+   refutation rather than from the paper's own evidence).
+
+TELLS (the result that would show each expectation wrong)
+T1 Field 6 is not a share-of-missing-women figure, or the overall/China figures differ
+   materially from about 45% / about 75%.
+T2 The paper's carrier-sex-ratio evidence comes from large, representative samples with
+   credible controls, and the 2a prosecution finds no serious identification threat.
+T3 2b finds the constructs (missing women; carrier prevalence) adequately established, or
+   finds a different construct problem dominant.
+T4 Authors' data for the 2005 paper are found and reproduce field 6.
+T5 Any of: founding-cluster dominance or density SCORED 1+; lack of decisive tests SCORED 1+;
+   poor critique uptake SCORED 1+; RISK BAND issued above 20%.
+T6 Stage 3 overturns (REJECTS) a majority of the prosecution findings, or finds no
+   hindsight-driven finding.
+
+KNOWN CLAIM-TESTING WORKS (Stage 2c measures KNOWN-ITEM RECALL against this list only)
+All recalled from training data; none has been read in this or an earlier session of this
+runner (read status: NOT READ for every item). Venue/year recalled with uncertainty.
+K1 Monica Das Gupta (2005), "Explaining Asia's 'Missing Women': A New Look at the Data",
+   Population and Development Review 31(3). Critique (birth-order/parity pattern). NOT READ.
+K2 Ming-Jen Lin and Ming-Ching Luoh (2008), "Can Hepatitis B Mothers Account for the Number of
+   Missing Women? Evidence from Three Million Newborns in Taiwan", American Economic Review
+   98(5). Test using Taiwan birth registry linked to maternal HBV status. NOT READ.
+K3 Emily Oster, Gang Chen, Xinsen Yu and Wenyao Lin (2010), "Hepatitis B Does Not Explain
+   Male-Biased Sex Ratios in China", Economics Letters 107(2). Prospective cohort test by the
+   author. NOT READ.
+K4 Emily Oster (2006 or 2009), a reply or follow-up on hepatitis B and sex ratios (possibly
+   "Proximate Sources of Population Sex Imbalance in India", Demography 2009, or a reply to
+   Das Gupta in PDR). Identity uncertain. NOT READ.
+K5 Monica Das Gupta (2006), "Cultural versus Biological Factors in Explaining Asia's Missing
+   Women: Response to Oster", Population and Development Review 32(2). Reply/critique; identity
+   recalled with moderate confidence. NOT READ.
+K6 Stephan Klasen (2008), "Missing Women: Some Recent Controversies on Levels and Trends in
+   Gender Bias in Mortality", in a volume or working paper; reviews the Oster debate. Identity
+   uncertain. NOT READ.
+K7 Siwan Anderson and Debraj Ray (2010), "Missing Women: Age and Disease", Review of Economic
+   Studies 77(4). Adjacent; not a direct test of hepatitis B but discusses it. NOT READ.
+K8 Baruch S. Blumberg and co-authors (1970s-2000s), hepatitis B carrier status and offspring
+   sex ratio studies (the evidence base Oster used; includes work on Greenland / Philippines
+   populations, e.g. Chahnazarian, Blumberg & London 1988). These are inputs to the claim
+   rather than tests of it; listed for completeness. NOT READ.
+
+LOCK: These expectations are not to be revised after Stage 1. Departures will be reported in
+the final assessment as observed outcomes, not edited here.

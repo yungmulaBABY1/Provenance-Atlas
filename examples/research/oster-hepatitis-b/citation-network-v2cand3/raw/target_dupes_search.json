@@ -1,0 +1,63 @@
+{
+ "meta": {
+  "notice": "No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address. Get a free key with its own $1/day at https://openalex.org/settings/api and add api_key=YOUR_KEY to your requests. An AI agent can get one for its user in one call: POST https://api.openalex.org/api-keys with {\"email\": \"<your user's email>\"}; we email them a link, and the key works once they click it. Docs for agents: https://help.openalex.org/llms.txt",
+  "count": 4,
+  "db_response_time_ms": 822,
+  "page": 1,
+  "per_page": 25,
+  "groups_count": null,
+  "x_query": {
+   "oql": "get works with (hepatitis missing women) in the title",
+   "x_new_oql": "get works with (hepatitis missing women) in the title",
+   "oqo": {
+    "get_rows": "works",
+    "filter_rows": [
+     {
+      "column_id": "display_name.search",
+      "value": "hepatitis missing women",
+      "operator": "has"
+     }
+    ]
+   },
+   "url": "/works?filter=display_name.search:hepatitis missing women&per_page=25",
+   "order": "best matches first",
+   "order_default": true
+  },
+  "cost_usd": 0.001
+ },
+ "results": [
+  {
+   "id": "https://openalex.org/W3123222584",
+   "doi": "https://doi.org/10.1086/498588",
+   "display_name": "Hepatitis B and the Case of the Missing Women",
+   "publication_year": 2005,
+   "type": "article",
+   "cited_by_count": 173
+  },
+  {
+   "id": "https://openalex.org/W3126094291",
+   "doi": null,
+   "display_name": "Hepatitis B and the Case of the Missing Women",
+   "publication_year": 2005,
+   "type": "preprint",
+   "cited_by_count": 2
+  },
+  {
+   "id": "https://openalex.org/W1994568240",
+   "doi": "https://doi.org/10.1257/aer.98.5.2259",
+   "display_name": "Can Hepatitis B Mothers Account for the Number of Missing Women? Evidence from Three Million Newborns in Taiwan",
+   "publication_year": 2008,
+   "type": "article",
+   "cited_by_count": 62
+  },
+  {
+   "id": "https://openalex.org/W4238287260",
+   "doi": "https://doi.org/10.1503/cjs.015713",
+   "display_name": "The 14th Bethune Round Table Conference on International Surgery1. Sustainable partnerships and local capacity building: Ukraine–Canada experience.2. COSECSA, achievements and challenges in improving global surgery.3. The VCU international trauma system development program in Central and South America.4. Establishing a contextually appropriate laparoscopic program in resource restricted environments: experience in Botswana.5. Collaborative care to reduce maternal deaths from postpartum hemorrhage.6. Building a sustainable collaboration and an interprofessional team in pediatric surgical care: an interim report.7. Women in surgery: factors hindering women from being surgeons in Zimbabwe.8. Inadequate Hepatitis B vaccination among surgeons practising in Ethiopia — Are we playing with fire? A cross-sectional study.9. Global met need for emergency obstetric care: a meta-analysis.10. Improving service-based obstetric care to reduce maternal mortalities.11. Emergency and Essential Surgical Care capacity-building through skills training: evidence from Meghalaya, India.12. Evaluation of the trauma quality indicators using trauma registry in low resource settings.13. Evaluation of prehospital care: Does Bolivia need a trauma first responders course?14. Timing of surgery and functional outcomes in patients presenting with ankle fractures to a teaching hospital in a developing country.15. A 1-year review of surgical complications of diabetes in Soroti Regional Referral Hospital, Uganda.16. Effect of surgical safety checklist implementation on culture of patient safety in Rwanda.17. Reducing critical incidents in neonatal anesthesia in a low resource setting.18. Ultrasound guided regional anesthesia — a multicentre feasibility trial for use in low resource settings.19. Understanding the burden of surgical congenital anomalies in Kenya: a mixed-methods approach.20. Pediatric surgery outcomes in low- and middle-income African countries: a scoping review of the recent literature.21. Providing more than health care: the dynamics of humanitarian surgery efforts on the local microeconomy.22. Low-fidelity simulation to teach anaesthetists’ non-technical skills (ANTS) in Rwanda.23. Pulse oximeter distribution, a journey to anesthesia safety in the developing world: case of Rwanda.24. Evidence based best practice in medical disaster response?25. Measuring and comparing the cost-effectiveness of surgical care delivery in low-resource settings: cleft lip and palate as a model.26. Prospective data collection at a district hospital in Rwanda.27. Evidence based surgery in low resource settings: the missed opportunity in graduate dissertations at Makerere University.P1. Anesthetic audit of WHO surgical safety checklist implementation in a rural community to reduce maternal and child mortality.P2. Epidemiology, management and outcome of malignancies surgically treated at a rural referral hospital in Butare, Rwanda.P3. Importance and impact of surgical camp — ECSA 2013 Swaziland experience.P4. Disease burden of intimate partner violence in Rwanda and US trauma centres: identifying surgical need using DALYs.P5. Improved pediatric surgical service outcome in resource limited practice — strategies and challenges.P6. Overcrowding of accident and emergency units: Is it a growing concern in Nigeria?P7. Building local capacity for improved surgical safety in a resource poor setting.P8. Tertiary Trauma Survey: How much are we missing in the evaluation of our patients?P9. Development of an enterostoma care team at the University of Ilorin Teaching Hospital, Ilorin, Nigeria.P10. Assessing knowledge dissemination from the annual Bethune Round Table on International Surgery Conference.P11. Photovoice: engaging youth in rural Uganda in articulating health priorities through participatory section research.P12. Burn care in Nepal: a retrospective review.P13. Burn care checklist in Nepal: a pilot study.P14. Pediatric surgical care in conflict zones: the Médecins Sans Frontières experience in 2012.P15. Gluteal fibrosis: a case series in eastern Uganda. Could our malarial treatment be causing long-term disability?P16. The bacterial pathogens and possible sources contributing to infection and mortality in the Burn Care Unit, Georgetown Public Hospital Corporation, Guyana.P17. Standardizing goals and objectives for resident electives in international surgery.P18. Dr. Lucille Teasdale-Corti: a legacy of empowerment.P19. Outcomes of patients that underwent laparotomy at a large referral hospital in Rwanda over a one-year period.P20. The Haiti Breast Cancer Initiative: preliminary epidemiological data.P21. User fees and essential surgical services in Tan-zania: theory, practice and impact.",
+   "publication_year": 2014,
+   "type": "article",
+   "cited_by_count": 4
+  }
+ ],
+ "group_by": []
+}

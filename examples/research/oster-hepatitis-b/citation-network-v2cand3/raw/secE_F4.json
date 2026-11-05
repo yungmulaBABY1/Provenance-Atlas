@@ -1,0 +1,402 @@
+{
+ "meta": {
+  "notice": "No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address. Get a free key with its own $1/day at https://openalex.org/settings/api and add api_key=YOUR_KEY to your requests. An AI agent can get one for its user in one call: POST https://api.openalex.org/api-keys with {\"email\": \"<your user's email>\"}; we email them a link, and the key works once they click it. Docs for agents: https://help.openalex.org/llms.txt",
+  "count": 88,
+  "db_response_time_ms": 30,
+  "page": 1,
+  "per_page": 3,
+  "groups_count": null,
+  "x_query": {
+   "oql": "get articles through 2005-06-30 with (missing women) in the title, most cited first",
+   "x_new_oql": "get articles through 2005-06-30 with (missing women) in the title, most cited first",
+   "oqo": {
+    "get_rows": "works",
+    "filter_rows": [
+     {
+      "column_id": "display_name.search",
+      "value": "missing women",
+      "operator": "has"
+     },
+     {
+      "column_id": "to_publication_date",
+      "value": "2005-06-30"
+     },
+     {
+      "column_id": "type",
+      "value": "article"
+     }
+    ],
+    "sort_by": [
+     {
+      "column_id": "cited_by_count",
+      "direction": "desc"
+     }
+    ]
+   },
+   "url": "/works?filter=display_name.search:missing women,to_publication_date:2005-06-30,type:article&sort=cited_by_count:desc&per_page=3",
+   "order": "most cited first",
+   "order_default": false
+  },
+  "cost_usd": 0.001
+ },
+ "results": [
+  {
+   "id": "https://openalex.org/W2081758747",
+   "doi": "https://doi.org/10.1080/1354570022000077999",
+   "display_name": "\"MISSING WOMEN\": REVISITING THE DEBATE",
+   "publication_year": 2003,
+   "type": "article",
+   "cited_by_count": 317,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5034268025",
+      "display_name": "Stephan Klasen",
+      "orcid": "https://orcid.org/0000-0003-4078-755X",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-4078-755X"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I8204097",
+       "display_name": "Ludwig-Maximilians-Universität München",
+       "ror": "https://ror.org/05591te55",
+       "country_code": "DE",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I8204097"
+       ]
+      }
+     ],
+     "countries": [
+      "DE"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Stephan Klasen",
+     "raw_affiliation_strings": [
+      "Department of Economics, University of Munich, Ludwigstr. 28/Rg, 80539 Munich, Germany"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Department of Economics, University of Munich, Ludwigstr. 28/Rg, 80539 Munich, Germany",
+       "institution_ids": [
+        "https://openalex.org/I8204097"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5072540867",
+      "display_name": "Claudia Wink",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [],
+     "countries": [],
+     "is_corresponding": false,
+     "raw_author_name": "Claudia Wink",
+     "raw_affiliation_strings": [
+      "DEG – Deutsche Investitions- und Entwicklungsgesellschaft mbH, Belvederestr. 40, 50933 Cologne, Germany"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "DEG – Deutsche Investitions- und Entwicklungsgesellschaft mbH, Belvederestr. 40, 50933 Cologne, Germany",
+       "institution_ids": []
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1080/1354570022000077999",
+    "doi": "https://doi.org/10.1080/1354570022000077999",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1080/1354570022000077999",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S148397273",
+     "display_name": "Feminist Economics",
+     "issn_l": "1354-5701",
+     "issn": [
+      "1354-5701",
+      "1466-4372"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "abdc-a",
+      "anvur-class-a",
+      "anvur-scientific",
+      "cwts-core",
+      "erih-plus",
+      "jufo-1",
+      "norway-1",
+      "poland-100",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320547",
+     "host_organization_name": "Taylor & Francis",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320547",
+      "https://openalex.org/P4310320449"
+     ],
+     "host_organization_lineage_names": [
+      "Taylor & Francis",
+      "Informa"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Feminist Economics",
+    "raw_type": "journal-article"
+   }
+  },
+  {
+   "id": "https://openalex.org/W3124113130",
+   "doi": "https://doi.org/10.1111/j.1728-4457.2002.00285.x",
+   "display_name": "A Turning Point in Gender Bias in Mortality? An Update on the Number of Missing Women",
+   "publication_year": 2002,
+   "type": "article",
+   "cited_by_count": 204,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5034268025",
+      "display_name": "Stephan Klasen",
+      "orcid": "https://orcid.org/0000-0003-4078-755X",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-4078-755X"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I8204097",
+       "display_name": "Ludwig-Maximilians-Universität München",
+       "ror": "https://ror.org/05591te55",
+       "country_code": "DE",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I8204097"
+       ]
+      }
+     ],
+     "countries": [
+      "DE"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Stephan Klasen",
+     "raw_affiliation_strings": [
+      "Stephan Klasen is Professor of Economics, University of Munich"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Stephan Klasen is Professor of Economics, University of Munich",
+       "institution_ids": [
+        "https://openalex.org/I8204097"
+       ]
+      }
+     ]
+    },
+    {
+     "author_position": "last",
+     "author": {
+      "id": "https://openalex.org/A5072540867",
+      "display_name": "Claudia Wink",
+      "orcid": null,
+      "observed_orcids": []
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I2898391981",
+       "display_name": "Deutsches Zentrum für Luft- und Raumfahrt e. V. (DLR)",
+       "ror": "https://ror.org/04bwf3e34",
+       "country_code": "DE",
+       "type": "facility",
+       "lineage": [
+        "https://openalex.org/I1305996414",
+        "https://openalex.org/I2898391981"
+       ]
+      }
+     ],
+     "countries": [
+      "DE"
+     ],
+     "is_corresponding": false,
+     "raw_author_name": "Claudia Wink",
+     "raw_affiliation_strings": [
+      "Claudia Wink is Junior Investment Officer, Deutsche Entwicklungsgesellschaft (German Development Corporation), Cologne"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Claudia Wink is Junior Investment Officer, Deutsche Entwicklungsgesellschaft (German Development Corporation), Cologne",
+       "institution_ids": [
+        "https://openalex.org/I2898391981"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1111/j.1728-4457.2002.00285.x",
+    "doi": "https://doi.org/10.1111/j.1728-4457.2002.00285.x",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1111/j.1728-4457.2002.00285.x",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S32314625",
+     "display_name": "Population and Development Review",
+     "issn_l": "0098-7921",
+     "issn": [
+      "0098-7921",
+      "1728-4457"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "abdc-a",
+      "anvur-class-a",
+      "anvur-scientific",
+      "cwts-core",
+      "jufo-3",
+      "ki-jl-2",
+      "norway-2",
+      "poland-140",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320595",
+     "host_organization_name": "Wiley",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320595"
+     ],
+     "host_organization_lineage_names": [
+      "Wiley"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "Population and Development Review",
+    "raw_type": "journal-article"
+   }
+  },
+  {
+   "id": "https://openalex.org/W2031660749",
+   "doi": "https://doi.org/10.1016/0305-750x(94)90148-1",
+   "display_name": "“Missing women” reconsidered",
+   "publication_year": 1994,
+   "type": "article",
+   "cited_by_count": 184,
+   "authorships": [
+    {
+     "author_position": "first",
+     "author": {
+      "id": "https://openalex.org/A5034268025",
+      "display_name": "Stephan Klasen",
+      "orcid": "https://orcid.org/0000-0003-4078-755X",
+      "observed_orcids": [
+       "https://orcid.org/0000-0003-4078-755X"
+      ]
+     },
+     "institutions": [
+      {
+       "id": "https://openalex.org/I136199984",
+       "display_name": "Harvard University",
+       "ror": "https://ror.org/03vek6s52",
+       "country_code": "US",
+       "type": "education",
+       "lineage": [
+        "https://openalex.org/I136199984"
+       ]
+      }
+     ],
+     "countries": [
+      "US"
+     ],
+     "is_corresponding": true,
+     "raw_author_name": "Stephan Klasen",
+     "raw_affiliation_strings": [
+      "Harvard University, Cambridge, Massachusetts, USA"
+     ],
+     "raw_orcid": null,
+     "affiliations": [
+      {
+       "raw_affiliation_string": "Harvard University, Cambridge, Massachusetts, USA",
+       "institution_ids": [
+        "https://openalex.org/I136199984"
+       ]
+      }
+     ]
+    }
+   ],
+   "primary_location": {
+    "id": "doi:10.1016/0305-750x(94)90148-1",
+    "doi": "https://doi.org/10.1016/0305-750x(94)90148-1",
+    "is_oa": false,
+    "landing_page_url": "https://doi.org/10.1016/0305-750x(94)90148-1",
+    "pdf_url": null,
+    "source": {
+     "id": "https://openalex.org/S85457386",
+     "display_name": "World Development",
+     "issn_l": "0305-750X",
+     "issn": [
+      "0305-750X",
+      "1873-5991"
+     ],
+     "is_oa": false,
+     "is_in_doaj": false,
+     "is_core": true,
+     "listed_in": [
+      "abdc-a-star",
+      "anvur-class-a",
+      "anvur-scientific",
+      "cwts-core",
+      "erih-plus",
+      "fnege-2",
+      "jufo-3",
+      "ki-jl-1",
+      "norway-2",
+      "poland-140",
+      "russia-white-list-1",
+      "vabb-shw"
+     ],
+     "host_organization": "https://openalex.org/P4310320990",
+     "host_organization_name": "Elsevier BV",
+     "host_organization_lineage": [
+      "https://openalex.org/P4310320990"
+     ],
+     "host_organization_lineage_names": [
+      "Elsevier BV"
+     ],
+     "type": "journal"
+    },
+    "license": null,
+    "license_id": null,
+    "version": "publishedVersion",
+    "is_accepted": true,
+    "is_published": true,
+    "raw_source_name": "World Development",
+    "raw_type": "journal-article"
+   }
+  }
+ ],
+ "group_by": []
+}
