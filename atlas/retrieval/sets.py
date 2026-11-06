@@ -141,6 +141,43 @@ def outputs(root: Path, set_path: Path) -> dict[Path, bytes]:
             base / out.get("report", "REPORT.txt"): report(data, records, samples).encode("utf-8")}
 
 
+LIVE_FILES = ("live-records.jsonl", "drift.json", "DRIFT.txt")
+ALLOWED_CREDENTIALS = {"none", "api key sent in Authorization header; value not recorded"}
+
+
+def check_live_dir(root: Path, set_path: Path, live_dir: Path) -> list[str]:
+    """A committed replay: its files match its provenance hashes, its records are
+    of this set's current specs, and its drift recomputes byte for byte."""
+    problems = []
+    prov_path = live_dir / "PROVENANCE.json"
+    if not prov_path.is_file():
+        return [f"MISSING_PROVENANCE: {live_dir}"]
+    prov = load_json(prov_path.read_bytes())
+    for name in LIVE_FILES:
+        path = live_dir / name
+        if not path.is_file():
+            problems.append(f"MISSING_OUTPUT: {path}")
+        elif sha256(path.read_bytes()) != prov.get("files_sha256", {}).get(name):
+            problems.append(f"CHANGED_REPLAY_FILE: {path} does not match its provenance hash")
+    if problems:
+        return problems
+    current = {spec["id"]: sha for _, spec, sha in specs(set_path, load_set(set_path))}
+    for line in (live_dir / "live-records.jsonl").read_text(encoding="utf-8").splitlines():
+        record = load_json(line.encode("utf-8"))
+        if record.get("mode") != "live":
+            problems.append(f"NOT_A_LIVE_RECORD: {record.get('id')}")
+        if current.get(record.get("id")) != record.get("spec_sha256"):
+            problems.append(f"SPEC_CHANGED_SINCE_REPLAY: {record.get('id')}")
+        if record.get("request", {}).get("credentials") not in ALLOWED_CREDENTIALS:
+            problems.append(f"UNEXPECTED_CREDENTIAL_FIELD: {record.get('id')}")
+    if problems:
+        return problems
+    for path, expected in drift_from_files(root, set_path, live_dir / "live-records.jsonl").items():
+        if path.read_bytes() != expected:
+            problems.append(f"STALE_OUTPUT: {path} does not match drift recomputed offline")
+    return problems
+
+
 def check(root: Path, set_path: Path) -> list[str]:
     problems = []
     for path, expected in outputs(root, set_path).items():
@@ -148,6 +185,8 @@ def check(root: Path, set_path: Path) -> list[str]:
             problems.append(f"MISSING_OUTPUT: {path}")
         elif path.read_bytes() != expected:
             problems.append(f"STALE_OUTPUT: {path} does not match a fresh build")
+    for live_dir in sorted(p for p in set_path.parent.glob("live-*") if p.is_dir()):
+        problems += check_live_dir(root, set_path, live_dir)
     return problems
 
 

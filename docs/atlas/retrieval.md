@@ -5,8 +5,8 @@ results. This package writes the search record itself, from what it observes,
 instead of relying on an executor's account of what it searched. It never calls a
 model, and it never records a credential. It points; you judge.
 
-Status: IMPLEMENTED and tested offline. The live replay has NOT been run (see
-[Live replay](#live-replay)).
+Status: IMPLEMENTED and tested offline. One live replay has been RUN and committed
+(see [Live replay](#live-replay)).
 
 ## Two modes
 
@@ -105,19 +105,54 @@ with the saved records (`drift.json`, `DRIFT.txt`). Each spec gets a status:
 
 A change is an observation about the index over time, not about the audit.
 
-NOT RUN. Claude's workspace cannot reach `api.openalex.org`: the egress proxy
-denied CONNECT (403) on 2026-11-05. A policy denial is reported, not retried.
-
-Two ways to run it:
+How to run it:
+- From GitHub: the manual workflow
+  [`retrieval-live-replay.yml`](../../.github/workflows/retrieval-live-replay.yml).
+  - It never runs on push. It uploads the records as an artifact and commits
+    nothing.
+  - The repository secret `OPENALEX_API_KEY` is optional. Without a key,
+    OpenAlex's keyless budget applies, and 429s are recorded as failed attempts.
 - From any machine with network access:
   `python -m atlas.retrieval run-live tests/atlas/retrieval/baumeister-batch2/set.json --out <dir>`
-- From GitHub, after merge: the manual workflow
-  [`retrieval-live-replay.yml`](../../.github/workflows/retrieval-live-replay.yml).
-  It never runs on push. It uploads the records as an artifact and commits
-  nothing. The repository secret `OPENALEX_API_KEY` is optional. Without a key,
-  OpenAlex's shared keyless budget applies, and 429s are recorded as failed
-  attempts. Batch 2's own log shows 15 OpenAlex 429s, 12 of them on the
-  queries in this set.
+
+Claude's workspace cannot run it: its egress proxy denied CONNECT to
+`api.openalex.org` (403) on 2026-11-05.
+
+### Replay of 2026-11-05 (RUN, committed)
+
+The files are in
+[`tests/atlas/retrieval/baumeister-batch2/live-20261105T234403Z/`](../../tests/atlas/retrieval/baumeister-batch2/live-20261105T234403Z/).
+- **Where it ran:** GitHub Actions run 42131614466, at commit `e595610`, with no
+  API key.
+- **How it got here:** the owner downloaded the artifact and attached it to a
+  Claude session.
+  - Its sha256 equals GitHub's artifact digest
+    (`e967daa2…`).
+  - The three files are committed unchanged. `PROVENANCE.json` pins them.
+  - CI checks that the files match those hashes and that every record is of a
+    current spec. It also checks that the drift recomputes byte for byte.
+
+Result, compared with Grok Bot's saved responses about 12 hours earlier:
+- All 14 queries succeeded on the first attempt, with no 429s. Grok's run had 12
+  on these queries, from another network, keyless, with a `mailto`.
+- **Membership is identical everywhere.** Every query returned the same works
+  and the same total count.
+- **11 UNCHANGED.**
+- **3 REORDERED:** ADJUDICATION-1 Q4, Q5 and Q6. In each, the works at ranks 7
+  and 8 trade places. The cause is UNKNOWN. Candidates:
+  - OpenAlex rescoring between the runs;
+  - a difference between the executor's request and the code's (only `mailto`
+    differs);
+  - near-tied relevance scores.
+
+  The responses do not include `relevance_score`, so these cannot be separated.
+  The audit's screened sets are unaffected, because membership is unchanged.
+- **Results digests differ** for 9 of 14 queries, including some UNCHANGED ones.
+  Some field inside the records changed (citation counts are the likely field;
+  not verified). Live records keep summaries, not full bodies, so the changed
+  field is not recorded.
+- **Four more dispatches** ran within a minute of this one. Their job logs print
+  the same DRIFT.txt apart from timestamps. Their artifacts are not committed.
 
 To review a committed replay offline:
 `python -m atlas.retrieval drift <set.json> <dir>/live-records.jsonl`.
@@ -131,13 +166,15 @@ python -m atlas.retrieval run-live <set.json> --out <dir>             # network;
 python -m atlas.retrieval drift <set.json> <live-records.jsonl>       # offline
 ```
 
-Tests: `tests/atlas/test_retrieval.py`, 29 tests.
+Tests: `tests/atlas/test_retrieval.py`, 36 tests.
 - Spec validation: credentials, paging, per-page, host, declaration.
 - Canonical requests and the Provenance #14 digest convention.
 - Tamper detection: response bytes, the declaration, a request that departs from
   the declaration, the sample seed, stale outputs.
 - Live attempt recording with a fake opener. No test uses the network.
 - Retry policy, the key never recorded, drift statuses.
+- The committed replay: file hashes, a spec changed since the replay, an edited
+  record, the credential field, missing provenance.
 
 Ten mutations of the checks were each caught.
 
@@ -150,5 +187,9 @@ Ten mutations of the checks were each caught.
 - Batch 1 (Oster) has the same layout. Its set can be added once #16 is merged.
 - One provider so far: OpenAlex. OpenCitations would give a second, independent
   citation graph.
+- Live records keep ranked summaries, not response bodies. Keeping the body
+  (CC0 metadata, abstracts excluded) would show which fields changed.
+- Selecting `relevance_score` in future relevance-ranked specs would make
+  ranking checkable.
 - Records are not yet Atlas contract records. Linking them to `CorpusScope`
   and `SourceReadReceipt` is a later increment.

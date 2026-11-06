@@ -226,6 +226,79 @@ class SavedRecords(unittest.TestCase):
             self.build()
 
 
+class CommittedReplay(unittest.TestCase):
+    """The 2026-11-05 replay from GitHub Actions run 42131614466, committed unchanged."""
+
+    LIVE = SET.parent / "live-20261105T234403Z"
+
+    def setUp(self):
+        self.tmp = Path(tempfile.mkdtemp())
+        self.addCleanup(shutil.rmtree, self.tmp)
+        run_dir = "examples/research/baumeister-ego-depletion"
+        shutil.copytree(ROOT / run_dir, self.tmp / run_dir)
+        shutil.copytree(SET.parent, self.tmp / "set")
+        self.set = self.tmp / "set/set.json"
+        self.live = self.tmp / "set" / self.LIVE.name
+
+    def problems(self):
+        return sets.check_live_dir(self.tmp, self.set, self.live)
+
+    def rehash(self, name):
+        prov = json.loads((self.live / "PROVENANCE.json").read_text(encoding="utf-8"))
+        prov["files_sha256"][name] = hashlib.sha256((self.live / name).read_bytes()).hexdigest()
+        (self.live / "PROVENANCE.json").write_text(json.dumps(prov), encoding="utf-8")
+
+    def test_committed_replay_checks(self):
+        self.assertEqual(sets.check_live_dir(ROOT, SET, self.LIVE), [])
+
+    def test_replay_facts(self):
+        records = [json.loads(line) for line in
+                   (self.LIVE / "live-records.jsonl").read_text(encoding="utf-8").splitlines()]
+        self.assertEqual(len(records), 14)
+        self.assertTrue(all(r["status"] == "OK" and len(r["attempts"]) == 1 for r in records))
+        self.assertTrue(all(r["request"]["credentials"] == "none" for r in records))
+        drifts = json.loads((self.LIVE / "drift.json").read_text(encoding="utf-8"))
+        statuses = {d["id"].split("/")[1]: d["status"] for d in drifts}
+        self.assertEqual(sorted(k for k, v in statuses.items() if v == "REORDERED"),
+                         ["adj1-Q4", "adj1-Q5", "adj1-Q6"])
+        self.assertEqual(sum(v == "UNCHANGED" for v in statuses.values()), 11)
+        self.assertTrue(all(d["overlap"] == d["before"]["n"] == d["after"]["n"] for d in drifts))
+
+    def test_changed_file_detected(self):
+        path = self.live / "DRIFT.txt"
+        path.write_text(path.read_text(encoding="utf-8").replace("REORDERED", "UNCHANGED"), encoding="utf-8")
+        self.assertIn("CHANGED_REPLAY_FILE", self.problems()[0])
+
+    def test_edited_record_with_new_hash_detected_by_recompute(self):
+        path = self.live / "live-records.jsonl"
+        lines = path.read_text(encoding="utf-8").splitlines()
+        record = json.loads(lines[3])
+        ranked = record["response"]["ranked"]
+        ranked[6], ranked[7] = ranked[7], ranked[6]
+        lines[3] = json.dumps(record)
+        path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+        self.rehash("live-records.jsonl")
+        self.assertTrue(any("STALE_OUTPUT" in p for p in self.problems()))
+
+    def test_spec_change_detected(self):
+        path = self.tmp / "set/specs/secE-F1.json"
+        s = json.loads(path.read_text(encoding="utf-8"))
+        s["notes"] = ["edited after the replay"]
+        path.write_text(json.dumps(s), encoding="utf-8")
+        self.assertIn("SPEC_CHANGED_SINCE_REPLAY: baumeister-1998-batch2/secE-F1", self.problems())
+
+    def test_credential_field_checked(self):
+        path = self.live / "live-records.jsonl"
+        text = path.read_text(encoding="utf-8").replace('"credentials":"none"', '"credentials":"key abc"', 1)
+        path.write_text(text, encoding="utf-8")
+        self.rehash("live-records.jsonl")
+        self.assertTrue(any("UNEXPECTED_CREDENTIAL_FIELD" in p for p in self.problems()))
+
+    def test_missing_provenance_detected(self):
+        (self.live / "PROVENANCE.json").unlink()
+        self.assertIn("MISSING_PROVENANCE", self.problems()[0])
+
+
 class LiveRecording(unittest.TestCase):
     def test_success_on_first_attempt(self):
         record, data, opener = run([(200, response(["W1", "W2"]))])
