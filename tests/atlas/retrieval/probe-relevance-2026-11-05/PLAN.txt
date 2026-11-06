@@ -1,0 +1,41 @@
+PROBE PLAN: relevance scores for three ADJUDICATION-1 queries of Batch 2
+Written by Claude (Opus 5.5), 2026-11-05, before any request in this set was sent.
+The git commit that adds this file is the lock. It runs only through the live
+workflow (retrieval-live-replay.yml) or `python -m atlas.retrieval run-live`.
+
+Why
+The 2026-11-05 live replay of Batch 2 (run 42131614466) returned the same works
+as Grok Bot's saved responses for every query. In ADJUDICATION-1 Q4, Q5 and Q6,
+however, the works at ranks 7 and 8 traded places. The saved requests had no
+sort parameter and did not select relevance_score, so the cause could not be
+seen. Candidates:
+  (a) OpenAlex rescored between the runs;
+  (b) the executor's request differed (only mailto differs);
+  (c) near-tied relevance scores, with tie order not fixed.
+
+Questions
+Q-A  Does OpenAlex accept relevance_score in select for a title_and_abstract.search
+     filter? If not, the request fails, and the provider's error text is recorded
+     in the attempt.
+Q-B  Are the scores at ranks 7 and 8 equal or nearly equal in Q4, Q5 and Q6?
+Q-C  Is the order with an explicit sort=relevance_score:desc the same as the
+     provider default (Q4 only)?
+
+Specs (filter strings identical to Batch 2's; select reduced; no abstracts requested)
+  q4-default-scored   Q4 filter, per-page=10, no sort, select=id,display_name,publication_year,cited_by_count,relevance_score
+  q4-explicit-scored  as q4-default-scored plus sort=relevance_score:desc
+  q5-default-scored   Q5 filter, otherwise as q4-default-scored
+  q6-default-scored   Q6 filter, otherwise as q4-default-scored
+
+Q4 filter: title_and_abstract.search:"ego depletion" AND (motivation OR "process model" OR "opportunity cost"),from_publication_date:1998-01-01,to_publication_date:2026-11-05,type:article|preprint|book-chapter|review
+Q5 filter: title_and_abstract.search:("ego depletion" OR willpower) AND ("implicit theories" OR "lay theories" OR beliefs),from_publication_date:1998-01-01,to_publication_date:2026-11-05,type:article|preprint|book-chapter|review
+Q6 filter: title_and_abstract.search:"ego depletion" AND (fatigue OR frustration OR mood OR "manipulation check"),from_publication_date:1998-01-01,to_publication_date:2026-11-05,type:article|preprint|book-chapter|review
+
+Reading the result
+- Q-A no: relevance cannot be recorded this way. Record that and stop.
+- Q-B equal or nearly equal scores at 7 and 8: consistent with (c). Rank order
+  between tied works is then not reproducible, and a locked query must say how
+  ties are handled before it can claim a reproducible top-N.
+- Q-B clearly different scores: (c) is unlikely; (a) or (b) remain open.
+- Nothing here bears on whether the Batch 2 audit's findings are correct. Its
+  screened sets did not change.

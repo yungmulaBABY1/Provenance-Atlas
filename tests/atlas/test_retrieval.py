@@ -24,6 +24,9 @@ from atlas.contract import ContractError  # noqa: E402
 from atlas.retrieval import core, drift, live, sets  # noqa: E402
 
 SET = ROOT / "tests/atlas/retrieval/baumeister-batch2/set.json"
+OSTER = ROOT / "tests/atlas/retrieval/oster-batch1/set.json"
+PROBE = ROOT / "tests/atlas/retrieval/probe-relevance-2026-11-05/set.json"
+ALL_SETS = sorted((ROOT / "tests/atlas/retrieval").glob("*/set.json"))
 SPEC = ROOT / "tests/atlas/retrieval/baumeister-batch2/specs/adj1-Q1.json"
 SECRET = "test-key-0123456789abcdef"
 
@@ -162,7 +165,9 @@ class SavedRecords(unittest.TestCase):
         return {r["id"].split("/")[1]: r for r in records}, samples
 
     def test_committed_outputs_current(self):
-        self.assertEqual(sets.check(ROOT, SET), [])
+        self.assertEqual(len(ALL_SETS), 3)
+        for path in ALL_SETS:
+            self.assertEqual(sets.check(ROOT, path), [], path)
 
     def test_all_consistent_and_one_reexecution(self):
         records, samples = self.build()
@@ -398,8 +403,145 @@ class Drift(unittest.TestCase):
         self.assertEqual(len(opener.calls), n)
         for data in files.values():
             self.assertNotIn(SECRET.encode(), data)
-        sets_written = {p.name for p in files}
-        self.assertEqual(sets_written, {"live-records.jsonl", "drift.json", "DRIFT.txt"})
+        names = {p.relative_to(tmp).as_posix() for p in files}
+        self.assertTrue({"live-records.jsonl", "drift.json", "DRIFT.txt"} <= names)
+        self.assertEqual(len([n for n in names if n.startswith("responses/")]), n)
+
+
+class OsterSet(unittest.TestCase):
+    """Batch 1 (Oster 2005): reconstructed specs checked against the run's own declarations."""
+
+    def setUp(self):
+        records, self.samples = sets.build_saved(ROOT, OSTER)
+        self.records = {r["id"].split("/")[1]: r for r in records}
+
+    def test_corpus_declarations_differ_textually_from_requests(self):
+        bad = sorted(k for k, r in self.records.items() if r["status"] == "INCONSISTENT")
+        self.assertEqual(bad, ["recent1-top25", "reception1-top50"])
+        for k in bad:
+            r = self.records[k]
+            self.assertEqual(r["failed_checks"], ["declared_terms_in_request"])
+            self.assertTrue(r["checks"]["declared_response_sha256_matches"])
+            self.assertTrue(any("referenced_works" in t for t in r["missing_terms"]["request"]))
+
+    def test_lock_and_first_attempt_in_same_second(self):
+        self.assertEqual(self.records["secE-F1"]["executor_log"]["declared_vs_first_attempt"], "same-second")
+        self.assertEqual(self.records["secE-F1"]["executor_log"]["statuses"].count(429), 11)
+        self.assertEqual(self.records["adj1-Q1"]["executor_log"]["declared_vs_first_attempt"], "before")
+
+    def test_samples_reproduce(self):
+        self.assertEqual([sets.sample_reproduces(s) for s in self.samples], [True, True])
+        self.assertEqual(self.samples[1]["rule"], "census: every ranked member")
+
+    def test_malformed_log_line_reported(self):
+        from atlas.retrieval.saved import read_log
+        _, malformed = read_log(ROOT / "examples/research/oster-hepatitis-b/logs/retrieval_log.jsonl")
+        self.assertEqual(malformed, [25])
+        self.assertIn("malformed lines [25]", (OSTER.parent / "REPORT.txt").read_text(encoding="utf-8"))
+
+    def test_reconstruction_reproduces_committed_specs(self):
+        for name in ("baumeister-batch2", "oster-batch1"):
+            tmp = Path(tempfile.mkdtemp())
+            self.addCleanup(shutil.rmtree, tmp)
+            src = ROOT / "tests/atlas/retrieval" / name
+            shutil.copytree(src, tmp / "tests/atlas/retrieval" / name)
+            for d in ("atlas", "examples"):
+                (tmp / d).symlink_to(ROOT / d)
+            import subprocess
+            subprocess.run([sys.executable, "-I", str(tmp / "tests/atlas/retrieval" / name / "reconstruct_specs.py")],
+                           check=True, cwd=tmp)
+            for path in sorted((src / "specs").glob("*.json")) + [src / "set.json"]:
+                rebuilt = tmp / "tests/atlas/retrieval" / name / path.relative_to(src)
+                self.assertEqual(rebuilt.read_bytes(), path.read_bytes(), path)
+
+
+class RankingAndBodies(unittest.TestCase):
+    def test_ranking_basis(self):
+        s = spec()
+        self.assertEqual(core.ranking_basis(s), {"basis": "provider default (relevance for a search)",
+                                                 "sort_key": "relevance_score", "checkable": False})
+        sorted_spec = json.loads((SET.parent / "specs/secE-F1.json").read_text(encoding="utf-8"))
+        self.assertTrue(core.ranking_basis(sorted_spec)["checkable"])
+        probe = json.loads((PROBE.parent / "specs/q4-default-scored.json").read_text(encoding="utf-8"))
+        self.assertTrue(core.ranking_basis(probe)["checkable"])
+
+    def test_score_kept_in_ranked_rows(self):
+        data = response(["W1", "W2"])
+        data["results"][0]["relevance_score"] = 12.5
+        rows = core.ranked(data)
+        self.assertEqual(rows[0]["score"], 12.5)
+        self.assertNotIn("score", rows[1])
+
+    def test_provider_error_text_recorded_and_not_retried(self):
+        record, _, opener = run([(400, b'{"error":"relevance_score is not a valid select field"}')])
+        self.assertEqual(len(opener.calls), 1)
+        self.assertIn("not a valid select field", record["attempts"][0]["detail"])
+
+    def test_unsaved_spec_not_compared(self):
+        tmp = Path(tempfile.mkdtemp())
+        self.addCleanup(shutil.rmtree, tmp)
+        opener = FakeOpener([(200, response(["W1"]))] * 4)
+        files = sets.run_live_set(ROOT, PROBE, tmp, opener=opener, clock=lambda: "2026-11-05T00:00:00Z",
+                                  sleep=lambda s: None)
+        drifts = json.loads(files[tmp / "drift.json"])
+        self.assertEqual({d["status"] for d in drifts}, {"NOT_COMPARED"})
+        self.assertIn("no saved record", drifts[0]["reason"])
+
+
+class KeptBodies(unittest.TestCase):
+    """A replay that keeps response bodies, built with a fake opener from the saved files."""
+
+    def setUp(self):
+        self.tmp = Path(tempfile.mkdtemp())
+        self.addCleanup(shutil.rmtree, self.tmp)
+        run_dir = "examples/research/baumeister-ego-depletion"
+        shutil.copytree(ROOT / run_dir, self.tmp / run_dir)
+        shutil.copytree(SET.parent, self.tmp / "set")
+        self.set = self.tmp / "set/set.json"
+        self.live = self.tmp / "set/live-test"
+        replies = []
+        for item in sets.load_set(self.set)["items"]:
+            body = json.loads((self.tmp / item["response"]).read_text(encoding="utf-8"))
+            if item["spec"].endswith("adj1-Q1.json"):
+                body["results"][0]["cited_by_count"] += 5
+                body["results"][0]["abstract_inverted_index"] = {"secret": [0]}
+            replies.append((200, body))
+        files = sets.run_live_set(self.tmp, self.set, self.live, opener=FakeOpener(replies),
+                                  clock=lambda: "2026-11-05T00:00:00Z", sleep=lambda s: None)
+        for path, data in files.items():
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(data)
+        self.pin()
+
+    def pin(self):
+        pinned = {p.relative_to(self.live).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
+                  for p in self.live.rglob("*") if p.is_file() and p.name != "PROVENANCE.json"}
+        (self.live / "PROVENANCE.json").write_text(json.dumps({"files_sha256": pinned}), encoding="utf-8")
+
+    def test_bodies_kept_without_abstracts_and_checked(self):
+        self.assertEqual(sets.check_live_dir(self.tmp, self.set, self.live), [])
+        kept = (self.live / "responses/adj1-Q1.json").read_text(encoding="utf-8")
+        self.assertNotIn("abstract_inverted_index", kept)
+
+    def test_field_changes_reported(self):
+        drifts = {d["id"].split("/")[1]: d for d in
+                  json.loads((self.live / "drift.json").read_text(encoding="utf-8"))}
+        self.assertEqual(drifts["adj1-Q1"]["field_changes"], {"cited_by_count": 1})
+        self.assertEqual(drifts["adj1-Q2"]["field_changes"], {})
+        self.assertIn("cited_by_count 1", (self.live / "DRIFT.txt").read_text(encoding="utf-8"))
+
+    def test_edited_body_detected(self):
+        path = self.live / "responses/adj1-Q2.json"
+        data = json.loads(path.read_text(encoding="utf-8"))
+        data["results"].reverse()
+        path.write_text(json.dumps(data), encoding="utf-8")
+        self.pin()
+        self.assertIn("BODY_DOES_NOT_MATCH_RECORD: baumeister-1998-batch2/adj1-Q2",
+                      sets.check_live_dir(self.tmp, self.set, self.live))
+
+    def test_unpinned_file_detected(self):
+        (self.live / "responses/extra.json").write_text("{}", encoding="utf-8")
+        self.assertTrue(any("UNPINNED_FILE" in p for p in sets.check_live_dir(self.tmp, self.set, self.live)))
 
 
 if __name__ == "__main__":

@@ -153,9 +153,32 @@ def ranked(data: dict) -> list[dict]:
     for rank, work in enumerate(data.get("results", []), 1):
         if not isinstance(work, dict) or not isinstance(work.get("id"), str):
             raise ContractError(f"INVALID_RESPONSE: result {rank} has no id")
-        rows.append({"rank": rank, "id": short_id(work["id"]),
-                     "year": work.get("publication_year"), "title": work.get("display_name")})
+        row = {"rank": rank, "id": short_id(work["id"]),
+               "year": work.get("publication_year"), "title": work.get("display_name")}
+        if "relevance_score" in work:
+            row["score"] = work["relevance_score"]
+        rows.append(row)
     return rows
+
+
+def ranking_basis(spec: dict) -> dict:
+    """What decides the order, and whether the response carries the field that decides it.
+
+    'checkable' means the sort key is selected, so the order can be recomputed from
+    the response. It does not mean the provider's tie-breaking is known.
+    """
+    params = dict(spec["params"])
+    selected = None if "select" not in params else set(params["select"].split(","))
+    searched = "search" in params or ".search:" in params.get("filter", "")
+    if "sort" in params:
+        key = params["sort"].split(":", 1)[0]
+        basis = f"explicit sort {params['sort']}"
+    elif searched:
+        key, basis = "relevance_score", "provider default (relevance for a search)"
+    else:
+        key, basis = None, "provider default"
+    return {"basis": basis, "sort_key": key,
+            "checkable": key is not None and (selected is None or key in selected)}
 
 
 def response_summary(data: dict) -> dict:

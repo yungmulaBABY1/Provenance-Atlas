@@ -15,7 +15,7 @@ import urllib.request
 
 from ..contract import ContractError, sha256
 from . import RECORD_SCHEMA, VERSION
-from .core import canonical_request, check_page_policy, response_summary, strip_secret
+from .core import canonical_request, check_page_policy, ranking_basis, response_summary, strip_secret
 
 USER_AGENT = f"atlas.retrieval/{VERSION} (+https://github.com/yungmulaBABY1/Provenance-Atlas)"
 RETRY_STATUSES = {429} | set(range(500, 600))
@@ -71,6 +71,8 @@ def run_live(spec: dict, spec_sha256: str, *, api_key: str | None = None, opener
             raw = body
             break
         entry["outcome"] = "HTTP_ERROR"
+        # The provider's error text (for example a rejected select field), bounded.
+        entry["detail"] = strip_secret(body[:300].decode("utf-8", "replace"), api_key)
         attempts.append(entry)
         if status not in RETRY_STATUSES or number == max_attempts:
             break
@@ -84,6 +86,7 @@ def run_live(spec: dict, spec_sha256: str, *, api_key: str | None = None, opener
                     "credentials": ("api key sent in Authorization header; value not recorded"
                                     if api_key else "none")},
         "mode": "live",
+        "ranking": ranking_basis(spec),
         "retrieval_performed_by": f"atlas.retrieval {VERSION}",
         "checked_by": f"atlas.retrieval {VERSION}",
         "attempts": attempts,

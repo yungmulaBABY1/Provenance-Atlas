@@ -1,0 +1,47 @@
+{
+ "schema": "atlas-retrieval-spec/0.1",
+ "id": "oster-2005-batch1/recent1-top25",
+ "provider": "openalex",
+ "endpoint": "https://api.openalex.org/works",
+ "params": [
+  [
+   "filter",
+   "cites:W3123222584,from_publication_date:2021-11-05"
+  ],
+  [
+   "sort",
+   "cited_by_count:desc"
+  ],
+  [
+   "per-page",
+   "25"
+  ],
+  [
+   "select",
+   "id,doi,display_name,publication_year,type,cited_by_count,authorships,primary_location,referenced_works"
+  ]
+ ],
+ "pages": "first-only",
+ "provenance": "reconstructed-after-run",
+ "reconstructed_from": {
+  "executor_log": "examples/research/oster-hepatitis-b/logs/retrieval_log.jsonl",
+  "line": 34,
+  "method": "parameters of the last successful logged request, mailto removed; declared terms copied from the declaration by hand (Claude, 2026-11-05)"
+ },
+ "declared": {
+  "path": "examples/research/oster-hepatitis-b/citation-network-v2cand3/02c_citation_network_v2cand3.md",
+  "sha256": "4fadd7b122533ca7399c8e388e07d7c89ec8eca0b01660e998dd40b9f28f5fdc",
+  "kind": "run-output",
+  "requires": [
+   "W3123222584",
+   "from_publication_date:2021-11-05",
+   "referenced_works:W3123222584",
+   "sort=cited_by_count:desc",
+   "per_page=25"
+  ],
+  "response_sha256": "899ac2a524ef89b323e886bdc5fdb09908db38f01e03cbd2dc2975835126c46b"
+ },
+ "notes": [
+  "Declared in the run output (02c CORPUS SELECTION RULE), not in a pre-run lock. The declaration writes filter=referenced_works:W3123222584 and per_page; the executed request used filter=cites:W3123222584 and per-page. OpenAlex documents cites:W as the works that have W in their referenced_works, so the two may select the same works, and it accepts both per-page spellings. That equivalence is not tested here: the textual mismatch is recorded, not resolved."
+ ]
+}
