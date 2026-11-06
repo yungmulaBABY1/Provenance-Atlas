@@ -17,6 +17,7 @@ oster-2005-batch1/adj1-Q1  [CONSISTENT]  provenance reconstructed-after-run
   request sha256 b9346c4b4080ea5a...  response file sha256 ef5148458134ef21...
   results 10 of count 358; abstracts ABSENT; results digest 8773ccc862640a58...
   ranking: provider default (relevance for a search); sort key in response NO
+  provider reads it as (provider-reported): get works from 1980-01-01 through 2026-11-05 with (stemmed "hepatitis B" AND (stemmed "offspring sex" OR stemmed "sex of offspring" OR stemmed "sex of the offspring" OR stemmed "sex ratio")) in the title or abstract where type is ([article](article) or [book-chapter](book-chapter) or [preprint](preprint)); order 'best matches first' (default yes)
   checks: abstracts_absent_or_stripped yes; declared_file_sha256_matches yes; declared_terms_in_declaration yes; declared_terms_in_request yes; file_matches_logged_sha256 yes; first_page yes; logged_success yes; request_matches_logged yes; within_per_page yes
   executor log (executor-written): attempts 3 statuses [429, 429, 200]; re-executed after success NO; credential params logged none; declaration vs first attempt before
   note: Declared ranking is OpenAlex relevance, 'the default for a search filter'. The request has no sort parameter and relevance_score was not selected, so the ranking actually applied is not checked here.
@@ -25,6 +26,7 @@ oster-2005-batch1/adj1-Q2  [CONSISTENT]  provenance reconstructed-after-run
   request sha256 84cd7b203290e1fe...  response file sha256 53a1b94b24690a8c...
   results 10 of count 34; abstracts ABSENT; results digest 9a33eff97e08d4aa...
   ranking: provider default (relevance for a search); sort key in response NO
+  provider reads it as (provider-reported): get works from 1980-01-01 through 2026-11-05 with (stemmed "missing women" AND (stemmed "hepatitis" OR stemmed "sex ratio at birth")) in the title or abstract where type is ([article](article) or [book-chapter](book-chapter) or [preprint](preprint)); order 'best matches first' (default yes)
   checks: abstracts_absent_or_stripped yes; declared_file_sha256_matches yes; declared_terms_in_declaration yes; declared_terms_in_request yes; file_matches_logged_sha256 yes; first_page yes; logged_success yes; request_matches_logged yes; within_per_page yes
   executor log (executor-written): attempts 1 statuses [200]; re-executed after success NO; credential params logged none; declaration vs first attempt before
   note: Declared ranking is OpenAlex relevance, 'the default for a search filter'. The request has no sort parameter and relevance_score was not selected, so the ranking actually applied is not checked here.
@@ -33,6 +35,7 @@ oster-2005-batch1/adj1-Q3  [CONSISTENT]  provenance reconstructed-after-run
   request sha256 4f62a93ac031dbb8...  response file sha256 e593da8088b486d4...
   results 10 of count 147; abstracts ABSENT; results digest 18a6194f03ba5b14...
   ranking: provider default (relevance for a search); sort key in response NO
+  provider reads it as (provider-reported): get works from 1980-01-01 through 2026-11-05 with ((China OR India) AND (stemmed "birth order" OR parity) AND (stemmed "sex ratio at birth" OR stemmed "son preference")) in the title or abstract where type is ([article](article) or [book-chapter](book-chapter) or [preprint](preprint)); order 'best matches first' (default yes)
   checks: abstracts_absent_or_stripped yes; declared_file_sha256_matches yes; declared_terms_in_declaration yes; declared_terms_in_request yes; file_matches_logged_sha256 yes; first_page yes; logged_success yes; request_matches_logged yes; within_per_page yes
   executor log (executor-written): attempts 1 statuses [200]; re-executed after success NO; credential params logged none; declaration vs first attempt before
   note: Declared ranking is OpenAlex relevance, 'the default for a search filter'. The request has no sort parameter and relevance_score was not selected, so the ranking actually applied is not checked here.
@@ -41,6 +44,7 @@ oster-2005-batch1/adj1-Q4  [CONSISTENT]  provenance reconstructed-after-run
   request sha256 98fec900f9ba0c0d...  response file sha256 0bffe0c7fe8b4a71...
   results 10 of count 99; abstracts ABSENT; results digest 234282b0516fef31...
   ranking: provider default (relevance for a search); sort key in response NO
+  provider reads it as (provider-reported): get works from 1980-01-01 through 2026-11-05 with ((stemmed "biological" OR stemmed "life expectancy" OR stemmed "natural sex ratio") AND (stemmed "missing women" OR stemmed "sex ratio at birth")) in the title or abstract where type is ([article](article) or [book-chapter](book-chapter) or [preprint](preprint)); order 'best matches first' (default yes)
   checks: abstracts_absent_or_stripped yes; declared_file_sha256_matches yes; declared_terms_in_declaration yes; declared_terms_in_request yes; file_matches_logged_sha256 yes; first_page yes; logged_success yes; request_matches_logged yes; within_per_page yes
   executor log (executor-written): attempts 1 statuses [200]; re-executed after success NO; credential params logged none; declaration vs first attempt before
   note: Declared ranking is OpenAlex relevance, 'the default for a search filter'. The request has no sort parameter and relevance_score was not selected, so the ranking actually applied is not checked here.
@@ -49,6 +53,7 @@ oster-2005-batch1/adj1-Q5  [CONSISTENT]  provenance reconstructed-after-run
   request sha256 f1e5b10c910d1014...  response file sha256 bf1cb9f36f10f7da...
   results 10 of count 89; abstracts ABSENT; results digest 6930f143b0c7ca34...
   ranking: provider default (relevance for a search); sort key in response NO
+  provider reads it as (provider-reported): get works from 1980-01-01 through 2026-11-05 with (stemmed "hepatitis B" AND (stemmed "male births" OR stemmed "proportion male" OR stemmed "sex ratio") AND (immunization OR vaccination OR vaccine)) in the title or abstract where type is ([article](article) or [book-chapter](book-chapter) or [preprint](preprint)); order 'best matches first' (default yes)
   checks: abstracts_absent_or_stripped yes; declared_file_sha256_matches yes; declared_terms_in_declaration yes; declared_terms_in_request yes; file_matches_logged_sha256 yes; first_page yes; logged_success yes; request_matches_logged yes; within_per_page yes
   executor log (executor-written): attempts 2 statuses [429, 200]; re-executed after success NO; credential params logged none; declaration vs first attempt before
   note: Declared ranking is OpenAlex relevance, 'the default for a search filter'. The request has no sort parameter and relevance_score was not selected, so the ranking actually applied is not checked here.
@@ -57,6 +62,7 @@ oster-2005-batch1/secE-F1  [CONSISTENT]  provenance reconstructed-after-run
   request sha256 0af607da8351e1b1...  response file sha256 e55db89bc9155439...
   results 3 of count 105; abstracts ABSENT; results digest 28bc896ab91203d5...
   ranking: explicit sort cited_by_count:desc; sort key in response yes
+  provider reads it as (provider-reported): get articles through 2005-06-30 with (son preference) in the title, most cited first; order 'most cited first' (default NO)
   checks: abstracts_absent_or_stripped yes; declared_file_sha256_matches yes; declared_terms_in_declaration yes; declared_terms_in_request yes; file_matches_logged_sha256 yes; first_page yes; logged_success yes; request_matches_logged yes; within_per_page yes
   executor log (executor-written): attempts 12 statuses [429, 429, 429, 429, 429, 429, 429, 429, 429, 429, 429, 200]; re-executed after success NO; credential params logged none; declaration vs first attempt same-second
   note: The lock writes the term in quotes (F1 "son preference"); the request sends it unquoted (title.search:son preference). The lock does not say whether the quotes mark a phrase or only delimit the term.
@@ -65,6 +71,7 @@ oster-2005-batch1/secE-F2  [CONSISTENT]  provenance reconstructed-after-run
   request sha256 9a340e21235b7957...  response file sha256 d6ffdc494483a0d1...
   results 3 of count 8; abstracts ABSENT; results digest cdc5848f37bd5bbd...
   ranking: explicit sort cited_by_count:desc; sort key in response yes
+  provider reads it as (provider-reported): get articles through 2005-06-30 with (hepatitis B sex ratio) in the title, most cited first; order 'most cited first' (default NO)
   checks: abstracts_absent_or_stripped yes; declared_file_sha256_matches yes; declared_terms_in_declaration yes; declared_terms_in_request yes; file_matches_logged_sha256 yes; first_page yes; logged_success yes; request_matches_logged yes; within_per_page yes
   executor log (executor-written): attempts 1 statuses [200]; re-executed after success NO; credential params logged none; declaration vs first attempt before
   note: The lock writes the term in quotes (F2 "hepatitis B sex ratio"); the request sends it unquoted (title.search:hepatitis B sex ratio). The lock does not say whether the quotes mark a phrase or only delimit the term.
@@ -73,6 +80,7 @@ oster-2005-batch1/secE-F3  [CONSISTENT]  provenance reconstructed-after-run
   request sha256 e65d619804ddc6e9...  response file sha256 e0f0f04187ce9dd7...
   results 3 of count 358; abstracts ABSENT; results digest 1020e0d78fdef12c...
   ranking: explicit sort cited_by_count:desc; sort key in response yes
+  provider reads it as (provider-reported): get articles through 2005-06-30 with (sex ratio at birth) in the title, most cited first; order 'most cited first' (default NO)
   checks: abstracts_absent_or_stripped yes; declared_file_sha256_matches yes; declared_terms_in_declaration yes; declared_terms_in_request yes; file_matches_logged_sha256 yes; first_page yes; logged_success yes; request_matches_logged yes; within_per_page yes
   executor log (executor-written): attempts 3 statuses [429, 429, 200]; re-executed after success NO; credential params logged none; declaration vs first attempt before
   note: The lock writes the term in quotes (F3 "sex ratio at birth"); the request sends it unquoted (title.search:sex ratio at birth). The lock does not say whether the quotes mark a phrase or only delimit the term.
@@ -81,6 +89,7 @@ oster-2005-batch1/secE-F4  [CONSISTENT]  provenance reconstructed-after-run
   request sha256 d04ba6bed3c2668b...  response file sha256 506bb129d789892b...
   results 3 of count 88; abstracts ABSENT; results digest b50d7b61015ac14e...
   ranking: explicit sort cited_by_count:desc; sort key in response yes
+  provider reads it as (provider-reported): get articles through 2005-06-30 with (missing women) in the title, most cited first; order 'most cited first' (default NO)
   checks: abstracts_absent_or_stripped yes; declared_file_sha256_matches yes; declared_terms_in_declaration yes; declared_terms_in_request yes; file_matches_logged_sha256 yes; first_page yes; logged_success yes; request_matches_logged yes; within_per_page yes
   executor log (executor-written): attempts 1 statuses [200]; re-executed after success NO; credential params logged none; declaration vs first attempt before
   note: The lock writes the term in quotes (F4 "missing women"); the request sends it unquoted (title.search:missing women). The lock does not say whether the quotes mark a phrase or only delimit the term.
@@ -89,6 +98,7 @@ oster-2005-batch1/reception1-top50  [INCONSISTENT]  provenance reconstructed-aft
   request sha256 6b00cf06fa681f7e...  response file sha256 2529864d8e37346e...
   results 50 of count 172; abstracts ABSENT; results digest 78e75507a9a51c73...
   ranking: explicit sort cited_by_count:desc; sort key in response yes
+  provider reads it as (provider-reported): get works citing (W3123222584), most cited first; order 'most cited first' (default NO)
   checks: abstracts_absent_or_stripped yes; declared_file_sha256_matches yes; declared_response_sha256_matches yes; declared_terms_in_declaration yes; declared_terms_in_request NO; file_matches_logged_sha256 yes; first_page yes; logged_success yes; request_matches_logged yes; within_per_page yes
   executor log (executor-written): attempts 1 statuses [200]; re-executed after success NO; credential params logged none
   MISSING in request: filter=referenced_works:W3123222584
@@ -99,6 +109,7 @@ oster-2005-batch1/recent1-top25  [INCONSISTENT]  provenance reconstructed-after-
   request sha256 201dc1254dd96950...  response file sha256 899ac2a524ef89b3...
   results 6 of count 6; abstracts ABSENT; results digest 95c6bfca6e7fe088...
   ranking: explicit sort cited_by_count:desc; sort key in response yes
+  provider reads it as (provider-reported): get works since 2021-11-05 citing (W3123222584), most cited first; order 'most cited first' (default NO)
   checks: abstracts_absent_or_stripped yes; declared_file_sha256_matches yes; declared_response_sha256_matches yes; declared_terms_in_declaration yes; declared_terms_in_request NO; file_matches_logged_sha256 yes; first_page yes; logged_success yes; request_matches_logged yes; within_per_page yes
   executor log (executor-written): attempts 1 statuses [200]; re-executed after success NO; credential params logged none
   MISSING in request: referenced_works:W3123222584

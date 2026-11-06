@@ -1,0 +1,60 @@
+PROBE FINDINGS: relevance scores for Batch 2's ADJUDICATION-1 Q4-Q6
+Written by Claude (Opus 5.5), 2026-11-05 PST, after the run. The run is
+live-20261106T002702Z/: GitHub Actions run 42136887560, no API key. The
+questions are those in PLAN.txt. Every number below is in the committed records,
+and tests/atlas/test_retrieval.py (ProbeFindings) asserts them.
+
+Q-A  Does OpenAlex return relevance_score when it is selected?
+     YES. All four requests returned 200 on the first attempt, with a score for
+     every result.
+
+Q-B  Are ranks 7 and 8 near-tied?
+     YES, in all three queries. In each, the 7-8 gap is the smallest adjacent
+     gap in the top 10:
+
+       query   score 7      score 8      gap        gap / score 7   top-10 range
+       Q4      27.524546    27.518660    0.005886   0.02%           19.06
+       Q5      31.330355    31.282202    0.048153   0.15%           14.77
+       Q6      30.661985    30.596580    0.065405   0.21%           13.56
+
+     Nothing else changed. In each query:
+     - the ten works are the same as in Grok Bot's saved response (11:28-11:29 UTC
+       on 2026-11-05) and in the first replay (23:44 UTC);
+     - the order matches the first replay exactly;
+     - the order differs from Grok's only by the swap at ranks 7 and 8.
+
+Q-C  Does an explicit sort=relevance_score:desc give the default order (Q4)?
+     YES: identical ids, order and scores.
+
+Reading (per PLAN.txt)
+- The swaps happened exactly where the scores are closest. That is consistent
+  with near-ties (candidate c).
+- It does not show why the order changed. Two explanations remain open:
+  - Scores near a tie may have shifted slightly between 11:28Z and 23:44Z
+    (candidate a).
+  - The provider's tie-breaking may vary.
+- The extra mailto in Grok's request (candidate b) is not excluded, but nothing
+  points to it.
+- Grok's saved responses do not carry scores, so the 11:28Z scores are unknown.
+- Nothing here bears on whether the Batch 2 audit's findings are correct. Its
+  screened sets did not change.
+
+Also seen in the responses (provider-reported, OpenAlex meta.x_query)
+- OpenAlex echoes how it read each query and the order it applied. Grok's saved
+  responses carry this too, and the records now include it (provider_echo).
+- For ADJUDICATION-1 it reports "best matches first" (default). That is the
+  declared relevance ranking, as the provider reports it.
+- For Section E it reads the terms as plain words: "(mental fatigue) in the
+  title". Quoted phrases in ADJUDICATION-1 appear as phrases:
+  'stemmed "ego depletion"'. So the executed Section E queries were word
+  matches, not phrase matches. Whether the lock meant phrases is still not
+  stated.
+- These are the provider's own descriptions, not an independent check.
+
+What this changes for future locked queries
+- A relevance-ranked top-N should select relevance_score. Ties and near-ties at
+  the cutoff are then visible.
+- It should request a few more results than N (for example N+2) and record the
+  score margin at the cutoff. A near-tie at rank N would otherwise change
+  membership without notice.
+- These are recommendations. No instrument has been changed.

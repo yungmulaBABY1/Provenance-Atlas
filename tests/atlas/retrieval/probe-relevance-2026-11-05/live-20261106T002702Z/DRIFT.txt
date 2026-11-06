@@ -1,0 +1,8 @@
+DRIFT REPORT: saved executor responses vs a code-run replay
+Rank and membership only. A change is an observation about the index or its
+ranking over time. It says nothing about whether the audit was right.
+
+probe-relevance-2026-11-05/q4-default-scored: NOT_COMPARED  (no saved record for this spec)
+probe-relevance-2026-11-05/q4-explicit-scored: NOT_COMPARED  (no saved record for this spec)
+probe-relevance-2026-11-05/q5-default-scored: NOT_COMPARED  (no saved record for this spec)
+probe-relevance-2026-11-05/q6-default-scored: NOT_COMPARED  (no saved record for this spec)

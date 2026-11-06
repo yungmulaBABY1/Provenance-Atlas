@@ -1,0 +1,34 @@
+{
+ "schema": "atlas-retrieval-replay-provenance/0.1",
+ "set": "probe-relevance-2026-11-05",
+ "executor": "atlas.retrieval 0.1.0 on a GitHub-hosted runner (workflow .github/workflows/retrieval-live-replay.yml)",
+ "workflow_run": {
+  "id": 42136887560,
+  "url": "https://github.com/yungmulaBABY1/Provenance-Atlas/actions/runs/42136887560",
+  "head_sha": "11edede42be410e45cf033166c554670596b35b7",
+  "trigger": "workflow_dispatch by the owner, 2026-11-06 00:26 UTC (2026-11-05 PST)"
+ },
+ "artifact": {
+  "id": 13466566843,
+  "name": "locked-query-live-replay",
+  "digest": "sha256:544675cfa646e5bacfd882f58229fb88a0608f4ee848f7d5d87b2a04ef050b18",
+  "created_at": "2026-11-06T00:27:05Z"
+ },
+ "transfer": "The owner downloaded the artifact zip from the run page and attached it to a Claude session. Its sha256 equals the digest GitHub reports for the artifact. The files are committed unchanged.",
+ "files_sha256": {
+  "DRIFT.txt": "7fe7fafdfff151df2fd599cfa111ea9aaa49e4d53f0da32d80711f76e89c494d",
+  "drift.json": "84da96b362f73e798377a6f4e424154ffe5eec4bbc647d4b9b997663d79953d9",
+  "live-records.jsonl": "761ae81fabe3c403108bb7d16979936417b2d0bde25a776a5f58bee8109e98d2",
+  "responses/q4-default-scored.json": "5e3d9fc62d0001f8e6ad8888df0d3c38114129d73a9c33bdfcf5ceec55282c2b",
+  "responses/q4-explicit-scored.json": "3f21cdd5eea24b99d6e45b2abe33909a770908f582a696db99b7ec864186d956",
+  "responses/q5-default-scored.json": "4583727892c2b2a3522e8ff2b21b44118a35ffc130d17c56e8fc891ebcef4683",
+  "responses/q6-default-scored.json": "aefdf817b6cef3418ef969361d486fde1701bf4c74497b789c60c21d878872ec"
+ },
+ "credentials": "none: no OPENALEX_API_KEY secret was set; every record says credentials none",
+ "other_runs": {
+  "note": "A second dispatch of this set ran 25 s later from the same commit. Its job log prints the same NOT_COMPARED drift lines; scores are not in the log and its artifact is not committed.",
+  "ids": [
+   42136939087
+  ]
+ }
+}

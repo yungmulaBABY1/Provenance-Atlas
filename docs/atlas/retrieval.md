@@ -76,14 +76,18 @@ Results (TESTED, deterministic, offline):
   - The lock says each query is executed once, with retries only on 429/5xx.
   - The first successful response was not kept, so whether the two responses
     differed is unknown.
-- **Ranking not checked.** ADJUDICATION-1 declares OpenAlex relevance ranking,
-  "the default for a search filter". The requests carry no `sort`, and
-  `relevance_score` was not selected, so the ranking actually applied is not
-  checked.
+- **Ranking reported, not recomputed.** ADJUDICATION-1 declares OpenAlex
+  relevance ranking, "the default for a search filter". The requests carry no
+  `sort`, and `relevance_score` was not selected, so the order cannot be
+  recomputed. The provider's own echo in each saved response (`meta.x_query`,
+  now recorded as `provider_echo`) reports "best matches first" (default). That
+  is the declared ranking, as the provider reports it.
 - **Quoted terms.** The Section E lock writes each term in quotes
-  (`F1 "mental fatigue"`), and the requests send them unquoted. The lock does not
-  say whether the quotes mark a phrase or only delimit the term. This is recorded,
-  not resolved.
+  (`F1 "mental fatigue"`), and the requests send them unquoted.
+  - The provider's echo reads them as plain words, "(mental fatigue) in the
+    title", whereas the quoted phrases of ADJUDICATION-1 appear as phrases.
+  - So the executed Section E queries were word matches.
+  - Whether the lock meant phrases is still not stated.
 - **Where the corpus queries are declared.** RECEPTION-1 and RECENT-1 are declared
   in the run output (02c), not in a pre-run lock. Their declared response hashes
   match.
@@ -153,8 +157,23 @@ Its `PLAN.txt` was written before any request and asks three questions:
 - Are ranks 7 and 8 near-tied in Batch 2's Q4–Q6?
 - Does an explicit `sort=relevance_score:desc` match the default order?
 
-It is NOT RUN. Run it with the manual workflow and the set path
-`tests/atlas/retrieval/probe-relevance-2026-11-05/set.json`.
+It was RUN on 2026-11-06 00:27 UTC: GitHub Actions run 42136887560, no key.
+The run is committed in `live-20261106T002702Z/`, and the answers are in
+[`FINDINGS.txt`](../../tests/atlas/retrieval/probe-relevance-2026-11-05/FINDINGS.txt):
+- **Scores returned.** OpenAlex returns `relevance_score` when it is selected.
+- **The swaps are near-ties.** In Q4, Q5 and Q6, ranks 7 and 8 have the
+  smallest adjacent score gap in the top 10: 0.006, 0.048 and 0.065, against
+  top-10 ranges of 13.6–19.1.
+  - The swaps fell exactly at the near-ties.
+  - Why the order changed between 11:28Z and 23:44Z remains open: a small
+    rescoring or the provider's tie-breaking. Grok's saved responses carry no
+    scores.
+- **Explicit sort changes nothing.** An explicit `sort=relevance_score:desc`
+  gives the default order.
+
+Recommendation, not yet applied to any instrument: a relevance-ranked top-N
+should select `relevance_score`, request a few more than N, and record the
+score margin at the cutoff.
 
 ## Live replay
 
@@ -226,7 +245,7 @@ python -m atlas.retrieval run-live <set.json> --out <dir>             # network;
 python -m atlas.retrieval drift <set.json> <live-records.jsonl>       # offline
 ```
 
-Tests: `tests/atlas/test_retrieval.py`, 49 tests.
+Tests: `tests/atlas/test_retrieval.py`, 55 tests.
 - Spec validation: credentials, paging, per-page, host, declaration.
 - Canonical requests and the Provenance #14 digest convention.
 - Tamper detection: response bytes, the declaration, a request that departs from
@@ -241,6 +260,7 @@ Tests: `tests/atlas/test_retrieval.py`, 49 tests.
 - Ranking basis, scores in ranked rows, provider error text.
 - Specs without saved responses.
 - Both reconstruction scripts reproduce their committed files.
+- The probe findings, read from the committed records.
 
 Twenty mutations of the checks were each caught: ten for the first version and
 ten for these additions.
@@ -257,7 +277,7 @@ ten for these additions.
   counts the fields that changed. The 2026-11-05 replay predates this and has
   no bodies.
 - Ranking can be checked only when the sort key is selected (`ranking` in
-  every record). Whether OpenAlex accepts `relevance_score` in `select` is
-  UNKNOWN until the probe runs.
+  every record). OpenAlex accepts `relevance_score` in `select` (probe,
+  2026-11-06).
 - Records are not yet Atlas contract records. Linking them to `CorpusScope`
   and `SourceReadReceipt` is a later increment.

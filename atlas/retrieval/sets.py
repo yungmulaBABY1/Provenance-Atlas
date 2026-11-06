@@ -128,6 +128,10 @@ def report(root: Path, data: dict, records: list[dict], samples: list[dict],
                      f"abstracts {resp['abstracts']}; results digest {resp['results_digest'][:16]}...")
         rank = r["ranking"]
         lines.append(f"  ranking: {rank['basis']}; sort key in response {_flag(rank['checkable'])}")
+        echo = resp.get("provider_echo")
+        if echo:
+            lines.append(f"  provider reads it as (provider-reported): {echo['oql']}; order "
+                         f"'{echo['order']}' (default {_flag(echo['order_default'])})")
         lines.append("  checks: " + "; ".join(f"{k} {_flag(v)}" for k, v in sorted(checks.items())))
         if log:
             lines.append(f"  executor log (executor-written): attempts {log['attempts']} statuses "
