@@ -1,4 +1,9 @@
-"""A set of locked queries from one run: build, check, report and replay live."""
+"""A set of locked queries: build, check, report and replay live.
+
+A set item with a saved response is a query an executor already ran; its record
+is built offline. An item without one is a spec for a future run; only a live
+replay produces a record for it.
+"""
 
 from __future__ import annotations
 
@@ -6,11 +11,16 @@ from pathlib import Path
 import random
 
 from ..contract import ContractError, load_json, sha256
-from . import SET_SCHEMA, VERSION
-from .core import load_spec, to_bytes
+from . import DRIFT_SCHEMA, SET_SCHEMA, VERSION
+from .core import (canonical_request, declared_checks, load_spec, ranking_basis, response_summary,
+                   to_bytes, without_abstracts)
 from .drift import compare, render
 from .live import run_live
-from .saved import record_saved
+from .saved import read_log, record_saved
+
+LIVE_FILES = ("live-records.jsonl", "drift.json", "DRIFT.txt")
+ALLOWED_CREDENTIALS = {"none", "api key sent in Authorization header; value not recorded"}
+SAMPLE_KINDS = {"random", "census"}
 
 
 def load_set(path: Path) -> dict:
@@ -22,6 +32,9 @@ def load_set(path: Path) -> dict:
     for item in data["items"]:
         if not isinstance(item, dict) or not isinstance(item.get("spec"), str):
             raise ContractError("INVALID_SET: each item needs a spec path")
+    for check in data.get("sample_checks", []):
+        if check.get("kind", "random") not in SAMPLE_KINDS:
+            raise ContractError(f"INVALID_SET: sample kind must be one of {sorted(SAMPLE_KINDS)}")
     return data
 
 
@@ -36,21 +49,34 @@ def specs(set_path: Path, data: dict) -> list[tuple[dict, dict, str]]:
     return out
 
 
+def body_name(spec_id: str) -> str:
+    return f"responses/{spec_id.rsplit('/', 1)[-1]}.json"
+
+
 def sample_check(check: dict, records: dict[str, dict], root: Path) -> dict:
-    record = records[check["spec_id"]]
-    ranked = record["response"]["ranked"]
-    rng = random.Random(check["seed"])
-    positions = sorted(rng.sample(range(1, check["population"] + 1), check["k"]))
-    ids = [ranked[p - 1]["id"] for p in positions] if positions[-1] <= len(ranked) else None
+    ranked = records[check["spec_id"]]["response"]["ranked"]
     declared = check["declared"]
     text = (root / declared["path"]).read_bytes()
-    return {"name": check["name"], "spec_id": check["spec_id"],
-            "rule": f"python random.Random({check['seed']}).sample(range(1, {check['population'] + 1}), "
-                    f"{check['k']}), sorted",
-            "positions": positions, "ids": ids,
-            "declared_file_sha256_matches": sha256(text) == declared["sha256"],
-            "positions_match_declared": positions == declared["positions"],
-            "ids_match_declared": ids == declared["ids"]}
+    if check.get("kind", "random") == "census":
+        positions = list(range(1, len(ranked) + 1))
+        rule = "census: every ranked member"
+    else:
+        rng = random.Random(check["seed"])
+        positions = sorted(rng.sample(range(1, check["population"] + 1), check["k"]))
+        rule = (f"python random.Random({check['seed']}).sample(range(1, {check['population'] + 1}), "
+                f"{check['k']}), sorted")
+    ids = [ranked[p - 1]["id"] for p in positions] if positions and positions[-1] <= len(ranked) else None
+    result = {"name": check["name"], "spec_id": check["spec_id"], "rule": rule,
+              "positions": positions, "ids": ids,
+              "declared_file_sha256_matches": sha256(text) == declared["sha256"],
+              "ids_match_declared": ids == declared["ids"]}
+    if "positions" in declared:
+        result["positions_match_declared"] = positions == declared["positions"]
+    return result
+
+
+def sample_reproduces(s: dict) -> bool:
+    return s["ids_match_declared"] and s.get("positions_match_declared", True)
 
 
 def build_saved(root: Path, set_path: Path) -> tuple[list[dict], list[dict]]:
@@ -58,7 +84,7 @@ def build_saved(root: Path, set_path: Path) -> tuple[list[dict], list[dict]]:
     records = []
     for item, spec, spec_sha in specs(set_path, data):
         if "response" not in item:
-            raise ContractError(f"INVALID_SET: {spec['id']} has no saved response")
+            continue
         records.append(record_saved(root, spec, spec_sha, item["response"],
                                     item.get("executor_log"), item.get("log_file_key")))
     by_id = {r["id"]: r for r in records}
@@ -71,10 +97,11 @@ def jsonl(records: list[dict]) -> bytes:
 
 
 def _flag(value) -> str:
-    return {True: "yes", False: "NO", None: "n/a"}[value]
+    return {True: "yes", False: "NO", None: "n/a"}.get(value, str(value))
 
 
-def report(data: dict, records: list[dict], samples: list[dict]) -> str:
+def report(root: Path, data: dict, records: list[dict], samples: list[dict],
+           unsaved: list[str]) -> str:
     lines = [f"RETRIEVAL CHECK: {data['id']}",
              f"Generated by atlas.retrieval {VERSION} from committed files. Deterministic.",
              "", data.get("description", "").strip(), "",
@@ -85,6 +112,13 @@ def report(data: dict, records: list[dict], samples: list[dict]) -> str:
              "relevant. For specs reconstructed after the run from the executor's log,",
              "'request matches log' holds by construction. The independent comparison is between",
              "the declared terms and the request.", ""]
+    logs = sorted({item["executor_log"] for item in data["items"] if item.get("executor_log")})
+    for log in logs:
+        _, malformed = read_log(root / log)
+        lines.append(f"Executor log {log}: malformed lines "
+                     f"{malformed if malformed else 'none'} (reported, not repaired).")
+    if logs:
+        lines.append("")
     for r in records:
         resp, checks, log = r["response"], r["checks"], r.get("executor_log") or {}
         lines.append(f"{r['id']}  [{r['status']}]  provenance {r['provenance']}")
@@ -92,13 +126,15 @@ def report(data: dict, records: list[dict], samples: list[dict]) -> str:
                      f"response file sha256 {resp['file_sha256'][:16]}...")
         lines.append(f"  results {resp['n_results']} of count {resp['meta']['count']}; "
                      f"abstracts {resp['abstracts']}; results digest {resp['results_digest'][:16]}...")
+        rank = r["ranking"]
+        lines.append(f"  ranking: {rank['basis']}; sort key in response {_flag(rank['checkable'])}")
         lines.append("  checks: " + "; ".join(f"{k} {_flag(v)}" for k, v in sorted(checks.items())))
         if log:
             lines.append(f"  executor log (executor-written): attempts {log['attempts']} statuses "
                          f"{log['statuses']}; re-executed after success {_flag(log['re_executed_after_success'])}; "
                          f"credential params logged {log['credential_params_logged'] or 'none'}"
-                         + (f"; declared before first attempt {_flag(log['declared_before_first_attempt'])}"
-                            if "declared_before_first_attempt" in log else ""))
+                         + (f"; declaration vs first attempt {log['declared_vs_first_attempt']}"
+                            if "declared_vs_first_attempt" in log else ""))
         missing = r.get("missing_terms") or {}
         for where in ("declaration", "request"):
             for term in missing.get(where, []):
@@ -106,25 +142,34 @@ def report(data: dict, records: list[dict], samples: list[dict]) -> str:
         for note in r.get("notes", []):
             lines.append(f"  note: {note}")
         lines.append("")
+    for spec_id, spec, declared in unsaved:
+        lines.append(f"{spec_id}  [NO SAVED RESPONSE]  provenance {spec['provenance']}; "
+                     f"only a live replay records it")
+        rank = ranking_basis(spec)
+        lines.append(f"  request sha256 {sha256(canonical_request(spec).encode('utf-8'))[:16]}...; ranking: "
+                     f"{rank['basis']}; sort key in response {_flag(rank['checkable'])}")
+        missing = declared.pop("missing")
+        lines.append("  checks: " + "; ".join(f"{k} {_flag(v)}" for k, v in sorted(declared.items())))
+        for where in ("declaration", "request"):
+            for term in missing.get(where, []):
+                lines.append(f"  MISSING in {where}: {term}")
+        lines.append("")
     for s in samples:
         lines.append(f"SAMPLE {s['name']} ({s['spec_id']}): {s['rule']}")
-        lines.append(f"  positions {s['positions']}; matches declared {_flag(s['positions_match_declared'])}; "
-                     f"ids match declared {_flag(s['ids_match_declared'])}; declaration hash "
-                     f"{_flag(s['declared_file_sha256_matches'])}")
+        lines.append(f"  positions {s['positions']}; matches declared "
+                     f"{_flag(s.get('positions_match_declared'))}; ids match declared "
+                     f"{_flag(s['ids_match_declared'])}; declaration hash {_flag(s['declared_file_sha256_matches'])}")
     statuses = [r["status"] for r in records]
-    lines += ["", f"SUMMARY: {len(records)} queries; {statuses.count('CONSISTENT')} consistent, "
+    lines += ["", f"SUMMARY: {len(records)} saved queries; {statuses.count('CONSISTENT')} consistent, "
               f"{statuses.count('INCONSISTENT')} inconsistent; "
               f"{sum(1 for r in records if (r.get('executor_log') or {}).get('re_executed_after_success'))} "
-              f"re-executed after a success; {len(samples)} sample checks, "
-              f"{sum(1 for s in samples if s['positions_match_declared'] and s['ids_match_declared'])} reproduce."]
+              f"re-executed after a success; {len(unsaved)} without a saved response; "
+              f"{len(samples)} sample checks, {sum(1 for s in samples if sample_reproduces(s))} reproduce."]
     return "\n".join(lines) + "\n"
 
 
 def attach_notes(set_path: Path, data: dict, records: list[dict]) -> None:
-    notes = {}
-    for item, spec, _ in specs(set_path, data):
-        if spec.get("notes"):
-            notes[spec["id"]] = spec["notes"]
+    notes = {spec["id"]: spec["notes"] for _, spec, _ in specs(set_path, data) if spec.get("notes")}
     for r in records:
         if r["id"] in notes:
             r["notes"] = notes[r["id"]]
@@ -134,42 +179,115 @@ def outputs(root: Path, set_path: Path) -> dict[Path, bytes]:
     data = load_set(set_path)
     records, samples = build_saved(root, set_path)
     attach_notes(set_path, data, records)
+    saved_ids = {r["id"] for r in records}
+    unsaved = [(spec["id"], spec, declared_checks(root, spec))
+               for _, spec, _ in specs(set_path, data) if spec["id"] not in saved_ids]
     out = data.get("outputs", {})
     base = set_path.parent
     return {base / out.get("saved_records", "saved-records.jsonl"): jsonl(records),
             base / out.get("samples", "samples.json"): to_bytes(samples),
-            base / out.get("report", "REPORT.txt"): report(data, records, samples).encode("utf-8")}
+            base / out.get("report", "REPORT.txt"): report(root, data, records, samples,
+                                                          unsaved).encode("utf-8")}
 
 
-LIVE_FILES = ("live-records.jsonl", "drift.json", "DRIFT.txt")
-ALLOWED_CREDENTIALS = {"none", "api key sent in Authorization header; value not recorded"}
+def _no_saved(after: dict) -> dict:
+    return {"schema": DRIFT_SCHEMA, "id": after["id"], "before": None,
+            "after": {"mode": after["mode"]}, "status": "NOT_COMPARED",
+            "reason": "no saved record for this spec"}
+
+
+def _saved_body(root: Path, record: dict) -> dict:
+    return load_json((root / record["response"]["file"]).read_bytes())
+
+
+def run_live_set(root: Path, set_path: Path, out_dir: Path, *, api_key: str | None = None,
+                 **kwargs) -> dict[Path, bytes]:
+    """Live replay of every spec. Response bodies are kept without abstracts. Drift is
+    computed against saved records where they exist."""
+    data = load_set(set_path)
+    saved, _ = build_saved(root, set_path)
+    by_id = {r["id"]: r for r in saved}
+    live, drifts, files = [], [], {}
+    for item, spec, spec_sha in specs(set_path, data):
+        record, body = run_live(spec, spec_sha, api_key=api_key, **kwargs)
+        kept = None
+        if body is not None:
+            kept = without_abstracts(body)
+            name = body_name(spec["id"])
+            files[out_dir / name] = to_bytes(kept)
+            record["response"]["body_file"] = name
+            record["response"]["body_file_sha256"] = sha256(files[out_dir / name])
+        live.append(record)
+        if spec["id"] in by_id:
+            before = by_id[spec["id"]]
+            drifts.append(compare(before, record, _saved_body(root, before), kept))
+        else:
+            drifts.append(_no_saved(record))
+    files[out_dir / "live-records.jsonl"] = jsonl(live)
+    files[out_dir / "drift.json"] = to_bytes(drifts)
+    files[out_dir / "DRIFT.txt"] = render(drifts).encode("utf-8")
+    if api_key and any(api_key.encode() in b for b in files.values()):
+        raise ContractError("SECRET_IN_OUTPUT")
+    return files
+
+
+def drift_from_files(root: Path, set_path: Path, live_records: Path) -> dict[Path, bytes]:
+    """Recompute drift from committed live records (deterministic, no network)."""
+    saved, _ = build_saved(root, set_path)
+    by_id = {r["id"]: r for r in saved}
+    base = live_records.parent
+    live = [load_json(line.encode()) for line in live_records.read_text(encoding="utf-8").splitlines()
+            if line.strip()]
+    drifts = []
+    for r in live:
+        if r["id"] not in by_id:
+            drifts.append(_no_saved(r))
+            continue
+        body_file = (r.get("response") or {}).get("body_file")
+        after_body = load_json((base / body_file).read_bytes()) if body_file else None
+        before_body = _saved_body(root, by_id[r["id"]]) if body_file else None
+        drifts.append(compare(by_id[r["id"]], r, before_body, after_body))
+    return {base / "drift.json": to_bytes(drifts), base / "DRIFT.txt": render(drifts).encode("utf-8")}
 
 
 def check_live_dir(root: Path, set_path: Path, live_dir: Path) -> list[str]:
-    """A committed replay: its files match its provenance hashes, its records are
-    of this set's current specs, and its drift recomputes byte for byte."""
-    problems = []
+    """A committed replay: every file matches its provenance hash, its records are of
+    this set's current specs, kept bodies match their records, and its drift
+    recomputes byte for byte."""
     prov_path = live_dir / "PROVENANCE.json"
     if not prov_path.is_file():
         return [f"MISSING_PROVENANCE: {live_dir}"]
-    prov = load_json(prov_path.read_bytes())
-    for name in LIVE_FILES:
-        path = live_dir / name
-        if not path.is_file():
-            problems.append(f"MISSING_OUTPUT: {path}")
-        elif sha256(path.read_bytes()) != prov.get("files_sha256", {}).get(name):
-            problems.append(f"CHANGED_REPLAY_FILE: {path} does not match its provenance hash")
+    pinned = load_json(prov_path.read_bytes()).get("files_sha256", {})
+    present = {p.relative_to(live_dir).as_posix() for p in live_dir.rglob("*")
+               if p.is_file() and p.name != "PROVENANCE.json"}
+    problems = [f"UNPINNED_FILE: {live_dir / n}" for n in sorted(present - set(pinned))]
+    problems += [f"MISSING_OUTPUT: {live_dir / n}" for n in sorted(set(pinned) - present)]
+    problems += [f"MISSING_OUTPUT: {live_dir / n}" for n in LIVE_FILES if n not in present]
+    for name in sorted(present & set(pinned)):
+        if sha256((live_dir / name).read_bytes()) != pinned[name]:
+            problems.append(f"CHANGED_REPLAY_FILE: {live_dir / name} does not match its provenance hash")
     if problems:
         return problems
     current = {spec["id"]: sha for _, spec, sha in specs(set_path, load_set(set_path))}
     for line in (live_dir / "live-records.jsonl").read_text(encoding="utf-8").splitlines():
         record = load_json(line.encode("utf-8"))
+        rid = record.get("id")
         if record.get("mode") != "live":
-            problems.append(f"NOT_A_LIVE_RECORD: {record.get('id')}")
-        if current.get(record.get("id")) != record.get("spec_sha256"):
-            problems.append(f"SPEC_CHANGED_SINCE_REPLAY: {record.get('id')}")
+            problems.append(f"NOT_A_LIVE_RECORD: {rid}")
+        if current.get(rid) != record.get("spec_sha256"):
+            problems.append(f"SPEC_CHANGED_SINCE_REPLAY: {rid}")
         if record.get("request", {}).get("credentials") not in ALLOWED_CREDENTIALS:
-            problems.append(f"UNEXPECTED_CREDENTIAL_FIELD: {record.get('id')}")
+            problems.append(f"UNEXPECTED_CREDENTIAL_FIELD: {rid}")
+        response = record.get("response") or {}
+        if response.get("body_file"):
+            body = load_json((live_dir / response["body_file"]).read_bytes())
+            summary = response_summary(body)
+            if (summary["ranked"] != response["ranked"]
+                    or summary["response_digest"] != response["response_digest"]
+                    or sha256((live_dir / response["body_file"]).read_bytes()) != response["body_file_sha256"]):
+                problems.append(f"BODY_DOES_NOT_MATCH_RECORD: {rid}")
+            if summary["abstracts"] == "PRESENT":
+                problems.append(f"ABSTRACT_IN_KEPT_BODY: {rid}")
     if problems:
         return problems
     for path, expected in drift_from_files(root, set_path, live_dir / "live-records.jsonl").items():
@@ -188,34 +306,3 @@ def check(root: Path, set_path: Path) -> list[str]:
     for live_dir in sorted(p for p in set_path.parent.glob("live-*") if p.is_dir()):
         problems += check_live_dir(root, set_path, live_dir)
     return problems
-
-
-def run_live_set(root: Path, set_path: Path, out_dir: Path, *, api_key: str | None = None,
-                 **kwargs) -> dict[Path, bytes]:
-    """Live replay of every spec, then drift against the committed saved records."""
-    data = load_set(set_path)
-    saved, _ = build_saved(root, set_path)
-    by_id = {r["id"]: r for r in saved}
-    live, drifts = [], []
-    for item, spec, spec_sha in specs(set_path, data):
-        record, _ = run_live(spec, spec_sha, api_key=api_key, **kwargs)
-        live.append(record)
-        drifts.append(compare(by_id[spec["id"]], record))
-    files = {out_dir / "live-records.jsonl": jsonl(live),
-             out_dir / "drift.json": to_bytes(drifts),
-             out_dir / "DRIFT.txt": render(drifts).encode("utf-8")}
-    if api_key and any(api_key.encode() in b for b in files.values()):
-        raise ContractError("SECRET_IN_OUTPUT")
-    return files
-
-
-def drift_from_files(root: Path, set_path: Path, live_records: Path) -> dict[Path, bytes]:
-    """Recompute drift from committed live records (deterministic, no network)."""
-    saved, _ = build_saved(root, set_path)
-    by_id = {r["id"]: r for r in saved}
-    live = [load_json(line.encode()) for line in live_records.read_text(encoding="utf-8").splitlines()
-            if line.strip()]
-    drifts = [compare(by_id[r["id"]], r) for r in live]
-    base = live_records.parent
-    return {base / "drift.json": to_bytes(drifts), base / "DRIFT.txt": render(drifts).encode("utf-8")}
-

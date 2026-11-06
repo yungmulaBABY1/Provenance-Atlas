@@ -69,7 +69,10 @@ A readable local report is enough. A model-generated conclusion remains provisio
   Actions run 42131614466) prepared on branch x1-live-replay-2026-11-05:
   - membership is identical for all 14 queries;
   - 3 rank swaps, cause unknown.
-  See docs/atlas/retrieval.md.
+  Branch x1-bodies-relevance-oster adds the Oster set (9 of 11 consistent;
+  the two corpus queries were declared with referenced_works and run with
+  cites), kept response bodies, and a relevance probe declared before any
+  run (not run). See docs/atlas/retrieval.md.
 
 YOU DO NOT NEED TO DECIDE NOW: cloud host, graph database, framework, agent fleet,
 bot interface, provider catalog, pricing, public launch or every future method.

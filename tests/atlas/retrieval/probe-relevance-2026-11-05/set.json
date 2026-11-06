@@ -1,0 +1,24 @@
+{
+ "schema": "atlas-retrieval-set/0.1",
+ "id": "probe-relevance-2026-11-05",
+ "description": "Probe declared in PLAN.txt before any request: does OpenAlex return relevance_score when selected, and are ranks 7 and 8 near-tied in Batch 2's ADJUDICATION-1 Q4-Q6? No saved responses; only a live replay records these specs.",
+ "items": [
+  {
+   "spec": "specs/q4-default-scored.json"
+  },
+  {
+   "spec": "specs/q4-explicit-scored.json"
+  },
+  {
+   "spec": "specs/q5-default-scored.json"
+  },
+  {
+   "spec": "specs/q6-default-scored.json"
+  }
+ ],
+ "outputs": {
+  "saved_records": "saved-records.jsonl",
+  "samples": "samples.json",
+  "report": "REPORT.txt"
+ }
+}

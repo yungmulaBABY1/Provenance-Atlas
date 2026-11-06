@@ -35,8 +35,12 @@ successful attempt still produces a record, with status `FAILED`.
     years;
   - response digest and results digest;
   - abstract state: `ABSENT`, `STRIPPED` or `PRESENT`;
+  - `ranking`: what decides the order, and whether the response carries that
+    key (`checkable`);
   - named checks, and observations from the executor log, labeled
-    executor-written.
+    executor-written;
+  - in live records, the kept body (`body_file`, without abstracts) and, for
+    errors, the provider's error text (first 300 characters).
 - The **response digest** follows the SEARCH_DIGESTS convention in Provenance #14:
   sha256 of canonical JSON with every `abstract_inverted_index` key removed.
   Stripping an abstract therefore never changes it. The **results digest** covers
@@ -95,6 +99,62 @@ What this does not show:
 The specs were **reconstructed after the run** from the executor's log, so
 "request matches log" holds by construction. The independent comparison is
 between the declared terms and the request.
+
+## Second set: Batch 1 (Oster 2005)
+
+The set is [`tests/atlas/retrieval/oster-batch1/`](../../tests/atlas/retrieval/oster-batch1/).
+It covers eleven OpenAlex page-1 queries from the run merged in #16:
+- ADJUDICATION-1 Q1–Q5;
+- Section E F1–F4;
+- RECEPTION-1 and RECENT-1.
+
+It also holds the RECEPTION-1 sample redraw and the RECENT-1 census.
+
+Results (TESTED, deterministic, offline):
+- **9 of 11 consistent.**
+- **2 inconsistent: RECEPTION-1 and RECENT-1.** The run output declares
+  `filter=referenced_works:W3123222584` and `per_page`. The executed requests used
+  `filter=cites:W3123222584` and `per-page`.
+  - OpenAlex documents `cites:W` as the works that have W in their
+    `referenced_works`, so the two may select the same works. That equivalence
+    is not tested here.
+  - The declared response hashes match the committed files.
+  - The mismatch is in how the query was written down, and it is recorded, not
+    resolved.
+- **Same-second lock (secE-F1).** The Section E lock time and the first attempt
+  fall in the same second (10:29:05Z, both executor-written). Their order cannot
+  be established at one-second resolution. That attempt was the first of eleven
+  429s before a success.
+- **Malformed log line.** Line 25 of the executor's log is not valid JSON
+  (`"status":000`, a PDF fetch). It is reported and not repaired. It does not
+  concern these queries.
+- **The sample and the census reproduce.**
+- Unlike Batch 2's, these logged requests carry no `mailto`.
+
+## Reconstructing specs
+
+Each reconstructed set has a `reconstruct_specs.py`. It rebuilds the specs and
+`set.json` from the executor's log (`atlas.retrieval.reconstruct`), together
+with the declared terms, which were copied by hand into the script. A test
+reruns both scripts and requires byte-identical output.
+
+## Specs for a future run
+
+A set item may have no saved response. Such a spec is meant to be locked before
+any run, and only a live replay records it:
+- `build` checks its declaration (hash and terms);
+- `run-live` records it;
+- its drift is `NOT_COMPARED` ("no saved record").
+
+The first example is
+[`tests/atlas/retrieval/probe-relevance-2026-11-05/`](../../tests/atlas/retrieval/probe-relevance-2026-11-05/).
+Its `PLAN.txt` was written before any request and asks three questions:
+- Does OpenAlex return `relevance_score` when it is selected?
+- Are ranks 7 and 8 near-tied in Batch 2's Q4–Q6?
+- Does an explicit `sort=relevance_score:desc` match the default order?
+
+It is NOT RUN. Run it with the manual workflow and the set path
+`tests/atlas/retrieval/probe-relevance-2026-11-05/set.json`.
 
 ## Live replay
 
@@ -166,7 +226,7 @@ python -m atlas.retrieval run-live <set.json> --out <dir>             # network;
 python -m atlas.retrieval drift <set.json> <live-records.jsonl>       # offline
 ```
 
-Tests: `tests/atlas/test_retrieval.py`, 36 tests.
+Tests: `tests/atlas/test_retrieval.py`, 49 tests.
 - Spec validation: credentials, paging, per-page, host, declaration.
 - Canonical requests and the Provenance #14 digest convention.
 - Tamper detection: response bytes, the declaration, a request that departs from
@@ -175,8 +235,15 @@ Tests: `tests/atlas/test_retrieval.py`, 36 tests.
 - Retry policy, the key never recorded, drift statuses.
 - The committed replay: file hashes, a spec changed since the replay, an edited
   record, the credential field, missing provenance.
+- Kept bodies: no abstracts, field-change counts, an edited body, an unpinned
+  file.
+- The Oster findings, the census, the malformed log line, same-second ordering.
+- Ranking basis, scores in ranked rows, provider error text.
+- Specs without saved responses.
+- Both reconstruction scripts reproduce their committed files.
 
-Ten mutations of the checks were each caught.
+Twenty mutations of the checks were each caught: ten for the first version and
+ten for these additions.
 
 ## Limits and next steps
 
@@ -184,12 +251,13 @@ Ten mutations of the checks were each caught.
   written and hashed **before** the run, which is the AuditPlan in
   `claude/Execution_Interface_and_Hosting_Review_2026-11-05.txt`. The executor
   or this code then runs it.
-- Batch 1 (Oster) has the same layout. Its set can be added once #16 is merged.
 - One provider so far: OpenAlex. OpenCitations would give a second, independent
   citation graph.
-- Live records keep ranked summaries, not response bodies. Keeping the body
-  (CC0 metadata, abstracts excluded) would show which fields changed.
-- Selecting `relevance_score` in future relevance-ranked specs would make
-  ranking checkable.
+- Response bodies are kept, without abstracts, under `responses/`, and drift
+  counts the fields that changed. The 2026-11-05 replay predates this and has
+  no bodies.
+- Ranking can be checked only when the sort key is selected (`ranking` in
+  every record). Whether OpenAlex accepts `relevance_score` in `select` is
+  UNKNOWN until the probe runs.
 - Records are not yet Atlas contract records. Linking them to `CorpusScope`
   and `SourceReadReceipt` is a later increment.

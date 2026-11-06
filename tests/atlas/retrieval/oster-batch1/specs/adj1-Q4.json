@@ -1,0 +1,46 @@
+{
+ "schema": "atlas-retrieval-spec/0.1",
+ "id": "oster-2005-batch1/adj1-Q4",
+ "provider": "openalex",
+ "endpoint": "https://api.openalex.org/works",
+ "params": [
+  [
+   "filter",
+   "title_and_abstract.search:(\"sex ratio at birth\" OR \"missing women\") AND (\"life expectancy\" OR \"natural sex ratio\" OR \"biological\"),from_publication_date:1980-01-01,to_publication_date:2026-11-05,type:article|preprint|book-chapter"
+  ],
+  [
+   "per-page",
+   "10"
+  ],
+  [
+   "select",
+   "id,doi,display_name,publication_year,type,cited_by_count,authorships,primary_location,referenced_works"
+  ]
+ ],
+ "pages": "first-only",
+ "provenance": "reconstructed-after-run",
+ "reconstructed_from": {
+  "executor_log": "examples/research/oster-hepatitis-b/logs/retrieval_log.jsonl",
+  "line": 40,
+  "method": "parameters of the last successful logged request, mailto removed; declared terms copied from the declaration by hand (Claude, 2026-11-05)"
+ },
+ "declared": {
+  "path": "examples/research/oster-hepatitis-b/citation-network-v2cand3/lock/ADJUDICATION-1_search_record.md",
+  "sha256": "aeead2c9ebc5cdbb6004693fb7109093654184fd3412ad2792e11c576baa97f8",
+  "kind": "pre-run-lock",
+  "locked_at": "2026-11-05T10:24:54Z",
+  "locked_at_source": "examples/research/oster-hepatitis-b/citation-network-v2cand3/lock/ADJUDICATION-1_lock.txt (executor-written)",
+  "requires": [
+   "title_and_abstract.search",
+   "(\"sex ratio at birth\" OR \"missing women\") AND (\"life expectancy\" OR \"natural sex ratio\" OR \"biological\")",
+   "from_publication_date:1980-01-01",
+   "to_publication_date:2026-11-05",
+   "type:article|preprint|book-chapter",
+   "per-page=10",
+   "select=id,doi,display_name,publication_year,type,cited_by_count,authorships,primary_location,referenced_works"
+  ]
+ },
+ "notes": [
+  "Declared ranking is OpenAlex relevance, 'the default for a search filter'. The request has no sort parameter and relevance_score was not selected, so the ranking actually applied is not checked here."
+ ]
+}

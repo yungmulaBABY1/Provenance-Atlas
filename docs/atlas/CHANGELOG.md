@@ -1,5 +1,34 @@
 # Atlas adapter changelog
 
+## Unreleased — Oster set, kept bodies, relevance probe (`atlas.retrieval`)
+
+- **Second set** `tests/atlas/retrieval/oster-batch1/`: Batch 1's eleven
+  OpenAlex page-1 queries (#16).
+  - 9 consistent.
+  - RECEPTION-1 and RECENT-1 inconsistent: declared `referenced_works:`/`per_page`,
+    executed `cites:`/`per-page`. Possibly equivalent; not tested.
+  - Lock and first attempt in the same second (secE-F1).
+  - Malformed executor-log line 25, reported.
+  - The sample and the census reproduce.
+- **Kept bodies.** Live replays now keep response bodies, without abstracts, under
+  `responses/`. Drift counts the fields that changed in works present both times.
+- **Ranking and error text.** Records carry `ranking`, which says whether the
+  sort key is in the response. Ranked rows carry `score` when the provider
+  returns `relevance_score`. HTTP errors record the provider's error text.
+- **Specs without saved responses** (for future runs): declarations are checked
+  at build, and drift is `NOT_COMPARED`. First use: the
+  `probe-relevance-2026-11-05` set, with `PLAN.txt` written before any request.
+  Not run.
+- **Replay checks.** `check` now pins every file in a committed replay and
+  verifies kept bodies against their records.
+- **Log reading.** The executor-log reader reports malformed lines instead of
+  failing. Declaration-vs-attempt order is now `before`, `same-second` or
+  `after`; it was a boolean. Batch 2's outputs were rebuilt accordingly.
+- **Reconstruction.** `reconstruct_specs.py` for both sets and
+  `atlas.retrieval.reconstruct`. Batch 2's specs are byte-identical to the
+  committed ones, so the committed replay still checks.
+- 13 new tests.
+
 ## Unreleased — first live replay committed (`atlas.retrieval`)
 
 - `tests/atlas/retrieval/baumeister-batch2/live-20261105T234403Z/`: the

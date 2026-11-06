@@ -11,25 +11,37 @@ from pathlib import Path
 
 from ..contract import ContractError, load_json, sha256
 from . import RECORD_SCHEMA, VERSION
-from .core import (canonical_request, check_page_policy, declared_checks, response_summary,
-                   url_params)
+from .core import (canonical_request, check_page_policy, declared_checks, ranking_basis,
+                   response_summary, url_params)
 
 SUCCESS = 200
 
 
-def read_log(path: Path) -> list[dict]:
-    entries = []
+def read_log(path: Path) -> tuple[list[dict], list[int]]:
+    """(entries, numbers of lines that are not JSON objects). A malformed line is
+    reported, not repaired, and does not stop the read."""
+    entries, malformed = [], []
     for number, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
         if not line.strip():
             continue
         try:
             entry = json.loads(line)
-        except ValueError as exc:
-            raise ContractError(f"INVALID_EXECUTOR_LOG: line {number}: {exc}") from exc
-        if isinstance(entry, dict):
-            entry["_line"] = number
-            entries.append(entry)
-    return entries
+        except ValueError:
+            malformed.append(number)
+            continue
+        if not isinstance(entry, dict):
+            malformed.append(number)
+            continue
+        entry["_line"] = number
+        entries.append(entry)
+    return entries, malformed
+
+
+def order(declared_at: str, attempted_at: str) -> str:
+    """Order of two executor-written UTC timestamps at one-second resolution."""
+    if declared_at < attempted_at:
+        return "before"
+    return "same-second" if declared_at == attempted_at else "after"
 
 
 def log_summary(entries: list[dict], file_key: str, spec: dict) -> tuple[dict, dict, str | None]:
@@ -80,14 +92,14 @@ def record_saved(root: Path, spec: dict, spec_sha256: str, response: str,
         checks["declared_response_sha256_matches"] = sha256(data) == declared_response
     observations = None
     if executor_log:
-        log_checks, observations, logged_sha = log_summary(read_log(root / executor_log),
-                                                           log_file_key, spec)
+        entries, _ = read_log(root / executor_log)
+        log_checks, observations, logged_sha = log_summary(entries, log_file_key, spec)
         checks.update(log_checks)
         checks["file_matches_logged_sha256"] = logged_sha == sha256(data)
         locked_at = spec["declared"].get("locked_at")
         if locked_at and observations["first_attempt_at"]:
             # Both timestamps are written by the executor; only their order is compared.
-            observations["declared_before_first_attempt"] = locked_at < observations["first_attempt_at"]
+            observations["declared_vs_first_attempt"] = order(locked_at, observations["first_attempt_at"])
     failed = sorted(k for k, v in checks.items() if v is False)
     return {
         "schema": RECORD_SCHEMA,
@@ -98,6 +110,7 @@ def record_saved(root: Path, spec: dict, spec_sha256: str, response: str,
                     "request_sha256": sha256(canonical_request(spec).encode("utf-8")),
                     "credentials": "none recorded"},
         "mode": "saved-response",
+        "ranking": ranking_basis(spec),
         "retrieval_performed_by": "executor",
         "checked_by": f"atlas.retrieval {VERSION}",
         "response": dict(summary, file=response, file_sha256=sha256(data)),

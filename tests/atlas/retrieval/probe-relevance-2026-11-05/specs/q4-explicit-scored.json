@@ -1,0 +1,37 @@
+{
+ "schema": "atlas-retrieval-spec/0.1",
+ "id": "probe-relevance-2026-11-05/q4-explicit-scored",
+ "provider": "openalex",
+ "endpoint": "https://api.openalex.org/works",
+ "params": [
+  [
+   "filter",
+   "title_and_abstract.search:\"ego depletion\" AND (motivation OR \"process model\" OR \"opportunity cost\"),from_publication_date:1998-01-01,to_publication_date:2026-11-05,type:article|preprint|book-chapter|review"
+  ],
+  [
+   "per-page",
+   "10"
+  ],
+  [
+   "sort",
+   "relevance_score:desc"
+  ],
+  [
+   "select",
+   "id,display_name,publication_year,cited_by_count,relevance_score"
+  ]
+ ],
+ "pages": "first-only",
+ "provenance": "locked-before-run",
+ "declared": {
+  "path": "tests/atlas/retrieval/probe-relevance-2026-11-05/PLAN.txt",
+  "sha256": "3a0e949040f71988cdac7d4aa83144f008cdd93bd81c83a8263096a0d21761fd",
+  "kind": "pre-run-lock",
+  "requires": [
+   "title_and_abstract.search:\"ego depletion\" AND (motivation OR \"process model\" OR \"opportunity cost\"),from_publication_date:1998-01-01,to_publication_date:2026-11-05,type:article|preprint|book-chapter|review",
+   "per-page=10",
+   "select=id,display_name,publication_year,cited_by_count,relevance_score",
+   "sort=relevance_score:desc"
+  ]
+ }
+}

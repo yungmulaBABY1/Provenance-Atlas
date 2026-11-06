@@ -1,0 +1,136 @@
+{
+ "schema": "atlas-retrieval-set/0.1",
+ "id": "oster-2005-batch1",
+ "description": "Batch 1 (Oster 2005, hepatitis B and sex ratios), citation-network v2-candidate.3, Grok Bot run merged in Provenance-Atlas #16. Eleven OpenAlex page-1 queries the run executed and saved: ADJUDICATION-1 Q1-Q5, Section E F1-F4, RECEPTION-1 and RECENT-1. Specs were reconstructed after the run; see each spec's reconstructed_from.",
+ "items": [
+  {
+   "spec": "specs/adj1-Q1.json",
+   "response": "examples/research/oster-hepatitis-b/citation-network-v2cand3/raw/adj1_Q1.json",
+   "executor_log": "examples/research/oster-hepatitis-b/logs/retrieval_log.jsonl",
+   "log_file_key": "raw/adj1_Q1.json"
+  },
+  {
+   "spec": "specs/adj1-Q2.json",
+   "response": "examples/research/oster-hepatitis-b/citation-network-v2cand3/raw/adj1_Q2.json",
+   "executor_log": "examples/research/oster-hepatitis-b/logs/retrieval_log.jsonl",
+   "log_file_key": "raw/adj1_Q2.json"
+  },
+  {
+   "spec": "specs/adj1-Q3.json",
+   "response": "examples/research/oster-hepatitis-b/citation-network-v2cand3/raw/adj1_Q3.json",
+   "executor_log": "examples/research/oster-hepatitis-b/logs/retrieval_log.jsonl",
+   "log_file_key": "raw/adj1_Q3.json"
+  },
+  {
+   "spec": "specs/adj1-Q4.json",
+   "response": "examples/research/oster-hepatitis-b/citation-network-v2cand3/raw/adj1_Q4.json",
+   "executor_log": "examples/research/oster-hepatitis-b/logs/retrieval_log.jsonl",
+   "log_file_key": "raw/adj1_Q4.json"
+  },
+  {
+   "spec": "specs/adj1-Q5.json",
+   "response": "examples/research/oster-hepatitis-b/citation-network-v2cand3/raw/adj1_Q5.json",
+   "executor_log": "examples/research/oster-hepatitis-b/logs/retrieval_log.jsonl",
+   "log_file_key": "raw/adj1_Q5.json"
+  },
+  {
+   "spec": "specs/secE-F1.json",
+   "response": "examples/research/oster-hepatitis-b/citation-network-v2cand3/raw/secE_F1.json",
+   "executor_log": "examples/research/oster-hepatitis-b/logs/retrieval_log.jsonl",
+   "log_file_key": "raw/secE_F1.json"
+  },
+  {
+   "spec": "specs/secE-F2.json",
+   "response": "examples/research/oster-hepatitis-b/citation-network-v2cand3/raw/secE_F2.json",
+   "executor_log": "examples/research/oster-hepatitis-b/logs/retrieval_log.jsonl",
+   "log_file_key": "raw/secE_F2.json"
+  },
+  {
+   "spec": "specs/secE-F3.json",
+   "response": "examples/research/oster-hepatitis-b/citation-network-v2cand3/raw/secE_F3.json",
+   "executor_log": "examples/research/oster-hepatitis-b/logs/retrieval_log.jsonl",
+   "log_file_key": "raw/secE_F3.json"
+  },
+  {
+   "spec": "specs/secE-F4.json",
+   "response": "examples/research/oster-hepatitis-b/citation-network-v2cand3/raw/secE_F4.json",
+   "executor_log": "examples/research/oster-hepatitis-b/logs/retrieval_log.jsonl",
+   "log_file_key": "raw/secE_F4.json"
+  },
+  {
+   "spec": "specs/reception1-top50.json",
+   "response": "examples/research/oster-hepatitis-b/citation-network-v2cand3/raw/reception1_top50.json",
+   "executor_log": "examples/research/oster-hepatitis-b/logs/retrieval_log.jsonl",
+   "log_file_key": "raw/reception1_top50.json"
+  },
+  {
+   "spec": "specs/recent1-top25.json",
+   "response": "examples/research/oster-hepatitis-b/citation-network-v2cand3/raw/recent1_top25.json",
+   "executor_log": "examples/research/oster-hepatitis-b/logs/retrieval_log.jsonl",
+   "log_file_key": "raw/recent1_top25.json"
+  }
+ ],
+ "sample_checks": [
+  {
+   "name": "RECEPTION-1 inspection sample",
+   "spec_id": "oster-2005-batch1/reception1-top50",
+   "seed": 20261105,
+   "population": 50,
+   "k": 12,
+   "declared": {
+    "path": "examples/research/oster-hepatitis-b/citation-network-v2cand3/lock/SAMPLES_draw.txt",
+    "sha256": "6a7441c4e1c0d9abab89606169a487e072c7c337836f2d0d1d014e143f792ff1",
+    "positions": [
+     7,
+     9,
+     10,
+     11,
+     20,
+     27,
+     28,
+     39,
+     40,
+     41,
+     42,
+     44
+    ],
+    "ids": [
+     "W2057390815",
+     "W2125485011",
+     "W2123699796",
+     "W3122231766",
+     "W2128916858",
+     "W1806205041",
+     "W2400620947",
+     "W2115401314",
+     "W2066547533",
+     "W2182501184",
+     "W2016329099",
+     "W1964267580"
+    ]
+   }
+  },
+  {
+   "name": "RECENT-1 census",
+   "kind": "census",
+   "spec_id": "oster-2005-batch1/recent1-top25",
+   "declared": {
+    "path": "examples/research/oster-hepatitis-b/citation-network-v2cand3/lock/SAMPLES_draw.txt",
+    "sha256": "6a7441c4e1c0d9abab89606169a487e072c7c337836f2d0d1d014e143f792ff1",
+    "ids": [
+     "W4210337642",
+     "W4403727727",
+     "W4397030871",
+     "W4409543403",
+     "W4385446270",
+     "W4399729713"
+    ]
+   }
+  }
+ ],
+ "outputs": {
+  "saved_records": "saved-records.jsonl",
+  "samples": "samples.json",
+  "report": "REPORT.txt"
+ }
+}
