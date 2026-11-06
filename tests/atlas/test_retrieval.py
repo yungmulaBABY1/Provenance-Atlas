@@ -544,5 +544,60 @@ class KeptBodies(unittest.TestCase):
         self.assertTrue(any("UNPINNED_FILE" in p for p in sets.check_live_dir(self.tmp, self.set, self.live)))
 
 
+class ProbeFindings(unittest.TestCase):
+    """Facts stated in probe-relevance-2026-11-05/FINDINGS.txt, read from the committed records."""
+
+    LIVE = PROBE.parent / "live-20261106T002702Z"
+
+    def records(self, path):
+        return {json.loads(line)["id"].split("/")[1]: json.loads(line)
+                for line in path.read_text(encoding="utf-8").splitlines()}
+
+    def setUp(self):
+        self.probe = self.records(self.LIVE / "live-records.jsonl")
+        self.saved = self.records(SET.parent / "saved-records.jsonl")
+        self.replay = self.records(SET.parent / "live-20261105T234403Z/live-records.jsonl")
+
+    def ids(self, record):
+        return [r["id"] for r in record["response"]["ranked"]]
+
+    def test_committed_probe_checks(self):
+        self.assertEqual(sets.check_live_dir(ROOT, PROBE, self.LIVE), [])
+
+    def test_scores_returned_first_attempt(self):
+        for r in self.probe.values():
+            self.assertEqual([a["status"] for a in r["attempts"]], [200])
+            self.assertTrue(all(isinstance(x.get("score"), float) for x in r["response"]["ranked"]))
+
+    def test_ranks_7_8_have_smallest_gap(self):
+        expected = {"q4": 0.005886, "q5": 0.048153, "q6": 0.065405}
+        for q, gap in expected.items():
+            scores = [x["score"] for x in self.probe[f"{q}-default-scored"]["response"]["ranked"]]
+            gaps = [scores[i] - scores[i + 1] for i in range(9)]
+            self.assertEqual(min(range(9), key=lambda i: gaps[i]), 6)
+            self.assertAlmostEqual(gaps[6], gap, places=5)
+
+    def test_order_matches_replay_and_differs_from_grok_by_one_swap(self):
+        for q in ("q4", "q5", "q6"):
+            probe = self.ids(self.probe[f"{q}-default-scored"])
+            name = f"adj1-{q.upper()}"
+            grok, replay = self.ids(self.saved[name]), self.ids(self.replay[name])
+            self.assertEqual(probe, replay)
+            swapped = grok[:6] + [grok[7], grok[6]] + grok[8:]
+            self.assertEqual(probe, swapped)
+
+    def test_explicit_sort_equals_default(self):
+        a, b = self.probe["q4-default-scored"], self.probe["q4-explicit-scored"]
+        self.assertEqual(a["response"]["ranked"], b["response"]["ranked"])
+
+    def test_provider_echo_in_saved_records(self):
+        adj = self.saved["adj1-Q1"]["response"]["provider_echo"]
+        self.assertEqual((adj["order"], adj["order_default"]), ("best matches first", True))
+        sec = self.saved["secE-F1"]["response"]["provider_echo"]["oql"]
+        self.assertIn("(mental fatigue) in the title", sec)
+        self.assertNotIn('"mental fatigue"', sec)
+        self.assertIn('stemmed "ego depletion"', adj["oql"])
+
+
 if __name__ == "__main__":
     unittest.main()

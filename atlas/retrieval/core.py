@@ -186,7 +186,11 @@ def response_summary(data: dict) -> dict:
     results = data.get("results")
     if not isinstance(results, list):
         raise ContractError("INVALID_RESPONSE: no results list")
+    echo = meta.get("x_query") if isinstance(meta.get("x_query"), dict) else None
     return {"meta": {k: meta.get(k) for k in ("count", "page", "per_page")},
+            # How the provider says it read the query (provider-reported, OpenAlex meta.x_query).
+            "provider_echo": ({k: echo.get(k) for k in ("oql", "order", "order_default")}
+                              if echo else None),
             "n_results": len(results),
             "response_digest": response_digest(data),
             "results_digest": results_digest(data),

@@ -72,7 +72,11 @@ A readable local report is enough. A model-generated conclusion remains provisio
   Branch x1-bodies-relevance-oster adds the Oster set (9 of 11 consistent;
   the two corpus queries were declared with referenced_works and run with
   cites), kept response bodies, and a relevance probe declared before any
-  run (not run). See docs/atlas/retrieval.md.
+  run (merged as #19). Probe run 42136887560, prepared on branch
+  x1-probe-results:
+  - OpenAlex returns relevance_score;
+  - the rank-7/8 swaps are near-ties.
+  See docs/atlas/retrieval.md.
 
 YOU DO NOT NEED TO DECIDE NOW: cloud host, graph database, framework, agent fleet,
 bot interface, provider catalog, pricing, public launch or every future method.

@@ -1,5 +1,24 @@
 # Atlas adapter changelog
 
+## Unreleased — relevance probe results, provider echo (`atlas.retrieval`)
+
+- **Probe committed.** `tests/atlas/retrieval/probe-relevance-2026-11-05/live-20261106T002702Z/`
+  is the artifact of run 42136887560, committed unchanged, with
+  `PROVENANCE.json`. The artifact zip's sha256 equals GitHub's digest.
+  `FINDINGS.txt` answers the plan's questions:
+  - OpenAlex returns `relevance_score` when it is selected.
+  - Batch 2's rank-7/8 swaps fall on the smallest score gap in each top 10:
+    0.006, 0.048 and 0.065.
+  - An explicit relevance sort equals the default.
+- **Provider echo.** Records now carry `provider_echo`, OpenAlex's own reading of
+  each query (`meta.x_query`: oql, order, order_default), labeled
+  provider-reported. What it shows for Batch 2:
+  - ADJUDICATION-1 ran as "best matches first";
+  - Section E terms ran as plain words, not phrases.
+
+  Saved outputs were rebuilt for this. Specs are unchanged.
+- 6 new tests.
+
 ## Unreleased — Oster set, kept bodies, relevance probe (`atlas.retrieval`)
 
 - **Second set** `tests/atlas/retrieval/oster-batch1/`: Batch 1's eleven
